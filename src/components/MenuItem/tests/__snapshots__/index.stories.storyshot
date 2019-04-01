@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots MenuItem not selected 1`] = `
+.c0 {
+  width: 100%;
+  padding: 12px 24px;
+  color: rgb(234,242,246);
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0.active,
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: rgb(234,242,246);
+  color: rgb(0,130,155);
+}
+
+<a
+  aria-current={null}
+  className="c0"
+  href="/route-2"
+  onClick={[Function]}
+>
+  ROUTE 2
+</a>
+`;
+
+exports[`Storyshots MenuItem selected 1`] = `
+.c0 {
+  width: 100%;
+  padding: 12px 24px;
+  color: rgb(234,242,246);
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0.active,
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: rgb(234,242,246);
+  color: rgb(0,130,155);
+}
+
+<a
+  aria-current="page"
+  className="c0 active"
+  href="/route-1"
+  onClick={[Function]}
+  style={Object {}}
+>
+  ROUTE 1
+</a>
+`;
