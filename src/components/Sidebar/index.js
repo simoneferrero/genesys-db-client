@@ -62,7 +62,7 @@ const Sidebar = ({ children, className }) => {
   )
 
   return (
-    <StyledWrapper className={className} data-testid="wrapper" isOpen={isOpen}>
+    <StyledWrapper className={className} data-testid="sidebar" isOpen={isOpen}>
       <StyledIcon data-testid="icon" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
           <MdClose data-testid="icon-close" />

@@ -9,14 +9,14 @@ const defaultProps = {
 const renderComponent = (props = {}) =>
   render(<Sidebar {...defaultProps} {...props} />)
 
-const closedStyleAssertions = (wrapper, cover) => {
-  expect(wrapper).toHaveStyle(`left: -${menuWidth}px`)
+const closedStyleAssertions = (sidebar, cover) => {
+  expect(sidebar).toHaveStyle(`left: -${menuWidth}px`)
 
   expect(cover).toHaveStyle('opacity: 0')
   expect(cover).toHaveStyle('pointer-events: none')
 }
-const openStyleAssertions = (wrapper, cover) => {
-  expect(wrapper).toHaveStyle('left: 0')
+const openStyleAssertions = (sidebar, cover) => {
+  expect(sidebar).toHaveStyle('left: 0')
 
   expect(cover).toHaveStyle(`opacity: ${menuCoverOpacity}`)
   expect(cover).not.toHaveStyle('pointer-events: none')
@@ -26,8 +26,8 @@ describe('<Sidebar />', () => {
   it('should open, close and render correctly on icon click', () => {
     const { getByTestId, getByText } = renderComponent()
 
-    const wrapper = getByTestId(/wrapper/i)
-    expect(wrapper).toBeInTheDocument()
+    const sidebar = getByTestId(/sidebar/i)
+    expect(sidebar).toBeInTheDocument()
 
     const icon = getByTestId(/icon/i)
     expect(icon).toBeInTheDocument()
@@ -42,12 +42,12 @@ describe('<Sidebar />', () => {
     expect(renderedChildren).toBeInTheDocument()
 
     // Closed menu
-    closedStyleAssertions(wrapper, cover)
+    closedStyleAssertions(sidebar, cover)
 
     // Open menu
     fireEvent.click(icon)
 
-    openStyleAssertions(wrapper, cover)
+    openStyleAssertions(sidebar, cover)
 
     const iconClose = getByTestId(/icon-close/i)
     expect(iconClose).toBeInTheDocument()
@@ -57,7 +57,7 @@ describe('<Sidebar />', () => {
     const rerenderedIconMenu = getByTestId(/icon-menu/i)
     expect(rerenderedIconMenu).toBeInTheDocument()
 
-    closedStyleAssertions(wrapper, cover)
+    closedStyleAssertions(sidebar, cover)
   })
 
   it('should behave correctly on cover click', () => {
@@ -68,8 +68,8 @@ describe('<Sidebar />', () => {
     // Nothing happens when clicking on closed cover
     fireEvent.click(cover)
 
-    const wrapper = getByTestId(/wrapper/i)
-    closedStyleAssertions(wrapper, cover)
+    const sidebar = getByTestId(/sidebar/i)
+    closedStyleAssertions(sidebar, cover)
 
     const iconMenu = getByTestId(/icon-menu/i)
     expect(iconMenu).toBeInTheDocument()
@@ -79,7 +79,7 @@ describe('<Sidebar />', () => {
     fireEvent.click(icon)
     fireEvent.click(cover)
 
-    closedStyleAssertions(wrapper, cover)
+    closedStyleAssertions(sidebar, cover)
 
     const rerenderedIconMenu = getByTestId(/icon-menu/i)
     expect(rerenderedIconMenu).toBeInTheDocument()
@@ -95,10 +95,10 @@ describe('<Sidebar />', () => {
     fireEvent.click(icon)
     fireEvent.click(renderedChildren)
 
-    const wrapper = getByTestId(/wrapper/i)
+    const sidebar = getByTestId(/sidebar/i)
     const cover = getByTestId(/cover/i)
 
-    closedStyleAssertions(wrapper, cover)
+    closedStyleAssertions(sidebar, cover)
 
     const rerenderedIconMenu = getByTestId(/icon-menu/i)
     expect(rerenderedIconMenu).toBeInTheDocument()

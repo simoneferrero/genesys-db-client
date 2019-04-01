@@ -20,10 +20,10 @@ const location = {
 
 storiesOf('Sidebar', module).add('default', () => (
   <Sidebar>
-    <MenuItem location={location} to="/route-1">
+    <MenuItem id="route1" location={location} to="/route-1">
       ROUTE 1
     </MenuItem>
-    <MenuItem location={location} to="/route-2">
+    <MenuItem id="route2" location={location} to="/route-2">
       ROUTE 2
     </MenuItem>
   </Sidebar>

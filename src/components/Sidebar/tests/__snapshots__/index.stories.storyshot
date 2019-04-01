@@ -1,23 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Sidebar default 1`] = `
-.c3 {
-  width: 100%;
-  padding: 12px 24px;
-  color: rgb(234,242,246);
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3.active,
-.c3:hover,
-.c3:focus,
-.c3:active {
-  background-color: rgb(234,242,246);
-  color: rgb(0,130,155);
-}
-
 .c0 {
   height: 100vh;
   width: 200px;
@@ -65,9 +48,26 @@ exports[`Storyshots Sidebar default 1`] = `
   transition: 0.3s linear;
 }
 
+.c3 {
+  width: 100%;
+  padding: 12px 24px;
+  color: rgb(234,242,246);
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3.active,
+.c3:hover,
+.c3:focus,
+.c3:active {
+  background-color: rgb(234,242,246);
+  color: rgb(0,130,155);
+}
+
 <div
   className="c0"
-  data-testid="wrapper"
+  data-testid="sidebar"
 >
   <div
     className="c1"
@@ -102,6 +102,7 @@ exports[`Storyshots Sidebar default 1`] = `
   <a
     aria-current="page"
     className="c3 active"
+    data-testid="menu-item-route1"
     href="/route-1"
     onClick={[Function]}
     style={Object {}}
@@ -111,6 +112,7 @@ exports[`Storyshots Sidebar default 1`] = `
   <a
     aria-current={null}
     className="c3"
+    data-testid="menu-item-route2"
     href="/route-2"
     onClick={[Function]}
   >

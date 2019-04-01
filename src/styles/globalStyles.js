@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components/macro'
 
+import backgroundImage from 'images/background-blue.jpg'
+
 export default createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -9,6 +11,9 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
+    background-image: url(${backgroundImage});
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   table {

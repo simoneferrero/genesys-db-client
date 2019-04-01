@@ -20,12 +20,22 @@ const location = {
 
 storiesOf('MenuItem', module)
   .add('selected', () => (
-    <MenuItem location={location} onClick={action('onClick')} to="/route-1">
+    <MenuItem
+      id="route1"
+      location={location}
+      onClick={action('onClick')}
+      to="/route-1"
+    >
       ROUTE 1
     </MenuItem>
   ))
   .add('not selected', () => (
-    <MenuItem location={location} onClick={action('onClick')} to="/route-2">
+    <MenuItem
+      id="route2"
+      location={location}
+      onClick={action('onClick')}
+      to="/route-2"
+    >
       ROUTE 2
     </MenuItem>
   ))

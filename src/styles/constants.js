@@ -22,4 +22,4 @@ export const baseSpacing = 24
 // Menu constants
 export const menuWidth = 200
 export const menuTransition = 0.3
-export const menuCoverOpacity = 0.5
+export const menuCoverOpacity = 0.7
