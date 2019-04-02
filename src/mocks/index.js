@@ -1,12 +1,17 @@
 import { fromJS } from 'immutable'
 
-import { statusesById, statusesAllIds } from './statuses'
+import {
+  playerCharactersById,
+  playerCharactersAllIds,
+} from './playerCharacters'
+import { ui } from 'mocks/ui'
 
-export const tflApiPath = 'http://api.tfl.com'
+export const apiPath = 'http://my-api.com'
 
 export const store = fromJS({
-  statuses: {
-    allIds: statusesAllIds,
-    byId: statusesById,
+  playerCharacters: {
+    allIds: playerCharactersAllIds,
+    byId: playerCharactersById,
   },
+  ui,
 })

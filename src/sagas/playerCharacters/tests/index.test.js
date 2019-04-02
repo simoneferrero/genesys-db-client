@@ -1,55 +1,58 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects'
 import axios from 'axios'
 
-import rootSaga, { getTubeStatusesSaga, getTubeStatusesWatcher } from '../index'
-import { GET_TUBE_STATUSES } from 'actions/getTubeStatuses/constants'
+import rootSaga, {
+  getPlayerCharactersSaga,
+  getPlayerCharactersWatcher,
+} from '../index'
+import { GET_PLAYER_CHARACTERS } from 'actions/playerCharacters/constants'
 import {
-  getTubeStatusesError,
-  getTubeStatusesSuccess,
-} from 'actions/getTubeStatuses'
+  getPlayerCharactersError,
+  getPlayerCharactersSuccess,
+} from 'actions/playerCharacters'
 
-import { tflApiPath } from 'mocks'
-import { statuses } from 'mocks/statuses'
-import { getTubeStatusError } from 'mocks/errors'
+import { apiPath } from 'mocks'
+import { playerCharacters } from 'mocks/playerCharacters'
+import { genericError } from 'mocks/errors'
 
 const action = {
-  type: GET_TUBE_STATUSES,
+  type: GET_PLAYER_CHARACTERS,
   payload: {},
 }
 
-describe('statuses sagas', () => {
-  describe('getTubeStatuses', () => {
-    describe('getTubeStatusesSaga', () => {
+describe('playerCharacters sagas', () => {
+  describe('getPlayerCharacters', () => {
+    describe('getPlayerCharactersSaga', () => {
       let generator
 
       beforeEach(() => {
-        generator = getTubeStatusesSaga(action)
+        generator = getPlayerCharactersSaga(action)
       })
 
       it('should dispatch the correct actions on success', () => {
         const opts = {
           method: 'GET',
-          url: `${tflApiPath}/Line/Mode/tube/Status`,
+          url: `${apiPath}/player-characters`,
         }
         const callAxiosDescriptor = generator.next().value
         const expectedCallAxiosDescriptor = call(axios, opts)
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: statuses,
+          data: playerCharacters,
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
-          getTubeStatusesSuccess(statuses),
+          getPlayerCharactersSuccess(playerCharacters),
         )
         expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
       })
 
       it('should dispatch the correct actions on error', () => {
         generator.next().value
-        const putErrorDescriptor = generator.throw(getTubeStatusError).value
+        const putErrorDescriptor = generator.throw(genericError).value
         const expectedPutErrorDescriptor = put(
-          getTubeStatusesError(getTubeStatusError),
+          getPlayerCharactersError(genericError),
         )
         expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
       })
@@ -60,14 +63,14 @@ describe('statuses sagas', () => {
       })
     })
 
-    describe('getTubeStatusesWatcher', () => {
+    describe('getPlayerCharactersWatcher', () => {
       it('should listen for the correct action', () => {
-        const generator = getTubeStatusesWatcher(action)
+        const generator = getPlayerCharactersWatcher(action)
 
         const takeLatestDescriptor = generator.next().value
         const expectedTakeLatestDescriptor = takeLatest(
-          GET_TUBE_STATUSES,
-          getTubeStatusesSaga,
+          GET_PLAYER_CHARACTERS,
+          getPlayerCharactersSaga,
         )
         expect(takeLatestDescriptor).toEqual(expectedTakeLatestDescriptor)
       })
@@ -79,7 +82,7 @@ describe('statuses sagas', () => {
       const generator = rootSaga({})
 
       const allDescriptor = generator.next().value
-      const expectedAllDescriptor = all([call(getTubeStatusesWatcher)])
+      const expectedAllDescriptor = all([call(getPlayerCharactersWatcher)])
       expect(allDescriptor).toEqual(expectedAllDescriptor)
     })
   })
