@@ -13,6 +13,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `
 
+/** The main home page. */
 const Home = () => (
   <StyledWrapper data-testid="home">
     <GenesysLogo width={300} />

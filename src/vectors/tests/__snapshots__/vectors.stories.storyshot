@@ -2,6 +2,7 @@
 
 exports[`Storyshots Vectors/AttributesBadge melee 1`] = `
 <svg
+  data-testid="attributes-badge-melee"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -31,7 +32,7 @@ exports[`Storyshots Vectors/AttributesBadge melee 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -380,6 +381,7 @@ exports[`Storyshots Vectors/AttributesBadge melee 1`] = `
 
 exports[`Storyshots Vectors/AttributesBadge ranged 1`] = `
 <svg
+  data-testid="attributes-badge-ranged"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -409,7 +411,7 @@ exports[`Storyshots Vectors/AttributesBadge ranged 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -758,6 +760,7 @@ exports[`Storyshots Vectors/AttributesBadge ranged 1`] = `
 
 exports[`Storyshots Vectors/AttributesBadge soak 1`] = `
 <svg
+  data-testid="attributes-badge-soak"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -787,7 +790,7 @@ exports[`Storyshots Vectors/AttributesBadge soak 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -1092,6 +1095,7 @@ exports[`Storyshots Vectors/AttributesBadge soak 1`] = `
 
 exports[`Storyshots Vectors/AttributesBadge strain 1`] = `
 <svg
+  data-testid="attributes-badge-strain"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -1121,7 +1125,7 @@ exports[`Storyshots Vectors/AttributesBadge strain 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -1459,6 +1463,7 @@ exports[`Storyshots Vectors/AttributesBadge strain 1`] = `
 
 exports[`Storyshots Vectors/AttributesBadge wounds 1`] = `
 <svg
+  data-testid="attributes-badge-wounds"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -1488,7 +1493,7 @@ exports[`Storyshots Vectors/AttributesBadge wounds 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -1823,6 +1828,7 @@ exports[`Storyshots Vectors/AttributesBadge wounds 1`] = `
 
 exports[`Storyshots Vectors/AttributesBadge xpAvailable 1`] = `
 <svg
+  data-testid="attributes-badge-xpAvailable"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -1852,7 +1858,7 @@ exports[`Storyshots Vectors/AttributesBadge xpAvailable 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -2178,6 +2184,7 @@ exports[`Storyshots Vectors/AttributesBadge xpAvailable 1`] = `
 
 exports[`Storyshots Vectors/AttributesBadge xpTotal 1`] = `
 <svg
+  data-testid="attributes-badge-xpTotal"
   style={
     Object {
       "enableBackground": "new 0 0 180 108",
@@ -2207,7 +2214,7 @@ exports[`Storyshots Vectors/AttributesBadge xpTotal 1`] = `
         />
       </defs>
       <polygon
-        fill="rgb(202, 231, 238)"
+        fill="rgb(234, 242, 246)"
         points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
       />
       <defs>
@@ -2521,6 +2528,7 @@ exports[`Storyshots Vectors/AttributesBadge xpTotal 1`] = `
 
 exports[`Storyshots Vectors/CharacteristicsBadge agility 1`] = `
 <svg
+  data-testid="characteristics-badge-agility"
   style={
     Object {
       "enableBackground": "new 0 0 144 144",
@@ -2877,6 +2885,7 @@ exports[`Storyshots Vectors/CharacteristicsBadge agility 1`] = `
 
 exports[`Storyshots Vectors/CharacteristicsBadge brawn 1`] = `
 <svg
+  data-testid="characteristics-badge-brawn"
   style={
     Object {
       "enableBackground": "new 0 0 144 144",
@@ -3227,6 +3236,7 @@ exports[`Storyshots Vectors/CharacteristicsBadge brawn 1`] = `
 
 exports[`Storyshots Vectors/CharacteristicsBadge cunning 1`] = `
 <svg
+  data-testid="characteristics-badge-cunning"
   style={
     Object {
       "enableBackground": "new 0 0 144 144",
@@ -3583,6 +3593,7 @@ exports[`Storyshots Vectors/CharacteristicsBadge cunning 1`] = `
 
 exports[`Storyshots Vectors/CharacteristicsBadge intellect 1`] = `
 <svg
+  data-testid="characteristics-badge-intellect"
   style={
     Object {
       "enableBackground": "new 0 0 144 144",
@@ -3945,6 +3956,7 @@ exports[`Storyshots Vectors/CharacteristicsBadge intellect 1`] = `
 
 exports[`Storyshots Vectors/CharacteristicsBadge presence 1`] = `
 <svg
+  data-testid="characteristics-badge-presence"
   style={
     Object {
       "enableBackground": "new 0 0 144 144",
@@ -4304,6 +4316,7 @@ exports[`Storyshots Vectors/CharacteristicsBadge presence 1`] = `
 
 exports[`Storyshots Vectors/CharacteristicsBadge willpower 1`] = `
 <svg
+  data-testid="characteristics-badge-willpower"
   style={
     Object {
       "enableBackground": "new 0 0 144 144",

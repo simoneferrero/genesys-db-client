@@ -11,6 +11,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `
 
+/** The page with a summary of all player characters. */
 const Home = () => (
   <StyledWrapper data-testid="player-characters">
     <h1>Player characters</h1>

@@ -11,15 +11,17 @@ export const TYPES = {
   XP_TOTAL: 'xpTotal',
 }
 
-const DerivedStat = ({ type, width }) => (
+/** A badge to display one of the character's attributes. */
+const AttributesBadge = ({ type, width }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    x="0px"
-    y="0px"
-    viewBox="20 15 140 70"
+    data-testid={`attributes-badge-${type}`}
     style={{ enableBackground: 'new 0 0 180 108' }}
+    version="1.1"
+    viewBox="20 15 140 70"
     width={`${width}px`}
+    x="0px"
+    xmlns="http://www.w3.org/2000/svg"
+    y="0px"
   >
     <g id="SotB_Block">
       <path
@@ -31,7 +33,7 @@ const DerivedStat = ({ type, width }) => (
           <rect x="14.4" y="26.4" width="149.2" height="53.4" />
         </defs>
         <polygon
-          fill={colours.veryLightGreen}
+          fill={colours.veryLightBlue}
           points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
         />
         <defs>
@@ -325,9 +327,11 @@ const DerivedStat = ({ type, width }) => (
   </svg>
 )
 
-DerivedStat.propTypes = {
+AttributesBadge.propTypes = {
+  /** One of the attributes */
   type: PropTypes.oneOf(Object.values(TYPES)).isRequired,
+  /** The width taken by the badge */
   width: PropTypes.number.isRequired,
 }
 
-export default DerivedStat
+export default AttributesBadge

@@ -5,16 +5,18 @@ import { CHARACTERISTICS } from 'utils/definitions'
 
 import { colours } from 'styles/constants'
 
+/** A badge to display one of the character's characteristics. */
 const CharacteristicsBadge = ({ type, width }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    x="0px"
-    y="0px"
-    viewBox="20 25 104 103"
+    data-testid={`characteristics-badge-${type}`}
     style={{ enableBackground: 'new 0 0 144 144' }}
+    version="1.1"
+    viewBox="20 25 104 103"
     width={`${width}px`}
+    x="0px"
+    xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
+    y="0px"
   >
     <g>
       <path
@@ -292,7 +294,9 @@ const CharacteristicsBadge = ({ type, width }) => (
 )
 
 CharacteristicsBadge.propTypes = {
+  /** One of the characteristics */
   type: PropTypes.oneOf(Object.values(CHARACTERISTICS)).isRequired,
+  /** The width taken by the badge */
   width: PropTypes.number.isRequired,
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+/** Genesys main logo */
 const GenesysLogo = ({ width }) => (
   <svg
     data-testid="genesys-logo"
@@ -503,6 +504,7 @@ const GenesysLogo = ({ width }) => (
 )
 
 GenesysLogo.propTypes = {
+  /** The width taken by the logo */
   width: PropTypes.number.isRequired,
 }
 
