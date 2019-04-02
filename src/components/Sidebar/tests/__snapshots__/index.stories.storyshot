@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Sidebar default 1`] = `
+.c0 {
+  height: 100vh;
+  width: 200px;
+  background: rgb(0,130,155);
+  position: fixed;
+  left: -200px;
+  top: 0;
+  z-index: 900;
+  -webkit-transition: 0.3s linear left;
+  transition: 0.3s linear left;
+  padding: 24px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 30px;
+  color: rgb(0,130,155);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.c2 {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(31,48,44);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.c3 {
+  width: 100%;
+  padding: 12px 24px;
+  color: rgb(234,242,246);
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Monkirta",Helvetica,sans-serif;
+}
+
+.c3.active,
+.c3:hover,
+.c3:focus,
+.c3:active {
+  background-color: rgb(234,242,246);
+  color: rgb(0,130,155);
+}
+
+<div
+  className="c0"
+  data-testid="sidebar"
+>
+  <div
+    className="c1"
+    data-testid="icon"
+    onClick={[Function]}
+  >
+    <svg
+      data-testid="icon-menu"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+      />
+    </svg>
+  </div>
+  <div
+    className="c2"
+    data-testid="cover"
+    onClick={[Function]}
+  />
+  <a
+    aria-current="page"
+    className="c3 active"
+    data-testid="menu-item-route1"
+    href="/route-1"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    ROUTE 1
+  </a>
+  <a
+    aria-current={null}
+    className="c3"
+    data-testid="menu-item-route2"
+    href="/route-2"
+    onClick={[Function]}
+  >
+    ROUTE 2
+  </a>
+</div>
+`;
