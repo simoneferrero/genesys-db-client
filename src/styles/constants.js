@@ -19,6 +19,11 @@ export const colours = {
 
 export const baseSpacing = 24
 
+export const fontFamilies = {
+  Monkirta: 'Monkirta',
+  MinionPro: 'MinionPro',
+}
+
 // Menu constants
 export const menuWidth = 200
 export const menuTransition = 0.3

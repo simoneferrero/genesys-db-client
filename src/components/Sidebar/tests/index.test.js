@@ -1,6 +1,6 @@
 import Sidebar from '../index'
 
-import { menuCoverOpacity, menuWidth } from 'styles/constants'
+import { colours, menuCoverOpacity, menuWidth } from 'styles/constants'
 
 const childrenText = 'ROUTE 1'
 const defaultProps = {
@@ -9,17 +9,21 @@ const defaultProps = {
 const renderComponent = (props = {}) =>
   render(<Sidebar {...defaultProps} {...props} />)
 
-const closedStyleAssertions = (sidebar, cover) => {
+const closedStyleAssertions = (sidebar, cover, icon) => {
   expect(sidebar).toHaveStyle(`left: -${menuWidth}px`)
 
   expect(cover).toHaveStyle('opacity: 0')
   expect(cover).toHaveStyle('pointer-events: none')
+
+  expect(icon).toHaveStyle(`colour: ${colours.teal}`)
 }
-const openStyleAssertions = (sidebar, cover) => {
+const openStyleAssertions = (sidebar, cover, icon) => {
   expect(sidebar).toHaveStyle('left: 0')
 
   expect(cover).toHaveStyle(`opacity: ${menuCoverOpacity}`)
   expect(cover).not.toHaveStyle('pointer-events: none')
+
+  expect(icon).toHaveStyle(`colour: ${colours.veryLightBlue}`)
 }
 
 describe('<Sidebar />', () => {
@@ -42,12 +46,12 @@ describe('<Sidebar />', () => {
     expect(renderedChildren).toBeInTheDocument()
 
     // Closed menu
-    closedStyleAssertions(sidebar, cover)
+    closedStyleAssertions(sidebar, cover, icon)
 
     // Open menu
     fireEvent.click(icon)
 
-    openStyleAssertions(sidebar, cover)
+    openStyleAssertions(sidebar, cover, icon)
 
     const iconClose = getByTestId(/icon-close/i)
     expect(iconClose).toBeInTheDocument()
@@ -57,7 +61,7 @@ describe('<Sidebar />', () => {
     const rerenderedIconMenu = getByTestId(/icon-menu/i)
     expect(rerenderedIconMenu).toBeInTheDocument()
 
-    closedStyleAssertions(sidebar, cover)
+    closedStyleAssertions(sidebar, cover, icon)
   })
 
   it('should behave correctly on cover click', () => {
@@ -69,17 +73,17 @@ describe('<Sidebar />', () => {
     fireEvent.click(cover)
 
     const sidebar = getByTestId(/sidebar/i)
-    closedStyleAssertions(sidebar, cover)
+    const icon = getByTestId(/icon/i)
+    closedStyleAssertions(sidebar, cover, icon)
 
     const iconMenu = getByTestId(/icon-menu/i)
     expect(iconMenu).toBeInTheDocument()
 
     // Open menu and close on cover click
-    const icon = getByTestId(/icon/i)
     fireEvent.click(icon)
     fireEvent.click(cover)
 
-    closedStyleAssertions(sidebar, cover)
+    closedStyleAssertions(sidebar, cover, icon)
 
     const rerenderedIconMenu = getByTestId(/icon-menu/i)
     expect(rerenderedIconMenu).toBeInTheDocument()
@@ -98,7 +102,7 @@ describe('<Sidebar />', () => {
     const sidebar = getByTestId(/sidebar/i)
     const cover = getByTestId(/cover/i)
 
-    closedStyleAssertions(sidebar, cover)
+    closedStyleAssertions(sidebar, cover, icon)
 
     const rerenderedIconMenu = getByTestId(/icon-menu/i)
     expect(rerenderedIconMenu).toBeInTheDocument()

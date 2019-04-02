@@ -36,12 +36,14 @@ export const StyledIcon = styled.div`
   cursor: pointer;
   padding: ${baseSpacing / 2}px;
   font-size: 30px;
+  color: ${({ isOpen }) => (isOpen ? colours.veryLightBlue : colours.teal)};
+  transition: ${menuTransition}s linear;
 `
 
 export const StyledCover = styled.div`
   height: 100vh;
   width: ${({ isOpen }) => (isOpen ? `calc(100vw - ${menuWidth}px)` : '100vw')};
-  background-color: ${colours.teal};
+  background-color: ${colours.veryDarkGreen};
   opacity: ${({ isOpen }) => (isOpen ? menuCoverOpacity : 0)};
   pointer-events: ${({ isOpen }) => !isOpen && 'none'};
   position: absolute;
@@ -63,7 +65,11 @@ const Sidebar = ({ children, className }) => {
 
   return (
     <StyledWrapper className={className} data-testid="sidebar" isOpen={isOpen}>
-      <StyledIcon data-testid="icon" onClick={() => setIsOpen(!isOpen)}>
+      <StyledIcon
+        data-testid="icon"
+        isOpen={isOpen}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {isOpen ? (
           <MdClose data-testid="icon-close" />
         ) : (

@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
 const Home = () => (
   <StyledWrapper data-testid="home">
     <GenesysLogo width={300} />
-    <h1>SotB GM resources</h1>
+    <h1>GM COMPENDIUM</h1>
   </StyledWrapper>
 )
 

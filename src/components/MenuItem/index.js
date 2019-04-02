@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 import styled, { css } from 'styled-components/macro'
 
-import { baseSpacing, colours } from 'styles/constants'
+import { baseSpacing, colours, fontFamilies } from 'styles/constants'
 
 const activeStyles = css`
   &.active,
@@ -28,8 +28,9 @@ const StyledNavLink = styled(FilteredStyledNavLink)`
   width: 100%;
   padding: ${baseSpacing / 2}px ${baseSpacing}px;
   color: ${colours.veryLightBlue};
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
+  font-family: "${fontFamilies.Monkirta}", Helvetica, sans-serif;
 
   ${({ showActive }) => showActive && activeStyles}
 `

@@ -5,9 +5,10 @@ exports[`Storyshots MenuItem not selected 1`] = `
   width: 100%;
   padding: 12px 24px;
   color: rgb(234,242,246);
-  font-weight: 700;
+  font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-family: "Monkirta",Helvetica,sans-serif;
 }
 
 .c0.active,
@@ -34,9 +35,10 @@ exports[`Storyshots MenuItem selected 1`] = `
   width: 100%;
   padding: 12px 24px;
   color: rgb(234,242,246);
-  font-weight: 700;
+  font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-family: "Monkirta",Helvetica,sans-serif;
 }
 
 .c0.active,

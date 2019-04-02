@@ -23,14 +23,16 @@ const App = () => (
     <ConnectedRouter history={history}>
       <Sidebar>
         {routes.map((
-          { component, ...route }, // eslint-disable-line no-unused-vars
+          { routeComponent, menuItemComponent, ...route }, // eslint-disable-line no-unused-vars
         ) => (
-          <MenuItem key={route.id} {...route} />
+          <MenuItem key={route.id} {...route}>
+            {menuItemComponent}
+          </MenuItem>
         ))}
       </Sidebar>
       <Switch>
-        {routes.map(({ component, id, to }) => (
-          <Route component={component} exact key={id} path={to} />
+        {routes.map(({ routeComponent, id, to }) => (
+          <Route component={routeComponent} exact key={id} path={to} />
         ))}
       </Switch>
     </ConnectedRouter>

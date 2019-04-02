@@ -6,20 +6,19 @@ import GenesysLogo from 'logos/GenesysLogo'
 import Home from 'pages/Home'
 import PlayerCharacters from 'pages/PlayerCharacters'
 
-// TODO: rename children and component
 const routes = [
   {
-    children: <GenesysLogo width={100} />,
-    component: Home,
     exact: true,
     id: 'home',
+    menuItemComponent: <GenesysLogo width={100} />,
+    routeComponent: Home,
     showActive: false,
     to: '/',
   },
   {
-    children: 'PLAYER CHARACTERS',
-    component: PlayerCharacters,
     id: 'player-characters',
+    menuItemComponent: 'PCs',
+    routeComponent: PlayerCharacters,
     to: '/player-characters',
   },
 ]
