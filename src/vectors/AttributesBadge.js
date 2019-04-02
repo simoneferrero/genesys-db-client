@@ -326,7 +326,7 @@ const DerivedStat = ({ type, width }) => (
 )
 
 DerivedStat.propTypes = {
-  type: PropTypes.oneOf(Object.values(TYPES)),
+  type: PropTypes.oneOf(Object.values(TYPES)).isRequired,
   width: PropTypes.number.isRequired,
 }
 
