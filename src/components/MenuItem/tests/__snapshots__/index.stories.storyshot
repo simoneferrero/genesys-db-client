@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots MenuItem not selected 1`] = `
+exports[`Storyshots Components/MenuItem not selected 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 24px;
@@ -30,7 +30,7 @@ exports[`Storyshots MenuItem not selected 1`] = `
 </a>
 `;
 
-exports[`Storyshots MenuItem selected 1`] = `
+exports[`Storyshots Components/MenuItem selected 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 24px;

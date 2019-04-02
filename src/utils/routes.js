@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GenesysLogo from 'logos/GenesysLogo'
+import GenesysLogo from 'vectors/GenesysLogo'
 
 // Top level components
 import Home from 'pages/Home'

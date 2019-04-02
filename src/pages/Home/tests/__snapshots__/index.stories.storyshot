@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Home default 1`] = `
+exports[`Storyshots Pages/Home default 1`] = `
 .c0 {
   width: 100vw;
   height: 100vh;

@@ -18,7 +18,7 @@ const location = {
   pathname: '/route-1',
 }
 
-storiesOf('MenuItem', module)
+storiesOf('Components/MenuItem', module)
   .add('selected', () => (
     <MenuItem
       id="route1"

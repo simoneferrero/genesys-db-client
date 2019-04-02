@@ -11,3 +11,22 @@ export const REST_METHODS = {
   PUT: 'PUT',
   DELETE: 'DELETE',
 }
+
+// Character data
+export const ATTRIBUTES = {
+  WOUNDS: 'wounds',
+  STRAIN: 'strain',
+  SOAK: 'soak',
+  DEFENSE_MELEE: 'melee',
+  DEFENSE_RANGED: 'ranged',
+}
+// TODO: create an array from values if order is necessary
+
+export const CHARACTERISTICS = {
+  BRAWN: 'brawn',
+  AGILITY: 'agility',
+  INTELLECT: 'intellect',
+  CUNNING: 'cunning',
+  WILLPOWER: 'willpower',
+  PRESENCE: 'presence',
+}

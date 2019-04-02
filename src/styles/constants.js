@@ -4,6 +4,7 @@ export const colours = {
   softBlue: 'rgb(61, 153, 213)',
   black: 'rgb(0, 0, 0)',
   orange: 'rgb(170, 73, 23)',
+  lightOrange: 'rgb(242, 143, 34)',
   veryLightOrange: 'rgb(255, 244, 233)',
   veryLightBlue: 'rgb(234, 242, 246)',
   lightTeal: 'rgb(65, 178, 180)',
@@ -11,10 +12,7 @@ export const colours = {
   veryDarkGrey: 'rgb(30, 30, 28)',
   veryLightGreen: 'rgb(202, 231, 238)',
   lightBlue: 'rgb(167, 218, 243)',
-  blue: '#2669d6',
-  green: '#06a020',
-  red: '#e51919',
-  white: '#fff',
+  white: 'rgb(255, 255, 255)',
 }
 
 export const baseSpacing = 24

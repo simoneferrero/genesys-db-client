@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GenesysLogo from 'logos/GenesysLogo'
+import GenesysLogo from 'vectors/GenesysLogo'
 
 import styled from 'styled-components/macro'
 

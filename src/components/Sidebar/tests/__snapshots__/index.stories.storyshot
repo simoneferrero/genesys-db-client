@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Sidebar default 1`] = `
+exports[`Storyshots Components/Sidebar default 1`] = `
 .c0 {
   height: 100vh;
   width: 200px;
