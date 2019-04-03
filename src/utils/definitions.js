@@ -20,14 +20,18 @@ export const HEAD_INFO = {
 }
 
 // Character data
+export const INFO = {
+  PC_NAME: 'pcName',
+  PLAYER_NAME: 'playerName',
+  ARCHETYPE: 'archetype',
+  CAREER: 'career',
+}
 export const ATTRIBUTES = {
   WOUNDS: 'wounds',
   STRAIN: 'strain',
   SOAK: 'soak',
-  DEFENSE_MELEE: 'melee',
-  DEFENSE_RANGED: 'ranged',
+  DEFENSE: 'defense',
 }
-// TODO: create an array from values if order is necessary
 
 export const CHARACTERISTICS = {
   BRAWN: 'brawn',

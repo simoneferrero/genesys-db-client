@@ -63,7 +63,7 @@
       "!src/setupTests.js",
       "!src/mocks/*.js",
       "!src/serviceWorker.js",
-      "!src/styles/*.js",
+      "!src/styles/**/*.js",
       "!src/**/*.stories.js",
       "!src/types/*.js",
       "!src/utils/definitions.js",

@@ -12,18 +12,17 @@ export const TYPES = {
 }
 
 /** A badge to display one of the character's attributes. */
-const AttributesBadge = ({ type, width }) => (
+const AttributesBadge = ({ type, height }) => (
   <svg
     data-testid={`attributes-badge-${type}`}
-    style={{ enableBackground: 'new 0 0 180 108' }}
+    height={`${height}px`}
     version="1.1"
-    viewBox="20 15 140 70"
-    width={`${width}px`}
+    viewBox="23 19 134 63"
     x="0px"
     xmlns="http://www.w3.org/2000/svg"
     y="0px"
   >
-    <g id="SotB_Block">
+    <g>
       <path
         fill={colours.lightOrange}
         d="M36.1,24.1l-0.1,0.1l-1.1,8.1c-0.1,0.5-0.1,1.2-0.1,1.9l0.1,1.4l-5.3,3.3c-0.4,0.3-0.9,0.8-1.2,1.4l-0.1,0.2   c-0.3,0.6-0.5,1.2-0.5,1.8V60c0,1.3,0.8,3.3,1.7,4.2l10,10.7c0.8,0.9,2.8,1.7,4,1.7h92.7c1.3,0,3.2-0.8,4-1.7l10.1-10.7   c0.9-0.9,1.7-2.9,1.7-4.2V42.1c0-0.5-0.2-1.2-0.5-1.9l0-0.1c-0.3-0.6-0.8-1.2-1.3-1.5l-4.7-3.2l0.1-1.4c0-0.7,0-1.4-0.1-1.9   l-1.1-8.1l-0.1-0.1H36.1z M136.2,81.5H43.4c-2.6,0-5.8-1.4-7.6-3.3l-10-10.7c-1.7-1.9-3-5-3-7.6V42.1c0-1.3,0.4-2.8,1.1-4.1   l0.1-0.2c0.8-1.4,1.8-2.4,2.9-3.2l2.9-1.8c0-0.5,0-0.9,0.1-1.3l1.1-8.1c0.3-2.5,2.5-4.4,5-4.4h108.2c2.5,0,4.7,1.9,5,4.4l1.1,8.1   c0.1,0.4,0.1,0.9,0.1,1.3l2.5,1.7c1.1,0.8,2.1,1.9,2.8,3.2l0.1,0.1c0.7,1.4,1.1,2.8,1.1,4.1V60c0,2.5-1.3,5.7-3,7.6l-10.1,10.7   C142,80.2,138.8,81.5,136.2,81.5"
@@ -32,6 +31,13 @@ const AttributesBadge = ({ type, width }) => (
         <defs>
           <rect x="14.4" y="26.4" width="149.2" height="53.4" />
         </defs>
+        <clipPath xmlns="http://www.w3.org/2000/svg" id="SVGID_3_">
+          <use
+            xlink="http://www.w3.org/1999/xlink"
+            href="#SVGID_2_"
+            style={{ overflow: 'visible' }}
+          />
+        </clipPath>
         <polygon
           fill={colours.veryLightBlue}
           points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
@@ -244,19 +250,8 @@ const AttributesBadge = ({ type, width }) => (
         </g>
       </g>
     )}
-    {(type === TYPES.DEFENSE_MELEE || type === TYPES.DEFENSE_RANGED) && (
+    {type === TYPES.DEFENSE && (
       <>
-        <g fill={colours.softBlue}>
-          <g>
-            <defs>
-              <rect x="88.7" y="44.8" width="2.3" height="32.9" />
-            </defs>
-            <clipPath>
-              <use style={{ overflow: 'visible' }} />
-            </clipPath>
-            <path d="M90.7,49.1v-4.3h-1.6v4.3c-0.2,0.2-0.4,0.5-0.4,0.8V72c0,0.3,0.1,0.6,0.4,0.8v4.8h1.6v-4.8    c0.2-0.2,0.4-0.5,0.4-0.8V49.9C91,49.6,90.9,49.3,90.7,49.1" />
-          </g>
-        </g>
         <g fill={colours.softBlue}>
           <g>
             <path d="M57.2,36.5l1.3-8.4h2.6V40h-1.8v-8.5L58,40h-1.8l-1.4-8.4V40h-1.6V28.1h2.6L57.2,36.5z" />
@@ -324,14 +319,27 @@ const AttributesBadge = ({ type, width }) => (
         </g>
       </g>
     )}
+    {type !== TYPES.SOAK && (
+      <g fill={colours.softBlue}>
+        <g>
+          <defs>
+            <rect x="88.7" y="44.8" width="2.3" height="32.9" />
+          </defs>
+          <clipPath>
+            <use style={{ overflow: 'visible' }} />
+          </clipPath>
+          <path d="M90.7,49.1v-4.3h-1.6v4.3c-0.2,0.2-0.4,0.5-0.4,0.8V72c0,0.3,0.1,0.6,0.4,0.8v4.8h1.6v-4.8    c0.2-0.2,0.4-0.5,0.4-0.8V49.9C91,49.6,90.9,49.3,90.7,49.1" />
+        </g>
+      </g>
+    )}
   </svg>
 )
 
 AttributesBadge.propTypes = {
+  /** The height taken by the badge */
+  height: PropTypes.number.isRequired,
   /** One of the attributes */
   type: PropTypes.oneOf(Object.values(TYPES)).isRequired,
-  /** The width taken by the badge */
-  width: PropTypes.number.isRequired,
 }
 
 export default AttributesBadge

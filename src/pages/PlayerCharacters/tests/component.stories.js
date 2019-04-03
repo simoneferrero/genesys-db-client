@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
 import {
   playerCharactersAllIds,
@@ -10,7 +11,7 @@ import {
 import PlayerCharacters from '../component'
 
 const defaultProps = {
-  getPlayerCharacters: () => {},
+  getPlayerCharacters: action('getPlayerCharacters'),
   playerCharactersAllIds,
   playerCharactersById,
 }

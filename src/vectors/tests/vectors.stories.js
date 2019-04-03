@@ -14,12 +14,12 @@ storiesOf('Vectors/Logos', module).add('GenesysLogo', () => (
 
 Object.values(TYPES).forEach((type) => {
   storiesOf('Vectors/AttributesBadge', module).add(type, () => (
-    <AttributesBadge type={type} width={300} />
+    <AttributesBadge height={100} type={type} />
   ))
 })
 
 Object.values(CHARACTERISTICS).forEach((type) => {
   storiesOf('Vectors/CharacteristicsBadge', module).add(type, () => (
-    <CharacteristicsBadge type={type} width={300} />
+    <CharacteristicsBadge height={100} type={type} />
   ))
 })
