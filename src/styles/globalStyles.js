@@ -1,13 +1,11 @@
-import { createGlobalStyle } from 'styled-components/macro'
+import { createGlobalStyle, css } from 'styled-components/macro'
 
 import fonts from 'styles/fonts'
 import { colours, fontFamilies } from 'styles/constants'
 
 import backgroundImage from 'images/background-blue.jpg'
 
-export default createGlobalStyle`
-  ${fonts}
-
+const globalStyle = css`
   * {
     box-sizing: border-box;
   }
@@ -16,9 +14,8 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
-    background-image: url(${backgroundImage});
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(${backgroundImage}) no-repeat center center fixed;
+    background-size: cover;
 
     font-family: "${fontFamilies.MinionPro}", Times New Roman, serif;
   }
@@ -41,4 +38,9 @@ export default createGlobalStyle`
     font-family: "${fontFamilies.Monkirta}", Helvetica, sans-serif;
     color: ${colours.teal};
   }
+`
+
+export default createGlobalStyle`
+  ${fonts}
+  ${globalStyle}
 `

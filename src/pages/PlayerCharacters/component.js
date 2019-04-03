@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { playerCharacterType } from 'types/playerCharacters'
 
+import { Helmet } from 'react-helmet'
+import { HEAD_INFO } from 'utils/definitions'
+
 import styled from 'styled-components/macro'
 
 const StyledWrapper = styled.div`
@@ -24,9 +27,12 @@ const PlayerCharacters = ({
   }, [])
 
   return (
-    <StyledWrapper data-testid="player-characters">
-      <h1>Player characters</h1>
-    </StyledWrapper>
+    <>
+      <Helmet title={HEAD_INFO.PLAYER_CHARACTERS_TITLE} />
+      <StyledWrapper data-testid="player-characters">
+        <h1>Player characters</h1>
+      </StyledWrapper>
+    </>
   )
 }
 

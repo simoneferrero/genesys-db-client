@@ -12,6 +12,13 @@ export const REST_METHODS = {
   DELETE: 'DELETE',
 }
 
+// Head data
+export const HEAD_INFO = {
+  TITLE: 'GM Compendium',
+  CONTENT: 'Application to manage Genesys - Shadow of the Beanstalk GM data',
+  PLAYER_CHARACTERS_TITLE: 'PCs',
+}
+
 // Character data
 export const ATTRIBUTES = {
   WOUNDS: 'wounds',
