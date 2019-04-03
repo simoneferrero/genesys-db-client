@@ -4,19 +4,22 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 .c1 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
-  background-color: rgba(31,48,44,0.1);
   display: grid;
-  grid-column-gap: 6px;
-  grid-row-gap: 6px;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
   grid-template-rows: auto;
   grid-template-columns: repeat(6,1fr);
-  grid-template-areas: 'playerName playerName playerName playerName playerName playerName' 'pcName pcName pcName pcName pcName pcName' 'archetype archetype archetype archetype archetype archetype' 'career career career career career career' 'brawn brawn agility agility intellect intellect' 'cunning cunning willpower willpower presence presence' 'wounds wounds wounds strain strain strain' 'soak soak soak defense defense defense';
+  grid-template-areas: 'playerName playerName playerName playerName playerName playerName' 'pcName pcName pcName pcName pcName pcName' 'archetype archetype archetype archetype archetype archetype' 'career career career career career career' 'brawn brawn agility agility intellect intellect' 'cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds' 'strain strain strain defense defense defense';
 }
 
 .c2 {
   grid-area: playerName;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .c2 h2,
@@ -28,6 +31,10 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
   grid-area: archetype;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .c3 h2,
@@ -39,6 +46,10 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
   grid-area: pcName;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .c4 h2,
@@ -50,6 +61,10 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
   grid-area: career;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .c5 h2,
@@ -80,7 +95,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c6 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
   top: 5px;
   margin-left: 1px;
@@ -109,7 +124,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c7 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
   top: 5px;
   margin-left: 1px;
@@ -138,7 +153,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c8 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
   top: 5px;
   margin-left: 1px;
@@ -167,7 +182,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c9 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
   top: 5px;
   margin-left: 1px;
@@ -196,7 +211,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c10 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
   top: 5px;
   margin-left: 1px;
@@ -225,14 +240,14 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c11 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
   top: 5px;
   margin-left: 1px;
 }
 
 .c12 {
-  grid-area: wounds;
+  grid-area: soak;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -254,12 +269,12 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c12 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
-  top: 25px;
+  top: 19px;
   display: grid;
-  grid-template-columns: repeat( 2, 1fr );
-  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+  grid-column-gap: 16px;
   text-align: right;
 }
 
@@ -268,7 +283,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c13 {
-  grid-area: strain;
+  grid-area: wounds;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -290,12 +305,12 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c13 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
-  top: 25px;
+  top: 19px;
   display: grid;
-  grid-template-columns: repeat( 2, 1fr );
-  grid-column-gap: 12px;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 16px;
   text-align: right;
 }
 
@@ -304,7 +319,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c14 {
-  grid-area: soak;
+  grid-area: strain;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -326,12 +341,12 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c14 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
-  top: 25px;
+  top: 19px;
   display: grid;
-  grid-template-columns: repeat( 1, 1fr );
-  grid-column-gap: 12px;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 16px;
   text-align: right;
 }
 
@@ -362,12 +377,12 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 }
 
 .c15 h2 {
-  color: rgb(0,0,0);
+  color: rgb(242,143,34);
   position: absolute;
-  top: 25px;
+  top: 19px;
   display: grid;
-  grid-template-columns: repeat( 2, 1fr );
-  grid-column-gap: 12px;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 16px;
   text-align: right;
 }
 
@@ -387,7 +402,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c1 {
     grid-template-columns: repeat(12,1fr);
-    grid-template-areas: 'playerName playerName playerName playerName playerName playerName archetype archetype archetype archetype archetype archetype' 'pcName pcName pcName pcName pcName pcName career career career career career career' 'brawn brawn agility agility intellect intellect cunning cunning willpower willpower presence presence' 'wounds wounds wounds strain strain strain soak soak soak defense defense defense';
+    grid-template-areas: 'playerName playerName playerName playerName playerName playerName archetype archetype archetype archetype archetype archetype' 'pcName pcName pcName pcName pcName pcName career career career career career career' 'brawn brawn agility agility intellect intellect cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds strain strain strain defense defense defense';
   }
 }
 
@@ -441,7 +456,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         Character name:
       </h4>
       <span>
-        Sveeb Tatsetli
+        Aditi Desai
       </span>
     </div>
     <div
@@ -452,7 +467,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         Career:
       </h4>
       <span>
-        runner
+        academic
       </span>
     </div>
     <div
@@ -808,7 +823,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        1
+        2
       </h2>
     </div>
     <div
@@ -1538,7 +1553,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        2
+        4
       </h2>
     </div>
     <div
@@ -1900,7 +1915,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        3
+        2
       </h2>
     </div>
     <div
@@ -2638,11 +2653,360 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
     </div>
     <div
       className="c12"
+      type="soak"
+    >
+      <svg
+        data-testid="attributes-badge-soak"
+        height="50px"
+        version="1.1"
+        viewBox="23 19 134 63"
+        x="0px"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px"
+      >
+        <g>
+          <path
+            d="M36.1,24.1l-0.1,0.1l-1.1,8.1c-0.1,0.5-0.1,1.2-0.1,1.9l0.1,1.4l-5.3,3.3c-0.4,0.3-0.9,0.8-1.2,1.4l-0.1,0.2   c-0.3,0.6-0.5,1.2-0.5,1.8V60c0,1.3,0.8,3.3,1.7,4.2l10,10.7c0.8,0.9,2.8,1.7,4,1.7h92.7c1.3,0,3.2-0.8,4-1.7l10.1-10.7   c0.9-0.9,1.7-2.9,1.7-4.2V42.1c0-0.5-0.2-1.2-0.5-1.9l0-0.1c-0.3-0.6-0.8-1.2-1.3-1.5l-4.7-3.2l0.1-1.4c0-0.7,0-1.4-0.1-1.9   l-1.1-8.1l-0.1-0.1H36.1z M136.2,81.5H43.4c-2.6,0-5.8-1.4-7.6-3.3l-10-10.7c-1.7-1.9-3-5-3-7.6V42.1c0-1.3,0.4-2.8,1.1-4.1   l0.1-0.2c0.8-1.4,1.8-2.4,2.9-3.2l2.9-1.8c0-0.5,0-0.9,0.1-1.3l1.1-8.1c0.3-2.5,2.5-4.4,5-4.4h108.2c2.5,0,4.7,1.9,5,4.4l1.1,8.1   c0.1,0.4,0.1,0.9,0.1,1.3l2.5,1.7c1.1,0.8,2.1,1.9,2.8,3.2l0.1,0.1c0.7,1.4,1.1,2.8,1.1,4.1V60c0,2.5-1.3,5.7-3,7.6l-10.1,10.7   C142,80.2,138.8,81.5,136.2,81.5"
+            fill="rgb(242, 143, 34)"
+          />
+          <g>
+            <defs>
+              <rect
+                height="53.4"
+                width="149.2"
+                x="14.4"
+                y="26.4"
+              />
+            </defs>
+            <clipPath
+              id="SVGID_3_"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                href="#SVGID_2_"
+                style={
+                  Object {
+                    "overflow": "visible",
+                  }
+                }
+                xlink="http://www.w3.org/1999/xlink"
+              />
+            </clipPath>
+            <polygon
+              fill="rgb(234, 242, 246)"
+              points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
+            />
+            <defs>
+              <filter
+                filterUnits="userSpaceOnUse"
+                height="44.8"
+                id="Adobe_OpacityMaskFilter"
+                width="127.5"
+                x="26.1"
+                y="34"
+              >
+                <feColorMatrix
+                  type="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                />
+              </filter>
+            </defs>
+            <mask
+              height="44.8"
+              id="SVGID_4_"
+              maskUnits="userSpaceOnUse"
+              width="127.5"
+              x="26.1"
+              y="34"
+            >
+              <g
+                filter="url(#Adobe_OpacityMaskFilter)"
+              >
+                <g>
+                  <defs>
+                    <rect
+                      height="54.7"
+                      id="SVGID_5_"
+                      width="149.1"
+                      x="14.4"
+                      y="26.4"
+                    />
+                  </defs>
+                  <clipPath
+                    clipPath="url(#SVGID_3_)"
+                    id="SVGID_6_"
+                  >
+                    <use
+                      href="#SVGID_5_"
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                    />
+                  </clipPath>
+                  <g
+                    style={
+                      Object {
+                        "clipPath": "url(#SVGID_6_)",
+                      }
+                    }
+                  >
+                    <image
+                      height="94"
+                      href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                      transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
+                      width="256"
+                    />
+                  </g>
+                </g>
+              </g>
+            </mask>
+            <rect
+              clipPath="url(#SVGID_3_)"
+              fill="rgb(255, 255, 255)"
+              height="44.8"
+              mask="url(#SVGID_4_)"
+              width="127.5"
+              x="26.1"
+              y="34"
+            />
+          </g>
+          <path
+            d="M136.2,79.3H43.4c-1.9,0-4.5-1.1-5.8-2.5L27.7,66c-1.3-1.4-2.3-4-2.3-5.9v-18c0-2,1.3-4.4,3-5.4l4.5-2.8   l0.9,1.4L29.2,38C28,38.8,27,40.7,27,42.1v18c0,1.5,0.9,3.7,1.9,4.8l10,10.7c1,1.1,3.1,2,4.6,2h92.7c1.5,0,3.6-0.9,4.6-2l10.1-10.7   c1-1.1,1.9-3.3,1.9-4.8v-18c0-1.4-1-3.3-2.2-4.2l-4-2.7l0.9-1.4l4,2.7c1.6,1.1,2.9,3.5,2.9,5.5v18c0,1.9-1,4.5-2.3,5.9L142,76.8   C140.7,78.2,138.1,79.3,136.2,79.3"
+            fill="rgb(61, 153, 213)"
+          />
+          <path
+            d="M146.2,41.6c-0.2,1.7-1.8,3-3.5,3H37.6c-1.7,0-3.2-1.4-3.5-3l-0.7-5.1c-0.2-1.7-0.2-4.4,0-6.1l0.7-5.1   c0.2-1.7,1.8-3,3.5-3h105.1c1.7,0,3.2,1.4,3.5,3l0.7,5.1c0.2,1.7,0.2,4.4,0,6.1L146.2,41.6z"
+            fill="#FFF0DD"
+          />
+          <g>
+            <defs>
+              <rect
+                height="31.5"
+                id="SVGID_7_"
+                width="135.9"
+                x="21.7"
+                y="14.3"
+              />
+            </defs>
+            <clipPath
+              id="SVGID_8_"
+            >
+              <use
+                style={
+                  Object {
+                    "overflow": "visible",
+                  }
+                }
+                xlinkHref="#SVGID_7_"
+              />
+            </clipPath>
+            <g
+              clipPath="url(#SVGID_8_)"
+            >
+              <defs>
+                <path
+                  d="M37.6,22.2c-1.7,0-3.2,1.4-3.5,3l-0.7,5.1c-0.1,0.8-0.2,1.9-0.2,3c0,1.1,0.1,2.2,0.2,3l0.7,5.1      c0.2,1.7,1.8,3,3.5,3h105.1c1.4,0,2.7-0.9,3.2-2.1V24.4c-0.5-1.2-1.8-2.1-3.2-2.1H37.6z"
+                  id="SVGID_9_"
+                />
+              </defs>
+              <clipPath
+                id="SVGID_10_"
+              >
+                <use
+                  style={
+                    Object {
+                      "overflow": "visible",
+                    }
+                  }
+                  xlinkHref="#SVGID_9_"
+                />
+              </clipPath>
+              <g
+                clipPath="url(#SVGID_10_)"
+              >
+                <defs>
+                  <rect
+                    height="23.9"
+                    id="SVGID_11_"
+                    width="113.9"
+                    x="32.1"
+                    y="22.2"
+                  />
+                </defs>
+                <clipPath
+                  id="SVGID_12_"
+                >
+                  <use
+                    style={
+                      Object {
+                        "overflow": "visible",
+                      }
+                    }
+                    xlinkHref="#SVGID_11_"
+                  />
+                </clipPath>
+                <g
+                  style={
+                    Object {
+                      "clipPath": "url(#SVGID_12_)",
+                    }
+                  }
+                >
+                  <image
+                    height="82"
+                    style={
+                      Object {
+                        "overflow": "visible",
+                      }
+                    }
+                    transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
+                    width="391"
+                    xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
+                  />
+                </g>
+              </g>
+            </g>
+            <defs>
+              <filter
+                filterUnits="userSpaceOnUse"
+                height="23.9"
+                id="Adobe_OpacityMaskFilter_1_"
+                width="113.6"
+                x="32.8"
+                y="21.9"
+              >
+                <feColorMatrix
+                  type="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                />
+              </filter>
+            </defs>
+            <mask
+              height="23.9"
+              id="SVGID_13_"
+              maskUnits="userSpaceOnUse"
+              width="113.6"
+              x="32.8"
+              y="21.9"
+            >
+              <g
+                className="st23"
+              >
+                <g>
+                  <defs>
+                    <rect
+                      height="33.2"
+                      id="SVGID_14_"
+                      width="135.7"
+                      x="21.7"
+                      y="14.3"
+                    />
+                  </defs>
+                  <clipPath
+                    clipPath="url(#SVGID_8_)"
+                    id="SVGID_15_"
+                  >
+                    <use
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                      xlinkHref="#SVGID_14_"
+                    />
+                  </clipPath>
+                  <g
+                    style={
+                      Object {
+                        "clipPath": "url(#SVGID_15_)",
+                      }
+                    }
+                    transform="matrix(1 0 0 1 0 9.536743e-07)"
+                  >
+                    <image
+                      height="57"
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                      transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
+                      width="233"
+                      xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
+                    />
+                  </g>
+                </g>
+              </g>
+            </mask>
+            <rect
+              clipPath="url(#SVGID_8_)"
+              fill="rgb(255, 255, 255)"
+              height="23.9"
+              mask="url(#SVGID_13_)"
+              opacity="0.75"
+              width="113.6"
+              x="32.8"
+              y="21.9"
+            />
+          </g>
+          <path
+            d="M36.1,23.1c-0.4,0-0.9,0.4-0.9,0.8L34.1,32c-0.1,0.8-0.1,2.1,0,2.9l1.1,8.1c0.1,0.4,0.5,0.8,0.9,0.8h108.2   c0.4,0,0.9-0.4,0.9-0.8l1.1-8.1c0.1-0.8,0.1-2.1,0-2.9l-1.1-8.1c-0.1-0.4-0.5-0.8-0.9-0.8H36.1z M144.2,45.4H36.1   c-1.3,0-2.4-1-2.6-2.2l-1.1-8.1c-0.1-0.9-0.1-2.4,0-3.3l1.1-8.1c0.2-1.3,1.3-2.2,2.6-2.2h108.2c1.3,0,2.4,1,2.6,2.2l1.1,8.1   c0.1,0.9,0.1,2.4,0,3.3l-1.1,8.1C146.6,44.4,145.5,45.4,144.2,45.4"
+            fill="rgb(61, 153, 213)"
+          />
+          <rect
+            fill="none"
+            height="62.4"
+            width="134"
+            x="22.9"
+            y="19.1"
+          />
+          <rect
+            fill="none"
+            height="62.4"
+            width="134"
+            x="22.9"
+            y="19.1"
+          />
+        </g>
+        <g
+          fill="rgb(61, 153, 213)"
+        >
+          <g>
+            <path
+              d="M78.9,28c1.8,0,2.8,1.1,2.8,3v0.4h-1.8v-0.5c0-0.8-0.3-1.2-0.9-1.2c-0.6,0-0.9,0.3-0.9,1.2    c0,2.4,3.7,2.9,3.7,6.3c0,1.9-1,3-2.8,3s-2.8-1.1-2.8-3v-0.7h1.8v0.8c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2    c0-2.4-3.7-2.9-3.7-6.3C76.2,29,77.1,28,78.9,28z"
+            />
+            <path
+              d="M83,30.9c0-1.9,1-3,2.8-3c1.8,0,2.8,1.1,2.8,3v6.2c0,1.9-1,3-2.8,3c-1.8,0-2.8-1.1-2.8-3V30.9z M84.9,37.2    c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2v-6.4c0-0.8-0.4-1.2-1-1.2c-0.6,0-1,0.3-1,1.2V37.2z"
+            />
+            <path
+              d="M96.4,40h-1.9l-0.3-2.2h-2.3L91.5,40h-1.7l1.9-11.9h2.7L96.4,40z M92.1,36.2h1.8l-0.9-6L92.1,36.2z"
+            />
+            <path
+              d="M100.1,35.2l-0.6,1.1V40h-1.9V28.1h1.9v5.2l2.4-5.2h1.9l-2.6,5.3l2.6,6.6h-1.9L100.1,35.2z"
+            />
+          </g>
+        </g>
+      </svg>
+      <h2>
+        <span>
+          3
+        </span>
+      </h2>
+    </div>
+    <div
+      className="c13"
       type="wounds"
     >
       <svg
         data-testid="attributes-badge-wounds"
-        height="60px"
+        height="50px"
         version="1.1"
         viewBox="23 19 134 63"
         x="0px"
@@ -3037,20 +3401,20 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
       </svg>
       <h2>
         <span>
-          3
+          13
         </span>
         <span>
-          10
+          0
         </span>
       </h2>
     </div>
     <div
-      className="c13"
+      className="c14"
       type="strain"
     >
       <svg
         data-testid="attributes-badge-strain"
-        height="60px"
+        height="50px"
         version="1.1"
         viewBox="23 19 134 63"
         x="0px"
@@ -3448,357 +3812,8 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
       </svg>
       <h2>
         <span>
-          3
+          14
         </span>
-        <span>
-          10
-        </span>
-      </h2>
-    </div>
-    <div
-      className="c14"
-      type="soak"
-    >
-      <svg
-        data-testid="attributes-badge-soak"
-        height="60px"
-        version="1.1"
-        viewBox="23 19 134 63"
-        x="0px"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0px"
-      >
-        <g>
-          <path
-            d="M36.1,24.1l-0.1,0.1l-1.1,8.1c-0.1,0.5-0.1,1.2-0.1,1.9l0.1,1.4l-5.3,3.3c-0.4,0.3-0.9,0.8-1.2,1.4l-0.1,0.2   c-0.3,0.6-0.5,1.2-0.5,1.8V60c0,1.3,0.8,3.3,1.7,4.2l10,10.7c0.8,0.9,2.8,1.7,4,1.7h92.7c1.3,0,3.2-0.8,4-1.7l10.1-10.7   c0.9-0.9,1.7-2.9,1.7-4.2V42.1c0-0.5-0.2-1.2-0.5-1.9l0-0.1c-0.3-0.6-0.8-1.2-1.3-1.5l-4.7-3.2l0.1-1.4c0-0.7,0-1.4-0.1-1.9   l-1.1-8.1l-0.1-0.1H36.1z M136.2,81.5H43.4c-2.6,0-5.8-1.4-7.6-3.3l-10-10.7c-1.7-1.9-3-5-3-7.6V42.1c0-1.3,0.4-2.8,1.1-4.1   l0.1-0.2c0.8-1.4,1.8-2.4,2.9-3.2l2.9-1.8c0-0.5,0-0.9,0.1-1.3l1.1-8.1c0.3-2.5,2.5-4.4,5-4.4h108.2c2.5,0,4.7,1.9,5,4.4l1.1,8.1   c0.1,0.4,0.1,0.9,0.1,1.3l2.5,1.7c1.1,0.8,2.1,1.9,2.8,3.2l0.1,0.1c0.7,1.4,1.1,2.8,1.1,4.1V60c0,2.5-1.3,5.7-3,7.6l-10.1,10.7   C142,80.2,138.8,81.5,136.2,81.5"
-            fill="rgb(242, 143, 34)"
-          />
-          <g>
-            <defs>
-              <rect
-                height="53.4"
-                width="149.2"
-                x="14.4"
-                y="26.4"
-              />
-            </defs>
-            <clipPath
-              id="SVGID_3_"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                href="#SVGID_2_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlink="http://www.w3.org/1999/xlink"
-              />
-            </clipPath>
-            <polygon
-              fill="rgb(234, 242, 246)"
-              points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
-            />
-            <defs>
-              <filter
-                filterUnits="userSpaceOnUse"
-                height="44.8"
-                id="Adobe_OpacityMaskFilter"
-                width="127.5"
-                x="26.1"
-                y="34"
-              >
-                <feColorMatrix
-                  type="matrix"
-                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-                />
-              </filter>
-            </defs>
-            <mask
-              height="44.8"
-              id="SVGID_4_"
-              maskUnits="userSpaceOnUse"
-              width="127.5"
-              x="26.1"
-              y="34"
-            >
-              <g
-                filter="url(#Adobe_OpacityMaskFilter)"
-              >
-                <g>
-                  <defs>
-                    <rect
-                      height="54.7"
-                      id="SVGID_5_"
-                      width="149.1"
-                      x="14.4"
-                      y="26.4"
-                    />
-                  </defs>
-                  <clipPath
-                    clipPath="url(#SVGID_3_)"
-                    id="SVGID_6_"
-                  >
-                    <use
-                      href="#SVGID_5_"
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                    />
-                  </clipPath>
-                  <g
-                    style={
-                      Object {
-                        "clipPath": "url(#SVGID_6_)",
-                      }
-                    }
-                  >
-                    <image
-                      height="94"
-                      href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                      transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
-                      width="256"
-                    />
-                  </g>
-                </g>
-              </g>
-            </mask>
-            <rect
-              clipPath="url(#SVGID_3_)"
-              fill="rgb(255, 255, 255)"
-              height="44.8"
-              mask="url(#SVGID_4_)"
-              width="127.5"
-              x="26.1"
-              y="34"
-            />
-          </g>
-          <path
-            d="M136.2,79.3H43.4c-1.9,0-4.5-1.1-5.8-2.5L27.7,66c-1.3-1.4-2.3-4-2.3-5.9v-18c0-2,1.3-4.4,3-5.4l4.5-2.8   l0.9,1.4L29.2,38C28,38.8,27,40.7,27,42.1v18c0,1.5,0.9,3.7,1.9,4.8l10,10.7c1,1.1,3.1,2,4.6,2h92.7c1.5,0,3.6-0.9,4.6-2l10.1-10.7   c1-1.1,1.9-3.3,1.9-4.8v-18c0-1.4-1-3.3-2.2-4.2l-4-2.7l0.9-1.4l4,2.7c1.6,1.1,2.9,3.5,2.9,5.5v18c0,1.9-1,4.5-2.3,5.9L142,76.8   C140.7,78.2,138.1,79.3,136.2,79.3"
-            fill="rgb(61, 153, 213)"
-          />
-          <path
-            d="M146.2,41.6c-0.2,1.7-1.8,3-3.5,3H37.6c-1.7,0-3.2-1.4-3.5-3l-0.7-5.1c-0.2-1.7-0.2-4.4,0-6.1l0.7-5.1   c0.2-1.7,1.8-3,3.5-3h105.1c1.7,0,3.2,1.4,3.5,3l0.7,5.1c0.2,1.7,0.2,4.4,0,6.1L146.2,41.6z"
-            fill="#FFF0DD"
-          />
-          <g>
-            <defs>
-              <rect
-                height="31.5"
-                id="SVGID_7_"
-                width="135.9"
-                x="21.7"
-                y="14.3"
-              />
-            </defs>
-            <clipPath
-              id="SVGID_8_"
-            >
-              <use
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlinkHref="#SVGID_7_"
-              />
-            </clipPath>
-            <g
-              clipPath="url(#SVGID_8_)"
-            >
-              <defs>
-                <path
-                  d="M37.6,22.2c-1.7,0-3.2,1.4-3.5,3l-0.7,5.1c-0.1,0.8-0.2,1.9-0.2,3c0,1.1,0.1,2.2,0.2,3l0.7,5.1      c0.2,1.7,1.8,3,3.5,3h105.1c1.4,0,2.7-0.9,3.2-2.1V24.4c-0.5-1.2-1.8-2.1-3.2-2.1H37.6z"
-                  id="SVGID_9_"
-                />
-              </defs>
-              <clipPath
-                id="SVGID_10_"
-              >
-                <use
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
-                  xlinkHref="#SVGID_9_"
-                />
-              </clipPath>
-              <g
-                clipPath="url(#SVGID_10_)"
-              >
-                <defs>
-                  <rect
-                    height="23.9"
-                    id="SVGID_11_"
-                    width="113.9"
-                    x="32.1"
-                    y="22.2"
-                  />
-                </defs>
-                <clipPath
-                  id="SVGID_12_"
-                >
-                  <use
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    xlinkHref="#SVGID_11_"
-                  />
-                </clipPath>
-                <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
-                >
-                  <image
-                    height="82"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
-                    width="391"
-                    xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
-                  />
-                </g>
-              </g>
-            </g>
-            <defs>
-              <filter
-                filterUnits="userSpaceOnUse"
-                height="23.9"
-                id="Adobe_OpacityMaskFilter_1_"
-                width="113.6"
-                x="32.8"
-                y="21.9"
-              >
-                <feColorMatrix
-                  type="matrix"
-                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-                />
-              </filter>
-            </defs>
-            <mask
-              height="23.9"
-              id="SVGID_13_"
-              maskUnits="userSpaceOnUse"
-              width="113.6"
-              x="32.8"
-              y="21.9"
-            >
-              <g
-                className="st23"
-              >
-                <g>
-                  <defs>
-                    <rect
-                      height="33.2"
-                      id="SVGID_14_"
-                      width="135.7"
-                      x="21.7"
-                      y="14.3"
-                    />
-                  </defs>
-                  <clipPath
-                    clipPath="url(#SVGID_8_)"
-                    id="SVGID_15_"
-                  >
-                    <use
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                      xlinkHref="#SVGID_14_"
-                    />
-                  </clipPath>
-                  <g
-                    style={
-                      Object {
-                        "clipPath": "url(#SVGID_15_)",
-                      }
-                    }
-                    transform="matrix(1 0 0 1 0 9.536743e-07)"
-                  >
-                    <image
-                      height="57"
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                      transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
-                      width="233"
-                      xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
-                    />
-                  </g>
-                </g>
-              </g>
-            </mask>
-            <rect
-              clipPath="url(#SVGID_8_)"
-              fill="rgb(255, 255, 255)"
-              height="23.9"
-              mask="url(#SVGID_13_)"
-              opacity="0.75"
-              width="113.6"
-              x="32.8"
-              y="21.9"
-            />
-          </g>
-          <path
-            d="M36.1,23.1c-0.4,0-0.9,0.4-0.9,0.8L34.1,32c-0.1,0.8-0.1,2.1,0,2.9l1.1,8.1c0.1,0.4,0.5,0.8,0.9,0.8h108.2   c0.4,0,0.9-0.4,0.9-0.8l1.1-8.1c0.1-0.8,0.1-2.1,0-2.9l-1.1-8.1c-0.1-0.4-0.5-0.8-0.9-0.8H36.1z M144.2,45.4H36.1   c-1.3,0-2.4-1-2.6-2.2l-1.1-8.1c-0.1-0.9-0.1-2.4,0-3.3l1.1-8.1c0.2-1.3,1.3-2.2,2.6-2.2h108.2c1.3,0,2.4,1,2.6,2.2l1.1,8.1   c0.1,0.9,0.1,2.4,0,3.3l-1.1,8.1C146.6,44.4,145.5,45.4,144.2,45.4"
-            fill="rgb(61, 153, 213)"
-          />
-          <rect
-            fill="none"
-            height="62.4"
-            width="134"
-            x="22.9"
-            y="19.1"
-          />
-          <rect
-            fill="none"
-            height="62.4"
-            width="134"
-            x="22.9"
-            y="19.1"
-          />
-        </g>
-        <g
-          fill="rgb(61, 153, 213)"
-        >
-          <g>
-            <path
-              d="M78.9,28c1.8,0,2.8,1.1,2.8,3v0.4h-1.8v-0.5c0-0.8-0.3-1.2-0.9-1.2c-0.6,0-0.9,0.3-0.9,1.2    c0,2.4,3.7,2.9,3.7,6.3c0,1.9-1,3-2.8,3s-2.8-1.1-2.8-3v-0.7h1.8v0.8c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2    c0-2.4-3.7-2.9-3.7-6.3C76.2,29,77.1,28,78.9,28z"
-            />
-            <path
-              d="M83,30.9c0-1.9,1-3,2.8-3c1.8,0,2.8,1.1,2.8,3v6.2c0,1.9-1,3-2.8,3c-1.8,0-2.8-1.1-2.8-3V30.9z M84.9,37.2    c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2v-6.4c0-0.8-0.4-1.2-1-1.2c-0.6,0-1,0.3-1,1.2V37.2z"
-            />
-            <path
-              d="M96.4,40h-1.9l-0.3-2.2h-2.3L91.5,40h-1.7l1.9-11.9h2.7L96.4,40z M92.1,36.2h1.8l-0.9-6L92.1,36.2z"
-            />
-            <path
-              d="M100.1,35.2l-0.6,1.1V40h-1.9V28.1h1.9v5.2l2.4-5.2h1.9l-2.6,5.3l2.6,6.6h-1.9L100.1,35.2z"
-            />
-          </g>
-        </g>
-      </svg>
-      <h2>
         <span>
           2
         </span>
@@ -3810,7 +3825,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
     >
       <svg
         data-testid="attributes-badge-defense"
-        height="60px"
+        height="50px"
         version="1.1"
         viewBox="23 19 134 63"
         x="0px"
@@ -4235,7 +4250,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         Character name:
       </h4>
       <span>
-        L'Ceh Calrel
+        Tam Kamaka
       </span>
     </div>
     <div
@@ -4602,7 +4617,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        1
+        3
       </h2>
     </div>
     <div
@@ -5332,7 +5347,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        2
+        3
       </h2>
     </div>
     <div
@@ -5694,7 +5709,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        3
+        4
       </h2>
     </div>
     <div
@@ -6062,7 +6077,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
         </g>
       </svg>
       <h2>
-        4
+        1
       </h2>
     </div>
     <div
@@ -6432,11 +6447,360 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
     </div>
     <div
       className="c12"
+      type="soak"
+    >
+      <svg
+        data-testid="attributes-badge-soak"
+        height="50px"
+        version="1.1"
+        viewBox="23 19 134 63"
+        x="0px"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px"
+      >
+        <g>
+          <path
+            d="M36.1,24.1l-0.1,0.1l-1.1,8.1c-0.1,0.5-0.1,1.2-0.1,1.9l0.1,1.4l-5.3,3.3c-0.4,0.3-0.9,0.8-1.2,1.4l-0.1,0.2   c-0.3,0.6-0.5,1.2-0.5,1.8V60c0,1.3,0.8,3.3,1.7,4.2l10,10.7c0.8,0.9,2.8,1.7,4,1.7h92.7c1.3,0,3.2-0.8,4-1.7l10.1-10.7   c0.9-0.9,1.7-2.9,1.7-4.2V42.1c0-0.5-0.2-1.2-0.5-1.9l0-0.1c-0.3-0.6-0.8-1.2-1.3-1.5l-4.7-3.2l0.1-1.4c0-0.7,0-1.4-0.1-1.9   l-1.1-8.1l-0.1-0.1H36.1z M136.2,81.5H43.4c-2.6,0-5.8-1.4-7.6-3.3l-10-10.7c-1.7-1.9-3-5-3-7.6V42.1c0-1.3,0.4-2.8,1.1-4.1   l0.1-0.2c0.8-1.4,1.8-2.4,2.9-3.2l2.9-1.8c0-0.5,0-0.9,0.1-1.3l1.1-8.1c0.3-2.5,2.5-4.4,5-4.4h108.2c2.5,0,4.7,1.9,5,4.4l1.1,8.1   c0.1,0.4,0.1,0.9,0.1,1.3l2.5,1.7c1.1,0.8,2.1,1.9,2.8,3.2l0.1,0.1c0.7,1.4,1.1,2.8,1.1,4.1V60c0,2.5-1.3,5.7-3,7.6l-10.1,10.7   C142,80.2,138.8,81.5,136.2,81.5"
+            fill="rgb(242, 143, 34)"
+          />
+          <g>
+            <defs>
+              <rect
+                height="53.4"
+                width="149.2"
+                x="14.4"
+                y="26.4"
+              />
+            </defs>
+            <clipPath
+              id="SVGID_3_"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                href="#SVGID_2_"
+                style={
+                  Object {
+                    "overflow": "visible",
+                  }
+                }
+                xlink="http://www.w3.org/1999/xlink"
+              />
+            </clipPath>
+            <polygon
+              fill="rgb(234, 242, 246)"
+              points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
+            />
+            <defs>
+              <filter
+                filterUnits="userSpaceOnUse"
+                height="44.8"
+                id="Adobe_OpacityMaskFilter"
+                width="127.5"
+                x="26.1"
+                y="34"
+              >
+                <feColorMatrix
+                  type="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                />
+              </filter>
+            </defs>
+            <mask
+              height="44.8"
+              id="SVGID_4_"
+              maskUnits="userSpaceOnUse"
+              width="127.5"
+              x="26.1"
+              y="34"
+            >
+              <g
+                filter="url(#Adobe_OpacityMaskFilter)"
+              >
+                <g>
+                  <defs>
+                    <rect
+                      height="54.7"
+                      id="SVGID_5_"
+                      width="149.1"
+                      x="14.4"
+                      y="26.4"
+                    />
+                  </defs>
+                  <clipPath
+                    clipPath="url(#SVGID_3_)"
+                    id="SVGID_6_"
+                  >
+                    <use
+                      href="#SVGID_5_"
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                    />
+                  </clipPath>
+                  <g
+                    style={
+                      Object {
+                        "clipPath": "url(#SVGID_6_)",
+                      }
+                    }
+                  >
+                    <image
+                      height="94"
+                      href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                      transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
+                      width="256"
+                    />
+                  </g>
+                </g>
+              </g>
+            </mask>
+            <rect
+              clipPath="url(#SVGID_3_)"
+              fill="rgb(255, 255, 255)"
+              height="44.8"
+              mask="url(#SVGID_4_)"
+              width="127.5"
+              x="26.1"
+              y="34"
+            />
+          </g>
+          <path
+            d="M136.2,79.3H43.4c-1.9,0-4.5-1.1-5.8-2.5L27.7,66c-1.3-1.4-2.3-4-2.3-5.9v-18c0-2,1.3-4.4,3-5.4l4.5-2.8   l0.9,1.4L29.2,38C28,38.8,27,40.7,27,42.1v18c0,1.5,0.9,3.7,1.9,4.8l10,10.7c1,1.1,3.1,2,4.6,2h92.7c1.5,0,3.6-0.9,4.6-2l10.1-10.7   c1-1.1,1.9-3.3,1.9-4.8v-18c0-1.4-1-3.3-2.2-4.2l-4-2.7l0.9-1.4l4,2.7c1.6,1.1,2.9,3.5,2.9,5.5v18c0,1.9-1,4.5-2.3,5.9L142,76.8   C140.7,78.2,138.1,79.3,136.2,79.3"
+            fill="rgb(61, 153, 213)"
+          />
+          <path
+            d="M146.2,41.6c-0.2,1.7-1.8,3-3.5,3H37.6c-1.7,0-3.2-1.4-3.5-3l-0.7-5.1c-0.2-1.7-0.2-4.4,0-6.1l0.7-5.1   c0.2-1.7,1.8-3,3.5-3h105.1c1.7,0,3.2,1.4,3.5,3l0.7,5.1c0.2,1.7,0.2,4.4,0,6.1L146.2,41.6z"
+            fill="#FFF0DD"
+          />
+          <g>
+            <defs>
+              <rect
+                height="31.5"
+                id="SVGID_7_"
+                width="135.9"
+                x="21.7"
+                y="14.3"
+              />
+            </defs>
+            <clipPath
+              id="SVGID_8_"
+            >
+              <use
+                style={
+                  Object {
+                    "overflow": "visible",
+                  }
+                }
+                xlinkHref="#SVGID_7_"
+              />
+            </clipPath>
+            <g
+              clipPath="url(#SVGID_8_)"
+            >
+              <defs>
+                <path
+                  d="M37.6,22.2c-1.7,0-3.2,1.4-3.5,3l-0.7,5.1c-0.1,0.8-0.2,1.9-0.2,3c0,1.1,0.1,2.2,0.2,3l0.7,5.1      c0.2,1.7,1.8,3,3.5,3h105.1c1.4,0,2.7-0.9,3.2-2.1V24.4c-0.5-1.2-1.8-2.1-3.2-2.1H37.6z"
+                  id="SVGID_9_"
+                />
+              </defs>
+              <clipPath
+                id="SVGID_10_"
+              >
+                <use
+                  style={
+                    Object {
+                      "overflow": "visible",
+                    }
+                  }
+                  xlinkHref="#SVGID_9_"
+                />
+              </clipPath>
+              <g
+                clipPath="url(#SVGID_10_)"
+              >
+                <defs>
+                  <rect
+                    height="23.9"
+                    id="SVGID_11_"
+                    width="113.9"
+                    x="32.1"
+                    y="22.2"
+                  />
+                </defs>
+                <clipPath
+                  id="SVGID_12_"
+                >
+                  <use
+                    style={
+                      Object {
+                        "overflow": "visible",
+                      }
+                    }
+                    xlinkHref="#SVGID_11_"
+                  />
+                </clipPath>
+                <g
+                  style={
+                    Object {
+                      "clipPath": "url(#SVGID_12_)",
+                    }
+                  }
+                >
+                  <image
+                    height="82"
+                    style={
+                      Object {
+                        "overflow": "visible",
+                      }
+                    }
+                    transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
+                    width="391"
+                    xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
+                  />
+                </g>
+              </g>
+            </g>
+            <defs>
+              <filter
+                filterUnits="userSpaceOnUse"
+                height="23.9"
+                id="Adobe_OpacityMaskFilter_1_"
+                width="113.6"
+                x="32.8"
+                y="21.9"
+              >
+                <feColorMatrix
+                  type="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                />
+              </filter>
+            </defs>
+            <mask
+              height="23.9"
+              id="SVGID_13_"
+              maskUnits="userSpaceOnUse"
+              width="113.6"
+              x="32.8"
+              y="21.9"
+            >
+              <g
+                className="st23"
+              >
+                <g>
+                  <defs>
+                    <rect
+                      height="33.2"
+                      id="SVGID_14_"
+                      width="135.7"
+                      x="21.7"
+                      y="14.3"
+                    />
+                  </defs>
+                  <clipPath
+                    clipPath="url(#SVGID_8_)"
+                    id="SVGID_15_"
+                  >
+                    <use
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                      xlinkHref="#SVGID_14_"
+                    />
+                  </clipPath>
+                  <g
+                    style={
+                      Object {
+                        "clipPath": "url(#SVGID_15_)",
+                      }
+                    }
+                    transform="matrix(1 0 0 1 0 9.536743e-07)"
+                  >
+                    <image
+                      height="57"
+                      style={
+                        Object {
+                          "overflow": "visible",
+                        }
+                      }
+                      transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
+                      width="233"
+                      xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
+                    />
+                  </g>
+                </g>
+              </g>
+            </mask>
+            <rect
+              clipPath="url(#SVGID_8_)"
+              fill="rgb(255, 255, 255)"
+              height="23.9"
+              mask="url(#SVGID_13_)"
+              opacity="0.75"
+              width="113.6"
+              x="32.8"
+              y="21.9"
+            />
+          </g>
+          <path
+            d="M36.1,23.1c-0.4,0-0.9,0.4-0.9,0.8L34.1,32c-0.1,0.8-0.1,2.1,0,2.9l1.1,8.1c0.1,0.4,0.5,0.8,0.9,0.8h108.2   c0.4,0,0.9-0.4,0.9-0.8l1.1-8.1c0.1-0.8,0.1-2.1,0-2.9l-1.1-8.1c-0.1-0.4-0.5-0.8-0.9-0.8H36.1z M144.2,45.4H36.1   c-1.3,0-2.4-1-2.6-2.2l-1.1-8.1c-0.1-0.9-0.1-2.4,0-3.3l1.1-8.1c0.2-1.3,1.3-2.2,2.6-2.2h108.2c1.3,0,2.4,1,2.6,2.2l1.1,8.1   c0.1,0.9,0.1,2.4,0,3.3l-1.1,8.1C146.6,44.4,145.5,45.4,144.2,45.4"
+            fill="rgb(61, 153, 213)"
+          />
+          <rect
+            fill="none"
+            height="62.4"
+            width="134"
+            x="22.9"
+            y="19.1"
+          />
+          <rect
+            fill="none"
+            height="62.4"
+            width="134"
+            x="22.9"
+            y="19.1"
+          />
+        </g>
+        <g
+          fill="rgb(61, 153, 213)"
+        >
+          <g>
+            <path
+              d="M78.9,28c1.8,0,2.8,1.1,2.8,3v0.4h-1.8v-0.5c0-0.8-0.3-1.2-0.9-1.2c-0.6,0-0.9,0.3-0.9,1.2    c0,2.4,3.7,2.9,3.7,6.3c0,1.9-1,3-2.8,3s-2.8-1.1-2.8-3v-0.7h1.8v0.8c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2    c0-2.4-3.7-2.9-3.7-6.3C76.2,29,77.1,28,78.9,28z"
+            />
+            <path
+              d="M83,30.9c0-1.9,1-3,2.8-3c1.8,0,2.8,1.1,2.8,3v6.2c0,1.9-1,3-2.8,3c-1.8,0-2.8-1.1-2.8-3V30.9z M84.9,37.2    c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2v-6.4c0-0.8-0.4-1.2-1-1.2c-0.6,0-1,0.3-1,1.2V37.2z"
+            />
+            <path
+              d="M96.4,40h-1.9l-0.3-2.2h-2.3L91.5,40h-1.7l1.9-11.9h2.7L96.4,40z M92.1,36.2h1.8l-0.9-6L92.1,36.2z"
+            />
+            <path
+              d="M100.1,35.2l-0.6,1.1V40h-1.9V28.1h1.9v5.2l2.4-5.2h1.9l-2.6,5.3l2.6,6.6h-1.9L100.1,35.2z"
+            />
+          </g>
+        </g>
+      </svg>
+      <h2>
+        <span>
+          5
+        </span>
+      </h2>
+    </div>
+    <div
+      className="c13"
       type="wounds"
     >
       <svg
         data-testid="attributes-badge-wounds"
-        height="60px"
+        height="50px"
         version="1.1"
         viewBox="23 19 134 63"
         x="0px"
@@ -6831,20 +7195,20 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
       </svg>
       <h2>
         <span>
-          3
+          16
         </span>
         <span>
-          10
+          3
         </span>
       </h2>
     </div>
     <div
-      className="c13"
+      className="c14"
       type="strain"
     >
       <svg
         data-testid="attributes-badge-strain"
-        height="60px"
+        height="50px"
         version="1.1"
         viewBox="23 19 134 63"
         x="0px"
@@ -7242,359 +7606,10 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
       </svg>
       <h2>
         <span>
-          3
+          12
         </span>
         <span>
-          10
-        </span>
-      </h2>
-    </div>
-    <div
-      className="c14"
-      type="soak"
-    >
-      <svg
-        data-testid="attributes-badge-soak"
-        height="60px"
-        version="1.1"
-        viewBox="23 19 134 63"
-        x="0px"
-        xmlns="http://www.w3.org/2000/svg"
-        y="0px"
-      >
-        <g>
-          <path
-            d="M36.1,24.1l-0.1,0.1l-1.1,8.1c-0.1,0.5-0.1,1.2-0.1,1.9l0.1,1.4l-5.3,3.3c-0.4,0.3-0.9,0.8-1.2,1.4l-0.1,0.2   c-0.3,0.6-0.5,1.2-0.5,1.8V60c0,1.3,0.8,3.3,1.7,4.2l10,10.7c0.8,0.9,2.8,1.7,4,1.7h92.7c1.3,0,3.2-0.8,4-1.7l10.1-10.7   c0.9-0.9,1.7-2.9,1.7-4.2V42.1c0-0.5-0.2-1.2-0.5-1.9l0-0.1c-0.3-0.6-0.8-1.2-1.3-1.5l-4.7-3.2l0.1-1.4c0-0.7,0-1.4-0.1-1.9   l-1.1-8.1l-0.1-0.1H36.1z M136.2,81.5H43.4c-2.6,0-5.8-1.4-7.6-3.3l-10-10.7c-1.7-1.9-3-5-3-7.6V42.1c0-1.3,0.4-2.8,1.1-4.1   l0.1-0.2c0.8-1.4,1.8-2.4,2.9-3.2l2.9-1.8c0-0.5,0-0.9,0.1-1.3l1.1-8.1c0.3-2.5,2.5-4.4,5-4.4h108.2c2.5,0,4.7,1.9,5,4.4l1.1,8.1   c0.1,0.4,0.1,0.9,0.1,1.3l2.5,1.7c1.1,0.8,2.1,1.9,2.8,3.2l0.1,0.1c0.7,1.4,1.1,2.8,1.1,4.1V60c0,2.5-1.3,5.7-3,7.6l-10.1,10.7   C142,80.2,138.8,81.5,136.2,81.5"
-            fill="rgb(242, 143, 34)"
-          />
-          <g>
-            <defs>
-              <rect
-                height="53.4"
-                width="149.2"
-                x="14.4"
-                y="26.4"
-              />
-            </defs>
-            <clipPath
-              id="SVGID_3_"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                href="#SVGID_2_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlink="http://www.w3.org/1999/xlink"
-              />
-            </clipPath>
-            <polygon
-              fill="rgb(234, 242, 246)"
-              points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
-            />
-            <defs>
-              <filter
-                filterUnits="userSpaceOnUse"
-                height="44.8"
-                id="Adobe_OpacityMaskFilter"
-                width="127.5"
-                x="26.1"
-                y="34"
-              >
-                <feColorMatrix
-                  type="matrix"
-                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-                />
-              </filter>
-            </defs>
-            <mask
-              height="44.8"
-              id="SVGID_4_"
-              maskUnits="userSpaceOnUse"
-              width="127.5"
-              x="26.1"
-              y="34"
-            >
-              <g
-                filter="url(#Adobe_OpacityMaskFilter)"
-              >
-                <g>
-                  <defs>
-                    <rect
-                      height="54.7"
-                      id="SVGID_5_"
-                      width="149.1"
-                      x="14.4"
-                      y="26.4"
-                    />
-                  </defs>
-                  <clipPath
-                    clipPath="url(#SVGID_3_)"
-                    id="SVGID_6_"
-                  >
-                    <use
-                      href="#SVGID_5_"
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                    />
-                  </clipPath>
-                  <g
-                    style={
-                      Object {
-                        "clipPath": "url(#SVGID_6_)",
-                      }
-                    }
-                  >
-                    <image
-                      height="94"
-                      href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                      transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
-                      width="256"
-                    />
-                  </g>
-                </g>
-              </g>
-            </mask>
-            <rect
-              clipPath="url(#SVGID_3_)"
-              fill="rgb(255, 255, 255)"
-              height="44.8"
-              mask="url(#SVGID_4_)"
-              width="127.5"
-              x="26.1"
-              y="34"
-            />
-          </g>
-          <path
-            d="M136.2,79.3H43.4c-1.9,0-4.5-1.1-5.8-2.5L27.7,66c-1.3-1.4-2.3-4-2.3-5.9v-18c0-2,1.3-4.4,3-5.4l4.5-2.8   l0.9,1.4L29.2,38C28,38.8,27,40.7,27,42.1v18c0,1.5,0.9,3.7,1.9,4.8l10,10.7c1,1.1,3.1,2,4.6,2h92.7c1.5,0,3.6-0.9,4.6-2l10.1-10.7   c1-1.1,1.9-3.3,1.9-4.8v-18c0-1.4-1-3.3-2.2-4.2l-4-2.7l0.9-1.4l4,2.7c1.6,1.1,2.9,3.5,2.9,5.5v18c0,1.9-1,4.5-2.3,5.9L142,76.8   C140.7,78.2,138.1,79.3,136.2,79.3"
-            fill="rgb(61, 153, 213)"
-          />
-          <path
-            d="M146.2,41.6c-0.2,1.7-1.8,3-3.5,3H37.6c-1.7,0-3.2-1.4-3.5-3l-0.7-5.1c-0.2-1.7-0.2-4.4,0-6.1l0.7-5.1   c0.2-1.7,1.8-3,3.5-3h105.1c1.7,0,3.2,1.4,3.5,3l0.7,5.1c0.2,1.7,0.2,4.4,0,6.1L146.2,41.6z"
-            fill="#FFF0DD"
-          />
-          <g>
-            <defs>
-              <rect
-                height="31.5"
-                id="SVGID_7_"
-                width="135.9"
-                x="21.7"
-                y="14.3"
-              />
-            </defs>
-            <clipPath
-              id="SVGID_8_"
-            >
-              <use
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlinkHref="#SVGID_7_"
-              />
-            </clipPath>
-            <g
-              clipPath="url(#SVGID_8_)"
-            >
-              <defs>
-                <path
-                  d="M37.6,22.2c-1.7,0-3.2,1.4-3.5,3l-0.7,5.1c-0.1,0.8-0.2,1.9-0.2,3c0,1.1,0.1,2.2,0.2,3l0.7,5.1      c0.2,1.7,1.8,3,3.5,3h105.1c1.4,0,2.7-0.9,3.2-2.1V24.4c-0.5-1.2-1.8-2.1-3.2-2.1H37.6z"
-                  id="SVGID_9_"
-                />
-              </defs>
-              <clipPath
-                id="SVGID_10_"
-              >
-                <use
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
-                  xlinkHref="#SVGID_9_"
-                />
-              </clipPath>
-              <g
-                clipPath="url(#SVGID_10_)"
-              >
-                <defs>
-                  <rect
-                    height="23.9"
-                    id="SVGID_11_"
-                    width="113.9"
-                    x="32.1"
-                    y="22.2"
-                  />
-                </defs>
-                <clipPath
-                  id="SVGID_12_"
-                >
-                  <use
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    xlinkHref="#SVGID_11_"
-                  />
-                </clipPath>
-                <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
-                >
-                  <image
-                    height="82"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
-                    width="391"
-                    xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
-                  />
-                </g>
-              </g>
-            </g>
-            <defs>
-              <filter
-                filterUnits="userSpaceOnUse"
-                height="23.9"
-                id="Adobe_OpacityMaskFilter_1_"
-                width="113.6"
-                x="32.8"
-                y="21.9"
-              >
-                <feColorMatrix
-                  type="matrix"
-                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
-                />
-              </filter>
-            </defs>
-            <mask
-              height="23.9"
-              id="SVGID_13_"
-              maskUnits="userSpaceOnUse"
-              width="113.6"
-              x="32.8"
-              y="21.9"
-            >
-              <g
-                className="st23"
-              >
-                <g>
-                  <defs>
-                    <rect
-                      height="33.2"
-                      id="SVGID_14_"
-                      width="135.7"
-                      x="21.7"
-                      y="14.3"
-                    />
-                  </defs>
-                  <clipPath
-                    clipPath="url(#SVGID_8_)"
-                    id="SVGID_15_"
-                  >
-                    <use
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                      xlinkHref="#SVGID_14_"
-                    />
-                  </clipPath>
-                  <g
-                    style={
-                      Object {
-                        "clipPath": "url(#SVGID_15_)",
-                      }
-                    }
-                    transform="matrix(1 0 0 1 0 9.536743e-07)"
-                  >
-                    <image
-                      height="57"
-                      style={
-                        Object {
-                          "overflow": "visible",
-                        }
-                      }
-                      transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
-                      width="233"
-                      xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAJRAAAEOgAABlX/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIADsA7AMBIgACEQEDEQH/ xACVAAADAQADAQAAAAAAAAAAAAAABAYFAQMHAgEBAAAAAAAAAAAAAAAAAAAAABAAAQIFAwUBAQEA AAAAAAAAAAIVAQMTBSUEFBYQEQY2RhJQIREAAQICCAMHAgcBAAAAAAAAAAExAjIRodKTBDRFpRAS EyGxA3PDBYUUFSBAYXFygiNlEgEAAAAAAAAAAAAAAAAAAABQ/9oADAMBAAIRAxEAAADByXMccE+R sVBoVBoVBoVBoVBoVBoVBoVBoVBoVBoV4GxMHNad2Ax9jHOdbMtRbst+8gS+CBL4IEvggS+CBL4I EvggS+CBL4IEvggVPScg8vU3MMNjH2Ax9jHO26g6c9LYk+4piZCmJkKYmQpiZCmJkKYmQpiZCmJk KYmQpsZLOJjA1coNjH2Ax7LNJ/v2QQ+nQSHQSHQSHQSHQSHQSHQSHQSHQSHQS6tIML4oAn9hjSP/ 2gAIAQIAAQUA/uf/2gAIAQMAAQUA/uf/2gAIAQEAAQUA8qulyleQvF3Hi7jxdx4u48XceLuPF3Hi 7jxdx4u48XceLuPF3Hi7jxdx4u48XceLuPF3Hi7jxdx4u48XceLuPF3Hi7jxdx4u46XLi3l3svSE IxPwoprKaymsprKaymsprKaymsprKaymsprKaymsprKaymsprKaz8qgduvyXl3somHeOgt1UlWL9 Q4+cfOPnHzj5x84+cfOPnHzj5x84+cfOPnHzj5x84+METU2X8J1mmjJV0+S8u9lJEO8yx6dKjS6F EUbBBsEGwQbBBsEGwQbBBsEGwQbBBsEGwQbBBsEGwQbBBsEGwQbBBHQI7XXRoSi9S4Jj0+S8u9lN NHtNsC4QjpJifxUSVElRJUSVElRJUSVElRJUSVElRJUSVElRJUSVElRJUSRmJ7Xdaad8j/vT5Ly7 2Ulx7LtGugiGnvSEpfED4gfED4gfED4gfED4gfED4gfED4gfED4gfED4gfED4gfEEb4g192StN11 EJiunyXl3svSTqlyhN2mwHiaPE0eJo8TR4mjxNHiaPE0eJo8TR4mjxNHiaPE0eJo8TR4mjxNHiaP E0mXOauC5kVx6fJeRNb3hjDGGMMYYwxhjDGGMMYYwxhjDGGMMYYwxhjDGGMMYYwxhjDGGMMYvjv/ 2gAIAQICBj8Ac//aAAgBAwIGPwBz/9oACAEBAQY/AMf4fhYvx/D8OHxVSGCHxY4YUShGRFM9iL6O 0Z7EX0doz2Ivo7RnsRfR2jPYi+jtGexF9HaM9iL6O0Z7EX0doz2Ivo7RnsRfR2jPYi+jtGexF9Ha M9iL6O0Z7EX0doz2Ivo7RnsRfR2jPYi+jtGexF9HaM9iL6O0Z7EX0doz2Ivo7RnsRfR2jPYi+jtG exF9HaM9iL6O0Z7EX0doz2Ivo7RnsRfR2jq/V+P1fr+Xn6sfNy9GnlpppopPcfOXuTj2DKMoyjKM oyjKMoyjKMoyjKMoyjKMoyjKMoyjfg+R9A9x85e5OFAiqjkhJUSVElRJUSVElRJUSVElRJUSVElR JUSVElRJUSVElRJUSVCry0Cpx+R9A9x85e5OCIQ9gnYMMMMMMMMMMMMMMMMMMMMRdgtHH5H0D3Hz l7k4QkInaOOOOOOOOOOOOOOOOOOOORdov78fkfQPcfOXuTgikK0iJzExMTExMTExMTExMTExMTEx MTExMKlIqIvH5H0D3Hzl7k49i/lqKSlePyPoGM6323qdRebrfcepTQk/Q/zp/iaTuppO6mk7qaTu ppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaT uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
-                    />
-                  </g>
-                </g>
-              </g>
-            </mask>
-            <rect
-              clipPath="url(#SVGID_8_)"
-              fill="rgb(255, 255, 255)"
-              height="23.9"
-              mask="url(#SVGID_13_)"
-              opacity="0.75"
-              width="113.6"
-              x="32.8"
-              y="21.9"
-            />
-          </g>
-          <path
-            d="M36.1,23.1c-0.4,0-0.9,0.4-0.9,0.8L34.1,32c-0.1,0.8-0.1,2.1,0,2.9l1.1,8.1c0.1,0.4,0.5,0.8,0.9,0.8h108.2   c0.4,0,0.9-0.4,0.9-0.8l1.1-8.1c0.1-0.8,0.1-2.1,0-2.9l-1.1-8.1c-0.1-0.4-0.5-0.8-0.9-0.8H36.1z M144.2,45.4H36.1   c-1.3,0-2.4-1-2.6-2.2l-1.1-8.1c-0.1-0.9-0.1-2.4,0-3.3l1.1-8.1c0.2-1.3,1.3-2.2,2.6-2.2h108.2c1.3,0,2.4,1,2.6,2.2l1.1,8.1   c0.1,0.9,0.1,2.4,0,3.3l-1.1,8.1C146.6,44.4,145.5,45.4,144.2,45.4"
-            fill="rgb(61, 153, 213)"
-          />
-          <rect
-            fill="none"
-            height="62.4"
-            width="134"
-            x="22.9"
-            y="19.1"
-          />
-          <rect
-            fill="none"
-            height="62.4"
-            width="134"
-            x="22.9"
-            y="19.1"
-          />
-        </g>
-        <g
-          fill="rgb(61, 153, 213)"
-        >
-          <g>
-            <path
-              d="M78.9,28c1.8,0,2.8,1.1,2.8,3v0.4h-1.8v-0.5c0-0.8-0.3-1.2-0.9-1.2c-0.6,0-0.9,0.3-0.9,1.2    c0,2.4,3.7,2.9,3.7,6.3c0,1.9-1,3-2.8,3s-2.8-1.1-2.8-3v-0.7h1.8v0.8c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2    c0-2.4-3.7-2.9-3.7-6.3C76.2,29,77.1,28,78.9,28z"
-            />
-            <path
-              d="M83,30.9c0-1.9,1-3,2.8-3c1.8,0,2.8,1.1,2.8,3v6.2c0,1.9-1,3-2.8,3c-1.8,0-2.8-1.1-2.8-3V30.9z M84.9,37.2    c0,0.8,0.4,1.2,1,1.2c0.6,0,1-0.3,1-1.2v-6.4c0-0.8-0.4-1.2-1-1.2c-0.6,0-1,0.3-1,1.2V37.2z"
-            />
-            <path
-              d="M96.4,40h-1.9l-0.3-2.2h-2.3L91.5,40h-1.7l1.9-11.9h2.7L96.4,40z M92.1,36.2h1.8l-0.9-6L92.1,36.2z"
-            />
-            <path
-              d="M100.1,35.2l-0.6,1.1V40h-1.9V28.1h1.9v5.2l2.4-5.2h1.9l-2.6,5.3l2.6,6.6h-1.9L100.1,35.2z"
-            />
-          </g>
-        </g>
-      </svg>
-      <h2>
-        <span>
-          2
+          1
         </span>
       </h2>
     </div>
@@ -7604,7 +7619,7 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
     >
       <svg
         data-testid="attributes-badge-defense"
-        height="60px"
+        height="50px"
         version="1.1"
         viewBox="23 19 134 63"
         x="0px"
@@ -7987,10 +8002,10 @@ exports[`Storyshots Pages/PlayerCharacters default 1`] = `
       </svg>
       <h2>
         <span>
-          1
+          0
         </span>
         <span>
-          1
+          0
         </span>
       </h2>
     </div>

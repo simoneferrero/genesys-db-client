@@ -3,53 +3,48 @@ import styled, { css } from 'styled-components/macro'
 import { baseSpacing, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
-import rgbToRgba from 'utils/rgbToRgba'
-import rep from 'utils/stringRepeat'
-
 import { ATTRIBUTES, CHARACTERISTICS, INFO } from 'utils/definitions'
 
-const { ARCHETYPE, CAREER, PC_NAME, PLAYER_NAME } = INFO
-const { DEFENSE, SOAK, STRAIN, WOUNDS } = ATTRIBUTES
+const { ARCHETYPE: arc, CAREER: car, PC_NAME: pcn, PLAYER_NAME: pln } = INFO
+const { DEFENSE: def, SOAK: soa, STRAIN: str, WOUNDS: wou } = ATTRIBUTES
 const {
-  AGILITY,
-  BRAWN,
-  CUNNING,
-  INTELLECT,
-  PRESENCE,
-  WILLPOWER,
+  AGILITY: agi,
+  BRAWN: bra,
+  CUNNING: cun,
+  INTELLECT: int,
+  PRESENCE: pre,
+  WILLPOWER: wil,
 } = CHARACTERISTICS
 
+// Shows column style for mobile and laptop (2 columns)
 const portableGridStyles = css`
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    '${rep(PLAYER_NAME, 6)}'
-    '${rep(PC_NAME, 6)}'
-    '${rep(ARCHETYPE, 6)}'
-    '${rep(CAREER, 6)}'
-    '${rep(BRAWN, 2)} ${rep(AGILITY, 2)} ${rep(INTELLECT, 2)}'
-    '${rep(CUNNING, 2)} ${rep(WILLPOWER, 2)} ${rep(PRESENCE, 2)}'
-    '${rep(WOUNDS, 3)} ${rep(STRAIN, 3)}'
-    '${rep(SOAK, 3)} ${rep(DEFENSE, 3)}';
+    '${pln} ${pln} ${pln} ${pln} ${pln} ${pln}'
+    '${pcn} ${pcn} ${pcn} ${pcn} ${pcn} ${pcn}'
+    '${arc} ${arc} ${arc} ${arc} ${arc} ${arc}'
+    '${car} ${car} ${car} ${car} ${car} ${car}'
+    '${bra} ${bra} ${agi} ${agi} ${int} ${int}'
+    '${cun} ${cun} ${wil} ${wil} ${pre} ${pre}'
+    '${soa} ${soa} ${soa} ${wou} ${wou} ${wou}'
+    '${str} ${str} ${str} ${def} ${def} ${def}';
 `
+// Shows row style for tablet, desktop (2 columns) and desktopBig (3 columns)
 const laptopGridStyles = css`
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
-    '${rep(PLAYER_NAME, 6)} ${rep(ARCHETYPE, 6)}'
-    '${rep(PC_NAME, 6)} ${rep(CAREER, 6)}'
-    '${rep(BRAWN, 2)} ${rep(AGILITY, 2)} ${rep(INTELLECT, 2)} ${rep(
-  CUNNING,
-  2,
-)} ${rep(WILLPOWER, 2)} ${rep(PRESENCE, 2)}'
-    '${rep(WOUNDS, 3)} ${rep(STRAIN, 3)} ${rep(SOAK, 3)} ${rep(DEFENSE, 3)}';
+    '${pln} ${pln} ${pln} ${pln} ${pln} ${pln} ${arc} ${arc} ${arc} ${arc} ${arc} ${arc}'
+    '${pcn} ${pcn} ${pcn} ${pcn} ${pcn} ${pcn} ${car} ${car} ${car} ${car} ${car} ${car}'
+    '${bra} ${bra} ${agi} ${agi} ${int} ${int} ${cun} ${cun} ${wil} ${wil} ${pre} ${pre}'
+    '${soa} ${soa} ${soa} ${wou} ${wou} ${wou} ${str} ${str} ${str} ${def} ${def} ${def}';
 `
 
 export const StyledPCSummary = styled.div`
   padding: ${baseSpacing / 2}px;
   border: 2px solid ${colours.lightOrange};
-  background-color: ${rgbToRgba(colours.veryDarkGreen, 0.1)};
   display: grid;
-  grid-column-gap: ${baseSpacing / 4}px;
-  grid-row-gap: ${baseSpacing / 4}px;
+  grid-column-gap: ${baseSpacing / 3}px;
+  grid-row-gap: ${baseSpacing / 3}px;
   grid-template-rows: auto;
   ${portableGridStyles}
 
@@ -73,13 +68,10 @@ const characteristicsStyles = css`
   margin-left: 1px;
 `
 const attributesStyles = css`
-  top: 25px;
+  top: 19px;
   display: grid;
-  grid-template-columns: repeat(
-    ${({ type }) => (type === ATTRIBUTES.SOAK ? 1 : 2)},
-    1fr
-  );
-  grid-column-gap: ${baseSpacing / 2}px;
+  grid-template-columns: repeat(${({ type }) => (type === soa ? 1 : 2)}, 1fr);
+  grid-column-gap: ${(baseSpacing * 2) / 3}px;
   text-align: right;
 
   & span:nth-child(2) {
@@ -90,6 +82,7 @@ export const StyledTextCell = styled.div`
   ${cellStyles}
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: baseline;
 `
 export const StyledCell = styled.div`
   ${cellStyles}
@@ -99,7 +92,7 @@ export const StyledCell = styled.div`
   align-items: center;
 
   h2 {
-    color: ${colours.black};
+    color: ${colours.lightOrange};
     position: absolute;
 
     ${({ type }) =>

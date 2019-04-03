@@ -64,28 +64,28 @@ const PCSummary = ({
       <CharacteristicsBadge height={60} type={CHARACTERISTICS.PRESENCE} />
       <h2>{presence}</h2>
     </StyledCell>
-    <StyledCell type={ATTRIBUTES.WOUNDS}>
-      <AttributesBadge height={60} type={ATTRIBUTES.WOUNDS} />
-      <h2>
-        <span>{currentWounds}</span>
-        <span>{totalWounds}</span>
-      </h2>
-    </StyledCell>
-    <StyledCell type={ATTRIBUTES.STRAIN}>
-      <AttributesBadge height={60} type={ATTRIBUTES.STRAIN} />
-      <h2>
-        <span>{currentStrain}</span>
-        <span>{totalStrain}</span>
-      </h2>
-    </StyledCell>
     <StyledCell type={ATTRIBUTES.SOAK}>
-      <AttributesBadge height={60} type={ATTRIBUTES.SOAK} />
+      <AttributesBadge height={50} type={ATTRIBUTES.SOAK} />
       <h2>
         <span>{soak}</span>
       </h2>
     </StyledCell>
+    <StyledCell type={ATTRIBUTES.WOUNDS}>
+      <AttributesBadge height={50} type={ATTRIBUTES.WOUNDS} />
+      <h2>
+        <span>{totalWounds}</span>
+        <span>{currentWounds}</span>
+      </h2>
+    </StyledCell>
+    <StyledCell type={ATTRIBUTES.STRAIN}>
+      <AttributesBadge height={50} type={ATTRIBUTES.STRAIN} />
+      <h2>
+        <span>{totalStrain}</span>
+        <span>{currentStrain}</span>
+      </h2>
+    </StyledCell>
     <StyledCell type={ATTRIBUTES.DEFENSE}>
-      <AttributesBadge height={60} type={ATTRIBUTES.DEFENSE} />
+      <AttributesBadge height={50} type={ATTRIBUTES.DEFENSE} />
       <h2>
         <span>{melee}</span>
         <span>{ranged}</span>
