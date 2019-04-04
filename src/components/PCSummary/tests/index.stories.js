@@ -2,12 +2,12 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import { firstPlayerCharacter } from 'mocks/playerCharacters'
+import { playerCharacter1Augmented } from 'mocks/playersCharacters'
 
 import PCSummary from '../index'
 
 const defaultProps = {
-  ...firstPlayerCharacter,
+  ...playerCharacter1Augmented,
 }
 
 storiesOf('Components/PCSummary', module).add('default', () => (

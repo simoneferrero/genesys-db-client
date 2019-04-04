@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux-immutable'
 
 // UI reducers
-import playerCharacters from './playerCharacters'
+import archetypes from './archetypes'
+import careers from './careers'
+import playersCharacters from './playersCharacters'
 
 export default combineReducers({
-  playerCharacters,
+  archetypes,
+  careers,
+  playersCharacters,
 })

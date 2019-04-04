@@ -1,5 +1,5 @@
 import React from 'react'
-import { playerCharacterData } from 'types/playerCharacters'
+import { playerCharacterAugmentedData } from 'types/playersCharacters'
 
 import AttributesBadge from 'vectors/AttributesBadge'
 import CharacteristicsBadge from 'vectors/CharacteristicsBadge'
@@ -10,14 +10,14 @@ import { StyledPCSummary, StyledTextCell, StyledCell } from './styles'
 
 /** Summary of the PC's most important info */
 const PCSummary = ({
-  archetype,
+  archetype: { name: archetypeName },
   attributes: {
     defense: { melee, ranged },
     soak,
     strain: { current: currentStrain, total: totalStrain },
     wounds: { current: currentWounds, total: totalWounds },
   },
-  career,
+  career: { name: careerName },
   characteristics: { agility, brawn, cunning, intellect, presence, willpower },
   id,
   name,
@@ -30,7 +30,7 @@ const PCSummary = ({
     </StyledTextCell>
     <StyledTextCell type={INFO.ARCHETYPE}>
       <h4>Archetype:</h4>
-      <span>{archetype}</span>
+      <span>{archetypeName}</span>
     </StyledTextCell>
     <StyledTextCell type={INFO.PC_NAME}>
       <h4>Character name:</h4>
@@ -38,7 +38,7 @@ const PCSummary = ({
     </StyledTextCell>
     <StyledTextCell type={INFO.CAREER}>
       <h4>Career:</h4>
-      <span>{career}</span>
+      <span>{careerName}</span>
     </StyledTextCell>
     <StyledCell type={CHARACTERISTICS.BRAWN}>
       <CharacteristicsBadge height={60} type={CHARACTERISTICS.BRAWN} />
@@ -95,7 +95,7 @@ const PCSummary = ({
 )
 
 PCSummary.propTypes = {
-  ...playerCharacterData,
+  ...playerCharacterAugmentedData,
 }
 
 export default PCSummary

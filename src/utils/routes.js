@@ -4,7 +4,7 @@ import GenesysLogo from 'vectors/GenesysLogo'
 
 // Top level components
 import Home from 'pages/Home'
-import PlayerCharacters from 'pages/PlayerCharacters'
+import PlayersCharacters from 'pages/PlayersCharacters'
 
 const routes = [
   {
@@ -18,7 +18,7 @@ const routes = [
   {
     id: 'player-characters',
     menuItemComponent: 'PCs',
-    routeComponent: PlayerCharacters,
+    routeComponent: PlayersCharacters,
     to: '/player-characters',
   },
 ]

@@ -16,7 +16,7 @@ const globalStyle = css`
     font-family: Helvetica, sans-serif;
     background: url(${backgroundImage}) no-repeat center center fixed;
     background-size: cover;
-
+    overflow-x: hidden;
     font-family: "${fontFamilies.MinionPro}", Times New Roman, serif;
   }
 

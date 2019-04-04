@@ -420,7 +420,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
       Archetype:
     </h4>
     <span>
-      clone
+      Clone
     </span>
   </div>
   <div
@@ -442,7 +442,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
       Career:
     </h4>
     <span>
-      academic
+      Academic
     </span>
   </div>
   <div

@@ -1,7 +1,9 @@
 // API
 export const API_PATH = process.env.REACT_APP_API_PATH
 export const API_SEGMENTS = {
-  PLAYER_CHARACTERS: 'player-characters',
+  ARCHETYPES: 'archetypes',
+  CAREERS: 'careers',
+  PLAYERS_CHARACTERS: 'player-characters',
 }
 
 // REST
@@ -16,7 +18,7 @@ export const REST_METHODS = {
 export const HEAD_INFO = {
   TITLE: 'GM Compendium',
   CONTENT: 'Application to manage Genesys - Shadow of the Beanstalk GM data',
-  PLAYER_CHARACTERS_TITLE: 'PCs',
+  PLAYERS_CHARACTERS_TITLE: 'PCs',
 }
 
 // Character data

@@ -3,7 +3,9 @@ import uiRecord from 'reducers/ui/records'
 import { genericError } from 'mocks/errors'
 
 export const ui = {
-  playerCharacters: uiRecord(),
+  archetypes: uiRecord(),
+  careers: uiRecord(),
+  playersCharacters: uiRecord(),
 }
 
 export const uiElement = {

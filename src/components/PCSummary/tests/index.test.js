@@ -1,22 +1,22 @@
 import PCSummary from '../index'
 
-import { firstPlayerCharacter } from 'mocks/playerCharacters'
+import { playerCharacter1Augmented } from 'mocks/playersCharacters'
 
 import { ATTRIBUTES, CHARACTERISTICS } from 'utils/definitions'
 
 const renderedComponent = (props = {}) =>
-  render(<PCSummary {...firstPlayerCharacter} {...props} />)
+  render(<PCSummary {...playerCharacter1Augmented} {...props} />)
 
 describe('<PCSummary />', () => {
   const {
-    archetype,
+    archetype: { name: archetypeName },
     attributes: {
       defense: { melee, ranged },
       soak,
       strain: { current: currentStrain, total: totalStrain },
       wounds: { current: currentWounds, total: totalWounds },
     },
-    career,
+    career: { name: careerName },
     characteristics: {
       agility,
       brawn,
@@ -28,7 +28,7 @@ describe('<PCSummary />', () => {
     id,
     name,
     player_name,
-  } = firstPlayerCharacter
+  } = playerCharacter1Augmented
   const { DEFENSE, SOAK, STRAIN, WOUNDS } = ATTRIBUTES
   const {
     AGILITY,
@@ -52,7 +52,7 @@ describe('<PCSummary />', () => {
 
     const archetypeLabel = getByText(/archetype:/i)
     expect(archetypeLabel).toBeInTheDocument()
-    const archetypeValue = getByText(archetype)
+    const archetypeValue = getByText(archetypeName)
     expect(archetypeValue).toBeInTheDocument()
 
     const characterNameLabel = getByText(/character name:/i)
@@ -62,7 +62,7 @@ describe('<PCSummary />', () => {
 
     const careerLabel = getByText(/career:/i)
     expect(careerLabel).toBeInTheDocument()
-    const careerValue = getByText(career)
+    const careerValue = getByText(careerName)
     expect(careerValue).toBeInTheDocument()
 
     // characteristics

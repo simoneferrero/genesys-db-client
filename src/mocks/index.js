@@ -1,17 +1,27 @@
 import { fromJS } from 'immutable'
 
+import { archetypesById, archetypesAllIds } from './archetypes'
+import { careersById, careersAllIds } from './careers'
 import {
-  playerCharactersById,
-  playerCharactersAllIds,
-} from './playerCharacters'
-import { ui } from 'mocks/ui'
+  playersCharactersById,
+  playersCharactersAllIds,
+} from './playersCharacters'
+import { ui } from './ui'
 
 export const apiPath = 'http://my-api.com'
 
 export const store = fromJS({
-  playerCharacters: {
-    allIds: playerCharactersAllIds,
-    byId: playerCharactersById,
+  archetypes: {
+    allIds: archetypesAllIds,
+    byId: archetypesById,
+  },
+  careers: {
+    allIds: careersAllIds,
+    byId: careersById,
+  },
+  playersCharacters: {
+    allIds: playersCharactersAllIds,
+    byId: playersCharactersById,
   },
   ui,
 })
