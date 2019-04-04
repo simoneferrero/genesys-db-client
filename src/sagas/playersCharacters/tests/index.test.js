@@ -32,7 +32,7 @@ describe('playersCharacters sagas', () => {
       it('should dispatch the correct actions on success', () => {
         const opts = {
           method: 'GET',
-          url: `${apiPath}/player-characters`,
+          url: `${apiPath}/players-characters`,
         }
         const callAxiosDescriptor = generator.next().value
         const expectedCallAxiosDescriptor = call(axios, opts)

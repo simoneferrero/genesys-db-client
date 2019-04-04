@@ -98,4 +98,13 @@ PCSummary.propTypes = {
   ...playerCharacterAugmentedData,
 }
 
+PCSummary.defaultProps = {
+  archetype: {
+    name: '',
+  },
+  career: {
+    name: '',
+  },
+}
+
 export default PCSummary

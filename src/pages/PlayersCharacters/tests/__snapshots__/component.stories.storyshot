@@ -2,6 +2,33 @@
 
 exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 .c1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c1 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.c2 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
   display: grid;
@@ -12,23 +39,8 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   grid-template-areas: 'playerName playerName playerName playerName playerName playerName' 'pcName pcName pcName pcName pcName pcName' 'archetype archetype archetype archetype archetype archetype' 'career career career career career career' 'brawn brawn agility agility intellect intellect' 'cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds' 'strain strain strain defense defense defense';
 }
 
-.c2 {
-  grid-area: playerName;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c2 h2,
-.c2 h4 {
-  margin: 0;
-}
-
 .c3 {
-  grid-area: archetype;
+  grid-area: playerName;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   -webkit-align-items: baseline;
@@ -43,7 +55,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c4 {
-  grid-area: pcName;
+  grid-area: archetype;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   -webkit-align-items: baseline;
@@ -58,7 +70,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c5 {
-  grid-area: career;
+  grid-area: pcName;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   -webkit-align-items: baseline;
@@ -73,20 +85,13 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c6 {
-  grid-area: brawn;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  grid-area: career;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .c6 h2,
@@ -94,15 +99,8 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   margin: 0;
 }
 
-.c6 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  top: 5px;
-  margin-left: 1px;
-}
-
 .c7 {
-  grid-area: agility;
+  grid-area: brawn;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -131,7 +129,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c8 {
-  grid-area: intellect;
+  grid-area: agility;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,7 +158,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c9 {
-  grid-area: cunning;
+  grid-area: intellect;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -189,7 +187,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c10 {
-  grid-area: willpower;
+  grid-area: cunning;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,7 +216,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c11 {
-  grid-area: presence;
+  grid-area: willpower;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -247,7 +245,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c12 {
-  grid-area: soak;
+  grid-area: presence;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -271,19 +269,12 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 .c12 h2 {
   color: rgb(242,143,34);
   position: absolute;
-  top: 19px;
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  grid-column-gap: 16px;
-  text-align: right;
-}
-
-.c12 h2 span:nth-child(2) {
-  text-align: left;
+  top: 5px;
+  margin-left: 1px;
 }
 
 .c13 {
-  grid-area: wounds;
+  grid-area: soak;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -309,7 +300,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   position: absolute;
   top: 19px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(1,1fr);
   grid-column-gap: 16px;
   text-align: right;
 }
@@ -319,7 +310,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c14 {
-  grid-area: strain;
+  grid-area: wounds;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -355,7 +346,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 .c15 {
-  grid-area: defense;
+  grid-area: strain;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -390,9 +381,46 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   text-align: left;
 }
 
+.c16 {
+  grid-area: defense;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c16 h2,
+.c16 h4 {
+  margin: 0;
+}
+
+.c16 h2 {
+  color: rgb(242,143,34);
+  position: absolute;
+  top: 19px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 16px;
+  text-align: right;
+}
+
+.c16 h2 span:nth-child(2) {
+  text-align: left;
+}
+
 .c0 {
   width: 100vw;
   padding: 24px 48px;
+  padding-top: 64px;
   display: grid;
   grid-template-columns: repeat(1,1fr);
   grid-column-gap: 24px;
@@ -400,7 +428,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c1 {
+  .c2 {
     grid-template-columns: repeat(12,1fr);
     grid-template-areas: 'playerName playerName playerName playerName playerName playerName archetype archetype archetype archetype archetype archetype' 'pcName pcName pcName pcName pcName pcName career career career career career career' 'brawn brawn agility agility intellect intellect cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds strain strain strain defense defense defense';
   }
@@ -420,14 +448,22 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 
 <div
   className="c0"
-  data-testid="player-characters"
+  data-testid="players-characters"
 >
   <div
     className="c1"
+    data-testid="header"
+  >
+    <h2>
+      Players' Characters
+    </h2>
+  </div>
+  <div
+    className="c2"
     data-testid="pc-summary-1"
   >
     <div
-      className="c2"
+      className="c3"
       type="playerName"
     >
       <h4>
@@ -438,7 +474,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c3"
+      className="c4"
       type="archetype"
     >
       <h4>
@@ -449,7 +485,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c4"
+      className="c5"
       type="pcName"
     >
       <h4>
@@ -460,7 +496,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c5"
+      className="c6"
       type="career"
     >
       <h4>
@@ -471,7 +507,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c6"
+      className="c7"
       type="brawn"
     >
       <svg
@@ -827,7 +863,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c7"
+      className="c8"
       type="agility"
     >
       <svg
@@ -1189,7 +1225,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c8"
+      className="c9"
       type="intellect"
     >
       <svg
@@ -1557,7 +1593,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c9"
+      className="c10"
       type="cunning"
     >
       <svg
@@ -1919,7 +1955,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c10"
+      className="c11"
       type="willpower"
     >
       <svg
@@ -2287,7 +2323,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c11"
+      className="c12"
       type="presence"
     >
       <svg
@@ -2652,7 +2688,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c12"
+      className="c13"
       type="soak"
     >
       <svg
@@ -3001,7 +3037,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c13"
+      className="c14"
       type="wounds"
     >
       <svg
@@ -3409,7 +3445,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c14"
+      className="c15"
       type="strain"
     >
       <svg
@@ -3820,7 +3856,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c15"
+      className="c16"
       type="defense"
     >
       <svg
@@ -4217,11 +4253,11 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
     </div>
   </div>
   <div
-    className="c1"
+    className="c2"
     data-testid="pc-summary-2"
   >
     <div
-      className="c2"
+      className="c3"
       type="playerName"
     >
       <h4>
@@ -4232,7 +4268,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c3"
+      className="c4"
       type="archetype"
     >
       <h4>
@@ -4243,7 +4279,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c4"
+      className="c5"
       type="pcName"
     >
       <h4>
@@ -4254,7 +4290,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c5"
+      className="c6"
       type="career"
     >
       <h4>
@@ -4265,7 +4301,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </span>
     </div>
     <div
-      className="c6"
+      className="c7"
       type="brawn"
     >
       <svg
@@ -4621,7 +4657,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c7"
+      className="c8"
       type="agility"
     >
       <svg
@@ -4983,7 +5019,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c8"
+      className="c9"
       type="intellect"
     >
       <svg
@@ -5351,7 +5387,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c9"
+      className="c10"
       type="cunning"
     >
       <svg
@@ -5713,7 +5749,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c10"
+      className="c11"
       type="willpower"
     >
       <svg
@@ -6081,7 +6117,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c11"
+      className="c12"
       type="presence"
     >
       <svg
@@ -6446,7 +6482,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c12"
+      className="c13"
       type="soak"
     >
       <svg
@@ -6795,7 +6831,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c13"
+      className="c14"
       type="wounds"
     >
       <svg
@@ -7203,7 +7239,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c14"
+      className="c15"
       type="strain"
     >
       <svg
@@ -7614,7 +7650,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
       </h2>
     </div>
     <div
-      className="c15"
+      className="c16"
       type="defense"
     >
       <svg

@@ -7,15 +7,17 @@ import { playerCharacterType } from 'types/playersCharacters'
 import { Helmet } from 'react-helmet'
 import { HEAD_INFO } from 'utils/definitions'
 
+import Header from 'components/Header'
 import PCSummary from 'components/PCSummary'
 
 import styled from 'styled-components/macro'
-import { baseSpacing } from 'styles/constants'
+import { baseSpacing, headerHeight } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
 const StyledWrapper = styled.div`
   width: 100vw;
   padding: ${baseSpacing}px ${baseSpacing * 2}px;
+  padding-top: ${baseSpacing + headerHeight}px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: ${baseSpacing}px;
@@ -58,7 +60,8 @@ const PlayersCharacters = ({
   return (
     <>
       <Helmet title={HEAD_INFO.PLAYERS_CHARACTERS_TITLE} />
-      <StyledWrapper data-testid="player-characters">
+      <StyledWrapper data-testid="players-characters">
+        <Header>{HEAD_INFO.PLAYERS_CHARACTERS_TITLE}</Header>
         {playersCharacters}
       </StyledWrapper>
     </>

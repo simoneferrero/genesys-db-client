@@ -16,10 +16,10 @@ const routes = [
     to: '/',
   },
   {
-    id: 'player-characters',
+    id: 'players-characters',
     menuItemComponent: 'PCs',
     routeComponent: PlayersCharacters,
-    to: '/player-characters',
+    to: '/players-characters',
   },
 ]
 

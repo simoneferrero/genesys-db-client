@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Header default 1`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c0 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+<div
+  className="c0"
+  data-testid="header"
+>
+  <h2>
+    MAIN HEADER
+  </h2>
+</div>
+`;

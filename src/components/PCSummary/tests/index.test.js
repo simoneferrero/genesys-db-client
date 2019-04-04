@@ -123,4 +123,15 @@ describe('<PCSummary />', () => {
     const rangedValue = getByText(`${ranged}`)
     expect(rangedValue).toBeInTheDocument()
   })
+
+  it('should not break if archetype or career are undefined', () => {
+    const props = {
+      archetype: undefined,
+      career: undefined,
+    }
+    const { getByTestId } = renderedComponent(props)
+
+    const summary = getByTestId(`pc-summary-${id}`)
+    expect(summary).toBeInTheDocument()
+  })
 })

@@ -26,3 +26,7 @@ export const fontFamilies = {
 export const menuWidth = 200
 export const menuTransition = 0.3
 export const menuCoverOpacity = 0.7
+
+// Header constants
+export const headerHeight = 40
+export const trapezoidOffside = 30

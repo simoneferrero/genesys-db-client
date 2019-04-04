@@ -52,8 +52,11 @@ describe('<PlayersCharacters />', () => {
   it('should render the page correctly', () => {
     const { getByTestId } = renderComponent()
 
-    const home = getByTestId(/player-characters/i)
-    expect(home).toBeInTheDocument()
+    const header = getByTestId(/header/i)
+    expect(header).toBeInTheDocument()
+
+    const playersCharacters = getByTestId(/players-characters/i)
+    expect(playersCharacters).toBeInTheDocument()
 
     playersCharactersAllIds.forEach((id) => {
       const pcSummary = getByTestId(`pc-summary-${id}`)
