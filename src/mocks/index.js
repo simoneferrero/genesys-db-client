@@ -25,3 +25,19 @@ export const store = fromJS({
   },
   ui,
 })
+
+export const emptyStore = fromJS({
+  archetypes: {
+    allIds: [],
+    byId: {},
+  },
+  careers: {
+    allIds: [],
+    byId: {},
+  },
+  playersCharacters: {
+    allIds: [],
+    byId: {},
+  },
+  ui,
+})

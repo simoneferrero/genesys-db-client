@@ -7,6 +7,7 @@ import {
   playersCharactersAllIdsSelector,
   playersCharactersByIdSelector,
 } from 'reducers/playersCharacters/selectors'
+import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selectors'
 
 // Actions
 import { getArchetypes } from 'actions/archetypes'
@@ -22,6 +23,7 @@ const mapStateToProps = (state) => ({
   careersById: careersByIdSelector(state),
   playersCharactersAllIds: playersCharactersAllIdsSelector(state),
   playersCharactersById: playersCharactersByIdSelector(state),
+  playersCharactersUi: playersCharactersUiSelector(state),
 })
 const mapDispatchToProps = (dispatch) => ({
   getArchetypes: () => dispatch(getArchetypes()),

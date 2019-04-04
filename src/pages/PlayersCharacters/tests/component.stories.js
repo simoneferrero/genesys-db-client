@@ -9,6 +9,7 @@ import {
   playersCharactersAllIds,
   playersCharactersById,
 } from 'mocks/playersCharacters'
+import { uiElement, uiElementLoading } from 'mocks/ui'
 
 import PlayersCharacters from '../component'
 
@@ -20,8 +21,22 @@ const defaultProps = {
   getPlayersCharacters: action('getPlayersCharacters'),
   playersCharactersAllIds,
   playersCharactersById,
+  playersCharactersUi: uiElement,
 }
 
-storiesOf('Pages/PlayersCharacters', module).add('default', () => (
-  <PlayersCharacters {...defaultProps} />
-))
+storiesOf('Pages/PlayersCharacters', module)
+  .add('default', () => <PlayersCharacters {...defaultProps} />)
+  .add('loading no data', () => {
+    const props = {
+      playersCharactersAllIds: [],
+      playersCharactersById: {},
+      playersCharactersUi: uiElementLoading,
+    }
+    return <PlayersCharacters {...defaultProps} {...props} />
+  })
+  .add('loading with data', () => {
+    const props = {
+      playersCharactersUi: uiElementLoading,
+    }
+    return <PlayersCharacters {...defaultProps} {...props} />
+  })
