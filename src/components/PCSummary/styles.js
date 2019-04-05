@@ -5,6 +5,11 @@ import mq from 'styles/mediaQueries'
 
 import { ATTRIBUTES, CHARACTERISTICS, INFO } from 'utils/definitions'
 
+const isCharacteristic = (type) =>
+  Object.values(CHARACTERISTICS).some(
+    (characteristic) => characteristic === type,
+  )
+
 const { ARCHETYPE: arc, CAREER: car, PC_NAME: pcn, PLAYER_NAME: pln } = INFO
 const { DEFENSE: def, SOAK: soa, STRAIN: str, WOUNDS: wou } = ATTRIBUTES
 const {
@@ -65,7 +70,6 @@ const cellStyles = css`
 `
 const characteristicsStyles = css`
   top: 5px;
-  margin-left: 1px;
 `
 const attributesStyles = css`
   top: 19px;
@@ -94,12 +98,13 @@ export const StyledCell = styled.div`
   h2 {
     color: ${colours.lightOrange};
     position: absolute;
+    margin-left: 1px;
 
     ${({ type }) =>
-      Object.values(CHARACTERISTICS).some(
-        (characteristic) => characteristic === type,
-      )
-        ? characteristicsStyles
-        : attributesStyles}
+      isCharacteristic(type) ? characteristicsStyles : attributesStyles}
+  }
+
+  img {
+    height: ${({ type }) => (isCharacteristic(type) ? 60 : 50)}px;
   }
 `

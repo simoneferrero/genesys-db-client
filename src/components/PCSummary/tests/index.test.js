@@ -46,7 +46,7 @@ describe('<PCSummary />', () => {
   } = CHARACTERISTICS
 
   it('should render correctly', async () => {
-    const { getByTestId, getByText } = renderedComponent()
+    const { getByAltText, getByTestId, getByText } = renderedComponent()
 
     await wait(() => {
       const summary = getByTestId(`pc-summary-${id}`)
@@ -74,57 +74,57 @@ describe('<PCSummary />', () => {
       expect(careerValue).toBeInTheDocument()
 
       // characteristics
-      const brawnBadge = getByTestId(`characteristics-badge-${BRAWN}`)
+      const brawnBadge = getByAltText(BRAWN)
       expect(brawnBadge).toBeInTheDocument()
       const brawnValue = getByText(`${brawn}`)
       expect(brawnValue).toBeInTheDocument()
 
-      const agilityBadge = getByTestId(`characteristics-badge-${AGILITY}`)
+      const agilityBadge = getByAltText(AGILITY)
       expect(agilityBadge).toBeInTheDocument()
       const agilityValue = getByText(`${agility}`)
       expect(agilityValue).toBeInTheDocument()
 
-      const intellectBadge = getByTestId(`characteristics-badge-${INTELLECT}`)
+      const intellectBadge = getByAltText(INTELLECT)
       expect(intellectBadge).toBeInTheDocument()
       const intellectValue = getByText(`${intellect}`)
       expect(intellectValue).toBeInTheDocument()
 
-      const cunningBadge = getByTestId(`characteristics-badge-${CUNNING}`)
+      const cunningBadge = getByAltText(CUNNING)
       expect(cunningBadge).toBeInTheDocument()
       const cunningValue = getByText(`${cunning}`)
       expect(cunningValue).toBeInTheDocument()
 
-      const willpowerBadge = getByTestId(`characteristics-badge-${WILLPOWER}`)
+      const willpowerBadge = getByAltText(WILLPOWER)
       expect(willpowerBadge).toBeInTheDocument()
       const willpowerValue = getByText(`${willpower}`)
       expect(willpowerValue).toBeInTheDocument()
 
-      const presenceBadge = getByTestId(`characteristics-badge-${PRESENCE}`)
+      const presenceBadge = getByAltText(PRESENCE)
       expect(presenceBadge).toBeInTheDocument()
       const presenceValue = getByText(`${presence}`)
       expect(presenceValue).toBeInTheDocument()
 
       // attributes
-      const woundsBadge = getByTestId(`attributes-badge-${WOUNDS}`)
+      const woundsBadge = getByAltText(WOUNDS)
       expect(woundsBadge).toBeInTheDocument()
       const currentWoundsValue = getByText(`${currentWounds}`)
       expect(currentWoundsValue).toBeInTheDocument()
       const totalWoundsValue = getByText(`${totalWounds}`)
       expect(totalWoundsValue).toBeInTheDocument()
 
-      const strainBadge = getByTestId(`attributes-badge-${STRAIN}`)
+      const strainBadge = getByAltText(STRAIN)
       expect(strainBadge).toBeInTheDocument()
       const currentStrainValue = getByText(`${currentStrain}`)
       expect(currentStrainValue).toBeInTheDocument()
       const totalStrainValue = getByText(`${totalStrain}`)
       expect(totalStrainValue).toBeInTheDocument()
 
-      const soakBadge = getByTestId(`attributes-badge-${SOAK}`)
+      const soakBadge = getByAltText(SOAK)
       expect(soakBadge).toBeInTheDocument()
       const soakValue = getByText(`${soak}`)
       expect(soakValue).toBeInTheDocument()
 
-      const defenseBadge = getByTestId(`attributes-badge-${DEFENSE}`)
+      const defenseBadge = getByAltText(DEFENSE)
       expect(defenseBadge).toBeInTheDocument()
       const meleeValue = getByText(`${melee}`)
       expect(meleeValue).toBeInTheDocument()

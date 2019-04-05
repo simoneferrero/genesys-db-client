@@ -1,20 +1,32 @@
-import React, { lazy, memo } from 'react'
+import React, { memo } from 'react'
 import { playerCharacterAugmentedData } from 'types/playersCharacters'
 
 import { ATTRIBUTES, CHARACTERISTICS, INFO } from 'utils/definitions'
 
-const StyledPCSummary = lazy(() =>
-  import('./styles').then((module) => ({ default: module.StyledPCSummary })),
-)
-const StyledTextCell = lazy(() =>
-  import('./styles').then((module) => ({ default: module.StyledTextCell })),
-)
-const StyledCell = lazy(() =>
-  import('./styles').then((module) => ({ default: module.StyledCell })),
-)
+// Badges
+import Agility from 'images/Agility.png'
+import Brawn from 'images/Brawn.png'
+import Cunning from 'images/Cunning.png'
+import Defense from 'images/Defense.png'
+import Intellect from 'images/Intellect.png'
+import Presence from 'images/Presence.png'
+import Soak from 'images/Soak.png'
+import Strain from 'images/Strain.png'
+import Willpower from 'images/Willpower.png'
+import Wounds from 'images/Wounds.png'
 
-const AttributesBadge = lazy(() => import('vectors/AttributesBadge'))
-const CharacteristicsBadge = lazy(() => import('vectors/CharacteristicsBadge'))
+import { StyledCell, StyledPCSummary, StyledTextCell } from './styles'
+
+const { ARCHETYPE, CAREER, PC_NAME, PLAYER_NAME } = INFO
+const { DEFENSE, SOAK, STRAIN, WOUNDS } = ATTRIBUTES
+const {
+  AGILITY,
+  BRAWN,
+  CUNNING,
+  INTELLECT,
+  PRESENCE,
+  WILLPOWER,
+} = CHARACTERISTICS
 
 /** Summary of the PC's most important info */
 export const PCSummary = ({
@@ -32,68 +44,68 @@ export const PCSummary = ({
   player_name,
 }) => (
   <StyledPCSummary data-testid={`pc-summary-${id}`}>
-    <StyledTextCell type={INFO.PLAYER_NAME}>
+    <StyledTextCell type={PLAYER_NAME}>
       <h4>Player name:</h4>
       <span>{player_name}</span>
     </StyledTextCell>
-    <StyledTextCell type={INFO.ARCHETYPE}>
+    <StyledTextCell type={ARCHETYPE}>
       <h4>Archetype:</h4>
       <span>{archetypeName}</span>
     </StyledTextCell>
-    <StyledTextCell type={INFO.PC_NAME}>
+    <StyledTextCell type={PC_NAME}>
       <h4>Character name:</h4>
       <span>{name}</span>
     </StyledTextCell>
-    <StyledTextCell type={INFO.CAREER}>
+    <StyledTextCell type={CAREER}>
       <h4>Career:</h4>
       <span>{careerName}</span>
     </StyledTextCell>
-    <StyledCell type={CHARACTERISTICS.BRAWN}>
-      <CharacteristicsBadge height={60} type={CHARACTERISTICS.BRAWN} />
+    <StyledCell type={BRAWN}>
+      <img alt={BRAWN} src={Brawn} />
       <h2>{brawn}</h2>
     </StyledCell>
-    <StyledCell type={CHARACTERISTICS.AGILITY}>
-      <CharacteristicsBadge height={60} type={CHARACTERISTICS.AGILITY} />
+    <StyledCell type={AGILITY}>
+      <img alt={AGILITY} src={Agility} />
       <h2>{agility}</h2>
     </StyledCell>
-    <StyledCell type={CHARACTERISTICS.INTELLECT}>
-      <CharacteristicsBadge height={60} type={CHARACTERISTICS.INTELLECT} />
+    <StyledCell type={INTELLECT}>
+      <img alt={INTELLECT} src={Intellect} />
       <h2>{intellect}</h2>
     </StyledCell>
-    <StyledCell type={CHARACTERISTICS.CUNNING}>
-      <CharacteristicsBadge height={60} type={CHARACTERISTICS.CUNNING} />
+    <StyledCell type={CUNNING}>
+      <img alt={CUNNING} src={Cunning} />
       <h2>{cunning}</h2>
     </StyledCell>
-    <StyledCell type={CHARACTERISTICS.WILLPOWER}>
-      <CharacteristicsBadge height={60} type={CHARACTERISTICS.WILLPOWER} />
+    <StyledCell type={WILLPOWER}>
+      <img alt={WILLPOWER} src={Willpower} />
       <h2>{willpower}</h2>
     </StyledCell>
-    <StyledCell type={CHARACTERISTICS.PRESENCE}>
-      <CharacteristicsBadge height={60} type={CHARACTERISTICS.PRESENCE} />
+    <StyledCell type={PRESENCE}>
+      <img alt={PRESENCE} src={Presence} />
       <h2>{presence}</h2>
     </StyledCell>
-    <StyledCell type={ATTRIBUTES.SOAK}>
-      <AttributesBadge height={50} type={ATTRIBUTES.SOAK} />
+    <StyledCell type={SOAK}>
+      <img alt={SOAK} src={Soak} />
       <h2>
         <span>{soak}</span>
       </h2>
     </StyledCell>
-    <StyledCell type={ATTRIBUTES.WOUNDS}>
-      <AttributesBadge height={50} type={ATTRIBUTES.WOUNDS} />
+    <StyledCell type={WOUNDS}>
+      <img alt={WOUNDS} src={Wounds} />
       <h2>
         <span>{totalWounds}</span>
         <span>{currentWounds}</span>
       </h2>
     </StyledCell>
-    <StyledCell type={ATTRIBUTES.STRAIN}>
-      <AttributesBadge height={50} type={ATTRIBUTES.STRAIN} />
+    <StyledCell type={STRAIN}>
+      <img alt={STRAIN} src={Strain} />
       <h2>
         <span>{totalStrain}</span>
         <span>{currentStrain}</span>
       </h2>
     </StyledCell>
-    <StyledCell type={ATTRIBUTES.DEFENSE}>
-      <AttributesBadge height={50} type={ATTRIBUTES.DEFENSE} />
+    <StyledCell type={DEFENSE}>
+      <img alt={DEFENSE} src={Defense} />
       <h2>
         <span>{melee}</span>
         <span>{ranged}</span>
