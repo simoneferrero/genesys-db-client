@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { lazy, memo, Suspense, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { archetypeType } from 'types/archetypes'
 import { careerType } from 'types/careers'
@@ -9,12 +9,13 @@ import { Helmet } from 'react-helmet'
 import { HEAD_INFO } from 'utils/definitions'
 
 import Header from 'components/Header'
-import PCSummary from 'components/PCSummary'
 import Spinner from 'components/Spinner'
 
-import styled, { css } from 'styled-components/macro'
+import styled from 'styled-components/macro'
 import { baseSpacing, headerHeight } from 'styles/constants'
 import mq from 'styles/mediaQueries'
+
+const PCSummary = lazy(() => import('components/PCSummary'))
 
 const StyledWrapper = styled.div`
   width: 100vw;
@@ -33,18 +34,8 @@ const StyledWrapper = styled.div`
   }
 `
 
-const spinnerWithDataStyles = css`
-  position: fixed;
-  bottom: 0 !important;
-  right: 0 !important;
-  padding: ${baseSpacing / 2}px;
-`
-const StyledSpinner = styled(Spinner)`
-  ${({ cover }) => !cover && spinnerWithDataStyles}
-`
-
 /** Summary of all players' characters. */
-const PlayersCharacters = ({
+export const PlayersCharacters = ({
   archetypesById,
   careersById,
   getArchetypes,
@@ -70,19 +61,14 @@ const PlayersCharacters = ({
     return <PCSummary key={id} {...pcSummaryProps} />
   })
 
-  // Logic for spinner
-  const cover = playersCharactersAllIds.length === 0
-
   return (
     <>
       <Helmet title={HEAD_INFO.PLAYERS_CHARACTERS_TITLE} />
       <StyledWrapper data-testid="players-characters">
         <Header>{HEAD_INFO.PLAYERS_CHARACTERS_TITLE}</Header>
-        {playersCharacters}
+        <Suspense fallback={<Spinner />}>{playersCharacters}</Suspense>
       </StyledWrapper>
-      {playersCharactersUi.loading && (
-        <StyledSpinner cover={cover} size={cover ? 80 : 40} />
-      )}
+      {playersCharactersUi.loading && <Spinner />}
     </>
   )
 }
@@ -106,4 +92,4 @@ PlayersCharacters.propTypes = {
   playersCharactersUi: uiType.isRequired,
 }
 
-export default PlayersCharacters
+export default memo(PlayersCharacters)

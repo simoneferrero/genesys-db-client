@@ -1,15 +1,14 @@
+import { Suspense } from 'react'
 import render from 'utils/customTestRenderers'
 
 import PlayersCharacters from '../index'
 
-import { playersCharactersAllIds } from 'mocks/playersCharacters'
+import { playersCharacters } from 'mocks/playersCharacters'
 
 import {
   GET_PLAYERS_CHARACTERS,
   GET_PLAYERS_CHARACTERS_SUCCESS,
 } from 'actions/playersCharacters/constants'
-
-import { emptyStore } from 'mocks'
 
 jest.mock('actions/playersCharacters', () => {
   return {
@@ -41,7 +40,12 @@ jest.mock('actions/careers', () => {
 import { getCareers } from 'actions/careers'
 
 const renderComponent = (props = {}, initialState) =>
-  render(<PlayersCharacters {...props} />, { initialState })
+  render(
+    <Suspense fallback="loading...">
+      <PlayersCharacters {...props} />
+    </Suspense>,
+    { initialState },
+  )
 
 describe('<PlayersCharacters />', () => {
   beforeEach(() => {
@@ -58,59 +62,70 @@ describe('<PlayersCharacters />', () => {
     jest.resetAllMocks()
   })
 
-  it('should render the page correctly', () => {
+  it('should render the page correctly', async () => {
     const { getByTestId, queryByTestId } = renderComponent()
 
-    const header = getByTestId(/header/i)
-    expect(header).toBeInTheDocument()
+    await wait(() => {
+      const header = getByTestId(/header/i)
+      expect(header).toBeInTheDocument()
 
-    const playersCharacters = getByTestId(/players-characters/i)
-    expect(playersCharacters).toBeInTheDocument()
+      const playersCharactersWrapper = getByTestId(/players-characters/i)
+      expect(playersCharactersWrapper).toBeInTheDocument()
 
-    playersCharactersAllIds.forEach((id) => {
-      const pcSummary = getByTestId(`pc-summary-${id}`)
-      expect(pcSummary).toBeInTheDocument()
+      playersCharacters.forEach(({ id }) => {
+        const pcSummary = getByTestId(`pc-summary-${id}`)
+        expect(pcSummary).toBeInTheDocument()
+      })
+
+      const spinner = queryByTestId(/spinner/i)
+      expect(spinner).not.toBeInTheDocument()
     })
-
-    const spinner = queryByTestId(/spinner/i)
-    expect(spinner).not.toBeInTheDocument()
   })
 
-  describe('spinner', () => {
-    beforeEach(() => {
-      getPlayersCharacters.mockImplementation(() => ({
-        type: GET_PLAYERS_CHARACTERS,
-        payload: {},
-      }))
-    })
+  it('should render correctly if loading', async () => {
+    getPlayersCharacters.mockImplementation(() => ({
+      type: GET_PLAYERS_CHARACTERS,
+      payload: {},
+    }))
 
-    it('should render a spinner if loading with data', () => {
-      const { getByTestId } = renderComponent()
+    const { getByTestId } = renderComponent()
+
+    await wait(() => {
+      const playersCharactersWrapper = getByTestId(/players-characters/i)
+      expect(playersCharactersWrapper).toBeInTheDocument()
+
+      playersCharacters.forEach(({ id }) => {
+        const pcSummary = getByTestId(`pc-summary-${id}`)
+        expect(pcSummary).toBeInTheDocument()
+      })
 
       const spinner = getByTestId(/spinner/i)
       expect(spinner).toBeInTheDocument()
     })
-
-    it('should render a spinner if loading with no data', () => {
-      const { getByTestId } = renderComponent({}, emptyStore)
-
-      const spinner = getByTestId(/spinner/i)
-      expect(spinner).toBeInTheDocument()
-    })
   })
 
-  it('should not render a spinner if finished loading', () => {
+  it('should render correctly if finished loading', async () => {
     // Skip redux-saga and dispatch success action directly
     getPlayersCharacters.mockImplementation(() => ({
       type: GET_PLAYERS_CHARACTERS_SUCCESS,
       payload: {
-        playersCharacters: [],
+        playersCharacters,
       },
     }))
-    const { queryByTestId } = renderComponent()
+    const { getByTestId, queryByTestId } = renderComponent()
 
-    const spinner = queryByTestId(/spinner/i)
-    expect(spinner).not.toBeInTheDocument()
+    await wait(() => {
+      const playersCharactersWrapper = getByTestId(/players-characters/i)
+      expect(playersCharactersWrapper).toBeInTheDocument()
+
+      playersCharacters.forEach(({ id }) => {
+        const pcSummary = getByTestId(`pc-summary-${id}`)
+        expect(pcSummary).toBeInTheDocument()
+      })
+
+      const spinner = queryByTestId(/spinner/i)
+      expect(spinner).not.toBeInTheDocument()
+    })
   })
 
   it('should dispatch fetch actions on mount', () => {

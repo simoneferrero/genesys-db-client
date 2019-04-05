@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import { CHARACTERISTICS } from 'utils/definitions'
@@ -6,7 +6,7 @@ import { CHARACTERISTICS } from 'utils/definitions'
 import { colours } from 'styles/constants'
 
 /** A badge to display one of the character's characteristics. */
-const CharacteristicsBadge = ({ type, height }) => (
+export const CharacteristicsBadge = ({ type, height }) => (
   <svg
     data-testid={`characteristics-badge-${type}`}
     style={{ enableBackground: 'new 0 0 144 144' }}
@@ -300,4 +300,4 @@ CharacteristicsBadge.propTypes = {
   type: PropTypes.oneOf(Object.values(CHARACTERISTICS)).isRequired,
 }
 
-export default CharacteristicsBadge
+export default memo(CharacteristicsBadge)

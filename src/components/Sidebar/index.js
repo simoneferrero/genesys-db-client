@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import { MdClose, MdMenu } from 'react-icons/md'
@@ -53,7 +53,7 @@ export const StyledCover = styled.div`
 `
 
 /** Retractable component to host the main app menu */
-const Sidebar = ({ children, className }) => {
+export const Sidebar = ({ children, className }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   // Pass onClick function to all children
@@ -93,4 +93,4 @@ Sidebar.propTypes = {
   className: PropTypes.string,
 }
 
-export default Sidebar
+export default memo(Sidebar)

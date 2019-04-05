@@ -14,9 +14,9 @@ exports[`Storyshots Components/Spinner cover 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
-  border: 16px solid rgb(0,130,155);
+  width: 60px;
+  height: 60px;
+  border: 12px solid rgb(0,130,155);
   border-right-color: transparent;
   border-radius: 50%;
   -webkit-animation: eXzyYY 0.75s linear infinite;
@@ -24,14 +24,14 @@ exports[`Storyshots Components/Spinner cover 1`] = `
 }
 
 .c0 {
-  z-index: 1000;
   position: fixed;
-  height: 100%;
-  width: 100%;
+  z-index: 1000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
+  width: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -44,13 +44,13 @@ exports[`Storyshots Components/Spinner cover 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   data-testid="spinner"
 >
   <div
-    className="c1"
+    class="c1"
     color="rgb(0, 130, 155)"
-    size={80}
+    size="60"
   />
 </div>
 `;
@@ -69,9 +69,9 @@ exports[`Storyshots Components/Spinner not cover 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  border: 8px solid rgb(0,130,155);
+  width: 30px;
+  height: 30px;
+  border: 6px solid rgb(0,130,155);
   border-right-color: transparent;
   border-radius: 50%;
   -webkit-animation: eXzyYY 0.75s linear infinite;
@@ -79,17 +79,21 @@ exports[`Storyshots Components/Spinner not cover 1`] = `
 }
 
 .c0 {
+  position: fixed;
   z-index: 1000;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
 }
 
 <div
-  className="c0"
+  class="c0"
   data-testid="spinner"
 >
   <div
-    className="c1"
+    class="c1"
     color="rgb(0, 130, 155)"
-    size={40}
+    size="30"
   />
 </div>
 `;

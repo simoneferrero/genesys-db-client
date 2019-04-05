@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { lazy, memo } from 'react'
 import { playerCharacterAugmentedData } from 'types/playersCharacters'
-
-import AttributesBadge from 'vectors/AttributesBadge'
-import CharacteristicsBadge from 'vectors/CharacteristicsBadge'
 
 import { ATTRIBUTES, CHARACTERISTICS, INFO } from 'utils/definitions'
 
-import { StyledPCSummary, StyledTextCell, StyledCell } from './styles'
+const StyledPCSummary = lazy(() =>
+  import('./styles').then((module) => ({ default: module.StyledPCSummary })),
+)
+const StyledTextCell = lazy(() =>
+  import('./styles').then((module) => ({ default: module.StyledTextCell })),
+)
+const StyledCell = lazy(() =>
+  import('./styles').then((module) => ({ default: module.StyledCell })),
+)
+
+const AttributesBadge = lazy(() => import('vectors/AttributesBadge'))
+const CharacteristicsBadge = lazy(() => import('vectors/CharacteristicsBadge'))
 
 /** Summary of the PC's most important info */
-const PCSummary = ({
+export const PCSummary = ({
   archetype: { name: archetypeName },
   attributes: {
     defense: { melee, ranged },
@@ -107,4 +115,4 @@ PCSummary.defaultProps = {
   },
 }
 
-export default PCSummary
+export default memo(PCSummary)

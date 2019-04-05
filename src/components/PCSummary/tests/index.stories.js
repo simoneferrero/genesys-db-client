@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 import { playerCharacter1Augmented } from 'mocks/playersCharacters'
 
-import PCSummary from '../index'
+import { PCSummary } from '../index'
 
 const defaultProps = {
   ...playerCharacter1Augmented,

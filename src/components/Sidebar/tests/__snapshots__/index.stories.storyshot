@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Components/Sidebar default 1`] = `
+.c3 {
+  width: 100%;
+  padding: 12px 24px;
+  color: rgb(234,242,246);
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Monkirta",Helvetica,sans-serif;
+}
+
+.c3.active,
+.c3:hover,
+.c3:focus,
+.c3:active {
+  background-color: rgb(234,242,246);
+  color: rgb(0,130,155);
+}
+
 .c0 {
   height: 100vh;
   width: 200px;
@@ -51,44 +69,20 @@ exports[`Storyshots Components/Sidebar default 1`] = `
   transition: 0.3s linear;
 }
 
-.c3 {
-  width: 100%;
-  padding: 12px 24px;
-  color: rgb(234,242,246);
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-family: "Monkirta",Helvetica,sans-serif;
-}
-
-.c3.active,
-.c3:hover,
-.c3:focus,
-.c3:active {
-  background-color: rgb(234,242,246);
-  color: rgb(0,130,155);
-}
-
 <div
-  className="c0"
+  class="c0"
   data-testid="sidebar"
 >
   <div
-    className="c1"
+    class="c1"
     data-testid="icon"
-    onClick={[Function]}
   >
     <svg
       data-testid="icon-menu"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": undefined,
-        }
-      }
+      stroke-width="0"
       viewBox="0 0 24 24"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -99,26 +93,21 @@ exports[`Storyshots Components/Sidebar default 1`] = `
     </svg>
   </div>
   <div
-    className="c2"
+    class="c2"
     data-testid="cover"
-    onClick={[Function]}
   />
   <a
     aria-current="page"
-    className="c3 active"
+    class="c3 active"
     data-testid="menu-item-route1"
     href="/route-1"
-    onClick={[Function]}
-    style={Object {}}
   >
     ROUTE 1
   </a>
   <a
-    aria-current={null}
-    className="c3"
+    class="c3"
     data-testid="menu-item-route2"
     href="/route-2"
-    onClick={[Function]}
   >
     ROUTE 2
   </a>

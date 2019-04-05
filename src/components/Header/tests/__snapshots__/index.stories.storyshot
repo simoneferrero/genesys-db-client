@@ -29,7 +29,7 @@ exports[`Storyshots Components/Header default 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   data-testid="header"
 >
   <h2>

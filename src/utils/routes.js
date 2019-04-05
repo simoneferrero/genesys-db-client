@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { lazy } from 'react'
 
 import GenesysLogo from 'vectors/GenesysLogo'
 
 // Top level components
-import Home from 'pages/Home'
-import PlayersCharacters from 'pages/PlayersCharacters'
+const Home = lazy(() => import('pages/Home'))
+const PlayersCharacters = lazy(() => import('pages/PlayersCharacters'))
 
 const routes = [
   {

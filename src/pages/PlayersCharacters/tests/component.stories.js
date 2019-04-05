@@ -11,7 +11,7 @@ import {
 } from 'mocks/playersCharacters'
 import { uiElement, uiElementLoading } from 'mocks/ui'
 
-import PlayersCharacters from '../component'
+import { PlayersCharacters } from '../component'
 
 const defaultProps = {
   archetypesById,
@@ -24,19 +24,15 @@ const defaultProps = {
   playersCharactersUi: uiElement,
 }
 
+const renderComponent = (props = {}) => (
+  <PlayersCharacters {...defaultProps} {...props} />
+)
+
 storiesOf('Pages/PlayersCharacters', module)
-  .add('default', () => <PlayersCharacters {...defaultProps} />)
-  .add('loading no data', () => {
-    const props = {
-      playersCharactersAllIds: [],
-      playersCharactersById: {},
-      playersCharactersUi: uiElementLoading,
-    }
-    return <PlayersCharacters {...defaultProps} {...props} />
-  })
-  .add('loading with data', () => {
+  .add('default', () => renderComponent())
+  .add('loading', () => {
     const props = {
       playersCharactersUi: uiElementLoading,
     }
-    return <PlayersCharacters {...defaultProps} {...props} />
+    return renderComponent(props)
   })

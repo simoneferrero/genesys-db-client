@@ -3,8 +3,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import GenesysLogo from '../GenesysLogo'
-import AttributesBadge, { TYPES } from '../AttributesBadge'
-import CharacteristicsBadge from '../CharacteristicsBadge'
+import { AttributesBadge, TYPES } from '../AttributesBadge'
+import { CharacteristicsBadge } from '../CharacteristicsBadge'
 
 import { CHARACTERISTICS } from 'utils/definitions'
 

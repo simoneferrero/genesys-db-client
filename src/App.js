@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 // Head setup
 import { Helmet } from 'react-helmet'
@@ -16,8 +16,9 @@ import { Route, Switch } from 'react-router-dom'
 // Routes
 import routes from 'utils/routes'
 
-import Sidebar from 'components/Sidebar'
 import MenuItem from 'components/MenuItem'
+import Sidebar from 'components/Sidebar'
+import Spinner from 'components/Spinner'
 
 import GlobalStyles from 'styles/globalStyles'
 
@@ -41,11 +42,13 @@ const App = () => (
             </MenuItem>
           ))}
         </Sidebar>
-        <Switch>
-          {routes.map(({ routeComponent, id, to }) => (
-            <Route component={routeComponent} exact key={id} path={to} />
-          ))}
-        </Switch>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            {routes.map(({ routeComponent, id, to }) => (
+              <Route component={routeComponent} exact key={id} path={to} />
+            ))}
+          </Switch>
+        </Suspense>
       </ConnectedRouter>
     </Provider>
   </>

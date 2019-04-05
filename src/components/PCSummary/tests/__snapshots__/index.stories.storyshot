@@ -398,11 +398,12 @@ exports[`Storyshots Components/PCSummary default 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   data-testid="pc-summary-1"
+  style=""
 >
   <div
-    className="c1"
+    class="c1"
     type="playerName"
   >
     <h4>
@@ -413,7 +414,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </span>
   </div>
   <div
-    className="c2"
+    class="c2"
     type="archetype"
   >
     <h4>
@@ -424,7 +425,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </span>
   </div>
   <div
-    className="c3"
+    class="c3"
     type="pcName"
   >
     <h4>
@@ -435,7 +436,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </span>
   </div>
   <div
-    className="c4"
+    class="c4"
     type="career"
   >
     <h4>
@@ -446,21 +447,17 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </span>
   </div>
   <div
-    className="c5"
+    class="c5"
     type="brawn"
   >
     <svg
       data-testid="characteristics-badge-brawn"
       height="60px"
-      style={
-        Object {
-          "enableBackground": "new 0 0 144 144",
-        }
-      }
+      style="enable-background: new 0 0 144 144;"
       version="1.1"
       viewBox="20 25 104 103"
       x="0px"
-      xmlSpace="preserve"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
       y="0px"
     >
@@ -483,20 +480,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="51"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_5_"
           >
             <use
               href="#SVGID_4_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
           >
             <defs>
               <path
@@ -504,20 +497,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_6_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_7_"
             >
               <use
                 href="#SVGID_6_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
+                style="overflow: visible;"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_7_)"
+              clip-path="url(#SVGID_7_)"
             >
               <defs>
                 <rect
@@ -528,34 +517,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="60.3"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_9_"
               >
                 <use
                   href="#SVGID_8_"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_9_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_9_);"
                 transform="matrix(1 0 0 1 -1.907349e-06 0)"
               >
                 <image
                   height="177"
                   href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAzQDNAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAALJAAADkQAABL//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIALMBDgMBIgACEQEDEQH/ xACEAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAIABgMBAAAA AAAAAAAAAAABQDECIgMTUBIyEREAAgEFAQEAAwEAAAAAAAAAAAEyUHECQqKxMSFRYcESAAMBAQEB AQEAAAAAAAAAAAAxQgFAgZFwQf/aAAwDAQACEQMRAAAA9szPL32wNsDbA2wNsDbA2wNsDbA2wNsD bA2wNsDbA3eerJLM0FAAAAAAAAAAAAAAazqySyFBKIFAAAAAAAAAAURKJrOqgAAIsgFAAAAAAAAF QKAms6IAAACLIBQAAAAABUCgAJqUgACqiwCIoioiiKIoiiKoAAABZSAFAsASliiKiKIoiiKIqpQA SiCFlIBZQLAAAAAAAAAAAAWCFlIACigQAAAAAAAAAARQhZSEKBYKiqgqCoKgqCoKgqCoKgCAJrOi SyKgqKqCoKgqCoKgqCoKgqCoKiLAazqqN5AAAAAAAAAAAAAAAUs//9oACAECAAEFAOzOzOzOzOzO zOzOzOzOzOzOzOzOzOzOzE3AqBU4BQKgVOAU4BTgFOAUCoFH/9oACAEDAAEFAPiPiPiPiPiPiPiP iPiPiPiPiPiPiPiPiGlAuBcC4FwLgXAuBcC4FwX/2gAIAQEAAQUAeSv7syGzIbMhsyGzIbMhsyGz IbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIU5K+rnwFPlz 4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8 ufAU+XPgKfLnwFPlz4Cny58BT5fX7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlPXr/ AP/aAAgBAgIGPwB6PR6PR6PR6PR6PR6PR6PR6PR7/eHzeHzeHzeHzeH7w/eH7w/eHzeHzSCCCCCC CCCCCCCCCCD/2gAIAQMCBj8AQhCEIQhCEIQhCF+V0UUUUUUUUUUUUUUUUf/aAAgBAQEGPwCTJMky TJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkzL8/F/tCysvVQsrL1ULKy9VCysv VQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9V CysvVQsrL1ULKy9Rr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9 GvRr0a9GvRr0a9GvRl8+f39n/9k="
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.3505 0 0 0.3505 25.0365 60.2762)"
                   width="269"
                 />
@@ -571,7 +548,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="24.3"
               y="60.8"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -598,44 +575,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="51"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_5_)"
+                <clippath
+                  clip-path="url(#SVGID_5_)"
                   id="SVGID_12_"
                 >
                   <use
                     href="#SVGID_11_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_12_);"
                   transform="matrix(1 0 0 1 0 -3.814697e-06)"
                 >
                   <image
                     height="106"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 11.0152 50.9795)"
                     width="172"
-                    xlinkHref="data:image/jpeg;base64,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 k//Z"
+                    xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKNAAAEpQAABq//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAG0ArQMBIgACEQEDEQH/ xACTAAADAQEBAQEAAAAAAAAAAAAABQYEAwIBBwEBAAAAAAAAAAAAAAAAAAAAABAAAAYABQQCAgMA AAAAAAAAAAECAwQFERMVBhYQEjM1MDIgYEAhIhEAAQIDBwQCAQMFAAAAAAAAAAECAwQ0ECEyo9OU 1BExsnQwcRJBIhQgQIGRExIBAAAAAAAAAAAAAAAAAAAAYP/aAAwDAQACEQMRAAAAUZleMoCfCgJ8 KAnwoCfCgJ8KAnwoCfCgJ8KAnwoCfDZj2Yz7p41ZN5bmTMIAAAAAAABq+VZLZbGTOIBsx7MZ2u4W 9H0b+iIj8s5ukx8AAAAA9ed41uFlSScFfwBmANmPZjO99A3xZ8e/UgYr9dkyDKLkIh6CIe+hLVe6 s2MPXwjYC/gDMAbMezGd76Bvi07ce54ybvgn8OwSDsEn10C7b0A5duJGwF/AGYA2Y9mM73v5/Yn6 H3R9xqKgaioGoqBqKgaioGvJfxEf5/YxZyANmNvkMm7wDbol+jkTA5EwORMDkTA5EwOfCkPeDWGM 2B//2gAIAQIAAQUA/Tf/2gAIAQMAAQUA/Tf/2gAIAQEAAQUAst7bnYsed7rHO91jne6xzvdY53us c73WOd7rHO91jne6xzvdY53usc73WOd7rHO91jne6xzvdY53usc73WOd7rHO91jne6xce3/i3Htw RYm1DW4HYLiCMsD+IixNqGtwOwltkosD6XHtwwnucq4SVpm1eDc+KbS/ihsG65X1mKLGCSEyk9rv S49uInmokEYkQyWzc12AebNtfwIT3KpoBmcKESGrxBJKd5+lx7cRPNQBtslNXEAlJt4RoUZYH+db GN1ylgYAmiQ1fid5+lx7cRPNQCN9Jkclou64TIq2nPyZZU4ulrjxrohIS8WDd+J3n6XHtxE81AI3 0WnErCCTqbGk7jdov70IxoRjQjGhGE0R4waMyVWVhNk02SSkfS/E7z9Lj24ieagEb6BaCUT0FCwu pQZ6O2NHbGjtjR2wmobIM1yEBtlKCEj6X4nefpce3ETzUAjfTrgQwIYEMCGBDAvwkfS/E7z9Lj24 ieagMhGMuz5JB/4vzITvP0uPbhhXa5SzEoEa0QSNUbGqIGqIGqIGqIGqIGqIGqIGqIGqIGqIGqNi RaI7bqalYkq7nelx7cEeBxZ6mQ3eYFrw14a8NeGvDXhrw14a8NeGvDXg5e4lLsFPAzxPpbN1R2uV UDKqBlVIyqkZVSMqpGVUjKqRlVIyqkZVSMqpGVUjKqRlVIyqkZVSMqpGVUDKqBlVA//aAAgBAgIG PwAb/9oACAEDAgY/ABv/2gAIAQEBBj8Am4EKd/GHCjRGMb/ygr0a16oidVh9exXZMHTK7Jg6ZXZM HTK7Jg6ZXZMHTK7Jg6ZXZMHTK7Jg6ZXZMHTK7Jg6ZXZMHTK7Jg6ZXZMHTK7Jg6ZXZMHTK7Jg6ZXZ MHTK7Jg6ZXZMHTK7Jg6ZXZMHTJ72I3m7+2nvYjebrOhch16HT5LkOqodLZ72I3m6xEEToKvQW674 0QS4W4VLZ72I3m6xoh2/QdcKi/CiDV6dxLv0FHWz3sRvN1jfsadBy9BXInY6fAiqlw1VQ/wKOtnv YjebrG/Y0QW4dcLdd/WiIg24S6xw62e9iN5usb9jRLFuF/b1MJ2U7HY7GET9ol1ijh1s97EbzdY3 7GiW9jCYTCYTCYTsXWKOHWz3sRvN1jfsaJ8qjh1s97EbzdY37GifKo4W2e9iN5usRRt4l53MRiMR iMRiMRiMRiO4t4t4q2z3sRvN1qXmJUMSmIxGIxGIxGIxGIxGIxC33HW2dV8zMI7+RF/JEl2KiL+b uvRf5Cdf9FTMbdnJKmY27OSVMxt2ckqZnbs5JUzO3ZySpmduzklTM7dnJKmZ27OSVMzt2ckqZnbs 5JUzO3ZySpmduzklTM7dnJKmZ27OSVMzt2ckqZnbs5JUzO3ZySpmNuzklTMbdnJKmY27OSVMxt2c k//Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
             fill="rgb(255, 255, 255)"
             height="62.4"
             mask="url(#SVGID_10_)"
@@ -665,20 +630,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="19.5"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_14_"
           >
             <use
               href="#SVGID_13_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             d="M59.6,85.7h26.1c1.7,0,3.9-1.3,4.8-2.8l13-22.6c0.9-1.5,0.9-4,0-5.5l-13-22.6c-0.9-1.5-3.1-2.8-4.8-2.8H59.6    c-1.7,0-3.9,1.3-4.8,2.8l-13,22.6c-0.9,1.5-0.9,4,0,5.5l13,22.6C55.6,84.4,57.8,85.7,59.6,85.7"
             fill="rgb(234, 242, 246)"
           />
@@ -691,7 +652,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="43.3"
               y="29.3"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -718,34 +679,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="19.5"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_14_)"
+                <clippath
+                  clip-path="url(#SVGID_14_)"
                   id="SVGID_17_"
                 >
                   <use
                     href="#SVGID_16_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_17_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_17_);"
                 >
                   <image
                     height="99"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAI5AAADlgAABLj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGQAggMBIgACEQEDEQH/ xACEAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAABBAIBBAIDAQAA AAAAAAABABECBAMFFhAgNQYhEkBQMRQRAAECBAcAAwEAAAAAAAAAAAABAyAhMQLSk7MEdAU1EDAR QBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA53RTygnignignignignignignignihPo TwB6bpr5a26c946jCcxjuTDUffgABQn0J4+/PZsXNHojNUz1CTrdJrHHQ+1505PDRnnwAFCfQnjL iyl7peZ6U6OjNomTDmwkrmuk5o5uRXkHkAFCfQnj15FfoeQtHa1eOpnR60rXMvPZ4hpaOTEAAUJ9 CeAetvS+l3c5r2dLhheCnOxeB8AAChPAAAAAAAAD/9oACAECAAEFAP3/AP/aAAgBAwABBQD9/wD/ 2gAIAQEAAQUA3m83eLd8g3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDf LkG+XsHnvwPYPPdggSo4DJRpyK/wyUqkgpYSEYt3ewee6wi5r1jJYKQWOiSjQKyUSBYprPhMTIMe z2Dz3QBzWwmRp1firSdYqAY0A2eiGt02V2t8Zsf1PZ7B57pjDmhiVHA6p1g2KuGOANnrhrtYNewM ruP6ykPnr7B57phDyoRDa+AapANjiGZZYhrsA2wgFsIqf96+wee6YS0qEw2vyBqmQNjkG+wWWYa7 kDbCYWwmp/3r7B57pAsaOZlRsMqdoNishjYDZ7Ia7aCvZ3VzL9pE9nsHnugVfKYmpa+Kt1li2AY7 ANmvgi1cdXLLrLNz2ewee6xkxw5zFYLqheRvrJeCz3XWXKZEl+32Dz3YJMo5iELUl/rkjZkUchKJ fu9g89+B/9oACAECAgY/AH//2gAIAQMCBj8Af//aAAgBAQEGPwDsGmuw3Vjdm6etsstectttttcu REREukiHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPc xHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHZ8t/Uu/h7Plv6l0dChT6Oz5b+pdCkhJF ChQWQsouz5b+pdAkhE/BJFChQWQshYez5b+pdB+iSEkUKFBZCyFh7Plv6l3ygggkCixdny39S75Q QQSBRT8h7Plv6l0CIJMSZUqVFmLMWHs+W/qXQIJMSZUqVFmKiLF2fLf1LoUmVKlSoqIsfZ8t/Uui qVKlfo7Plv6l38P/2Q=="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 26.486 19.5337)"
                     width="129"
                   />
@@ -754,7 +703,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             fill="rgb(255, 255, 255)"
             height="56.1"
             mask="url(#SVGID_15_)"
@@ -802,21 +751,17 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c6"
+    class="c6"
     type="agility"
   >
     <svg
       data-testid="characteristics-badge-agility"
       height="60px"
-      style={
-        Object {
-          "enableBackground": "new 0 0 144 144",
-        }
-      }
+      style="enable-background: new 0 0 144 144;"
       version="1.1"
       viewBox="20 25 104 103"
       x="0px"
-      xmlSpace="preserve"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
       y="0px"
     >
@@ -839,20 +784,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="51"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_5_"
           >
             <use
               href="#SVGID_4_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
           >
             <defs>
               <path
@@ -860,20 +801,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_6_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_7_"
             >
               <use
                 href="#SVGID_6_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
+                style="overflow: visible;"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_7_)"
+              clip-path="url(#SVGID_7_)"
             >
               <defs>
                 <rect
@@ -884,34 +821,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="60.3"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_9_"
               >
                 <use
                   href="#SVGID_8_"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_9_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_9_);"
                 transform="matrix(1 0 0 1 -1.907349e-06 0)"
               >
                 <image
                   height="177"
                   href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAzQDNAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAALJAAADkQAABL//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIALMBDgMBIgACEQEDEQH/ xACEAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAIABgMBAAAA AAAAAAAAAAABQDECIgMTUBIyEREAAgEFAQEAAwEAAAAAAAAAAAEyUHECQqKxMSFRYcESAAMBAQEB AQEAAAAAAAAAAAAxQgFAgZFwQf/aAAwDAQACEQMRAAAA9szPL32wNsDbA2wNsDbA2wNsDbA2wNsD bA2wNsDbA3eerJLM0FAAAAAAAAAAAAAAazqySyFBKIFAAAAAAAAAAURKJrOqgAAIsgFAAAAAAAAF QKAms6IAAACLIBQAAAAABUCgAJqUgACqiwCIoioiiKIoiiKoAAABZSAFAsASliiKiKIoiiKIqpQA SiCFlIBZQLAAAAAAAAAAAAWCFlIACigQAAAAAAAAAARQhZSEKBYKiqgqCoKgqCoKgqCoKgCAJrOi SyKgqKqCoKgqCoKgqCoKgqCoKiLAazqqN5AAAAAAAAAAAAAAAUs//9oACAECAAEFAOzOzOzOzOzO zOzOzOzOzOzOzOzOzOzOzE3AqBU4BQKgVOAU4BTgFOAUCoFH/9oACAEDAAEFAPiPiPiPiPiPiPiP iPiPiPiPiPiPiPiPiGlAuBcC4FwLgXAuBcC4FwX/2gAIAQEAAQUAeSv7syGzIbMhsyGzIbMhsyGz IbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIU5K+rnwFPlz 4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8 ufAU+XPgKfLnwFPlz4Cny58BT5fX7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlPXr/ AP/aAAgBAgIGPwB6PR6PR6PR6PR6PR6PR6PR6PR7/eHzeHzeHzeHzeH7w/eH7w/eHzeHzSCCCCCC CCCCCCCCCCD/2gAIAQMCBj8AQhCEIQhCEIQhCF+V0UUUUUUUUUUUUUUUUf/aAAgBAQEGPwCTJMky TJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkzL8/F/tCysvVQsrL1ULKy9VCysv VQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9V CysvVQsrL1ULKy9Rr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9 GvRr0a9GvRr0a9GvRl8+f39n/9k="
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.3505 0 0 0.3505 25.0365 60.2762)"
                   width="269"
                 />
@@ -927,7 +852,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="24.3"
               y="60.8"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -954,44 +879,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="51"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_5_)"
+                <clippath
+                  clip-path="url(#SVGID_5_)"
                   id="SVGID_12_"
                 >
                   <use
                     href="#SVGID_11_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_12_);"
                   transform="matrix(1 0 0 1 0 -3.814697e-06)"
                 >
                   <image
                     height="106"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 11.0152 50.9795)"
                     width="172"
-                    xlinkHref="data:image/jpeg;base64,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 k//Z"
+                    xlink:href="data:image/jpeg;base64,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 k//Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
             fill="rgb(255, 255, 255)"
             height="62.4"
             mask="url(#SVGID_10_)"
@@ -1021,20 +934,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="19.5"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_14_"
           >
             <use
               href="#SVGID_13_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             d="M59.6,85.7h26.1c1.7,0,3.9-1.3,4.8-2.8l13-22.6c0.9-1.5,0.9-4,0-5.5l-13-22.6c-0.9-1.5-3.1-2.8-4.8-2.8H59.6    c-1.7,0-3.9,1.3-4.8,2.8l-13,22.6c-0.9,1.5-0.9,4,0,5.5l13,22.6C55.6,84.4,57.8,85.7,59.6,85.7"
             fill="rgb(234, 242, 246)"
           />
@@ -1047,7 +956,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="43.3"
               y="29.3"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -1074,34 +983,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="19.5"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_14_)"
+                <clippath
+                  clip-path="url(#SVGID_14_)"
                   id="SVGID_17_"
                 >
                   <use
                     href="#SVGID_16_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_17_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_17_);"
                 >
                   <image
                     height="99"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAI5AAADlgAABLj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGQAggMBIgACEQEDEQH/ xACEAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAABBAIBBAIDAQAA AAAAAAABABECBAMFFhAgNQYhEkBQMRQRAAECBAcAAwEAAAAAAAAAAAABAyAhMQLSk7MEdAU1EDAR QBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA53RTygnignignignignignignignihPo TwB6bpr5a26c946jCcxjuTDUffgABQn0J4+/PZsXNHojNUz1CTrdJrHHQ+1505PDRnnwAFCfQnjL iyl7peZ6U6OjNomTDmwkrmuk5o5uRXkHkAFCfQnj15FfoeQtHa1eOpnR60rXMvPZ4hpaOTEAAUJ9 CeAetvS+l3c5r2dLhheCnOxeB8AAChPAAAAAAAAD/9oACAECAAEFAP3/AP/aAAgBAwABBQD9/wD/ 2gAIAQEAAQUA3m83eLd8g3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDf LkG+XsHnvwPYPPdggSo4DJRpyK/wyUqkgpYSEYt3ewee6wi5r1jJYKQWOiSjQKyUSBYprPhMTIMe z2Dz3QBzWwmRp1firSdYqAY0A2eiGt02V2t8Zsf1PZ7B57pjDmhiVHA6p1g2KuGOANnrhrtYNewM ruP6ykPnr7B57phDyoRDa+AapANjiGZZYhrsA2wgFsIqf96+wee6YS0qEw2vyBqmQNjkG+wWWYa7 kDbCYWwmp/3r7B57pAsaOZlRsMqdoNishjYDZ7Ia7aCvZ3VzL9pE9nsHnugVfKYmpa+Kt1li2AY7 ANmvgi1cdXLLrLNz2ewee6xkxw5zFYLqheRvrJeCz3XWXKZEl+32Dz3YJMo5iELUl/rkjZkUchKJ fu9g89+B/9oACAECAgY/AH//2gAIAQMCBj8Af//aAAgBAQEGPwDsGmuw3Vjdm6etsstectttttcu REREukiHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPc xHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHZ8t/Uu/h7Plv6l0dChT6Oz5b+pdCkhJF ChQWQsouz5b+pdAkhE/BJFChQWQshYez5b+pdB+iSEkUKFBZCyFh7Plv6l3ygggkCixdny39S75Q QQSBRT8h7Plv6l0CIJMSZUqVFmLMWHs+W/qXQIJMSZUqVFmKiLF2fLf1LoUmVKlSoqIsfZ8t/Uui qVKlfo7Plv6l38P/2Q=="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 26.486 19.5337)"
                     width="129"
                   />
@@ -1110,7 +1007,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             fill="rgb(255, 255, 255)"
             height="56.1"
             mask="url(#SVGID_15_)"
@@ -1164,21 +1061,17 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c7"
+    class="c7"
     type="intellect"
   >
     <svg
       data-testid="characteristics-badge-intellect"
       height="60px"
-      style={
-        Object {
-          "enableBackground": "new 0 0 144 144",
-        }
-      }
+      style="enable-background: new 0 0 144 144;"
       version="1.1"
       viewBox="20 25 104 103"
       x="0px"
-      xmlSpace="preserve"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
       y="0px"
     >
@@ -1201,20 +1094,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="51"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_5_"
           >
             <use
               href="#SVGID_4_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
           >
             <defs>
               <path
@@ -1222,20 +1111,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_6_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_7_"
             >
               <use
                 href="#SVGID_6_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
+                style="overflow: visible;"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_7_)"
+              clip-path="url(#SVGID_7_)"
             >
               <defs>
                 <rect
@@ -1246,34 +1131,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="60.3"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_9_"
               >
                 <use
                   href="#SVGID_8_"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_9_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_9_);"
                 transform="matrix(1 0 0 1 -1.907349e-06 0)"
               >
                 <image
                   height="177"
                   href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAzQDNAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAALJAAADkQAABL//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIALMBDgMBIgACEQEDEQH/ xACEAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAIABgMBAAAA AAAAAAAAAAABQDECIgMTUBIyEREAAgEFAQEAAwEAAAAAAAAAAAEyUHECQqKxMSFRYcESAAMBAQEB AQEAAAAAAAAAAAAxQgFAgZFwQf/aAAwDAQACEQMRAAAA9szPL32wNsDbA2wNsDbA2wNsDbA2wNsD bA2wNsDbA3eerJLM0FAAAAAAAAAAAAAAazqySyFBKIFAAAAAAAAAAURKJrOqgAAIsgFAAAAAAAAF QKAms6IAAACLIBQAAAAABUCgAJqUgACqiwCIoioiiKIoiiKoAAABZSAFAsASliiKiKIoiiKIqpQA SiCFlIBZQLAAAAAAAAAAAAWCFlIACigQAAAAAAAAAARQhZSEKBYKiqgqCoKgqCoKgqCoKgCAJrOi SyKgqKqCoKgqCoKgqCoKgqCoKiLAazqqN5AAAAAAAAAAAAAAAUs//9oACAECAAEFAOzOzOzOzOzO zOzOzOzOzOzOzOzOzOzOzE3AqBU4BQKgVOAU4BTgFOAUCoFH/9oACAEDAAEFAPiPiPiPiPiPiPiP iPiPiPiPiPiPiPiPiGlAuBcC4FwLgXAuBcC4FwX/2gAIAQEAAQUAeSv7syGzIbMhsyGzIbMhsyGz IbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIU5K+rnwFPlz 4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8 ufAU+XPgKfLnwFPlz4Cny58BT5fX7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlPXr/ AP/aAAgBAgIGPwB6PR6PR6PR6PR6PR6PR6PR6PR7/eHzeHzeHzeHzeH7w/eH7w/eHzeHzSCCCCCC CCCCCCCCCCD/2gAIAQMCBj8AQhCEIQhCEIQhCF+V0UUUUUUUUUUUUUUUUf/aAAgBAQEGPwCTJMky TJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkzL8/F/tCysvVQsrL1ULKy9VCysv VQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9V CysvVQsrL1ULKy9Rr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9 GvRr0a9GvRr0a9GvRl8+f39n/9k="
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.3505 0 0 0.3505 25.0365 60.2762)"
                   width="269"
                 />
@@ -1289,7 +1162,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="24.3"
               y="60.8"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -1316,44 +1189,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="51"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_5_)"
+                <clippath
+                  clip-path="url(#SVGID_5_)"
                   id="SVGID_12_"
                 >
                   <use
                     href="#SVGID_11_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_12_);"
                   transform="matrix(1 0 0 1 0 -3.814697e-06)"
                 >
                   <image
                     height="106"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 11.0152 50.9795)"
                     width="172"
-                    xlinkHref="data:image/jpeg;base64,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 k//Z"
+                    xlink:href="data:image/jpeg;base64,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 k//Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
             fill="rgb(255, 255, 255)"
             height="62.4"
             mask="url(#SVGID_10_)"
@@ -1383,20 +1244,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="19.5"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_14_"
           >
             <use
               href="#SVGID_13_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             d="M59.6,85.7h26.1c1.7,0,3.9-1.3,4.8-2.8l13-22.6c0.9-1.5,0.9-4,0-5.5l-13-22.6c-0.9-1.5-3.1-2.8-4.8-2.8H59.6    c-1.7,0-3.9,1.3-4.8,2.8l-13,22.6c-0.9,1.5-0.9,4,0,5.5l13,22.6C55.6,84.4,57.8,85.7,59.6,85.7"
             fill="rgb(234, 242, 246)"
           />
@@ -1409,7 +1266,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="43.3"
               y="29.3"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -1436,34 +1293,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="19.5"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_14_)"
+                <clippath
+                  clip-path="url(#SVGID_14_)"
                   id="SVGID_17_"
                 >
                   <use
                     href="#SVGID_16_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_17_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_17_);"
                 >
                   <image
                     height="99"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAI5AAADlgAABLj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGQAggMBIgACEQEDEQH/ xACEAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAABBAIBBAIDAQAA AAAAAAABABECBAMFFhAgNQYhEkBQMRQRAAECBAcAAwEAAAAAAAAAAAABAyAhMQLSk7MEdAU1EDAR QBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA53RTygnignignignignignignignihPo TwB6bpr5a26c946jCcxjuTDUffgABQn0J4+/PZsXNHojNUz1CTrdJrHHQ+1505PDRnnwAFCfQnjL iyl7peZ6U6OjNomTDmwkrmuk5o5uRXkHkAFCfQnj15FfoeQtHa1eOpnR60rXMvPZ4hpaOTEAAUJ9 CeAetvS+l3c5r2dLhheCnOxeB8AAChPAAAAAAAAD/9oACAECAAEFAP3/AP/aAAgBAwABBQD9/wD/ 2gAIAQEAAQUA3m83eLd8g3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDf LkG+XsHnvwPYPPdggSo4DJRpyK/wyUqkgpYSEYt3ewee6wi5r1jJYKQWOiSjQKyUSBYprPhMTIMe z2Dz3QBzWwmRp1firSdYqAY0A2eiGt02V2t8Zsf1PZ7B57pjDmhiVHA6p1g2KuGOANnrhrtYNewM ruP6ykPnr7B57phDyoRDa+AapANjiGZZYhrsA2wgFsIqf96+wee6YS0qEw2vyBqmQNjkG+wWWYa7 kDbCYWwmp/3r7B57pAsaOZlRsMqdoNishjYDZ7Ia7aCvZ3VzL9pE9nsHnugVfKYmpa+Kt1li2AY7 ANmvgi1cdXLLrLNz2ewee6xkxw5zFYLqheRvrJeCz3XWXKZEl+32Dz3YJMo5iELUl/rkjZkUchKJ fu9g89+B/9oACAECAgY/AH//2gAIAQMCBj8Af//aAAgBAQEGPwDsGmuw3Vjdm6etsstectttttcu REREukiHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPc xHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHZ8t/Uu/h7Plv6l0dChT6Oz5b+pdCkhJF ChQWQsouz5b+pdAkhE/BJFChQWQshYez5b+pdB+iSEkUKFBZCyFh7Plv6l3ygggkCixdny39S75Q QQSBRT8h7Plv6l0CIJMSZUqVFmLMWHs+W/qXQIJMSZUqVFmKiLF2fLf1LoUmVKlSoqIsfZ8t/Uui qVKlfo7Plv6l38P/2Q=="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 26.486 19.5337)"
                     width="129"
                   />
@@ -1472,7 +1317,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             fill="rgb(255, 255, 255)"
             height="56.1"
             mask="url(#SVGID_15_)"
@@ -1532,21 +1377,17 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c8"
+    class="c8"
     type="cunning"
   >
     <svg
       data-testid="characteristics-badge-cunning"
       height="60px"
-      style={
-        Object {
-          "enableBackground": "new 0 0 144 144",
-        }
-      }
+      style="enable-background: new 0 0 144 144;"
       version="1.1"
       viewBox="20 25 104 103"
       x="0px"
-      xmlSpace="preserve"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
       y="0px"
     >
@@ -1569,20 +1410,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="51"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_5_"
           >
             <use
               href="#SVGID_4_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
           >
             <defs>
               <path
@@ -1590,20 +1427,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_6_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_7_"
             >
               <use
                 href="#SVGID_6_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
+                style="overflow: visible;"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_7_)"
+              clip-path="url(#SVGID_7_)"
             >
               <defs>
                 <rect
@@ -1614,34 +1447,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="60.3"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_9_"
               >
                 <use
                   href="#SVGID_8_"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_9_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_9_);"
                 transform="matrix(1 0 0 1 -1.907349e-06 0)"
               >
                 <image
                   height="177"
                   href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAzQDNAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAALJAAADkQAABL//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIALMBDgMBIgACEQEDEQH/ xACEAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAIABgMBAAAA AAAAAAAAAAABQDECIgMTUBIyEREAAgEFAQEAAwEAAAAAAAAAAAEyUHECQqKxMSFRYcESAAMBAQEB AQEAAAAAAAAAAAAxQgFAgZFwQf/aAAwDAQACEQMRAAAA9szPL32wNsDbA2wNsDbA2wNsDbA2wNsD bA2wNsDbA3eerJLM0FAAAAAAAAAAAAAAazqySyFBKIFAAAAAAAAAAURKJrOqgAAIsgFAAAAAAAAF QKAms6IAAACLIBQAAAAABUCgAJqUgACqiwCIoioiiKIoiiKoAAABZSAFAsASliiKiKIoiiKIqpQA SiCFlIBZQLAAAAAAAAAAAAWCFlIACigQAAAAAAAAAARQhZSEKBYKiqgqCoKgqCoKgqCoKgCAJrOi SyKgqKqCoKgqCoKgqCoKgqCoKiLAazqqN5AAAAAAAAAAAAAAAUs//9oACAECAAEFAOzOzOzOzOzO zOzOzOzOzOzOzOzOzOzOzE3AqBU4BQKgVOAU4BTgFOAUCoFH/9oACAEDAAEFAPiPiPiPiPiPiPiP iPiPiPiPiPiPiPiPiGlAuBcC4FwLgXAuBcC4FwX/2gAIAQEAAQUAeSv7syGzIbMhsyGzIbMhsyGz IbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIU5K+rnwFPlz 4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8 ufAU+XPgKfLnwFPlz4Cny58BT5fX7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlPXr/ AP/aAAgBAgIGPwB6PR6PR6PR6PR6PR6PR6PR6PR7/eHzeHzeHzeHzeH7w/eH7w/eHzeHzSCCCCCC CCCCCCCCCCD/2gAIAQMCBj8AQhCEIQhCEIQhCF+V0UUUUUUUUUUUUUUUUf/aAAgBAQEGPwCTJMky TJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkzL8/F/tCysvVQsrL1ULKy9VCysv VQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9V CysvVQsrL1ULKy9Rr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9 GvRr0a9GvRr0a9GvRl8+f39n/9k="
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.3505 0 0 0.3505 25.0365 60.2762)"
                   width="269"
                 />
@@ -1657,7 +1478,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="24.3"
               y="60.8"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -1684,44 +1505,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="51"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_5_)"
+                <clippath
+                  clip-path="url(#SVGID_5_)"
                   id="SVGID_12_"
                 >
                   <use
                     href="#SVGID_11_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_12_);"
                   transform="matrix(1 0 0 1 0 -3.814697e-06)"
                 >
                   <image
                     height="106"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 11.0152 50.9795)"
                     width="172"
-                    xlinkHref="data:image/jpeg;base64,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 k//Z"
+                    xlink:href="data:image/jpeg;base64,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 k//Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
             fill="rgb(255, 255, 255)"
             height="62.4"
             mask="url(#SVGID_10_)"
@@ -1751,20 +1560,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="19.5"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_14_"
           >
             <use
               href="#SVGID_13_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             d="M59.6,85.7h26.1c1.7,0,3.9-1.3,4.8-2.8l13-22.6c0.9-1.5,0.9-4,0-5.5l-13-22.6c-0.9-1.5-3.1-2.8-4.8-2.8H59.6    c-1.7,0-3.9,1.3-4.8,2.8l-13,22.6c-0.9,1.5-0.9,4,0,5.5l13,22.6C55.6,84.4,57.8,85.7,59.6,85.7"
             fill="rgb(234, 242, 246)"
           />
@@ -1777,7 +1582,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="43.3"
               y="29.3"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -1804,34 +1609,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="19.5"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_14_)"
+                <clippath
+                  clip-path="url(#SVGID_14_)"
                   id="SVGID_17_"
                 >
                   <use
                     href="#SVGID_16_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_17_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_17_);"
                 >
                   <image
                     height="99"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAI5AAADlgAABLj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGQAggMBIgACEQEDEQH/ xACEAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAABBAIBBAIDAQAA AAAAAAABABECBAMFFhAgNQYhEkBQMRQRAAECBAcAAwEAAAAAAAAAAAABAyAhMQLSk7MEdAU1EDAR QBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA53RTygnignignignignignignignihPo TwB6bpr5a26c946jCcxjuTDUffgABQn0J4+/PZsXNHojNUz1CTrdJrHHQ+1505PDRnnwAFCfQnjL iyl7peZ6U6OjNomTDmwkrmuk5o5uRXkHkAFCfQnj15FfoeQtHa1eOpnR60rXMvPZ4hpaOTEAAUJ9 CeAetvS+l3c5r2dLhheCnOxeB8AAChPAAAAAAAAD/9oACAECAAEFAP3/AP/aAAgBAwABBQD9/wD/ 2gAIAQEAAQUA3m83eLd8g3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDf LkG+XsHnvwPYPPdggSo4DJRpyK/wyUqkgpYSEYt3ewee6wi5r1jJYKQWOiSjQKyUSBYprPhMTIMe z2Dz3QBzWwmRp1firSdYqAY0A2eiGt02V2t8Zsf1PZ7B57pjDmhiVHA6p1g2KuGOANnrhrtYNewM ruP6ykPnr7B57phDyoRDa+AapANjiGZZYhrsA2wgFsIqf96+wee6YS0qEw2vyBqmQNjkG+wWWYa7 kDbCYWwmp/3r7B57pAsaOZlRsMqdoNishjYDZ7Ia7aCvZ3VzL9pE9nsHnugVfKYmpa+Kt1li2AY7 ANmvgi1cdXLLrLNz2ewee6xkxw5zFYLqheRvrJeCz3XWXKZEl+32Dz3YJMo5iELUl/rkjZkUchKJ fu9g89+B/9oACAECAgY/AH//2gAIAQMCBj8Af//aAAgBAQEGPwDsGmuw3Vjdm6etsstectttttcu REREukiHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPc xHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHZ8t/Uu/h7Plv6l0dChT6Oz5b+pdCkhJF ChQWQsouz5b+pdAkhE/BJFChQWQshYez5b+pdB+iSEkUKFBZCyFh7Plv6l3ygggkCixdny39S75Q QQSBRT8h7Plv6l0CIJMSZUqVFmLMWHs+W/qXQIJMSZUqVFmKiLF2fLf1LoUmVKlSoqIsfZ8t/Uui qVKlfo7Plv6l38P/2Q=="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 26.486 19.5337)"
                     width="129"
                   />
@@ -1840,7 +1633,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             fill="rgb(255, 255, 255)"
             height="56.1"
             mask="url(#SVGID_15_)"
@@ -1894,21 +1687,17 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c9"
+    class="c9"
     type="willpower"
   >
     <svg
       data-testid="characteristics-badge-willpower"
       height="60px"
-      style={
-        Object {
-          "enableBackground": "new 0 0 144 144",
-        }
-      }
+      style="enable-background: new 0 0 144 144;"
       version="1.1"
       viewBox="20 25 104 103"
       x="0px"
-      xmlSpace="preserve"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
       y="0px"
     >
@@ -1931,20 +1720,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="51"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_5_"
           >
             <use
               href="#SVGID_4_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
           >
             <defs>
               <path
@@ -1952,20 +1737,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_6_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_7_"
             >
               <use
                 href="#SVGID_6_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
+                style="overflow: visible;"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_7_)"
+              clip-path="url(#SVGID_7_)"
             >
               <defs>
                 <rect
@@ -1976,34 +1757,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="60.3"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_9_"
               >
                 <use
                   href="#SVGID_8_"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_9_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_9_);"
                 transform="matrix(1 0 0 1 -1.907349e-06 0)"
               >
                 <image
                   height="177"
                   href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAzQDNAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAALJAAADkQAABL//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIALMBDgMBIgACEQEDEQH/ xACEAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAIABgMBAAAA AAAAAAAAAAABQDECIgMTUBIyEREAAgEFAQEAAwEAAAAAAAAAAAEyUHECQqKxMSFRYcESAAMBAQEB AQEAAAAAAAAAAAAxQgFAgZFwQf/aAAwDAQACEQMRAAAA9szPL32wNsDbA2wNsDbA2wNsDbA2wNsD bA2wNsDbA3eerJLM0FAAAAAAAAAAAAAAazqySyFBKIFAAAAAAAAAAURKJrOqgAAIsgFAAAAAAAAF QKAms6IAAACLIBQAAAAABUCgAJqUgACqiwCIoioiiKIoiiKoAAABZSAFAsASliiKiKIoiiKIqpQA SiCFlIBZQLAAAAAAAAAAAAWCFlIACigQAAAAAAAAAARQhZSEKBYKiqgqCoKgqCoKgqCoKgCAJrOi SyKgqKqCoKgqCoKgqCoKgqCoKiLAazqqN5AAAAAAAAAAAAAAAUs//9oACAECAAEFAOzOzOzOzOzO zOzOzOzOzOzOzOzOzOzOzE3AqBU4BQKgVOAU4BTgFOAUCoFH/9oACAEDAAEFAPiPiPiPiPiPiPiP iPiPiPiPiPiPiPiPiGlAuBcC4FwLgXAuBcC4FwX/2gAIAQEAAQUAeSv7syGzIbMhsyGzIbMhsyGz IbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIU5K+rnwFPlz 4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8 ufAU+XPgKfLnwFPlz4Cny58BT5fX7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlPXr/ AP/aAAgBAgIGPwB6PR6PR6PR6PR6PR6PR6PR6PR7/eHzeHzeHzeHzeH7w/eH7w/eHzeHzSCCCCCC CCCCCCCCCCD/2gAIAQMCBj8AQhCEIQhCEIQhCF+V0UUUUUUUUUUUUUUUUf/aAAgBAQEGPwCTJMky TJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkzL8/F/tCysvVQsrL1ULKy9VCysv VQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9V CysvVQsrL1ULKy9Rr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9 GvRr0a9GvRr0a9GvRl8+f39n/9k="
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.3505 0 0 0.3505 25.0365 60.2762)"
                   width="269"
                 />
@@ -2019,7 +1788,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="24.3"
               y="60.8"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -2046,44 +1815,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="51"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_5_)"
+                <clippath
+                  clip-path="url(#SVGID_5_)"
                   id="SVGID_12_"
                 >
                   <use
                     href="#SVGID_11_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_12_);"
                   transform="matrix(1 0 0 1 0 -3.814697e-06)"
                 >
                   <image
                     height="106"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 11.0152 50.9795)"
                     width="172"
-                    xlinkHref="data:image/jpeg;base64,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 k//Z"
+                    xlink:href="data:image/jpeg;base64,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 k//Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
             fill="rgb(255, 255, 255)"
             height="62.4"
             mask="url(#SVGID_10_)"
@@ -2113,20 +1870,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="19.5"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_14_"
           >
             <use
               href="#SVGID_13_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             d="M59.6,85.7h26.1c1.7,0,3.9-1.3,4.8-2.8l13-22.6c0.9-1.5,0.9-4,0-5.5l-13-22.6c-0.9-1.5-3.1-2.8-4.8-2.8H59.6    c-1.7,0-3.9,1.3-4.8,2.8l-13,22.6c-0.9,1.5-0.9,4,0,5.5l13,22.6C55.6,84.4,57.8,85.7,59.6,85.7"
             fill="rgb(234, 242, 246)"
           />
@@ -2139,7 +1892,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="43.3"
               y="29.3"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -2166,34 +1919,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="19.5"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_14_)"
+                <clippath
+                  clip-path="url(#SVGID_14_)"
                   id="SVGID_17_"
                 >
                   <use
                     href="#SVGID_16_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_17_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_17_);"
                 >
                   <image
                     height="99"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAI5AAADlgAABLj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGQAggMBIgACEQEDEQH/ xACEAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAABBAIBBAIDAQAA AAAAAAABABECBAMFFhAgNQYhEkBQMRQRAAECBAcAAwEAAAAAAAAAAAABAyAhMQLSk7MEdAU1EDAR QBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA53RTygnignignignignignignignihPo TwB6bpr5a26c946jCcxjuTDUffgABQn0J4+/PZsXNHojNUz1CTrdJrHHQ+1505PDRnnwAFCfQnjL iyl7peZ6U6OjNomTDmwkrmuk5o5uRXkHkAFCfQnj15FfoeQtHa1eOpnR60rXMvPZ4hpaOTEAAUJ9 CeAetvS+l3c5r2dLhheCnOxeB8AAChPAAAAAAAAD/9oACAECAAEFAP3/AP/aAAgBAwABBQD9/wD/ 2gAIAQEAAQUA3m83eLd8g3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDf LkG+XsHnvwPYPPdggSo4DJRpyK/wyUqkgpYSEYt3ewee6wi5r1jJYKQWOiSjQKyUSBYprPhMTIMe z2Dz3QBzWwmRp1firSdYqAY0A2eiGt02V2t8Zsf1PZ7B57pjDmhiVHA6p1g2KuGOANnrhrtYNewM ruP6ykPnr7B57phDyoRDa+AapANjiGZZYhrsA2wgFsIqf96+wee6YS0qEw2vyBqmQNjkG+wWWYa7 kDbCYWwmp/3r7B57pAsaOZlRsMqdoNishjYDZ7Ia7aCvZ3VzL9pE9nsHnugVfKYmpa+Kt1li2AY7 ANmvgi1cdXLLrLNz2ewee6xkxw5zFYLqheRvrJeCz3XWXKZEl+32Dz3YJMo5iELUl/rkjZkUchKJ fu9g89+B/9oACAECAgY/AH//2gAIAQMCBj8Af//aAAgBAQEGPwDsGmuw3Vjdm6etsstectttttcu REREukiHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPc xHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHZ8t/Uu/h7Plv6l0dChT6Oz5b+pdCkhJF ChQWQsouz5b+pdAkhE/BJFChQWQshYez5b+pdB+iSEkUKFBZCyFh7Plv6l3ygggkCixdny39S75Q QQSBRT8h7Plv6l0CIJMSZUqVFmLMWHs+W/qXQIJMSZUqVFmKiLF2fLf1LoUmVKlSoqIsfZ8t/Uui qVKlfo7Plv6l38P/2Q=="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 26.486 19.5337)"
                     width="129"
                   />
@@ -2202,7 +1943,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             fill="rgb(255, 255, 255)"
             height="56.1"
             mask="url(#SVGID_15_)"
@@ -2262,21 +2003,17 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c10"
+    class="c10"
     type="presence"
   >
     <svg
       data-testid="characteristics-badge-presence"
       height="60px"
-      style={
-        Object {
-          "enableBackground": "new 0 0 144 144",
-        }
-      }
+      style="enable-background: new 0 0 144 144;"
       version="1.1"
       viewBox="20 25 104 103"
       x="0px"
-      xmlSpace="preserve"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
       y="0px"
     >
@@ -2299,20 +2036,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="51"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_5_"
           >
             <use
               href="#SVGID_4_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
           >
             <defs>
               <path
@@ -2320,20 +2053,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_6_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_7_"
             >
               <use
                 href="#SVGID_6_"
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
+                style="overflow: visible;"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_7_)"
+              clip-path="url(#SVGID_7_)"
             >
               <defs>
                 <rect
@@ -2344,34 +2073,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="60.3"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_9_"
               >
                 <use
                   href="#SVGID_8_"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_9_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_9_);"
                 transform="matrix(1 0 0 1 -1.907349e-06 0)"
               >
                 <image
                   height="177"
                   href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAzQDNAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAALJAAADkQAABL//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIALMBDgMBIgACEQEDEQH/ xACEAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAIABgMBAAAA AAAAAAAAAAABQDECIgMTUBIyEREAAgEFAQEAAwEAAAAAAAAAAAEyUHECQqKxMSFRYcESAAMBAQEB AQEAAAAAAAAAAAAxQgFAgZFwQf/aAAwDAQACEQMRAAAA9szPL32wNsDbA2wNsDbA2wNsDbA2wNsD bA2wNsDbA3eerJLM0FAAAAAAAAAAAAAAazqySyFBKIFAAAAAAAAAAURKJrOqgAAIsgFAAAAAAAAF QKAms6IAAACLIBQAAAAABUCgAJqUgACqiwCIoioiiKIoiiKoAAABZSAFAsASliiKiKIoiiKIqpQA SiCFlIBZQLAAAAAAAAAAAAWCFlIACigQAAAAAAAAAARQhZSEKBYKiqgqCoKgqCoKgqCoKgCAJrOi SyKgqKqCoKgqCoKgqCoKgqCoKiLAazqqN5AAAAAAAAAAAAAAAUs//9oACAECAAEFAOzOzOzOzOzO zOzOzOzOzOzOzOzOzOzOzE3AqBU4BQKgVOAU4BTgFOAUCoFH/9oACAEDAAEFAPiPiPiPiPiPiPiP iPiPiPiPiPiPiPiPiGlAuBcC4FwLgXAuBcC4FwX/2gAIAQEAAQUAeSv7syGzIbMhsyGzIbMhsyGz IbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIbMhsyGzIU5K+rnwFPlz 4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8ufAU+XPgKfLnwFPlz4Cny58BT5c+Ap8 ufAU+XPgKfLnwFPlz4Cny58BT5fX7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlPXr/ AP/aAAgBAgIGPwB6PR6PR6PR6PR6PR6PR6PR6PR7/eHzeHzeHzeHzeH7w/eH7w/eHzeHzSCCCCCC CCCCCCCCCCD/2gAIAQMCBj8AQhCEIQhCEIQhCF+V0UUUUUUUUUUUUUUUUf/aAAgBAQEGPwCTJMky TJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkyTJMkzL8/F/tCysvVQsrL1ULKy9VCysv VQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9VCysvVQsrL1ULKy9V CysvVQsrL1ULKy9Rr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9GvRr0a9 GvRr0a9GvRr0a9GvRl8+f39n/9k="
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.3505 0 0 0.3505 25.0365 60.2762)"
                   width="269"
                 />
@@ -2387,7 +2104,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="24.3"
               y="60.8"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -2414,44 +2131,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="51"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_5_)"
+                <clippath
+                  clip-path="url(#SVGID_5_)"
                   id="SVGID_12_"
                 >
                   <use
                     href="#SVGID_11_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_12_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_12_);"
                   transform="matrix(1 0 0 1 0 -3.814697e-06)"
                 >
                   <image
                     height="106"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 11.0152 50.9795)"
                     width="172"
-                    xlinkHref="data:image/jpeg;base64,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 k//Z"
+                    xlink:href="data:image/jpeg;base64,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 k//Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_5_)"
+            clip-path="url(#SVGID_5_)"
             fill="rgb(255, 255, 255)"
             height="62.4"
             mask="url(#SVGID_10_)"
@@ -2481,20 +2186,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="19.5"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_14_"
           >
             <use
               href="#SVGID_13_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             d="M59.6,85.7h26.1c1.7,0,3.9-1.3,4.8-2.8l13-22.6c0.9-1.5,0.9-4,0-5.5l-13-22.6c-0.9-1.5-3.1-2.8-4.8-2.8H59.6    c-1.7,0-3.9,1.3-4.8,2.8l-13,22.6c-0.9,1.5-0.9,4,0,5.5l13,22.6C55.6,84.4,57.8,85.7,59.6,85.7"
             fill="rgb(234, 242, 246)"
           />
@@ -2507,7 +2208,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="43.3"
               y="29.3"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -2534,34 +2235,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="19.5"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_14_)"
+                <clippath
+                  clip-path="url(#SVGID_14_)"
                   id="SVGID_17_"
                 >
                   <use
                     href="#SVGID_16_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_17_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_17_);"
                 >
                   <image
                     height="99"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAZwBnAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAI5AAADlgAABLj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGQAggMBIgACEQEDEQH/ xACEAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAABBAIBBAIDAQAA AAAAAAABABECBAMFFhAgNQYhEkBQMRQRAAECBAcAAwEAAAAAAAAAAAABAyAhMQLSk7MEdAU1EDAR QBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA53RTygnignignignignignignignihPo TwB6bpr5a26c946jCcxjuTDUffgABQn0J4+/PZsXNHojNUz1CTrdJrHHQ+1505PDRnnwAFCfQnjL iyl7peZ6U6OjNomTDmwkrmuk5o5uRXkHkAFCfQnj15FfoeQtHa1eOpnR60rXMvPZ4hpaOTEAAUJ9 CeAetvS+l3c5r2dLhheCnOxeB8AAChPAAAAAAAAD/9oACAECAAEFAP3/AP/aAAgBAwABBQD9/wD/ 2gAIAQEAAQUA3m83eLd8g3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDfLkG+XIN8uQb5cg3y5BvlyDf LkG+XsHnvwPYPPdggSo4DJRpyK/wyUqkgpYSEYt3ewee6wi5r1jJYKQWOiSjQKyUSBYprPhMTIMe z2Dz3QBzWwmRp1firSdYqAY0A2eiGt02V2t8Zsf1PZ7B57pjDmhiVHA6p1g2KuGOANnrhrtYNewM ruP6ykPnr7B57phDyoRDa+AapANjiGZZYhrsA2wgFsIqf96+wee6YS0qEw2vyBqmQNjkG+wWWYa7 kDbCYWwmp/3r7B57pAsaOZlRsMqdoNishjYDZ7Ia7aCvZ3VzL9pE9nsHnugVfKYmpa+Kt1li2AY7 ANmvgi1cdXLLrLNz2ewee6xkxw5zFYLqheRvrJeCz3XWXKZEl+32Dz3YJMo5iELUl/rkjZkUchKJ fu9g89+B/9oACAECAgY/AH//2gAIAQMCBj8Af//aAAgBAQEGPwDsGmuw3Vjdm6etsstectttttcu REREukiHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPc xHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHp7vPcxHZ8t/Uu/h7Plv6l0dChT6Oz5b+pdCkhJF ChQWQsouz5b+pdAkhE/BJFChQWQshYez5b+pdB+iSEkUKFBZCyFh7Plv6l3ygggkCixdny39S75Q QQSBRT8h7Plv6l0CIJMSZUqVFmLMWHs+W/qXQIJMSZUqVFmKiLF2fLf1LoUmVKlSoqIsfZ8t/Uui qVKlfo7Plv6l38P/2Q=="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.7011 0 0 0.7011 26.486 19.5337)"
                     width="129"
                   />
@@ -2570,7 +2259,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_14_)"
+            clip-path="url(#SVGID_14_)"
             fill="rgb(255, 255, 255)"
             height="56.1"
             mask="url(#SVGID_15_)"
@@ -2627,7 +2316,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c11"
+    class="c11"
     type="soak"
   >
     <svg
@@ -2653,20 +2342,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="26.4"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_3_"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
               href="#SVGID_2_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
               xlink="http://www.w3.org/1999/xlink"
             />
-          </clipPath>
+          </clippath>
           <polygon
             fill="rgb(234, 242, 246)"
             points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
@@ -2680,7 +2365,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="26.1"
               y="34"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -2707,34 +2392,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="26.4"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_3_)"
+                <clippath
+                  clip-path="url(#SVGID_3_)"
                   id="SVGID_6_"
                 >
                   <use
                     href="#SVGID_5_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_6_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_6_);"
                 >
                   <image
                     height="94"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
                     width="256"
                   />
@@ -2743,7 +2416,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_3_)"
+            clip-path="url(#SVGID_3_)"
             fill="rgb(255, 255, 255)"
             height="44.8"
             mask="url(#SVGID_4_)"
@@ -2770,20 +2443,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="14.3"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_8_"
           >
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
-              xlinkHref="#SVGID_7_"
+              style="overflow: visible;"
+              xlink:href="#SVGID_7_"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
           >
             <defs>
               <path
@@ -2791,20 +2460,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_9_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_10_"
             >
               <use
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlinkHref="#SVGID_9_"
+                style="overflow: visible;"
+                xlink:href="#SVGID_9_"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_10_)"
+              clip-path="url(#SVGID_10_)"
             >
               <defs>
                 <rect
@@ -2815,35 +2480,23 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="22.2"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_12_"
               >
                 <use
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
-                  xlinkHref="#SVGID_11_"
+                  style="overflow: visible;"
+                  xlink:href="#SVGID_11_"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_12_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_12_);"
               >
                 <image
                   height="82"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
                   width="391"
-                  xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
+                  xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
                 />
               </g>
             </g>
@@ -2857,7 +2510,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="32.8"
               y="21.9"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -2872,7 +2525,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             y="21.9"
           >
             <g
-              className="st23"
+              class="st23"
             >
               <g>
                 <defs>
@@ -2884,44 +2537,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="14.3"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_8_)"
+                <clippath
+                  clip-path="url(#SVGID_8_)"
                   id="SVGID_15_"
                 >
                   <use
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    xlinkHref="#SVGID_14_"
+                    style="overflow: visible;"
+                    xlink:href="#SVGID_14_"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_15_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_15_);"
                   transform="matrix(1 0 0 1 0 9.536743e-07)"
                 >
                   <image
                     height="57"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
                     width="233"
-                    xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
+                    xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAJRAAAEOgAABlX/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIADsA7AMBIgACEQEDEQH/ xACVAAADAQADAQAAAAAAAAAAAAAABAYFAQMHAgEBAAAAAAAAAAAAAAAAAAAAABAAAQIFAwUBAQEA AAAAAAAAAAIVAQMTBSUEFBYQEQY2RhJQIREAAQICCAMHAgcBAAAAAAAAAAExAjIRodKTBDRFpRAS EyGxA3PDBYUUFSBAYXFygiNlEgEAAAAAAAAAAAAAAAAAAABQ/9oADAMBAAIRAxEAAADByXMccE+R sVBoVBoVBoVBoVBoVBoVBoVBoVBoVBoV4GxMHNad2Ax9jHOdbMtRbst+8gS+CBL4IEvggS+CBL4I EvggS+CBL4IEvggVPScg8vU3MMNjH2Ax9jHO26g6c9LYk+4piZCmJkKYmQpiZCmJkKYmQpiZCmJk KYmQpsZLOJjA1coNjH2Ax7LNJ/v2QQ+nQSHQSHQSHQSHQSHQSHQSHQSHQSHQS6tIML4oAn9hjSP/ 2gAIAQIAAQUA/uf/2gAIAQMAAQUA/uf/2gAIAQEAAQUA8qulyleQvF3Hi7jxdx4u48XceLuPF3Hi 7jxdx4u48XceLuPF3Hi7jxdx4u48XceLuPF3Hi7jxdx4u48XceLuPF3Hi7jxdx4u46XLi3l3svSE IxPwoprKaymsprKaymsprKaymsprKaymsprKaymsprKaymsprKaz8qgduvyXl3somHeOgt1UlWL9 Q4+cfOPnHzj5x84+cfOPnHzj5x84+cfOPnHzj5x84+METU2X8J1mmjJV0+S8u9lJEO8yx6dKjS6F EUbBBsEGwQbBBsEGwQbBBsEGwQbBBsEGwQbBBsEGwQbBBsEGwQbBBHQI7XXRoSi9S4Jj0+S8u9lN NHtNsC4QjpJifxUSVElRJUSVElRJUSVElRJUSVElRJUSVElRJUSVElRJUSRmJ7Xdaad8j/vT5Ly7 2Ulx7LtGugiGnvSEpfED4gfED4gfED4gfED4gfED4gfED4gfED4gfED4gfED4gfEEb4g192StN11 EJiunyXl3svSTqlyhN2mwHiaPE0eJo8TR4mjxNHiaPE0eJo8TR4mjxNHiaPE0eJo8TR4mjxNHiaP E0mXOauC5kVx6fJeRNb3hjDGGMMYYwxhjDGGMMYYwxhjDGGMMYYwxhjDGGMMYYwxhjDGGMMYvjv/ 2gAIAQICBj8Ac//aAAgBAwIGPwBz/9oACAEBAQY/AMf4fhYvx/D8OHxVSGCHxY4YUShGRFM9iL6O 0Z7EX0doz2Ivo7RnsRfR2jPYi+jtGexF9HaM9iL6O0Z7EX0doz2Ivo7RnsRfR2jPYi+jtGexF9Ha M9iL6O0Z7EX0doz2Ivo7RnsRfR2jPYi+jtGexF9HaM9iL6O0Z7EX0doz2Ivo7RnsRfR2jPYi+jtG exF9HaM9iL6O0Z7EX0doz2Ivo7RnsRfR2jq/V+P1fr+Xn6sfNy9GnlpppopPcfOXuTj2DKMoyjKM oyjKMoyjKMoyjKMoyjKMoyjKMoyjfg+R9A9x85e5OFAiqjkhJUSVElRJUSVElRJUSVElRJUSVElR JUSVElRJUSVElRJUSVCry0Cpx+R9A9x85e5OCIQ9gnYMMMMMMMMMMMMMMMMMMMMRdgtHH5H0D3Hz l7k4QkInaOOOOOOOOOOOOOOOOOOOORdov78fkfQPcfOXuTgikK0iJzExMTExMTExMTExMTExMTEx MTExMKlIqIvH5H0D3Hzl7k49i/lqKSlePyPoGM6323qdRebrfcepTQk/Q/zp/iaTuppO6mk7qaTu ppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaTuppO6mk7qaT uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
             fill="rgb(255, 255, 255)"
             height="23.9"
             mask="url(#SVGID_13_)"
@@ -2976,7 +2617,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c12"
+    class="c12"
     type="wounds"
   >
     <svg
@@ -3002,20 +2643,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="26.4"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_3_"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
               href="#SVGID_2_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
               xlink="http://www.w3.org/1999/xlink"
             />
-          </clipPath>
+          </clippath>
           <polygon
             fill="rgb(234, 242, 246)"
             points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
@@ -3029,7 +2666,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="26.1"
               y="34"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -3056,34 +2693,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="26.4"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_3_)"
+                <clippath
+                  clip-path="url(#SVGID_3_)"
                   id="SVGID_6_"
                 >
                   <use
                     href="#SVGID_5_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_6_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_6_);"
                 >
                   <image
                     height="94"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
                     width="256"
                   />
@@ -3092,7 +2717,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_3_)"
+            clip-path="url(#SVGID_3_)"
             fill="rgb(255, 255, 255)"
             height="44.8"
             mask="url(#SVGID_4_)"
@@ -3119,20 +2744,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="14.3"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_8_"
           >
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
-              xlinkHref="#SVGID_7_"
+              style="overflow: visible;"
+              xlink:href="#SVGID_7_"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
           >
             <defs>
               <path
@@ -3140,20 +2761,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_9_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_10_"
             >
               <use
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlinkHref="#SVGID_9_"
+                style="overflow: visible;"
+                xlink:href="#SVGID_9_"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_10_)"
+              clip-path="url(#SVGID_10_)"
             >
               <defs>
                 <rect
@@ -3164,35 +2781,23 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="22.2"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_12_"
               >
                 <use
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
-                  xlinkHref="#SVGID_11_"
+                  style="overflow: visible;"
+                  xlink:href="#SVGID_11_"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_12_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_12_);"
               >
                 <image
                   height="82"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
                   width="391"
-                  xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
+                  xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
                 />
               </g>
             </g>
@@ -3206,7 +2811,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="32.8"
               y="21.9"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -3221,7 +2826,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             y="21.9"
           >
             <g
-              className="st23"
+              class="st23"
             >
               <g>
                 <defs>
@@ -3233,44 +2838,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="14.3"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_8_)"
+                <clippath
+                  clip-path="url(#SVGID_8_)"
                   id="SVGID_15_"
                 >
                   <use
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    xlinkHref="#SVGID_14_"
+                    style="overflow: visible;"
+                    xlink:href="#SVGID_14_"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_15_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_15_);"
                   transform="matrix(1 0 0 1 0 9.536743e-07)"
                 >
                   <image
                     height="57"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
                     width="233"
-                    xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
+                    xlink:href="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
             fill="rgb(255, 255, 255)"
             height="23.9"
             mask="url(#SVGID_13_)"
@@ -3359,15 +2952,11 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="44.8"
             />
           </defs>
-          <clipPath>
+          <clippath>
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
             d="M90.7,49.1v-4.3h-1.6v4.3c-0.2,0.2-0.4,0.5-0.4,0.8V72c0,0.3,0.1,0.6,0.4,0.8v4.8h1.6v-4.8    c0.2-0.2,0.4-0.5,0.4-0.8V49.9C91,49.6,90.9,49.3,90.7,49.1"
           />
@@ -3384,7 +2973,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c13"
+    class="c13"
     type="strain"
   >
     <svg
@@ -3410,20 +2999,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="26.4"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_3_"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
               href="#SVGID_2_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
               xlink="http://www.w3.org/1999/xlink"
             />
-          </clipPath>
+          </clippath>
           <polygon
             fill="rgb(234, 242, 246)"
             points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
@@ -3437,7 +3022,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="26.1"
               y="34"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -3464,34 +3049,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="26.4"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_3_)"
+                <clippath
+                  clip-path="url(#SVGID_3_)"
                   id="SVGID_6_"
                 >
                   <use
                     href="#SVGID_5_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_6_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_6_);"
                 >
                   <image
                     height="94"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
                     width="256"
                   />
@@ -3500,7 +3073,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_3_)"
+            clip-path="url(#SVGID_3_)"
             fill="rgb(255, 255, 255)"
             height="44.8"
             mask="url(#SVGID_4_)"
@@ -3527,20 +3100,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="14.3"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_8_"
           >
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
-              xlinkHref="#SVGID_7_"
+              style="overflow: visible;"
+              xlink:href="#SVGID_7_"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
           >
             <defs>
               <path
@@ -3548,20 +3117,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_9_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_10_"
             >
               <use
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlinkHref="#SVGID_9_"
+                style="overflow: visible;"
+                xlink:href="#SVGID_9_"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_10_)"
+              clip-path="url(#SVGID_10_)"
             >
               <defs>
                 <rect
@@ -3572,35 +3137,23 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="22.2"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_12_"
               >
                 <use
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
-                  xlinkHref="#SVGID_11_"
+                  style="overflow: visible;"
+                  xlink:href="#SVGID_11_"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_12_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_12_);"
               >
                 <image
                   height="82"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
                   width="391"
-                  xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
+                  xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
                 />
               </g>
             </g>
@@ -3614,7 +3167,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="32.8"
               y="21.9"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -3629,7 +3182,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             y="21.9"
           >
             <g
-              className="st23"
+              class="st23"
             >
               <g>
                 <defs>
@@ -3641,44 +3194,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="14.3"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_8_)"
+                <clippath
+                  clip-path="url(#SVGID_8_)"
                   id="SVGID_15_"
                 >
                   <use
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    xlinkHref="#SVGID_14_"
+                    style="overflow: visible;"
+                    xlink:href="#SVGID_14_"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_15_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_15_);"
                   transform="matrix(1 0 0 1 0 9.536743e-07)"
                 >
                   <image
                     height="57"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
                     width="233"
-                    xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
+                    xlink:href="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
             fill="rgb(255, 255, 255)"
             height="23.9"
             mask="url(#SVGID_13_)"
@@ -3770,15 +3311,11 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="44.8"
             />
           </defs>
-          <clipPath>
+          <clippath>
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
             d="M90.7,49.1v-4.3h-1.6v4.3c-0.2,0.2-0.4,0.5-0.4,0.8V72c0,0.3,0.1,0.6,0.4,0.8v4.8h1.6v-4.8    c0.2-0.2,0.4-0.5,0.4-0.8V49.9C91,49.6,90.9,49.3,90.7,49.1"
           />
@@ -3795,7 +3332,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
     </h2>
   </div>
   <div
-    className="c14"
+    class="c14"
     type="defense"
   >
     <svg
@@ -3821,20 +3358,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="26.4"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_3_"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
               href="#SVGID_2_"
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
               xlink="http://www.w3.org/1999/xlink"
             />
-          </clipPath>
+          </clippath>
           <polygon
             fill="rgb(234, 242, 246)"
             points="33.3,34.5 26.2,39 26.2,63.2 40.3,78.5 139.3,78.5 153.6,63.2 153.6,39 147,34.5   "
@@ -3848,7 +3381,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="26.1"
               y="34"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -3875,34 +3408,22 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="26.4"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_3_)"
+                <clippath
+                  clip-path="url(#SVGID_3_)"
                   id="SVGID_6_"
                 >
                   <use
                     href="#SVGID_5_"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_6_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_6_);"
                 >
                   <image
                     height="94"
                     href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAfAB8AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAK7AAAFXwAAB4//2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAGABAgMBIgACEQEDEQH/ xACOAAEBAAMBAQAAAAAAAAAAAAAABQMEBgIBAQEAAAAAAAAAAAAAAAAAAAAAEAACAQMEAQUBAQEA AAAAAAAAARQCAwQREwYWEhAgITE1BWBQEQACAQIFAgUDBAMAAAAAAAAAMQECA5HRkjM1IAUQIbN0 hBEENEBQQTJRElMSAQAAAAAAAAAAAAAAAAAAAGD/2gAMAwEAAhEDEQAAAImlrzywjiwjiwjiwjiw jiwjiwjiwjiwjiwjiwjiwjiwjiwjiwjjpUoJ9CePvzIfPefdJ3qzlIS8IK8IK8IK8IK8IK8IK8IK 8IPy/wCSBju6hK87WueQUAJ9CeNnX3ChT17B52N/dIy6IS6IS6IS6IS6IS6IS6IS6IWPoMJzc/po 5zs23HNcFACfQnn3d0tkv3OdsnRb8agb/wB1vRnYBnYBnYBnYBnYBnYBnYBl12sa0SjGJkWnJMQK AE+hPGXF9KlbnN06je5faOk9c76Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+Ogc+LutJwm7MxaB50veM+AoAT 6egY2QeMnwZs2oN71PFBoDfaA32gN9oDfaA32gN9ofDex6oyYg8fMgxsg3GQf//aAAgBAgABBQD/ AE3/2gAIAQMAAQUA/wBN/9oACAEBAAEFAP7XKOQWP7PbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnbuSnb uSnbuSnbuSnbuSnaOQHIP3v+ByD970SFRqK02LHbIrItRFqItRFqItRFqItRFqItRFqItRFqItRF qItRFqItQ8Zjx2h2mh06e3kH73pRTqWrPkWsQoxELEIhEIhEIhEIhEIhEIhEIhEIhEIg8QrxEXsb QuW9CpaezkH7wvuzTq8aytLGPqWsPUpwSCQSCQSCQSCQSCQSCQSCQSCQSCV4RdxNDIsaGVZ0Lq0f ryD94X3irV4tJi20yxYTVGOiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMiMh4yLmOjIsoy7ehl0/F9fP ryD94X3iv5xGYbRj6aW0hJHijxR4o8UeKPFHijxR4o8UeKPFHijxRoipIu6aZOhmNGY/i/8AfryD 94X3Yq0eJd+MS8kY2Qi1kIWQjfRvo30b6N9G+jfRvo30b6N9G+jfRvo30VZCL2QtMm+jLvJmZcLr 1fryD970t1aPFvaGPkaFjL0LeaLNJqJqJqJqJqJqJqJqJqJqJqJqJqJqJqKs0u5hfytTJyDIu+Tq evs5B+96Jlu5oWclotZaKMsWYyYTCYTCYTCYTCYTCYTCYTCYVZjK8su5aL2Q6iuvUb9nIP3vVMpu NFGQ0U5bQs1k5k1k1k1k1k1k1k1k1k1k1k1k1k1jzmPNZVlNlV9sqr1G/b/fsX3/AHY+QR8gj5BH yCPkGxkGzkGzkGzkmzkm1km1km1km1km1km1km1km1km1km1km1km1kmzkmzkmxkGxkEfII+QR8g j5BHyDYvn//aAAgBAgIGPwBN/9oACAEDAgY/AE3/2gAIAQEBBj8A+/sWfvrtFq19zeot0RMfSmmm 5VFMR5fxByN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9 jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7 GMjkb2MZHI3sYyORvYxkcjexjI5G9jGRyN7GMj867+N/u4/t/lHc/d3/AFKv2D4h3P3d/wBSrqQh CEIQhCEIQhCEIQhdXxDufu7/AKlXT5wIQhCEIQhCEIQhCEIQhdPxDufu7/qVeMESR5CEIQhCEIQh CEIQhCEIkno+Idz93f8AUq8YIII8hCEIQhCEIQhCEIQhE+RJPR8Q7n7u/wCpV4wQQR+kkkno+Idz 93f9SrxggggfgxjGMYxjGMYxjGMkk+nR8Q7n7u/6lXREEeZHmMYxjGMYxjGMYxjGMnzJ6fiHc/d3 /Uq6Y8xjGMYxjGMYxjGMYxjH1fEO5+7v+pV1MYxjGMYxjGMYxjGMY+r4h3KYt1TE/d35iYpn/pUb VemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbr0ybdemTbr0ybdemTbr0ybdemTbr0ybdemT br0ybdemTbr0ybdemTbr0ybVemTar0ybVemTar0ybVemTar0ybVemTar0ybVemTbq/E+n9ZP/9k="
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 14.4476 26.4449)"
                     width="256"
                   />
@@ -3911,7 +3432,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_3_)"
+            clip-path="url(#SVGID_3_)"
             fill="rgb(255, 255, 255)"
             height="44.8"
             mask="url(#SVGID_4_)"
@@ -3938,20 +3459,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="14.3"
             />
           </defs>
-          <clipPath
+          <clippath
             id="SVGID_8_"
           >
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
-              xlinkHref="#SVGID_7_"
+              style="overflow: visible;"
+              xlink:href="#SVGID_7_"
             />
-          </clipPath>
+          </clippath>
           <g
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
           >
             <defs>
               <path
@@ -3959,20 +3476,16 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                 id="SVGID_9_"
               />
             </defs>
-            <clipPath
+            <clippath
               id="SVGID_10_"
             >
               <use
-                style={
-                  Object {
-                    "overflow": "visible",
-                  }
-                }
-                xlinkHref="#SVGID_9_"
+                style="overflow: visible;"
+                xlink:href="#SVGID_9_"
               />
-            </clipPath>
+            </clippath>
             <g
-              clipPath="url(#SVGID_10_)"
+              clip-path="url(#SVGID_10_)"
             >
               <defs>
                 <rect
@@ -3983,35 +3496,23 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                   y="22.2"
                 />
               </defs>
-              <clipPath
+              <clippath
                 id="SVGID_12_"
               >
                 <use
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
-                  xlinkHref="#SVGID_11_"
+                  style="overflow: visible;"
+                  xlink:href="#SVGID_11_"
                 />
-              </clipPath>
+              </clippath>
               <g
-                style={
-                  Object {
-                    "clipPath": "url(#SVGID_12_)",
-                  }
-                }
+                style="clip-path: url(#SVGID_12_);"
               >
                 <image
                   height="82"
-                  style={
-                    Object {
-                      "overflow": "visible",
-                    }
-                  }
+                  style="overflow: visible;"
                   transform="matrix(0.2912 0 0 0.2912 32.0641 22.2291)"
                   width="391"
-                  xlinkHref="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
+                  xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEA9wD3AAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAKrAAADfwAABKj/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFYBhwMBIgACEQEDEQH/ xACAAAEBAQEBAAAAAAAAAAAAAAAAAQIDBgEBAQEBAQAAAAAAAAAAAAAAAAECAwQQAAEFAQADAQEA AAAAAAAAAAABESECEgNAUDIxExEAAwADAAMBAQAAAAAAAAAAAAEyUHECEZHhITESAQADAQEBAQAA AAAAAAAAAAAxoUIBQGAh/9oADAMBAAIRAxEAAAD2+U83aolqCoKgqCoKgqCoKgqCoKgqCoKgqCoK gqCoKgqCsjcssBQAAAAAAAAAAAAAAAAAAhKIsAiBdyzWVAAAAAAAAAAAAAAAAAACLAFCIAJdSzWQ WoSoKgqCoKgqCoKgqCoKgqCoKgqCoLBQAgQACXUTUqIqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCw AAlgO0OmAAAAAAAAAAAAAAAAAAAAAAAAP//aAAgBAgABBQBVV3UdR1HUdR1HUdR1HUdR1HUdR1HU dR1HUdR1HUdR1F/fIX98hf3yF/fIVngggggggggggggggggggggggg//2gAIAQMAAQUAREZkGQZB kGQZBkGQZBkGQZBkGQZBkGQZBkGQZBkGQZBPzyE/PIT88hPzyJJJJJJJJJJJJJJJJJJJJJJJJJP/ 2gAIAQEAAQUAve6W3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c 3c3c3c3c3c3c3c3c3c3c3c3c3c/pc/pc/pc/pc/pcv8AfsL/AH7C/wBewv8AXsL/AF7C/wBewv8A XsL/AH7C/wB+wtXlrPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEz xM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8TPEzxM8T//aAAgBAgIGPwDv6nqep6nq ep6nqep6nqep6nqep6nqep6nqep6nqep676e+nvp76cWxbFsWxbFsWxbFsWxbFsWxbFsWxbFsWxb FsWxbFsW/9oACAEDAgY/AIQhCEIQhCEIQhCEIQhCEI+l01TVNU1TVNU1TVNU1TVNU1TVNU1TVNU1 TVNU1TVNU//aAAgBAQEGPwBpN/1lMplMplMplMplMplMplMplMplMplMplMplMplMplMplMplMpl MplMplMplMplMplMplMplMpnW3ketvI9beR628j1t5HrbyPW3ketvI9beRfnp+fP6UymUymUymUy mUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUymUyn6+FP18Kfr4f//Z"
                 />
               </g>
             </g>
@@ -4025,7 +3526,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               x="32.8"
               y="21.9"
             >
-              <feColorMatrix
+              <fecolormatrix
                 type="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
               />
@@ -4040,7 +3541,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
             y="21.9"
           >
             <g
-              className="st23"
+              class="st23"
             >
               <g>
                 <defs>
@@ -4052,44 +3553,32 @@ exports[`Storyshots Components/PCSummary default 1`] = `
                     y="14.3"
                   />
                 </defs>
-                <clipPath
-                  clipPath="url(#SVGID_8_)"
+                <clippath
+                  clip-path="url(#SVGID_8_)"
                   id="SVGID_15_"
                 >
                   <use
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
-                    xlinkHref="#SVGID_14_"
+                    style="overflow: visible;"
+                    xlink:href="#SVGID_14_"
                   />
-                </clipPath>
+                </clippath>
                 <g
-                  style={
-                    Object {
-                      "clipPath": "url(#SVGID_15_)",
-                    }
-                  }
+                  style="clip-path: url(#SVGID_15_);"
                   transform="matrix(1 0 0 1 0 9.536743e-07)"
                 >
                   <image
                     height="57"
-                    style={
-                      Object {
-                        "overflow": "visible",
-                      }
-                    }
+                    style="overflow: visible;"
                     transform="matrix(0.5824 0 0 0.5824 21.7271 14.3124)"
                     width="233"
-                    xlinkHref="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
+                    xlink:href="data:image/jpeg;base64,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 uppO6mk7qaTuppvS+s/6PS5ule81H9aP1P/Z"
                   />
                 </g>
               </g>
             </g>
           </mask>
           <rect
-            clipPath="url(#SVGID_8_)"
+            clip-path="url(#SVGID_8_)"
             fill="rgb(255, 255, 255)"
             height="23.9"
             mask="url(#SVGID_13_)"
@@ -4166,15 +3655,11 @@ exports[`Storyshots Components/PCSummary default 1`] = `
               y="44.8"
             />
           </defs>
-          <clipPath>
+          <clippath>
             <use
-              style={
-                Object {
-                  "overflow": "visible",
-                }
-              }
+              style="overflow: visible;"
             />
-          </clipPath>
+          </clippath>
           <path
             d="M90.7,49.1v-4.3h-1.6v4.3c-0.2,0.2-0.4,0.5-0.4,0.8V72c0,0.3,0.1,0.6,0.4,0.8v4.8h1.6v-4.8    c0.2-0.2,0.4-0.5,0.4-0.8V49.9C91,49.6,90.9,49.3,90.7,49.1"
           />

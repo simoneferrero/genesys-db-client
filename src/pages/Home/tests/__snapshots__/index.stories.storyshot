@@ -22,18 +22,18 @@ exports[`Storyshots Pages/Home default 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   data-testid="home"
 >
   <svg
     data-testid="genesys-logo"
-    enableBackground="new 0 0 1800 1584"
+    enable-background="new 0 0 1800 1584"
     id="Layer_1"
     version="1.1"
     viewBox="0 417.5 1800 750"
     width="300px"
     x="0px"
-    xmlSpace="preserve"
+    xml:space="preserve"
     xmlns="http://www.w3.org/2000/svg"
     y="0px"
   >

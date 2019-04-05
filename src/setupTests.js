@@ -1,5 +1,5 @@
 import React from 'react'
-import { fireEvent, render } from 'react-testing-library'
+import { fireEvent, render, wait, waitForElement } from 'react-testing-library'
 
 // Expose CSS in snapshots
 import 'jest-styled-components'
@@ -22,6 +22,8 @@ jest.mock('@storybook/addon-info', () => ({
 global.React = React
 global.fireEvent = fireEvent
 global.render = render
+global.wait = wait
+global.waitForElement = waitForElement
 
 // Make environment variables available to Jest by adding them below
 process.env.REACT_APP_API_PATH = apiPath

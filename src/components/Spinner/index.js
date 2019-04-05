@@ -4,22 +4,27 @@ import PropTypes from 'prop-types'
 import { CircleSpinner } from 'react-spinners-kit'
 
 import styled, { css } from 'styled-components/macro'
-import { colours } from 'styles/constants'
+import { baseSpacing, colours } from 'styles/constants'
 
+const defaultStyles = css`
+  bottom: 0;
+  right: 0;
+  padding: ${baseSpacing / 2}px;
+`
 const coverStyles = css`
-  position: fixed;
+  display: flex;
   height: 100%;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   top: 0;
 `
 
 const StyledSpinner = styled.div`
+  position: fixed;
   z-index: 1000;
 
-  ${({ cover }) => cover && coverStyles}
+  ${({ cover }) => (cover ? coverStyles : defaultStyles)}
 `
 
 /** Displays the title of a page */
@@ -42,8 +47,7 @@ Spinner.propTypes = {
 
 Spinner.defaultProps = {
   colour: colours.teal,
-  cover: true,
-  size: 80,
+  size: 30,
 }
 
 export default Spinner

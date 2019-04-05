@@ -32,7 +32,9 @@
       "globals": {
         "React": true,
         "render": true,
-        "fireEvent": true
+        "fireEvent": true,
+        "wait": true,
+        "waitForElement": true
       },
       "plugins": ["jest"]
     }
