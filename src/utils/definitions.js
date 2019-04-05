@@ -18,7 +18,7 @@ export const REST_METHODS = {
 export const HEAD_INFO = {
   TITLE: 'GM Compendium',
   CONTENT: 'Application to manage Genesys - Shadow of the Beanstalk GM data',
-  PLAYERS_CHARACTERS_TITLE: "Players' Characters",
+  PLAYERS_CHARACTERS_TITLE: 'PC Summary',
 }
 
 // Character data
