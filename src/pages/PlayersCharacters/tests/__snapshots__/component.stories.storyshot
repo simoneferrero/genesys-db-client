@@ -35,6 +35,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   grid-template-rows: auto;
+  background-color: rgba(65,178,180,0.1);
   grid-template-columns: repeat(6,1fr);
   grid-template-areas: 'playerName playerName playerName playerName playerName playerName' 'pcName pcName pcName pcName pcName pcName' 'archetype archetype archetype archetype archetype archetype' 'career career career career career career' 'brawn brawn agility agility intellect intellect' 'cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds' 'strain strain strain defense defense defense';
 }
@@ -54,6 +55,15 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   margin: 0;
 }
 
+.c3 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c3 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
 .c4 {
   grid-area: archetype;
   display: grid;
@@ -67,6 +77,15 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 .c4 h2,
 .c4 h4 {
   margin: 0;
+}
+
+.c4 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c4 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
 }
 
 .c5 {
@@ -84,6 +103,15 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   margin: 0;
 }
 
+.c5 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c5 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
 .c6 {
   grid-area: career;
   display: grid;
@@ -97,6 +125,15 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 .c6 h2,
 .c6 h4 {
   margin: 0;
+}
+
+.c6 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c6 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
 }
 
 .c7 {
@@ -499,7 +536,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
     data-testid="header"
   >
     <h2>
-      Players' Characters
+      PC Summary
     </h2>
   </div>
   <div
@@ -912,6 +949,7 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   grid-template-rows: auto;
+  background-color: rgba(65,178,180,0.1);
   grid-template-columns: repeat(6,1fr);
   grid-template-areas: 'playerName playerName playerName playerName playerName playerName' 'pcName pcName pcName pcName pcName pcName' 'archetype archetype archetype archetype archetype archetype' 'career career career career career career' 'brawn brawn agility agility intellect intellect' 'cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds' 'strain strain strain defense defense defense';
 }
@@ -931,6 +969,15 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   margin: 0;
 }
 
+.c3 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c3 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
 .c4 {
   grid-area: archetype;
   display: grid;
@@ -944,6 +991,15 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
 .c4 h2,
 .c4 h4 {
   margin: 0;
+}
+
+.c4 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c4 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
 }
 
 .c5 {
@@ -961,6 +1017,15 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   margin: 0;
 }
 
+.c5 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c5 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
 .c6 {
   grid-area: career;
   display: grid;
@@ -974,6 +1039,15 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
 .c6 h2,
 .c6 h4 {
   margin: 0;
+}
+
+.c6 span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c6 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
 }
 
 .c7 {
@@ -1376,7 +1450,7 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
     data-testid="header"
   >
     <h2>
-      Players' Characters
+      PC Summary
     </h2>
   </div>
   <div

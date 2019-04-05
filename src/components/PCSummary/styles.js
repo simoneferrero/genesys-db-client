@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components/macro'
 
+import rgbToRgba from 'utils/rgbToRgba'
+
 import { baseSpacing, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
@@ -51,6 +53,8 @@ export const StyledPCSummary = styled.div`
   grid-column-gap: ${baseSpacing / 3}px;
   grid-row-gap: ${baseSpacing / 3}px;
   grid-template-rows: auto;
+  background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
+
   ${portableGridStyles}
 
   @media ${mq.tablet},
@@ -87,6 +91,15 @@ export const StyledTextCell = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: baseline;
+
+  span {
+    color: ${colours.lightOrange};
+    text-shadow: 1px 1px ${colours.veryLightOrange};
+  }
+
+  h4 {
+    text-shadow: 1px 1px ${colours.veryLightBlue};
+  }
 `
 export const StyledCell = styled.div`
   ${cellStyles}

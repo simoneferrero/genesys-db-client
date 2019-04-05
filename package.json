@@ -1,7 +1,7 @@
 {
   "name": "genesys-sotb-client",
   "description": "The client-side application to manage Genesys - Shadow of the Beanstalk GM data",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
