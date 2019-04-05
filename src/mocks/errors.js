@@ -8,3 +8,8 @@ export const getTubeStatusError = {
   relativeUri: '/Line/Mode/a/Status',
   message: 'This is an error message',
 }
+
+export const genericError = {
+  description: 'there was an error',
+  status: 403,
+}

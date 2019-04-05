@@ -3,9 +3,15 @@ import { connectRouter } from 'connected-react-router/immutable'
 import history from 'utils/history'
 
 // Other reducers
-import statuses from './statuses'
+import archetypes from './archetypes'
+import careers from './careers'
+import playersCharacters from './playersCharacters'
+import ui from './ui'
 
 export default combineReducers({
+  archetypes,
+  careers,
+  playersCharacters,
   router: connectRouter(history),
-  statuses,
+  ui,
 })

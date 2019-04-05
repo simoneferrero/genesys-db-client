@@ -1,1 +1,45 @@
-export const TFL_API_PATH = process.env.REACT_APP_TFL_API_PATH
+// API
+export const API_PATH = process.env.REACT_APP_API_PATH
+export const API_SEGMENTS = {
+  ARCHETYPES: 'archetypes',
+  CAREERS: 'careers',
+  PLAYERS_CHARACTERS: 'players-characters',
+}
+
+// REST
+export const REST_METHODS = {
+  GET: 'GET',
+  POST: 'POST',
+  PUT: 'PUT',
+  DELETE: 'DELETE',
+}
+
+// Head data
+export const HEAD_INFO = {
+  TITLE: 'GM Compendium',
+  CONTENT: 'Application to manage Genesys - Shadow of the Beanstalk GM data',
+  PLAYERS_CHARACTERS_TITLE: "Players' Characters",
+}
+
+// Character data
+export const INFO = {
+  PC_NAME: 'pcName',
+  PLAYER_NAME: 'playerName',
+  ARCHETYPE: 'archetype',
+  CAREER: 'career',
+}
+export const ATTRIBUTES = {
+  WOUNDS: 'wounds',
+  STRAIN: 'strain',
+  SOAK: 'soak',
+  DEFENSE: 'defense',
+}
+
+export const CHARACTERISTICS = {
+  BRAWN: 'brawn',
+  AGILITY: 'agility',
+  INTELLECT: 'intellect',
+  CUNNING: 'cunning',
+  WILLPOWER: 'willpower',
+  PRESENCE: 'presence',
+}

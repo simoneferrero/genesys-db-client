@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GenesysLogo from 'logos/GenesysLogo'
+import GenesysLogo from 'vectors/GenesysLogo'
 
 import styled from 'styled-components/macro'
 
@@ -13,6 +13,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `
 
+/** The main home page. */
 const Home = () => (
   <StyledWrapper data-testid="home">
     <GenesysLogo width={300} />

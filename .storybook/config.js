@@ -8,13 +8,13 @@ import GlobalStyles from 'styles/globalStyles'
 
 addDecorator(withInfo)
 
-const StyleDecorator = (storyFn) => (
-  <>
+const SuspenseWithStyleDecorator = (storyFn) => (
+  <React.Suspense fallback="Loading...">
     <GlobalStyles />
     {storyFn()}
-  </>
+  </React.Suspense>
 )
-addDecorator(StyleDecorator)
+addDecorator(SuspenseWithStyleDecorator)
 
 // Load all files in src folder which match `*.stories.js`
 const req = requireContext('../src', true, /\.stories\.js$/)

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots MenuItem not selected 1`] = `
+exports[`Storyshots Components/MenuItem not selected 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 24px;
@@ -20,17 +20,15 @@ exports[`Storyshots MenuItem not selected 1`] = `
 }
 
 <a
-  aria-current={null}
-  className="c0"
+  class="c0"
   data-testid="menu-item-route2"
   href="/route-2"
-  onClick={[Function]}
 >
   ROUTE 2
 </a>
 `;
 
-exports[`Storyshots MenuItem selected 1`] = `
+exports[`Storyshots Components/MenuItem selected 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 24px;
@@ -51,11 +49,9 @@ exports[`Storyshots MenuItem selected 1`] = `
 
 <a
   aria-current="page"
-  className="c0 active"
+  class="c0 active"
   data-testid="menu-item-route1"
   href="/route-1"
-  onClick={[Function]}
-  style={Object {}}
 >
   ROUTE 1
 </a>

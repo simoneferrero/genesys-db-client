@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { lazy } from 'react'
 
-import GenesysLogo from 'logos/GenesysLogo'
+import GenesysLogo from 'vectors/GenesysLogo'
 
 // Top level components
-import Home from 'pages/Home'
-import PlayerCharacters from 'pages/PlayerCharacters'
+const Home = lazy(() => import('pages/Home'))
+const PlayersCharacters = lazy(() => import('pages/PlayersCharacters'))
 
 const routes = [
   {
@@ -16,10 +16,10 @@ const routes = [
     to: '/',
   },
   {
-    id: 'player-characters',
+    id: 'players-characters',
     menuItemComponent: 'PCs',
-    routeComponent: PlayerCharacters,
-    to: '/player-characters',
+    routeComponent: PlayersCharacters,
+    to: '/players-characters',
   },
 ]
 

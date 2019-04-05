@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history'
 
 import { addDecorator, storiesOf } from '@storybook/react'
 
-import Sidebar from '../index'
+import { Sidebar } from '../index'
 import MenuItem from 'components/MenuItem'
 
 // Mock the router
@@ -18,7 +18,7 @@ const location = {
   pathname: '/route-1',
 }
 
-storiesOf('Sidebar', module).add('default', () => (
+storiesOf('Components/Sidebar', module).add('default', () => (
   <Sidebar>
     <MenuItem id="route1" location={location} to="/route-1">
       ROUTE 1

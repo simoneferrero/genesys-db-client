@@ -1,12 +1,43 @@
 import { fromJS } from 'immutable'
 
-import { statusesById, statusesAllIds } from './statuses'
+import { archetypesById, archetypesAllIds } from './archetypes'
+import { careersById, careersAllIds } from './careers'
+import {
+  playersCharactersById,
+  playersCharactersAllIds,
+} from './playersCharacters'
+import { ui } from './ui'
 
-export const tflApiPath = 'http://api.tfl.com'
+export const apiPath = 'http://my-api.com'
 
 export const store = fromJS({
-  statuses: {
-    allIds: statusesAllIds,
-    byId: statusesById,
+  archetypes: {
+    allIds: archetypesAllIds,
+    byId: archetypesById,
   },
+  careers: {
+    allIds: careersAllIds,
+    byId: careersById,
+  },
+  playersCharacters: {
+    allIds: playersCharactersAllIds,
+    byId: playersCharactersById,
+  },
+  ui,
+})
+
+export const emptyStore = fromJS({
+  archetypes: {
+    allIds: [],
+    byId: {},
+  },
+  careers: {
+    allIds: [],
+    byId: {},
+  },
+  playersCharacters: {
+    allIds: [],
+    byId: {},
+  },
+  ui,
 })
