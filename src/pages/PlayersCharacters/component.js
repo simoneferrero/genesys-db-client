@@ -13,7 +13,6 @@ import Spinner from 'components/Spinner'
 
 import styled from 'styled-components/macro'
 import { baseSpacing, headerHeight } from 'styles/constants'
-import mq from 'styles/mediaQueries'
 
 const PCSummary = lazy(() => import('components/PCSummary'))
 
@@ -25,13 +24,6 @@ const StyledWrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: ${baseSpacing}px;
   grid-row-gap: ${baseSpacing}px;
-
-  @media ${mq.laptop}, ${mq.desktop} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media ${mq.bigDesktop} {
-    grid-template-columns: repeat(3, 1fr);
-  }
 `
 
 /** Summary of all players' characters. */

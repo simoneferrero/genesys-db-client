@@ -5,16 +5,23 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   padding: 12px;
   border: 2px solid rgb(242,143,34);
   display: grid;
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-  grid-template-rows: auto;
+  grid-gap: 8px;
   background-color: rgba(65,178,180,0.1);
-  grid-template-columns: repeat(6,1fr);
-  grid-template-areas: 'playerName playerName playerName playerName playerName playerName' 'pcName pcName pcName pcName pcName pcName' 'archetype archetype archetype archetype archetype archetype' 'career career career career career career' 'brawn brawn agility agility intellect intellect' 'cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds' 'strain strain strain defense defense defense';
+  grid-template-columns: 1fr;
+}
+
+.c0 h2,
+.c0 h4 {
+  margin: 0;
 }
 
 .c1 {
-  grid-area: playerName;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 1fr;
+}
+
+.c1 > div {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   -webkit-align-items: baseline;
@@ -23,94 +30,58 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   align-items: baseline;
 }
 
-.c1 h2,
-.c1 h4 {
-  margin: 0;
-}
-
-.c1 span {
+.c1 > div span {
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c1 h4 {
+.c1 > div h4 {
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
 .c2 {
-  grid-area: archetype;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  grid-gap: 6px;
+  grid-template-columns: repeat(3,1fr);
 }
 
-.c2 h2,
-.c2 h4 {
-  margin: 0;
+.c2 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c2 span {
+.c2 > div h2 {
   color: rgb(242,143,34);
-  text-shadow: 1px 1px rgb(255,244,233);
+  position: absolute;
+  margin-left: 1px;
 }
 
-.c2 h4 {
-  text-shadow: 1px 1px rgb(234,242,246);
+.c2 > div h2 {
+  top: 5px;
+}
+
+.c2 > div img {
+  height: 60px;
 }
 
 .c3 {
-  grid-area: pcName;
   display: grid;
+  grid-gap: 6px;
   grid-template-columns: repeat(2,1fr);
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
 }
 
-.c3 h2,
-.c3 h4 {
-  margin: 0;
-}
-
-.c3 span {
-  color: rgb(242,143,34);
-  text-shadow: 1px 1px rgb(255,244,233);
-}
-
-.c3 h4 {
-  text-shadow: 1px 1px rgb(234,242,246);
-}
-
-.c4 {
-  grid-area: career;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c4 h2,
-.c4 h4 {
-  margin: 0;
-}
-
-.c4 span {
-  color: rgb(242,143,34);
-  text-shadow: 1px 1px rgb(255,244,233);
-}
-
-.c4 h4 {
-  text-shadow: 1px 1px rgb(234,242,246);
-}
-
-.c5 {
-  grid-area: brawn;
+.c3 > div {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -126,254 +97,13 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   align-items: center;
 }
 
-.c5 h2,
-.c5 h4 {
-  margin: 0;
-}
-
-.c5 h2 {
+.c3 > div h2 {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
-  top: 5px;
 }
 
-.c5 img {
-  height: 60px;
-}
-
-.c6 {
-  grid-area: agility;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6 h2,
-.c6 h4 {
-  margin: 0;
-}
-
-.c6 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 5px;
-}
-
-.c6 img {
-  height: 60px;
-}
-
-.c7 {
-  grid-area: intellect;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 h2,
-.c7 h4 {
-  margin: 0;
-}
-
-.c7 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 5px;
-}
-
-.c7 img {
-  height: 60px;
-}
-
-.c8 {
-  grid-area: cunning;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c8 h2,
-.c8 h4 {
-  margin: 0;
-}
-
-.c8 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 5px;
-}
-
-.c8 img {
-  height: 60px;
-}
-
-.c9 {
-  grid-area: willpower;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9 h2,
-.c9 h4 {
-  margin: 0;
-}
-
-.c9 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 5px;
-}
-
-.c9 img {
-  height: 60px;
-}
-
-.c10 {
-  grid-area: presence;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c10 h2,
-.c10 h4 {
-  margin: 0;
-}
-
-.c10 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 5px;
-}
-
-.c10 img {
-  height: 60px;
-}
-
-.c11 {
-  grid-area: soak;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c11 h2,
-.c11 h4 {
-  margin: 0;
-}
-
-.c11 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 19px;
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  grid-column-gap: 16px;
-  text-align: right;
-}
-
-.c11 h2 span:nth-child(2) {
-  text-align: left;
-}
-
-.c11 img {
-  height: 50px;
-}
-
-.c12 {
-  grid-area: wounds;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c12 h2,
-.c12 h4 {
-  margin: 0;
-}
-
-.c12 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
+.c3 > div h2 {
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -381,100 +111,47 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   text-align: right;
 }
 
-.c12 h2 span:nth-child(2) {
+.c3 > div h2 span:nth-child(2) {
   text-align: left;
 }
 
-.c12 img {
+.c3 > div img {
   height: 50px;
 }
 
-.c13 {
-  grid-area: strain;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c3 > div:nth-child(1) > h2 {
+  grid-template-columns: 1fr;
 }
 
-.c13 h2,
-.c13 h4 {
-  margin: 0;
-}
-
-.c13 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 19px;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 16px;
-  text-align: right;
-}
-
-.c13 h2 span:nth-child(2) {
-  text-align: left;
-}
-
-.c13 img {
-  height: 50px;
-}
-
-.c14 {
-  grid-area: defense;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c14 h2,
-.c14 h4 {
-  margin: 0;
-}
-
-.c14 h2 {
-  color: rgb(242,143,34);
-  position: absolute;
-  margin-left: 1px;
-  top: 19px;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 16px;
-  text-align: right;
-}
-
-.c14 h2 span:nth-child(2) {
-  text-align: left;
-}
-
-.c14 img {
-  height: 50px;
-}
-
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+@media only screen and (min-width:900px) and (max-width:1199px) {
   .c0 {
-    grid-template-columns: repeat(12,1fr);
-    grid-template-areas: 'playerName playerName playerName playerName playerName playerName archetype archetype archetype archetype archetype archetype' 'pcName pcName pcName pcName pcName pcName career career career career career career' 'brawn brawn agility agility intellect intellect cunning cunning willpower willpower presence presence' 'soak soak soak wounds wounds wounds strain strain strain defense defense defense';
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c1 {
+    grid-row: 1/3;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c2 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c3 {
+    grid-template-columns: repeat(4,1fr);
   }
 }
 
@@ -482,186 +159,156 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   class="c0"
   data-testid="pc-summary-1"
 >
-  <div
+  <section
     class="c1"
-    type="playerName"
   >
-    <h4>
-      Player name:
-    </h4>
-    <span>
-      Player 1
-    </span>
-  </div>
-  <div
+    <div>
+      <h4>
+        Player name:
+      </h4>
+      <span>
+        Player 1
+      </span>
+    </div>
+    <div>
+      <h4>
+        Character name:
+      </h4>
+      <span>
+        Aditi Desai
+      </span>
+    </div>
+    <div>
+      <h4>
+        Archetype:
+      </h4>
+      <span>
+        Clone
+      </span>
+    </div>
+    <div>
+      <h4>
+        Career:
+      </h4>
+      <span>
+        Academic
+      </span>
+    </div>
+  </section>
+  <section
     class="c2"
-    type="archetype"
   >
-    <h4>
-      Archetype:
-    </h4>
-    <span>
-      Clone
-    </span>
-  </div>
-  <div
-    class="c3"
-    type="pcName"
-  >
-    <h4>
-      Character name:
-    </h4>
-    <span>
-      Aditi Desai
-    </span>
-  </div>
-  <div
-    class="c4"
-    type="career"
-  >
-    <h4>
-      Career:
-    </h4>
-    <span>
-      Academic
-    </span>
-  </div>
-  <div
-    class="c5"
-    type="brawn"
-  >
-    <img
-      alt="brawn"
-      src="Brawn.png"
-    />
-    <h2>
-      2
-    </h2>
-  </div>
-  <div
-    class="c6"
-    type="agility"
-  >
-    <img
-      alt="agility"
-      src="Agility.png"
-    />
-    <h2>
-      2
-    </h2>
-  </div>
-  <div
-    class="c7"
-    type="intellect"
-  >
-    <img
-      alt="intellect"
-      src="Intellect.png"
-    />
-    <h2>
-      4
-    </h2>
-  </div>
-  <div
-    class="c8"
-    type="cunning"
-  >
-    <img
-      alt="cunning"
-      src="Cunning.png"
-    />
-    <h2>
-      2
-    </h2>
-  </div>
-  <div
-    class="c9"
-    type="willpower"
-  >
-    <img
-      alt="willpower"
-      src="Willpower.png"
-    />
-    <h2>
-      4
-    </h2>
-  </div>
-  <div
-    class="c10"
-    type="presence"
-  >
-    <img
-      alt="presence"
-      src="Presence.png"
-    />
-    <h2>
-      2
-    </h2>
-  </div>
-  <div
-    class="c11"
-    type="soak"
-  >
-    <img
-      alt="soak"
-      src="Soak.png"
-    />
-    <h2>
-      <span>
-        3
-      </span>
-    </h2>
-  </div>
-  <div
-    class="c12"
-    type="wounds"
-  >
-    <img
-      alt="wounds"
-      src="Wounds.png"
-    />
-    <h2>
-      <span>
-        13
-      </span>
-      <span>
-        0
-      </span>
-    </h2>
-  </div>
-  <div
-    class="c13"
-    type="strain"
-  >
-    <img
-      alt="strain"
-      src="Strain.png"
-    />
-    <h2>
-      <span>
-        14
-      </span>
-      <span>
+    <div>
+      <img
+        alt="brawn"
+        src="Brawn.png"
+      />
+      <h2>
         2
-      </span>
-    </h2>
-  </div>
-  <div
-    class="c14"
-    type="defense"
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="agility"
+        src="Agility.png"
+      />
+      <h2>
+        2
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="intellect"
+        src="Intellect.png"
+      />
+      <h2>
+        4
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="cunning"
+        src="Cunning.png"
+      />
+      <h2>
+        2
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="willpower"
+        src="Willpower.png"
+      />
+      <h2>
+        4
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="presence"
+        src="Presence.png"
+      />
+      <h2>
+        2
+      </h2>
+    </div>
+  </section>
+  <section
+    class="c3"
   >
-    <img
-      alt="defense"
-      src="Defense.png"
-    />
-    <h2>
-      <span>
-        1
-      </span>
-      <span>
-        1
-      </span>
-    </h2>
-  </div>
+    <div>
+      <img
+        alt="soak"
+        src="Soak.png"
+      />
+      <h2>
+        <span>
+          3
+        </span>
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="wounds"
+        src="Wounds.png"
+      />
+      <h2>
+        <span>
+          13
+        </span>
+        <span>
+          0
+        </span>
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="strain"
+        src="Strain.png"
+      />
+      <h2>
+        <span>
+          14
+        </span>
+        <span>
+          2
+        </span>
+      </h2>
+    </div>
+    <div>
+      <img
+        alt="defense"
+        src="Defense.png"
+      />
+      <h2>
+        <span>
+          1
+        </span>
+        <span>
+          1
+        </span>
+      </h2>
+    </div>
+  </section>
 </div>
 `;

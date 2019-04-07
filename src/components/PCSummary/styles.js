@@ -5,104 +5,60 @@ import rgbToRgba from 'utils/rgbToRgba'
 import { baseSpacing, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
-import { ATTRIBUTES, CHARACTERISTICS, INFO } from 'utils/definitions'
-
-const isCharacteristic = (type) =>
-  Object.values(CHARACTERISTICS).some(
-    (characteristic) => characteristic === type,
-  )
-
-const { ARCHETYPE: arc, CAREER: car, PC_NAME: pcn, PLAYER_NAME: pln } = INFO
-const { DEFENSE: def, SOAK: soa, STRAIN: str, WOUNDS: wou } = ATTRIBUTES
-const {
-  AGILITY: agi,
-  BRAWN: bra,
-  CUNNING: cun,
-  INTELLECT: int,
-  PRESENCE: pre,
-  WILLPOWER: wil,
-} = CHARACTERISTICS
-
-// Shows column style for mobile and laptop (2 columns)
-const portableGridStyles = css`
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    '${pln} ${pln} ${pln} ${pln} ${pln} ${pln}'
-    '${pcn} ${pcn} ${pcn} ${pcn} ${pcn} ${pcn}'
-    '${arc} ${arc} ${arc} ${arc} ${arc} ${arc}'
-    '${car} ${car} ${car} ${car} ${car} ${car}'
-    '${bra} ${bra} ${agi} ${agi} ${int} ${int}'
-    '${cun} ${cun} ${wil} ${wil} ${pre} ${pre}'
-    '${soa} ${soa} ${soa} ${wou} ${wou} ${wou}'
-    '${str} ${str} ${str} ${def} ${def} ${def}';
-`
-// Shows row style for tablet, desktop (2 columns) and desktopBig (3 columns)
-const laptopGridStyles = css`
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas:
-    '${pln} ${pln} ${pln} ${pln} ${pln} ${pln} ${arc} ${arc} ${arc} ${arc} ${arc} ${arc}'
-    '${pcn} ${pcn} ${pcn} ${pcn} ${pcn} ${pcn} ${car} ${car} ${car} ${car} ${car} ${car}'
-    '${bra} ${bra} ${agi} ${agi} ${int} ${int} ${cun} ${cun} ${wil} ${wil} ${pre} ${pre}'
-    '${soa} ${soa} ${soa} ${wou} ${wou} ${wou} ${str} ${str} ${str} ${def} ${def} ${def}';
-`
-
 export const StyledPCSummary = styled.div`
   padding: ${baseSpacing / 2}px;
   border: 2px solid ${colours.lightOrange};
   display: grid;
-  grid-column-gap: ${baseSpacing / 3}px;
-  grid-row-gap: ${baseSpacing / 3}px;
-  grid-template-rows: auto;
+  grid-gap: ${baseSpacing / 3}px;
   background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
+  grid-template-columns: 1fr;
 
-  ${portableGridStyles}
-
-  @media ${mq.tablet},
-  ${mq.desktop},
-  ${mq.bigDesktop} {
-    ${laptopGridStyles}
+  @media ${mq.laptop} {
+    grid-template-columns: 1fr 2fr;
   }
-`
-
-const cellStyles = css`
-  grid-area: ${({ type }) => type};
 
   h2,
   h4 {
     margin: 0;
   }
 `
-const characteristicsStyles = css`
-  top: 5px;
-`
-const attributesStyles = css`
-  top: 19px;
+
+const sectionCommonStyles = css`
   display: grid;
-  grid-template-columns: repeat(${({ type }) => (type === soa ? 1 : 2)}, 1fr);
-  grid-column-gap: ${(baseSpacing * 2) / 3}px;
-  text-align: right;
+  grid-gap: ${baseSpacing / 4}px;
+`
+export const StyledInfoSection = styled.section`
+  ${sectionCommonStyles}
+  grid-template-columns: 1fr;
 
-  & span:nth-child(2) {
-    text-align: left;
+  @media ${mq.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media ${mq.laptop} {
+    grid-row: 1/3;
+  }
+
+  & > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+
+    span {
+      color: ${colours.lightOrange};
+      text-shadow: 1px 1px ${colours.veryLightOrange};
+    }
+
+    h4 {
+      text-shadow: 1px 1px ${colours.veryLightBlue};
+    }
   }
 `
-export const StyledTextCell = styled.div`
-  ${cellStyles}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: baseline;
 
-  span {
-    color: ${colours.lightOrange};
-    text-shadow: 1px 1px ${colours.veryLightOrange};
-  }
-
-  h4 {
-    text-shadow: 1px 1px ${colours.veryLightBlue};
-  }
-`
-export const StyledCell = styled.div`
-  ${cellStyles}
+const sharedBadgeWrapperStyles = css`
   position: relative;
   display: flex;
   justify-content: center;
@@ -112,12 +68,58 @@ export const StyledCell = styled.div`
     color: ${colours.lightOrange};
     position: absolute;
     margin-left: 1px;
+  }
+`
+export const StyledCharacteristicsSection = styled.section`
+  ${sectionCommonStyles}
+  grid-template-columns: repeat(3, 1fr);
 
-    ${({ type }) =>
-      isCharacteristic(type) ? characteristicsStyles : attributesStyles}
+  @media ${mq.tablet}, ${mq.laptop} {
+    grid-template-columns: repeat(6, 1fr);
   }
 
-  img {
-    height: ${({ type }) => (isCharacteristic(type) ? 60 : 50)}px;
+  & > div {
+    ${sharedBadgeWrapperStyles}
+
+    h2 {
+      top: 5px;
+    }
+
+    img {
+      height: 60px;
+    }
+  }
+`
+
+export const StyledAttributesSection = styled.section`
+  ${sectionCommonStyles}
+  grid-template-columns: repeat(2, 1fr);
+
+  @media ${mq.tablet}, ${mq.laptop} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  & > div {
+    ${sharedBadgeWrapperStyles}
+
+    h2 {
+      top: 19px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: ${(baseSpacing * 2) / 3}px;
+      text-align: right;
+
+      & span:nth-child(2) {
+        text-align: left;
+      }
+    }
+
+    img {
+      height: 50px;
+    }
+
+    &:nth-child(1) > h2 {
+      grid-template-columns: 1fr;
+    }
   }
 `
