@@ -123,13 +123,19 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   grid-template-columns: 1fr;
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c0 {
     grid-template-columns: 1fr 2fr;
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px) {
+@media only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1800px) {
   .c1 {
     grid-template-columns: repeat(2,1fr);
     grid-auto-flow: column;
@@ -137,21 +143,27 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   }
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c1 {
     grid-row: 1/3;
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c3 {
     grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c3 > div h2 {
+    top: 23px;
   }
 }
 

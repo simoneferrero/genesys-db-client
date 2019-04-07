@@ -160,13 +160,19 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   grid-row-gap: 24px;
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c2 {
     grid-template-columns: 1fr 2fr;
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px) {
+@media only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1800px) {
   .c3 {
     grid-template-columns: repeat(2,1fr);
     grid-auto-flow: column;
@@ -174,21 +180,27 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   }
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c3 {
     grid-row: 1/3;
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c4 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c5 {
     grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c5 > div h2 {
+    top: 23px;
   }
 }
 
@@ -679,13 +691,19 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   grid-row-gap: 24px;
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c2 {
     grid-template-columns: 1fr 2fr;
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px) {
+@media only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1800px) {
   .c3 {
     grid-template-columns: repeat(2,1fr);
     grid-auto-flow: column;
@@ -693,21 +711,27 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   }
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c3 {
     grid-row: 1/3;
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c4 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c5 {
     grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c5 > div h2 {
+    top: 23px;
   }
 }
 

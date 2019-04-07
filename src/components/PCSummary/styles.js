@@ -13,8 +13,12 @@ export const StyledPCSummary = styled.div`
   background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   grid-template-columns: 1fr;
 
-  @media ${mq.laptop} {
+  @media ${mq.laptop}, ${mq.desktop} {
     grid-template-columns: 1fr 2fr;
+  }
+
+  @media ${mq.bigDesktop} {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   h2,
@@ -31,14 +35,14 @@ export const StyledInfoSection = styled.section`
   ${sectionCommonStyles}
   grid-template-columns: 1fr;
 
-  @media ${mq.tablet} {
+  @media ${mq.tablet}, ${mq.bigDesktop} {
     grid-template-columns: repeat(2, 1fr);
 
     grid-auto-flow: column;
     grid-template-rows: repeat(2, 1fr);
   }
 
-  @media ${mq.laptop} {
+  @media ${mq.laptop}, ${mq.desktop} {
     grid-row: 1/3;
   }
 
@@ -74,7 +78,7 @@ export const StyledCharacteristicsSection = styled.section`
   ${sectionCommonStyles}
   grid-template-columns: repeat(3, 1fr);
 
-  @media ${mq.tablet}, ${mq.laptop} {
+  @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
     grid-template-columns: repeat(6, 1fr);
   }
 
@@ -95,7 +99,7 @@ export const StyledAttributesSection = styled.section`
   ${sectionCommonStyles}
   grid-template-columns: repeat(2, 1fr);
 
-  @media ${mq.tablet}, ${mq.laptop} {
+  @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -108,6 +112,10 @@ export const StyledAttributesSection = styled.section`
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: ${(baseSpacing * 2) / 3}px;
       text-align: right;
+
+      @media ${mq.bigDesktop} {
+        top: 23px;
+      }
 
       & span:nth-child(2) {
         text-align: left;
