@@ -6,6 +6,7 @@ import {
   playersCharactersById,
   playersCharactersAllIds,
 } from './playersCharacters'
+import { initialRouter, playerCharacterRouter } from './router'
 import { ui } from './ui'
 
 export const apiPath = 'http://my-api.com'
@@ -23,6 +24,7 @@ export const store = fromJS({
     allIds: playersCharactersAllIds,
     byId: playersCharactersById,
   },
+  router: playerCharacterRouter,
   ui,
 })
 
@@ -39,5 +41,6 @@ export const emptyStore = fromJS({
     allIds: [],
     byId: {},
   },
+  router: initialRouter,
   ui,
 })

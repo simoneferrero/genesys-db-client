@@ -3,6 +3,7 @@ import { fromJS } from 'immutable'
 import { GET_CAREERS_SUCCESS } from 'actions/careers/constants'
 
 import initialState from './initialState'
+import CareerRecord from './records'
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
@@ -11,7 +12,7 @@ export default (state = initialState, { type, payload }) => {
       const careersById = careers.reduce(
         (result, career) => ({
           ...result,
-          [career.id]: career,
+          [career.id]: new CareerRecord(career),
         }),
         {},
       )

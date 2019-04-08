@@ -4,7 +4,7 @@ import { careerType } from './careers'
 
 export const playerCharacterData = {
   /** The character's archetype */
-  archetype: PropTypes.string.isRequired,
+  archetype: archetypeType.isRequired,
   /** Information on the character's attributes */
   attributes: PropTypes.shape({
     defense: PropTypes.shape({
@@ -22,7 +22,7 @@ export const playerCharacterData = {
     }).isRequired,
   }).isRequired,
   /** The character's career */
-  career: PropTypes.string.isRequired,
+  career: careerType.isRequired,
   /** Information on the character's characteristics */
   characteristics: PropTypes.shape({
     agility: PropTypes.number.isRequired,

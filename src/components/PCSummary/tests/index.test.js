@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import render from 'utils/customTestRenderers'
 
 import PCSummary from '../index'
 
@@ -130,6 +131,22 @@ describe('<PCSummary />', () => {
       expect(meleeValue).toBeInTheDocument()
       const rangedValue = getByText(`${ranged}`)
       expect(rangedValue).toBeInTheDocument()
+
+      // Link
+      const link = getByTestId(`pc-sheet-link-${id}`)
+      expect(link).toBeInTheDocument()
+    })
+  })
+
+  it('should not display the link if hideLink is true', async () => {
+    const props = {
+      hideLink: true,
+    }
+    const { queryByTestId } = renderedComponent(props)
+
+    await wait(() => {
+      const link = queryByTestId(`pc-sheet-link-${id}`)
+      expect(link).not.toBeInTheDocument()
     })
   })
 

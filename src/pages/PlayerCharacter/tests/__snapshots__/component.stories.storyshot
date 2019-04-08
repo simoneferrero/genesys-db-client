@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Pages/PlayerCharacter default 1`] = `
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c1 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.c0 {
+  width: 100vw;
+  padding: 24px 48px;
+  padding-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+<div
+  class="c0"
+  data-testid="player-character"
+>
+  <div
+    class="c1"
+    data-testid="header"
+  >
+    <h2>
+      Aditi Desai
+    </h2>
+  </div>
+  <div>
+    Hello!
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c1 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.c0 {
+  width: 100vw;
+  padding: 24px 48px;
+  padding-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+<div
+  class="c0"
+  data-testid="player-character"
+>
+  <div
+    class="c1"
+    data-testid="header"
+  >
+    <h2>
+      Aditi Desai
+    </h2>
+  </div>
+  <div>
+    Hello!
+  </div>
+</div>
+`;

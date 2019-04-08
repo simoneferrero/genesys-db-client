@@ -1,5 +1,8 @@
-import { archetype1 } from './archetypes'
-import { career1 } from './careers'
+import ArchetypeRecord from 'reducers/archetypes/records'
+import CareerRecord from 'reducers/careers/records'
+
+import { archetype1, archetype2 } from './archetypes'
+import { career1, career2 } from './careers'
 
 export const playerCharacter1 = {
   id: 1,
@@ -33,8 +36,8 @@ export const playerCharacter1 = {
 }
 export const playerCharacter1Augmented = {
   ...playerCharacter1,
-  archetype: archetype1,
-  career: career1,
+  archetype: new ArchetypeRecord(archetype1),
+  career: new CareerRecord(career1),
 }
 export const playerCharacter2 = {
   id: 2,
@@ -66,10 +69,35 @@ export const playerCharacter2 = {
     },
   },
 }
+export const playerCharacter2Augmented = {
+  ...playerCharacter2,
+  archetype: new ArchetypeRecord(archetype2),
+  career: new CareerRecord(career2),
+}
 export const playersCharacters = [playerCharacter1, playerCharacter2]
+export const augmentedPlayersCharacters = [
+  playerCharacter1Augmented,
+  playerCharacter2Augmented,
+]
 export const playersCharactersById = {
   [playerCharacter1.id]: playerCharacter1,
   [playerCharacter2.id]: playerCharacter2,
+}
+export const augmentedPlayersCharactersById = {
+  [playerCharacter1Augmented.id]: playerCharacter1Augmented,
+  [playerCharacter2Augmented.id]: playerCharacter2Augmented,
+}
+export const incompletePlayersCharactersById = {
+  [playerCharacter1.id]: {
+    ...playerCharacter1,
+    archetype: new ArchetypeRecord(),
+    career: new CareerRecord(),
+  },
+  [playerCharacter2.id]: {
+    ...playerCharacter2,
+    archetype: new ArchetypeRecord(),
+    career: new CareerRecord(),
+  },
 }
 export const playersCharactersAllIds = [
   playerCharacter1.id,

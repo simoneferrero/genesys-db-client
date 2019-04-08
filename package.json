@@ -9,6 +9,7 @@
     "dotenv": "^7.0.0",
     "history": "^4.9.0",
     "immutable": "^4.0.0-rc.12",
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
@@ -22,7 +23,8 @@
     "redux-saga": "^1.0.2",
     "reselect": "^4.0.0",
     "styled-components": "^4.2.0",
-    "urijs": "^1.19.1"
+    "urijs": "^1.19.1",
+    "url-pattern": "^1.0.3"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.0.6",
@@ -42,7 +44,7 @@
     "prettier": "^1.16.4",
     "prop-types": "^15.7.2",
     "react-test-renderer": "^16.8.6",
-    "react-testing-library": "^6.0.4",
+    "react-testing-library": "^6.1.2",
     "require-context.macro": "^1.0.4",
     "storybook": "^1.0.0"
   },

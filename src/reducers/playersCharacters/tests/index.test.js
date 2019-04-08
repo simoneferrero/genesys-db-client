@@ -3,9 +3,13 @@ import { fromJS } from 'immutable'
 import reducer from '../index'
 import initialState from '../initialState'
 
-import { getPlayersCharactersSuccess } from 'actions/playersCharacters'
+import {
+  getPlayerCharacterSuccess,
+  getPlayersCharactersSuccess,
+} from 'actions/playersCharacters'
 
 import {
+  playerCharacter1,
   playersCharacters,
   playersCharactersById,
   playersCharactersAllIds,
@@ -28,6 +32,49 @@ describe('playersCharacters reducer', () => {
       )
       const expectedResult = fromJS({
         byId: playersCharactersById,
+        allIds: playersCharactersAllIds,
+      })
+
+      expect(result).toEqual(expectedResult)
+    })
+  })
+
+  describe('getPlayerCharacterSuccess', () => {
+    const { id } = playerCharacter1
+
+    it('should handle the action correctly from empty store', () => {
+      const result = reducer(
+        initialState,
+        getPlayerCharacterSuccess(id, playerCharacter1),
+      )
+      const expectedResult = fromJS({
+        byId: {
+          [id]: playerCharacter1,
+        },
+        allIds: [id],
+      })
+
+      expect(result).toEqual(expectedResult)
+    })
+
+    it('should handle the action correctly from full store', () => {
+      const fullState = reducer(
+        initialState,
+        getPlayersCharactersSuccess(playersCharacters),
+      )
+      const modifiedPlayerCharacter1 = {
+        ...playerCharacter1,
+        name: 'Modified Name',
+      }
+      const result = reducer(
+        fullState,
+        getPlayerCharacterSuccess(id, modifiedPlayerCharacter1),
+      )
+      const expectedResult = fromJS({
+        byId: {
+          ...playersCharactersById,
+          [id]: modifiedPlayerCharacter1,
+        },
         allIds: playersCharactersAllIds,
       })
 

@@ -12,6 +12,7 @@ export const StyledPCSummary = styled.div`
   grid-gap: ${baseSpacing / 3}px;
   background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   grid-template-columns: 1fr;
+  position: relative;
 
   @media ${mq.laptop}, ${mq.desktop} {
     grid-template-columns: 1fr 2fr;
@@ -129,5 +130,19 @@ export const StyledAttributesSection = styled.section`
     &:nth-child(1) > h2 {
       grid-template-columns: 1fr;
     }
+  }
+`
+
+export const StyledLink = styled.a`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: ${baseSpacing / 3}px;
+  margin-right: ${baseSpacing / 3}px;
+  cursor: pointer;
+
+  & > svg {
+    color: ${colours.lightOrange};
+    font-size: 20px;
   }
 `
