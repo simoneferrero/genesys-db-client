@@ -8,6 +8,7 @@ import {
 } from 'actions/playersCharacters/constants'
 
 import initialState from './initialState'
+import PlayerCharacterRecord from './records'
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
@@ -16,13 +17,13 @@ export default (state = initialState, { type, payload }) => {
       const playersCharactersById = playersCharacters.reduce(
         (result, playerCharacter) => ({
           ...result,
-          [playerCharacter.id]: playerCharacter,
+          [playerCharacter.id]: new PlayerCharacterRecord(playerCharacter),
         }),
         {},
       )
-      const playersCharactersAllIds = playersCharacters.map(({ id }) => id)
+      const playersCharactersAllIds = playersCharacters.map(({ id }) => `${id}`)
       return state
-        .set('byId', fromJS(playersCharactersById))
+        .mergeDeepIn(['byId'], fromJS(playersCharactersById))
         .set('allIds', fromJS(playersCharactersAllIds))
     }
 
@@ -30,7 +31,7 @@ export default (state = initialState, { type, payload }) => {
       const { id, playerCharacter } = payload
       const allIds = state.get('allIds')
       return state
-        .setIn(['byId', `${id}`], fromJS(playerCharacter))
+        .setIn(['byId', id], new PlayerCharacterRecord(playerCharacter))
         .set('allIds', fromJS(uniq([...allIds, id])))
     }
 

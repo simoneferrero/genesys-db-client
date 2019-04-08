@@ -1,6 +1,3 @@
-import { fromJS } from 'immutable'
+import ReducerRecord from 'reducers/records'
 
-export default fromJS({
-  byId: {},
-  allIds: [],
-})
+export default new ReducerRecord()

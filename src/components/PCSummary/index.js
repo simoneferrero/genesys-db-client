@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { playerCharacterData } from 'types/playersCharacters'
+import { playerCharacterSummaryData } from 'types/playersCharacters'
 
 import { ATTRIBUTES, CHARACTERISTICS } from 'utils/definitions'
 
@@ -148,7 +148,7 @@ export const PCSummary = ({
 }
 
 PCSummary.propTypes = {
-  ...playerCharacterData,
+  ...playerCharacterSummaryData,
   hideLink: PropTypes.bool,
 }
 

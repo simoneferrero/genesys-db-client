@@ -1,5 +1,5 @@
 import routes from 'utils/routes'
-import { playerCharacter1 } from './playersCharacters'
+import { playerCharacter1Id } from './playersCharacters'
 
 export const initialRouter = {
   action: 'POP',
@@ -17,6 +17,6 @@ export const playerCharacterRouter = {
     ...initialRouter.location,
     pathname: routes
       .find(({ id }) => id === 'player-character')
-      .to.replace(':id', playerCharacter1.id),
+      .to.replace(':id', playerCharacter1Id),
   },
 }

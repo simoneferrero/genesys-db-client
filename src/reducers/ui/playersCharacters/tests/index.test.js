@@ -12,7 +12,11 @@ import {
   getPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
 
-import { playerCharacter1, playersCharacters } from 'mocks/playersCharacters'
+import {
+  playerCharacter1Id,
+  playerCharacterSummary1Response,
+  playersCharactersResponse,
+} from 'mocks/playersCharacters'
 import { genericError } from 'mocks/errors'
 import { uiElement, uiElementError, uiElementLoading } from 'mocks/ui'
 
@@ -35,7 +39,7 @@ describe('playersCharacters ui reducer', () => {
       it('should handle action', () => {
         const result = reducer(
           initialState,
-          getPlayersCharactersSuccess(playersCharacters),
+          getPlayersCharactersSuccess(playersCharactersResponse),
         )
         const expectedResult = initialState.mergeDeep(fromJS(uiElement))
         expect(result).toEqual(expectedResult)
@@ -55,7 +59,7 @@ describe('playersCharacters ui reducer', () => {
   })
 
   describe('getPlayerCharacter', () => {
-    const { id } = playerCharacter1
+    const id = `${playerCharacter1Id}`
     describe('getPlayerCharacter', () => {
       it('should handle action', () => {
         const result = reducer(initialState, getPlayerCharacter(id))
@@ -66,9 +70,10 @@ describe('playersCharacters ui reducer', () => {
 
     describe('getPlayerCharacterSuccess', () => {
       it('should handle action', () => {
+        // TODO: use full character mock
         const result = reducer(
           initialState,
-          getPlayerCharacterSuccess(id, playerCharacter1),
+          getPlayerCharacterSuccess(id, playerCharacterSummary1Response),
         )
         const expectedResult = initialState.mergeDeep(fromJS(uiElement))
         expect(result).toEqual(expectedResult)

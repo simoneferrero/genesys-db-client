@@ -3,7 +3,10 @@ import render from 'utils/customTestRenderers'
 
 import PlayersCharacters from '../index'
 
-import { playersCharacters } from 'mocks/playersCharacters'
+import {
+  playersCharactersAugmented,
+  playersCharactersResponse,
+} from 'mocks/playersCharacters'
 
 import {
   GET_PLAYERS_CHARACTERS,
@@ -72,7 +75,7 @@ describe('<PlayersCharacters />', () => {
       const playersCharactersWrapper = getByTestId(/players-characters/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      playersCharacters.forEach(({ id }) => {
+      playersCharactersAugmented.toJS().forEach(({ id }) => {
         const pcSummary = getByTestId(`pc-summary-${id}`)
         expect(pcSummary).toBeInTheDocument()
       })
@@ -94,7 +97,7 @@ describe('<PlayersCharacters />', () => {
       const playersCharactersWrapper = getByTestId(/players-characters/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      playersCharacters.forEach(({ id }) => {
+      playersCharactersAugmented.toJS().forEach(({ id }) => {
         const pcSummary = getByTestId(`pc-summary-${id}`)
         expect(pcSummary).toBeInTheDocument()
       })
@@ -109,7 +112,7 @@ describe('<PlayersCharacters />', () => {
     getPlayersCharacters.mockImplementation(() => ({
       type: GET_PLAYERS_CHARACTERS_SUCCESS,
       payload: {
-        playersCharacters,
+        playersCharacters: playersCharactersResponse,
       },
     }))
     const { getByTestId, queryByTestId } = renderComponent()
@@ -118,7 +121,7 @@ describe('<PlayersCharacters />', () => {
       const playersCharactersWrapper = getByTestId(/players-characters/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      playersCharacters.forEach(({ id }) => {
+      playersCharactersAugmented.toJS().forEach(({ id }) => {
         const pcSummary = getByTestId(`pc-summary-${id}`)
         expect(pcSummary).toBeInTheDocument()
       })

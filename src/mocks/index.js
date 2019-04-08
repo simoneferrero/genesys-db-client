@@ -1,4 +1,6 @@
-import { fromJS } from 'immutable'
+import { fromJS, List, Map } from 'immutable'
+
+import ReducerRecord from 'reducers/records'
 
 import { archetypesById, archetypesAllIds } from './archetypes'
 import { careersById, careersAllIds } from './careers'
@@ -12,35 +14,26 @@ import { ui } from './ui'
 export const apiPath = 'http://my-api.com'
 
 export const store = fromJS({
-  archetypes: {
-    allIds: archetypesAllIds,
-    byId: archetypesById,
-  },
-  careers: {
-    allIds: careersAllIds,
-    byId: careersById,
-  },
-  playersCharacters: {
-    allIds: playersCharactersAllIds,
-    byId: playersCharactersById,
-  },
+  archetypes: new ReducerRecord({
+    allIds: List(archetypesAllIds),
+    byId: Map(archetypesById),
+  }),
+  careers: new ReducerRecord({
+    allIds: List(careersAllIds),
+    byId: Map(careersById),
+  }),
+  playersCharacters: new ReducerRecord({
+    allIds: List(playersCharactersAllIds),
+    byId: Map(playersCharactersById),
+  }),
   router: playerCharacterRouter,
   ui,
 })
 
 export const emptyStore = fromJS({
-  archetypes: {
-    allIds: [],
-    byId: {},
-  },
-  careers: {
-    allIds: [],
-    byId: {},
-  },
-  playersCharacters: {
-    allIds: [],
-    byId: {},
-  },
+  archetypes: new ReducerRecord(),
+  careers: new ReducerRecord(),
+  playersCharacters: new ReducerRecord(),
   router: initialRouter,
   ui,
 })

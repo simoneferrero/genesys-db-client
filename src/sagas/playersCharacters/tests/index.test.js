@@ -12,7 +12,7 @@ import {
 } from 'actions/playersCharacters'
 
 import { apiPath } from 'mocks'
-import { playersCharacters } from 'mocks/playersCharacters'
+import { playersCharactersResponse } from 'mocks/playersCharacters'
 import { genericError } from 'mocks/errors'
 
 const action = {
@@ -39,11 +39,11 @@ describe('playersCharacters sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: playersCharacters,
+          data: playersCharactersResponse,
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
-          getPlayersCharactersSuccess(playersCharacters),
+          getPlayersCharactersSuccess(playersCharactersResponse),
         )
         expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
       })

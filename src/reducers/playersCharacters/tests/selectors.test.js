@@ -1,4 +1,4 @@
-import { fromJS } from 'immutable'
+import ReducerRecord from 'reducers/records'
 import {
   allPlayersCharactersSelector,
   currentPlayerCharacterSelector,
@@ -6,19 +6,19 @@ import {
   playersCharactersAllIdsSelector,
   playersCharactersByIdSelector,
 } from '../selectors'
+import PlayerCharacterRecord from '../records'
 
 import { store } from 'mocks'
 import {
-  augmentedPlayersCharacters,
-  augmentedPlayersCharactersById,
-  incompletePlayersCharactersById,
-  playerCharacter1Augmented,
+  playerCharacter1Id,
+  playerCharacterSummary1Augmented,
+  playersCharactersAllIds,
+  playersCharactersAugmented,
+  playersCharactersByIdAugmented,
+  playersCharactersByIdIncomplete,
 } from 'mocks/playersCharacters'
-
-const emptyStoreKey = fromJS({
-  allIds: [],
-  byId: {},
-})
+import ArchetypeRecord from 'reducers/archetypes/records'
+import CareerRecord from 'reducers/careers/records'
 
 describe('playersCharacters selectors', () => {
   describe('playersCharactersSelector', () => {
@@ -32,16 +32,16 @@ describe('playersCharacters selectors', () => {
   describe('playersCharactersByIdSelector', () => {
     it('should return the augmented playersCharacters by id', () => {
       const result = playersCharactersByIdSelector(store)
-      const expectedResult = fromJS(augmentedPlayersCharactersById)
+      const expectedResult = playersCharactersByIdAugmented
       expect(result).toEqual(expectedResult)
     })
 
     it('should not break if archetypes or careers have not been fetched yet', () => {
       const modifiedStore = store
-        .set('archetypes', emptyStoreKey)
-        .set('careers', emptyStoreKey)
+        .set('archetypes', new ReducerRecord())
+        .set('careers', new ReducerRecord())
       const result = playersCharactersByIdSelector(modifiedStore)
-      const expectedResult = fromJS(incompletePlayersCharactersById)
+      const expectedResult = playersCharactersByIdIncomplete
       expect(result).toEqual(expectedResult)
     })
   })
@@ -49,7 +49,7 @@ describe('playersCharacters selectors', () => {
   describe('playersCharactersAllIdsSelector', () => {
     it('should return all the playersCharacters ids', () => {
       const result = playersCharactersAllIdsSelector(store)
-      const expectedResult = store.getIn(['playersCharacters', 'allIds'])
+      const expectedResult = playersCharactersAllIds
       expect(result).toEqual(expectedResult)
     })
   })
@@ -57,7 +57,7 @@ describe('playersCharacters selectors', () => {
   describe('allPlayersCharactersSelector', () => {
     it('should return all the playersCharacters with extra info', () => {
       const result = allPlayersCharactersSelector(store)
-      const expectedResult = fromJS(augmentedPlayersCharacters)
+      const expectedResult = playersCharactersAugmented
       expect(result).toEqual(expectedResult)
     })
   })
@@ -65,14 +65,20 @@ describe('playersCharacters selectors', () => {
   describe('currentPlayerCharacterSelector', () => {
     it('should return the current playerCharacter with extra info', () => {
       const result = currentPlayerCharacterSelector(store)
-      const expectedResult = fromJS(playerCharacter1Augmented)
+      const expectedResult = playerCharacterSummary1Augmented
       expect(result).toEqual(expectedResult)
     })
 
     it('should not break if character data has not been fetched yet', () => {
-      const modifiedStore = store.set('playersCharacters', emptyStoreKey)
+      const modifiedStore = store.set('playersCharacters', new ReducerRecord())
       const result = currentPlayerCharacterSelector(modifiedStore)
-      const expectedResult = {}
+      const expectedResult = new PlayerCharacterRecord({
+        archetype: new ArchetypeRecord(),
+        career: new CareerRecord(),
+        id: playerCharacter1Id,
+        name: '',
+        player_name: '',
+      })
       expect(result).toEqual(expectedResult)
     })
   })

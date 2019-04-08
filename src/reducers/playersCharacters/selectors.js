@@ -6,6 +6,7 @@ import { playerCharacterIdSelector } from 'reducers/router/selectors'
 
 import ArchetypeRecord from 'reducers/archetypes/records'
 import CareerRecord from 'reducers/careers/records'
+import PlayerCharacterRecord from 'reducers/playersCharacters/records'
 
 export const playersCharactersSelector = (state) =>
   state.get('playersCharacters')
@@ -42,6 +43,17 @@ export const allPlayersCharactersSelector = createSelector(
 export const currentPlayerCharacterSelector = createSelector(
   playerCharacterIdSelector,
   playersCharactersByIdSelector,
-  (playerCharacterId, playersCharactersById) =>
-    playersCharactersById.get(playerCharacterId) || {}, // TODO: use record here
+  (playerCharacterId, playersCharactersById) => {
+    const defaultPlayerCharacter = new PlayerCharacterRecord({
+      archetype: new ArchetypeRecord(),
+      career: new CareerRecord(),
+      id: Number(playerCharacterId),
+      name: '',
+      player_name: '',
+    })
+
+    return (
+      playersCharactersById.get(playerCharacterId) || defaultPlayerCharacter
+    )
+  },
 )

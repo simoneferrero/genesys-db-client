@@ -1,4 +1,6 @@
-import { fromJS } from 'immutable'
+import { List, Map } from 'immutable'
+
+import ReducerRecord from 'reducers/records'
 
 import reducer from '../index'
 import initialState from '../initialState'
@@ -19,9 +21,9 @@ describe('careers reducer', () => {
   describe('getCareersSuccess', () => {
     it('should handle the action correctly', () => {
       const result = reducer(initialState, getCareersSuccess(careers))
-      const expectedResult = fromJS({
-        byId: careersById,
-        allIds: careersAllIds,
+      const expectedResult = new ReducerRecord({
+        allIds: List(careersAllIds),
+        byId: Map(careersById),
       })
 
       expect(result).toEqual(expectedResult)

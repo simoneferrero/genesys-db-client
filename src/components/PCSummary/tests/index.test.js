@@ -3,14 +3,14 @@ import render from 'utils/customTestRenderers'
 
 import PCSummary from '../index'
 
-import { playerCharacter1Augmented } from 'mocks/playersCharacters'
+import { playerCharacterSummary1Augmented } from 'mocks/playersCharacters'
 
 import { ATTRIBUTES, CHARACTERISTICS } from 'utils/definitions'
 
 const renderedComponent = (props = {}) =>
   render(
     <Suspense fallback="Loading...">
-      <PCSummary {...playerCharacter1Augmented} {...props} />
+      <PCSummary {...playerCharacterSummary1Augmented.toJS()} {...props} />
     </Suspense>,
   )
 
@@ -35,7 +35,7 @@ describe('<PCSummary />', () => {
     id,
     name,
     player_name,
-  } = playerCharacter1Augmented
+  } = playerCharacterSummary1Augmented.toJS()
   const { DEFENSE, SOAK, STRAIN, WOUNDS } = ATTRIBUTES
   const {
     AGILITY,

@@ -10,7 +10,7 @@ import App from './App'
 import routes from 'utils/routes'
 
 import { store } from 'mocks'
-import { playerCharacter1 } from 'mocks/playersCharacters'
+import { playerCharacter1Id } from 'mocks/playersCharacters'
 
 // Create snapshots from stories
 addSerializer(styleSheetSerializer)
@@ -74,7 +74,7 @@ describe('<App />', () => {
     expect(playersCharactersRoute).toBeInTheDocument()
 
     const playerCharacterLink = await waitForElement(() =>
-      getByTestId(`pc-sheet-link-${playerCharacter1.id}`),
+      getByTestId(`pc-sheet-link-${playerCharacter1Id}`),
     )
     fireEvent.click(playerCharacterLink)
 

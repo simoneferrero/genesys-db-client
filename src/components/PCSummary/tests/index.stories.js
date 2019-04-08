@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history'
 
 import { addDecorator, storiesOf } from '@storybook/react'
 
-import { playerCharacter1Augmented } from 'mocks/playersCharacters'
+import { playerCharacterSummary1Augmented } from 'mocks/playersCharacters'
 
 import { PCSummary } from '../index'
 
@@ -16,7 +16,7 @@ const RouterDecorator = (storyFn) => (
 addDecorator(RouterDecorator)
 
 const defaultProps = {
-  ...playerCharacter1Augmented,
+  ...playerCharacterSummary1Augmented.toJS(),
 }
 
 storiesOf('Components/PCSummary', module).add('default', () => (

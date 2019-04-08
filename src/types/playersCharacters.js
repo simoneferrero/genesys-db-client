@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { archetypeType } from './archetypes'
 import { careerType } from './careers'
 
-export const playerCharacterData = {
+export const playerCharacterSummaryData = {
   /** The character's archetype */
   archetype: archetypeType.isRequired,
   /** Information on the character's attributes */
@@ -39,12 +39,13 @@ export const playerCharacterData = {
   /** Player's name */
   player_name: PropTypes.string.isRequired,
 }
-export const playerCharacterAugmentedData = {
-  ...playerCharacterData,
-  archetype: archetypeType.isRequired,
-  career: careerType.isRequired,
-}
+export const playerCharacterSummaryType = PropTypes.shape({
+  ...playerCharacterSummaryData,
+})
 
+export const playerCharacterData = {
+  ...playerCharacterSummaryData,
+}
 export const playerCharacterType = PropTypes.shape({
   ...playerCharacterData,
 })

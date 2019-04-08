@@ -19,7 +19,11 @@ import {
   getPlayerCharacterSuccess,
 } from '../index'
 
-import { playerCharacter1, playersCharacters } from 'mocks/playersCharacters'
+import {
+  playerCharacter1Id,
+  playerCharacterSummary1Response,
+  playersCharactersResponse,
+} from 'mocks/playersCharacters'
 import { genericError } from 'mocks/errors'
 
 describe('playersCharacters actions', () => {
@@ -37,11 +41,11 @@ describe('playersCharacters actions', () => {
 
     describe('getPlayersCharactersSuccess', () => {
       it('should dispatch the correct action', () => {
-        const result = getPlayersCharactersSuccess(playersCharacters)
+        const result = getPlayersCharactersSuccess(playersCharactersResponse)
         const expectedResult = {
           type: GET_PLAYERS_CHARACTERS_SUCCESS,
           payload: {
-            playersCharacters,
+            playersCharacters: playersCharactersResponse,
           },
         }
         expect(result).toEqual(expectedResult)
@@ -63,14 +67,14 @@ describe('playersCharacters actions', () => {
   })
 
   describe('getPlayerCharacter', () => {
-    const { id } = playerCharacter1
+    // TODO: change mocks to full player character
     describe('getPlayerCharacter', () => {
       it('should dispatch the correct action', () => {
-        const result = getPlayerCharacter(id)
+        const result = getPlayerCharacter(playerCharacter1Id)
         const expectedResult = {
           type: GET_PLAYER_CHARACTER,
           payload: {
-            id: id,
+            id: playerCharacter1Id,
           },
         }
         expect(result).toEqual(expectedResult)
@@ -79,12 +83,15 @@ describe('playersCharacters actions', () => {
 
     describe('getPlayerCharacterSuccess', () => {
       it('should dispatch the correct action', () => {
-        const result = getPlayerCharacterSuccess(id, playerCharacter1)
+        const result = getPlayerCharacterSuccess(
+          playerCharacter1Id,
+          playerCharacterSummary1Response,
+        )
         const expectedResult = {
           type: GET_PLAYER_CHARACTER_SUCCESS,
           payload: {
-            id,
-            playerCharacter: playerCharacter1,
+            id: playerCharacter1Id,
+            playerCharacter: playerCharacterSummary1Response,
           },
         }
         expect(result).toEqual(expectedResult)
@@ -93,12 +100,12 @@ describe('playersCharacters actions', () => {
 
     describe('getPlayerCharacterError', () => {
       it('should dispatch the correct action', () => {
-        const result = getPlayerCharacterError(id, genericError)
+        const result = getPlayerCharacterError(playerCharacter1Id, genericError)
         const expectedResult = {
           type: GET_PLAYER_CHARACTER_ERROR,
           payload: {
             error: genericError,
-            id,
+            id: playerCharacter1Id,
           },
         }
         expect(result).toEqual(expectedResult)

@@ -6,7 +6,7 @@ import { createBrowserHistory } from 'history'
 import { addDecorator, storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { augmentedPlayersCharacters } from 'mocks/playersCharacters'
+import { playersCharactersAugmented } from 'mocks/playersCharacters'
 import { uiElement, uiElementLoading } from 'mocks/ui'
 
 import { PlayersCharacters } from '../component'
@@ -15,7 +15,7 @@ const defaultProps = {
   getArchetypes: action('getArchetypes'),
   getCareers: action('getCareers'),
   getPlayersCharacters: action('getPlayersCharacters'),
-  playersCharacters: augmentedPlayersCharacters,
+  playersCharacters: playersCharactersAugmented.toJS(),
   playersCharactersUi: uiElement,
 }
 

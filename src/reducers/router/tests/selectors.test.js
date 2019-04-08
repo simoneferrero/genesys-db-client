@@ -1,7 +1,7 @@
 import { playerCharacterIdSelector, routerSelector } from '../selectors'
 
 import { store } from 'mocks'
-import { playerCharacter1 } from 'mocks/playersCharacters'
+import { playerCharacter1Id } from 'mocks/playersCharacters'
 
 describe('router selectors', () => {
   describe('routerSelector', () => {
@@ -15,7 +15,7 @@ describe('router selectors', () => {
   describe('playerCharacterIdSelector', () => {
     it('should return the current player character ID', () => {
       const result = playerCharacterIdSelector(store)
-      const expectedResult = `${playerCharacter1.id}`
+      const expectedResult = `${playerCharacter1Id}`
       expect(result).toEqual(expectedResult)
     })
   })

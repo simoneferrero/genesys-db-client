@@ -1,7 +1,10 @@
-import { fromJS } from 'immutable'
+import { List, Map } from 'immutable'
+
+import ReducerRecord from 'reducers/records'
 
 import reducer from '../index'
 import initialState from '../initialState'
+import PlayerCharacterRecord from '../records'
 
 import {
   getPlayerCharacterSuccess,
@@ -9,8 +12,10 @@ import {
 } from 'actions/playersCharacters'
 
 import {
-  playerCharacter1,
-  playersCharacters,
+  playerCharacter1Id,
+  playerCharacterSummary1,
+  playerCharacterSummary1Response,
+  playersCharactersResponse,
   playersCharactersById,
   playersCharactersAllIds,
 } from 'mocks/playersCharacters'
@@ -28,11 +33,11 @@ describe('playersCharacters reducer', () => {
     it('should handle the action correctly', () => {
       const result = reducer(
         initialState,
-        getPlayersCharactersSuccess(playersCharacters),
+        getPlayersCharactersSuccess(playersCharactersResponse),
       )
-      const expectedResult = fromJS({
-        byId: playersCharactersById,
-        allIds: playersCharactersAllIds,
+      const expectedResult = new ReducerRecord({
+        allIds: List(playersCharactersAllIds),
+        byId: Map(playersCharactersById),
       })
 
       expect(result).toEqual(expectedResult)
@@ -40,18 +45,18 @@ describe('playersCharacters reducer', () => {
   })
 
   describe('getPlayerCharacterSuccess', () => {
-    const { id } = playerCharacter1
-
+    const id = `${playerCharacter1Id}`
+    // TODO: use full player character mock
     it('should handle the action correctly from empty store', () => {
       const result = reducer(
         initialState,
-        getPlayerCharacterSuccess(id, playerCharacter1),
+        getPlayerCharacterSuccess(id, playerCharacterSummary1Response),
       )
-      const expectedResult = fromJS({
-        byId: {
-          [id]: playerCharacter1,
-        },
-        allIds: [id],
+      const expectedResult = new ReducerRecord({
+        byId: Map({
+          [id]: playerCharacterSummary1,
+        }),
+        allIds: List([id]),
       })
 
       expect(result).toEqual(expectedResult)
@@ -60,23 +65,20 @@ describe('playersCharacters reducer', () => {
     it('should handle the action correctly from full store', () => {
       const fullState = reducer(
         initialState,
-        getPlayersCharactersSuccess(playersCharacters),
+        getPlayersCharactersSuccess(playersCharactersResponse),
       )
       const modifiedPlayerCharacter1 = {
-        ...playerCharacter1,
+        ...playerCharacterSummary1Response,
         name: 'Modified Name',
       }
       const result = reducer(
         fullState,
         getPlayerCharacterSuccess(id, modifiedPlayerCharacter1),
       )
-      const expectedResult = fromJS({
-        byId: {
-          ...playersCharactersById,
-          [id]: modifiedPlayerCharacter1,
-        },
-        allIds: playersCharactersAllIds,
-      })
+      const modifiedById = {
+        [id]: new PlayerCharacterRecord(modifiedPlayerCharacter1),
+      }
+      const expectedResult = fullState.mergeDeepIn(['byId'], modifiedById)
 
       expect(result).toEqual(expectedResult)
     })

@@ -1,12 +1,17 @@
 import { Suspense } from 'react'
 import render from 'utils/customTestRenderers'
 
-import { fromJS } from 'immutable'
+import ReducerRecord from 'reducers/records'
 
 import PlayerCharacter from '../index'
 
 import { store } from 'mocks'
-import { playerCharacter1Augmented } from 'mocks/playersCharacters'
+import {
+  playerCharacter1Id,
+  // TODO: get full player character mocks
+  playerCharacterSummary1Augmented,
+  playerCharacterSummary1Response,
+} from 'mocks/playersCharacters'
 
 import {
   GET_PLAYER_CHARACTER,
@@ -51,7 +56,7 @@ const renderComponent = (props = {}, initialState) =>
   )
 
 describe('<PlayerCharacter />', () => {
-  const id = `${playerCharacter1Augmented.id}`
+  const id = `${playerCharacter1Id}`
   beforeEach(() => {
     // Do not dispatch correct action so loader is false
     getPlayerCharacter.mockImplementation(() => ({
@@ -73,7 +78,7 @@ describe('<PlayerCharacter />', () => {
       const playersCharactersWrapper = getByTestId(/player-character/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      const header = getByText(playerCharacter1Augmented.name)
+      const header = getByText(playerCharacterSummary1Augmented.get('name'))
       expect(header).toBeInTheDocument()
 
       const message = getByText(/hello/i)
@@ -85,13 +90,7 @@ describe('<PlayerCharacter />', () => {
   })
 
   it('should not render the header if character has not been fetched yet', async () => {
-    const modifiedState = store.set(
-      'playersCharacters',
-      fromJS({
-        allIds: [],
-        byId: {},
-      }),
-    )
+    const modifiedState = store.set('playersCharacters', new ReducerRecord())
     const { getByTestId, queryByTestId } = renderComponent({}, modifiedState)
 
     await wait(() => {
@@ -131,7 +130,7 @@ describe('<PlayerCharacter />', () => {
       type: GET_PLAYER_CHARACTER_SUCCESS,
       payload: {
         id,
-        playerCharacter: playerCharacter1Augmented,
+        playerCharacter: playerCharacterSummary1Response,
       },
     }))
     const { getByTestId, getByText, queryByTestId } = renderComponent()
