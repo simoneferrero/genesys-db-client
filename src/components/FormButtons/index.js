@@ -27,7 +27,7 @@ export const StyledButton = styled.button`
 `
 
 const FormButtons = ({ disabled, editing, setEditing }) => (
-  <StyledFormButtons>
+  <StyledFormButtons data-testid="form-buttons">
     {editing === false ? (
       <StyledButton
         data-testid="edit"

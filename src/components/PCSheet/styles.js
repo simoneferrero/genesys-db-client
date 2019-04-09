@@ -1,6 +1,11 @@
 import styled from 'styled-components/macro'
 
-import { baseSpacing, colours, fontFamilies } from 'styles/constants'
+import {
+  baseSpacing,
+  colours,
+  fontFamilies,
+  headerHeight,
+} from 'styles/constants'
 
 const sectionTitleHeight = 20
 
@@ -8,6 +13,8 @@ export const StyledForm = styled.form`
   display: grid;
   grid-column: 1fr;
   grid-gap: ${(baseSpacing * 3) / 2}px;
+  padding: ${baseSpacing}px ${baseSpacing * 2}px;
+  padding-top: ${baseSpacing + headerHeight}px;
 `
 
 export const StyledSectionWrapper = styled.div`

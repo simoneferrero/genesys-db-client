@@ -23,6 +23,7 @@ exports[`Storyshots Components/FormButtons default 1`] = `
 
 <div
   class="c0"
+  data-testid="form-buttons"
 >
   <button
     class="c1"
@@ -69,6 +70,7 @@ exports[`Storyshots Components/FormButtons disabled 1`] = `
 
 <div
   class="c0"
+  data-testid="form-buttons"
 >
   <button
     class="c1"
@@ -136,6 +138,7 @@ exports[`Storyshots Components/FormButtons editing 1`] = `
 
 <div
   class="c0"
+  data-testid="form-buttons"
 >
   <button
     class="c1"

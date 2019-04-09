@@ -9,14 +9,13 @@ import { Form } from 'formik'
 import FormButtons from 'components/FormButtons'
 import PCSummary from 'components/PCSummary'
 
-import { StyledSectionWrapper } from './styles'
+import { StyledForm, StyledSectionWrapper } from './styles'
 
-// TODO: test me!
 const InnerForm = ({ handleSubmit, isSubmitting, values }) => {
   const [editing, setEditing] = useState(false)
 
   return (
-    <Form data-testid="pc-sheet" onSubmit={handleSubmit}>
+    <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
       <FormButtons
         disabled={isSubmitting}
         editing={editing}
@@ -28,7 +27,7 @@ const InnerForm = ({ handleSubmit, isSubmitting, values }) => {
         sectionTitle="General"
         {...values}
       />
-    </Form>
+    </StyledForm>
   )
 }
 

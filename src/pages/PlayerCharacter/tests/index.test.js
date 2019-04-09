@@ -155,4 +155,19 @@ describe('<PlayerCharacter />', () => {
     expect(getPlayerCharacter).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledWith(id)
   })
+  //
+  // it('should call handleSubmit on submit', async () => {
+  //   const { getByTestId } = renderComponent()
+  //
+  //   const editButton = getByTestId(/edit/i)
+  //   fireEvent.click(editButton)
+  //
+  //   const submitButton = getByTestId(/submit/i)
+  //   fireEvent.click(submitButton)
+  //
+  //   await wait(() => {
+  //     // TODO: change to mock of action
+  //     expect(mockHandleSubmit).toHaveBeenCalled()
+  //   })
+  // })
 })

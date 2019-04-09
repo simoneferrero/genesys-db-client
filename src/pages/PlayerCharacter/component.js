@@ -9,19 +9,6 @@ import Header from 'components/Header'
 import PCSheet from 'components/PCSheet'
 import Spinner from 'components/Spinner'
 
-import styled from 'styled-components/macro'
-import { baseSpacing, headerHeight } from 'styles/constants'
-
-const StyledWrapper = styled.div`
-  width: 100vw;
-  padding: ${baseSpacing}px ${baseSpacing * 2}px;
-  padding-top: ${baseSpacing + headerHeight}px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-column-gap: ${baseSpacing}px;
-  grid-row-gap: ${baseSpacing}px;
-`
-
 /** Summary of all players' characters. */
 export const PlayerCharacter = ({
   getArchetypes,
@@ -40,12 +27,12 @@ export const PlayerCharacter = ({
   return (
     <>
       <Helmet title={playerCharacter.name} />
-      <StyledWrapper data-testid="player-character">
+      <div data-testid="player-character">
         {playerCharacter.name && <Header>{playerCharacter.name}</Header>}
         <Suspense fallback={<Spinner />}>
           <PCSheet handleSubmit={() => {}} playerCharacter={playerCharacter} />
         </Suspense>
-      </StyledWrapper>
+      </div>
       {playersCharactersUi.loading && <Spinner />}
     </>
   )

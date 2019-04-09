@@ -21,7 +21,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   color: rgb(65,178,180);
 }
 
-.c1 {
+.c0 {
   position: fixed;
   top: 0;
   left: 50%;
@@ -38,7 +38,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   z-index: 1000;
 }
 
-.c1 h2 {
+.c0 h2 {
   position: relative;
   top: -40px;
   padding: 6px 6px;
@@ -172,6 +172,14 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   grid-template-columns: 1fr;
 }
 
+.c1 {
+  display: grid;
+  grid-column: 1fr;
+  grid-gap: 36px;
+  padding: 24px 48px;
+  padding-top: 64px;
+}
+
 .c4 {
   position: relative;
   overflow: visible;
@@ -189,23 +197,13 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 900;
+  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
   line-height: 18px;
-  font-family: Monkirta;
+  font-family: 'Monkirta',Helvetica,sans-serif;
   text-transform: uppercase;
-}
-
-.c0 {
-  width: 100vw;
-  padding: 24px 48px;
-  padding-top: 64px;
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
@@ -253,11 +251,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 <div
-  class="c0"
   data-testid="player-character"
 >
   <div
-    class="c1"
+    class="c0"
     data-testid="header"
   >
     <h2>
@@ -265,10 +262,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
     </h2>
   </div>
   <form
+    class="c1"
     data-testid="pc-sheet"
   >
     <div
       class="c2"
+      data-testid="form-buttons"
     >
       <button
         class="c3"
@@ -471,7 +470,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   color: rgb(65,178,180);
 }
 
-.c1 {
+.c0 {
   position: fixed;
   top: 0;
   left: 50%;
@@ -488,7 +487,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   z-index: 1000;
 }
 
-.c1 h2 {
+.c0 h2 {
   position: relative;
   top: -40px;
   padding: 6px 6px;
@@ -622,6 +621,14 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   grid-template-columns: 1fr;
 }
 
+.c1 {
+  display: grid;
+  grid-column: 1fr;
+  grid-gap: 36px;
+  padding: 24px 48px;
+  padding-top: 64px;
+}
+
 .c4 {
   position: relative;
   overflow: visible;
@@ -639,23 +646,13 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 900;
+  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
   line-height: 18px;
-  font-family: Monkirta;
+  font-family: 'Monkirta',Helvetica,sans-serif;
   text-transform: uppercase;
-}
-
-.c0 {
-  width: 100vw;
-  padding: 24px 48px;
-  padding-top: 64px;
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
@@ -703,11 +700,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 <div
-  class="c0"
   data-testid="player-character"
 >
   <div
-    class="c1"
+    class="c0"
     data-testid="header"
   >
     <h2>
@@ -715,10 +711,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
     </h2>
   </div>
   <form
+    class="c1"
     data-testid="pc-sheet"
   >
     <div
       class="c2"
+      data-testid="form-buttons"
     >
       <button
         class="c3"
