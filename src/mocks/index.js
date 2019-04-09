@@ -37,3 +37,11 @@ export const emptyStore = fromJS({
   router: initialRouter,
   ui,
 })
+
+export const formikActions = {
+  setEditing: () => {},
+  setErrors: () => {},
+  setFieldTouched: () => {},
+  setFieldValue: () => {},
+  setSubmitting: () => {},
+}

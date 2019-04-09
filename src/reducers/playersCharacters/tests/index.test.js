@@ -9,6 +9,7 @@ import PlayerCharacterRecord from '../records'
 import {
   getPlayerCharacterSuccess,
   getPlayersCharactersSuccess,
+  editPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
 
 import {
@@ -78,7 +79,32 @@ describe('playersCharacters reducer', () => {
       const modifiedById = {
         [id]: new PlayerCharacterRecord(modifiedPlayerCharacter1),
       }
-      const expectedResult = fullState.mergeDeepIn(['byId'], modifiedById)
+      const expectedResult = fullState.mergeIn(['byId'], modifiedById)
+
+      expect(result).toEqual(expectedResult)
+    })
+  })
+
+  describe('editPlayerCharacterSuccess', () => {
+    const id = `${playerCharacter1Id}`
+    // TODO: use full player character mock
+    it('should handle the action correctly', () => {
+      const fullState = reducer(
+        initialState,
+        getPlayersCharactersSuccess(playersCharactersResponse),
+      )
+      const modifiedPlayerCharacter1 = {
+        ...playerCharacterSummary1Response,
+        name: 'Modified Name',
+      }
+      const result = reducer(
+        fullState,
+        editPlayerCharacterSuccess(id, modifiedPlayerCharacter1),
+      )
+      const modifiedById = {
+        [id]: new PlayerCharacterRecord(modifiedPlayerCharacter1),
+      }
+      const expectedResult = fullState.mergeIn(['byId'], modifiedById)
 
       expect(result).toEqual(expectedResult)
     })

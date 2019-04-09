@@ -8,12 +8,17 @@ import rootSaga, {
   // getPlayerCharacter
   getPlayerCharacterSaga,
   getPlayerCharacterWatcher,
+  // editPlayerCharacter
+  editPlayerCharacterSaga,
+  editPlayerCharacterWatcher,
 } from '../index'
 import {
   // getPlayersCharacters
   GET_PLAYERS_CHARACTERS,
   // getPlayerCharacter
   GET_PLAYER_CHARACTER,
+  // editPlayerCharacter
+  EDIT_PLAYER_CHARACTER,
 } from 'actions/playersCharacters/constants'
 import {
   // getPlayersCharacters
@@ -24,12 +29,17 @@ import {
   getPlayerCharacter,
   getPlayerCharacterError,
   getPlayerCharacterSuccess,
+  // editPlayerCharacter
+  editPlayerCharacter,
+  editPlayerCharacterError,
+  editPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
 
-import { apiPath } from 'mocks'
+import { apiPath, formikActions } from 'mocks'
 import {
   playerCharacter1Id,
   // TODO: use full player character mock
+  playerCharacterSummary1Augmented,
   playerCharacterSummary1Response,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
@@ -153,6 +163,139 @@ describe('playersCharacters sagas', () => {
     })
   })
 
+  describe('editPlayerCharacterSaga', () => {
+    const id = `${playerCharacter1Id}`
+    const values = playerCharacterSummary1Augmented.toJS()
+    const action = editPlayerCharacter(id, values, formikActions)
+
+    describe('editPlayerCharacterSaga', () => {
+      let generator
+
+      beforeEach(() => {
+        generator = editPlayerCharacterSaga(action)
+      })
+
+      it('should dispatch the correct actions on success', () => {
+        // TODO: reenable selection once API is in place
+        // const {
+        //   attributes: {
+        //     wounds: { current: currentWounds },
+        //     strain: { current: currentStrain },
+        //   },
+        // } = values
+        // const data = JSON.stringify({
+        //   attributes: {
+        //     strain: {
+        //       current: currentStrain,
+        //     },
+        //     wounds: {
+        //       current: currentWounds,
+        //     },
+        //   },
+        // })
+        const {
+          archetype: { id: archetypeId },
+          attributes: { wounds, strain, ...otherAttributes },
+          career: { id: careerId },
+          ...otherValues
+        } = values
+        const data = {
+          ...otherValues,
+          archetype: archetypeId,
+          attributes: {
+            ...otherAttributes,
+            strain: {
+              ...strain,
+              current: strain.current,
+            },
+            wounds: {
+              ...wounds,
+              current: wounds.current,
+            },
+          },
+          career: careerId,
+        }
+        const opts = {
+          method: 'PUT',
+          url: `${apiPath}/players-characters/${id}`,
+          data,
+        }
+        const callAxiosDescriptor = generator.next().value
+        const expectedCallAxiosDescriptor = call(axios, opts)
+        expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+
+        const response = {
+          data: playerCharacterSummary1Response,
+        }
+        const putSuccessDescriptor = generator.next(response).value
+        const expectedPutSuccessDescriptor = put(
+          editPlayerCharacterSuccess(id, playerCharacterSummary1Response),
+        )
+        expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetEditingDescriptor = generator.next().value
+        const expectedCallSetEditingDescriptor = call(
+          formikActions.setEditing,
+          false,
+        )
+        expect(callSetEditingDescriptor).toEqual(
+          expectedCallSetEditingDescriptor,
+        )
+      })
+
+      it('should dispatch the correct actions on error', () => {
+        generator.next().value
+        const putErrorDescriptor = generator.throw(genericError).value
+        const expectedPutErrorDescriptor = put(
+          editPlayerCharacterError(id, genericError),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      afterEach(() => {
+        const endGeneratorDescriptor = generator.next().value
+        expect(endGeneratorDescriptor).toBeUndefined()
+      })
+    })
+
+    describe('editPlayerCharacterWatcher', () => {
+      it('should listen for the correct action', () => {
+        const generator = editPlayerCharacterWatcher(action)
+
+        const takeLatestDescriptor = generator.next().value
+        const expectedTakeLatestDescriptor = takeLatest(
+          EDIT_PLAYER_CHARACTER,
+          editPlayerCharacterSaga,
+        )
+        expect(takeLatestDescriptor).toEqual(expectedTakeLatestDescriptor)
+      })
+    })
+  })
+
   describe('rootSaga', () => {
     it('should export the correct root', () => {
       const generator = rootSaga({})
@@ -161,6 +304,7 @@ describe('playersCharacters sagas', () => {
       const expectedAllDescriptor = all([
         call(getPlayersCharactersWatcher),
         call(getPlayerCharacterWatcher),
+        call(editPlayerCharacterWatcher),
       ])
       expect(allDescriptor).toEqual(expectedAllDescriptor)
     })

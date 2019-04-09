@@ -11,6 +11,7 @@ import Spinner from 'components/Spinner'
 
 /** Summary of all players' characters. */
 export const PlayerCharacter = ({
+  editPlayerCharacter,
   getArchetypes,
   getCareers,
   getPlayerCharacter,
@@ -24,13 +25,19 @@ export const PlayerCharacter = ({
     getPlayerCharacter(playerCharacterId)
   }, [])
 
+  const handleSubmit = (values, actions) =>
+    editPlayerCharacter(playerCharacterId, values, actions)
+
   return (
     <>
       <Helmet title={playerCharacter.name} />
       <div data-testid="player-character">
         {playerCharacter.name && <Header>{playerCharacter.name}</Header>}
         <Suspense fallback={<Spinner />}>
-          <PCSheet handleSubmit={() => {}} playerCharacter={playerCharacter} />
+          <PCSheet
+            handleSubmit={handleSubmit}
+            playerCharacter={playerCharacter}
+          />
         </Suspense>
       </div>
       {playersCharactersUi.loading && <Spinner />}
@@ -39,6 +46,8 @@ export const PlayerCharacter = ({
 }
 
 PlayerCharacter.propTypes = {
+  /** Dispatched to edit the current player's character */
+  editPlayerCharacter: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of archetypes */
   getArchetypes: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */

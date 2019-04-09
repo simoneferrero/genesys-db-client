@@ -5,7 +5,7 @@ import ReducerRecord from 'reducers/records'
 
 import PlayerCharacter from '../index'
 
-import { store } from 'mocks'
+import { formikActions, store } from 'mocks'
 import {
   playerCharacter1Id,
   // TODO: get full player character mocks
@@ -14,16 +14,25 @@ import {
 } from 'mocks/playersCharacters'
 
 import {
+  EDIT_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
 
 jest.mock('actions/playersCharacters', () => {
   return {
+    editPlayerCharacter: jest.fn(),
+    editPlayerCharacterSuccess: jest.fn(),
+    editPlayerCharacterError: jest.fn(),
     getPlayerCharacter: jest.fn(),
+    getPlayerCharacterSuccess: jest.fn(),
+    getPlayerCharacterError: jest.fn(),
   }
 })
-import { getPlayerCharacter } from 'actions/playersCharacters'
+import {
+  editPlayerCharacter,
+  getPlayerCharacter,
+} from 'actions/playersCharacters'
 
 jest.mock('actions/archetypes', () => {
   const { GET_ARCHETYPES } = require('actions/archetypes/constants')
@@ -32,6 +41,8 @@ jest.mock('actions/archetypes', () => {
       type: GET_ARCHETYPES,
       payload: {},
     })),
+    getArchetypesSuccess: jest.fn(),
+    getArchetypesError: jest.fn(),
   }
 })
 import { getArchetypes } from 'actions/archetypes'
@@ -43,6 +54,8 @@ jest.mock('actions/careers', () => {
       type: GET_CAREERS,
       payload: {},
     })),
+    getCareersSuccess: jest.fn(),
+    getCareersError: jest.fn(),
   }
 })
 import { getCareers } from 'actions/careers'
@@ -155,19 +168,27 @@ describe('<PlayerCharacter />', () => {
     expect(getPlayerCharacter).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledWith(id)
   })
-  //
-  // it('should call handleSubmit on submit', async () => {
-  //   const { getByTestId } = renderComponent()
-  //
-  //   const editButton = getByTestId(/edit/i)
-  //   fireEvent.click(editButton)
-  //
-  //   const submitButton = getByTestId(/submit/i)
-  //   fireEvent.click(submitButton)
-  //
-  //   await wait(() => {
-  //     // TODO: change to mock of action
-  //     expect(mockHandleSubmit).toHaveBeenCalled()
-  //   })
-  // })
+
+  it('should call editPlayerCharacter on submit', async () => {
+    editPlayerCharacter.mockImplementation(() => ({
+      type: EDIT_PLAYER_CHARACTER,
+      payload: {
+        id,
+        values: playerCharacterSummary1Augmented.toJS(),
+        actions: formikActions,
+      },
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId(/edit/i)
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId(/submit/i)
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(editPlayerCharacter).toHaveBeenCalledTimes(1)
+    })
+  })
 })

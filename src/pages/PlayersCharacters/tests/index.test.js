@@ -16,6 +16,8 @@ import {
 jest.mock('actions/playersCharacters', () => {
   return {
     getPlayersCharacters: jest.fn(),
+    getPlayersCharactersSuccess: jest.fn(),
+    getPlayersCharactersError: jest.fn(),
   }
 })
 import { getPlayersCharacters } from 'actions/playersCharacters'
@@ -27,6 +29,8 @@ jest.mock('actions/archetypes', () => {
       type: GET_ARCHETYPES,
       payload: {},
     })),
+    getArchetypesSuccess: jest.fn(),
+    getArchetypesError: jest.fn(),
   }
 })
 import { getArchetypes } from 'actions/archetypes'
@@ -38,6 +42,8 @@ jest.mock('actions/careers', () => {
       type: GET_CAREERS,
       payload: {},
     })),
+    getCareersSuccess: jest.fn(),
+    getCareersError: jest.fn(),
   }
 })
 import { getCareers } from 'actions/careers'

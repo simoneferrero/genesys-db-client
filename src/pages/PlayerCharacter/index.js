@@ -8,7 +8,10 @@ import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selec
 // Actions
 import { getArchetypes } from 'actions/archetypes'
 import { getCareers } from 'actions/careers'
-import { getPlayerCharacter } from 'actions/playersCharacters'
+import {
+  editPlayerCharacter,
+  getPlayerCharacter,
+} from 'actions/playersCharacters'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
@@ -20,6 +23,8 @@ const mapStateToProps = (state) => ({
   playersCharactersUi: playersCharactersUiSelector(state),
 })
 const mapDispatchToProps = (dispatch) => ({
+  editPlayerCharacter: (id, values, actions) =>
+    dispatch(editPlayerCharacter(id, values, actions)),
   getArchetypes: () => dispatch(getArchetypes()),
   getCareers: () => dispatch(getCareers()),
   getPlayerCharacter: (id) => dispatch(getPlayerCharacter(id)),

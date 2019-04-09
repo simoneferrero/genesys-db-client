@@ -13,6 +13,7 @@ import { PlayerCharacter } from '../component'
 
 // TODO: import full character mock
 const defaultProps = {
+  editPlayerCharacter: action('editPlayerCharacter'),
   getArchetypes: action('getArchetypes'),
   getCareers: action('getCareers'),
   getPlayerCharacter: action('getPlayerCharacter'),

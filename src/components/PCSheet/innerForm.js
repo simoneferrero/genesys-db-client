@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { playerCharacterType } from 'types/playersCharacters'
 
@@ -11,25 +11,27 @@ import PCSummary from 'components/PCSummary'
 
 import { StyledForm, StyledSectionWrapper } from './styles'
 
-const InnerForm = ({ handleSubmit, isSubmitting, values }) => {
-  const [editing, setEditing] = useState(false)
-
-  return (
-    <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
-      <FormButtons
-        disabled={isSubmitting}
-        editing={editing}
-        setEditing={setEditing}
-      />
-      <StyledSectionWrapper
-        as={PCSummary}
-        hideLink
-        sectionTitle="General"
-        {...values}
-      />
-    </StyledForm>
-  )
-}
+const InnerForm = ({
+  editing,
+  handleSubmit,
+  isSubmitting,
+  setEditing,
+  values,
+}) => (
+  <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
+    <FormButtons
+      disabled={isSubmitting}
+      editing={editing}
+      setEditing={setEditing}
+    />
+    <StyledSectionWrapper
+      as={PCSummary}
+      hideLink
+      sectionTitle="General"
+      {...values}
+    />
+  </StyledForm>
+)
 
 InnerForm.validationSchema = yup.object({
   // TODO: add other fields
@@ -37,10 +39,19 @@ InnerForm.validationSchema = yup.object({
 })
 
 InnerForm.propTypes = {
+  /** Whether the buttons are in editing or static mode */
+  editing: PropTypes.bool,
+  /** Errors within the form */
   errors: PropTypes.object.isRequired,
+  /** Invoked on submit */
   handleSubmit: PropTypes.func.isRequired,
+  /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
+  /** Changes the mode between editing and static */
+  setEditing: PropTypes.func.isRequired,
+  /** Touched fields */
   touched: PropTypes.object.isRequired,
+  /** Form values */
   values: playerCharacterType.isRequired,
 }
 

@@ -7,6 +7,10 @@ import {
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_ERROR,
   GET_PLAYER_CHARACTER_SUCCESS,
+  // editPlayerCharacter
+  EDIT_PLAYER_CHARACTER,
+  EDIT_PLAYER_CHARACTER_ERROR,
+  EDIT_PLAYER_CHARACTER_SUCCESS,
 } from '../constants'
 import {
   // getPlayersCharacters
@@ -17,10 +21,16 @@ import {
   getPlayerCharacter,
   getPlayerCharacterError,
   getPlayerCharacterSuccess,
+  // editPlayerCharacter
+  editPlayerCharacter,
+  editPlayerCharacterError,
+  editPlayerCharacterSuccess,
 } from '../index'
 
+import { formikActions } from 'mocks'
 import {
   playerCharacter1Id,
+  playerCharacterSummary1Augmented,
   playerCharacterSummary1Response,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
@@ -103,6 +113,63 @@ describe('playersCharacters actions', () => {
         const result = getPlayerCharacterError(playerCharacter1Id, genericError)
         const expectedResult = {
           type: GET_PLAYER_CHARACTER_ERROR,
+          payload: {
+            error: genericError,
+            id: playerCharacter1Id,
+          },
+        }
+        expect(result).toEqual(expectedResult)
+      })
+    })
+  })
+
+  describe('editPlayerCharacter', () => {
+    // TODO: change mocks to full player character
+    describe('editPlayerCharacter', () => {
+      it('should dispatch the correct action', () => {
+        const values = playerCharacterSummary1Augmented.toJS()
+        const result = editPlayerCharacter(
+          playerCharacter1Id,
+          values,
+          formikActions,
+        )
+        const expectedResult = {
+          type: EDIT_PLAYER_CHARACTER,
+          payload: {
+            actions: formikActions,
+            id: playerCharacter1Id,
+            values,
+          },
+        }
+        expect(result).toEqual(expectedResult)
+      })
+    })
+
+    describe('editPlayerCharacterSuccess', () => {
+      it('should dispatch the correct action', () => {
+        const result = editPlayerCharacterSuccess(
+          playerCharacter1Id,
+          playerCharacterSummary1Response,
+        )
+        const expectedResult = {
+          type: EDIT_PLAYER_CHARACTER_SUCCESS,
+          payload: {
+            id: playerCharacter1Id,
+            playerCharacter: playerCharacterSummary1Response,
+          },
+        }
+        expect(result).toEqual(expectedResult)
+      })
+    })
+
+    describe('editPlayerCharacterError', () => {
+      it('should dispatch the correct action', () => {
+        const result = editPlayerCharacterError(
+          playerCharacter1Id,
+          genericError,
+        )
+        const expectedResult = {
+          type: EDIT_PLAYER_CHARACTER_ERROR,
           payload: {
             error: genericError,
             id: playerCharacter1Id,
