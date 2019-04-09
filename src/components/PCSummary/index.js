@@ -5,7 +5,7 @@ import { playerCharacterSummaryData } from 'types/playersCharacters'
 import { ATTRIBUTES, CHARACTERISTICS } from 'utils/definitions'
 
 import { NavLink } from 'react-router-dom'
-import { MdZoomOutMap } from 'react-icons/md'
+import { MdLaunch } from 'react-icons/md'
 
 import routes from 'utils/routes'
 
@@ -172,7 +172,7 @@ export const PCSummary = ({
           data-testid={`pc-sheet-link-${id}`}
           to={pathToRoute}
         >
-          <MdZoomOutMap />
+          <MdLaunch />
         </StyledLink>
       )}
     </StyledPCSummary>
