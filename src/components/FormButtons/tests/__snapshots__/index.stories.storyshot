@@ -19,6 +19,7 @@ exports[`Storyshots Components/FormButtons default 1`] = `
 
 .c1:disabled {
   color: rgb(65,178,180);
+  cursor: not-allowed;
 }
 
 <div
@@ -66,6 +67,7 @@ exports[`Storyshots Components/FormButtons disabled 1`] = `
 
 .c1:disabled {
   color: rgb(65,178,180);
+  cursor: not-allowed;
 }
 
 <div
@@ -134,6 +136,7 @@ exports[`Storyshots Components/FormButtons editing 1`] = `
 
 .c1:disabled {
   color: rgb(65,178,180);
+  cursor: not-allowed;
 }
 
 <div

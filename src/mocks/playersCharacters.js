@@ -26,7 +26,7 @@ export const playerCharacterSummary1Response = {
     soak: 3,
     wounds: {
       total: 13,
-      current: 0,
+      current: 1,
     },
     strain: {
       total: 14,

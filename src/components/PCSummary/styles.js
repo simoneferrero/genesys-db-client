@@ -67,8 +67,11 @@ export const StyledInfoSection = styled.section`
 const sharedBadgeWrapperStyles = css`
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
 
   h2 {
     color: ${colours.lightOrange};

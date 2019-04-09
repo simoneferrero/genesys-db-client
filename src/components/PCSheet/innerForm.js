@@ -16,6 +16,7 @@ const InnerForm = ({
   handleSubmit,
   isSubmitting,
   setEditing,
+  setFieldValue,
   values,
 }) => (
   <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
@@ -26,8 +27,11 @@ const InnerForm = ({
     />
     <StyledSectionWrapper
       as={PCSummary}
+      editing={editing}
       hideLink
+      isSubmitting={isSubmitting}
       sectionTitle="General"
+      setFieldValue={setFieldValue}
       {...values}
     />
   </StyledForm>
@@ -49,6 +53,8 @@ InnerForm.propTypes = {
   isSubmitting: PropTypes.bool,
   /** Changes the mode between editing and static */
   setEditing: PropTypes.func.isRequired,
+  /** Changes the specified field value */
+  setFieldValue: PropTypes.func.isRequired,
   /** Touched fields */
   touched: PropTypes.object.isRequired,
   /** Form values */

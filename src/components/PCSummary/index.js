@@ -21,6 +21,8 @@ import Strain from 'images/Strain.png'
 import Willpower from 'images/Willpower.png'
 import Wounds from 'images/Wounds.png'
 
+import BadgeModifiers from 'components/BadgeModifiers'
+
 import {
   StyledLink,
   StyledAttributesSection,
@@ -51,10 +53,13 @@ export const PCSummary = ({
   career: { name: careerName },
   className,
   characteristics: { agility, brawn, cunning, intellect, presence, willpower },
+  editing,
+  hideLink,
   id,
+  isSubmitting,
   name,
   player_name,
-  hideLink,
+  setFieldValue,
 }) => {
   const pathToRoute = routes
     .find(({ id: routeId }) => routeId === 'player-character')
@@ -119,6 +124,19 @@ export const PCSummary = ({
             <span>{totalWounds}</span>
             <span>{currentWounds}</span>
           </h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('attributes.wounds.current', currentWounds - 1)
+              }
+              decreaseDisabled={isSubmitting || currentWounds === 0}
+              increase={() =>
+                setFieldValue('attributes.wounds.current', currentWounds + 1)
+              }
+              increaseDisabled={isSubmitting || currentWounds === totalWounds}
+              name="attributes.wounds.current"
+            />
+          )}
         </div>
         <div>
           <img alt={STRAIN} src={Strain} />
@@ -126,6 +144,19 @@ export const PCSummary = ({
             <span>{totalStrain}</span>
             <span>{currentStrain}</span>
           </h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('attributes.strain.current', currentStrain - 1)
+              }
+              decreaseDisabled={isSubmitting || currentStrain === 0}
+              increase={() =>
+                setFieldValue('attributes.strain.current', currentStrain + 1)
+              }
+              increaseDisabled={isSubmitting || currentStrain === totalWounds}
+              name="attributes.strain.current"
+            />
+          )}
         </div>
         <div>
           <img alt={DEFENSE} src={Defense} />
@@ -151,9 +182,19 @@ export const PCSummary = ({
 PCSummary.propTypes = {
   /** Custom styles */
   className: PropTypes.string,
+  /** Whether to show field modifiers */
+  editing: PropTypes.bool,
   /** Hides the NavLink to the full character sheet */
   hideLink: PropTypes.bool,
+  /** Whether the form is submitting */
+  isSubmitting: PropTypes.bool,
+  /** Invoked when one of the fields changes */
+  setFieldValue: PropTypes.func,
   ...playerCharacterSummaryData,
+}
+
+PCSummary.defaultProps = {
+  setFieldValue: () => {},
 }
 
 export default memo(PCSummary)

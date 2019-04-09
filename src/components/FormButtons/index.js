@@ -23,6 +23,7 @@ export const StyledButton = styled.button`
 
   &:disabled {
     color: ${colours.lightTeal};
+    cursor: not-allowed;
   }
 `
 

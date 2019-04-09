@@ -19,6 +19,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 
 .c2:disabled {
   color: rgb(65,178,180);
+  cursor: not-allowed;
 }
 
 .c4 {
@@ -73,14 +74,20 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c6 > div h2 {
@@ -109,14 +116,20 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c7 > div h2 {
@@ -373,7 +386,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
             13
           </span>
           <span>
-            0
+            1
           </span>
         </h2>
       </div>
