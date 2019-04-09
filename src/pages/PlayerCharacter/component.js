@@ -6,6 +6,7 @@ import { uiType } from 'types/ui'
 import { Helmet } from 'react-helmet'
 
 import Header from 'components/Header'
+import PCSheet from 'components/PCSheet'
 import Spinner from 'components/Spinner'
 
 import styled from 'styled-components/macro'
@@ -42,7 +43,7 @@ export const PlayerCharacter = ({
       <StyledWrapper data-testid="player-character">
         {playerCharacter.name && <Header>{playerCharacter.name}</Header>}
         <Suspense fallback={<Spinner />}>
-          <div>Hello!</div>
+          <PCSheet handleSubmit={() => {}} playerCharacter={playerCharacter} />
         </Suspense>
       </StyledWrapper>
       {playersCharactersUi.loading && <Spinner />}

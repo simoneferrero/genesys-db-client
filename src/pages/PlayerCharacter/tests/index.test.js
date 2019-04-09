@@ -82,8 +82,8 @@ describe('<PlayerCharacter />', () => {
       const header = getByText(playerCharacterSummary1Augmented.get('name'))
       expect(header).toBeInTheDocument()
 
-      const message = getByText(/hello/i)
-      expect(message).toBeInTheDocument()
+      const pcSheet = getByTestId(/pc-sheet/i)
+      expect(pcSheet).toBeInTheDocument()
 
       const spinner = queryByTestId(/spinner/i)
       expect(spinner).not.toBeInTheDocument()
@@ -111,14 +111,14 @@ describe('<PlayerCharacter />', () => {
       },
     }))
 
-    const { getByTestId, getByText } = renderComponent()
+    const { getByTestId } = renderComponent()
 
     await wait(() => {
       const playersCharactersWrapper = getByTestId(/player-character/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      const message = getByText(/hello/i)
-      expect(message).toBeInTheDocument()
+      const pcSheet = getByTestId(/pc-sheet/i)
+      expect(pcSheet).toBeInTheDocument()
 
       const spinner = getByTestId(/spinner/i)
       expect(spinner).toBeInTheDocument()
@@ -134,14 +134,14 @@ describe('<PlayerCharacter />', () => {
         playerCharacter: playerCharacterSummary1Response,
       },
     }))
-    const { getByTestId, getByText, queryByTestId } = renderComponent()
+    const { getByTestId, queryByTestId } = renderComponent()
 
     await wait(() => {
       const playersCharactersWrapper = getByTestId(/player-character/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      const message = getByText(/hello/i)
-      expect(message).toBeInTheDocument()
+      const pcSheet = getByTestId(/pc-sheet/i)
+      expect(pcSheet).toBeInTheDocument()
 
       const spinner = queryByTestId(/spinner/i)
       expect(spinner).not.toBeInTheDocument()

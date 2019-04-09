@@ -25,7 +25,8 @@
     "reselect": "^4.0.0",
     "styled-components": "^4.2.0",
     "urijs": "^1.19.1",
-    "url-pattern": "^1.0.3"
+    "url-pattern": "^1.0.3",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.0.6",
