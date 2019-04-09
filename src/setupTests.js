@@ -25,5 +25,8 @@ global.render = render
 global.wait = wait
 global.waitForElement = waitForElement
 
+// Remove error from test
+global.XMLHttpRequest = undefined
+
 // Make environment variables available to Jest by adding them below
 process.env.REACT_APP_API_PATH = apiPath

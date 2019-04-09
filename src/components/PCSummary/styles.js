@@ -2,12 +2,13 @@ import styled, { css } from 'styled-components/macro'
 
 import rgbToRgba from 'utils/rgbToRgba'
 
-import { baseSpacing, colours } from 'styles/constants'
+import { baseSpacing, borderRadius, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
 export const StyledPCSummary = styled.div`
   padding: ${baseSpacing / 2}px;
   border: 2px solid ${colours.lightOrange};
+  border-radius: ${borderRadius}px;
   display: grid;
   grid-gap: ${baseSpacing / 3}px;
   background-color: ${rgbToRgba(colours.lightTeal, 0.1)};

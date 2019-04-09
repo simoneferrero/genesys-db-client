@@ -4,7 +4,6 @@ import { playerCharacterType } from 'types/playersCharacters'
 import { uiType } from 'types/ui'
 
 import { Helmet } from 'react-helmet'
-import { HEAD_INFO } from 'utils/definitions'
 
 import Header from 'components/Header'
 import Spinner from 'components/Spinner'
@@ -39,7 +38,7 @@ export const PlayerCharacter = ({
 
   return (
     <>
-      <Helmet title={HEAD_INFO.PLAYERS_CHARACTERS_TITLE} />
+      <Helmet title={playerCharacter.name} />
       <StyledWrapper data-testid="player-character">
         {playerCharacter.name && <Header>{playerCharacter.name}</Header>}
         <Suspense fallback={<Spinner />}>

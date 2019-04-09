@@ -49,6 +49,7 @@ export const PCSummary = ({
     wounds: { current: currentWounds, total: totalWounds },
   },
   career: { name: careerName },
+  className,
   characteristics: { agility, brawn, cunning, intellect, presence, willpower },
   id,
   name,
@@ -60,7 +61,7 @@ export const PCSummary = ({
     .to.replace(':id', id)
 
   return (
-    <StyledPCSummary data-testid={`pc-summary-${id}`}>
+    <StyledPCSummary className={className} data-testid={`pc-summary-${id}`}>
       <StyledInfoSection>
         <div>
           <h4>Player name:</h4>
@@ -148,17 +149,11 @@ export const PCSummary = ({
 }
 
 PCSummary.propTypes = {
-  ...playerCharacterSummaryData,
+  /** Custom styles */
+  className: PropTypes.string,
+  /** Hides the NavLink to the full character sheet */
   hideLink: PropTypes.bool,
-}
-
-PCSummary.defaultProps = {
-  archetype: {
-    name: '',
-  },
-  career: {
-    name: '',
-  },
+  ...playerCharacterSummaryData,
 }
 
 export default memo(PCSummary)

@@ -57,6 +57,7 @@ const renderComponent = (props = {}, initialState) =>
 
 describe('<PlayerCharacter />', () => {
   const id = `${playerCharacter1Id}`
+
   beforeEach(() => {
     // Do not dispatch correct action so loader is false
     getPlayerCharacter.mockImplementation(() => ({

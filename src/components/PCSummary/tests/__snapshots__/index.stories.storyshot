@@ -4,6 +4,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
 .c0 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
   display: grid;
   grid-gap: 8px;
   background-color: rgba(65,178,180,0.1);

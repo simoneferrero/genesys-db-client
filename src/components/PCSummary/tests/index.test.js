@@ -149,15 +149,4 @@ describe('<PCSummary />', () => {
       expect(link).not.toBeInTheDocument()
     })
   })
-
-  it('should not break if archetype or career are undefined', async () => {
-    const props = {
-      archetype: undefined,
-      career: undefined,
-    }
-    const { getByTestId } = renderedComponent(props)
-
-    const summary = await waitForElement(() => getByTestId(`pc-summary-${id}`))
-    expect(summary).toBeInTheDocument()
-  })
 })
