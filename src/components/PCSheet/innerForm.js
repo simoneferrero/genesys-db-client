@@ -14,6 +14,7 @@ import { StyledForm, StyledSectionWrapper } from './styles'
 const InnerForm = ({
   editing,
   handleSubmit,
+  initialValues,
   isSubmitting,
   setEditing,
   setFieldValue,
@@ -32,7 +33,7 @@ const InnerForm = ({
       isSubmitting={isSubmitting}
       sectionTitle="General"
       setFieldValue={setFieldValue}
-      {...values}
+      {...(editing ? values : initialValues)}
     />
   </StyledForm>
 )
@@ -47,6 +48,8 @@ InnerForm.propTypes = {
   editing: PropTypes.bool,
   /** Errors within the form */
   errors: PropTypes.object.isRequired,
+  /** Form initial values */
+  initialValues: PropTypes.object.isRequired,
   /** Invoked on submit */
   handleSubmit: PropTypes.func.isRequired,
   /** Whether the form is submitting */

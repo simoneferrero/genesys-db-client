@@ -33,7 +33,7 @@ describe('archetypes sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: archetypes,
+          data: { data: archetypes },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(

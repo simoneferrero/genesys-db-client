@@ -3,6 +3,8 @@ import { archetypeType } from './archetypes'
 import { careerType } from './careers'
 
 export const playerCharacterSummaryData = {
+  /** The character's archetype ID */
+  archetype_id: PropTypes.string,
   /** The character's archetype */
   archetype: archetypeType.isRequired,
   /** Information on the character's attributes */
@@ -21,6 +23,8 @@ export const playerCharacterSummaryData = {
       total: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
+  /** The character's career ID */
+  career_id: PropTypes.string,
   /** The character's career */
   career: careerType.isRequired,
   /** Information on the character's characteristics */

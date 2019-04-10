@@ -5,10 +5,11 @@ import {
   playerCharacterSummary1Augmented,
 } from 'mocks/playersCharacters'
 
+const playerCharacter = playerCharacterSummary1Augmented.toJS()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
   handleSubmit: mockHandleSubmit,
-  playerCharacter: playerCharacterSummary1Augmented.toJS(),
+  playerCharacter: playerCharacter,
 }
 
 const renderComponent = (props = {}) =>
@@ -23,7 +24,7 @@ describe('<PCSheet />', () => {
   })
 
   it('should render correctly', () => {
-    const { getByTestId } = renderComponent()
+    const { getByTestId, getByText, queryByText } = renderComponent()
 
     // Buttons
     const buttons = getByTestId(/form-buttons/i)
@@ -37,6 +38,14 @@ describe('<PCSheet />', () => {
 
     // Change form state
     fireEvent.click(editButton)
+
+    const increaseWoundsButton = getByTestId(
+      'increase-attributes.wounds.current',
+    )
+    fireEvent.click(increaseWoundsButton)
+    const newWoundsValue = getByText('12')
+    expect(newWoundsValue).toBeInTheDocument()
+
     const cancelButton = getByTestId(/cancel/i)
     expect(cancelButton).toBeInTheDocument()
     const submitButton = getByTestId(/submit/i)
@@ -44,6 +53,9 @@ describe('<PCSheet />', () => {
 
     fireEvent.click(cancelButton)
     expect(editButton).toBeInTheDocument()
+
+    const previousWoundsValue = queryByText('12')
+    expect(previousWoundsValue).not.toBeInTheDocument()
   })
 
   it('should call handleSubmit on submit', async () => {

@@ -2,6 +2,7 @@ import { Map, Record } from 'immutable'
 
 const PlayerCharacterRecord = Record({
   archetype: null,
+  archetype_id: null,
   attributes: Map({
     defense: Map({
       melee: 0,
@@ -18,6 +19,7 @@ const PlayerCharacterRecord = Record({
     }),
   }),
   career: null,
+  career_id: null,
   characteristics: Map({
     agility: 0,
     brawn: 0,

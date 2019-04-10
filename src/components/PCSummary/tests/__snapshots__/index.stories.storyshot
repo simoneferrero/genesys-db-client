@@ -317,7 +317,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
           13
         </span>
         <span>
-          1
+          11
         </span>
       </h2>
     </div>
@@ -715,7 +715,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
           13
         </span>
         <span>
-          1
+          11
         </span>
       </h2>
       <div

@@ -424,7 +424,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               13
             </span>
             <span>
-              1
+              11
             </span>
           </h2>
         </div>
@@ -886,7 +886,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               13
             </span>
             <span>
-              1
+              11
             </span>
           </h2>
         </div>

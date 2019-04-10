@@ -129,11 +129,11 @@ export const PCSummary = ({
               decrease={() =>
                 setFieldValue('attributes.wounds.current', currentWounds - 1)
               }
-              decreaseDisabled={isSubmitting || currentWounds === 0}
+              decreaseDisabled={isSubmitting || currentWounds <= 0}
               increase={() =>
                 setFieldValue('attributes.wounds.current', currentWounds + 1)
               }
-              increaseDisabled={isSubmitting || currentWounds === totalWounds}
+              increaseDisabled={isSubmitting || currentWounds >= totalWounds}
               name="attributes.wounds.current"
             />
           )}
@@ -149,11 +149,11 @@ export const PCSummary = ({
               decrease={() =>
                 setFieldValue('attributes.strain.current', currentStrain - 1)
               }
-              decreaseDisabled={isSubmitting || currentStrain === 0}
+              decreaseDisabled={isSubmitting || currentStrain <= 0}
               increase={() =>
                 setFieldValue('attributes.strain.current', currentStrain + 1)
               }
-              increaseDisabled={isSubmitting || currentStrain === totalWounds}
+              increaseDisabled={isSubmitting || currentStrain >= totalStrain}
               name="attributes.strain.current"
             />
           )}

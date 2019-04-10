@@ -17,12 +17,10 @@ export const playersCharactersByIdSelector = createSelector(
   careersByIdSelector,
   (playersCharacters, archetypesById, careersById) =>
     playersCharacters.get('byId').map((playerCharacter) => {
-      const playerCharacterArchetype = playerCharacter.get('archetype')
-      const archetype =
-        archetypesById.get(playerCharacterArchetype) || new ArchetypeRecord()
-      const playerCharacterCareer = playerCharacter.get('career')
-      const career =
-        careersById.get(playerCharacterCareer) || new CareerRecord()
+      const archetypeId = playerCharacter.get('archetype_id')
+      const archetype = archetypesById.get(archetypeId) || new ArchetypeRecord()
+      const careerId = playerCharacter.get('career_id')
+      const career = careersById.get(careerId) || new CareerRecord()
 
       return playerCharacter.set('archetype', archetype).set('career', career)
     }),

@@ -12,8 +12,8 @@ export const playerCharacterSummary1Response = {
   id: playerCharacter1Id,
   name: 'Aditi Desai',
   player_name: 'Player 1',
-  archetype: 'clone',
-  career: 'academic',
+  archetype_id: 'clone',
+  career_id: 'academic',
   characteristics: {
     brawn: 2,
     agility: 2,
@@ -26,7 +26,7 @@ export const playerCharacterSummary1Response = {
     soak: 3,
     wounds: {
       total: 13,
-      current: 1,
+      current: 11,
     },
     strain: {
       total: 14,
@@ -56,8 +56,8 @@ export const playerCharacterSummary2Response = {
   id: playerCharacter2Id,
   name: 'Tam Kamaka',
   player_name: 'Player 2',
-  archetype: 'g_mod',
-  career: 'bounty_hunter',
+  archetype_id: 'g_mod',
+  career_id: 'bounty_hunter',
   characteristics: {
     brawn: 3,
     agility: 2,

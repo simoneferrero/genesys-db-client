@@ -66,7 +66,7 @@ describe('playersCharacters sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: playersCharactersResponse,
+          data: { data: playersCharactersResponse },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
@@ -125,7 +125,7 @@ describe('playersCharacters sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: playerCharacterSummary1Response,
+          data: { data: playerCharacterSummary1Response },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
@@ -176,56 +176,30 @@ describe('playersCharacters sagas', () => {
       })
 
       it('should dispatch the correct actions on success', () => {
-        // TODO: reenable selection once API is in place
-        // const {
-        //   attributes: {
-        //     wounds: { current: currentWounds },
-        //     strain: { current: currentStrain },
-        //   },
-        // } = values
-        // const data = JSON.stringify({
-        //   attributes: {
-        //     strain: {
-        //       current: currentStrain,
-        //     },
-        //     wounds: {
-        //       current: currentWounds,
-        //     },
-        //   },
-        // })
         const {
-          archetype: { id: archetypeId },
-          attributes: { wounds, strain, ...otherAttributes },
-          career: { id: careerId },
-          ...otherValues
-        } = values
-        const data = {
-          ...otherValues,
-          archetype: archetypeId,
           attributes: {
-            ...otherAttributes,
-            strain: {
-              ...strain,
-              current: strain.current,
-            },
-            wounds: {
-              ...wounds,
-              current: wounds.current,
-            },
+            wounds: { current: wounds_current },
+            strain: { current: strain_current },
           },
-          career: careerId,
-        }
+        } = values
+        const data = JSON.stringify({
+          wounds_current,
+          strain_current,
+        })
+        const headers = { 'Content-Type': 'application/json' }
+
         const opts = {
+          data,
+          headers,
           method: 'PUT',
           url: `${apiPath}/players-characters/${id}`,
-          data,
         }
         const callAxiosDescriptor = generator.next().value
         const expectedCallAxiosDescriptor = call(axios, opts)
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: playerCharacterSummary1Response,
+          data: { data: playerCharacterSummary1Response },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
