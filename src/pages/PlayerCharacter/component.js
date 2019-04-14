@@ -15,6 +15,7 @@ export const PlayerCharacter = ({
   getArchetypes,
   getCareers,
   getPlayerCharacter,
+  getSkills,
   playerCharacter,
   playerCharacterId,
   playersCharactersUi,
@@ -23,6 +24,7 @@ export const PlayerCharacter = ({
     getArchetypes()
     getCareers()
     getPlayerCharacter(playerCharacterId)
+    getSkills()
   }, [])
 
   const handleSubmit = (values, actions) =>
@@ -52,6 +54,8 @@ PlayerCharacter.propTypes = {
   getArchetypes: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */
   getCareers: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of skills */
+  getSkills: PropTypes.func.isRequired,
   /** Dispatched to fetch player character data */
   getPlayerCharacter: PropTypes.func.isRequired,
   /** Player character data */

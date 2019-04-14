@@ -4,6 +4,7 @@ export const API_SEGMENTS = {
   ARCHETYPES: 'archetypes',
   CAREERS: 'careers',
   PLAYERS_CHARACTERS: 'players-characters',
+  SKILLS: 'skills',
 }
 
 // REST

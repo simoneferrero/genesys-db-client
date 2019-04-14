@@ -12,6 +12,7 @@ import {
   editPlayerCharacter,
   getPlayerCharacter,
 } from 'actions/playersCharacters'
+import { getSkills } from 'actions/skills'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
@@ -28,6 +29,7 @@ const mapDispatchToProps = (dispatch) => ({
   getArchetypes: () => dispatch(getArchetypes()),
   getCareers: () => dispatch(getCareers()),
   getPlayerCharacter: (id) => dispatch(getPlayerCharacter(id)),
+  getSkills: () => dispatch(getSkills()),
 })
 
 export default connect(

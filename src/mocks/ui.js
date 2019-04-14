@@ -6,6 +6,7 @@ export const ui = {
   archetypes: uiRecord(),
   careers: uiRecord(),
   playersCharacters: uiRecord(),
+  skills: uiRecord(),
 }
 
 export const uiElement = {

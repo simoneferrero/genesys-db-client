@@ -9,6 +9,7 @@ import {
   playersCharactersAllIds,
 } from './playersCharacters'
 import { initialRouter, playerCharacterRouter } from './router'
+import { skillsById, skillsAllIds } from './skills'
 import { ui } from './ui'
 
 export const apiPath = 'http://my-api.com'
@@ -27,6 +28,10 @@ export const store = fromJS({
     byId: Map(playersCharactersById),
   }),
   router: playerCharacterRouter,
+  skills: new ReducerRecord({
+    allIds: List(skillsAllIds),
+    byId: Map(skillsById),
+  }),
   ui,
 })
 

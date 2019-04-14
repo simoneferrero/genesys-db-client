@@ -60,6 +60,19 @@ jest.mock('actions/careers', () => {
 })
 import { getCareers } from 'actions/careers'
 
+jest.mock('actions/skills', () => {
+  const { GET_SKILLS } = require('actions/skills/constants')
+  return {
+    getSkills: jest.fn(() => ({
+      type: GET_SKILLS,
+      payload: {},
+    })),
+    getSkillsSuccess: jest.fn(),
+    getSkillsError: jest.fn(),
+  }
+})
+import { getSkills } from 'actions/skills'
+
 const renderComponent = (props = {}, initialState) =>
   render(
     <Suspense fallback="loading...">
@@ -167,6 +180,7 @@ describe('<PlayerCharacter />', () => {
     expect(getCareers).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledWith(id)
+    expect(getSkills).toHaveBeenCalledTimes(1)
   })
 
   it('should call editPlayerCharacter on submit', async () => {

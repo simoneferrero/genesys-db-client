@@ -17,6 +17,7 @@ const defaultProps = {
   getArchetypes: action('getArchetypes'),
   getCareers: action('getCareers'),
   getPlayerCharacter: action('getPlayerCharacter'),
+  getSkills: action('getSkills'),
   playerCharacter: playerCharacterSummary1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
   playersCharactersUi: uiElement,

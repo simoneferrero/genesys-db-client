@@ -6,6 +6,7 @@ import history from 'utils/history'
 import archetypes from './archetypes'
 import careers from './careers'
 import playersCharacters from './playersCharacters'
+import skills from './skills'
 import ui from './ui'
 
 export default combineReducers({
@@ -13,5 +14,6 @@ export default combineReducers({
   careers,
   playersCharacters,
   router: connectRouter(history),
+  skills,
   ui,
 })
