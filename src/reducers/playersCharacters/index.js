@@ -1,6 +1,8 @@
-import { fromJS } from 'immutable'
+import { fromJS, List } from 'immutable'
 
 import uniq from 'lodash/uniq'
+
+import SkillRecord from 'reducers/skills/records'
 
 import {
   GET_PLAYERS_CHARACTERS_SUCCESS,
@@ -30,10 +32,17 @@ export default (state = initialState, { type, payload }) => {
 
     case GET_PLAYER_CHARACTER_SUCCESS:
     case EDIT_PLAYER_CHARACTER_SUCCESS: {
-      const { id, playerCharacter } = payload
+      const {
+        id,
+        playerCharacter: { skills: rawSkills, ...playerCharacter },
+      } = payload
       const allIds = state.get('allIds')
+      const skills = List(rawSkills.map((skill) => new SkillRecord(skill)))
       return state
-        .setIn(['byId', id], new PlayerCharacterRecord(playerCharacter))
+        .setIn(
+          ['byId', id],
+          new PlayerCharacterRecord({ ...playerCharacter, skills }),
+        )
         .set('allIds', fromJS(uniq([...allIds, id])))
     }
 

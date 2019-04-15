@@ -14,8 +14,8 @@ import {
   playerCharacterSummary1Augmented,
   playersCharactersAllIds,
   playersCharactersAugmented,
+  playersCharactersById,
   playersCharactersByIdAugmented,
-  playersCharactersByIdIncomplete,
 } from 'mocks/playersCharacters'
 import ArchetypeRecord from 'reducers/archetypes/records'
 import CareerRecord from 'reducers/careers/records'
@@ -36,12 +36,13 @@ describe('playersCharacters selectors', () => {
       expect(result).toEqual(expectedResult)
     })
 
-    it('should not break if archetypes or careers have not been fetched yet', () => {
+    it('should not break if archetypes, careers or skills have not been fetched yet', () => {
       const modifiedStore = store
         .set('archetypes', new ReducerRecord())
         .set('careers', new ReducerRecord())
+        .set('skills', new ReducerRecord())
       const result = playersCharactersByIdSelector(modifiedStore)
-      const expectedResult = playersCharactersByIdIncomplete
+      const expectedResult = playersCharactersById
       expect(result).toEqual(expectedResult)
     })
   })

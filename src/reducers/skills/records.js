@@ -2,10 +2,10 @@ import { Record } from 'immutable'
 
 const SkillRecord = Record({
   id: null,
-  name: null,
+  name: '',
   characteristic: null,
   type: null,
-  description: null,
+  description: '',
 })
 
 export default SkillRecord

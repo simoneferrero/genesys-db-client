@@ -8,9 +8,8 @@ import PlayerCharacter from '../index'
 import { formikActions, store } from 'mocks'
 import {
   playerCharacter1Id,
-  // TODO: get full player character mocks
-  playerCharacterSummary1Augmented,
-  playerCharacterSummary1Response,
+  playerCharacter1Augmented,
+  playerCharacter1Response,
 } from 'mocks/playersCharacters'
 
 import {
@@ -105,7 +104,7 @@ describe('<PlayerCharacter />', () => {
       const playersCharactersWrapper = getByTestId(/player-character/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      const header = getByText(playerCharacterSummary1Augmented.get('name'))
+      const header = getByText(playerCharacter1Augmented.get('name'))
       expect(header).toBeInTheDocument()
 
       const pcSheet = getByTestId(/pc-sheet/i)
@@ -157,7 +156,7 @@ describe('<PlayerCharacter />', () => {
       type: GET_PLAYER_CHARACTER_SUCCESS,
       payload: {
         id,
-        playerCharacter: playerCharacterSummary1Response,
+        playerCharacter: playerCharacter1Response,
       },
     }))
     const { getByTestId, queryByTestId } = renderComponent()
@@ -188,7 +187,7 @@ describe('<PlayerCharacter />', () => {
       type: EDIT_PLAYER_CHARACTER,
       payload: {
         id,
-        values: playerCharacterSummary1Augmented.toJS(),
+        values: playerCharacter1Augmented.toJS(),
         actions: formikActions,
       },
     }))

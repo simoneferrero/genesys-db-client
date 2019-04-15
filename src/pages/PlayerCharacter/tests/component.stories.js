@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 import {
   playerCharacter1Id,
-  playerCharacterSummary1Augmented,
+  playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
 import { uiElement, uiElementLoading } from 'mocks/ui'
 
@@ -18,7 +18,7 @@ const defaultProps = {
   getCareers: action('getCareers'),
   getPlayerCharacter: action('getPlayerCharacter'),
   getSkills: action('getSkills'),
-  playerCharacter: playerCharacterSummary1Augmented.toJS(),
+  playerCharacter: playerCharacter1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
   playersCharactersUi: uiElement,
 }

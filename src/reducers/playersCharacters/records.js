@@ -1,7 +1,10 @@
-import { Map, Record } from 'immutable'
+import { List, Map, Record } from 'immutable'
+
+import ArchetypeRecord from 'reducers/archetypes/records'
+import CareerRecord from 'reducers/careers/records'
 
 const PlayerCharacterRecord = Record({
-  archetype: null,
+  archetype: new ArchetypeRecord(),
   archetype_id: null,
   attributes: Map({
     defense: Map({
@@ -18,7 +21,7 @@ const PlayerCharacterRecord = Record({
       total: 0,
     }),
   }),
-  career: null,
+  career: new CareerRecord(),
   career_id: null,
   characteristics: Map({
     agility: 0,
@@ -29,8 +32,9 @@ const PlayerCharacterRecord = Record({
     willpower: 0,
   }),
   id: null,
-  name: null,
-  player_name: null,
+  name: '',
+  player_name: '',
+  skills: new List(),
 })
 
 export default PlayerCharacterRecord

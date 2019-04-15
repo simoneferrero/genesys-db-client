@@ -4,7 +4,6 @@ import ReducerRecord from 'reducers/records'
 
 import reducer from '../index'
 import initialState from '../initialState'
-import PlayerCharacterRecord from '../records'
 
 import {
   getPlayerCharacterSuccess,
@@ -14,8 +13,8 @@ import {
 
 import {
   playerCharacter1Id,
-  playerCharacterSummary1,
-  playerCharacterSummary1Response,
+  playerCharacter1,
+  playerCharacter1Response,
   playersCharactersResponse,
   playersCharactersById,
   playersCharactersAllIds,
@@ -47,15 +46,14 @@ describe('playersCharacters reducer', () => {
 
   describe('getPlayerCharacterSuccess', () => {
     const id = `${playerCharacter1Id}`
-    // TODO: use full player character mock
     it('should handle the action correctly from empty store', () => {
       const result = reducer(
         initialState,
-        getPlayerCharacterSuccess(id, playerCharacterSummary1Response),
+        getPlayerCharacterSuccess(id, playerCharacter1Response),
       )
       const expectedResult = new ReducerRecord({
         byId: Map({
-          [id]: playerCharacterSummary1,
+          [id]: playerCharacter1,
         }),
         allIds: List([id]),
       })
@@ -68,16 +66,17 @@ describe('playersCharacters reducer', () => {
         initialState,
         getPlayersCharactersSuccess(playersCharactersResponse),
       )
+      const modifiedName = 'Modified name'
       const modifiedPlayerCharacter1 = {
-        ...playerCharacterSummary1Response,
-        name: 'Modified Name',
+        ...playerCharacter1Response,
+        name: modifiedName,
       }
       const result = reducer(
         fullState,
         getPlayerCharacterSuccess(id, modifiedPlayerCharacter1),
       )
       const modifiedById = {
-        [id]: new PlayerCharacterRecord(modifiedPlayerCharacter1),
+        [id]: playerCharacter1.set('name', modifiedName),
       }
       const expectedResult = fullState.mergeIn(['byId'], modifiedById)
 
@@ -87,22 +86,22 @@ describe('playersCharacters reducer', () => {
 
   describe('editPlayerCharacterSuccess', () => {
     const id = `${playerCharacter1Id}`
-    // TODO: use full player character mock
     it('should handle the action correctly', () => {
       const fullState = reducer(
         initialState,
         getPlayersCharactersSuccess(playersCharactersResponse),
       )
+      const modifiedName = 'Modified name'
       const modifiedPlayerCharacter1 = {
-        ...playerCharacterSummary1Response,
-        name: 'Modified Name',
+        ...playerCharacter1Response,
+        name: modifiedName,
       }
       const result = reducer(
         fullState,
         editPlayerCharacterSuccess(id, modifiedPlayerCharacter1),
       )
       const modifiedById = {
-        [id]: new PlayerCharacterRecord(modifiedPlayerCharacter1),
+        [id]: playerCharacter1.set('name', modifiedName),
       }
       const expectedResult = fullState.mergeIn(['byId'], modifiedById)
 

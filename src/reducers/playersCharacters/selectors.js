@@ -3,9 +3,8 @@ import { createSelector } from 'reselect'
 import { archetypesByIdSelector } from 'reducers/archetypes/selectors'
 import { careersByIdSelector } from 'reducers/careers/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
+import { skillsByIdSelector } from 'reducers/skills/selectors'
 
-import ArchetypeRecord from 'reducers/archetypes/records'
-import CareerRecord from 'reducers/careers/records'
 import PlayerCharacterRecord from 'reducers/playersCharacters/records'
 
 export const playersCharactersSelector = (state) =>
@@ -15,14 +14,27 @@ export const playersCharactersByIdSelector = createSelector(
   playersCharactersSelector,
   archetypesByIdSelector,
   careersByIdSelector,
-  (playersCharacters, archetypesById, careersById) =>
+  skillsByIdSelector,
+  (playersCharacters, archetypesById, careersById, skillsById) =>
     playersCharacters.get('byId').map((playerCharacter) => {
       const archetypeId = playerCharacter.get('archetype_id')
-      const archetype = archetypesById.get(archetypeId) || new ArchetypeRecord()
+      const archetype = archetypesById.get(archetypeId)
       const careerId = playerCharacter.get('career_id')
-      const career = careersById.get(careerId) || new CareerRecord()
+      const career = careersById.get(careerId)
 
-      return playerCharacter.set('archetype', archetype).set('career', career)
+      const augmentedData = {
+        archetype,
+        career,
+        ...(!skillsById.isEmpty() && {
+          skills: playerCharacter.get('skills').map((skill) => {
+            const skillId = skill.get('id')
+            const skillData = skillsById.get(skillId)
+            return skill.merge(skillData)
+          }),
+        }),
+      }
+
+      return playerCharacter.merge(augmentedData)
     }),
 )
 
@@ -41,17 +53,7 @@ export const allPlayersCharactersSelector = createSelector(
 export const currentPlayerCharacterSelector = createSelector(
   playerCharacterIdSelector,
   playersCharactersByIdSelector,
-  (playerCharacterId, playersCharactersById) => {
-    const defaultPlayerCharacter = new PlayerCharacterRecord({
-      archetype: new ArchetypeRecord(),
-      career: new CareerRecord(),
-      id: Number(playerCharacterId),
-      name: '',
-      player_name: '',
-    })
-
-    return (
-      playersCharactersById.get(playerCharacterId) || defaultPlayerCharacter
-    )
-  },
+  (playerCharacterId, playersCharactersById) =>
+    playersCharactersById.get(playerCharacterId) ||
+    new PlayerCharacterRecord({ id: Number(playerCharacterId) }),
 )

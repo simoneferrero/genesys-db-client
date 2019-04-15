@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { archetypeType } from './archetypes'
 import { careerType } from './careers'
+import { skillType } from './skills'
 
 export const playerCharacterSummaryData = {
   /** The character's archetype ID */
@@ -42,6 +43,7 @@ export const playerCharacterSummaryData = {
   name: PropTypes.string.isRequired,
   /** Player's name */
   player_name: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(skillType).isRequired,
 }
 export const playerCharacterSummaryType = PropTypes.shape({
   ...playerCharacterSummaryData,

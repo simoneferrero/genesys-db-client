@@ -1,11 +1,13 @@
-import { fromJS } from 'immutable'
+import { fromJS, List } from 'immutable'
 
 import ArchetypeRecord from 'reducers/archetypes/records'
 import CareerRecord from 'reducers/careers/records'
 import PlayerCharacterRecord from 'reducers/playersCharacters/records'
+import SkillRecord from 'reducers/skills/records'
 
 import { archetype1, archetype2 } from './archetypes'
 import { career1, career2 } from './careers'
+import { skill1, skill2 } from './skills'
 
 export const playerCharacter1Id = 1
 export const playerCharacterSummary1Response = {
@@ -46,11 +48,42 @@ export const playerCharacterSummary1Augmented = new PlayerCharacterRecord({
   archetype: new ArchetypeRecord(archetype1),
   career: new CareerRecord(career1),
 })
-export const playerCharacterSummary1Incomplete = new PlayerCharacterRecord({
+const playerCharacter1Skills = [
+  {
+    id: skill1.id,
+    rank: 2,
+    career: false,
+  },
+  {
+    id: skill2.id,
+    rank: 0,
+    career: true,
+  },
+]
+export const playerCharacter1Response = {
   ...playerCharacterSummary1Response,
-  archetype: new ArchetypeRecord(),
-  career: new CareerRecord(),
+  skills: playerCharacter1Skills,
+}
+export const playerCharacter1 = new PlayerCharacterRecord({
+  ...playerCharacter1Response,
+  skills: List(playerCharacter1Skills.map((skill) => new SkillRecord(skill))),
 })
+export const playerCharacter1Augmented = new PlayerCharacterRecord({
+  ...playerCharacter1Response,
+  archetype: new ArchetypeRecord(archetype1),
+  career: new CareerRecord(career1),
+  skills: List([
+    new SkillRecord({
+      ...skill1,
+      ...playerCharacter1Skills[0],
+    }),
+    new SkillRecord({
+      ...skill2,
+      ...playerCharacter1Skills[1],
+    }),
+  ]),
+})
+
 export const playerCharacter2Id = 2
 export const playerCharacterSummary2Response = {
   id: playerCharacter2Id,
@@ -90,11 +123,6 @@ export const playerCharacterSummary2Augmented = new PlayerCharacterRecord({
   archetype: new ArchetypeRecord(archetype2),
   career: new CareerRecord(career2),
 })
-export const playerCharacterSummary2Incomplete = new PlayerCharacterRecord({
-  ...playerCharacterSummary2Response,
-  archetype: new ArchetypeRecord(),
-  career: new CareerRecord(),
-})
 export const playersCharactersResponse = [
   playerCharacterSummary1Response,
   playerCharacterSummary2Response,
@@ -106,10 +134,6 @@ export const playersCharactersById = fromJS({
 export const playersCharactersByIdAugmented = fromJS({
   [playerCharacter1Id]: playerCharacterSummary1Augmented,
   [playerCharacter2Id]: playerCharacterSummary2Augmented,
-})
-export const playersCharactersByIdIncomplete = fromJS({
-  [playerCharacter1Id]: playerCharacterSummary1Incomplete,
-  [playerCharacter2Id]: playerCharacterSummary2Incomplete,
 })
 export const playersCharactersAllIds = fromJS([
   `${playerCharacter1Id}`,
