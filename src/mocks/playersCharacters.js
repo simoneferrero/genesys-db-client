@@ -53,11 +53,13 @@ const playerCharacter1Skills = [
     id: skill1.id,
     rank: 2,
     career: false,
+    type: skill1.type,
   },
   {
     id: skill2.id,
     rank: 0,
     career: true,
+    type: skill2.type,
   },
 ]
 export const playerCharacter1Response = {

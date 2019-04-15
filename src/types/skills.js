@@ -10,7 +10,8 @@ export const skillData = {
   /** Skill's name */
   name: PropTypes.string.isRequired,
   /** Skill's type */
-  type: PropTypes.oneOf(['general', 'combat', 'social', 'knowledge']),
+  type: PropTypes.oneOf(['general', 'combat', 'social', 'knowledge'])
+    .isRequired,
 }
 
 export const skillType = PropTypes.shape({
