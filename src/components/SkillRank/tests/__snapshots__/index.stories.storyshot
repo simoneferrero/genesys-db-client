@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/SkillRank default 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c1 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(0,130,155);
+  border: solid rgb(30,30,28);
+  border-width: 1px 0;
+}
+
+.c1:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c1:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c1:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(30,30,28);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(0,130,155);
+  left: 72%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c2 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(234,242,246);
+  border: solid rgb(30,30,28);
+  border-width: 1px 0;
+}
+
+.c2:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c2:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c2:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(30,30,28);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(234,242,246);
+  left: 72%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+<div
+  class="c0"
+  data-testid="skill-rank-test"
+>
+  <div>
+    <div
+      class="c1"
+      data-testid="test-1"
+    />
+    <div
+      class="c1"
+      data-testid="test-2"
+    />
+    <div
+      class="c1"
+      data-testid="test-3"
+    />
+    <div
+      class="c2"
+      data-testid="test-4"
+    />
+    <div
+      class="c2"
+      data-testid="test-5"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/SkillRank editing 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c2 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(0,130,155);
+  border: solid rgb(30,30,28);
+  border-width: 1px 0;
+}
+
+.c2:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c2:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c2:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(30,30,28);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(0,130,155);
+  left: 72%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c3 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(234,242,246);
+  border: solid rgb(30,30,28);
+  border-width: 1px 0;
+}
+
+.c3:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c3:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c3:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(30,30,28);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(234,242,246);
+  left: 72%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  color: rgb(242,143,34);
+  padding: 0 6px;
+  font-size: 15px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1:disabled {
+  color: rgb(255,244,233);
+  cursor: not-allowed;
+}
+
+<div
+  class="c0"
+  data-testid="skill-rank-test"
+>
+  <button
+    class="c1"
+    data-testid="decrease-test-rank"
+    disabled=""
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M19 13H5v-2h14v2z"
+      />
+    </svg>
+  </button>
+  <div>
+    <div
+      class="c2"
+      data-testid="test-1"
+    />
+    <div
+      class="c2"
+      data-testid="test-2"
+    />
+    <div
+      class="c2"
+      data-testid="test-3"
+    />
+    <div
+      class="c3"
+      data-testid="test-4"
+    />
+    <div
+      class="c3"
+      data-testid="test-5"
+    />
+  </div>
+  <button
+    class="c1"
+    data-testid="increase-test-rank"
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+      />
+    </svg>
+  </button>
+</div>
+`;
