@@ -48,7 +48,7 @@ export const playerCharacterSummary1Augmented = new PlayerCharacterRecord({
   archetype: new ArchetypeRecord(archetype1),
   career: new CareerRecord(career1),
 })
-const playerCharacter1Skills = [
+export const playerCharacter1Skills = [
   {
     id: skill1.id,
     rank: 2,

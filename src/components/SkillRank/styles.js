@@ -5,7 +5,6 @@ import { baseSpacing, colours } from 'styles/constants'
 
 export const StyledWrapper = styled.div`
   display: flex;
-  padding: ${baseSpacing / 2}px;
   width: fit-content;
 
   & > div {

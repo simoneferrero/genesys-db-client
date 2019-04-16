@@ -6,7 +6,6 @@ exports[`Storyshots Components/SkillRank default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 12px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -133,7 +132,6 @@ exports[`Storyshots Components/SkillRank editing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 12px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
