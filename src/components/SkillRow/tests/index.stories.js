@@ -3,15 +3,13 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { playerCharacter1Skills } from 'mocks/playersCharacters'
-import { skill1, skill2 } from 'mocks/skills'
+import { playerCharacter1SkillsAugmented } from 'mocks/playersCharacters'
 
 import SkillRow from '../index'
 
 const defaultProps = {
-  decrease: action('decrease'),
-  increase: action('increase'),
-  skill: { ...playerCharacter1Skills[0], ...skill1 },
+  onChange: action('onChange'),
+  skill: playerCharacter1SkillsAugmented.toJS()[1],
 }
 
 const renderComponent = (props = {}) => (
@@ -22,7 +20,7 @@ storiesOf('Components/SkillRow', module)
   .add('rank', () => renderComponent())
   .add('career', () => {
     const props = {
-      skill: { ...playerCharacter1Skills[1], ...skill2 },
+      skill: playerCharacter1SkillsAugmented.toJS()[0],
     }
     return renderComponent(props)
   })

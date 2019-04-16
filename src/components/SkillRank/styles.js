@@ -8,6 +8,7 @@ export const StyledWrapper = styled.div`
   width: fit-content;
 
   & > div {
+    margin: 0 ${baseSpacing / 4}px;
     display: flex;
     width: fit-content;
   }
@@ -63,11 +64,11 @@ export const StyledButton = styled.button`
   background: transparent;
   border: none;
   color: ${colours.lightOrange};
-  padding: 0 ${baseSpacing / 4}px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 0;
 
   &:disabled {
     color: ${colours.veryLightOrange};

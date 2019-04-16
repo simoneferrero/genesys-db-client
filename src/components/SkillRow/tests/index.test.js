@@ -3,15 +3,12 @@ import SkillRow from '../index'
 import { colours } from 'styles/constants'
 import rgbToRgba from 'utils/rgbToRgba'
 
-import { playerCharacter1Skills } from 'mocks/playersCharacters'
-import { skill1 } from 'mocks/skills'
+import { playerCharacter1SkillsAugmented } from 'mocks/playersCharacters'
 
-const mockDecrease = jest.fn()
-const mockIncrease = jest.fn()
+const mockOnChange = jest.fn()
 const defaultProps = {
-  decrease: mockDecrease,
-  increase: mockIncrease,
-  skill: { ...playerCharacter1Skills[0], ...skill1 },
+  onChange: mockOnChange,
+  skill: playerCharacter1SkillsAugmented.toJS()[1],
 }
 
 const renderComponent = (props = {}) =>
@@ -25,10 +22,10 @@ describe('<SkillRow />', () => {
     jest.resetAllMocks()
   })
 
-  const { id } = skill1
+  const { id } = defaultProps.skill
 
   it('should render correctly when not editing with no career', () => {
-    const { characteristic, name } = skill1
+    const { characteristic, name } = defaultProps.skill
     const {
       getByLabelText,
       getByTestId,
@@ -102,6 +99,7 @@ describe('<SkillRow />', () => {
   })
 
   it('should render correctly when editing', () => {
+    const { rank } = defaultProps.skill
     const props = {
       editing: true,
     }
@@ -117,10 +115,12 @@ describe('<SkillRow />', () => {
     expect(increaseButton).toBeInTheDocument()
 
     fireEvent.click(decreaseButton)
-    expect(mockDecrease).toHaveBeenCalled()
+    expect(mockOnChange).toHaveBeenCalledTimes(1)
+    expect(mockOnChange).toHaveBeenCalledWith(`skill.${id}.rank`, rank - 1)
 
     fireEvent.click(increaseButton)
-    expect(mockIncrease).toHaveBeenCalled()
+    expect(mockOnChange).toHaveBeenCalledTimes(2)
+    expect(mockOnChange).toHaveBeenCalledWith(`skill.${id}.rank`, rank + 1)
   })
 
   it('should not fire events if buttons are disabled', () => {
@@ -143,9 +143,8 @@ describe('<SkillRow />', () => {
     expect(increaseButton).toBeDisabled()
 
     fireEvent.click(decreaseButton)
-    expect(mockDecrease).not.toHaveBeenCalled()
-
     fireEvent.click(increaseButton)
-    expect(mockIncrease).not.toHaveBeenCalled()
+
+    expect(mockOnChange).not.toHaveBeenCalled()
   })
 })

@@ -6,12 +6,11 @@ import { MdAdd, MdRemove } from 'react-icons/md'
 import { StyledWrapper, StyledRank, StyledButton } from './styles'
 
 const SkillRank = ({
-  decrease,
   decreaseDisabled,
   editing,
   id,
-  increase,
   increaseDisabled,
+  onChange,
   rank,
 }) => (
   <StyledWrapper data-testid={`skill-rank-${id}`}>
@@ -19,7 +18,7 @@ const SkillRank = ({
       <StyledButton
         data-testid={`decrease-${id}-rank`}
         disabled={decreaseDisabled}
-        onClick={decrease}
+        onClick={() => onChange(rank - 1)}
         type="button"
       >
         <MdRemove />
@@ -41,7 +40,7 @@ const SkillRank = ({
       <StyledButton
         data-testid={`increase-${id}-rank`}
         disabled={increaseDisabled}
-        onClick={increase}
+        onClick={() => onChange(rank + 1)}
         type="button"
       >
         <MdAdd />
@@ -51,18 +50,16 @@ const SkillRank = ({
 )
 
 SkillRank.propTypes = {
-  /** Invoked upon clicking on decrease button */
-  decrease: PropTypes.func.isRequired,
   /** Whether decrease button should be disabled */
   decreaseDisabled: PropTypes.bool,
   /** Whether to show the editing buttons */
   editing: PropTypes.bool,
   /** The unique ID of the skill the rank refers to */
   id: PropTypes.string.isRequired,
-  /** Invoked upon clicking on increase button */
-  increase: PropTypes.func.isRequired,
   /** Whether increase button should be disabled */
   increaseDisabled: PropTypes.bool,
+  /** Invoked upon clicking on decrease or increase buttons */
+  onChange: PropTypes.func.isRequired,
   /** The rank of the skill */
   rank: PropTypes.number.isRequired,
 }

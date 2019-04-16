@@ -12,6 +12,7 @@ exports[`Storyshots Components/SkillRow career 1`] = `
 }
 
 .c2 > div {
+  margin: 0 6px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,17 +63,18 @@ exports[`Storyshots Components/SkillRow career 1`] = `
 .c0 {
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr 4fr;
+  grid-template-columns: 4fr 1fr 5fr;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   justify-items: center;
-  padding: 12px;
-  grid-gap: 12px;
+  padding: 8px;
+  grid-gap: 6px;
+  page-break-inside: avoid;
 }
 
-.c0 > h4 {
+.c0 > h5 {
   margin: 0;
   color: rgb(0,130,155);
   width: 100%;
@@ -82,7 +84,7 @@ exports[`Storyshots Components/SkillRow career 1`] = `
 .c1 {
   position: relative;
   cursor: default;
-  font-size: 10px;
+  font-size: 8px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -110,19 +112,19 @@ exports[`Storyshots Components/SkillRow career 1`] = `
 
 <div
   class="c0"
-  data-testid="skill-brawl"
+  data-testid="skill-athletics"
 >
-  <h4>
-    Brawl (BR)
-  </h4>
+  <h5>
+    Athletics (BR)
+  </h5>
   <label
     class="c1"
-    data-testid="skill-career-brawl"
-    name="skill-career-brawl"
+    data-testid="skill-career-athletics"
+    name="skill.athletics.career"
   >
     <input
       disabled=""
-      name="skill-career-brawl"
+      name="skill.athletics.career"
       type="checkbox"
     />
     <span>
@@ -131,28 +133,28 @@ exports[`Storyshots Components/SkillRow career 1`] = `
   </label>
   <div
     class="c2"
-    data-testid="skill-rank-brawl"
+    data-testid="skill-rank-athletics"
   >
     <div>
       <div
         class="c3"
-        data-testid="brawl-1"
+        data-testid="athletics-1"
       />
       <div
         class="c3"
-        data-testid="brawl-2"
+        data-testid="athletics-2"
       />
       <div
         class="c3"
-        data-testid="brawl-3"
+        data-testid="athletics-3"
       />
       <div
         class="c3"
-        data-testid="brawl-4"
+        data-testid="athletics-4"
       />
       <div
         class="c3"
-        data-testid="brawl-5"
+        data-testid="athletics-5"
       />
     </div>
   </div>
@@ -171,6 +173,7 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
 }
 
 .c2 > div {
+  margin: 0 6px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -260,7 +263,6 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
   background: transparent;
   border: none;
   color: rgb(242,143,34);
-  padding: 0 6px;
   font-size: 15px;
   cursor: pointer;
   display: -webkit-box;
@@ -271,6 +273,7 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0;
 }
 
 .c3:disabled {
@@ -281,17 +284,18 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
 .c0 {
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr 4fr;
+  grid-template-columns: 4fr 1fr 5fr;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   justify-items: center;
-  padding: 12px;
-  grid-gap: 12px;
+  padding: 8px;
+  grid-gap: 6px;
+  page-break-inside: avoid;
 }
 
-.c0 > h4 {
+.c0 > h5 {
   margin: 0;
   color: rgb(0,130,155);
   width: 100%;
@@ -301,7 +305,7 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
 .c1 {
   position: relative;
   cursor: default;
-  font-size: 10px;
+  font-size: 8px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -328,19 +332,19 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
 
 <div
   class="c0"
-  data-testid="skill-athletics"
+  data-testid="skill-brawl"
 >
-  <h4>
-    Athletics (BR)
-  </h4>
+  <h5>
+    Brawl (BR)
+  </h5>
   <label
     class="c1"
-    data-testid="skill-career-athletics"
-    name="skill-career-athletics"
+    data-testid="skill-career-brawl"
+    name="skill.brawl.career"
   >
     <input
       disabled=""
-      name="skill-career-athletics"
+      name="skill.brawl.career"
       type="checkbox"
     />
     <span>
@@ -349,11 +353,11 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
   </label>
   <div
     class="c2"
-    data-testid="skill-rank-athletics"
+    data-testid="skill-rank-brawl"
   >
     <button
       class="c3"
-      data-testid="decrease-athletics-rank"
+      data-testid="decrease-brawl-rank"
       type="button"
     >
       <svg
@@ -373,28 +377,28 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
     <div>
       <div
         class="c4"
-        data-testid="athletics-1"
-      />
-      <div
-        class="c4"
-        data-testid="athletics-2"
+        data-testid="brawl-1"
       />
       <div
         class="c5"
-        data-testid="athletics-3"
+        data-testid="brawl-2"
       />
       <div
         class="c5"
-        data-testid="athletics-4"
+        data-testid="brawl-3"
       />
       <div
         class="c5"
-        data-testid="athletics-5"
+        data-testid="brawl-4"
+      />
+      <div
+        class="c5"
+        data-testid="brawl-5"
       />
     </div>
     <button
       class="c3"
-      data-testid="increase-athletics-rank"
+      data-testid="increase-brawl-rank"
       type="button"
     >
       <svg
@@ -427,6 +431,7 @@ exports[`Storyshots Components/SkillRow rank 1`] = `
 }
 
 .c2 > div {
+  margin: 0 6px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -515,17 +520,18 @@ exports[`Storyshots Components/SkillRow rank 1`] = `
 .c0 {
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr 4fr;
+  grid-template-columns: 4fr 1fr 5fr;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   justify-items: center;
-  padding: 12px;
-  grid-gap: 12px;
+  padding: 8px;
+  grid-gap: 6px;
+  page-break-inside: avoid;
 }
 
-.c0 > h4 {
+.c0 > h5 {
   margin: 0;
   color: rgb(0,130,155);
   width: 100%;
@@ -535,7 +541,7 @@ exports[`Storyshots Components/SkillRow rank 1`] = `
 .c1 {
   position: relative;
   cursor: default;
-  font-size: 10px;
+  font-size: 8px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -562,19 +568,19 @@ exports[`Storyshots Components/SkillRow rank 1`] = `
 
 <div
   class="c0"
-  data-testid="skill-athletics"
+  data-testid="skill-brawl"
 >
-  <h4>
-    Athletics (BR)
-  </h4>
+  <h5>
+    Brawl (BR)
+  </h5>
   <label
     class="c1"
-    data-testid="skill-career-athletics"
-    name="skill-career-athletics"
+    data-testid="skill-career-brawl"
+    name="skill.brawl.career"
   >
     <input
       disabled=""
-      name="skill-career-athletics"
+      name="skill.brawl.career"
       type="checkbox"
     />
     <span>
@@ -583,28 +589,28 @@ exports[`Storyshots Components/SkillRow rank 1`] = `
   </label>
   <div
     class="c2"
-    data-testid="skill-rank-athletics"
+    data-testid="skill-rank-brawl"
   >
     <div>
       <div
         class="c3"
-        data-testid="athletics-1"
-      />
-      <div
-        class="c3"
-        data-testid="athletics-2"
+        data-testid="brawl-1"
       />
       <div
         class="c4"
-        data-testid="athletics-3"
+        data-testid="brawl-2"
       />
       <div
         class="c4"
-        data-testid="athletics-4"
+        data-testid="brawl-3"
       />
       <div
         class="c4"
-        data-testid="athletics-5"
+        data-testid="brawl-4"
+      />
+      <div
+        class="c4"
+        data-testid="brawl-5"
       />
     </div>
   </div>

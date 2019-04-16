@@ -5,11 +5,11 @@ import { action } from '@storybook/addon-actions'
 
 import PCSheet from '../index'
 
-import { playerCharacterSummary1Augmented } from 'mocks/playersCharacters'
+import { playerCharacter1Augmented } from 'mocks/playersCharacters'
 
 const defaultProps = {
   handleSubmit: action('handleSubmit'),
-  playerCharacter: playerCharacterSummary1Augmented.toJS(),
+  playerCharacter: playerCharacter1Augmented.toJS(),
 }
 
 const renderComponent = (props = {}) => <PCSheet {...defaultProps} {...props} />

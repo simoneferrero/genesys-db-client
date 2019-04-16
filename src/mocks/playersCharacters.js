@@ -3,11 +3,10 @@ import { fromJS, List } from 'immutable'
 import ArchetypeRecord from 'reducers/archetypes/records'
 import CareerRecord from 'reducers/careers/records'
 import PlayerCharacterRecord from 'reducers/playersCharacters/records'
-import SkillRecord from 'reducers/skills/records'
 
 import { archetype1, archetype2 } from './archetypes'
 import { career1, career2 } from './careers'
-import { skill1, skill2 } from './skills'
+import { skills, skillsById } from './skills'
 
 export const playerCharacter1Id = 1
 export const playerCharacterSummary1Response = {
@@ -48,42 +47,33 @@ export const playerCharacterSummary1Augmented = new PlayerCharacterRecord({
   archetype: new ArchetypeRecord(archetype1),
   career: new CareerRecord(career1),
 })
-export const playerCharacter1Skills = [
-  {
-    id: skill1.id,
-    rank: 2,
-    career: false,
-    type: skill1.type,
-  },
-  {
-    id: skill2.id,
-    rank: 0,
-    career: true,
-    type: skill2.type,
-  },
-]
+export const playerCharacter1Skills = skills.map(({ id, type }, index) => ({
+  id,
+  type,
+  rank: index,
+  career: index % 2 === 0,
+}))
+export const playerCharacter1SkillsAugmented = List(
+  playerCharacter1Skills.map((skill) =>
+    fromJS({
+      ...skill,
+      ...skillsById[skill.id].toJS(),
+    }),
+  ),
+)
 export const playerCharacter1Response = {
   ...playerCharacterSummary1Response,
   skills: playerCharacter1Skills,
 }
 export const playerCharacter1 = new PlayerCharacterRecord({
   ...playerCharacter1Response,
-  skills: List(playerCharacter1Skills.map((skill) => new SkillRecord(skill))),
+  skills: List(playerCharacter1Skills.map((skill) => fromJS(skill))),
 })
 export const playerCharacter1Augmented = new PlayerCharacterRecord({
   ...playerCharacter1Response,
   archetype: new ArchetypeRecord(archetype1),
   career: new CareerRecord(career1),
-  skills: List([
-    new SkillRecord({
-      ...skill1,
-      ...playerCharacter1Skills[0],
-    }),
-    new SkillRecord({
-      ...skill2,
-      ...playerCharacter1Skills[1],
-    }),
-  ]),
+  skills: playerCharacter1SkillsAugmented,
 })
 
 export const playerCharacter2Id = 2

@@ -2,10 +2,10 @@ import PCSheet from '../index'
 
 import {
   playerCharacter1Id,
-  playerCharacterSummary1Augmented,
+  playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
 
-const playerCharacter = playerCharacterSummary1Augmented.toJS()
+const playerCharacter = playerCharacter1Augmented.toJS()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
   handleSubmit: mockHandleSubmit,

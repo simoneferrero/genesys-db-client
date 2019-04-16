@@ -2,13 +2,11 @@ import SkillRank from '../index'
 
 import { colours } from 'styles/constants'
 
-const mockDecrease = jest.fn()
-const mockIncrease = jest.fn()
+const mockOnChange = jest.fn()
 const id = 'test'
 const defaultProps = {
-  decrease: mockDecrease,
   id,
-  increase: mockIncrease,
+  onChange: mockOnChange,
   rank: 3,
 }
 
@@ -64,10 +62,12 @@ describe('<SkillRank />', () => {
     expect(increaseButton).toBeInTheDocument()
 
     fireEvent.click(decreaseButton)
-    expect(mockDecrease).toHaveBeenCalledTimes(1)
+    expect(mockOnChange).toHaveBeenCalledTimes(1)
+    expect(mockOnChange).toHaveBeenCalledWith(defaultProps.rank - 1)
 
     fireEvent.click(increaseButton)
-    expect(mockIncrease).toHaveBeenCalledTimes(1)
+    expect(mockOnChange).toHaveBeenCalledTimes(2)
+    expect(mockOnChange).toHaveBeenCalledWith(defaultProps.rank + 1)
   })
 
   it('should not fire events if buttons are disabled', () => {
@@ -90,9 +90,8 @@ describe('<SkillRank />', () => {
     expect(increaseButton).toBeDisabled()
 
     fireEvent.click(decreaseButton)
-    expect(mockDecrease).not.toHaveBeenCalled()
-
     fireEvent.click(increaseButton)
-    expect(mockIncrease).not.toHaveBeenCalled()
+
+    expect(mockOnChange).not.toHaveBeenCalled()
   })
 })

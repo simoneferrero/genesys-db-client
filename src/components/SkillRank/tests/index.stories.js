@@ -6,9 +6,8 @@ import { action } from '@storybook/addon-actions'
 import SkillRank from '../index'
 
 const defaultProps = {
-  decrease: action('decrease'),
   id: 'test',
-  increase: action('increase'),
+  onChange: action('increase'),
   rank: 3,
 }
 

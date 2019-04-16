@@ -11,13 +11,14 @@ import rgbToRgba from 'utils/rgbToRgba'
 const StyledWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr 4fr;
+  grid-template-columns: 4fr 1fr 5fr;
   align-items: center;
   justify-items: center;
-  padding: ${baseSpacing / 2}px;
-  grid-gap: ${baseSpacing / 2}px;
+  padding: ${baseSpacing / 3}px;
+  grid-gap: ${baseSpacing / 4}px;
+  page-break-inside: avoid;
 
-  & > h4 {
+  & > h5 {
     margin: 0;
     color: ${colours.teal};
     width: 100%;
@@ -38,7 +39,7 @@ const StyledCheckbox = styled.label`
   position: relative;
   ${'' /* TODO: change cursor when creating character */}
   cursor: default;
-  font-size: 10px;
+  font-size: 8px;
   user-select: none;
   display: flex;
   border: 1px solid;
@@ -57,47 +58,43 @@ const StyledCheckbox = styled.label`
 `
 
 const SkillRow = ({
-  decrease,
   decreaseDisabled,
   editing,
-  increase,
   increaseDisabled,
+  onChange,
   skill: { career, characteristic, id, name, rank },
 }) => (
   <StyledWrapper data-testid={`skill-${id}`}>
-    <h4>{`${name} (${characteristic.substring(0, 2).toUpperCase()})`}</h4>
+    <h5>{`${name} (${characteristic.substring(0, 2).toUpperCase()})`}</h5>
     <StyledCheckbox
       data-testid={`skill-career-${id}`}
-      name={`skill-career-${id}`}
+      name={`skill.${id}.career`}
       checked={career}
+      // onChange={(value) => onChange(`skill.${id}.career`, value)}
     >
-      <input disabled name={`skill-career-${id}`} type="checkbox" />
+      <input disabled name={`skill.${id}.career`} type="checkbox" />
       <span>CAREER</span>
     </StyledCheckbox>
     <SkillRank
-      // TODO: pass unique onchange function
-      decrease={decrease}
       decreaseDisabled={decreaseDisabled}
       editing={editing}
       id={id}
-      increase={increase}
       increaseDisabled={increaseDisabled}
+      onChange={(value) => onChange(`skill.${id}.rank`, value)}
       rank={rank}
     />
   </StyledWrapper>
 )
 
 SkillRow.propTypes = {
-  /** Invoked upon clicking on decrease button */
-  decrease: PropTypes.func.isRequired,
   /** Whether decrease button should be disabled */
   decreaseDisabled: PropTypes.bool,
   /** Whether to show the editing buttons */
   editing: PropTypes.bool,
-  /** Invoked upon clicking on increase button */
-  increase: PropTypes.func.isRequired,
   /** Whether increase button should be disabled */
   increaseDisabled: PropTypes.bool,
+  /** Invoked upon changing skill values */
+  onChange: PropTypes.func.isRequired,
   /** The skill to visualize */
   skill: skillType.isRequired,
 }

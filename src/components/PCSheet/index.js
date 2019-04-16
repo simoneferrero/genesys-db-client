@@ -15,7 +15,7 @@ const PCSheet = ({ handleSubmit, playerCharacter }) => {
   return (
     <Formik
       enableReinitialize
-      initialValues={playerCharacter}
+      initialValues={playerCharacter} // TODO: transform skills array to object (keyBy(skills, 'id')
       onSubmit={augmentedHandleSubmit}
       render={(props) => (
         <InnerForm editing={editing} setEditing={setEditing} {...props} />
