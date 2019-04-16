@@ -14,6 +14,7 @@ export const playerCharacterIdSelector = createSelector(
     // Get player character ID from pathname
     const pattern = new UrlPattern(url)
     const pathname = router.getIn(['location', 'pathname'])
-    return pattern.match(pathname).id
+    const match = pattern.match(pathname)
+    return match ? match.id : null
   },
 )

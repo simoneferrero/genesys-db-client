@@ -1,5 +1,7 @@
 import { playerCharacterIdSelector, routerSelector } from '../selectors'
 
+import { fromJS } from 'immutable'
+
 import { store } from 'mocks'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
 
@@ -17,6 +19,12 @@ describe('router selectors', () => {
       const result = playerCharacterIdSelector(store)
       const expectedResult = `${playerCharacter1Id}`
       expect(result).toEqual(expectedResult)
+    })
+
+    it('should return null if pathname is not defined', () => {
+      const modifiedStore = store.setIn(['router', 'location'], fromJS({}))
+      const result = playerCharacterIdSelector(modifiedStore)
+      expect(result).toBeNull()
     })
   })
 })
