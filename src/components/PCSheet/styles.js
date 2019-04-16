@@ -10,11 +10,14 @@ import {
 const sectionTitleHeight = 20
 
 export const StyledForm = styled.form`
-  display: grid;
-  grid-column: 1fr;
-  grid-gap: ${(baseSpacing * 3) / 2}px;
+  width: 100vw;
   padding: ${baseSpacing}px ${baseSpacing * 2}px;
   padding-top: ${baseSpacing + headerHeight}px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: ${baseSpacing}px;
+  grid-row-gap: ${baseSpacing}px;
+  box-sizing: border-box;
 `
 
 export const StyledSectionWrapper = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { playerCharacterType } from 'types/playersCharacters'
+import { playerCharacterData } from 'types/playersCharacters'
+import { skillType } from 'types/skills'
 
 import * as yup from 'yup'
 
@@ -8,6 +9,7 @@ import { Form } from 'formik'
 
 import FormButtons from 'components/FormButtons'
 import PCSummary from 'components/PCSummary'
+import Skills from 'components/Skills'
 
 import { StyledForm, StyledSectionWrapper } from './styles'
 
@@ -35,6 +37,15 @@ const InnerForm = ({
       setFieldValue={setFieldValue}
       {...(editing ? values : initialValues)}
     />
+    <StyledSectionWrapper
+      as={Skills}
+      editing={editing}
+      initialSkills={initialValues.skills}
+      isSubmitting={isSubmitting}
+      onChange={setFieldValue}
+      sectionTitle="Skills"
+      skills={values.skills}
+    />
   </StyledForm>
 )
 
@@ -61,7 +72,10 @@ InnerForm.propTypes = {
   /** Touched fields */
   touched: PropTypes.object.isRequired,
   /** Form values */
-  values: playerCharacterType.isRequired,
+  values: PropTypes.shape({
+    ...playerCharacterData,
+    skills: PropTypes.objectOf(skillType).isRequired,
+  }).isRequired,
 }
 
 export default InnerForm

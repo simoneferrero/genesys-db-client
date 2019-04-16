@@ -76,7 +76,7 @@ describe('<Skills />', () => {
       if (id === 'stealth') {
         expect(mockOnChange).toHaveBeenCalledTimes(1)
         expect(mockOnChange).toHaveBeenCalledWith(
-          `skill.${id}.rank`,
+          `skills.${id}.rank`,
           skills[id].rank - 1,
         )
       } else {
@@ -91,7 +91,7 @@ describe('<Skills />', () => {
       expect(mockOnChange).toHaveBeenCalledTimes(1)
       if (id !== 'stealth') {
         expect(mockOnChange).toHaveBeenCalledWith(
-          `skill.${id}.rank`,
+          `skills.${id}.rank`,
           skills[id].rank + 1,
         )
       }

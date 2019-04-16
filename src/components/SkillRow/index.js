@@ -6,17 +6,22 @@ import SkillRank from 'components/SkillRank'
 
 import styled, { css } from 'styled-components/macro'
 import { baseSpacing, colours } from 'styles/constants'
+import mq from 'styles/mediaQueries'
 import rgbToRgba from 'utils/rgbToRgba'
 
 const StyledWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 4fr 1fr 5fr;
   align-items: center;
   justify-items: center;
   padding: ${baseSpacing / 3}px;
   grid-gap: ${baseSpacing / 4}px;
   page-break-inside: avoid;
+  grid-template-columns: 5fr 1fr 6fr;
+
+  @media ${mq.phone} {
+    grid-template-columns: 5fr 1fr;
+  }
 
   & > h5 {
     margin: 0;
@@ -39,7 +44,7 @@ const StyledCheckbox = styled.label`
   position: relative;
   ${'' /* TODO: change cursor when creating character */}
   cursor: default;
-  font-size: 8px;
+  font-size: 6px;
   user-select: none;
   display: flex;
   border: 1px solid;
@@ -70,9 +75,9 @@ const SkillRow = ({
       data-testid={`skill-career-${id}`}
       name={`skill.${id}.career`}
       checked={career}
-      // onChange={(value) => onChange(`skill.${id}.career`, value)}
+      // onChange={(value) => onChange(`skills.${id}.career`, value)}
     >
-      <input disabled name={`skill.${id}.career`} type="checkbox" />
+      <input disabled name={`skills.${id}.career`} type="checkbox" />
       <span>CAREER</span>
     </StyledCheckbox>
     <SkillRank
@@ -80,7 +85,7 @@ const SkillRow = ({
       editing={editing}
       id={id}
       increaseDisabled={increaseDisabled}
-      onChange={(value) => onChange(`skill.${id}.rank`, value)}
+      onChange={(value) => onChange(`skills.${id}.rank`, value)}
       rank={rank}
     />
   </StyledWrapper>

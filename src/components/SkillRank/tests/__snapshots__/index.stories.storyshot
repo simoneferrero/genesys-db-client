@@ -22,6 +22,44 @@ exports[`Storyshots Components/SkillRank default 1`] = `
   width: fit-content;
 }
 
+.c2 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(234,242,246);
+  border: solid rgb(30,30,28);
+  border-width: 1px 0;
+}
+
+.c2:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c2:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c2:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(30,30,28);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(234,242,246);
+  left: 72%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
 .c1 {
   position: relative;
   overflow: visible;
@@ -60,42 +98,10 @@ exports[`Storyshots Components/SkillRank default 1`] = `
   position: absolute;
 }
 
-.c2 {
-  position: relative;
-  overflow: visible;
-  height: 20px;
-  width: 30px;
-  background-color: rgb(234,242,246);
-  border: solid rgb(30,30,28);
-  border-width: 1px 0;
-}
-
-.c2:first-child {
-  border-left-width: 1px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.c2:last-child {
-  border-right-width: 1px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.c2:not(:last-child)::after {
-  content: '';
-  height: 13px;
-  width: 13px;
-  border: solid rgb(30,30,28);
-  border-width: 0 1px 1px 0;
-  background-color: rgb(234,242,246);
-  left: 72%;
-  top: 2px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  z-index: 899;
-  position: absolute;
+@media only screen and (max-width:599px) {
+  .c0 {
+    grid-column: 1/3;
+  }
 }
 
 <div
@@ -149,44 +155,6 @@ exports[`Storyshots Components/SkillRank editing 1`] = `
   width: fit-content;
 }
 
-.c2 {
-  position: relative;
-  overflow: visible;
-  height: 20px;
-  width: 30px;
-  background-color: rgb(0,130,155);
-  border: solid rgb(30,30,28);
-  border-width: 1px 0;
-}
-
-.c2:first-child {
-  border-left-width: 1px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.c2:last-child {
-  border-right-width: 1px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.c2:not(:last-child)::after {
-  content: '';
-  height: 13px;
-  width: 13px;
-  border: solid rgb(30,30,28);
-  border-width: 0 1px 1px 0;
-  background-color: rgb(0,130,155);
-  left: 72%;
-  top: 2px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  z-index: 899;
-  position: absolute;
-}
-
 .c3 {
   position: relative;
   overflow: visible;
@@ -225,6 +193,44 @@ exports[`Storyshots Components/SkillRank editing 1`] = `
   position: absolute;
 }
 
+.c2 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(0,130,155);
+  border: solid rgb(30,30,28);
+  border-width: 1px 0;
+}
+
+.c2:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c2:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c2:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(30,30,28);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(0,130,155);
+  left: 72%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
 .c1 {
   background: transparent;
   border: none;
@@ -245,6 +251,12 @@ exports[`Storyshots Components/SkillRank editing 1`] = `
 .c1:disabled {
   color: rgb(255,244,233);
   cursor: not-allowed;
+}
+
+@media only screen and (max-width:599px) {
+  .c0 {
+    grid-column: 1/3;
+  }
 }
 
 <div

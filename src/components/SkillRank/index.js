@@ -61,7 +61,11 @@ SkillRank.propTypes = {
   /** Invoked upon clicking on decrease or increase buttons */
   onChange: PropTypes.func.isRequired,
   /** The rank of the skill */
-  rank: PropTypes.number.isRequired,
+  rank: PropTypes.number,
+}
+
+SkillRank.defaultProps = {
+  rank: 0,
 }
 
 export default SkillRank

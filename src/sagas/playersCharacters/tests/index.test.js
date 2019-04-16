@@ -1,6 +1,8 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects'
 import axios from 'axios'
 
+import keyBy from 'lodash/keyBy'
+
 import rootSaga, {
   // getPlayersCharacters
   getPlayersCharactersSaga,
@@ -38,9 +40,8 @@ import {
 import { apiPath, formikActions } from 'mocks'
 import {
   playerCharacter1Id,
-  // TODO: use full player character mock
-  playerCharacterSummary1Augmented,
-  playerCharacterSummary1Response,
+  playerCharacter1Augmented,
+  playerCharacter1Response,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
 import { genericError } from 'mocks/errors'
@@ -125,11 +126,11 @@ describe('playersCharacters sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: { data: playerCharacterSummary1Response },
+          data: { data: playerCharacter1Response },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
-          getPlayerCharacterSuccess(id, playerCharacterSummary1Response),
+          getPlayerCharacterSuccess(id, playerCharacter1Response),
         )
         expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
       })
@@ -165,7 +166,14 @@ describe('playersCharacters sagas', () => {
 
   describe('editPlayerCharacterSaga', () => {
     const id = `${playerCharacter1Id}`
-    const values = playerCharacterSummary1Augmented.toJS()
+    const {
+      skills: rawSkills,
+      ...playerCharacter
+    } = playerCharacter1Augmented.toJS()
+    const values = {
+      ...playerCharacter,
+      skills: keyBy(rawSkills, 'id'),
+    }
     const action = editPlayerCharacter(id, values, formikActions)
 
     describe('editPlayerCharacterSaga', () => {
@@ -184,6 +192,9 @@ describe('playersCharacters sagas', () => {
         } = values
         const data = JSON.stringify({
           wounds_current,
+          skills: rawSkills
+            .filter(({ rank }) => rank)
+            .map(({ id, rank }) => ({ id, rank })),
           strain_current,
         })
         const headers = { 'Content-Type': 'application/json' }
@@ -199,11 +210,11 @@ describe('playersCharacters sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: { data: playerCharacterSummary1Response },
+          data: { data: playerCharacter1Response },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
-          editPlayerCharacterSuccess(id, playerCharacterSummary1Response),
+          editPlayerCharacterSuccess(id, playerCharacter1Response),
         )
         expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
 

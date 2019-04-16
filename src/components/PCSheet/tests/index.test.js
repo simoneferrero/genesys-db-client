@@ -5,6 +5,8 @@ import {
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
 
+import { colours } from 'styles/constants'
+
 const playerCharacter = playerCharacter1Augmented.toJS()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
@@ -36,9 +38,14 @@ describe('<PCSheet />', () => {
     const pcSummary = getByTestId(`pc-summary-${playerCharacter1Id}`)
     expect(pcSummary).toBeInTheDocument()
 
+    // Skills
+    const skills = getByTestId(/skills/i)
+    expect(skills).toBeInTheDocument()
+
     // Change form state
     fireEvent.click(editButton)
 
+    // Check attributes change
     const increaseWoundsButton = getByTestId(
       'increase-attributes.wounds.current',
     )
@@ -46,6 +53,18 @@ describe('<PCSheet />', () => {
     const newWoundsValue = getByText('12')
     expect(newWoundsValue).toBeInTheDocument()
 
+    // Check skills change
+    const athleticsRank = getByTestId('athletics-1')
+    expect(athleticsRank).toBeInTheDocument()
+    expect(athleticsRank).toHaveStyle(
+      `background-color: ${colours.veryLightBlue}`,
+    )
+    const increaseAthleticsButton = getByTestId('increase-athletics-rank')
+    expect(increaseAthleticsButton).toBeInTheDocument()
+    fireEvent.click(increaseAthleticsButton)
+    expect(athleticsRank).toHaveStyle(`background-color: ${colours.teal}`)
+
+    // Form buttons
     const cancelButton = getByTestId(/cancel/i)
     expect(cancelButton).toBeInTheDocument()
     const submitButton = getByTestId(/submit/i)

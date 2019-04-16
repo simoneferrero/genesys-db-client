@@ -116,11 +116,11 @@ describe('<SkillRow />', () => {
 
     fireEvent.click(decreaseButton)
     expect(mockOnChange).toHaveBeenCalledTimes(1)
-    expect(mockOnChange).toHaveBeenCalledWith(`skill.${id}.rank`, rank - 1)
+    expect(mockOnChange).toHaveBeenCalledWith(`skills.${id}.rank`, rank - 1)
 
     fireEvent.click(increaseButton)
     expect(mockOnChange).toHaveBeenCalledTimes(2)
-    expect(mockOnChange).toHaveBeenCalledWith(`skill.${id}.rank`, rank + 1)
+    expect(mockOnChange).toHaveBeenCalledWith(`skills.${id}.rank`, rank + 1)
   })
 
   it('should not fire events if buttons are disabled', () => {

@@ -43,7 +43,6 @@ export const playerCharacterSummaryData = {
   name: PropTypes.string.isRequired,
   /** Player's name */
   player_name: PropTypes.string.isRequired,
-  skills: PropTypes.arrayOf(skillType).isRequired,
 }
 export const playerCharacterSummaryType = PropTypes.shape({
   ...playerCharacterSummaryData,
@@ -51,6 +50,7 @@ export const playerCharacterSummaryType = PropTypes.shape({
 
 export const playerCharacterData = {
   ...playerCharacterSummaryData,
+  skills: PropTypes.arrayOf(skillType).isRequired,
 }
 export const playerCharacterType = PropTypes.shape({
   ...playerCharacterData,

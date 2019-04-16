@@ -189,12 +189,6 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   }
 }
 
-@media only screen and (min-width:1800px) {
-  .c3 > div h2 {
-    top: 23px;
-  }
-}
-
 <div
   class="c0"
   data-testid="pc-summary-1"
@@ -584,12 +578,6 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c3 {
     grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media only screen and (min-width:1800px) {
-  .c3 > div h2 {
-    top: 23px;
   }
 }
 

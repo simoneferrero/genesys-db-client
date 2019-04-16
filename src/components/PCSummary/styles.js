@@ -118,10 +118,6 @@ export const StyledAttributesSection = styled.section`
       grid-column-gap: ${(baseSpacing * 2) / 3}px;
       text-align: right;
 
-      @media ${mq.bigDesktop} {
-        top: 23px;
-      }
-
       & span:nth-child(2) {
         text-align: left;
       }

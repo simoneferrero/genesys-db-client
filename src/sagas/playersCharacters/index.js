@@ -78,11 +78,18 @@ export function* editPlayerCharacterSaga({
         wounds: { current: wounds_current },
         strain: { current: strain_current },
       },
+      skills,
     },
   },
 }) {
   const data = JSON.stringify({
     wounds_current,
+    skills: Object.values(skills)
+      .filter(({ rank }) => rank)
+      .map(({ id, rank }) => ({
+        id,
+        rank,
+      })),
     strain_current,
   })
   const requestUrl = uri(API_PATH)

@@ -2,10 +2,15 @@ import React from 'react'
 
 import styled from 'styled-components/macro'
 import { baseSpacing, colours } from 'styles/constants'
+import mq from 'styles/mediaQueries'
 
 export const StyledWrapper = styled.div`
   display: flex;
   width: fit-content;
+
+  @media ${mq.phone} {
+    grid-column: 1/3;
+  }
 
   & > div {
     margin: 0 ${baseSpacing / 4}px;
