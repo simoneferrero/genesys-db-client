@@ -6,28 +6,38 @@ import ReducerRecord from 'reducers/records'
 import PlayerCharacter from '../index'
 
 import { formikActions, store } from 'mocks'
+import { newFavor } from 'mocks/favors'
 import {
   playerCharacter1Id,
   playerCharacter1Augmented,
   playerCharacter1Response,
 } from 'mocks/playersCharacters'
 
+import { ADD_FAVOR } from 'actions/favors/constants'
 import {
   EDIT_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
 
-jest.mock('actions/playersCharacters', () => {
-  return {
-    editPlayerCharacter: jest.fn(),
-    editPlayerCharacterSuccess: jest.fn(),
-    editPlayerCharacterError: jest.fn(),
-    getPlayerCharacter: jest.fn(),
-    getPlayerCharacterSuccess: jest.fn(),
-    getPlayerCharacterError: jest.fn(),
-  }
-})
+jest.mock('actions/favors', () => ({
+  addFavor: jest.fn(),
+  addFavorSuccess: jest.fn(),
+  addFavorError: jest.fn(),
+}))
+import { addFavor } from 'actions/favors'
+
+jest.mock('actions/playersCharacters', () => ({
+  editPlayerCharacter: jest.fn(),
+  editPlayerCharacterSuccess: jest.fn(),
+  editPlayerCharacterError: jest.fn(),
+  getPlayerCharacter: jest.fn(),
+  getPlayerCharacterSuccess: jest.fn(),
+  getPlayerCharacterError: jest.fn(),
+  getPlayersCharacters: jest.fn(),
+  getPlayersCharactersSuccess: jest.fn(),
+  getPlayersCharactersError: jest.fn(),
+}))
 import {
   editPlayerCharacter,
   getPlayerCharacter,
@@ -170,6 +180,31 @@ describe('<PlayerCharacter />', () => {
 
       const spinner = queryByTestId(/spinner/i)
       expect(spinner).not.toBeInTheDocument()
+    })
+  })
+
+  // TODO: implement once UI is in place
+  xit('should display a loader if favor is loading', async () => {
+    addFavor.mockImplementation(() => ({
+      type: ADD_FAVOR,
+      payload: {
+        actions: formikActions,
+        favor: newFavor,
+        playerCharacterId: id,
+      },
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    await wait(() => {
+      const playersCharactersWrapper = getByTestId(/player-character/i)
+      expect(playersCharactersWrapper).toBeInTheDocument()
+
+      const pcSheet = getByTestId(/pc-sheet/i)
+      expect(pcSheet).toBeInTheDocument()
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
     })
   })
 

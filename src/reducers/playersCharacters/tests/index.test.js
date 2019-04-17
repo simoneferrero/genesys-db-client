@@ -1,23 +1,26 @@
-import { List, Map } from 'immutable'
+import { fromJS, List, Map } from 'immutable'
 
 import ReducerRecord from 'reducers/records'
 
 import reducer from '../index'
 import initialState from '../initialState'
 
+import { addFavorSuccess } from 'actions/favors'
 import {
   getPlayerCharacterSuccess,
   getPlayersCharactersSuccess,
   editPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
 
+import { newFavorResponse } from 'mocks/favors'
 import {
-  playerCharacter1Id,
   playerCharacter1,
+  playerCharacter1Favors,
+  playerCharacter1Id,
   playerCharacter1Response,
-  playersCharactersResponse,
-  playersCharactersById,
   playersCharactersAllIds,
+  playersCharactersById,
+  playersCharactersResponse,
 } from 'mocks/playersCharacters'
 
 describe('playersCharacters reducer', () => {
@@ -36,8 +39,8 @@ describe('playersCharacters reducer', () => {
         getPlayersCharactersSuccess(playersCharactersResponse),
       )
       const expectedResult = new ReducerRecord({
-        allIds: List(playersCharactersAllIds),
-        byId: Map(playersCharactersById),
+        allIds: playersCharactersAllIds,
+        byId: playersCharactersById,
       })
 
       expect(result).toEqual(expectedResult)
@@ -104,6 +107,23 @@ describe('playersCharacters reducer', () => {
         [id]: playerCharacter1.set('name', modifiedName),
       }
       const expectedResult = fullState.mergeIn(['byId'], modifiedById)
+
+      expect(result).toEqual(expectedResult)
+    })
+  })
+
+  describe('addFavorSuccess', () => {
+    const id = `${playerCharacter1Id}`
+    it('should handle the action correctly', () => {
+      const fullState = reducer(
+        initialState,
+        getPlayerCharacterSuccess(id, playerCharacter1Response),
+      )
+      const result = reducer(fullState, addFavorSuccess(id, newFavorResponse))
+      const expectedResult = fullState.setIn(
+        ['byId', id, 'favors'],
+        fromJS([...playerCharacter1Favors, newFavorResponse]),
+      )
 
       expect(result).toEqual(expectedResult)
     })

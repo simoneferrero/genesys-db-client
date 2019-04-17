@@ -12,6 +12,7 @@ import Spinner from 'components/Spinner'
 /** Summary of all players' characters. */
 export const PlayerCharacter = ({
   editPlayerCharacter,
+  favorsUi,
   getArchetypes,
   getCareers,
   getPlayerCharacter,
@@ -30,6 +31,8 @@ export const PlayerCharacter = ({
   const handleSubmit = (values, actions) =>
     editPlayerCharacter(playerCharacterId, values, actions)
 
+  const loading = playersCharactersUi.loading || favorsUi.loading
+
   return (
     <>
       <Helmet title={playerCharacter.name} />
@@ -42,7 +45,7 @@ export const PlayerCharacter = ({
           />
         </Suspense>
       </div>
-      {playersCharactersUi.loading && <Spinner />}
+      {loading && <Spinner />}
     </>
   )
 }
@@ -50,6 +53,8 @@ export const PlayerCharacter = ({
 PlayerCharacter.propTypes = {
   /** Dispatched to edit the current player's character */
   editPlayerCharacter: PropTypes.func.isRequired,
+  /** Favors loader and error information */
+  favorsUi: uiType.isRequired,
   /** Dispatched to fetch a list of archetypes */
   getArchetypes: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */

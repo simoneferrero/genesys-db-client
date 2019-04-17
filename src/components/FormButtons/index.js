@@ -27,8 +27,8 @@ export const StyledButton = styled.button`
   }
 `
 
-const FormButtons = ({ disabled, editing, setEditing }) => (
-  <StyledFormButtons data-testid="form-buttons">
+const FormButtons = ({ className, disabled, editing, setEditing }) => (
+  <StyledFormButtons className={className} data-testid="form-buttons">
     {editing === false ? (
       <StyledButton
         data-testid="edit"
@@ -57,6 +57,8 @@ const FormButtons = ({ disabled, editing, setEditing }) => (
 )
 
 FormButtons.propTypes = {
+  /** Custom styles */
+  className: PropTypes.string,
   /** Whether the buttons are disabled */
   disabled: PropTypes.bool,
   /** Whether the buttons are in editing or static mode */

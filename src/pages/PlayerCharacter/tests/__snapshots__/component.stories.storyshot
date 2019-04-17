@@ -211,8 +211,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   overflow: visible;
   height: 20px;
   width: 30px;
-  background-color: rgb(234,242,246);
-  border: solid rgb(30,30,28);
+  background-color: transparent;
+  border: solid rgb(65,178,180);
   border-width: 1px 0;
 }
 
@@ -232,10 +232,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   content: '';
   height: 13px;
   width: 13px;
-  border: solid rgb(30,30,28);
+  border: solid rgb(65,178,180);
   border-width: 0 1px 1px 0;
-  background-color: rgb(234,242,246);
-  left: 72%;
+  background-color: transparent;
+  left: 73%;
   top: 2px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -250,7 +250,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   height: 20px;
   width: 30px;
   background-color: rgb(0,130,155);
-  border: solid rgb(30,30,28);
+  border: solid rgb(65,178,180);
   border-width: 1px 0;
 }
 
@@ -270,10 +270,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   content: '';
   height: 13px;
   width: 13px;
-  border: solid rgb(30,30,28);
+  border: solid rgb(234,242,246);
   border-width: 0 1px 1px 0;
   background-color: rgb(0,130,155);
-  left: 72%;
+  left: 73%;
   top: 2px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -1232,8 +1232,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   overflow: visible;
   height: 20px;
   width: 30px;
-  background-color: rgb(234,242,246);
-  border: solid rgb(30,30,28);
+  background-color: transparent;
+  border: solid rgb(65,178,180);
   border-width: 1px 0;
 }
 
@@ -1253,10 +1253,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   content: '';
   height: 13px;
   width: 13px;
-  border: solid rgb(30,30,28);
+  border: solid rgb(65,178,180);
   border-width: 0 1px 1px 0;
-  background-color: rgb(234,242,246);
-  left: 72%;
+  background-color: transparent;
+  left: 73%;
   top: 2px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -1271,7 +1271,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   height: 20px;
   width: 30px;
   background-color: rgb(0,130,155);
-  border: solid rgb(30,30,28);
+  border: solid rgb(65,178,180);
   border-width: 1px 0;
 }
 
@@ -1291,10 +1291,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   content: '';
   height: 13px;
   width: 13px;
-  border: solid rgb(30,30,28);
+  border: solid rgb(234,242,246);
   border-width: 0 1px 1px 0;
   background-color: rgb(0,130,155);
-  left: 72%;
+  left: 73%;
   top: 2px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);

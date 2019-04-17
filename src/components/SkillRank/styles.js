@@ -32,9 +32,8 @@ export const StyledRank = styled(FilteredStyledRank)`
   overflow: visible;
   height: 20px;
   width: 30px;
-  background-color: ${({ fill }) =>
-    fill ? colours.teal : colours.veryLightBlue};
-  border: solid ${colours.veryDarkGrey};
+  background-color: ${({ fill }) => (fill ? colours.teal : 'transparent')};
+  border: solid ${colours.lightTeal};
   border-width: 1px 0;
 
   &:first-child {
@@ -53,11 +52,11 @@ export const StyledRank = styled(FilteredStyledRank)`
     content: '';
     height: 13px;
     width: 13px;
-    border: solid ${colours.veryDarkGrey};
+    border: solid
+      ${({ fill }) => (fill ? colours.veryLightBlue : colours.lightTeal)};
     border-width: 0 1px 1px 0;
-    background-color: ${({ fill }) =>
-      fill ? colours.teal : colours.veryLightBlue};
-    left: 72%;
+    background-color: ${({ fill }) => (fill ? colours.teal : 'transparent')};
+    left: 73%;
     top: 2px;
     transform: rotate(-45deg);
     z-index: 899;

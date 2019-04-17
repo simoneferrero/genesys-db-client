@@ -6,6 +6,7 @@ import PlayerCharacterRecord from 'reducers/playersCharacters/records'
 
 import { archetype1, archetype2 } from './archetypes'
 import { career1, career2 } from './careers'
+import { favor1, favor2 } from './favors'
 import { skills, skillsById } from './skills'
 
 export const playerCharacter1Id = 1
@@ -40,13 +41,15 @@ export const playerCharacterSummary1Response = {
   },
 }
 export const playerCharacterSummary1 = new PlayerCharacterRecord(
-  playerCharacterSummary1Response,
+  fromJS(playerCharacterSummary1Response),
 )
-export const playerCharacterSummary1Augmented = new PlayerCharacterRecord({
-  ...playerCharacterSummary1Response,
-  archetype: new ArchetypeRecord(archetype1),
-  career: new CareerRecord(career1),
-})
+export const playerCharacterSummary1Augmented = new PlayerCharacterRecord(
+  fromJS({
+    ...playerCharacterSummary1Response,
+    archetype: new ArchetypeRecord(archetype1),
+    career: new CareerRecord(career1),
+  }),
+)
 export const playerCharacter1Skills = skills.map(({ id, type }, index) => ({
   id,
   type,
@@ -61,20 +64,28 @@ export const playerCharacter1SkillsAugmented = List(
     }),
   ),
 )
+export const playerCharacter1Favors = [favor1, favor2]
 export const playerCharacter1Response = {
   ...playerCharacterSummary1Response,
+  favors: playerCharacter1Favors,
   skills: playerCharacter1Skills,
 }
-export const playerCharacter1 = new PlayerCharacterRecord({
-  ...playerCharacter1Response,
-  skills: List(playerCharacter1Skills.map((skill) => fromJS(skill))),
-})
-export const playerCharacter1Augmented = new PlayerCharacterRecord({
-  ...playerCharacter1Response,
-  archetype: new ArchetypeRecord(archetype1),
-  career: new CareerRecord(career1),
-  skills: playerCharacter1SkillsAugmented,
-})
+export const playerCharacter1 = new PlayerCharacterRecord(
+  fromJS({
+    ...playerCharacter1Response,
+    favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
+    skills: List(playerCharacter1Skills.map((skill) => fromJS(skill))),
+  }),
+)
+export const playerCharacter1Augmented = new PlayerCharacterRecord(
+  fromJS({
+    ...playerCharacter1Response,
+    archetype: new ArchetypeRecord(archetype1),
+    career: new CareerRecord(career1),
+    favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
+    skills: playerCharacter1SkillsAugmented,
+  }),
+)
 
 export const playerCharacter2Id = 2
 export const playerCharacterSummary2Response = {
@@ -108,13 +119,15 @@ export const playerCharacterSummary2Response = {
   },
 }
 export const playerCharacterSummary2 = new PlayerCharacterRecord(
-  playerCharacterSummary2Response,
+  fromJS(playerCharacterSummary2Response),
 )
-export const playerCharacterSummary2Augmented = new PlayerCharacterRecord({
-  ...playerCharacterSummary2Response,
-  archetype: new ArchetypeRecord(archetype2),
-  career: new CareerRecord(career2),
-})
+export const playerCharacterSummary2Augmented = new PlayerCharacterRecord(
+  fromJS({
+    ...playerCharacterSummary2Response,
+    archetype: new ArchetypeRecord(archetype2),
+    career: new CareerRecord(career2),
+  }),
+)
 export const playersCharactersResponse = [
   playerCharacterSummary1Response,
   playerCharacterSummary2Response,

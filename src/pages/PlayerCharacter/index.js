@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 
 // Selectors
 import { currentPlayerCharacterSelector } from 'reducers/playersCharacters/selectors'
+import { favorsUiSelector } from 'reducers/ui/favors/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
 import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selectors'
 
@@ -19,6 +20,7 @@ import ImmutableConverter from 'HOCs/ImmutableConverter'
 import PlayersCharacters from './component'
 
 const mapStateToProps = (state) => ({
+  favorsUi: favorsUiSelector(state),
   playerCharacter: currentPlayerCharacterSelector(state),
   playerCharacterId: playerCharacterIdSelector(state),
   playersCharactersUi: playersCharactersUiSelector(state),

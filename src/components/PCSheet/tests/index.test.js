@@ -11,7 +11,7 @@ const playerCharacter = playerCharacter1Augmented.toJS()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
   handleSubmit: mockHandleSubmit,
-  playerCharacter: playerCharacter,
+  playerCharacter,
 }
 
 const renderComponent = (props = {}) =>
@@ -56,9 +56,7 @@ describe('<PCSheet />', () => {
     // Check skills change
     const athleticsRank = getByTestId('athletics-1')
     expect(athleticsRank).toBeInTheDocument()
-    expect(athleticsRank).toHaveStyle(
-      `background-color: ${colours.veryLightBlue}`,
-    )
+    expect(athleticsRank).toHaveStyle('background-color: transparent')
     const increaseAthleticsButton = getByTestId('increase-athletics-rank')
     expect(increaseAthleticsButton).toBeInTheDocument()
     fireEvent.click(increaseAthleticsButton)
