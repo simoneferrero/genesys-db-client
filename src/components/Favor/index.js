@@ -1,60 +1,86 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { factionType } from 'types/factions'
 import { favorType } from 'types/favors'
 
-import { Formik } from 'formik'
+import NewFavor from './NewFavor'
+import ExistingFavor from './ExistingFavor'
 
-import InnerForm from './innerForm'
+import { StyledFavor } from './styles'
+
+/* eslint-disable no-unused-vars  */
+/* eslint-disable react/prop-types  */
+const FilteredFavor = ({ isNew, isComplete, editing, ...otherProps }) => (
+  <div {...otherProps} />
+)
+/* eslint-enable */
 
 const Favor = ({
-  adding,
   editing,
+  factions,
   favor,
-  handleSubmit,
-  isPCSubmitting,
-  onFavorChange,
-  setAdding,
+  isNew,
+  isSubmitting,
+  setFieldValue,
 }) => {
-  // TODO: These must be passed down from parent
-  // const [adding, setAdding] = useState(false)
-  // const augmentedHandleSubmit = (values, actions) =>
-  //   handleSubmit(values, { ...actions, setAdding })
+  const sizes = {
+    small: {
+      value: 'small',
+      label: 'Small favor',
+    },
+    normal: {
+      value: 'normal',
+      label: 'Normal favor',
+    },
+    big: {
+      value: 'big',
+      label: 'Big favor',
+    },
+  }
 
   return (
-    <Formik
-      enableReinitialize
-      initialValues={favor}
-      onSubmit={handleSubmit}
-      render={(props) => (
-        <InnerForm
-          adding={adding}
+    <StyledFavor
+      isNew={isNew}
+      as={FilteredFavor}
+      isComplete={favor.status === 'complete'}
+      data-testid={isNew ? 'new-favor' : `favor-${favor.id}`}
+      editing={editing}
+    >
+      {isNew ? (
+        <NewFavor
+          factions={factions}
+          isSubmitting={isSubmitting}
+          setFieldValue={setFieldValue}
+          sizes={sizes}
+          values={favor}
+        />
+      ) : (
+        <ExistingFavor
           editing={editing}
-          isPCSubmitting={isPCSubmitting}
-          onFavorChange={onFavorChange}
-          setAdding={setAdding}
-          {...props}
+          factions={factions}
+          isSubmitting={isSubmitting}
+          setFieldValue={setFieldValue}
+          sizes={sizes}
+          values={favor}
         />
       )}
-      validationSchema={InnerForm.validationSchema}
-    />
+    </StyledFavor>
   )
 }
 
 Favor.propTypes = {
-  /** Whether to show the adding buttons */
-  adding: PropTypes.bool,
   /** Whether to allow editing the favor */
   editing: PropTypes.bool,
+  /** List of available factions */
+  factions: PropTypes.objectOf(factionType).isRequired,
   /** Favor data */
-  favor: favorType,
-  /** Function invoked upon form submission */
-  handleSubmit: PropTypes.func.isRequired,
-  /** Whether the player character form is submitting */
-  isPCSubmitting: PropTypes.bool,
-  /** Function invoked to change the favor data */
-  onFavorChange: PropTypes.func.isRequired,
-  /** Changes the mode between adding and static */
-  setAdding: PropTypes.func.isRequired,
+  favor: favorType.isRequired,
+  /** Whether to show NewFavor or ExistingFavor */
+  isNew: PropTypes.bool,
+  /** Whether the form is submitting */
+  isSubmitting: PropTypes.bool,
+  /** Changes the specified field value */
+  setFieldValue: PropTypes.func.isRequired,
 }
 
 export default Favor

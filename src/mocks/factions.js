@@ -16,9 +16,10 @@ export const faction3 = {
   description: 'Jinteki description',
 }
 
-export const factions = [faction1, faction2]
+export const factions = [faction1, faction2, faction3]
 export const factionsById = {
   [faction1.id]: new FactionRecord(faction1),
   [faction2.id]: new FactionRecord(faction2),
+  [faction3.id]: new FactionRecord(faction3),
 }
-export const factionsAllIds = [faction1.id, faction2.id]
+export const factionsAllIds = [faction1.id, faction2.id, faction3.id]

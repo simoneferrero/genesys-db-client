@@ -1,26 +1,48 @@
 import styled, { css } from 'styled-components/macro'
 import { baseSpacing, colours, fontFamilies } from 'styles/constants'
-import mq from 'styles/mediaQueries'
+import rgbToRgba from 'utils/rgbToRgba'
 
 const completedStyles = css`
   text-decoration: line-through;
   opacity: 0.5;
 `
-export const StyledForm = styled.form`
+const descriptionStyles = css`
+  grid-column: 1/4;
+  text-align: justify;
+`
+export const StyledFavor = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: ${baseSpacing / 2}px;
+  grid-template-columns: ${({ isNew }) =>
+    isNew ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'};
+  grid-gap: ${baseSpacing / 4}px;
   padding: ${baseSpacing / 2}px;
-  ${({ completed }) => completed && completedStyles};
 
-  @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-    grid-template-columns: ${({ adding }) =>
-      adding ? '3fr 10fr 1fr' : '3fr 10fr'};
-    grid-template-rows: ${({ editing }) =>
-      editing ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)'};
+  /* ExistingFavor */
+  h4 {
+    ${({ isComplete }) => isComplete && completedStyles};
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      justify-content: flex-start;
+    }
   }
 
+  & > div:not(:last-child) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  & > div:last-child {
+    ${({ isComplete }) => isComplete && completedStyles};
+    ${({ isNew }) => !isNew && descriptionStyles}
+  }
+
+  /* NewFavor */
   & > label {
     width: 100%;
     height: 100%;
@@ -31,10 +53,6 @@ export const StyledForm = styled.form`
 
     &:first-child {
       align-items: flex-start;
-    }
-
-    @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-      grid-column: 1/2;
     }
 
     & > input {
@@ -53,67 +71,38 @@ export const StyledForm = styled.form`
     font-family: "${fontFamilies.MinionPro}", Times New Roman, serif;
     font-size: 16px;
     padding: ${baseSpacing / 4}px;
+    text-align: justify;
   }
 
-  & > h4 {
-    display: flex;
-    margin: 0;
-    text-transform: uppercase;
-    align-items: center;
-
-    &:first-child {
-      align-items: flex-start;
-    }
-  }
-
-  ${({ adding }) => !adding && 'div,'}
   label[for='description'] {
     grid-column: 1/3;
-    text-align: justify;
-
-    @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-      grid-column: 2;
-      grid-row: ${({ editing }) => (editing ? '1/4' : '1/3')};
-    }
-  }
-`
-
-export const StyledButtons = styled.div`
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: ${baseSpacing / 2}px;
-  grid-column: 1/3;
-  z-index: auto;
-
-  svg {
-    font-size: 20px;
-  }
-
-  @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-    grid-template-columns: 1fr;
-    grid-column: 3;
-    grid-row: 1/3;
   }
 `
 
 export const StyledButton = styled.button`
-  padding: 0;
-  border: none;
-  background: transparent;
+  padding: ${baseSpacing / 4}px;
+  border: 1px solid ${colours.teal};
+  border-radius: 5px;
+  background: ${rgbToRgba(colours.veryLightBlue, 0.5)};
   cursor: pointer;
   color: ${colours.teal};
-  font-size: 20px;
-  text-decoration: none;
-  grid-column: 1/3;
+  text-transform: uppercase;
 
-  @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-    text-align: left;
-    grid-column: 1;
+  & > h4 {
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: ${colours.teal};
+
+    h4 {
+      color: ${colours.veryLightBlue};
+    }
   }
 
   &:disabled {
-    color: ${colours.lightTeal};
+    opacity: 0.5;
     cursor: not-allowed;
   }
 `
