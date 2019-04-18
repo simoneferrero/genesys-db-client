@@ -4,7 +4,25 @@ export const favorData = {
   /** Favor's description */
   description: PropTypes.string.isRequired,
   /** Who owes/is owed the favor */
-  faction: PropTypes.string.isRequired,
+  faction: PropTypes.oneOf([
+    'jinteki',
+    'haas-biodroid',
+    'weyland-consortium',
+    'nbn',
+    'orgcrime',
+    'street-gangs',
+    'napd',
+    'government',
+    'sea',
+    'globalsec',
+    'loonies',
+    'human-first',
+    'humanity-labor',
+    'opticon-foundation',
+    'simulant-abolitionist-movement',
+    'brigada-tricolor',
+    'other',
+  ]).isRequired,
   /** Favor's unique identifier */
   id: PropTypes.number,
   /** Whether the favor is owed or given */

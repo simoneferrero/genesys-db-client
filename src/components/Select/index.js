@@ -13,12 +13,14 @@ const Select = ({
   onChange,
   options,
   placeholder,
-  value,
+  currentValue,
 }) => {
   // When <Select /> changes, let formik know which field to update
   const handleChange = ({ value }) => {
     onChange(name, value)
   }
+
+  const fullValue = options.find(({ value }) => value === currentValue)
 
   return (
     <StyledSelect
@@ -33,7 +35,7 @@ const Select = ({
       onChange={handleChange}
       options={options}
       placeholder={placeholder}
-      value={value}
+      value={fullValue}
       {...config}
     />
   )
@@ -51,11 +53,16 @@ Select.propTypes = {
   /** Invoked on element change */
   onChange: PropTypes.func.isRequired,
   /** An array of values to display as options */
-  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   /** Text to display as a placeholder */
   placeholder: PropTypes.string,
   /** Current element's value */
-  value: PropTypes.object.isRequired,
+  currentValue: PropTypes.string.isRequired,
 }
 
 Select.defaultProps = {

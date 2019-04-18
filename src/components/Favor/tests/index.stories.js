@@ -10,7 +10,7 @@ import Favor from '../index'
 const defaultProps = {
   handleSubmit: action('handleSubmit'),
   favor: favor1,
-  setEditing: action('setEditing'),
+  setAdding: action('setAdding'),
 }
 
 const renderComponent = (props = {}) => <Favor {...defaultProps} {...props} />
@@ -23,14 +23,10 @@ storiesOf('Components/Favor', module)
     }
     return renderComponent(props)
   })
-  .add('editing', () => {
+  .add('adding', () => {
     const props = {
-      editing: true,
-      favor: {
-        type: 'small',
-        faction: '',
-        description: '',
-      },
+      adding: true,
+      favor: undefined,
     }
     return renderComponent(props)
   })

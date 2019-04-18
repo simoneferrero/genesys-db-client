@@ -4,6 +4,7 @@ exports[`Storyshots Components/Select default 1`] = `
 .c0 {
   font-family: "Monkirta",Helvetica,sans-serif;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .c0 .test__value-container,
@@ -27,7 +28,7 @@ exports[`Storyshots Components/Select default 1`] = `
 
 .c0 .test__control,
 .c0 .test__menu {
-  background-color: rgba(234,242,246,0.3);
+  background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   padding: 0;
   color: rgb(0,130,155);
@@ -44,7 +45,8 @@ exports[`Storyshots Components/Select default 1`] = `
 }
 
 .c0 .test__option:hover {
-  background-color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
 }
 
 .c0 .test__option--is-selected {
@@ -87,7 +89,7 @@ exports[`Storyshots Components/Select default 1`] = `
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
-            id="react-select-2-input"
+            id="react-select-4-input"
             spellcheck="false"
             style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
             tabindex="0"
@@ -137,6 +139,7 @@ exports[`Storyshots Components/Select disabled 1`] = `
 .c0 {
   font-family: "Monkirta",Helvetica,sans-serif;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .c0 .test__value-container,
@@ -160,7 +163,7 @@ exports[`Storyshots Components/Select disabled 1`] = `
 
 .c0 .test__control,
 .c0 .test__menu {
-  background-color: rgba(234,242,246,0.3);
+  background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   padding: 0;
   color: rgb(0,130,155);
@@ -177,7 +180,8 @@ exports[`Storyshots Components/Select disabled 1`] = `
 }
 
 .c0 .test__option:hover {
-  background-color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
 }
 
 .c0 .test__option--is-selected {
@@ -221,7 +225,7 @@ exports[`Storyshots Components/Select disabled 1`] = `
             autocomplete="off"
             autocorrect="off"
             disabled=""
-            id="react-select-3-input"
+            id="react-select-5-input"
             spellcheck="false"
             style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
             tabindex="0"

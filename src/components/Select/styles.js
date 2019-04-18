@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro'
 import { colours, fontFamilies } from 'styles/constants'
-import rgbToRgba from 'utils/rgbToRgba'
 
 export const StyledSelect = styled.div`
   font-family: "${fontFamilies.Monkirta}", Helvetica, sans-serif;
   text-transform: uppercase;
+  width: 100%;
 
   & .${({ classNamePrefix }) => classNamePrefix}__value-container,
   .${({ classNamePrefix }) => classNamePrefix}__indicators {
@@ -28,7 +28,7 @@ export const StyledSelect = styled.div`
   & .${({ classNamePrefix }) => classNamePrefix}__control, .${({
   classNamePrefix,
 }) => classNamePrefix}__menu {
-    background-color: ${rgbToRgba(colours.veryLightBlue, 0.3)};
+    background-color: ${colours.veryLightBlue};
     border: 1px solid ${colours.teal};
     padding: 0;
     color: ${colours.teal};
@@ -43,7 +43,8 @@ export const StyledSelect = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: ${colours.veryLightBlue};
+      background-color: ${colours.teal};
+      color: ${colours.veryLightBlue};
     }
   }
 

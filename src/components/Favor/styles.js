@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro'
-import { baseSpacing } from 'styles/constants'
+import { baseSpacing, colours, fontFamilies } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
 const completedStyles = css`
@@ -14,8 +14,8 @@ export const StyledForm = styled.form`
   ${({ completed }) => completed && completedStyles};
 
   @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-    grid-template-columns: ${({ editing }) =>
-      editing ? '2fr 10fr 1fr' : '2fr 10fr'};
+    grid-template-columns: ${({ adding }) =>
+      adding ? '3fr 10fr 1fr' : '3fr 10fr'};
     grid-template-rows: repeat(2, 1fr);
   }
 
@@ -25,6 +25,11 @@ export const StyledForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: flex-end;
+
+    &:first-child {
+      align-items: flex-start;
+    }
 
     @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
       grid-column: 1/2;
@@ -38,6 +43,13 @@ export const StyledForm = styled.form`
   textarea {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
+    background-color: ${colours.veryLightBlue};
+    border: 1px solid ${colours.teal};
+    color: ${colours.teal};
+    text-align: justify;
+    font-family: "${fontFamilies.MinionPro}", Times New Roman, serif;
+    font-size: 16px;
   }
 
   & > h4 {
@@ -63,6 +75,7 @@ export const StyledButtons = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: ${baseSpacing / 2}px;
   grid-column: 1/3;
+  z-index: auto;
 
   svg {
     font-size: 20px;

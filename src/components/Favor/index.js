@@ -6,11 +6,11 @@ import { Formik } from 'formik'
 
 import InnerForm from './innerForm'
 
-const Favor = ({ editing, favor, handleSubmit, setEditing }) => {
+const Favor = ({ adding, favor, handleSubmit, setAdding }) => {
   // TODO: These must be passed down from parent
-  // const [editing, setEditing] = useState(false)
+  // const [adding, setAdding] = useState(false)
   // const augmentedHandleSubmit = (values, actions) =>
-  //   handleSubmit(values, { ...actions, setEditing })
+  //   handleSubmit(values, { ...actions, setAdding })
 
   return (
     <Formik
@@ -18,7 +18,7 @@ const Favor = ({ editing, favor, handleSubmit, setEditing }) => {
       initialValues={favor}
       onSubmit={handleSubmit}
       render={(props) => (
-        <InnerForm editing={editing} setEditing={setEditing} {...props} />
+        <InnerForm adding={adding} setAdding={setAdding} {...props} />
       )}
       validationSchema={InnerForm.validationSchema}
     />
@@ -26,14 +26,22 @@ const Favor = ({ editing, favor, handleSubmit, setEditing }) => {
 }
 
 Favor.propTypes = {
-  /** Whether to show the editing buttons */
-  editing: PropTypes.bool,
+  /** Whether to show the adding buttons */
+  adding: PropTypes.bool,
   /** Favor data */
-  favor: favorType.isRequired,
+  favor: favorType,
   /** Function invoked upon form submission */
   handleSubmit: PropTypes.func.isRequired,
-  /** Changes the mode between editing and static */
-  setEditing: PropTypes.func.isRequired,
+  /** Changes the mode between adding and static */
+  setAdding: PropTypes.func.isRequired,
+}
+
+Favor.defaultProps = {
+  favor: {
+    type: 'small',
+    faction: 'jinteki',
+    description: '',
+  },
 }
 
 export default Favor

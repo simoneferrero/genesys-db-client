@@ -24,16 +24,11 @@ const defaultProps = {
   name,
   onChange: mockOnChange,
   options,
-  value: options[0],
+  currentValue: options[0].value,
 }
 
 const renderComponent = (props = {}) =>
-  render(
-    <>
-      <Select {...defaultProps} {...props} />
-      <button>Submit</button>
-    </>,
-  )
+  render(<Select {...defaultProps} {...props} />)
 
 describe('<Select />', () => {
   afterEach(() => {
@@ -49,7 +44,7 @@ describe('<Select />', () => {
     const select = document.getElementById(name)
     expect(select).toBeInTheDocument()
 
-    const [currentValue, firstValue] = getAllByText(defaultProps.value.label)
+    const [currentValue, firstValue] = getAllByText(options[0].label)
     expect(currentValue).toBeInTheDocument()
     expect(firstValue).toBeInTheDocument()
 

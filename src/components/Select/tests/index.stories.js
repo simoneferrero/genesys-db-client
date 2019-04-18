@@ -24,7 +24,7 @@ const defaultProps = {
   onBlur: action('onBlur'),
   onChange: action('onChange'),
   options,
-  value: options[0],
+  currentValue: options[0].value,
 }
 
 const renderComponent = (props = {}) => <Select {...defaultProps} {...props} />
