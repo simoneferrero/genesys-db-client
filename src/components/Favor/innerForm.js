@@ -24,6 +24,8 @@ const InnerForm = ({
   editing,
   handleSubmit,
   initialValues,
+  isPCSubmitting,
+  isSubmitting,
   onFavorChange,
   setAdding,
   setFieldValue,
@@ -162,7 +164,11 @@ const InnerForm = ({
               rows={4}
             />
           </label>
-          <StyledButtons as={FormButtons} setEditing={setAdding} />
+          <StyledButtons
+            as={FormButtons}
+            disabled={isSubmitting}
+            setEditing={setAdding}
+          />
         </>
       ) : (
         <>
@@ -179,6 +185,7 @@ const InnerForm = ({
             (initialValues.completed ? (
               <StyledButton
                 data-testid="revert"
+                disabled={isPCSubmitting}
                 onClick={() =>
                   onFavorChange(`favors.${initialValues.id}.completed`, false)
                 }
@@ -189,6 +196,7 @@ const InnerForm = ({
             ) : (
               <StyledButton
                 data-testid="complete"
+                disabled={isPCSubmitting}
                 onClick={() =>
                   onFavorChange(`favors.${initialValues.id}.completed`, true)
                 }
@@ -220,6 +228,8 @@ InnerForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   /** Form values */
   initialValues: favorType.isRequired,
+  /** Whether the player character form is submitting */
+  isPCSubmitting: PropTypes.bool,
   /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
   /** Function invoked to change the favor data */

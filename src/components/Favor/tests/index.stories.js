@@ -27,7 +27,12 @@ storiesOf('Components/Favor', module)
   .add('adding', () => {
     const props = {
       adding: true,
-      favor: undefined,
+      favor: {
+        type: 'small',
+        faction: 'jinteki',
+        description: '',
+        owed: true,
+      },
     }
     return renderComponent(props)
   })

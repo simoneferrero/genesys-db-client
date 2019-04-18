@@ -11,6 +11,7 @@ const Favor = ({
   editing,
   favor,
   handleSubmit,
+  isPCSubmitting,
   onFavorChange,
   setAdding,
 }) => {
@@ -28,6 +29,7 @@ const Favor = ({
         <InnerForm
           adding={adding}
           editing={editing}
+          isPCSubmitting={isPCSubmitting}
           onFavorChange={onFavorChange}
           setAdding={setAdding}
           {...props}
@@ -47,18 +49,12 @@ Favor.propTypes = {
   favor: favorType,
   /** Function invoked upon form submission */
   handleSubmit: PropTypes.func.isRequired,
+  /** Whether the player character form is submitting */
+  isPCSubmitting: PropTypes.bool,
   /** Function invoked to change the favor data */
   onFavorChange: PropTypes.func.isRequired,
   /** Changes the mode between adding and static */
   setAdding: PropTypes.func.isRequired,
-}
-
-Favor.defaultProps = {
-  favor: {
-    type: 'small',
-    faction: 'jinteki',
-    description: '',
-  },
 }
 
 export default Favor

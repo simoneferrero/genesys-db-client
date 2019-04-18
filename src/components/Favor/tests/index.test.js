@@ -72,7 +72,12 @@ describe('<Favor />', () => {
   it('should render correctly when adding', async () => {
     const props = {
       adding: true,
-      favor: undefined,
+      favor: {
+        type: 'small',
+        faction: 'jinteki',
+        description: '',
+        owed: true,
+      },
     }
     const {
       getByDisplayValue,

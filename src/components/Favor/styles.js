@@ -11,6 +11,7 @@ export const StyledForm = styled.form`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: ${baseSpacing / 2}px;
+  padding: ${baseSpacing / 2}px;
   ${({ completed }) => completed && completedStyles};
 
   @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
