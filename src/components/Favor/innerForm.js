@@ -8,19 +8,23 @@ import { Form, Field } from 'formik'
 import Select from 'components/Select'
 import FormButtons from 'components/FormButtons'
 
-import { StyledButtons, StyledForm } from './styles'
+import { MdThumbDown, MdThumbUp } from 'react-icons/md'
+
+import { StyledButton, StyledButtons, StyledForm } from './styles'
 
 /* eslint-disable no-unused-vars  */
 /* eslint-disable react/prop-types  */
-const FilteredForm = ({ completed, adding, ...otherProps }) => (
+const FilteredForm = ({ adding, completed, editing, ...otherProps }) => (
   <Form {...otherProps} />
 )
 /* eslint-enable */
 
 const InnerForm = ({
   adding,
+  editing,
   handleSubmit,
   initialValues,
+  onFavorChange,
   setAdding,
   setFieldValue,
   values: { faction, completed, type },
@@ -121,10 +125,11 @@ const InnerForm = ({
 
   return (
     <StyledForm
+      adding={adding}
       as={FilteredForm}
       completed={completed}
       data-testid={adding ? 'new-favor' : `favor-${initialValues.id}`}
-      adding={adding}
+      editing={editing}
       onSubmit={handleSubmit}
     >
       {adding ? (
@@ -170,6 +175,28 @@ const InnerForm = ({
           <div data-testid={`favor-${initialValues.id}-description`}>
             {initialValues.description}
           </div>
+          {editing &&
+            (initialValues.completed ? (
+              <StyledButton
+                data-testid="revert"
+                onClick={() =>
+                  onFavorChange(`favors.${initialValues.id}.completed`, false)
+                }
+                type="button"
+              >
+                <MdThumbDown />
+              </StyledButton>
+            ) : (
+              <StyledButton
+                data-testid="complete"
+                onClick={() =>
+                  onFavorChange(`favors.${initialValues.id}.completed`, true)
+                }
+                type="button"
+              >
+                <MdThumbUp />
+              </StyledButton>
+            ))}
         </>
       )}
     </StyledForm>
@@ -185,6 +212,8 @@ InnerForm.validationSchema = yup.object({
 InnerForm.propTypes = {
   /** Whether to show the adding buttons */
   adding: PropTypes.bool,
+  /** Whether to allow editing the favor */
+  editing: PropTypes.bool,
   /** Errors within the form */
   errors: PropTypes.object.isRequired,
   /** Invoked on submit */
@@ -193,6 +222,8 @@ InnerForm.propTypes = {
   initialValues: favorType.isRequired,
   /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
+  /** Function invoked to change the favor data */
+  onFavorChange: PropTypes.func.isRequired,
   /** Changes the mode between adding and static */
   setAdding: PropTypes.func.isRequired,
   /** Changes the specified field value */

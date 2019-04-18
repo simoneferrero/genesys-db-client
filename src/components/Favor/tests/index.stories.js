@@ -10,6 +10,7 @@ import Favor from '../index'
 const defaultProps = {
   handleSubmit: action('handleSubmit'),
   favor: favor1,
+  onFavorChange: action('onFavorChange'),
   setAdding: action('setAdding'),
 }
 
@@ -27,6 +28,19 @@ storiesOf('Components/Favor', module)
     const props = {
       adding: true,
       favor: undefined,
+    }
+    return renderComponent(props)
+  })
+  .add('editing', () => {
+    const props = {
+      editing: true,
+    }
+    return renderComponent(props)
+  })
+  .add('editing completed', () => {
+    const props = {
+      editing: true,
+      favor: favor2,
     }
     return renderComponent(props)
   })

@@ -16,7 +16,8 @@ export const StyledForm = styled.form`
   @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
     grid-template-columns: ${({ adding }) =>
       adding ? '3fr 10fr 1fr' : '3fr 10fr'};
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: ${({ editing }) =>
+      editing ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)'};
   }
 
   & > label {
@@ -50,21 +51,28 @@ export const StyledForm = styled.form`
     text-align: justify;
     font-family: "${fontFamilies.MinionPro}", Times New Roman, serif;
     font-size: 16px;
+    padding: ${baseSpacing / 4}px;
   }
 
   & > h4 {
+    display: flex;
     margin: 0;
     text-transform: uppercase;
+    align-items: center;
+
+    &:first-child {
+      align-items: flex-start;
+    }
   }
 
-  ${({ editing }) => !editing && 'div,'}
+  ${({ adding }) => !adding && 'div,'}
   label[for='description'] {
     grid-column: 1/3;
     text-align: justify;
 
     @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
       grid-column: 2;
-      grid-row: 1/3;
+      grid-row: ${({ editing }) => (editing ? '1/4' : '1/3')};
     }
   }
 `
@@ -85,5 +93,26 @@ export const StyledButtons = styled.div`
     grid-template-columns: 1fr;
     grid-column: 3;
     grid-row: 1/3;
+  }
+`
+
+export const StyledButton = styled.button`
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: ${colours.teal};
+  font-size: 20px;
+  text-decoration: none;
+  grid-column: 1/3;
+
+  @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
+    text-align: left;
+    grid-column: 1;
+  }
+
+  &:disabled {
+    color: ${colours.lightTeal};
+    cursor: not-allowed;
   }
 `
