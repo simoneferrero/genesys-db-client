@@ -15,6 +15,7 @@ export const PlayerCharacter = ({
   favorsUi,
   getArchetypes,
   getCareers,
+  getFactions,
   getPlayerCharacter,
   getSkills,
   playerCharacter,
@@ -22,10 +23,11 @@ export const PlayerCharacter = ({
   playersCharactersUi,
 }) => {
   useEffect(() => {
+    getPlayerCharacter(playerCharacterId)
     getArchetypes()
     getCareers()
-    getPlayerCharacter(playerCharacterId)
     getSkills()
+    getFactions()
   }, [])
 
   const handleSubmit = (values, actions) =>
@@ -59,6 +61,8 @@ PlayerCharacter.propTypes = {
   getArchetypes: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */
   getCareers: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of factions */
+  getFactions: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of skills */
   getSkills: PropTypes.func.isRequired,
   /** Dispatched to fetch player character data */

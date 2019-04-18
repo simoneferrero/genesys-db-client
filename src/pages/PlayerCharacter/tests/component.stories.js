@@ -16,6 +16,7 @@ const defaultProps = {
   favorsUi: uiElement,
   getArchetypes: action('getArchetypes'),
   getCareers: action('getCareers'),
+  getFactions: action('getFactions'),
   getPlayerCharacter: action('getPlayerCharacter'),
   getSkills: action('getSkills'),
   playerCharacter: playerCharacter1Augmented.toJS(),

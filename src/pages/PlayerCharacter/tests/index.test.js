@@ -69,6 +69,19 @@ jest.mock('actions/careers', () => {
 })
 import { getCareers } from 'actions/careers'
 
+jest.mock('actions/factions', () => {
+  const { GET_FACTIONS } = require('actions/factions/constants')
+  return {
+    getFactions: jest.fn(() => ({
+      type: GET_FACTIONS,
+      payload: {},
+    })),
+    getFactionsSuccess: jest.fn(),
+    getFactionsError: jest.fn(),
+  }
+})
+import { getFactions } from 'actions/factions'
+
 jest.mock('actions/skills', () => {
   const { GET_SKILLS } = require('actions/skills/constants')
   return {
@@ -210,11 +223,12 @@ describe('<PlayerCharacter />', () => {
 
   it('should dispatch fetch actions on mount', () => {
     renderComponent()
-    expect(getArchetypes).toHaveBeenCalledTimes(1)
-    expect(getCareers).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledWith(id)
+    expect(getArchetypes).toHaveBeenCalledTimes(1)
+    expect(getCareers).toHaveBeenCalledTimes(1)
     expect(getSkills).toHaveBeenCalledTimes(1)
+    expect(getFactions).toHaveBeenCalledTimes(1)
   })
 
   it('should call editPlayerCharacter on submit', async () => {

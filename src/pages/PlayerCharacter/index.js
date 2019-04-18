@@ -9,6 +9,7 @@ import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selec
 // Actions
 import { getArchetypes } from 'actions/archetypes'
 import { getCareers } from 'actions/careers'
+import { getFactions } from 'actions/factions'
 import {
   editPlayerCharacter,
   getPlayerCharacter,
@@ -30,6 +31,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(editPlayerCharacter(id, values, actions)),
   getArchetypes: () => dispatch(getArchetypes()),
   getCareers: () => dispatch(getCareers()),
+  getFactions: () => dispatch(getFactions()),
   getPlayerCharacter: (id) => dispatch(getPlayerCharacter(id)),
   getSkills: () => dispatch(getSkills()),
 })
