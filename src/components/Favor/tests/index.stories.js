@@ -5,8 +5,10 @@ import { fromJS } from 'immutable'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import { Formik } from 'formik'
+
 import { factionsById } from 'mocks/factions'
-import { favor1, favor2 } from 'mocks/favors'
+import { favor1, favor2, newFavor } from 'mocks/favors'
 
 import Favor from '../index'
 
@@ -15,6 +17,16 @@ const defaultProps = {
   favor: favor1,
   setFieldValue: action('setFieldValue'),
 }
+
+const renderWithFormik = (formProps = {}) => (
+  <Formik
+    onSubmit={action('onSubmit')}
+    render={({ values, ...props }) => (
+      <Favor factions={defaultProps.factions} favor={values} isNew {...props} />
+    )}
+    {...formProps}
+  />
+)
 
 const renderComponent = (props = {}) => <Favor {...defaultProps} {...props} />
 
@@ -41,13 +53,13 @@ storiesOf('Components/Favor', module)
   })
   .add('new', () => {
     const props = {
-      isNew: true,
-      favor: {
-        type: 'small',
-        faction: defaultProps.factions[0].id,
+      initialValues: {
         description: '',
-        owed: true,
+        faction_id: defaultProps.factions[newFavor.faction_id].id,
+        size: 'small',
+        status: 'incomplete',
+        type: 'owed',
       },
     }
-    return renderComponent(props)
+    return renderWithFormik(props)
   })

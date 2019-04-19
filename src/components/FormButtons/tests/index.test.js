@@ -1,10 +1,10 @@
 import FormButtons from '../index'
 
-const mockSetEditing = jest.fn()
+import { MdAdd, MdThumbDown, MdThumbUp } from 'react-icons/md'
+
+const mockSetShowButtons = jest.fn()
 const defaultProps = {
-  disabled: false,
-  editing: false,
-  setEditing: mockSetEditing,
+  setShowButtons: mockSetShowButtons,
 }
 
 const renderComponent = (props = {}) =>
@@ -26,7 +26,7 @@ describe('<FormButtons />', () => {
     expect(editButton).not.toBeDisabled()
 
     fireEvent.click(editButton)
-    expect(mockSetEditing).toHaveBeenCalledWith(true)
+    expect(mockSetShowButtons).toHaveBeenCalledWith(true)
 
     const cancelButton = queryByTestId(/cancel/i)
     expect(cancelButton).not.toBeInTheDocument()
@@ -35,9 +35,31 @@ describe('<FormButtons />', () => {
     expect(submitButton).not.toBeInTheDocument()
   })
 
-  it('should render correctly when editing', () => {
+  it('should render correctly when provided with custom icons', () => {
     const props = {
-      editing: true,
+      icons: {
+        cancel: <MdThumbDown data-testid="thumb-down" />,
+        edit: <MdAdd data-testid="add" />,
+        submit: <MdThumbUp data-testid="thumb-up" />,
+      },
+    }
+    const { getByTestId, rerender } = renderComponent(props)
+
+    const editButton = getByTestId(/add/i)
+    expect(editButton).toBeInTheDocument()
+
+    rerender(<FormButtons {...defaultProps} {...props} showButtons />)
+
+    const cancelButton = getByTestId(/thumb-down/i)
+    expect(cancelButton).toBeInTheDocument()
+
+    const submitButton = getByTestId(/thumb-up/i)
+    expect(submitButton).toBeInTheDocument()
+  })
+
+  it('should render correctly when showButtons', () => {
+    const props = {
+      showButtons: true,
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
 
@@ -49,7 +71,7 @@ describe('<FormButtons />', () => {
     expect(cancelButton).not.toBeDisabled()
 
     fireEvent.click(cancelButton)
-    expect(mockSetEditing).toHaveBeenCalledWith(false)
+    expect(mockSetShowButtons).toHaveBeenCalledWith(false)
 
     const submitButton = getByTestId(/submit/i)
     expect(submitButton).toBeInTheDocument()
@@ -59,7 +81,7 @@ describe('<FormButtons />', () => {
   it('should render correctly when disabled', () => {
     const props = {
       disabled: true,
-      editing: true,
+      showButtons: true,
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
 
@@ -71,7 +93,7 @@ describe('<FormButtons />', () => {
     expect(cancelButton).toBeDisabled()
 
     fireEvent.click(cancelButton)
-    expect(mockSetEditing).not.toHaveBeenCalled()
+    expect(mockSetShowButtons).not.toHaveBeenCalled()
 
     const submitButton = getByTestId(/submit/i)
     expect(submitButton).toBeInTheDocument()

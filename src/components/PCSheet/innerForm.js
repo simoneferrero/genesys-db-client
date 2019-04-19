@@ -11,7 +11,7 @@ import FormButtons from 'components/FormButtons'
 import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
 
-import { StyledForm, StyledSectionWrapper } from './styles'
+import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
 const InnerForm = ({
   editing,
@@ -23,10 +23,11 @@ const InnerForm = ({
   values,
 }) => (
   <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
-    <FormButtons
+    <StyledFormButtons
+      as={FormButtons}
       disabled={isSubmitting}
-      editing={editing}
-      setEditing={setEditing}
+      showButtons={editing}
+      setShowButtons={setEditing}
     />
     <StyledSectionWrapper
       as={PCSummary}

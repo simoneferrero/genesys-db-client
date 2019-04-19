@@ -3,17 +3,7 @@ import { baseSpacing, borderRadius, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 import rgbToRgba from 'utils/rgbToRgba'
 
-export const StyledFavors = styled.div`
-  display: grid;
-  grid-template-columns: 1;
-  grid-gap: ${baseSpacing}px;
-
-  @media ${mq.bigDesktop} {
-    grid-template-columns: 2;
-  }
-`
-
-export const StyledSection = styled.section`
+export const StyledForm = styled.form`
   padding: ${baseSpacing / 2}px;
   border: 2px solid ${colours.lightOrange};
   border-radius: ${borderRadius}px;
@@ -37,27 +27,12 @@ export const StyledSubHeader = styled.div`
   }
 
   div {
-    justify-content: flex-end;
-  }
-`
+    display: flex;
 
-export const StyledButton = styled.button`
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  color: ${colours.lightOrange};
-  font-size: 30px;
-  text-decoration: none;
-
-  @media ${mq.tablet}, ${mq.laptop}, ${mq.bigDesktop} {
-    text-align: left;
-    grid-column: 1;
-  }
-
-  &:disabled {
-    color: ${colours.lightTeal};
-    cursor: not-allowed;
+    & > button {
+      font-size: 25px;
+      padding: ${baseSpacing / 4}px;
+    }
   }
 `
 

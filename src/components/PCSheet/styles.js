@@ -20,6 +20,13 @@ export const StyledForm = styled.form`
   box-sizing: border-box;
 `
 
+export const StyledFormButtons = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+`
+
 export const StyledSectionWrapper = styled.div`
   position: relative;
   overflow: visible;

@@ -6,13 +6,6 @@ import { MdCheck, MdClose, MdEdit } from 'react-icons/md'
 import styled from 'styled-components/macro'
 import { baseSpacing, colours } from 'styles/constants'
 
-export const StyledFormButtons = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-`
-
 export const StyledButton = styled.button`
   padding: ${baseSpacing / 2}px;
   border: none;
@@ -27,44 +20,67 @@ export const StyledButton = styled.button`
   }
 `
 
-const FormButtons = ({ className, disabled, editing, setEditing }) => (
-  <StyledFormButtons className={className} data-testid="form-buttons">
-    {editing === false ? (
+const FormButtons = ({
+  className,
+  disabled,
+  icons: { cancel, edit, submit },
+  showButtons,
+  setShowButtons,
+}) => (
+  <div className={className} data-testid="form-buttons">
+    {showButtons === false ? (
       <StyledButton
         data-testid="edit"
         disabled={disabled}
-        onClick={() => setEditing(true)}
+        onClick={() => setShowButtons(true)}
         type="button"
       >
-        <MdEdit />
+        {edit}
       </StyledButton>
     ) : (
       <>
         <StyledButton
           data-testid="cancel"
           disabled={disabled}
-          onClick={() => setEditing(false)}
+          onClick={() => setShowButtons(false)}
           type="button"
         >
-          <MdClose />
+          {cancel}
         </StyledButton>
         <StyledButton data-testid="submit" disabled={disabled} type="submit">
-          <MdCheck />
+          {submit}
         </StyledButton>
       </>
     )}
-  </StyledFormButtons>
+  </div>
 )
 
 FormButtons.propTypes = {
   /** Custom styles */
   className: PropTypes.string,
-  /** Whether the buttons are disabled */
+  /** Whether to show submit/cancel buttons or edit button */
   disabled: PropTypes.bool,
+  /** The set of icons to display */
+  icons: PropTypes.shape({
+    /** Icon shown to revert back to initial status and discard changes */
+    cancel: PropTypes.node.isRequired,
+    /** Initial icon used to change the form status */
+    edit: PropTypes.node.isRequired,
+    /** Icon shown to submit changes */
+    submit: PropTypes.node.isRequired,
+  }).isRequired,
   /** Whether the buttons are in editing or static mode */
-  editing: PropTypes.bool,
-  /** Changes the mode between editing and static */
-  setEditing: PropTypes.func.isRequired,
+  showButtons: PropTypes.bool,
+  /** Changes the mode between showing submit/cancel buttons or edit button */
+  setShowButtons: PropTypes.func.isRequired,
+}
+
+FormButtons.defaultProps = {
+  icons: {
+    cancel: <MdClose />,
+    edit: <MdEdit />,
+    submit: <MdCheck />,
+  },
 }
 
 export default FormButtons

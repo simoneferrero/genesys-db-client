@@ -6,17 +6,12 @@ import { favorType } from 'types/favors'
 import { Field } from 'formik'
 import Select from 'components/Select'
 
-const NewFavor = ({
-  factions,
-  isSubmitting,
-  setFieldValue,
-  sizes,
-  values: { faction_id, size },
-}) => {
+const NewFavor = ({ factions, isSubmitting, setFieldValue, sizes, values }) => {
+  const { faction_id, size } = values
   const SIZE = 'size'
   const sizeOptions = Object.values(sizes)
   const FACTION_ID = 'faction_id'
-  const factionOptions = factions.map(({ id, name }) => ({
+  const factionOptions = Object.values(factions).map(({ id, name }) => ({
     value: id,
     label: name,
   }))

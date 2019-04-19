@@ -1,38 +1,19 @@
 import Favor from '../index'
 
-import { fromJS } from 'immutable'
-
-import { factionsById } from 'mocks/factions'
 import { favor1, favor2, newFavor } from 'mocks/favors'
 
-import { Formik } from 'formik'
-
 const mockHandleSubmit = jest.fn()
-const mockSetFieldValue = jest.fn()
+const mockOnFavorChange = jest.fn()
+const mockSetAdding = jest.fn()
 const defaultProps = {
-  factions: fromJS(factionsById).toJS(),
   favor: favor1,
-  setFieldValue: mockSetFieldValue,
+  handleSubmit: mockHandleSubmit,
+  onFavorChange: mockOnFavorChange,
+  setAdding: mockSetAdding,
 }
 
 const renderComponent = (props = {}) =>
   render(<Favor {...defaultProps} {...props} />)
-
-const renderWithFormik = (formProps = {}) =>
-  render(
-    <Formik
-      onSubmit={mockHandleSubmit}
-      render={({ values, ...props }) => (
-        <Favor
-          factions={defaultProps.factions}
-          favor={values}
-          isNew
-          {...props}
-        />
-      )}
-      {...formProps}
-    />,
-  )
 
 describe('<Favor />', () => {
   afterEach(() => {
@@ -57,22 +38,20 @@ describe('<Favor />', () => {
     const form = queryByTestId(/new-favor/i)
     expect(form).not.toBeInTheDocument()
 
-    const size = getByTestId(`favor-${favor1.id}-size`)
-    expect(size).toBeInTheDocument()
-    const sizeValue = getByText(new RegExp(favor1.size, 'i'))
-    expect(sizeValue).toBeInTheDocument()
+    const type = getByTestId(`favor-${favor1.id}-type`)
+    expect(type).toBeInTheDocument()
+    const typeValue = getByText(new RegExp(favor1.type, 'i'))
+    expect(typeValue).toBeInTheDocument()
 
-    const sizeSelect = queryByDisplayValue(new RegExp(newFavor.size, 'i'))
-    expect(sizeSelect).not.toBeInTheDocument()
+    const typeSelect = queryByDisplayValue(/small/i)
+    expect(typeSelect).not.toBeInTheDocument()
 
-    const faction = getByTestId(`favor-${favor1.id}-faction_id`)
+    const faction = getByTestId(`favor-${favor1.id}-faction`)
     expect(faction).toBeInTheDocument()
-    const factionValue = getByText(new RegExp(favor1.faction_id, 'i'))
+    const factionValue = getByText(new RegExp(favor1.faction, 'i'))
     expect(factionValue).toBeInTheDocument()
 
-    const factionSelect = queryByDisplayValue(
-      new RegExp(newFavor.faction_id, 'i'),
-    )
+    const factionSelect = queryByDisplayValue(/jinteki/i)
     expect(factionSelect).not.toBeInTheDocument()
 
     const description = getByTestId(`favor-${favor1.id}-description`)
@@ -83,42 +62,40 @@ describe('<Favor />', () => {
     const descriptionTextarea = queryByPlaceholderText(/add description.../i)
     expect(descriptionTextarea).not.toBeInTheDocument()
 
-    const completeButton = queryByTestId(/completeButton/gi)
-    expect(completeButton).not.toBeInTheDocument()
+    const cancelButton = queryByTestId('cancel')
+    expect(cancelButton).not.toBeInTheDocument()
 
-    const revertButton = queryByTestId(/revertButton/gi)
-    expect(revertButton).not.toBeInTheDocument()
+    const submitButton = queryByTestId(/submit/i)
+    expect(submitButton).not.toBeInTheDocument()
   })
 
-  it('should render correctly when adding', () => {
-    const faction_id = defaultProps.factions[newFavor.faction_id].id
+  it('should render correctly when adding', async () => {
     const props = {
       adding: true,
-      initialValues: {
+      favor: {
+        type: 'small',
+        faction: 'jinteki',
         description: '',
-        faction_id,
-        size: 'small',
-        status: 'incomplete',
-        type: 'owed',
+        owed: true,
       },
     }
     const {
       getByDisplayValue,
       getByPlaceholderText,
       getByTestId,
-      queryByTestId,
-    } = renderWithFormik(props)
+      queryAllByTestId,
+    } = renderComponent(props)
 
-    const existingFavor = queryByTestId(/favor-/i)
-    expect(existingFavor).not.toBeInTheDocument()
+    const existingFavor = queryAllByTestId(/favor-/i)
+    expect(existingFavor).toHaveLength(0)
 
     const form = getByTestId(/new-favor/i)
     expect(form).toBeInTheDocument()
 
-    const sizeSelect = getByDisplayValue(/small/i)
-    expect(sizeSelect).toBeInTheDocument()
+    const typeSelect = getByDisplayValue(/small/i)
+    expect(typeSelect).toBeInTheDocument()
 
-    const factionSelect = getByDisplayValue(new RegExp(faction_id, 'i'))
+    const factionSelect = getByDisplayValue(/jinteki/i)
     expect(factionSelect).toBeInTheDocument()
 
     const descriptionTextarea = getByPlaceholderText(/add description.../i)
@@ -132,11 +109,19 @@ describe('<Favor />', () => {
     const populatedDescriptionTextarea = getByDisplayValue(newFavor.description)
     expect(populatedDescriptionTextarea).toBeInTheDocument()
 
-    const completeButton = queryByTestId(/completeButton/gi)
-    expect(completeButton).not.toBeInTheDocument()
+    const cancelButton = getByTestId('cancel')
+    expect(cancelButton).toBeInTheDocument()
 
-    const revertButton = queryByTestId(/revertButton/gi)
-    expect(revertButton).not.toBeInTheDocument()
+    fireEvent.click(cancelButton)
+    expect(mockSetAdding).toHaveBeenCalledWith(false)
+
+    const submitButton = getByTestId(/submit/i)
+    expect(submitButton).toBeInTheDocument()
+
+    fireEvent.click(submitButton)
+    await wait(() => {
+      expect(mockHandleSubmit).toHaveBeenCalled()
+    })
   })
 
   it('should render correctly when editing incomplete', () => {
@@ -157,22 +142,20 @@ describe('<Favor />', () => {
     const form = queryByTestId(/new-favor/i)
     expect(form).not.toBeInTheDocument()
 
-    const size = getByTestId(`favor-${favor1.id}-size`)
-    expect(size).toBeInTheDocument()
-    const sizeValue = getByText(new RegExp(favor1.size, 'i'))
-    expect(sizeValue).toBeInTheDocument()
+    const type = getByTestId(`favor-${favor1.id}-type`)
+    expect(type).toBeInTheDocument()
+    const typeValue = getByText(new RegExp(favor1.type, 'i'))
+    expect(typeValue).toBeInTheDocument()
 
-    const sizeSelect = queryByDisplayValue(new RegExp(newFavor.size, 'i'))
-    expect(sizeSelect).not.toBeInTheDocument()
+    const typeSelect = queryByDisplayValue(/small/i)
+    expect(typeSelect).not.toBeInTheDocument()
 
-    const faction = getByTestId(`favor-${favor1.id}-faction_id`)
+    const faction = getByTestId(`favor-${favor1.id}-faction`)
     expect(faction).toBeInTheDocument()
-    const factionValue = getByText(new RegExp(favor1.faction_id, 'i'))
+    const factionValue = getByText(new RegExp(favor1.faction, 'i'))
     expect(factionValue).toBeInTheDocument()
 
-    const factionSelect = queryByDisplayValue(
-      new RegExp(newFavor.faction_id, 'i'),
-    )
+    const factionSelect = queryByDisplayValue(/jinteki/i)
     expect(factionSelect).not.toBeInTheDocument()
 
     const description = getByTestId(`favor-${favor1.id}-description`)
@@ -183,16 +166,22 @@ describe('<Favor />', () => {
     const descriptionTextarea = queryByPlaceholderText(/add description.../i)
     expect(descriptionTextarea).not.toBeInTheDocument()
 
-    const completeButton = getByTestId(/completeButton/gi)
+    const cancelButton = queryByTestId('cancel')
+    expect(cancelButton).not.toBeInTheDocument()
+
+    const submitButton = queryByTestId(/submit/i)
+    expect(submitButton).not.toBeInTheDocument()
+
+    const completeButton = getByTestId(/complete/gi)
     expect(completeButton).toBeInTheDocument()
 
     fireEvent.click(completeButton)
-    expect(mockSetFieldValue).toHaveBeenCalledWith(
-      `favors.${favor1.id}.status`,
-      'complete',
+    expect(mockOnFavorChange).toHaveBeenCalledWith(
+      `favors.${favor1.id}.completed`,
+      true,
     )
 
-    const revertButton = queryByTestId(/revertButton/gi)
+    const revertButton = queryByTestId(/revert/i)
     expect(revertButton).not.toBeInTheDocument()
   })
 
@@ -205,26 +194,18 @@ describe('<Favor />', () => {
 
     const existingFavor = getByTestId(`favor-${favor2.id}`)
     expect(existingFavor).toBeInTheDocument()
+    expect(existingFavor).toHaveStyle('text-decoration: line-through')
 
-    const size = getByTestId(`favor-${favor2.id}-size`)
-    expect(size).toHaveStyle('text-decoration: line-through')
-
-    const faction = getByTestId(`favor-${favor2.id}-faction_id`)
-    expect(faction).toHaveStyle('text-decoration: line-through')
-
-    const description = getByTestId(`favor-${favor2.id}-description`)
-    expect(description).toHaveStyle('text-decoration: line-through')
-
-    const completeButton = queryByTestId(/completeButton/gi)
+    const completeButton = queryByTestId(/complete/gi)
     expect(completeButton).not.toBeInTheDocument()
 
-    const revertButton = getByTestId(/revertButton/gi)
+    const revertButton = getByTestId(/revert/i)
     expect(revertButton).toBeInTheDocument()
 
     fireEvent.click(revertButton)
-    expect(mockSetFieldValue).toHaveBeenCalledWith(
-      `favors.${favor2.id}.status`,
-      'incomplete',
+    expect(mockOnFavorChange).toHaveBeenCalledWith(
+      `favors.${favor2.id}.completed`,
+      false,
     )
   })
 })
