@@ -1,21 +1,26 @@
-import Favor from '../index'
+import FavorsSection from '../index'
 
-import { favor1, favor2, newFavor } from 'mocks/favors'
+import { fromJS } from 'immutable'
+
+import { factionsById } from 'mocks/factions'
+import { favor1, newFavorResponse } from 'mocks/favors'
 
 const mockHandleSubmit = jest.fn()
 const mockOnFavorChange = jest.fn()
-const mockSetAdding = jest.fn()
+const type = 'owed'
+const favors = [favor1, { ...newFavorResponse, status: 'complete' }]
 const defaultProps = {
-  favor: favor1,
+  factions: fromJS(factionsById).toJS(),
+  favors,
   handleSubmit: mockHandleSubmit,
   onFavorChange: mockOnFavorChange,
-  setAdding: mockSetAdding,
+  type,
 }
 
 const renderComponent = (props = {}) =>
-  render(<Favor {...defaultProps} {...props} />)
+  render(<FavorsSection {...defaultProps} {...props} />)
 
-describe('<Favor />', () => {
+describe('<FavorsSection />', () => {
   afterEach(() => {
     jest.clearAllMocks()
   })
@@ -23,189 +28,103 @@ describe('<Favor />', () => {
     jest.resetAllMocks()
   })
 
-  it('should render correctly when not adding or editing', () => {
-    const {
-      getByTestId,
-      getByText,
-      queryByDisplayValue,
-      queryByPlaceholderText,
-      queryByTestId,
-    } = renderComponent()
+  it('should render correctly', () => {
+    const { getByTestId, getByText, queryByTestId } = renderComponent()
 
-    const existingFavor = getByTestId(`favor-${favor1.id}`)
-    expect(existingFavor).toBeInTheDocument()
+    const favorsSection = getByTestId(`favors-${type}`)
+    expect(favorsSection).toBeInTheDocument()
 
-    const form = queryByTestId(/new-favor/i)
-    expect(form).not.toBeInTheDocument()
+    const typeTitle = getByText(new RegExp(type, 'gi'))
+    expect(typeTitle).toBeInTheDocument()
 
-    const type = getByTestId(`favor-${favor1.id}-type`)
-    expect(type).toBeInTheDocument()
-    const typeValue = getByText(new RegExp(favor1.type, 'i'))
-    expect(typeValue).toBeInTheDocument()
+    const editButton = getByTestId(/edit/i)
+    expect(editButton).toBeInTheDocument()
 
-    const typeSelect = queryByDisplayValue(/small/i)
-    expect(typeSelect).not.toBeInTheDocument()
+    const nonExistingNewFavor = queryByTestId(/new-favor/i)
+    expect(nonExistingNewFavor).not.toBeInTheDocument()
 
-    const faction = getByTestId(`favor-${favor1.id}-faction`)
-    expect(faction).toBeInTheDocument()
-    const factionValue = getByText(new RegExp(favor1.faction, 'i'))
-    expect(factionValue).toBeInTheDocument()
+    favors.forEach(({ id, status }) => {
+      const favor = getByTestId(new RegExp(`favor-${id}`, 'gi'))
+      expect(favor).toBeInTheDocument()
 
-    const factionSelect = queryByDisplayValue(/jinteki/i)
-    expect(factionSelect).not.toBeInTheDocument()
-
-    const description = getByTestId(`favor-${favor1.id}-description`)
-    expect(description).toBeInTheDocument()
-    const descriptionValue = getByText(favor1.description)
-    expect(descriptionValue).toBeInTheDocument()
-
-    const descriptionTextarea = queryByPlaceholderText(/add description.../i)
-    expect(descriptionTextarea).not.toBeInTheDocument()
-
-    const cancelButton = queryByTestId('cancel')
-    expect(cancelButton).not.toBeInTheDocument()
-
-    const submitButton = queryByTestId(/submit/i)
-    expect(submitButton).not.toBeInTheDocument()
-  })
-
-  it('should render correctly when adding', async () => {
-    const props = {
-      adding: true,
-      favor: {
-        type: 'small',
-        faction: 'jinteki',
-        description: '',
-        owed: true,
-      },
-    }
-    const {
-      getByDisplayValue,
-      getByPlaceholderText,
-      getByTestId,
-      queryAllByTestId,
-    } = renderComponent(props)
-
-    const existingFavor = queryAllByTestId(/favor-/i)
-    expect(existingFavor).toHaveLength(0)
-
-    const form = getByTestId(/new-favor/i)
-    expect(form).toBeInTheDocument()
-
-    const typeSelect = getByDisplayValue(/small/i)
-    expect(typeSelect).toBeInTheDocument()
-
-    const factionSelect = getByDisplayValue(/jinteki/i)
-    expect(factionSelect).toBeInTheDocument()
-
-    const descriptionTextarea = getByPlaceholderText(/add description.../i)
-    expect(descriptionTextarea).toBeInTheDocument()
-
-    fireEvent.change(descriptionTextarea, {
-      target: {
-        value: newFavor.description,
-      },
+      const editFavorButton = queryByTestId(
+        status === 'complete' ? 'revertButton' : 'completeButton',
+      )
+      expect(editFavorButton).not.toBeInTheDocument()
     })
-    const populatedDescriptionTextarea = getByDisplayValue(newFavor.description)
-    expect(populatedDescriptionTextarea).toBeInTheDocument()
 
-    const cancelButton = getByTestId('cancel')
+    fireEvent.click(editButton)
+
+    const cancelButton = getByTestId(/cancel/i)
     expect(cancelButton).toBeInTheDocument()
-
-    fireEvent.click(cancelButton)
-    expect(mockSetAdding).toHaveBeenCalledWith(false)
 
     const submitButton = getByTestId(/submit/i)
     expect(submitButton).toBeInTheDocument()
 
-    fireEvent.click(submitButton)
-    await wait(() => {
-      expect(mockHandleSubmit).toHaveBeenCalled()
+    const newFavor = getByTestId(/new-favor/i)
+    expect(newFavor).toBeInTheDocument()
+
+    fireEvent.click(cancelButton)
+
+    const unmountedNewFavor = queryByTestId(/new-favor/i)
+    expect(unmountedNewFavor).not.toBeInTheDocument()
+
+    expect(editButton).toBeInTheDocument()
+  })
+
+  it('should not break if factions is empty', () => {
+    const props = {
+      factions: {},
+    }
+    const { getByTestId } = renderComponent(props)
+
+    const editButton = getByTestId(/edit/i)
+    fireEvent.click(editButton)
+
+    const favorsSection = getByTestId(`favors-${type}`)
+    expect(favorsSection).toBeInTheDocument()
+  })
+
+  it('should render correctly when editing', () => {
+    const props = {
+      editing: true,
+    }
+    const { getByTestId } = renderComponent(props)
+
+    favors.forEach(({ id, status }) => {
+      const favor = getByTestId(new RegExp(`favor-${id}`, 'gi'))
+      expect(favor).toBeInTheDocument()
+
+      const editFavorButton = getByTestId(
+        status === 'complete' ? 'revertButton' : 'completeButton',
+      )
+      expect(editFavorButton).toBeInTheDocument()
+
+      fireEvent.click(editFavorButton)
+
+      expect(mockOnFavorChange).toHaveBeenCalledWith(
+        `favors.${id}.status`,
+        status === 'complete' ? 'incomplete' : 'complete',
+      )
     })
   })
 
-  it('should render correctly when editing incomplete', () => {
-    const props = {
-      editing: true,
-    }
-    const {
-      getByTestId,
-      getByText,
-      queryByDisplayValue,
-      queryByPlaceholderText,
-      queryByTestId,
-    } = renderComponent(props)
+  it('should correctly submit new favor', async () => {
+    const { getByTestId, getByPlaceholderText } = renderComponent()
 
-    const existingFavor = getByTestId(`favor-${favor1.id}`)
-    expect(existingFavor).toBeInTheDocument()
+    const editButton = getByTestId(/edit/i)
+    fireEvent.click(editButton)
 
-    const form = queryByTestId(/new-favor/i)
-    expect(form).not.toBeInTheDocument()
+    const description = getByPlaceholderText(/add description.../i)
+    fireEvent.change(description, {
+      target: { value: 'This is a new description' },
+    })
 
-    const type = getByTestId(`favor-${favor1.id}-type`)
-    expect(type).toBeInTheDocument()
-    const typeValue = getByText(new RegExp(favor1.type, 'i'))
-    expect(typeValue).toBeInTheDocument()
+    const submitButton = getByTestId(/submit/i)
+    fireEvent.click(submitButton)
 
-    const typeSelect = queryByDisplayValue(/small/i)
-    expect(typeSelect).not.toBeInTheDocument()
-
-    const faction = getByTestId(`favor-${favor1.id}-faction`)
-    expect(faction).toBeInTheDocument()
-    const factionValue = getByText(new RegExp(favor1.faction, 'i'))
-    expect(factionValue).toBeInTheDocument()
-
-    const factionSelect = queryByDisplayValue(/jinteki/i)
-    expect(factionSelect).not.toBeInTheDocument()
-
-    const description = getByTestId(`favor-${favor1.id}-description`)
-    expect(description).toBeInTheDocument()
-    const descriptionValue = getByText(favor1.description)
-    expect(descriptionValue).toBeInTheDocument()
-
-    const descriptionTextarea = queryByPlaceholderText(/add description.../i)
-    expect(descriptionTextarea).not.toBeInTheDocument()
-
-    const cancelButton = queryByTestId('cancel')
-    expect(cancelButton).not.toBeInTheDocument()
-
-    const submitButton = queryByTestId(/submit/i)
-    expect(submitButton).not.toBeInTheDocument()
-
-    const completeButton = getByTestId(/complete/gi)
-    expect(completeButton).toBeInTheDocument()
-
-    fireEvent.click(completeButton)
-    expect(mockOnFavorChange).toHaveBeenCalledWith(
-      `favors.${favor1.id}.completed`,
-      true,
-    )
-
-    const revertButton = queryByTestId(/revert/i)
-    expect(revertButton).not.toBeInTheDocument()
-  })
-
-  it('should render correctly when editing completed', () => {
-    const props = {
-      editing: true,
-      favor: favor2,
-    }
-    const { getByTestId, queryByTestId } = renderComponent(props)
-
-    const existingFavor = getByTestId(`favor-${favor2.id}`)
-    expect(existingFavor).toBeInTheDocument()
-    expect(existingFavor).toHaveStyle('text-decoration: line-through')
-
-    const completeButton = queryByTestId(/complete/gi)
-    expect(completeButton).not.toBeInTheDocument()
-
-    const revertButton = getByTestId(/revert/i)
-    expect(revertButton).toBeInTheDocument()
-
-    fireEvent.click(revertButton)
-    expect(mockOnFavorChange).toHaveBeenCalledWith(
-      `favors.${favor2.id}.completed`,
-      false,
-    )
+    await wait(() => {
+      expect(mockHandleSubmit).toHaveBeenCalledTimes(1)
+    })
   })
 })

@@ -10,14 +10,12 @@ import { Form } from 'formik'
 import FormButtons from 'components/FormButtons'
 import { MdAdd, MdCheck, MdClose } from 'react-icons/md'
 
-import { StyledContainer, StyledForm, StyledSubHeader } from './styles'
-
-/* eslint-disable no-unused-vars  */
-/* eslint-disable react/prop-types  */
-const FilteredForm = ({ editing, isNew, ...otherProps }) => (
-  <Form {...otherProps} />
-)
-/* eslint-enable */
+import {
+  StyledContainer,
+  StyledForm,
+  StyledNewFavor,
+  StyledSubHeader,
+} from './styles'
 
 const InnerForm = ({
   editing,
@@ -39,7 +37,8 @@ const InnerForm = ({
     submit: <MdCheck />,
   }
   const newFavor = (
-    <Favor
+    <StyledNewFavor
+      as={Favor}
       factions={factions}
       favor={values}
       isNew
@@ -59,7 +58,11 @@ const InnerForm = ({
   ))
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm
+      as={Form}
+      data-testid={`favors-${type}`}
+      onSubmit={handleSubmit}
+    >
       <StyledSubHeader>
         <h3>{type}</h3>
         <FormButtons

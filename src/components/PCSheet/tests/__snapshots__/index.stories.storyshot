@@ -1,13 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Components/PCSheet default 1`] = `
-.c1 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
 .c2 {
   padding: 12px;
   border: none;
@@ -361,6 +354,13 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   box-sizing: border-box;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .c3 {

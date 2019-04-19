@@ -13,6 +13,7 @@ const ExistingFavor = ({
   setFieldValue,
   values: { id, description, faction_id, size, status },
 }) => {
+  const faction = factions[faction_id]
   const statusButton =
     status === 'complete' ? (
       <StyledButton
@@ -36,9 +37,7 @@ const ExistingFavor = ({
   return (
     <>
       <h4 data-testid={`favor-${id}-size`}>{sizes[size].label}</h4>
-      <h4 data-testid={`favor-${id}-faction_id`}>
-        {factions[faction_id].name}
-      </h4>
+      <h4 data-testid={`favor-${id}-faction_id`}>{faction && faction.name}</h4>
       {editing && <div>{statusButton}</div>}
       <div data-testid={`favor-${id}-description`}>{description}</div>
     </>

@@ -3,6 +3,9 @@
 exports[`Storyshots Components/Favor completed 1`] = `
 .c0 {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
@@ -133,6 +136,9 @@ exports[`Storyshots Components/Favor completed 1`] = `
 exports[`Storyshots Components/Favor default 1`] = `
 .c0 {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
@@ -257,6 +263,9 @@ exports[`Storyshots Components/Favor default 1`] = `
 exports[`Storyshots Components/Favor editing 1`] = `
 .c0 {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
@@ -421,6 +430,9 @@ exports[`Storyshots Components/Favor editing 1`] = `
 exports[`Storyshots Components/Favor editing completed 1`] = `
 .c0 {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
@@ -713,6 +725,9 @@ exports[`Storyshots Components/Favor new 1`] = `
 
 .c0 {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 6px;

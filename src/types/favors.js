@@ -4,7 +4,7 @@ export const favorData = {
   /** Favor's description */
   description: PropTypes.string.isRequired,
   /** Who owes/is owed the favor */
-  faction_id: PropTypes.string.isRequired,
+  faction_id: PropTypes.string,
   /** Favor's unique identifier */
   id: PropTypes.number,
   /** Favor's type */

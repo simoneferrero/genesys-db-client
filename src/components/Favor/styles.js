@@ -12,6 +12,7 @@ const descriptionStyles = css`
 `
 export const StyledFavor = styled.div`
   width: 100%;
+  height: fit-content;
   display: grid;
   grid-template-columns: ${({ isNew }) =>
     isNew ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'};

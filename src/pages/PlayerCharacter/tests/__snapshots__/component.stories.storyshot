@@ -1,13 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/PlayerCharacter default 1`] = `
-.c2 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
 .c3 {
   padding: 12px;
   border: none;
@@ -388,6 +381,13 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   box-sizing: border-box;
+}
+
+.c2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .c4 {
@@ -1022,13 +1022,6 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 `;
 
 exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
-.c2 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
 .c3 {
   padding: 12px;
   border: none;
@@ -1409,6 +1402,13 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   box-sizing: border-box;
+}
+
+.c2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .c4 {

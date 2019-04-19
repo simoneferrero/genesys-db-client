@@ -12,7 +12,7 @@ import Favor from '../index'
 
 const defaultProps = {
   factions: fromJS(factionsById).toJS(),
-  favors: [favor1, newFavorResponse],
+  favors: [favor1, { ...newFavorResponse, status: 'complete' }],
   handleSubmit: action('handleSubmit'),
   onFavorChange: action('onFavorChange'),
   type: 'owed',

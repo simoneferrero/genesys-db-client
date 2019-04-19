@@ -16,6 +16,7 @@ const FilteredFavor = ({ isNew, isComplete, editing, ...otherProps }) => (
 /* eslint-enable */
 
 const Favor = ({
+  className,
   editing,
   factions,
   favor,
@@ -40,11 +41,12 @@ const Favor = ({
 
   return (
     <StyledFavor
-      isNew={isNew}
       as={FilteredFavor}
-      isComplete={favor.status === 'complete'}
+      className={className}
       data-testid={isNew ? 'new-favor' : `favor-${favor.id}`}
       editing={editing}
+      isComplete={favor.status === 'complete'}
+      isNew={isNew}
     >
       {isNew ? (
         <NewFavor
@@ -69,6 +71,8 @@ const Favor = ({
 }
 
 Favor.propTypes = {
+  /** Custom styles */
+  className: PropTypes.bool,
   /** Whether to allow editing the favor */
   editing: PropTypes.bool,
   /** List of available factions */

@@ -28,7 +28,7 @@ const FormButtons = ({
   setShowButtons,
 }) => (
   <div className={className} data-testid="form-buttons">
-    {showButtons === false ? (
+    {!showButtons ? (
       <StyledButton
         data-testid="edit"
         disabled={disabled}

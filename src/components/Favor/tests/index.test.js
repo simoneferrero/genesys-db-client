@@ -90,6 +90,16 @@ describe('<Favor />', () => {
     expect(revertButton).not.toBeInTheDocument()
   })
 
+  it('should not break if factions are empty', () => {
+    const props = {
+      factions: {},
+    }
+    const { getByTestId } = renderComponent(props)
+
+    const existingFavor = getByTestId(`favor-${favor1.id}`)
+    expect(existingFavor).toBeInTheDocument()
+  })
+
   it('should render correctly when adding', () => {
     const faction_id = defaultProps.factions[newFavor.faction_id].id
     const props = {

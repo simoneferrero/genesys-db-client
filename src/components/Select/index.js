@@ -62,7 +62,7 @@ Select.propTypes = {
   /** Text to display as a placeholder */
   placeholder: PropTypes.string,
   /** Current element's value */
-  currentValue: PropTypes.string.isRequired,
+  currentValue: PropTypes.string,
 }
 
 Select.defaultProps = {
