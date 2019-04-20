@@ -1,8 +1,11 @@
 import React from 'react'
 
+import { fromJS } from 'immutable'
+
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import { factionsById } from 'mocks/factions'
 import {
   playerCharacter1Id,
   playerCharacter1Augmented,
@@ -12,7 +15,10 @@ import { uiElement, uiElementLoading } from 'mocks/ui'
 import { PlayerCharacter } from '../component'
 
 const defaultProps = {
+  addFavor: action('addFavor'),
   editPlayerCharacter: action('editPlayerCharacter'),
+  factions: fromJS(factionsById).toJS(),
+  factionsUi: uiElement,
   favorsUi: uiElement,
   getArchetypes: action('getArchetypes'),
   getCareers: action('getCareers'),

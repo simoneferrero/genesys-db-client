@@ -2,11 +2,14 @@ import { connect } from 'react-redux'
 
 // Selectors
 import { currentPlayerCharacterSelector } from 'reducers/playersCharacters/selectors'
+import { factionsByIdSelector } from 'reducers/factions/selectors'
+import { factionsUiSelector } from 'reducers/ui/factions/selectors'
 import { favorsUiSelector } from 'reducers/ui/favors/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
 import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selectors'
 
 // Actions
+import { addFavor } from 'actions/favors'
 import { getArchetypes } from 'actions/archetypes'
 import { getCareers } from 'actions/careers'
 import { getFactions } from 'actions/factions'
@@ -21,12 +24,16 @@ import ImmutableConverter from 'HOCs/ImmutableConverter'
 import PlayersCharacters from './component'
 
 const mapStateToProps = (state) => ({
+  factions: factionsByIdSelector(state),
+  factionsUi: factionsUiSelector(state),
   favorsUi: favorsUiSelector(state),
   playerCharacter: currentPlayerCharacterSelector(state),
   playerCharacterId: playerCharacterIdSelector(state),
   playersCharactersUi: playersCharactersUiSelector(state),
 })
 const mapDispatchToProps = (dispatch) => ({
+  addFavor: (playerCharacterId, favor, actions) =>
+    dispatch(addFavor(playerCharacterId, favor, actions)),
   editPlayerCharacter: (id, values, actions) =>
     dispatch(editPlayerCharacter(id, values, actions)),
   getArchetypes: () => dispatch(getArchetypes()),

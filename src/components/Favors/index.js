@@ -19,6 +19,7 @@ export const StyledFavors = styled.div`
 `
 
 const Favors = ({
+  className,
   editing,
   factions,
   favors,
@@ -26,14 +27,15 @@ const Favors = ({
   isSubmitting,
   setFieldValue,
 }) => {
+  const typesOfFavors = ['owed', 'given']
   const groupedByFavors = groupBy(favors, 'type')
   return (
-    <StyledFavors data-testid="favors">
-      {Object.entries(groupedByFavors).map(([type, favorsOfType]) => (
+    <StyledFavors className={className} data-testid="favors">
+      {typesOfFavors.map((type) => (
         <FavorsSection
           editing={editing}
           factions={factions}
-          favors={Object.values(favorsOfType)}
+          favors={Object.values(groupedByFavors[type] || {})}
           handleSubmit={handleSubmit}
           isPCSubmitting={isSubmitting}
           onFavorChange={setFieldValue}
@@ -46,6 +48,8 @@ const Favors = ({
 }
 
 Favors.propTypes = {
+  /** Custom styles */
+  className: PropTypes.string,
   /** Whether favors can be edited */
   editing: PropTypes.bool,
   /** Factions data */

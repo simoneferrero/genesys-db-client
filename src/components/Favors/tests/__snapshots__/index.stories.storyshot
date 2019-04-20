@@ -311,7 +311,7 @@ exports[`Storyshots Components/Favors default 1`] = `
   class="c0"
   data-testid="favors"
 >
-  <form
+  <div
     class="c1"
     data-testid="favors-owed"
   >
@@ -322,11 +322,11 @@ exports[`Storyshots Components/Favors default 1`] = `
         owed
       </h3>
       <div
-        data-testid="form-buttons"
+        data-testid="form-buttons-favor-owed"
       >
         <button
           class="c3"
-          data-testid="edit"
+          data-testid="edit-favor-owed"
           type="button"
         >
           <svg
@@ -389,8 +389,8 @@ exports[`Storyshots Components/Favors default 1`] = `
         </div>
       </div>
     </div>
-  </form>
-  <form
+  </div>
+  <div
     class="c1"
     data-testid="favors-given"
   >
@@ -401,11 +401,11 @@ exports[`Storyshots Components/Favors default 1`] = `
         given
       </h3>
       <div
-        data-testid="form-buttons"
+        data-testid="form-buttons-favor-given"
       >
         <button
           class="c3"
-          data-testid="edit"
+          data-testid="edit-favor-given"
           type="button"
         >
           <svg
@@ -448,7 +448,7 @@ exports[`Storyshots Components/Favors default 1`] = `
         </div>
       </div>
     </div>
-  </form>
+  </div>
 </div>
 `;
 
@@ -792,7 +792,7 @@ exports[`Storyshots Components/Favors editing 1`] = `
   class="c0"
   data-testid="favors"
 >
-  <form
+  <div
     class="c1"
     data-testid="favors-owed"
   >
@@ -803,11 +803,11 @@ exports[`Storyshots Components/Favors editing 1`] = `
         owed
       </h3>
       <div
-        data-testid="form-buttons"
+        data-testid="form-buttons-favor-owed"
       >
         <button
           class="c3"
-          data-testid="edit"
+          data-testid="edit-favor-owed"
           type="button"
         >
           <svg
@@ -892,8 +892,8 @@ exports[`Storyshots Components/Favors editing 1`] = `
         </div>
       </div>
     </div>
-  </form>
-  <form
+  </div>
+  <div
     class="c1"
     data-testid="favors-given"
   >
@@ -904,11 +904,11 @@ exports[`Storyshots Components/Favors editing 1`] = `
         given
       </h3>
       <div
-        data-testid="form-buttons"
+        data-testid="form-buttons-favor-given"
       >
         <button
           class="c3"
-          data-testid="edit"
+          data-testid="edit-favor-given"
           type="button"
         >
           <svg
@@ -962,6 +962,6 @@ exports[`Storyshots Components/Favors editing 1`] = `
         </div>
       </div>
     </div>
-  </form>
+  </div>
 </div>
 `;

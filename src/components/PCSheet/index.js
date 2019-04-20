@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
 
 import keyBy from 'lodash/keyBy'
@@ -10,8 +11,10 @@ import InnerForm from './innerForm'
 
 // TODO: extract as separate component?
 const PCSheet = ({
+  addFavor,
+  factions,
   handleSubmit,
-  playerCharacter: { skills, ...playerCharacter },
+  playerCharacter: { favors, skills, ...playerCharacter },
 }) => {
   const [editing, setEditing] = useState(false)
   const augmentedHandleSubmit = (values, actions) =>
@@ -19,6 +22,7 @@ const PCSheet = ({
 
   const initialValues = {
     ...playerCharacter,
+    favors: keyBy(favors, 'id'),
     skills: keyBy(skills, 'id'),
   }
 
@@ -28,7 +32,13 @@ const PCSheet = ({
       initialValues={initialValues}
       onSubmit={augmentedHandleSubmit}
       render={(props) => (
-        <InnerForm editing={editing} setEditing={setEditing} {...props} />
+        <InnerForm
+          addFavor={addFavor}
+          editing={editing}
+          factions={factions}
+          setEditing={setEditing}
+          {...props}
+        />
       )}
       validationSchema={InnerForm.validationSchema}
     />
@@ -36,6 +46,10 @@ const PCSheet = ({
 }
 
 PCSheet.propTypes = {
+  /** Invoked when adding a favor */
+  addFavor: PropTypes.func.isRequired,
+  /** Factions data */
+  factions: PropTypes.objectOf(factionType).isRequired,
   /** Function invoked upon form submission */
   handleSubmit: PropTypes.func.isRequired,
   /** Player character data */

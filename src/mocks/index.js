@@ -55,5 +55,6 @@ export const formikActions = {
   setErrors: () => {},
   setFieldTouched: () => {},
   setFieldValue: () => {},
+  setIsNew: () => {},
   setSubmitting: () => {},
 }

@@ -23,43 +23,58 @@ export const StyledButton = styled.button`
 const FormButtons = ({
   className,
   disabled,
+  handleSubmit,
   icons: { cancel, edit, submit },
+  name,
   showButtons,
   setShowButtons,
-}) => (
-  <div className={className} data-testid="form-buttons">
-    {!showButtons ? (
-      <StyledButton
-        data-testid="edit"
-        disabled={disabled}
-        onClick={() => setShowButtons(true)}
-        type="button"
-      >
-        {edit}
-      </StyledButton>
-    ) : (
-      <>
+}) => {
+  const submitButtonProps = {
+    ...(handleSubmit
+      ? { onClick: handleSubmit, type: 'button' }
+      : { type: 'submit' }),
+  }
+  return (
+    <div className={className} data-testid={`form-buttons-${name}`}>
+      {!showButtons ? (
         <StyledButton
-          data-testid="cancel"
+          data-testid={`edit-${name}`}
           disabled={disabled}
-          onClick={() => setShowButtons(false)}
+          onClick={() => setShowButtons(true)}
           type="button"
         >
-          {cancel}
+          {edit}
         </StyledButton>
-        <StyledButton data-testid="submit" disabled={disabled} type="submit">
-          {submit}
-        </StyledButton>
-      </>
-    )}
-  </div>
-)
+      ) : (
+        <>
+          <StyledButton
+            data-testid={`cancel-${name}`}
+            disabled={disabled}
+            onClick={() => setShowButtons(false)}
+            type="button"
+          >
+            {cancel}
+          </StyledButton>
+          <StyledButton
+            data-testid={`submit-${name}`}
+            disabled={disabled}
+            {...submitButtonProps}
+          >
+            {submit}
+          </StyledButton>
+        </>
+      )}
+    </div>
+  )
+}
 
 FormButtons.propTypes = {
   /** Custom styles */
   className: PropTypes.string,
   /** Whether to show submit/cancel buttons or edit button */
   disabled: PropTypes.bool,
+  /** Invoked upon submission */
+  handleSubmit: PropTypes.func,
   /** The set of icons to display */
   icons: PropTypes.shape({
     /** Icon shown to revert back to initial status and discard changes */
@@ -69,6 +84,8 @@ FormButtons.propTypes = {
     /** Icon shown to submit changes */
     submit: PropTypes.node.isRequired,
   }).isRequired,
+  /** The name of the form the buttons refer to */
+  name: PropTypes.string.isRequired,
   /** Whether the buttons are in editing or static mode */
   showButtons: PropTypes.bool,
   /** Changes the mode between showing submit/cancel buttons or edit button */

@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import { baseSpacing, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
-export const StyledForm = styled.form`
+export const StyledForm = styled.div`
   padding: ${baseSpacing / 2}px;
   position: relative;
 `

@@ -33,6 +33,7 @@ export function* addFavorSaga({
 
     yield put(addFavorSuccess(response.data.data))
     yield call(actions.setSubmitting, false)
+    yield call(actions.setIsNew, false)
   } catch (error) {
     yield put(addFavorError(error))
     yield call(actions.setSubmitting, false)

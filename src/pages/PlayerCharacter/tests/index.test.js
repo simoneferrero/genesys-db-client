@@ -13,6 +13,7 @@ import {
   playerCharacter1Response,
 } from 'mocks/playersCharacters'
 
+import { GET_FACTIONS } from 'actions/factions/constants'
 import { ADD_FAVOR } from 'actions/favors/constants'
 import {
   EDIT_PLAYER_CHARACTER,
@@ -21,22 +22,22 @@ import {
 } from 'actions/playersCharacters/constants'
 
 jest.mock('actions/favors', () => ({
-  addFavor: jest.fn(),
-  addFavorSuccess: jest.fn(),
-  addFavorError: jest.fn(),
+  addFavor: jest.fn(() => ({ type: '' })),
+  addFavorSuccess: jest.fn(() => ({ type: '' })),
+  addFavorError: jest.fn(() => ({ type: '' })),
 }))
 import { addFavor } from 'actions/favors'
 
 jest.mock('actions/playersCharacters', () => ({
-  editPlayerCharacter: jest.fn(),
-  editPlayerCharacterSuccess: jest.fn(),
-  editPlayerCharacterError: jest.fn(),
-  getPlayerCharacter: jest.fn(),
-  getPlayerCharacterSuccess: jest.fn(),
-  getPlayerCharacterError: jest.fn(),
-  getPlayersCharacters: jest.fn(),
-  getPlayersCharactersSuccess: jest.fn(),
-  getPlayersCharactersError: jest.fn(),
+  editPlayerCharacter: jest.fn(() => ({ type: '' })),
+  editPlayerCharacterSuccess: jest.fn(() => ({ type: '' })),
+  editPlayerCharacterError: jest.fn(() => ({ type: '' })),
+  getPlayerCharacter: jest.fn(() => ({ type: '' })),
+  getPlayerCharacterSuccess: jest.fn(() => ({ type: '' })),
+  getPlayerCharacterError: jest.fn(() => ({ type: '' })),
+  getPlayersCharacters: jest.fn(() => ({ type: '' })),
+  getPlayersCharactersSuccess: jest.fn(() => ({ type: '' })),
+  getPlayersCharactersError: jest.fn(() => ({ type: '' })),
 }))
 import {
   editPlayerCharacter,
@@ -50,8 +51,8 @@ jest.mock('actions/archetypes', () => {
       type: GET_ARCHETYPES,
       payload: {},
     })),
-    getArchetypesSuccess: jest.fn(),
-    getArchetypesError: jest.fn(),
+    getArchetypesSuccess: jest.fn(() => ({ type: '' })),
+    getArchetypesError: jest.fn(() => ({ type: '' })),
   }
 })
 import { getArchetypes } from 'actions/archetypes'
@@ -63,23 +64,17 @@ jest.mock('actions/careers', () => {
       type: GET_CAREERS,
       payload: {},
     })),
-    getCareersSuccess: jest.fn(),
-    getCareersError: jest.fn(),
+    getCareersSuccess: jest.fn(() => ({ type: '' })),
+    getCareersError: jest.fn(() => ({ type: '' })),
   }
 })
 import { getCareers } from 'actions/careers'
 
-jest.mock('actions/factions', () => {
-  const { GET_FACTIONS } = require('actions/factions/constants')
-  return {
-    getFactions: jest.fn(() => ({
-      type: GET_FACTIONS,
-      payload: {},
-    })),
-    getFactionsSuccess: jest.fn(),
-    getFactionsError: jest.fn(),
-  }
-})
+jest.mock('actions/factions', () => ({
+  getFactions: jest.fn(() => ({ type: '' })),
+  getFactionsSuccess: jest.fn(() => ({ type: '' })),
+  getFactionsError: jest.fn(() => ({ type: '' })),
+}))
 import { getFactions } from 'actions/factions'
 
 jest.mock('actions/skills', () => {
@@ -89,8 +84,8 @@ jest.mock('actions/skills', () => {
       type: GET_SKILLS,
       payload: {},
     })),
-    getSkillsSuccess: jest.fn(),
-    getSkillsError: jest.fn(),
+    getSkillsSuccess: jest.fn(() => ({ type: '' })),
+    getSkillsError: jest.fn(() => ({ type: '' })),
   }
 })
 import { getSkills } from 'actions/skills'
@@ -196,15 +191,10 @@ describe('<PlayerCharacter />', () => {
     })
   })
 
-  // TODO: implement once UI is in place
-  xit('should display a loader if favor is loading', async () => {
-    addFavor.mockImplementation(() => ({
-      type: ADD_FAVOR,
-      payload: {
-        actions: formikActions,
-        favor: newFavor,
-        playerCharacterId: id,
-      },
+  it('should display a loader if factions are loading', async () => {
+    getFactions.mockImplementation(() => ({
+      type: GET_FACTIONS,
+      payload: {},
     }))
 
     const { getByTestId } = renderComponent()
@@ -243,14 +233,45 @@ describe('<PlayerCharacter />', () => {
 
     const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit/i)
+    const editButton = getByTestId(/edit-pc-sheet/i)
     fireEvent.click(editButton)
 
-    const submitButton = getByTestId(/submit/i)
+    const submitButton = getByTestId(/submit-pc-sheet/i)
     fireEvent.click(submitButton)
 
     await wait(() => {
       expect(editPlayerCharacter).toHaveBeenCalledTimes(1)
+    })
+  })
+
+  it('should call addFavor on new favor submit', async () => {
+    addFavor.mockImplementation(() => ({
+      type: ADD_FAVOR,
+      payload: {
+        actions: formikActions,
+        favor: newFavor,
+        playerCharacterId: id,
+      },
+    }))
+
+    const { getByPlaceholderText, getByTestId } = renderComponent()
+
+    const editButton = getByTestId(/edit-favor-owed/i)
+    fireEvent.click(editButton)
+
+    const description = getByPlaceholderText(/add description.../i)
+    fireEvent.change(description, {
+      target: { value: 'This is a new description' },
+    })
+
+    const submitButton = getByTestId(/submit-favor-owed/i)
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(addFavor).toHaveBeenCalledTimes(1)
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
     })
   })
 })

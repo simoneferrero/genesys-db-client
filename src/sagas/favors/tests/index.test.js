@@ -57,6 +57,13 @@ describe('favors sagas', () => {
         expect(callSetSubmittingDescriptor).toEqual(
           expectedCallSetSubmittingDescriptor,
         )
+
+        const callSetIsNewDescriptor = generator.next().value
+        const expectedCallSetIsNewDescriptor = call(
+          formikActions.setIsNew,
+          false,
+        )
+        expect(callSetIsNewDescriptor).toEqual(expectedCallSetIsNewDescriptor)
       })
 
       it('should dispatch the correct actions on error', () => {

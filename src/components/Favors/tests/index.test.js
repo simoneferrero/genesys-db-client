@@ -43,6 +43,23 @@ describe('<Favors />', () => {
     expect(favorsSectionGiven).toBeInTheDocument()
   })
 
+  it('should not break if favors are empty', () => {
+    const props = {
+      favors: {},
+    }
+
+    const { getByTestId } = renderComponent(props)
+
+    const favors = getByTestId(/favors/gi)
+    expect(favors).toBeInTheDocument()
+
+    const favorsSectionOwed = getByTestId(/favors-owed/gi)
+    expect(favorsSectionOwed).toBeInTheDocument()
+
+    const favorsSectionGiven = getByTestId(/favors-given/gi)
+    expect(favorsSectionGiven).toBeInTheDocument()
+  })
+
   it('should render correctly when editing', () => {
     const props = {
       editing: true,

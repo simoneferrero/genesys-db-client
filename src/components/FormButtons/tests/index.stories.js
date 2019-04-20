@@ -7,6 +7,8 @@ import FormButtons from '../index'
 
 const defaultProps = {
   disabled: false,
+  handleSubmit: action('handleSubmit'),
+  name: 'test',
   showButtons: false,
   setShowButtons: action('setShowButtons'),
 }

@@ -6,7 +6,6 @@ import { favorType } from 'types/favors'
 import * as yup from 'yup'
 
 import Favor from 'components/Favor'
-import { Form } from 'formik'
 import FormButtons from 'components/FormButtons'
 import { MdAdd, MdCheck, MdClose } from 'react-icons/md'
 
@@ -58,16 +57,14 @@ const InnerForm = ({
   ))
 
   return (
-    <StyledForm
-      as={Form}
-      data-testid={`favors-${type}`}
-      onSubmit={handleSubmit}
-    >
+    <StyledForm data-testid={`favors-${type}`}>
       <StyledSubHeader>
         <h3>{type}</h3>
         <FormButtons
           disabled={isSubmitting}
+          handleSubmit={handleSubmit}
           icons={buttonsIcons}
+          name={`favor-${type}`}
           setShowButtons={setIsNew}
           showButtons={isNew}
         />

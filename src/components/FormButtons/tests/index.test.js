@@ -2,8 +2,10 @@ import FormButtons from '../index'
 
 import { MdAdd, MdThumbDown, MdThumbUp } from 'react-icons/md'
 
+const name = 'test'
 const mockSetShowButtons = jest.fn()
 const defaultProps = {
+  name,
   setShowButtons: mockSetShowButtons,
 }
 
@@ -21,17 +23,17 @@ describe('<FormButtons />', () => {
   it('should render correctly when static', () => {
     const { getByTestId, queryByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit/i)
+    const editButton = getByTestId(`edit-${name}`)
     expect(editButton).toBeInTheDocument()
     expect(editButton).not.toBeDisabled()
 
     fireEvent.click(editButton)
     expect(mockSetShowButtons).toHaveBeenCalledWith(true)
 
-    const cancelButton = queryByTestId(/cancel/i)
+    const cancelButton = queryByTestId(`cancel-${name}`)
     expect(cancelButton).not.toBeInTheDocument()
 
-    const submitButton = queryByTestId(/submit/i)
+    const submitButton = queryByTestId(`submit-${name}`)
     expect(submitButton).not.toBeInTheDocument()
   })
 
@@ -63,17 +65,17 @@ describe('<FormButtons />', () => {
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
 
-    const editButton = queryByTestId(/edit/i)
+    const editButton = queryByTestId(`edit-${name}`)
     expect(editButton).not.toBeInTheDocument()
 
-    const cancelButton = getByTestId(/cancel/i)
+    const cancelButton = getByTestId(`cancel-${name}`)
     expect(cancelButton).toBeInTheDocument()
     expect(cancelButton).not.toBeDisabled()
 
     fireEvent.click(cancelButton)
     expect(mockSetShowButtons).toHaveBeenCalledWith(false)
 
-    const submitButton = getByTestId(/submit/i)
+    const submitButton = getByTestId(`submit-${name}`)
     expect(submitButton).toBeInTheDocument()
     expect(submitButton).not.toBeDisabled()
   })
@@ -85,18 +87,32 @@ describe('<FormButtons />', () => {
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
 
-    const editButton = queryByTestId(/edit/i)
+    const editButton = queryByTestId(`edit-${name}`)
     expect(editButton).not.toBeInTheDocument()
 
-    const cancelButton = getByTestId(/cancel/i)
+    const cancelButton = getByTestId(`cancel-${name}`)
     expect(cancelButton).toBeInTheDocument()
     expect(cancelButton).toBeDisabled()
 
     fireEvent.click(cancelButton)
     expect(mockSetShowButtons).not.toHaveBeenCalled()
 
-    const submitButton = getByTestId(/submit/i)
+    const submitButton = getByTestId(`submit-${name}`)
     expect(submitButton).toBeInTheDocument()
     expect(submitButton).toBeDisabled()
+  })
+
+  it('should correctly call handleSubmit when provided and clicked', () => {
+    const mockHandleSubmit = jest.fn()
+    const props = {
+      handleSubmit: mockHandleSubmit,
+      showButtons: true,
+    }
+    const { getByTestId } = renderComponent(props)
+    const submitButton = getByTestId(`submit-${name}`)
+
+    fireEvent.click(submitButton)
+
+    expect(mockHandleSubmit).toHaveBeenCalledTimes(1)
   })
 })
