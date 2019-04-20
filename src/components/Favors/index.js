@@ -9,6 +9,7 @@ import FavorsSection from 'components/FavorsSection'
 
 import styled from 'styled-components/macro'
 import { borderRadius, colours } from 'styles/constants'
+import mq from 'styles/mediaQueries'
 import rgbToRgba from 'utils/rgbToRgba'
 
 export const StyledFavors = styled.div`
@@ -16,6 +17,12 @@ export const StyledFavors = styled.div`
   border-radius: ${borderRadius}px;
   background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const Favors = ({

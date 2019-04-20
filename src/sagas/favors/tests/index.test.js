@@ -45,7 +45,7 @@ describe('favors sagas', () => {
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
-          addFavorSuccess(newFavorResponse),
+          addFavorSuccess(playerCharacter1Id, newFavorResponse),
         )
         expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
 
@@ -69,7 +69,9 @@ describe('favors sagas', () => {
       it('should dispatch the correct actions on error', () => {
         generator.next().value
         const putErrorDescriptor = generator.throw(genericError).value
-        const expectedPutErrorDescriptor = put(addFavorError(genericError))
+        const expectedPutErrorDescriptor = put(
+          addFavorError(playerCharacter1Id, genericError),
+        )
         expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
 
         const callSetSubmittingDescriptor = generator.next().value

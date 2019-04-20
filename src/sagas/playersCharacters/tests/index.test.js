@@ -189,13 +189,15 @@ describe('playersCharacters sagas', () => {
             wounds: { current: wounds_current },
             strain: { current: strain_current },
           },
+          favors,
         } = values
         const data = JSON.stringify({
-          wounds_current,
+          favors,
           skills: rawSkills
             .filter(({ rank }) => rank)
             .map(({ id, rank }) => ({ id, rank })),
           strain_current,
+          wounds_current,
         })
         const headers = { 'Content-Type': 'application/json' }
 

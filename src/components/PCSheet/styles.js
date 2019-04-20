@@ -16,7 +16,7 @@ export const StyledForm = styled.form`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: ${baseSpacing}px;
-  grid-row-gap: ${baseSpacing}px;
+  grid-row-gap: ${baseSpacing * 2}px;
   box-sizing: border-box;
 `
 

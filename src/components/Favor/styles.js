@@ -22,13 +22,14 @@ export const StyledFavor = styled.div`
   /* ExistingFavor */
   h4 {
     ${({ isComplete }) => isComplete && completedStyles};
-    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 
     &:first-child {
-      justify-content: flex-start;
+      text-align: left;
     }
   }
 

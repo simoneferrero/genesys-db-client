@@ -13,26 +13,15 @@ exports[`Storyshots Components/Favors default 1`] = `
 }
 
 .c5 h4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .c5 h4:first-child {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .c5 > div:not(:last-child) {
@@ -120,26 +109,15 @@ exports[`Storyshots Components/Favors default 1`] = `
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .c6 h4:first-child {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .c6 > div:not(:last-child) {
@@ -293,17 +271,19 @@ exports[`Storyshots Components/Favors default 1`] = `
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+@media only screen and (min-width:1800px) {
   .c4 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media only screen and (min-width:1800px) {
-  .c4 {
-    grid-template-columns: repeat(3,1fr);
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -350,26 +330,6 @@ exports[`Storyshots Components/Favors default 1`] = `
     >
       <div
         class="c5"
-        data-testid="favor-1"
-      >
-        <h4
-          data-testid="favor-1-size"
-        >
-          Big favor
-        </h4>
-        <h4
-          data-testid="favor-1-faction_id"
-        >
-          Orgcrime
-        </h4>
-        <div
-          data-testid="favor-1-description"
-        >
-          Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
-        </div>
-      </div>
-      <div
-        class="c5"
         data-testid="favor-3"
       >
         <h4
@@ -386,6 +346,26 @@ exports[`Storyshots Components/Favors default 1`] = `
           data-testid="favor-3-description"
         >
           Favor 3 description
+        </div>
+      </div>
+      <div
+        class="c5"
+        data-testid="favor-1"
+      >
+        <h4
+          data-testid="favor-1-size"
+        >
+          Big favor
+        </h4>
+        <h4
+          data-testid="favor-1-faction_id"
+        >
+          Orgcrime
+        </h4>
+        <div
+          data-testid="favor-1-description"
+        >
+          Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
         </div>
       </div>
     </div>
@@ -465,26 +445,15 @@ exports[`Storyshots Components/Favors editing 1`] = `
 }
 
 .c5 h4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .c5 h4:first-child {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .c5 > div:not(:last-child) {
@@ -572,26 +541,15 @@ exports[`Storyshots Components/Favors editing 1`] = `
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .c7 h4:first-child {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .c7 > div:not(:last-child) {
@@ -774,17 +732,19 @@ exports[`Storyshots Components/Favors editing 1`] = `
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+@media only screen and (min-width:1800px) {
   .c4 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media only screen and (min-width:1800px) {
-  .c4 {
-    grid-template-columns: repeat(3,1fr);
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -831,37 +791,6 @@ exports[`Storyshots Components/Favors editing 1`] = `
     >
       <div
         class="c5"
-        data-testid="favor-1"
-      >
-        <h4
-          data-testid="favor-1-size"
-        >
-          Big favor
-        </h4>
-        <h4
-          data-testid="favor-1-faction_id"
-        >
-          Orgcrime
-        </h4>
-        <div>
-          <button
-            class="c6"
-            data-testid="completeButton-1"
-            type="button"
-          >
-            <h4>
-              Complete
-            </h4>
-          </button>
-        </div>
-        <div
-          data-testid="favor-1-description"
-        >
-          Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
-        </div>
-      </div>
-      <div
-        class="c5"
         data-testid="favor-3"
       >
         <h4
@@ -889,6 +818,37 @@ exports[`Storyshots Components/Favors editing 1`] = `
           data-testid="favor-3-description"
         >
           Favor 3 description
+        </div>
+      </div>
+      <div
+        class="c5"
+        data-testid="favor-1"
+      >
+        <h4
+          data-testid="favor-1-size"
+        >
+          Big favor
+        </h4>
+        <h4
+          data-testid="favor-1-faction_id"
+        >
+          Orgcrime
+        </h4>
+        <div>
+          <button
+            class="c6"
+            data-testid="completeButton-1"
+            type="button"
+          >
+            <h4>
+              Complete
+            </h4>
+          </button>
+        </div>
+        <div
+          data-testid="favor-1-description"
+        >
+          Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
         </div>
       </div>
     </div>

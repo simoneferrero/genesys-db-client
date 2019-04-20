@@ -38,27 +38,11 @@ export const StyledContainer = styled.div`
   grid-gap: 24px;
   grid-template-columns: 1fr;
 
-  @media ${mq.laptop}, ${mq.desktop} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   @media ${mq.bigDesktop} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   & > form:not(:last-child) {
     margin-bottom: ${baseSpacing / 2}px;
-  }
-`
-
-export const StyledNewFavor = styled.div`
-  grid-column: 1/2;
-
-  @media ${mq.laptop}, ${mq.desktop} {
-    grid-column: 1/3;
-  }
-
-  @media ${mq.bigDesktop} {
-    grid-column: 1/4;
   }
 `

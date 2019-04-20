@@ -13,26 +13,15 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 .c21 h4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .c21 h4:first-child {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .c21 > div:not(:last-child) {
@@ -120,26 +109,15 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .c22 h4:first-child {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .c22 > div:not(:last-child) {
@@ -293,6 +271,8 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
 
 .c4 {
@@ -632,7 +612,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   display: grid;
   grid-template-columns: repeat(1,1fr);
   grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  grid-row-gap: 48px;
   box-sizing: border-box;
 }
 
@@ -721,15 +701,15 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-transform: uppercase;
 }
 
-@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+@media only screen and (min-width:1800px) {
   .c20 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media only screen and (min-width:1800px) {
-  .c20 {
-    grid-template-columns: repeat(3,1fr);
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c17 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 

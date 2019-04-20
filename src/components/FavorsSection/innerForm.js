@@ -9,12 +9,7 @@ import Favor from 'components/Favor'
 import FormButtons from 'components/FormButtons'
 import { MdAdd, MdCheck, MdClose } from 'react-icons/md'
 
-import {
-  StyledContainer,
-  StyledForm,
-  StyledNewFavor,
-  StyledSubHeader,
-} from './styles'
+import { StyledContainer, StyledForm, StyledSubHeader } from './styles'
 
 const InnerForm = ({
   editing,
@@ -36,8 +31,7 @@ const InnerForm = ({
     submit: <MdCheck />,
   }
   const newFavor = (
-    <StyledNewFavor
-      as={Favor}
+    <Favor
       factions={factions}
       favor={values}
       isNew
@@ -45,16 +39,19 @@ const InnerForm = ({
       setFieldValue={setFieldValue}
     />
   )
-  const mappedFavors = favors.map((favor) => (
-    <Favor
-      editing={editing}
-      factions={factions}
-      favor={favor}
-      isSubmitting={isPCSubmitting}
-      key={favor.id}
-      setFieldValue={onFavorChange}
-    />
-  ))
+  const mappedFavors = favors
+    // Small hack to get latest first - should do by date when implemented
+    .sort((a, b) => b.id - a.id)
+    .map((favor) => (
+      <Favor
+        editing={editing}
+        factions={factions}
+        favor={favor}
+        isSubmitting={isPCSubmitting}
+        key={favor.id}
+        setFieldValue={onFavorChange}
+      />
+    ))
 
   return (
     <StyledForm data-testid={`favors-${type}`}>

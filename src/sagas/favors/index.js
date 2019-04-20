@@ -31,11 +31,11 @@ export function* addFavorSaga({
   try {
     const response = yield call(axios, opts)
 
-    yield put(addFavorSuccess(response.data.data))
+    yield put(addFavorSuccess(playerCharacterId, response.data.data))
     yield call(actions.setSubmitting, false)
     yield call(actions.setIsNew, false)
   } catch (error) {
-    yield put(addFavorError(error))
+    yield put(addFavorError(playerCharacterId, error))
     yield call(actions.setSubmitting, false)
     yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
   }
