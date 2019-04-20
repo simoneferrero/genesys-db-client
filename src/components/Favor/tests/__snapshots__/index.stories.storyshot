@@ -411,7 +411,7 @@ exports[`Storyshots Components/Favor editing 1`] = `
   <div>
     <button
       class="c1"
-      data-testid="completeButton"
+      data-testid="completeButton-1"
       type="button"
     >
       <h4>
@@ -584,7 +584,7 @@ exports[`Storyshots Components/Favor editing completed 1`] = `
   <div>
     <button
       class="c1"
-      data-testid="revertButton"
+      data-testid="revertButton-2"
       type="button"
     >
       <h4>

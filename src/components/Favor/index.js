@@ -72,7 +72,7 @@ const Favor = ({
 
 Favor.propTypes = {
   /** Custom styles */
-  className: PropTypes.bool,
+  className: PropTypes.string,
   /** Whether to allow editing the favor */
   editing: PropTypes.bool,
   /** List of available factions */

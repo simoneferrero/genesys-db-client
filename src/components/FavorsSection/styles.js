@@ -1,13 +1,9 @@
 import styled from 'styled-components/macro'
-import { baseSpacing, borderRadius, colours } from 'styles/constants'
+import { baseSpacing, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
-import rgbToRgba from 'utils/rgbToRgba'
 
 export const StyledForm = styled.form`
   padding: ${baseSpacing / 2}px;
-  border: 2px solid ${colours.lightOrange};
-  border-radius: ${borderRadius}px;
-  background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   position: relative;
 `
 

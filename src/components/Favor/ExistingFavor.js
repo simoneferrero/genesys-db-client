@@ -17,7 +17,7 @@ const ExistingFavor = ({
   const statusButton =
     status === 'complete' ? (
       <StyledButton
-        data-testid="revertButton"
+        data-testid={`revertButton-${id}`}
         disabled={isSubmitting}
         onClick={() => setFieldValue(`favors.${id}.status`, 'incomplete')}
         type="button"
@@ -26,7 +26,7 @@ const ExistingFavor = ({
       </StyledButton>
     ) : (
       <StyledButton
-        data-testid="completeButton"
+        data-testid={`completeButton-${id}`}
         disabled={isSubmitting}
         onClick={() => setFieldValue(`favors.${id}.status`, 'complete')}
         type="button"

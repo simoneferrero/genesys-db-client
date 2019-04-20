@@ -48,7 +48,7 @@ describe('<FavorsSection />', () => {
       expect(favor).toBeInTheDocument()
 
       const editFavorButton = queryByTestId(
-        status === 'complete' ? 'revertButton' : 'completeButton',
+        status === 'complete' ? `revertButton-${id}` : `completeButton-${id}`,
       )
       expect(editFavorButton).not.toBeInTheDocument()
     })
@@ -96,7 +96,7 @@ describe('<FavorsSection />', () => {
       expect(favor).toBeInTheDocument()
 
       const editFavorButton = getByTestId(
-        status === 'complete' ? 'revertButton' : 'completeButton',
+        status === 'complete' ? `revertButton-${id}` : `completeButton-${id}`,
       )
       expect(editFavorButton).toBeInTheDocument()
 

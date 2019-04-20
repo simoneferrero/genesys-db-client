@@ -83,10 +83,10 @@ describe('<Favor />', () => {
     const descriptionTextarea = queryByPlaceholderText(/add description.../i)
     expect(descriptionTextarea).not.toBeInTheDocument()
 
-    const completeButton = queryByTestId(/completeButton/gi)
+    const completeButton = queryByTestId(/completeButton/i)
     expect(completeButton).not.toBeInTheDocument()
 
-    const revertButton = queryByTestId(/revertButton/gi)
+    const revertButton = queryByTestId(/revertButton/i)
     expect(revertButton).not.toBeInTheDocument()
   })
 
@@ -142,10 +142,10 @@ describe('<Favor />', () => {
     const populatedDescriptionTextarea = getByDisplayValue(newFavor.description)
     expect(populatedDescriptionTextarea).toBeInTheDocument()
 
-    const completeButton = queryByTestId(/completeButton/gi)
+    const completeButton = queryByTestId(/completeButton/i)
     expect(completeButton).not.toBeInTheDocument()
 
-    const revertButton = queryByTestId(/revertButton/gi)
+    const revertButton = queryByTestId(/revertButton/i)
     expect(revertButton).not.toBeInTheDocument()
   })
 
@@ -193,7 +193,7 @@ describe('<Favor />', () => {
     const descriptionTextarea = queryByPlaceholderText(/add description.../i)
     expect(descriptionTextarea).not.toBeInTheDocument()
 
-    const completeButton = getByTestId(/completeButton/gi)
+    const completeButton = getByTestId(/completeButton/i)
     expect(completeButton).toBeInTheDocument()
 
     fireEvent.click(completeButton)
@@ -202,7 +202,7 @@ describe('<Favor />', () => {
       'complete',
     )
 
-    const revertButton = queryByTestId(/revertButton/gi)
+    const revertButton = queryByTestId(/revertButton/i)
     expect(revertButton).not.toBeInTheDocument()
   })
 
@@ -225,10 +225,10 @@ describe('<Favor />', () => {
     const description = getByTestId(`favor-${favor2.id}-description`)
     expect(description).toHaveStyle('text-decoration: line-through')
 
-    const completeButton = queryByTestId(/completeButton/gi)
+    const completeButton = queryByTestId(/completeButton/i)
     expect(completeButton).not.toBeInTheDocument()
 
-    const revertButton = getByTestId(/revertButton/gi)
+    const revertButton = getByTestId(/revertButton/i)
     expect(revertButton).toBeInTheDocument()
 
     fireEvent.click(revertButton)
