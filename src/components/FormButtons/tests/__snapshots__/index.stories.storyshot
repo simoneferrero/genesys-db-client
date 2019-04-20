@@ -2,13 +2,6 @@
 
 exports[`Storyshots Components/FormButtons default 1`] = `
 .c0 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.c1 {
   padding: 12px;
   border: none;
   background: transparent;
@@ -17,18 +10,17 @@ exports[`Storyshots Components/FormButtons default 1`] = `
   font-size: 30px;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: rgb(65,178,180);
   cursor: not-allowed;
 }
 
 <div
-  class="c0"
-  data-testid="form-buttons"
+  data-testid="form-buttons-test"
 >
   <button
-    class="c1"
-    data-testid="edit"
+    class="c0"
+    data-testid="edit-test"
     type="button"
   >
     <svg
@@ -50,13 +42,6 @@ exports[`Storyshots Components/FormButtons default 1`] = `
 
 exports[`Storyshots Components/FormButtons disabled 1`] = `
 .c0 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.c1 {
   padding: 12px;
   border: none;
   background: transparent;
@@ -65,18 +50,17 @@ exports[`Storyshots Components/FormButtons disabled 1`] = `
   font-size: 30px;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: rgb(65,178,180);
   cursor: not-allowed;
 }
 
 <div
-  class="c0"
-  data-testid="form-buttons"
+  data-testid="form-buttons-test"
 >
   <button
-    class="c1"
-    data-testid="cancel"
+    class="c0"
+    data-testid="cancel-test"
     disabled=""
     type="button"
   >
@@ -95,10 +79,10 @@ exports[`Storyshots Components/FormButtons disabled 1`] = `
     </svg>
   </button>
   <button
-    class="c1"
-    data-testid="submit"
+    class="c0"
+    data-testid="submit-test"
     disabled=""
-    type="submit"
+    type="button"
   >
     <svg
       fill="currentColor"
@@ -117,15 +101,8 @@ exports[`Storyshots Components/FormButtons disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/FormButtons editing 1`] = `
+exports[`Storyshots Components/FormButtons showButtons 1`] = `
 .c0 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.c1 {
   padding: 12px;
   border: none;
   background: transparent;
@@ -134,18 +111,17 @@ exports[`Storyshots Components/FormButtons editing 1`] = `
   font-size: 30px;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: rgb(65,178,180);
   cursor: not-allowed;
 }
 
 <div
-  class="c0"
-  data-testid="form-buttons"
+  data-testid="form-buttons-test"
 >
   <button
-    class="c1"
-    data-testid="cancel"
+    class="c0"
+    data-testid="cancel-test"
     type="button"
   >
     <svg
@@ -163,9 +139,9 @@ exports[`Storyshots Components/FormButtons editing 1`] = `
     </svg>
   </button>
   <button
-    class="c1"
-    data-testid="submit"
-    type="submit"
+    class="c0"
+    data-testid="submit-test"
+    type="button"
   >
     <svg
       fill="currentColor"

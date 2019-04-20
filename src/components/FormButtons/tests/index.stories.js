@@ -7,8 +7,10 @@ import FormButtons from '../index'
 
 const defaultProps = {
   disabled: false,
-  editing: false,
-  setEditing: action('setEditing'),
+  handleSubmit: action('handleSubmit'),
+  name: 'test',
+  showButtons: false,
+  setShowButtons: action('setShowButtons'),
 }
 
 const renderComponent = (props = {}) => (
@@ -17,16 +19,16 @@ const renderComponent = (props = {}) => (
 
 storiesOf('Components/FormButtons', module)
   .add('default', () => renderComponent())
-  .add('editing', () => {
+  .add('showButtons', () => {
     const props = {
-      editing: true,
+      showButtons: true,
     }
     return renderComponent(props)
   })
   .add('disabled', () => {
     const props = {
       disabled: true,
-      editing: true,
+      showButtons: true,
     }
     return renderComponent(props)
   })

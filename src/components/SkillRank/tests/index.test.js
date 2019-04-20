@@ -41,7 +41,7 @@ describe('<SkillRank />', () => {
       if (testCase <= defaultProps.rank) {
         expect(rank).toHaveStyle(`background-color: ${colours.teal}`)
       } else {
-        expect(rank).toHaveStyle(`background-color: ${colours.veryLightBlue}`)
+        expect(rank).toHaveStyle('background-color: transparent')
       }
     })
   })

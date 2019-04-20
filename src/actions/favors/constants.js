@@ -1,0 +1,3 @@
+export const ADD_FAVOR = 'ADD_FAVOR'
+export const ADD_FAVOR_SUCCESS = 'ADD_FAVOR_SUCCESS'
+export const ADD_FAVOR_ERROR = 'ADD_FAVOR_ERROR'

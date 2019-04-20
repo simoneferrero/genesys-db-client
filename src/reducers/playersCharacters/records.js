@@ -31,10 +31,11 @@ const PlayerCharacterRecord = Record({
     presence: 0,
     willpower: 0,
   }),
+  favors: List(),
   id: null,
   name: '',
   player_name: '',
-  skills: new List(),
+  skills: List(),
 })
 
 export default PlayerCharacterRecord

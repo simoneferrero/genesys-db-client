@@ -1,0 +1,927 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Favors default 1`] = `
+.c5 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c5 h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c5 h4:first-child {
+  text-align: left;
+}
+
+.c5 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c5 > div:last-child {
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c5 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c5 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 > label > input {
+  width: 100%;
+}
+
+.c5 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c5 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c6 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c6 h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c6 h4:first-child {
+  text-align: left;
+}
+
+.c6 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c6 > div:last-child {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c6 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c6 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 > label > input {
+  width: 100%;
+}
+
+.c6 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c6 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c3 {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(0,130,155);
+  font-size: 30px;
+}
+
+.c3:disabled {
+  color: rgb(65,178,180);
+  cursor: not-allowed;
+}
+
+.c1 {
+  padding: 12px;
+  position: relative;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c4 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.c4 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c0 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+@media only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="favors"
+>
+  <div
+    class="c1"
+    data-testid="favors-owed"
+  >
+    <div
+      class="c2"
+    >
+      <h3>
+        owed
+      </h3>
+      <div
+        data-testid="form-buttons-favor-owed"
+      >
+        <button
+          class="c3"
+          data-testid="edit-favor-owed"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+        data-testid="favor-3"
+      >
+        <h4
+          data-testid="favor-3-size"
+        >
+          Normal favor
+        </h4>
+        <h4
+          data-testid="favor-3-faction_id"
+        >
+          Jinteki
+        </h4>
+        <div
+          data-testid="favor-3-description"
+        >
+          Favor 3 description
+        </div>
+      </div>
+      <div
+        class="c5"
+        data-testid="favor-1"
+      >
+        <h4
+          data-testid="favor-1-size"
+        >
+          Big favor
+        </h4>
+        <h4
+          data-testid="favor-1-faction_id"
+        >
+          Orgcrime
+        </h4>
+        <div
+          data-testid="favor-1-description"
+        >
+          Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c1"
+    data-testid="favors-given"
+  >
+    <div
+      class="c2"
+    >
+      <h3>
+        given
+      </h3>
+      <div
+        data-testid="form-buttons-favor-given"
+      >
+        <button
+          class="c3"
+          data-testid="edit-favor-given"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c6"
+        data-testid="favor-2"
+      >
+        <h4
+          data-testid="favor-2-size"
+        >
+          Small favor
+        </h4>
+        <h4
+          data-testid="favor-2-faction_id"
+        >
+          NAPD
+        </h4>
+        <div
+          data-testid="favor-2-description"
+        >
+          Aditi's Union membership means she can call on other members of the Union for occasional help (see Union Member talent).
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Favors editing 1`] = `
+.c5 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c5 h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c5 h4:first-child {
+  text-align: left;
+}
+
+.c5 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c5 > div:last-child {
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c5 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c5 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 > label > input {
+  width: 100%;
+}
+
+.c5 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c5 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c7 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c7 h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c7 h4:first-child {
+  text-align: left;
+}
+
+.c7 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c7 > div:last-child {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c7 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c7 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c7 > label > input {
+  width: 100%;
+}
+
+.c7 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c7 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c6 {
+  padding: 6px;
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  background: rgba(234,242,246,0.5);
+  cursor: pointer;
+  color: rgb(0,130,155);
+  text-transform: uppercase;
+}
+
+.c6 > h4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.c6:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c6:hover h4 {
+  color: rgb(234,242,246);
+}
+
+.c6:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c3 {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(0,130,155);
+  font-size: 30px;
+}
+
+.c3:disabled {
+  color: rgb(65,178,180);
+  cursor: not-allowed;
+}
+
+.c1 {
+  padding: 12px;
+  position: relative;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c4 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.c4 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c0 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+@media only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="favors"
+>
+  <div
+    class="c1"
+    data-testid="favors-owed"
+  >
+    <div
+      class="c2"
+    >
+      <h3>
+        owed
+      </h3>
+      <div
+        data-testid="form-buttons-favor-owed"
+      >
+        <button
+          class="c3"
+          data-testid="edit-favor-owed"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+        data-testid="favor-3"
+      >
+        <h4
+          data-testid="favor-3-size"
+        >
+          Normal favor
+        </h4>
+        <h4
+          data-testid="favor-3-faction_id"
+        >
+          Jinteki
+        </h4>
+        <div>
+          <button
+            class="c6"
+            data-testid="completeButton-3"
+            type="button"
+          >
+            <h4>
+              Complete
+            </h4>
+          </button>
+        </div>
+        <div
+          data-testid="favor-3-description"
+        >
+          Favor 3 description
+        </div>
+      </div>
+      <div
+        class="c5"
+        data-testid="favor-1"
+      >
+        <h4
+          data-testid="favor-1-size"
+        >
+          Big favor
+        </h4>
+        <h4
+          data-testid="favor-1-faction_id"
+        >
+          Orgcrime
+        </h4>
+        <div>
+          <button
+            class="c6"
+            data-testid="completeButton-1"
+            type="button"
+          >
+            <h4>
+              Complete
+            </h4>
+          </button>
+        </div>
+        <div
+          data-testid="favor-1-description"
+        >
+          Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c1"
+    data-testid="favors-given"
+  >
+    <div
+      class="c2"
+    >
+      <h3>
+        given
+      </h3>
+      <div
+        data-testid="form-buttons-favor-given"
+      >
+        <button
+          class="c3"
+          data-testid="edit-favor-given"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c7"
+        data-testid="favor-2"
+      >
+        <h4
+          data-testid="favor-2-size"
+        >
+          Small favor
+        </h4>
+        <h4
+          data-testid="favor-2-faction_id"
+        >
+          NAPD
+        </h4>
+        <div>
+          <button
+            class="c6"
+            data-testid="revertButton-2"
+            type="button"
+          >
+            <h4>
+              Revert
+            </h4>
+          </button>
+        </div>
+        <div
+          data-testid="favor-2-description"
+        >
+          Aditi's Union membership means she can call on other members of the Union for occasional help (see Union Member talent).
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

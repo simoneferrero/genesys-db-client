@@ -6,13 +6,6 @@ import { MdCheck, MdClose, MdEdit } from 'react-icons/md'
 import styled from 'styled-components/macro'
 import { baseSpacing, colours } from 'styles/constants'
 
-export const StyledFormButtons = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-`
-
 export const StyledButton = styled.button`
   padding: ${baseSpacing / 2}px;
   border: none;
@@ -27,42 +20,84 @@ export const StyledButton = styled.button`
   }
 `
 
-const FormButtons = ({ disabled, editing, setEditing }) => (
-  <StyledFormButtons data-testid="form-buttons">
-    {editing === false ? (
-      <StyledButton
-        data-testid="edit"
-        disabled={disabled}
-        onClick={() => setEditing(true)}
-        type="button"
-      >
-        <MdEdit />
-      </StyledButton>
-    ) : (
-      <>
+const FormButtons = ({
+  className,
+  disabled,
+  handleSubmit,
+  icons: { cancel, edit, submit },
+  name,
+  showButtons,
+  setShowButtons,
+}) => {
+  const submitButtonProps = {
+    ...(handleSubmit
+      ? { onClick: handleSubmit, type: 'button' }
+      : { type: 'submit' }),
+  }
+  return (
+    <div className={className} data-testid={`form-buttons-${name}`}>
+      {!showButtons ? (
         <StyledButton
-          data-testid="cancel"
+          data-testid={`edit-${name}`}
           disabled={disabled}
-          onClick={() => setEditing(false)}
+          onClick={() => setShowButtons(true)}
           type="button"
         >
-          <MdClose />
+          {edit}
         </StyledButton>
-        <StyledButton data-testid="submit" disabled={disabled} type="submit">
-          <MdCheck />
-        </StyledButton>
-      </>
-    )}
-  </StyledFormButtons>
-)
+      ) : (
+        <>
+          <StyledButton
+            data-testid={`cancel-${name}`}
+            disabled={disabled}
+            onClick={() => setShowButtons(false)}
+            type="button"
+          >
+            {cancel}
+          </StyledButton>
+          <StyledButton
+            data-testid={`submit-${name}`}
+            disabled={disabled}
+            {...submitButtonProps}
+          >
+            {submit}
+          </StyledButton>
+        </>
+      )}
+    </div>
+  )
+}
 
 FormButtons.propTypes = {
-  /** Whether the buttons are disabled */
+  /** Custom styles */
+  className: PropTypes.string,
+  /** Whether to show submit/cancel buttons or edit button */
   disabled: PropTypes.bool,
+  /** Invoked upon submission */
+  handleSubmit: PropTypes.func,
+  /** The set of icons to display */
+  icons: PropTypes.shape({
+    /** Icon shown to revert back to initial status and discard changes */
+    cancel: PropTypes.node.isRequired,
+    /** Initial icon used to change the form status */
+    edit: PropTypes.node.isRequired,
+    /** Icon shown to submit changes */
+    submit: PropTypes.node.isRequired,
+  }).isRequired,
+  /** The name of the form the buttons refer to */
+  name: PropTypes.string.isRequired,
   /** Whether the buttons are in editing or static mode */
-  editing: PropTypes.bool,
-  /** Changes the mode between editing and static */
-  setEditing: PropTypes.func.isRequired,
+  showButtons: PropTypes.bool,
+  /** Changes the mode between showing submit/cancel buttons or edit button */
+  setShowButtons: PropTypes.func.isRequired,
+}
+
+FormButtons.defaultProps = {
+  icons: {
+    cancel: <MdClose />,
+    edit: <MdEdit />,
+    submit: <MdCheck />,
+  },
 }
 
 export default FormButtons

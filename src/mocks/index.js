@@ -4,6 +4,7 @@ import ReducerRecord from 'reducers/records'
 
 import { archetypesById, archetypesAllIds } from './archetypes'
 import { careersById, careersAllIds } from './careers'
+import { factionsById, factionsAllIds } from './factions'
 import {
   playersCharactersById,
   playersCharactersAllIds,
@@ -23,6 +24,10 @@ export const store = fromJS({
     allIds: List(careersAllIds),
     byId: Map(careersById),
   }),
+  factions: new ReducerRecord({
+    allIds: List(factionsAllIds),
+    byId: Map(factionsById),
+  }),
   playersCharacters: new ReducerRecord({
     allIds: List(playersCharactersAllIds),
     byId: Map(playersCharactersById),
@@ -38,8 +43,10 @@ export const store = fromJS({
 export const emptyStore = fromJS({
   archetypes: new ReducerRecord(),
   careers: new ReducerRecord(),
+  factions: new ReducerRecord(),
   playersCharacters: new ReducerRecord(),
   router: initialRouter,
+  skills: new ReducerRecord(),
   ui,
 })
 
@@ -48,5 +55,6 @@ export const formikActions = {
   setErrors: () => {},
   setFieldTouched: () => {},
   setFieldValue: () => {},
+  setIsNew: () => {},
   setSubmitting: () => {},
 }

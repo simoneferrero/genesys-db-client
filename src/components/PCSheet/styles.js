@@ -16,8 +16,15 @@ export const StyledForm = styled.form`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: ${baseSpacing}px;
-  grid-row-gap: ${baseSpacing}px;
+  grid-row-gap: ${baseSpacing * 2}px;
   box-sizing: border-box;
+`
+
+export const StyledFormButtons = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 `
 
 export const StyledSectionWrapper = styled.div`

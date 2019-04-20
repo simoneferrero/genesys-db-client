@@ -2,6 +2,7 @@ import { fromJS, List } from 'immutable'
 
 import uniq from 'lodash/uniq'
 
+import { ADD_FAVOR_SUCCESS } from 'actions/favors/constants'
 import {
   GET_PLAYERS_CHARACTERS_SUCCESS,
   GET_PLAYER_CHARACTER_SUCCESS,
@@ -18,7 +19,9 @@ export default (state = initialState, { type, payload }) => {
       const playersCharactersById = playersCharacters.reduce(
         (result, playerCharacter) => ({
           ...result,
-          [playerCharacter.id]: new PlayerCharacterRecord(playerCharacter),
+          [playerCharacter.id]: new PlayerCharacterRecord(
+            fromJS(playerCharacter),
+          ),
         }),
         {},
       )
@@ -39,9 +42,17 @@ export default (state = initialState, { type, payload }) => {
       return state
         .setIn(
           ['byId', id],
-          new PlayerCharacterRecord({ ...playerCharacter, skills }),
+          new PlayerCharacterRecord(fromJS({ ...playerCharacter, skills })),
         )
         .set('allIds', fromJS(uniq([...allIds, id])))
+    }
+
+    case ADD_FAVOR_SUCCESS: {
+      const { favor, playerCharacterId } = payload
+      return state.mergeIn(
+        ['byId', playerCharacterId, 'favors'],
+        fromJS([favor]),
+      )
     }
 
     default: {
