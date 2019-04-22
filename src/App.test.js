@@ -9,6 +9,9 @@ import App from './App'
 
 import routes from 'utils/routes'
 
+import { store } from 'mocks'
+import { playerCharacter1Id } from 'mocks/playersCharacters'
+
 // Create snapshots from stories
 addSerializer(styleSheetSerializer)
 initStoryshots({
@@ -29,19 +32,24 @@ initStoryshots({
   },
 })
 
-const renderComponent = () => render(<App />)
+const renderComponent = (props = {}) => render(<App {...props} />)
 
 describe('<App />', () => {
   it('should render the correct elements', async () => {
-    const { getByTestId } = renderComponent()
+    const { getByTestId, queryByTestId } = renderComponent()
 
     await wait(() => {
       const sidebar = getByTestId(/sidebar/i)
       expect(sidebar).toBeInTheDocument()
 
-      routes.forEach(({ id }) => {
-        const menuItem = getByTestId(`menu-item-${id}`)
-        expect(menuItem).toBeInTheDocument()
+      routes.forEach(({ id, showInMenu }) => {
+        if (showInMenu) {
+          const menuItem = getByTestId(`menu-item-${id}`)
+          expect(menuItem).toBeInTheDocument()
+        } else {
+          const menuItem = queryByTestId(`menu-item-${id}`)
+          expect(menuItem).not.toBeInTheDocument()
+        }
       })
 
       const home = getByTestId(/home/i)
@@ -49,15 +57,30 @@ describe('<App />', () => {
     })
   })
 
-  it('changes route correctly', () => {
-    const { getByTestId } = renderComponent()
+  it('should change routes correctly', async () => {
+    const props = {
+      store,
+    }
+    const { getByTestId } = renderComponent(props)
 
-    routes.forEach(async ({ id }) => {
-      const menuItem = getByTestId(`menu-item-${id}`)
-      fireEvent.click(menuItem)
+    const playersCharactersMenuItem = getByTestId(
+      /menu-item-players-characters/i,
+    )
+    fireEvent.click(playersCharactersMenuItem)
 
-      const route = await waitForElement(() => getByTestId(id))
-      expect(route).toBeInTheDocument()
-    })
+    const playersCharactersRoute = await waitForElement(() =>
+      getByTestId(/players-characters/i),
+    )
+    expect(playersCharactersRoute).toBeInTheDocument()
+
+    const playerCharacterLink = await waitForElement(() =>
+      getByTestId(`pc-sheet-link-${playerCharacter1Id}`),
+    )
+    fireEvent.click(playerCharacterLink)
+
+    const playerCharacterRoute = await waitForElement(() =>
+      getByTestId(/player-character/i),
+    )
+    expect(playerCharacterRoute).toBeInTheDocument()
   })
 })

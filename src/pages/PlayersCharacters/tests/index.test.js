@@ -3,7 +3,10 @@ import render from 'utils/customTestRenderers'
 
 import PlayersCharacters from '../index'
 
-import { playersCharacters } from 'mocks/playersCharacters'
+import {
+  playersCharactersAugmented,
+  playersCharactersResponse,
+} from 'mocks/playersCharacters'
 
 import {
   GET_PLAYERS_CHARACTERS,
@@ -13,6 +16,8 @@ import {
 jest.mock('actions/playersCharacters', () => {
   return {
     getPlayersCharacters: jest.fn(),
+    getPlayersCharactersSuccess: jest.fn(),
+    getPlayersCharactersError: jest.fn(),
   }
 })
 import { getPlayersCharacters } from 'actions/playersCharacters'
@@ -24,6 +29,8 @@ jest.mock('actions/archetypes', () => {
       type: GET_ARCHETYPES,
       payload: {},
     })),
+    getArchetypesSuccess: jest.fn(),
+    getArchetypesError: jest.fn(),
   }
 })
 import { getArchetypes } from 'actions/archetypes'
@@ -35,6 +42,8 @@ jest.mock('actions/careers', () => {
       type: GET_CAREERS,
       payload: {},
     })),
+    getCareersSuccess: jest.fn(),
+    getCareersError: jest.fn(),
   }
 })
 import { getCareers } from 'actions/careers'
@@ -72,7 +81,7 @@ describe('<PlayersCharacters />', () => {
       const playersCharactersWrapper = getByTestId(/players-characters/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      playersCharacters.forEach(({ id }) => {
+      playersCharactersAugmented.toJS().forEach(({ id }) => {
         const pcSummary = getByTestId(`pc-summary-${id}`)
         expect(pcSummary).toBeInTheDocument()
       })
@@ -94,7 +103,7 @@ describe('<PlayersCharacters />', () => {
       const playersCharactersWrapper = getByTestId(/players-characters/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      playersCharacters.forEach(({ id }) => {
+      playersCharactersAugmented.toJS().forEach(({ id }) => {
         const pcSummary = getByTestId(`pc-summary-${id}`)
         expect(pcSummary).toBeInTheDocument()
       })
@@ -109,7 +118,7 @@ describe('<PlayersCharacters />', () => {
     getPlayersCharacters.mockImplementation(() => ({
       type: GET_PLAYERS_CHARACTERS_SUCCESS,
       payload: {
-        playersCharacters,
+        playersCharacters: playersCharactersResponse,
       },
     }))
     const { getByTestId, queryByTestId } = renderComponent()
@@ -118,7 +127,7 @@ describe('<PlayersCharacters />', () => {
       const playersCharactersWrapper = getByTestId(/players-characters/i)
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      playersCharacters.forEach(({ id }) => {
+      playersCharactersAugmented.toJS().forEach(({ id }) => {
         const pcSummary = getByTestId(`pc-summary-${id}`)
         expect(pcSummary).toBeInTheDocument()
       })

@@ -33,7 +33,7 @@ describe('careers sagas', () => {
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
 
         const response = {
-          data: careers,
+          data: { data: careers },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(getCareersSuccess(careers))

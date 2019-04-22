@@ -31,10 +31,12 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 .c2 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
   display: grid;
   grid-gap: 8px;
   background-color: rgba(65,178,180,0.1);
   grid-template-columns: 1fr;
+  position: relative;
 }
 
 .c2 h2,
@@ -78,14 +80,20 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c4 > div h2 {
@@ -114,14 +122,20 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c5 > div h2 {
@@ -148,6 +162,20 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 
 .c5 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c6 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.c6 > svg {
+  color: rgb(242,143,34);
+  font-size: 20px;
 }
 
 .c0 {
@@ -195,12 +223,6 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c5 {
     grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media only screen and (min-width:1800px) {
-  .c5 > div h2 {
-    top: 23px;
   }
 }
 
@@ -338,7 +360,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
             13
           </span>
           <span>
-            0
+            11
           </span>
         </h2>
       </div>
@@ -371,6 +393,25 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
         </h2>
       </div>
     </section>
+    <a
+      class="c6"
+      data-testid="pc-sheet-link-1"
+      href="/players-characters/1"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+        />
+      </svg>
+    </a>
   </div>
   <div
     class="c2"
@@ -527,6 +568,25 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
         </h2>
       </div>
     </section>
+    <a
+      class="c6"
+      data-testid="pc-sheet-link-2"
+      href="/players-characters/2"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+        />
+      </svg>
+    </a>
   </div>
 </div>
 `;
@@ -562,10 +622,12 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
 .c2 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
   display: grid;
   grid-gap: 8px;
   background-color: rgba(65,178,180,0.1);
   grid-template-columns: 1fr;
+  position: relative;
 }
 
 .c2 h2,
@@ -609,14 +671,20 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c4 > div h2 {
@@ -645,14 +713,20 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c5 > div h2 {
@@ -679,6 +753,20 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
 
 .c5 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c6 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.c6 > svg {
+  color: rgb(242,143,34);
+  font-size: 20px;
 }
 
 .c0 {
@@ -726,12 +814,6 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c5 {
     grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media only screen and (min-width:1800px) {
-  .c5 > div h2 {
-    top: 23px;
   }
 }
 
@@ -869,7 +951,7 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
             13
           </span>
           <span>
-            0
+            11
           </span>
         </h2>
       </div>
@@ -902,6 +984,25 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
         </h2>
       </div>
     </section>
+    <a
+      class="c6"
+      data-testid="pc-sheet-link-1"
+      href="/players-characters/1"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+        />
+      </svg>
+    </a>
   </div>
   <div
     class="c2"
@@ -1058,6 +1159,25 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
         </h2>
       </div>
     </section>
+    <a
+      class="c6"
+      data-testid="pc-sheet-link-2"
+      href="/players-characters/2"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+        />
+      </svg>
+    </a>
   </div>
 </div>
 `;

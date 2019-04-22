@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import PropTypes from 'prop-types'
 
 // Head setup
 import { Helmet } from 'react-helmet'
@@ -22,7 +23,7 @@ import Spinner from 'components/Spinner'
 
 import GlobalStyles from 'styles/globalStyles'
 
-const App = () => (
+const App = ({ store }) => (
   <>
     <Helmet
       defaultTitle={HEAD_INFO.TITLE}
@@ -30,17 +31,19 @@ const App = () => (
     >
       <meta content={HEAD_INFO.CONTENT} name="description" />
     </Helmet>
-    <Provider store={configureStore()}>
+    <Provider store={configureStore(store)}>
       <GlobalStyles />
       <ConnectedRouter history={history}>
         <Sidebar>
-          {routes.map((
-            { routeComponent, menuItemComponent, ...route }, // eslint-disable-line no-unused-vars
-          ) => (
-            <MenuItem key={route.id} {...route}>
-              {menuItemComponent}
-            </MenuItem>
-          ))}
+          {routes
+            .filter(({ showInMenu }) => showInMenu)
+            .map((
+              { menuItemComponent, routeComponent, showInMenu, ...route }, // eslint-disable-line no-unused-vars
+            ) => (
+              <MenuItem key={route.id} {...route}>
+                {menuItemComponent}
+              </MenuItem>
+            ))}
         </Sidebar>
         <Suspense fallback={<Spinner />}>
           <Switch>
@@ -53,5 +56,9 @@ const App = () => (
     </Provider>
   </>
 )
+
+App.propTypes = {
+  store: PropTypes.object,
+}
 
 export default App

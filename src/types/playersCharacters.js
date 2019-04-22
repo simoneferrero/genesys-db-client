@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
 import { archetypeType } from './archetypes'
 import { careerType } from './careers'
+import { favorType } from './favors'
+import { skillType } from './skills'
 
-export const playerCharacterData = {
+export const playerCharacterSummaryData = {
+  /** The character's archetype ID */
+  archetype_id: PropTypes.string,
   /** The character's archetype */
-  archetype: PropTypes.string.isRequired,
+  archetype: archetypeType.isRequired,
   /** Information on the character's attributes */
   attributes: PropTypes.shape({
     defense: PropTypes.shape({
@@ -21,8 +25,10 @@ export const playerCharacterData = {
       total: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
+  /** The character's career ID */
+  career_id: PropTypes.string,
   /** The character's career */
-  career: PropTypes.string.isRequired,
+  career: careerType.isRequired,
   /** Information on the character's characteristics */
   characteristics: PropTypes.shape({
     agility: PropTypes.number.isRequired,
@@ -39,12 +45,15 @@ export const playerCharacterData = {
   /** Player's name */
   player_name: PropTypes.string.isRequired,
 }
-export const playerCharacterAugmentedData = {
-  ...playerCharacterData,
-  archetype: archetypeType.isRequired,
-  career: careerType.isRequired,
-}
+export const playerCharacterSummaryType = PropTypes.shape({
+  ...playerCharacterSummaryData,
+})
 
+export const playerCharacterData = {
+  ...playerCharacterSummaryData,
+  favors: PropTypes.arrayOf(favorType).isRequired,
+  skills: PropTypes.arrayOf(skillType).isRequired,
+}
 export const playerCharacterType = PropTypes.shape({
   ...playerCharacterData,
 })

@@ -1,4 +1,6 @@
-import { fromJS } from 'immutable'
+import { List, Map } from 'immutable'
+
+import ReducerRecord from 'reducers/records'
 
 import reducer from '../index'
 import initialState from '../initialState'
@@ -19,9 +21,9 @@ describe('archetypes reducer', () => {
   describe('getArchetypesSuccess', () => {
     it('should handle the action correctly', () => {
       const result = reducer(initialState, getArchetypesSuccess(archetypes))
-      const expectedResult = fromJS({
-        byId: archetypesById,
-        allIds: archetypesAllIds,
+      const expectedResult = new ReducerRecord({
+        allIds: List(archetypesAllIds),
+        byId: Map(archetypesById),
       })
 
       expect(result).toEqual(expectedResult)

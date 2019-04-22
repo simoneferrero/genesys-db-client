@@ -17,6 +17,8 @@ export const colours = {
 
 export const baseSpacing = 24
 
+export const borderRadius = 20
+
 export const fontFamilies = {
   Monkirta: 'Monkirta',
   MinionPro: 'MinionPro',

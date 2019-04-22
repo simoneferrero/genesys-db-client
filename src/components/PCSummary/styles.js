@@ -2,16 +2,18 @@ import styled, { css } from 'styled-components/macro'
 
 import rgbToRgba from 'utils/rgbToRgba'
 
-import { baseSpacing, colours } from 'styles/constants'
+import { baseSpacing, borderRadius, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
 export const StyledPCSummary = styled.div`
   padding: ${baseSpacing / 2}px;
   border: 2px solid ${colours.lightOrange};
+  border-radius: ${borderRadius}px;
   display: grid;
   grid-gap: ${baseSpacing / 3}px;
   background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   grid-template-columns: 1fr;
+  position: relative;
 
   @media ${mq.laptop}, ${mq.desktop} {
     grid-template-columns: 1fr 2fr;
@@ -65,8 +67,11 @@ export const StyledInfoSection = styled.section`
 const sharedBadgeWrapperStyles = css`
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
 
   h2 {
     color: ${colours.lightOrange};
@@ -113,10 +118,6 @@ export const StyledAttributesSection = styled.section`
       grid-column-gap: ${(baseSpacing * 2) / 3}px;
       text-align: right;
 
-      @media ${mq.bigDesktop} {
-        top: 23px;
-      }
-
       & span:nth-child(2) {
         text-align: left;
       }
@@ -129,5 +130,19 @@ export const StyledAttributesSection = styled.section`
     &:nth-child(1) > h2 {
       grid-template-columns: 1fr;
     }
+  }
+`
+
+export const StyledLink = styled.a`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: ${baseSpacing / 3}px;
+  margin-right: ${baseSpacing / 3}px;
+  cursor: pointer;
+
+  & > svg {
+    color: ${colours.lightOrange};
+    font-size: 20px;
   }
 `

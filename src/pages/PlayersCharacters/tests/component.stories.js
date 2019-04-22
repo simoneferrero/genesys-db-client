@@ -1,28 +1,29 @@
 import React from 'react'
 
-import { storiesOf } from '@storybook/react'
+import { Router } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+
+import { addDecorator, storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { archetypesById } from 'mocks/archetypes'
-import { careersById } from 'mocks/careers'
-import {
-  playersCharactersAllIds,
-  playersCharactersById,
-} from 'mocks/playersCharacters'
+import { playersCharactersAugmented } from 'mocks/playersCharacters'
 import { uiElement, uiElementLoading } from 'mocks/ui'
 
 import { PlayersCharacters } from '../component'
 
 const defaultProps = {
-  archetypesById,
-  careersById,
   getArchetypes: action('getArchetypes'),
   getCareers: action('getCareers'),
   getPlayersCharacters: action('getPlayersCharacters'),
-  playersCharactersAllIds,
-  playersCharactersById,
+  playersCharacters: playersCharactersAugmented.toJS(),
   playersCharactersUi: uiElement,
 }
+
+// Mock the router
+const RouterDecorator = (storyFn) => (
+  <Router history={createBrowserHistory()}>{storyFn()}</Router>
+)
+addDecorator(RouterDecorator)
 
 const renderComponent = (props = {}) => (
   <PlayersCharacters {...defaultProps} {...props} />

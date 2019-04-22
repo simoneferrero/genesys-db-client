@@ -1,12 +1,7 @@
 import { connect } from 'react-redux'
 
 // Selectors
-import { archetypesByIdSelector } from 'reducers/archetypes/selectors'
-import { careersByIdSelector } from 'reducers/careers/selectors'
-import {
-  playersCharactersAllIdsSelector,
-  playersCharactersByIdSelector,
-} from 'reducers/playersCharacters/selectors'
+import { allPlayersCharactersSelector } from 'reducers/playersCharacters/selectors'
 import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selectors'
 
 // Actions
@@ -19,10 +14,7 @@ import ImmutableConverter from 'HOCs/ImmutableConverter'
 import PlayersCharacters from './component'
 
 const mapStateToProps = (state) => ({
-  archetypesById: archetypesByIdSelector(state),
-  careersById: careersByIdSelector(state),
-  playersCharactersAllIds: playersCharactersAllIdsSelector(state),
-  playersCharactersById: playersCharactersByIdSelector(state),
+  playersCharacters: allPlayersCharactersSelector(state),
   playersCharactersUi: playersCharactersUiSelector(state),
 })
 const mapDispatchToProps = (dispatch) => ({

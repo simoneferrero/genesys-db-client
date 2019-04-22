@@ -1,0 +1,1335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Skills default 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c3 > div {
+  margin: 0 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c4 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: transparent;
+  border: solid rgb(65,178,180);
+  border-width: 1px 0;
+}
+
+.c4:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c4:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c4:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(65,178,180);
+  border-width: 0 1px 1px 0;
+  background-color: transparent;
+  left: 73%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c5 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(0,130,155);
+  border: solid rgb(65,178,180);
+  border-width: 1px 0;
+}
+
+.c5:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c5:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c5:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(234,242,246);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(0,130,155);
+  left: 73%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c1 {
+  width: 100%;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 8px;
+  grid-gap: 6px;
+  page-break-inside: avoid;
+  grid-template-columns: 5fr 1fr 6fr;
+}
+
+.c1 > h5 {
+  margin: 0;
+  color: rgb(0,130,155);
+  width: 100%;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c2 {
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c2 > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.c6 {
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c6 > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.c0 {
+  padding: 12px;
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+}
+
+.c0 h3 {
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c0 > div:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width:599px) {
+  .c3 {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (max-width:599px) {
+  .c1 {
+    grid-template-columns: 5fr 1fr;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c0 > div {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c0 > div {
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c0 > div {
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="skills"
+>
+  <h3>
+    general
+  </h3>
+  <div>
+    <div
+      class="c1"
+      data-testid="skill-athletics"
+    >
+      <h5>
+        Athletics (BR)
+      </h5>
+      <label
+        class="c2"
+        data-testid="skill-career-athletics"
+        name="skill.athletics.career"
+      >
+        <input
+          disabled=""
+          name="skills.athletics.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-athletics"
+      >
+        <div>
+          <div
+            class="c4"
+            data-testid="athletics-1"
+          />
+          <div
+            class="c4"
+            data-testid="athletics-2"
+          />
+          <div
+            class="c4"
+            data-testid="athletics-3"
+          />
+          <div
+            class="c4"
+            data-testid="athletics-4"
+          />
+          <div
+            class="c4"
+            data-testid="athletics-5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-computers_hacking"
+    >
+      <h5>
+        Computers (Hacking) (IN)
+      </h5>
+      <label
+        class="c2"
+        data-testid="skill-career-computers_hacking"
+        name="skill.computers_hacking.career"
+      >
+        <input
+          disabled=""
+          name="skills.computers_hacking.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-computers_hacking"
+      >
+        <div>
+          <div
+            class="c5"
+            data-testid="computers_hacking-1"
+          />
+          <div
+            class="c5"
+            data-testid="computers_hacking-2"
+          />
+          <div
+            class="c4"
+            data-testid="computers_hacking-3"
+          />
+          <div
+            class="c4"
+            data-testid="computers_hacking-4"
+          />
+          <div
+            class="c4"
+            data-testid="computers_hacking-5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-medicine"
+    >
+      <h5>
+        Medicine (IN)
+      </h5>
+      <label
+        class="c6"
+        data-testid="skill-career-medicine"
+        name="skill.medicine.career"
+      >
+        <input
+          disabled=""
+          name="skills.medicine.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-medicine"
+      >
+        <div>
+          <div
+            class="c5"
+            data-testid="medicine-1"
+          />
+          <div
+            class="c5"
+            data-testid="medicine-2"
+          />
+          <div
+            class="c5"
+            data-testid="medicine-3"
+          />
+          <div
+            class="c4"
+            data-testid="medicine-4"
+          />
+          <div
+            class="c4"
+            data-testid="medicine-5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-perception"
+    >
+      <h5>
+        Perception (CU)
+      </h5>
+      <label
+        class="c2"
+        data-testid="skill-career-perception"
+        name="skill.perception.career"
+      >
+        <input
+          disabled=""
+          name="skills.perception.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-perception"
+      >
+        <div>
+          <div
+            class="c5"
+            data-testid="perception-1"
+          />
+          <div
+            class="c5"
+            data-testid="perception-2"
+          />
+          <div
+            class="c5"
+            data-testid="perception-3"
+          />
+          <div
+            class="c5"
+            data-testid="perception-4"
+          />
+          <div
+            class="c4"
+            data-testid="perception-5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-stealth"
+    >
+      <h5>
+        Stealth (AG)
+      </h5>
+      <label
+        class="c6"
+        data-testid="skill-career-stealth"
+        name="skill.stealth.career"
+      >
+        <input
+          disabled=""
+          name="skills.stealth.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-stealth"
+      >
+        <div>
+          <div
+            class="c5"
+            data-testid="stealth-1"
+          />
+          <div
+            class="c5"
+            data-testid="stealth-2"
+          />
+          <div
+            class="c5"
+            data-testid="stealth-3"
+          />
+          <div
+            class="c5"
+            data-testid="stealth-4"
+          />
+          <div
+            class="c5"
+            data-testid="stealth-5"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3>
+    combat
+  </h3>
+  <div>
+    <div
+      class="c1"
+      data-testid="skill-brawl"
+    >
+      <h5>
+        Brawl (BR)
+      </h5>
+      <label
+        class="c6"
+        data-testid="skill-career-brawl"
+        name="skill.brawl.career"
+      >
+        <input
+          disabled=""
+          name="skills.brawl.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-brawl"
+      >
+        <div>
+          <div
+            class="c5"
+            data-testid="brawl-1"
+          />
+          <div
+            class="c4"
+            data-testid="brawl-2"
+          />
+          <div
+            class="c4"
+            data-testid="brawl-3"
+          />
+          <div
+            class="c4"
+            data-testid="brawl-4"
+          />
+          <div
+            class="c4"
+            data-testid="brawl-5"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Skills editing 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c3 > div {
+  margin: 0 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c5 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: transparent;
+  border: solid rgb(65,178,180);
+  border-width: 1px 0;
+}
+
+.c5:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c5:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c5:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(65,178,180);
+  border-width: 0 1px 1px 0;
+  background-color: transparent;
+  left: 73%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c6 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(0,130,155);
+  border: solid rgb(65,178,180);
+  border-width: 1px 0;
+}
+
+.c6:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c6:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c6:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(234,242,246);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(0,130,155);
+  left: 73%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c4 {
+  background: transparent;
+  border: none;
+  color: rgb(242,143,34);
+  font-size: 15px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+}
+
+.c4:disabled {
+  color: rgb(255,244,233);
+  cursor: not-allowed;
+}
+
+.c1 {
+  width: 100%;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 8px;
+  grid-gap: 6px;
+  page-break-inside: avoid;
+  grid-template-columns: 5fr 1fr 6fr;
+}
+
+.c1 > h5 {
+  margin: 0;
+  color: rgb(0,130,155);
+  width: 100%;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c2 {
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c2 > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.c7 {
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c7 > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.c0 {
+  padding: 12px;
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+}
+
+.c0 h3 {
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c0 > div:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width:599px) {
+  .c3 {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (max-width:599px) {
+  .c1 {
+    grid-template-columns: 5fr 1fr;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c0 > div {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c0 > div {
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c0 > div {
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="skills"
+>
+  <h3>
+    general
+  </h3>
+  <div>
+    <div
+      class="c1"
+      data-testid="skill-athletics"
+    >
+      <h5>
+        Athletics (BR)
+      </h5>
+      <label
+        class="c2"
+        data-testid="skill-career-athletics"
+        name="skill.athletics.career"
+      >
+        <input
+          disabled=""
+          name="skills.athletics.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-athletics"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-athletics-rank"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <div>
+          <div
+            class="c5"
+            data-testid="athletics-1"
+          />
+          <div
+            class="c5"
+            data-testid="athletics-2"
+          />
+          <div
+            class="c5"
+            data-testid="athletics-3"
+          />
+          <div
+            class="c5"
+            data-testid="athletics-4"
+          />
+          <div
+            class="c5"
+            data-testid="athletics-5"
+          />
+        </div>
+        <button
+          class="c4"
+          data-testid="increase-athletics-rank"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-computers_hacking"
+    >
+      <h5>
+        Computers (Hacking) (IN)
+      </h5>
+      <label
+        class="c2"
+        data-testid="skill-career-computers_hacking"
+        name="skill.computers_hacking.career"
+      >
+        <input
+          disabled=""
+          name="skills.computers_hacking.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-computers_hacking"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-computers_hacking-rank"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <div>
+          <div
+            class="c6"
+            data-testid="computers_hacking-1"
+          />
+          <div
+            class="c6"
+            data-testid="computers_hacking-2"
+          />
+          <div
+            class="c5"
+            data-testid="computers_hacking-3"
+          />
+          <div
+            class="c5"
+            data-testid="computers_hacking-4"
+          />
+          <div
+            class="c5"
+            data-testid="computers_hacking-5"
+          />
+        </div>
+        <button
+          class="c4"
+          data-testid="increase-computers_hacking-rank"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-medicine"
+    >
+      <h5>
+        Medicine (IN)
+      </h5>
+      <label
+        class="c7"
+        data-testid="skill-career-medicine"
+        name="skill.medicine.career"
+      >
+        <input
+          disabled=""
+          name="skills.medicine.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-medicine"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-medicine-rank"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <div>
+          <div
+            class="c6"
+            data-testid="medicine-1"
+          />
+          <div
+            class="c6"
+            data-testid="medicine-2"
+          />
+          <div
+            class="c6"
+            data-testid="medicine-3"
+          />
+          <div
+            class="c5"
+            data-testid="medicine-4"
+          />
+          <div
+            class="c5"
+            data-testid="medicine-5"
+          />
+        </div>
+        <button
+          class="c4"
+          data-testid="increase-medicine-rank"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-perception"
+    >
+      <h5>
+        Perception (CU)
+      </h5>
+      <label
+        class="c2"
+        data-testid="skill-career-perception"
+        name="skill.perception.career"
+      >
+        <input
+          disabled=""
+          name="skills.perception.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-perception"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-perception-rank"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <div>
+          <div
+            class="c6"
+            data-testid="perception-1"
+          />
+          <div
+            class="c6"
+            data-testid="perception-2"
+          />
+          <div
+            class="c6"
+            data-testid="perception-3"
+          />
+          <div
+            class="c6"
+            data-testid="perception-4"
+          />
+          <div
+            class="c5"
+            data-testid="perception-5"
+          />
+        </div>
+        <button
+          class="c4"
+          data-testid="increase-perception-rank"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c1"
+      data-testid="skill-stealth"
+    >
+      <h5>
+        Stealth (AG)
+      </h5>
+      <label
+        class="c7"
+        data-testid="skill-career-stealth"
+        name="skill.stealth.career"
+      >
+        <input
+          disabled=""
+          name="skills.stealth.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-stealth"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-stealth-rank"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <div>
+          <div
+            class="c6"
+            data-testid="stealth-1"
+          />
+          <div
+            class="c6"
+            data-testid="stealth-2"
+          />
+          <div
+            class="c6"
+            data-testid="stealth-3"
+          />
+          <div
+            class="c6"
+            data-testid="stealth-4"
+          />
+          <div
+            class="c6"
+            data-testid="stealth-5"
+          />
+        </div>
+        <button
+          class="c4"
+          data-testid="increase-stealth-rank"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <h3>
+    combat
+  </h3>
+  <div>
+    <div
+      class="c1"
+      data-testid="skill-brawl"
+    >
+      <h5>
+        Brawl (BR)
+      </h5>
+      <label
+        class="c7"
+        data-testid="skill-career-brawl"
+        name="skill.brawl.career"
+      >
+        <input
+          disabled=""
+          name="skills.brawl.career"
+          type="checkbox"
+        />
+        <span>
+          CAREER
+        </span>
+      </label>
+      <div
+        class="c3"
+        data-testid="skill-rank-brawl"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-brawl-rank"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <div>
+          <div
+            class="c6"
+            data-testid="brawl-1"
+          />
+          <div
+            class="c5"
+            data-testid="brawl-2"
+          />
+          <div
+            class="c5"
+            data-testid="brawl-3"
+          />
+          <div
+            class="c5"
+            data-testid="brawl-4"
+          />
+          <div
+            class="c5"
+            data-testid="brawl-5"
+          />
+        </div>
+        <button
+          class="c4"
+          data-testid="increase-brawl-rank"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

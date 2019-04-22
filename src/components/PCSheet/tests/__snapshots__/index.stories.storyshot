@@ -1,0 +1,1404 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/PCSheet default 1`] = `
+.c21 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c21 h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c21 h4:first-child {
+  text-align: left;
+}
+
+.c21 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c21 > div:last-child {
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c21 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c21 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c21 > label > input {
+  width: 100%;
+}
+
+.c21 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c21 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c22 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c22 h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c22 h4:first-child {
+  text-align: left;
+}
+
+.c22 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c22 > div:last-child {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c22 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c22 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c22 > label > input {
+  width: 100%;
+}
+
+.c22 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c22 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c2 {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(0,130,155);
+  font-size: 30px;
+}
+
+.c2:disabled {
+  color: rgb(65,178,180);
+  cursor: not-allowed;
+}
+
+.c18 {
+  padding: 12px;
+  position: relative;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c19 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c19 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c20 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.c20 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c17 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c4 {
+  padding: 12px;
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  display: grid;
+  grid-gap: 8px;
+  background-color: rgba(65,178,180,0.1);
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+.c4 h2,
+.c4 h4 {
+  margin: 0;
+}
+
+.c5 {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 1fr;
+}
+
+.c5 > div {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c5 > div span {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c5 > div h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c6 {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.c6 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c6 > div h2 {
+  color: rgb(242,143,34);
+  position: absolute;
+  margin-left: 1px;
+}
+
+.c6 > div h2 {
+  top: 5px;
+}
+
+.c6 > div img {
+  height: 60px;
+}
+
+.c7 {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c7 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c7 > div h2 {
+  color: rgb(242,143,34);
+  position: absolute;
+  margin-left: 1px;
+}
+
+.c7 > div h2 {
+  top: 19px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 16px;
+  text-align: right;
+}
+
+.c7 > div h2 span:nth-child(2) {
+  text-align: left;
+}
+
+.c7 > div img {
+  height: 50px;
+}
+
+.c7 > div:nth-child(1) > h2 {
+  grid-template-columns: 1fr;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c12 > div {
+  margin: 0 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c13 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: transparent;
+  border: solid rgb(65,178,180);
+  border-width: 1px 0;
+}
+
+.c13:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c13:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c13:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(65,178,180);
+  border-width: 0 1px 1px 0;
+  background-color: transparent;
+  left: 73%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c14 {
+  position: relative;
+  overflow: visible;
+  height: 20px;
+  width: 30px;
+  background-color: rgb(0,130,155);
+  border: solid rgb(65,178,180);
+  border-width: 1px 0;
+}
+
+.c14:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c14:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.c14:not(:last-child)::after {
+  content: '';
+  height: 13px;
+  width: 13px;
+  border: solid rgb(234,242,246);
+  border-width: 0 1px 1px 0;
+  background-color: rgb(0,130,155);
+  left: 73%;
+  top: 2px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 899;
+  position: absolute;
+}
+
+.c10 {
+  width: 100%;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 8px;
+  grid-gap: 6px;
+  page-break-inside: avoid;
+  grid-template-columns: 5fr 1fr 6fr;
+}
+
+.c10 > h5 {
+  margin: 0;
+  color: rgb(0,130,155);
+  width: 100%;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c11 {
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c11 > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.c15 {
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c15 > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.c9 {
+  padding: 12px;
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+}
+
+.c9 h3 {
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c9 > div:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c0 {
+  width: 100vw;
+  padding: 24px 48px;
+  padding-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 48px;
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.c3 {
+  position: relative;
+  overflow: visible;
+}
+
+.c3::before {
+  content: 'General';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 800;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c8 {
+  position: relative;
+  overflow: visible;
+}
+
+.c8::before {
+  content: 'Skills';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 800;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c16 {
+  position: relative;
+  overflow: visible;
+}
+
+.c16::before {
+  content: 'Favors';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 800;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width:1800px) {
+  .c20 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c17 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c4 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1800px) {
+  .c5 {
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c5 {
+    grid-row: 1/3;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c7 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media only screen and (max-width:599px) {
+  .c12 {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (max-width:599px) {
+  .c10 {
+    grid-template-columns: 5fr 1fr;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c9 > div {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c9 > div {
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c9 > div {
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+<form
+  class="c0"
+  data-testid="pc-sheet"
+>
+  <div
+    class="c1"
+    data-testid="form-buttons-pc-sheet"
+  >
+    <button
+      class="c2"
+      data-testid="edit-pc-sheet"
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="c3 c4"
+    data-testid="pc-summary-1"
+  >
+    <section
+      class="c5"
+    >
+      <div>
+        <h4>
+          Player name:
+        </h4>
+        <span>
+          Player 1
+        </span>
+      </div>
+      <div>
+        <h4>
+          Character name:
+        </h4>
+        <span>
+          Aditi Desai
+        </span>
+      </div>
+      <div>
+        <h4>
+          Archetype:
+        </h4>
+        <span>
+          Clone
+        </span>
+      </div>
+      <div>
+        <h4>
+          Career:
+        </h4>
+        <span>
+          Academic
+        </span>
+      </div>
+    </section>
+    <section
+      class="c6"
+    >
+      <div>
+        <img
+          alt="brawn"
+          src="Brawn.png"
+        />
+        <h2>
+          2
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="agility"
+          src="Agility.png"
+        />
+        <h2>
+          2
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="intellect"
+          src="Intellect.png"
+        />
+        <h2>
+          4
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="cunning"
+          src="Cunning.png"
+        />
+        <h2>
+          2
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="willpower"
+          src="Willpower.png"
+        />
+        <h2>
+          4
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="presence"
+          src="Presence.png"
+        />
+        <h2>
+          2
+        </h2>
+      </div>
+    </section>
+    <section
+      class="c7"
+    >
+      <div>
+        <img
+          alt="soak"
+          src="Soak.png"
+        />
+        <h2>
+          <span>
+            3
+          </span>
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="wounds"
+          src="Wounds.png"
+        />
+        <h2>
+          <span>
+            13
+          </span>
+          <span>
+            11
+          </span>
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="strain"
+          src="Strain.png"
+        />
+        <h2>
+          <span>
+            14
+          </span>
+          <span>
+            2
+          </span>
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="defense"
+          src="Defense.png"
+        />
+        <h2>
+          <span>
+            1
+          </span>
+          <span>
+            1
+          </span>
+        </h2>
+      </div>
+    </section>
+  </div>
+  <div
+    class="c8 c9"
+    data-testid="skills"
+  >
+    <h3>
+      general
+    </h3>
+    <div>
+      <div
+        class="c10"
+        data-testid="skill-athletics"
+      >
+        <h5>
+          Athletics (BR)
+        </h5>
+        <label
+          class="c11"
+          data-testid="skill-career-athletics"
+          name="skill.athletics.career"
+        >
+          <input
+            disabled=""
+            name="skills.athletics.career"
+            type="checkbox"
+          />
+          <span>
+            CAREER
+          </span>
+        </label>
+        <div
+          class="c12"
+          data-testid="skill-rank-athletics"
+        >
+          <div>
+            <div
+              class="c13"
+              data-testid="athletics-1"
+            />
+            <div
+              class="c13"
+              data-testid="athletics-2"
+            />
+            <div
+              class="c13"
+              data-testid="athletics-3"
+            />
+            <div
+              class="c13"
+              data-testid="athletics-4"
+            />
+            <div
+              class="c13"
+              data-testid="athletics-5"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c10"
+        data-testid="skill-computers_hacking"
+      >
+        <h5>
+          Computers (Hacking) (IN)
+        </h5>
+        <label
+          class="c11"
+          data-testid="skill-career-computers_hacking"
+          name="skill.computers_hacking.career"
+        >
+          <input
+            disabled=""
+            name="skills.computers_hacking.career"
+            type="checkbox"
+          />
+          <span>
+            CAREER
+          </span>
+        </label>
+        <div
+          class="c12"
+          data-testid="skill-rank-computers_hacking"
+        >
+          <div>
+            <div
+              class="c14"
+              data-testid="computers_hacking-1"
+            />
+            <div
+              class="c14"
+              data-testid="computers_hacking-2"
+            />
+            <div
+              class="c13"
+              data-testid="computers_hacking-3"
+            />
+            <div
+              class="c13"
+              data-testid="computers_hacking-4"
+            />
+            <div
+              class="c13"
+              data-testid="computers_hacking-5"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c10"
+        data-testid="skill-medicine"
+      >
+        <h5>
+          Medicine (IN)
+        </h5>
+        <label
+          class="c15"
+          data-testid="skill-career-medicine"
+          name="skill.medicine.career"
+        >
+          <input
+            disabled=""
+            name="skills.medicine.career"
+            type="checkbox"
+          />
+          <span>
+            CAREER
+          </span>
+        </label>
+        <div
+          class="c12"
+          data-testid="skill-rank-medicine"
+        >
+          <div>
+            <div
+              class="c14"
+              data-testid="medicine-1"
+            />
+            <div
+              class="c14"
+              data-testid="medicine-2"
+            />
+            <div
+              class="c14"
+              data-testid="medicine-3"
+            />
+            <div
+              class="c13"
+              data-testid="medicine-4"
+            />
+            <div
+              class="c13"
+              data-testid="medicine-5"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c10"
+        data-testid="skill-perception"
+      >
+        <h5>
+          Perception (CU)
+        </h5>
+        <label
+          class="c11"
+          data-testid="skill-career-perception"
+          name="skill.perception.career"
+        >
+          <input
+            disabled=""
+            name="skills.perception.career"
+            type="checkbox"
+          />
+          <span>
+            CAREER
+          </span>
+        </label>
+        <div
+          class="c12"
+          data-testid="skill-rank-perception"
+        >
+          <div>
+            <div
+              class="c14"
+              data-testid="perception-1"
+            />
+            <div
+              class="c14"
+              data-testid="perception-2"
+            />
+            <div
+              class="c14"
+              data-testid="perception-3"
+            />
+            <div
+              class="c14"
+              data-testid="perception-4"
+            />
+            <div
+              class="c13"
+              data-testid="perception-5"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c10"
+        data-testid="skill-stealth"
+      >
+        <h5>
+          Stealth (AG)
+        </h5>
+        <label
+          class="c15"
+          data-testid="skill-career-stealth"
+          name="skill.stealth.career"
+        >
+          <input
+            disabled=""
+            name="skills.stealth.career"
+            type="checkbox"
+          />
+          <span>
+            CAREER
+          </span>
+        </label>
+        <div
+          class="c12"
+          data-testid="skill-rank-stealth"
+        >
+          <div>
+            <div
+              class="c14"
+              data-testid="stealth-1"
+            />
+            <div
+              class="c14"
+              data-testid="stealth-2"
+            />
+            <div
+              class="c14"
+              data-testid="stealth-3"
+            />
+            <div
+              class="c14"
+              data-testid="stealth-4"
+            />
+            <div
+              class="c14"
+              data-testid="stealth-5"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>
+      combat
+    </h3>
+    <div>
+      <div
+        class="c10"
+        data-testid="skill-brawl"
+      >
+        <h5>
+          Brawl (BR)
+        </h5>
+        <label
+          class="c15"
+          data-testid="skill-career-brawl"
+          name="skill.brawl.career"
+        >
+          <input
+            disabled=""
+            name="skills.brawl.career"
+            type="checkbox"
+          />
+          <span>
+            CAREER
+          </span>
+        </label>
+        <div
+          class="c12"
+          data-testid="skill-rank-brawl"
+        >
+          <div>
+            <div
+              class="c14"
+              data-testid="brawl-1"
+            />
+            <div
+              class="c13"
+              data-testid="brawl-2"
+            />
+            <div
+              class="c13"
+              data-testid="brawl-3"
+            />
+            <div
+              class="c13"
+              data-testid="brawl-4"
+            />
+            <div
+              class="c13"
+              data-testid="brawl-5"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c16 c17"
+    data-testid="favors"
+  >
+    <div
+      class="c18"
+      data-testid="favors-owed"
+    >
+      <div
+        class="c19"
+      >
+        <h3>
+          owed
+        </h3>
+        <div
+          data-testid="form-buttons-favor-owed"
+        >
+          <button
+            class="c2"
+            data-testid="edit-favor-owed"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c20"
+      >
+        <div
+          class="c21"
+          data-testid="favor-1"
+        >
+          <h4
+            data-testid="favor-1-size"
+          >
+            Big favor
+          </h4>
+          <h4
+            data-testid="favor-1-faction_id"
+          >
+            Orgcrime
+          </h4>
+          <div
+            data-testid="favor-1-description"
+          >
+            Aditi owes a big favor to Tián Shun, a mid-level boss in the 14K outfit. Tián helped Aditi establish her life in the Base De Cayambe and set up a fake ID for her that registers her as human. In return, he occasionally asks her to review the “books” from his part of the organization, and once had her patch up one of his wounded enforcers. He has made it clear that he expects more such aid going forward.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c18"
+      data-testid="favors-given"
+    >
+      <div
+        class="c19"
+      >
+        <h3>
+          given
+        </h3>
+        <div
+          data-testid="form-buttons-favor-given"
+        >
+          <button
+            class="c2"
+            data-testid="edit-favor-given"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c20"
+      >
+        <div
+          class="c22"
+          data-testid="favor-2"
+        >
+          <h4
+            data-testid="favor-2-size"
+          >
+            Small favor
+          </h4>
+          <h4
+            data-testid="favor-2-faction_id"
+          >
+            NAPD
+          </h4>
+          <div
+            data-testid="favor-2-description"
+          >
+            Aditi's Union membership means she can call on other members of the Union for occasional help (see Union Member talent).
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;

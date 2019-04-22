@@ -3,6 +3,7 @@ import { fromJS } from 'immutable'
 import { GET_ARCHETYPES_SUCCESS } from 'actions/archetypes/constants'
 
 import initialState from './initialState'
+import ArchetypeRecord from './records'
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
@@ -11,7 +12,7 @@ export default (state = initialState, { type, payload }) => {
       const archetypesById = archetypes.reduce(
         (result, archetype) => ({
           ...result,
-          [archetype.id]: archetype,
+          [archetype.id]: new ArchetypeRecord(archetype),
         }),
         {},
       )

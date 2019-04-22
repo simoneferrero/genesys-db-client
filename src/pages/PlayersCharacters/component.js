@@ -1,7 +1,5 @@
 import React, { lazy, memo, Suspense, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { archetypeType } from 'types/archetypes'
-import { careerType } from 'types/careers'
 import { playerCharacterType } from 'types/playersCharacters'
 import { uiType } from 'types/ui'
 
@@ -28,13 +26,10 @@ const StyledWrapper = styled.div`
 
 /** Summary of all players' characters. */
 export const PlayersCharacters = ({
-  archetypesById,
-  careersById,
   getArchetypes,
   getCareers,
   getPlayersCharacters,
-  playersCharactersAllIds,
-  playersCharactersById,
+  playersCharacters,
   playersCharactersUi,
 }) => {
   useEffect(() => {
@@ -43,22 +38,16 @@ export const PlayersCharacters = ({
     getPlayersCharacters()
   }, [])
 
-  const playersCharacters = playersCharactersAllIds.map((id) => {
-    const playerCharacter = playersCharactersById[id]
-    const pcSummaryProps = {
-      ...playerCharacter,
-      archetype: archetypesById[playerCharacter.archetype],
-      career: careersById[playerCharacter.career],
-    }
-    return <PCSummary key={id} {...pcSummaryProps} />
-  })
+  const PCSummaries = playersCharacters.map((playerCharacter) => (
+    <PCSummary key={playerCharacter.id} {...playerCharacter} />
+  ))
 
   return (
     <>
       <Helmet title={HEAD_INFO.PLAYERS_CHARACTERS_TITLE} />
       <StyledWrapper data-testid="players-characters">
         <Header>{HEAD_INFO.PLAYERS_CHARACTERS_TITLE}</Header>
-        <Suspense fallback={<Spinner />}>{playersCharacters}</Suspense>
+        <Suspense fallback={<Spinner />}>{PCSummaries}</Suspense>
       </StyledWrapper>
       {playersCharactersUi.loading && <Spinner />}
     </>
@@ -66,20 +55,14 @@ export const PlayersCharacters = ({
 }
 
 PlayersCharacters.propTypes = {
-  /** Archetype data */
-  archetypesById: PropTypes.objectOf(archetypeType).isRequired,
-  /** Career data */
-  careersById: PropTypes.objectOf(careerType).isRequired,
   /** Dispatched to fetch a list of archetypes */
   getArchetypes: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */
   getCareers: PropTypes.func.isRequired,
   /** Dispatched to fetch players' characters data */
   getPlayersCharacters: PropTypes.func.isRequired,
-  /** Players' characters ordered ids */
-  playersCharactersAllIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   /** Players' characters data */
-  playersCharactersById: PropTypes.objectOf(playerCharacterType).isRequired,
+  playersCharacters: PropTypes.arrayOf(playerCharacterType).isRequired,
   /** Players' characters loader and error information */
   playersCharactersUi: uiType.isRequired,
 }

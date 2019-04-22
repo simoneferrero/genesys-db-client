@@ -20,7 +20,7 @@ export function* getCareersSaga() {
   try {
     const response = yield call(axios, opts)
 
-    yield put(getCareersSuccess(response.data))
+    yield put(getCareersSuccess(response.data.data))
   } catch (error) {
     yield put(getCareersError(error))
   }

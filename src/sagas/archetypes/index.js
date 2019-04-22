@@ -20,7 +20,7 @@ export function* getArchetypesSaga() {
   try {
     const response = yield call(axios, opts)
 
-    yield put(getArchetypesSuccess(response.data))
+    yield put(getArchetypesSuccess(response.data.data))
   } catch (error) {
     yield put(getArchetypesError(error))
   }

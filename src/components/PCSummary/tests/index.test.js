@@ -1,15 +1,23 @@
 import { Suspense } from 'react'
+import render from 'utils/customTestRenderers'
 
 import PCSummary from '../index'
 
-import { playerCharacter1Augmented } from 'mocks/playersCharacters'
+import { playerCharacterSummary1Augmented } from 'mocks/playersCharacters'
 
 import { ATTRIBUTES, CHARACTERISTICS } from 'utils/definitions'
 
-const renderedComponent = (props = {}) =>
+const mockSetFieldValue = jest.fn()
+const playerCharacter = playerCharacterSummary1Augmented.toJS()
+const defaultProps = {
+  ...playerCharacter,
+  setFieldValue: mockSetFieldValue,
+}
+
+const renderComponent = (props = {}) =>
   render(
     <Suspense fallback="Loading...">
-      <PCSummary {...playerCharacter1Augmented} {...props} />
+      <PCSummary {...defaultProps} {...props} />
     </Suspense>,
   )
 
@@ -34,7 +42,7 @@ describe('<PCSummary />', () => {
     id,
     name,
     player_name,
-  } = playerCharacter1Augmented
+  } = playerCharacterSummary1Augmented.toJS()
   const { DEFENSE, SOAK, STRAIN, WOUNDS } = ATTRIBUTES
   const {
     AGILITY,
@@ -45,8 +53,18 @@ describe('<PCSummary />', () => {
     WILLPOWER,
   } = CHARACTERISTICS
 
+  const currentWoundsName = 'attributes.wounds.current'
+  const currentStrainName = 'attributes.strain.current'
+
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+  afterAll(() => {
+    jest.resetAllMocks()
+  })
+
   it('should render correctly', async () => {
-    const { getByAltText, getByTestId, getByText } = renderedComponent()
+    const { getByAltText, getByTestId, getByText } = renderComponent()
 
     await wait(() => {
       const summary = getByTestId(`pc-summary-${id}`)
@@ -130,17 +148,141 @@ describe('<PCSummary />', () => {
       expect(meleeValue).toBeInTheDocument()
       const rangedValue = getByText(`${ranged}`)
       expect(rangedValue).toBeInTheDocument()
+
+      // Link
+      const link = getByTestId(`pc-sheet-link-${id}`)
+      expect(link).toBeInTheDocument()
     })
   })
 
-  it('should not break if archetype or career are undefined', async () => {
+  it('should render correctly when editing', async () => {
     const props = {
-      archetype: undefined,
-      career: undefined,
+      editing: true,
     }
-    const { getByTestId } = renderedComponent(props)
+    const { getByTestId } = renderComponent(props)
+    const {
+      attributes: {
+        wounds: { current: currentWounds },
+        strain: { current: currentStrain },
+      },
+    } = playerCharacter
 
-    const summary = await waitForElement(() => getByTestId(`pc-summary-${id}`))
-    expect(summary).toBeInTheDocument()
+    await wait(() => {
+      const currentWoundsModifiers = getByTestId(
+        `badge-modifiers-${currentWoundsName}`,
+      )
+      expect(currentWoundsModifiers).toBeInTheDocument()
+      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
+      expect(decreaseCurrentWounds).toBeInTheDocument()
+      fireEvent.click(decreaseCurrentWounds)
+      expect(mockSetFieldValue).toHaveBeenCalledWith(
+        currentWoundsName,
+        currentWounds - 1,
+      )
+      const increaseCurrentWounds = getByTestId(`increase-${currentWoundsName}`)
+      expect(increaseCurrentWounds).toBeInTheDocument()
+      fireEvent.click(increaseCurrentWounds)
+      expect(mockSetFieldValue).toHaveBeenCalledWith(
+        currentWoundsName,
+        currentWounds + 1,
+      )
+
+      const currentStrainModifiers = getByTestId(
+        `badge-modifiers-${currentStrainName}`,
+      )
+      expect(currentStrainModifiers).toBeInTheDocument()
+      const decreaseCurrentStrain = getByTestId(`decrease-${currentStrainName}`)
+      expect(decreaseCurrentStrain).toBeInTheDocument()
+      fireEvent.click(decreaseCurrentStrain)
+      expect(mockSetFieldValue).toHaveBeenCalledWith(
+        currentStrainName,
+        currentStrain - 1,
+      )
+      const increaseCurrentStrain = getByTestId(`increase-${currentStrainName}`)
+      expect(increaseCurrentStrain).toBeInTheDocument()
+      fireEvent.click(increaseCurrentStrain)
+      expect(mockSetFieldValue).toHaveBeenCalledWith(
+        currentStrainName,
+        currentStrain + 1,
+      )
+    })
+  })
+
+  it('should have disabled fields when max/min', async () => {
+    const props = {
+      editing: true,
+      attributes: {
+        ...playerCharacter.attributes,
+        wounds: {
+          current: 0,
+          total: 0,
+        },
+        strain: {
+          current: 0,
+          total: 0,
+        },
+      },
+    }
+    const { getByTestId } = renderComponent(props)
+
+    await wait(() => {
+      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
+      expect(decreaseCurrentWounds).toBeDisabled()
+      const increaseCurrentWounds = getByTestId(`increase-${currentWoundsName}`)
+      expect(increaseCurrentWounds).toBeDisabled()
+
+      const decreaseCurrentStrain = getByTestId(`decrease-${currentStrainName}`)
+      expect(decreaseCurrentStrain).toBeDisabled()
+      const increaseCurrentStrain = getByTestId(`increase-${currentStrainName}`)
+      expect(increaseCurrentStrain).toBeDisabled()
+    })
+  })
+
+  it('should have disabled fields when submitting', async () => {
+    const props = {
+      editing: true,
+      isSubmitting: true,
+    }
+    const { getByTestId } = renderComponent(props)
+
+    await wait(() => {
+      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
+      expect(decreaseCurrentWounds).toBeDisabled()
+      const increaseCurrentWounds = getByTestId(`increase-${currentWoundsName}`)
+      expect(increaseCurrentWounds).toBeDisabled()
+
+      const decreaseCurrentStrain = getByTestId(`decrease-${currentStrainName}`)
+      expect(decreaseCurrentStrain).toBeDisabled()
+      const increaseCurrentStrain = getByTestId(`increase-${currentStrainName}`)
+      expect(increaseCurrentStrain).toBeDisabled()
+    })
+  })
+
+  it('should not break if setFieldValue is not defined', async () => {
+    const props = {
+      editing: true,
+      setFieldValue: undefined,
+    }
+    const { getByTestId } = renderComponent(props)
+
+    await wait(() => {
+      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
+      fireEvent.click(decreaseCurrentWounds)
+
+      const summary = getByTestId(`pc-summary-${id}`)
+      expect(summary).toBeInTheDocument()
+    })
+  })
+
+  it('should not display the link if hideLink is true', async () => {
+    const props = {
+      hideLink: true,
+    }
+    const { queryByTestId } = renderComponent(props)
+
+    await wait(() => {
+      const link = queryByTestId(`pc-sheet-link-${id}`)
+      expect(link).not.toBeInTheDocument()
+    })
   })
 })

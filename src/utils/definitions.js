@@ -3,7 +3,10 @@ export const API_PATH = process.env.REACT_APP_API_PATH
 export const API_SEGMENTS = {
   ARCHETYPES: 'archetypes',
   CAREERS: 'careers',
+  FACTIONS: 'factions',
+  FAVOR: 'favor',
   PLAYERS_CHARACTERS: 'players-characters',
+  SKILLS: 'skills',
 }
 
 // REST
