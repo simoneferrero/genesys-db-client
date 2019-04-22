@@ -1,8 +1,10 @@
 import { fromJS, List, Map } from 'immutable'
 
 import ReducerRecord from 'reducers/records'
+import AuthenticationRecord from 'reducers/authentication/records'
 
 import { archetypesById, archetypesAllIds } from './archetypes'
+import { authInfoResponse } from './authentication'
 import { careersById, careersAllIds } from './careers'
 import { factionsById, factionsAllIds } from './factions'
 import {
@@ -20,6 +22,7 @@ export const store = fromJS({
     allIds: List(archetypesAllIds),
     byId: Map(archetypesById),
   }),
+  authentication: new AuthenticationRecord(authInfoResponse),
   careers: new ReducerRecord({
     allIds: List(careersAllIds),
     byId: Map(careersById),
@@ -42,6 +45,7 @@ export const store = fromJS({
 
 export const emptyStore = fromJS({
   archetypes: new ReducerRecord(),
+  authentication: new AuthenticationRecord(),
   careers: new ReducerRecord(),
   factions: new ReducerRecord(),
   playersCharacters: new ReducerRecord(),

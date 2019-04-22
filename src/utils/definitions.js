@@ -5,6 +5,7 @@ export const API_SEGMENTS = {
   CAREERS: 'careers',
   FACTIONS: 'factions',
   FAVOR: 'favor',
+  LOGIN: 'login',
   PLAYERS_CHARACTERS: 'players-characters',
   SKILLS: 'skills',
 }

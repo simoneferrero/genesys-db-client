@@ -4,6 +4,7 @@ import history from 'utils/history'
 
 // Other reducers
 import archetypes from './archetypes'
+import authentication from './authentication'
 import careers from './careers'
 import factions from './factions'
 import playersCharacters from './playersCharacters'
@@ -12,6 +13,7 @@ import ui from './ui'
 
 export default combineReducers({
   archetypes,
+  authentication,
   careers,
   factions,
   playersCharacters,
