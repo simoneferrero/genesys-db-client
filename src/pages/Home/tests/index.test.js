@@ -12,7 +12,7 @@ describe('<Home />', () => {
     const genesysLogo = getByTestId(/genesys-logo/i)
     expect(genesysLogo).toBeInTheDocument()
 
-    const title = getByText(/gm compendium/i)
+    const title = getByText(/genesys db/i)
     expect(title).toBeInTheDocument()
   })
 })

@@ -17,7 +17,7 @@ import { API_PATH, API_SEGMENTS, REST_METHODS } from 'utils/definitions'
 
 export function* loginSaga({
   payload: {
-    actions: { setSubmitting, setErrors },
+    actions: { resetForm, setSubmitting, setErrors },
     details,
   },
 }) {
@@ -45,6 +45,7 @@ export function* loginSaga({
   } catch (error) {
     yield put(loginError(error))
     yield call(setSubmitting, false)
+    yield call(resetForm)
     yield call(setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
   }
 }

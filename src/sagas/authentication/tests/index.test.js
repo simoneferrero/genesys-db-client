@@ -94,6 +94,10 @@ describe('authentication sagas', () => {
           expectedCallSetSubmittingDescriptor,
         )
 
+        const callResetFormDescriptor = generator.next().value
+        const expectedCallResetFormDescriptor = call(formikActions.resetForm)
+        expect(callResetFormDescriptor).toEqual(expectedCallResetFormDescriptor)
+
         const callSetErrorsDescriptor = generator.next().value
         const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
           mainError: 'There was an error',

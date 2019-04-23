@@ -55,6 +55,7 @@ export const emptyStore = fromJS({
 })
 
 export const formikActions = {
+  resetForm: () => {},
   setEditing: () => {},
   setErrors: () => {},
   setFieldTouched: () => {},

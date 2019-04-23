@@ -34,9 +34,13 @@ export const PlayersCharacters = ({
 }) => {
   useEffect(() => {
     getArchetypes()
+  }, [getArchetypes])
+  useEffect(() => {
     getCareers()
+  }, [getCareers])
+  useEffect(() => {
     getPlayersCharacters()
-  }, [])
+  }, [getPlayersCharacters])
 
   const PCSummaries = playersCharacters.map((playerCharacter) => (
     <PCSummary key={playerCharacter.id} {...playerCharacter} />

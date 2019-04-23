@@ -11,13 +11,17 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & > h1 {
+    text-transform: uppercase;
+  }
 `
 
 /** The main home page. */
 const Home = () => (
   <StyledWrapper data-testid="home">
     <GenesysLogo width={300} />
-    <h1>GM COMPENDIUM</h1>
+    <h1>Genesys DB</h1>
   </StyledWrapper>
 )
 

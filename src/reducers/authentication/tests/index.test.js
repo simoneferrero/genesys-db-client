@@ -3,7 +3,11 @@ import AuthenticationRecord from '../records'
 import reducer from '../index'
 import initialState from '../initialState'
 
-import { getAuthInfoError, getAuthInfoSuccess } from 'actions/authentication'
+import {
+  getAuthInfoError,
+  getAuthInfoSuccess,
+  logout,
+} from 'actions/authentication'
 
 import { authInfoResponse } from 'mocks/authentication'
 import { genericError } from 'mocks/errors'
@@ -17,21 +21,37 @@ describe('authentication reducer', () => {
     expect(result).toEqual(initialState)
   })
 
-  describe('getAuthInfoSuccess', () => {
-    it('should handle the action correctly', () => {
-      const result = reducer(initialState, getAuthInfoSuccess(authInfoResponse))
-      const expectedResult = new AuthenticationRecord(authInfoResponse)
+  describe('logout', () => {
+    describe('logout', () => {
+      it('should handle the action correctly', () => {
+        const result = reducer(initialState, logout())
+        const expectedResult = new AuthenticationRecord()
 
-      expect(result).toEqual(expectedResult)
+        expect(result).toEqual(expectedResult)
+      })
     })
   })
 
-  describe('getAuthInfoError', () => {
-    it('should handle the action correctly', () => {
-      const result = reducer(initialState, getAuthInfoError(genericError))
-      const expectedResult = new AuthenticationRecord()
+  describe('getAuthInfo', () => {
+    describe('getAuthInfoSuccess', () => {
+      it('should handle the action correctly', () => {
+        const result = reducer(
+          initialState,
+          getAuthInfoSuccess(authInfoResponse),
+        )
+        const expectedResult = new AuthenticationRecord(authInfoResponse)
 
-      expect(result).toEqual(expectedResult)
+        expect(result).toEqual(expectedResult)
+      })
+    })
+
+    describe('getAuthInfoError', () => {
+      it('should handle the action correctly', () => {
+        const result = reducer(initialState, getAuthInfoError(genericError))
+        const expectedResult = new AuthenticationRecord()
+
+        expect(result).toEqual(expectedResult)
+      })
     })
   })
 })

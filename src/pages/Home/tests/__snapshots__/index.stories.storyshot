@@ -21,6 +21,10 @@ exports[`Storyshots Pages/Home default 1`] = `
   align-items: center;
 }
 
+.c0 > h1 {
+  text-transform: uppercase;
+}
+
 <div
   class="c0"
   data-testid="home"
@@ -528,7 +532,7 @@ exports[`Storyshots Pages/Home default 1`] = `
     </g>
   </svg>
   <h1>
-    GM COMPENDIUM
+    Genesys DB
   </h1>
 </div>
 `;

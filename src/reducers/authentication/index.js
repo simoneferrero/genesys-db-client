@@ -1,6 +1,7 @@
 import {
   GET_AUTH_INFO_ERROR,
   GET_AUTH_INFO_SUCCESS,
+  LOGOUT,
 } from 'actions/authentication/constants'
 
 import initialState from './initialState'
@@ -13,6 +14,7 @@ export default (state = initialState, { type, payload }) => {
       return new AuthenticationRecord(authInfo)
     }
 
+    case LOGOUT:
     case GET_AUTH_INFO_ERROR: {
       return new AuthenticationRecord()
     }

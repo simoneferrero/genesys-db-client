@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Login default 1`] = `
+.c0 {
+  padding: 12px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 6px;
+  width: 200px;
+}
+
+.c0 * {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.c0 > p {
+  font-size: 14px;
+  color: rgb(170,73,23);
+  text-align: center;
+  margin: 0;
+}
+
+.c1 {
+  padding: 6px;
+  border: 2px solid rgb(242,143,34);
+  border-radius: 5px;
+  background: rgba(65,178,180,0.1);
+  color: rgb(0,130,155);
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c2 {
+  padding: 6px;
+  border: 2px solid rgb(0,130,155);
+  border-radius: 5px;
+  background: rgba(234,242,246,0.5);
+  cursor: pointer;
+  color: rgb(0,130,155);
+  text-transform: uppercase;
+}
+
+.c2 > h4 {
+  margin: 0;
+}
+
+.c2:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c2:hover h4 {
+  color: rgb(234,242,246);
+}
+
+.c2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(3,1fr);
+    width: 700px;
+  }
+
+  .c0 > p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 * {
+    font-size: 14px;
+  }
+}
+
+<form
+  class="c0"
+  data-testid="login"
+>
+  <label
+    for="username"
+  >
+    <input
+      class="c1"
+      data-testid="username"
+      id="username"
+      name="username"
+      placeholder="Username"
+      value=""
+    />
+  </label>
+  <label
+    for="password"
+  >
+    <input
+      class="c1"
+      data-testid="password"
+      id="password"
+      name="password"
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+  </label>
+  <button
+    class="c2"
+    data-testid="login-button"
+    type="submit"
+  >
+    <h4>
+      Login
+    </h4>
+  </button>
+</form>
+`;

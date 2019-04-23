@@ -28,11 +28,19 @@ export const PlayerCharacter = ({
 }) => {
   useEffect(() => {
     getPlayerCharacter(playerCharacterId)
+  }, [getPlayerCharacter, playerCharacterId])
+  useEffect(() => {
     getArchetypes()
+  }, [getArchetypes])
+  useEffect(() => {
     getCareers()
+  }, [getCareers])
+  useEffect(() => {
     getSkills()
+  }, [getSkills])
+  useEffect(() => {
     getFactions()
-  }, [])
+  }, [getFactions])
 
   // Form submission handlers
   const handleSubmit = (values, actions) =>
