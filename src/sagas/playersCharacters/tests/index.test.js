@@ -1,4 +1,4 @@
-import { all, call, put, takeLatest } from 'redux-saga/effects'
+import { all, call, put, select, takeLatest } from 'redux-saga/effects'
 import axios from 'axios'
 
 import keyBy from 'lodash/keyBy'
@@ -14,6 +14,8 @@ import rootSaga, {
   editPlayerCharacterSaga,
   editPlayerCharacterWatcher,
 } from '../index'
+
+import { logout } from 'actions/authentication'
 import {
   // getPlayersCharacters
   GET_PLAYERS_CHARACTERS,
@@ -37,7 +39,11 @@ import {
   editPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
 
+import { authenticationSelector } from 'reducers/authentication/selectors'
+import AuthenticationRecord from 'reducers/authentication/records'
+
 import { apiPath, formikActions } from 'mocks'
+import { authInfoResponse } from 'mocks/authentication'
 import {
   playerCharacter1Id,
   playerCharacter1Augmented,
@@ -55,17 +61,32 @@ describe('playersCharacters sagas', () => {
 
       beforeEach(() => {
         generator = getPlayersCharactersSaga(action)
-      })
 
-      it('should dispatch the correct actions on success', () => {
+        const selectAuthenticationDescriptor = generator.next().value
+        const expectedSelectAuthenticationDescriptor = select(
+          authenticationSelector,
+        )
+        expect(selectAuthenticationDescriptor).toEqual(
+          expectedSelectAuthenticationDescriptor,
+        )
+
+        const headers = {
+          Authorization: `Bearer ${authInfoResponse.jwt}`,
+          'Content-Type': 'application/json',
+        }
         const opts = {
+          headers,
           method: 'GET',
           url: `${apiPath}/players-characters`,
         }
-        const callAxiosDescriptor = generator.next().value
+        const callAxiosDescriptor = generator.next(
+          AuthenticationRecord(authInfoResponse),
+        ).value
         const expectedCallAxiosDescriptor = call(axios, opts)
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+      })
 
+      it('should dispatch the correct actions on success', () => {
         const response = {
           data: { data: playersCharactersResponse },
         }
@@ -77,12 +98,26 @@ describe('playersCharacters sagas', () => {
       })
 
       it('should dispatch the correct actions on error', () => {
-        generator.next().value
         const putErrorDescriptor = generator.throw(genericError).value
         const expectedPutErrorDescriptor = put(
           getPlayersCharactersError(genericError),
         )
         expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if unauthorised', () => {
+        const error = {
+          ...genericError,
+          status: 401,
+        }
+
+        const putErrorDescriptor = generator.throw(error).value
+        const expectedPutErrorDescriptor = put(getPlayersCharactersError(error))
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const putLogoutDescriptor = generator.next().value
+        const expectedPutLogoutDescriptor = put(logout())
+        expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
       })
 
       afterEach(() => {
@@ -114,17 +149,32 @@ describe('playersCharacters sagas', () => {
 
       beforeEach(() => {
         generator = getPlayerCharacterSaga(action)
-      })
 
-      it('should dispatch the correct actions on success', () => {
+        const selectAuthenticationDescriptor = generator.next().value
+        const expectedSelectAuthenticationDescriptor = select(
+          authenticationSelector,
+        )
+        expect(selectAuthenticationDescriptor).toEqual(
+          expectedSelectAuthenticationDescriptor,
+        )
+
+        const headers = {
+          Authorization: `Bearer ${authInfoResponse.jwt}`,
+          'Content-Type': 'application/json',
+        }
         const opts = {
+          headers,
           method: 'GET',
           url: `${apiPath}/players-characters/${id}`,
         }
-        const callAxiosDescriptor = generator.next().value
+        const callAxiosDescriptor = generator.next(
+          AuthenticationRecord(authInfoResponse),
+        ).value
         const expectedCallAxiosDescriptor = call(axios, opts)
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+      })
 
+      it('should dispatch the correct actions on success', () => {
         const response = {
           data: { data: playerCharacter1Response },
         }
@@ -136,12 +186,28 @@ describe('playersCharacters sagas', () => {
       })
 
       it('should dispatch the correct actions on error', () => {
-        generator.next().value
         const putErrorDescriptor = generator.throw(genericError).value
         const expectedPutErrorDescriptor = put(
           getPlayerCharacterError(id, genericError),
         )
         expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if unauthorised', () => {
+        const error = {
+          ...genericError,
+          status: 401,
+        }
+
+        const putErrorDescriptor = generator.throw(error).value
+        const expectedPutErrorDescriptor = put(
+          getPlayerCharacterError(id, error),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const putLogoutDescriptor = generator.next().value
+        const expectedPutLogoutDescriptor = put(logout())
+        expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
       })
 
       afterEach(() => {
@@ -181,9 +247,20 @@ describe('playersCharacters sagas', () => {
 
       beforeEach(() => {
         generator = editPlayerCharacterSaga(action)
-      })
 
-      it('should dispatch the correct actions on success', () => {
+        const selectAuthenticationDescriptor = generator.next().value
+        const expectedSelectAuthenticationDescriptor = select(
+          authenticationSelector,
+        )
+        expect(selectAuthenticationDescriptor).toEqual(
+          expectedSelectAuthenticationDescriptor,
+        )
+
+        const headers = {
+          Authorization: `Bearer ${authInfoResponse.jwt}`,
+          'Content-Type': 'application/json',
+        }
+
         const {
           attributes: {
             wounds: { current: wounds_current },
@@ -199,7 +276,6 @@ describe('playersCharacters sagas', () => {
           strain_current,
           wounds_current,
         })
-        const headers = { 'Content-Type': 'application/json' }
 
         const opts = {
           data,
@@ -207,10 +283,14 @@ describe('playersCharacters sagas', () => {
           method: 'PUT',
           url: `${apiPath}/players-characters/${id}`,
         }
-        const callAxiosDescriptor = generator.next().value
+        const callAxiosDescriptor = generator.next(
+          AuthenticationRecord(authInfoResponse),
+        ).value
         const expectedCallAxiosDescriptor = call(axios, opts)
         expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+      })
 
+      it('should dispatch the correct actions on success', () => {
         const response = {
           data: { data: playerCharacter1Response },
         }
@@ -240,7 +320,6 @@ describe('playersCharacters sagas', () => {
       })
 
       it('should dispatch the correct actions on error', () => {
-        generator.next().value
         const putErrorDescriptor = generator.throw(genericError).value
         const expectedPutErrorDescriptor = put(
           editPlayerCharacterError(id, genericError),
@@ -261,6 +340,38 @@ describe('playersCharacters sagas', () => {
           mainError: 'There was an error',
         })
         expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if unauthorised', () => {
+        const error = {
+          ...genericError,
+          status: 401,
+        }
+
+        const putErrorDescriptor = generator.throw(error).value
+        const expectedPutErrorDescriptor = put(
+          editPlayerCharacterError(id, error),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+
+        const putLogoutDescriptor = generator.next().value
+        const expectedPutLogoutDescriptor = put(logout())
+        expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
       })
 
       afterEach(() => {

@@ -1,8 +1,9 @@
 import axios from 'axios'
 import uri from 'urijs'
 
-import { all, call, put, takeLatest } from 'redux-saga/effects'
+import { all, call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { logout } from 'actions/authentication'
 import {
   // getPlayersCharacters
   GET_PLAYERS_CHARACTERS,
@@ -23,14 +24,24 @@ import {
   editPlayerCharacterError,
 } from 'actions/playersCharacters'
 
+import { authenticationSelector } from 'reducers/authentication/selectors'
+
 import { API_PATH, API_SEGMENTS, REST_METHODS } from 'utils/definitions'
 
 export function* getPlayersCharactersSaga() {
+  const authInfo = yield select(authenticationSelector)
+
   const requestUrl = uri(API_PATH)
     .segment([API_SEGMENTS.PLAYERS_CHARACTERS])
     .toString()
 
+  const headers = {
+    Authorization: `Bearer ${authInfo.get('jwt')}`,
+    'Content-Type': 'application/json',
+  }
+
   const opts = {
+    headers,
     method: REST_METHODS.GET,
     url: requestUrl,
   }
@@ -40,6 +51,10 @@ export function* getPlayersCharactersSaga() {
     yield put(getPlayersCharactersSuccess(response.data.data))
   } catch (error) {
     yield put(getPlayersCharactersError(error))
+
+    if (error.status === 401) {
+      yield put(logout())
+    }
   }
 }
 
@@ -48,11 +63,19 @@ export function* getPlayersCharactersWatcher() {
 }
 
 export function* getPlayerCharacterSaga({ payload: { id } }) {
+  const authInfo = yield select(authenticationSelector)
+
   const requestUrl = uri(API_PATH)
     .segment([API_SEGMENTS.PLAYERS_CHARACTERS, id])
     .toString()
 
+  const headers = {
+    Authorization: `Bearer ${authInfo.get('jwt')}`,
+    'Content-Type': 'application/json',
+  }
+
   const opts = {
+    headers,
     method: REST_METHODS.GET,
     url: requestUrl,
   }
@@ -62,6 +85,10 @@ export function* getPlayerCharacterSaga({ payload: { id } }) {
     yield put(getPlayerCharacterSuccess(id, response.data.data))
   } catch (error) {
     yield put(getPlayerCharacterError(id, error))
+
+    if (error.status === 401) {
+      yield put(logout())
+    }
   }
 }
 
@@ -83,6 +110,8 @@ export function* editPlayerCharacterSaga({
     },
   },
 }) {
+  const authInfo = yield select(authenticationSelector)
+
   const data = JSON.stringify({
     favors: Object.values(favors),
     skills: Object.values(skills)
@@ -97,7 +126,11 @@ export function* editPlayerCharacterSaga({
   const requestUrl = uri(API_PATH)
     .segment([API_SEGMENTS.PLAYERS_CHARACTERS, id])
     .toString()
-  const headers = { 'Content-Type': 'application/json' }
+
+  const headers = {
+    Authorization: `Bearer ${authInfo.get('jwt')}`,
+    'Content-Type': 'application/json',
+  }
 
   const opts = {
     data,
@@ -115,6 +148,10 @@ export function* editPlayerCharacterSaga({
     yield put(editPlayerCharacterError(id, error))
     yield call(actions.setSubmitting, false)
     yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+
+    if (error.status === 401) {
+      yield put(logout())
+    }
   }
 }
 
