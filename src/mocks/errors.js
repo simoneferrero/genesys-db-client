@@ -10,6 +10,5 @@ export const getTubeStatusError = {
 }
 
 export const genericError = {
-  description: 'there was an error',
-  status: 403,
+  response: { description: 'there was an error', status: 403 },
 }

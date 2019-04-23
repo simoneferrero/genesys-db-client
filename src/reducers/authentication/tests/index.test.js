@@ -6,6 +6,7 @@ import initialState from '../initialState'
 import {
   getAuthInfoError,
   getAuthInfoSuccess,
+  loginSuccess,
   logout,
 } from 'actions/authentication'
 
@@ -19,6 +20,17 @@ describe('authentication reducer', () => {
       payload: {},
     })
     expect(result).toEqual(initialState)
+  })
+
+  describe('login', () => {
+    describe('loginSuccess', () => {
+      it('should handle the action correctly', () => {
+        const result = reducer(initialState, loginSuccess(authInfoResponse))
+        const expectedResult = new AuthenticationRecord(authInfoResponse)
+
+        expect(result).toEqual(expectedResult)
+      })
+    })
   })
 
   describe('logout', () => {

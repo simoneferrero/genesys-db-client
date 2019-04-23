@@ -15,6 +15,13 @@ import {
 
 import { API_PATH, API_SEGMENTS, REST_METHODS } from 'utils/definitions'
 
+// localStorage helpers
+export const getAuthInfoFromLocalStorage = () =>
+  JSON.parse(window.localStorage.getItem('authInfo'))
+export const setAuthInfoInLocalStorage = (authInfo) =>
+  window.localStorage.setItem('authInfo', JSON.stringify(authInfo))
+export const clearLocalStorage = () => window.localStorage.clear()
+
 export function* loginSaga({
   payload: {
     actions: { resetForm, setSubmitting, setErrors },
@@ -39,7 +46,7 @@ export function* loginSaga({
       data: { data },
     } = yield call(axios, opts)
 
-    yield call(window.localStorage.setItem, 'authInfo', JSON.stringify(data))
+    yield call(setAuthInfoInLocalStorage, data)
     yield put(loginSuccess(data))
     yield call(setSubmitting, false)
   } catch (error) {
@@ -55,7 +62,7 @@ export function* loginWatcher() {
 }
 
 export function* logoutSaga() {
-  yield call(window.localStorage.clear)
+  yield call(clearLocalStorage)
   yield put(push('/'))
 }
 
@@ -64,10 +71,10 @@ export function* logoutWatcher() {
 }
 
 export function* getAuthInfoSaga() {
-  const authInfo = yield call(window.localStorage.getItem, 'authInfo')
+  const authInfo = yield call(getAuthInfoFromLocalStorage)
 
   if (authInfo) {
-    yield put(getAuthInfoSuccess(JSON.parse(authInfo)))
+    yield put(getAuthInfoSuccess(authInfo))
   } else {
     yield put(getAuthInfoError('Unauthorised'))
     yield put(logout())

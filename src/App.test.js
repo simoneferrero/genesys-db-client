@@ -12,6 +12,8 @@ import routes from 'utils/routes'
 import { store } from 'mocks'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
 
+jest.mock('redux-saga', () => () => {})
+
 // Create snapshots from stories
 addSerializer(styleSheetSerializer)
 initStoryshots({
@@ -35,6 +37,13 @@ initStoryshots({
 const renderComponent = (props = {}) => render(<App {...props} />)
 
 describe('<App />', () => {
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+  afterAll(() => {
+    jest.resetAllMocks()
+  })
+
   it('should render the correct elements', async () => {
     const { getByTestId, queryByTestId } = renderComponent()
 

@@ -1,28 +1,24 @@
-import React from 'react'
+import { connect } from 'react-redux'
 
-import GenesysLogo from 'vectors/GenesysLogo'
+// Selectors
+import { authenticationSelector } from 'reducers/authentication/selectors'
 
-import styled from 'styled-components/macro'
+// Actions
+import { getAuthInfo, login } from 'actions/authentication'
 
-const StyledWrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+import ImmutableConverter from 'HOCs/ImmutableConverter'
 
-  & > h1 {
-    text-transform: uppercase;
-  }
-`
+import Home from './component'
 
-/** The main home page. */
-const Home = () => (
-  <StyledWrapper data-testid="home">
-    <GenesysLogo width={300} />
-    <h1>Genesys DB</h1>
-  </StyledWrapper>
-)
+const mapStateToProps = (state) => ({
+  authInfo: authenticationSelector(state),
+})
+const mapDispatchToProps = (dispatch) => ({
+  getAuthInfo: () => dispatch(getAuthInfo()),
+  login: (details, actions) => dispatch(login(details, actions)),
+})
 
-export default Home
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ImmutableConverter(Home))

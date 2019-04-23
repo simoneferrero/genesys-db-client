@@ -6,6 +6,7 @@ import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selec
 
 // Actions
 import { getArchetypes } from 'actions/archetypes'
+import { getAuthInfo } from 'actions/authentication'
 import { getCareers } from 'actions/careers'
 import { getPlayersCharacters } from 'actions/playersCharacters'
 
@@ -19,6 +20,7 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) => ({
   getArchetypes: () => dispatch(getArchetypes()),
+  getAuthInfo: () => dispatch(getAuthInfo()),
   getCareers: () => dispatch(getCareers()),
   getPlayersCharacters: () => dispatch(getPlayersCharacters()),
 })

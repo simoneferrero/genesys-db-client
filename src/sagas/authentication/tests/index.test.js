@@ -9,6 +9,10 @@ import rootSaga, {
   logoutWatcher,
   getAuthInfoSaga,
   getAuthInfoWatcher,
+  //helpers
+  getAuthInfoFromLocalStorage,
+  setAuthInfoInLocalStorage,
+  clearLocalStorage,
 } from '../index'
 import { LOGIN, LOGOUT, GET_AUTH_INFO } from 'actions/authentication/constants'
 import {
@@ -26,6 +30,32 @@ import { authInfoResponse, password, username } from 'mocks/authentication'
 const details = { password, username }
 
 describe('authentication sagas', () => {
+  describe('helpers', () => {
+    it('clearLocalStorage should work correctly', () => {
+      clearLocalStorage()
+
+      expect(localStorage.clear).toHaveBeenCalledTimes(1)
+    })
+
+    it('getAuthInfoFromLocalStorage should work correctly', () => {
+      getAuthInfoFromLocalStorage()
+
+      expect(localStorage.getItem).toHaveBeenCalledWith('authInfo')
+    })
+
+    it('setAuthInfoInLocalStorage should work correctly', () => {
+      setAuthInfoInLocalStorage(authInfoResponse)
+
+      expect(localStorage.setItem).toHaveBeenCalledWith(
+        'authInfo',
+        JSON.stringify(authInfoResponse),
+      )
+      expect(JSON.parse(localStorage.__STORE__.authInfo)).toEqual(
+        authInfoResponse,
+      )
+    })
+  })
+
   describe('login', () => {
     const action = {
       type: LOGIN,
@@ -59,9 +89,8 @@ describe('authentication sagas', () => {
         }
         const callSetItemDescriptor = generator.next(response).value
         const expectedCallSetItemDescriptor = call(
-          window.localStorage.setItem,
-          'authInfo',
-          JSON.stringify(authInfoResponse),
+          setAuthInfoInLocalStorage,
+          authInfoResponse,
         )
         expect(callSetItemDescriptor).toEqual(expectedCallSetItemDescriptor)
 
@@ -137,7 +166,7 @@ describe('authentication sagas', () => {
 
       it('should dispatch the correct actions', () => {
         const callClearDescriptor = generator.next().value
-        const expectedCallClearDescriptor = call(window.localStorage.clear)
+        const expectedCallClearDescriptor = call(clearLocalStorage)
         expect(callClearDescriptor).toEqual(expectedCallClearDescriptor)
 
         const putDescriptor = generator.next().value
@@ -175,17 +204,12 @@ describe('authentication sagas', () => {
         generator = getAuthInfoSaga(action)
 
         const callSetItemDescriptor = generator.next().value
-        const expectedCallSetItemDescriptor = call(
-          window.localStorage.getItem,
-          'authInfo',
-        )
+        const expectedCallSetItemDescriptor = call(getAuthInfoFromLocalStorage)
         expect(callSetItemDescriptor).toEqual(expectedCallSetItemDescriptor)
       })
 
       it('should dispatch the correct actions on success', () => {
-        const putSuccessDescriptor = generator.next(
-          JSON.stringify(authInfoResponse),
-        ).value
+        const putSuccessDescriptor = generator.next(authInfoResponse).value
         const expectedPutSuccessDescriptor = put(
           getAuthInfoSuccess(authInfoResponse),
         )

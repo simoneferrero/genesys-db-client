@@ -107,8 +107,10 @@ describe('playersCharacters sagas', () => {
 
       it('should dispatch the correct actions on error if unauthorised', () => {
         const error = {
-          ...genericError,
-          status: 401,
+          response: {
+            ...genericError.response,
+            status: 401,
+          },
         }
 
         const putErrorDescriptor = generator.throw(error).value
@@ -147,70 +149,82 @@ describe('playersCharacters sagas', () => {
     describe('getPlayerCharacterSaga', () => {
       let generator
 
-      beforeEach(() => {
+      it('should return immediately if no playerCharacter ID', () => {
+        const action = getPlayerCharacter()
         generator = getPlayerCharacterSaga(action)
 
-        const selectAuthenticationDescriptor = generator.next().value
-        const expectedSelectAuthenticationDescriptor = select(
-          authenticationSelector,
-        )
-        expect(selectAuthenticationDescriptor).toEqual(
-          expectedSelectAuthenticationDescriptor,
-        )
-
-        const headers = {
-          Authorization: `Bearer ${authInfoResponse.jwt}`,
-          'Content-Type': 'application/json',
-        }
-        const opts = {
-          headers,
-          method: 'GET',
-          url: `${apiPath}/players-characters/${id}`,
-        }
-        const callAxiosDescriptor = generator.next(
-          AuthenticationRecord(authInfoResponse),
-        ).value
-        const expectedCallAxiosDescriptor = call(axios, opts)
-        expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+        const endGeneratorDescriptor = generator.next().value
+        expect(endGeneratorDescriptor).toBeUndefined()
       })
 
-      it('should dispatch the correct actions on success', () => {
-        const response = {
-          data: { data: playerCharacter1Response },
-        }
-        const putSuccessDescriptor = generator.next(response).value
-        const expectedPutSuccessDescriptor = put(
-          getPlayerCharacterSuccess(id, playerCharacter1Response),
-        )
-        expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
+      describe('with playerCharacter ID', () => {
+        beforeEach(() => {
+          generator = getPlayerCharacterSaga(action)
+
+          const selectAuthenticationDescriptor = generator.next().value
+          const expectedSelectAuthenticationDescriptor = select(
+            authenticationSelector,
+          )
+          expect(selectAuthenticationDescriptor).toEqual(
+            expectedSelectAuthenticationDescriptor,
+          )
+
+          const headers = {
+            Authorization: `Bearer ${authInfoResponse.jwt}`,
+            'Content-Type': 'application/json',
+          }
+          const opts = {
+            headers,
+            method: 'GET',
+            url: `${apiPath}/players-characters/${id}`,
+          }
+          const callAxiosDescriptor = generator.next(
+            AuthenticationRecord(authInfoResponse),
+          ).value
+          const expectedCallAxiosDescriptor = call(axios, opts)
+          expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+        })
+
+        it('should dispatch the correct actions on success', () => {
+          const response = {
+            data: { data: playerCharacter1Response },
+          }
+          const putSuccessDescriptor = generator.next(response).value
+          const expectedPutSuccessDescriptor = put(
+            getPlayerCharacterSuccess(id, playerCharacter1Response),
+          )
+          expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
+        })
+
+        it('should dispatch the correct actions on error', () => {
+          const putErrorDescriptor = generator.throw(genericError).value
+          const expectedPutErrorDescriptor = put(
+            getPlayerCharacterError(id, genericError),
+          )
+          expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+        })
+
+        it('should dispatch the correct actions on error if unauthorised', () => {
+          const error = {
+            response: {
+              ...genericError.response,
+              status: 401,
+            },
+          }
+
+          const putErrorDescriptor = generator.throw(error).value
+          const expectedPutErrorDescriptor = put(
+            getPlayerCharacterError(id, error),
+          )
+          expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+          const putLogoutDescriptor = generator.next().value
+          const expectedPutLogoutDescriptor = put(logout())
+          expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
+        })
       })
 
-      it('should dispatch the correct actions on error', () => {
-        const putErrorDescriptor = generator.throw(genericError).value
-        const expectedPutErrorDescriptor = put(
-          getPlayerCharacterError(id, genericError),
-        )
-        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
-      })
-
-      it('should dispatch the correct actions on error if unauthorised', () => {
-        const error = {
-          ...genericError,
-          status: 401,
-        }
-
-        const putErrorDescriptor = generator.throw(error).value
-        const expectedPutErrorDescriptor = put(
-          getPlayerCharacterError(id, error),
-        )
-        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
-
-        const putLogoutDescriptor = generator.next().value
-        const expectedPutLogoutDescriptor = put(logout())
-        expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
-      })
-
-      afterEach(() => {
+      afterAll(() => {
         const endGeneratorDescriptor = generator.next().value
         expect(endGeneratorDescriptor).toBeUndefined()
       })
@@ -344,8 +358,10 @@ describe('playersCharacters sagas', () => {
 
       it('should dispatch the correct actions on error if unauthorised', () => {
         const error = {
-          ...genericError,
-          status: 401,
+          response: {
+            ...genericError.response,
+            status: 401,
+          },
         }
 
         const putErrorDescriptor = generator.throw(error).value

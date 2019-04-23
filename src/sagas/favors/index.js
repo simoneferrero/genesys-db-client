@@ -47,7 +47,7 @@ export function* addFavorSaga({
     yield call(actions.setSubmitting, false)
     yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
 
-    if (error.status === 401) {
+    if (error.response.status === 401) {
       yield put(logout())
     }
   }

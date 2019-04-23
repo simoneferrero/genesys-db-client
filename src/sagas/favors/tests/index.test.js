@@ -110,8 +110,10 @@ describe('favors sagas', () => {
 
       it('should dispatch the correct actions on error if unauthorised', () => {
         const error = {
-          ...genericError,
-          status: 401,
+          response: {
+            ...genericError.response,
+            status: 401,
+          },
         }
 
         const putErrorDescriptor = generator.throw(error).value

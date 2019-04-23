@@ -9,10 +9,11 @@ import { playerCharacterIdSelector } from 'reducers/router/selectors'
 import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selectors'
 
 // Actions
-import { addFavor } from 'actions/favors'
 import { getArchetypes } from 'actions/archetypes'
+import { getAuthInfo } from 'actions/authentication'
 import { getCareers } from 'actions/careers'
 import { getFactions } from 'actions/factions'
+import { addFavor } from 'actions/favors'
 import {
   editPlayerCharacter,
   getPlayerCharacter,
@@ -37,6 +38,7 @@ const mapDispatchToProps = (dispatch) => ({
   editPlayerCharacter: (id, values, actions) =>
     dispatch(editPlayerCharacter(id, values, actions)),
   getArchetypes: () => dispatch(getArchetypes()),
+  getAuthInfo: () => dispatch(getAuthInfo()),
   getCareers: () => dispatch(getCareers()),
   getFactions: () => dispatch(getFactions()),
   getPlayerCharacter: (id) => dispatch(getPlayerCharacter(id)),

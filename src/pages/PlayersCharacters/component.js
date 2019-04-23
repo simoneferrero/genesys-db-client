@@ -27,11 +27,15 @@ const StyledWrapper = styled.div`
 /** Summary of all players' characters. */
 export const PlayersCharacters = ({
   getArchetypes,
+  getAuthInfo,
   getCareers,
   getPlayersCharacters,
   playersCharacters,
   playersCharactersUi,
 }) => {
+  useEffect(() => {
+    getAuthInfo()
+  }, [getAuthInfo])
   useEffect(() => {
     getArchetypes()
   }, [getArchetypes])
@@ -61,6 +65,8 @@ export const PlayersCharacters = ({
 PlayersCharacters.propTypes = {
   /** Dispatched to fetch a list of archetypes */
   getArchetypes: PropTypes.func.isRequired,
+  /** Dispatched to get user data */
+  getAuthInfo: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */
   getCareers: PropTypes.func.isRequired,
   /** Dispatched to fetch players' characters data */

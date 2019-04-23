@@ -52,7 +52,7 @@ export function* getPlayersCharactersSaga() {
   } catch (error) {
     yield put(getPlayersCharactersError(error))
 
-    if (error.status === 401) {
+    if (error.response.status === 401) {
       yield put(logout())
     }
   }
@@ -63,6 +63,10 @@ export function* getPlayersCharactersWatcher() {
 }
 
 export function* getPlayerCharacterSaga({ payload: { id } }) {
+  if (!id) {
+    return
+  }
+
   const authInfo = yield select(authenticationSelector)
 
   const requestUrl = uri(API_PATH)
@@ -86,7 +90,7 @@ export function* getPlayerCharacterSaga({ payload: { id } }) {
   } catch (error) {
     yield put(getPlayerCharacterError(id, error))
 
-    if (error.status === 401) {
+    if (error.response.status === 401) {
       yield put(logout())
     }
   }
@@ -149,7 +153,7 @@ export function* editPlayerCharacterSaga({
     yield call(actions.setSubmitting, false)
     yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
 
-    if (error.status === 401) {
+    if (error.response.status === 401) {
       yield put(logout())
     }
   }
