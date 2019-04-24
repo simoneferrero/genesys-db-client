@@ -20,6 +20,7 @@ import {
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
+import { GET_WEAPONS } from 'actions/weapons/constants'
 
 jest.mock('redux-saga', () => () => {})
 
@@ -84,18 +85,25 @@ jest.mock('actions/factions', () => ({
 }))
 import { getFactions } from 'actions/factions'
 
-jest.mock('actions/skills', () => {
-  const { GET_SKILLS } = require('actions/skills/constants')
+jest.mock('actions/skills', () => ({
+  getSkills: jest.fn(() => ({ type: '' })),
+  getSkillsSuccess: jest.fn(() => ({ type: '' })),
+  getSkillsError: jest.fn(() => ({ type: '' })),
+}))
+import { getSkills } from 'actions/skills'
+
+jest.mock('actions/weapons', () => {
+  const { GET_WEAPONS } = require('actions/weapons/constants')
   return {
-    getSkills: jest.fn(() => ({
-      type: GET_SKILLS,
+    getWeapons: jest.fn(() => ({
+      type: GET_WEAPONS,
       payload: {},
     })),
-    getSkillsSuccess: jest.fn(() => ({ type: '' })),
-    getSkillsError: jest.fn(() => ({ type: '' })),
+    getWeaponsSuccess: jest.fn(() => ({ type: '' })),
+    getWeaponsError: jest.fn(() => ({ type: '' })),
   }
 })
-import { getSkills } from 'actions/skills'
+import { getWeapons } from 'actions/weapons'
 
 const renderComponent = (props = {}, initialState) =>
   render(
@@ -218,6 +226,26 @@ describe('<PlayerCharacter />', () => {
     })
   })
 
+  it('should display a loader if weapons are loading', async () => {
+    getWeapons.mockImplementation(() => ({
+      type: GET_WEAPONS,
+      payload: {},
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    await wait(() => {
+      const playersCharactersWrapper = getByTestId(/player-character/i)
+      expect(playersCharactersWrapper).toBeInTheDocument()
+
+      const pcSheet = getByTestId(/pc-sheet/i)
+      expect(pcSheet).toBeInTheDocument()
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
+    })
+  })
+
   it('should dispatch fetch actions on mount', () => {
     renderComponent()
     expect(getAuthInfo).toHaveBeenCalledTimes(1)
@@ -227,6 +255,7 @@ describe('<PlayerCharacter />', () => {
     expect(getCareers).toHaveBeenCalledTimes(1)
     expect(getSkills).toHaveBeenCalledTimes(1)
     expect(getFactions).toHaveBeenCalledTimes(1)
+    expect(getWeapons).toHaveBeenCalledTimes(1)
   })
 
   it('should call editPlayerCharacter on submit', async () => {

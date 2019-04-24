@@ -26,9 +26,11 @@ const defaultProps = {
   getFactions: action('getFactions'),
   getPlayerCharacter: action('getPlayerCharacter'),
   getSkills: action('getSkills'),
+  getWeapons: action('getWeapons'),
   playerCharacter: playerCharacter1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
   playersCharactersUi: uiElement,
+  weaponsUi: uiElement,
 }
 
 const renderComponent = (props = {}) => (

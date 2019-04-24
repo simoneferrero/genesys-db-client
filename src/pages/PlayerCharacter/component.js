@@ -23,9 +23,11 @@ export const PlayerCharacter = ({
   getFactions,
   getPlayerCharacter,
   getSkills,
+  getWeapons,
   playerCharacter,
   playerCharacterId,
   playersCharactersUi,
+  weaponsUi,
 }) => {
   useEffect(() => {
     getAuthInfo()
@@ -45,6 +47,9 @@ export const PlayerCharacter = ({
   useEffect(() => {
     getFactions()
   }, [getFactions])
+  useEffect(() => {
+    getWeapons()
+  }, [getWeapons])
 
   // Form submission handlers
   const handleSubmit = (values, actions) =>
@@ -53,7 +58,10 @@ export const PlayerCharacter = ({
     addFavor(playerCharacterId, values, actions)
 
   const loading =
-    playersCharactersUi.loading || favorsUi.loading || factionsUi.loading
+    playersCharactersUi.loading ||
+    favorsUi.loading ||
+    factionsUi.loading ||
+    weaponsUi.loading
 
   return (
     <>
@@ -95,6 +103,8 @@ PlayerCharacter.propTypes = {
   getFactions: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of skills */
   getSkills: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of weapons */
+  getWeapons: PropTypes.func.isRequired,
   /** Dispatched to fetch player character data */
   getPlayerCharacter: PropTypes.func.isRequired,
   /** Player character data */
@@ -103,6 +113,8 @@ PlayerCharacter.propTypes = {
   playerCharacterId: PropTypes.string,
   /** Players' characters loader and error information */
   playersCharactersUi: uiType.isRequired,
+  /** Weapons' loader and error information */
+  weaponsUi: uiType.isRequired,
 }
 
 export default memo(PlayerCharacter)
