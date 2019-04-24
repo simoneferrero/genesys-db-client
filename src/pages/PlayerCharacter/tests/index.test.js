@@ -21,6 +21,13 @@ import {
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
 
+jest.mock('redux-saga', () => () => {})
+
+jest.mock('actions/authentication', () => ({
+  getAuthInfo: jest.fn(() => ({ type: '' })),
+}))
+import { getAuthInfo } from 'actions/authentication'
+
 jest.mock('actions/favors', () => ({
   addFavor: jest.fn(() => ({ type: '' })),
   addFavorSuccess: jest.fn(() => ({ type: '' })),
@@ -213,6 +220,7 @@ describe('<PlayerCharacter />', () => {
 
   it('should dispatch fetch actions on mount', () => {
     renderComponent()
+    expect(getAuthInfo).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledTimes(1)
     expect(getPlayerCharacter).toHaveBeenCalledWith(id)
     expect(getArchetypes).toHaveBeenCalledTimes(1)

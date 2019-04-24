@@ -7,7 +7,7 @@ import { Formik } from 'formik'
 
 import InnerForm from './innerForm'
 
-const Favor = ({
+const FavorsSection = ({
   editing,
   factions,
   favors,
@@ -53,7 +53,7 @@ const Favor = ({
   )
 }
 
-Favor.propTypes = {
+FavorsSection.propTypes = {
   /** Whether favors can be edited */
   editing: PropTypes.bool,
   /** Factions data */
@@ -72,4 +72,4 @@ Favor.propTypes = {
   type: PropTypes.oneOf(['owed', 'given']).isRequired,
 }
 
-export default Favor
+export default FavorsSection

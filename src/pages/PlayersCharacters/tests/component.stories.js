@@ -13,6 +13,7 @@ import { PlayersCharacters } from '../component'
 
 const defaultProps = {
   getArchetypes: action('getArchetypes'),
+  getAuthInfo: action('getAuthInfo'),
   getCareers: action('getCareers'),
   getPlayersCharacters: action('getPlayersCharacters'),
   playersCharacters: playersCharactersAugmented.toJS(),

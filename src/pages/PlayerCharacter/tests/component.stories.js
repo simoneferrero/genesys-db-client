@@ -21,6 +21,7 @@ const defaultProps = {
   factionsUi: uiElement,
   favorsUi: uiElement,
   getArchetypes: action('getArchetypes'),
+  getAuthInfo: action('getAuthInfo'),
   getCareers: action('getCareers'),
   getFactions: action('getFactions'),
   getPlayerCharacter: action('getPlayerCharacter'),

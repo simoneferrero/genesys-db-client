@@ -3,6 +3,7 @@ import { all, call } from 'redux-saga/effects'
 import rootSaga from '../index.js'
 
 import archetypesRootSaga from '../archetypes'
+import authenticationRootSaga from '../authentication'
 import careersRootSaga from '../careers'
 import factionsRootSaga from '../factions'
 import favorsRootSaga from '../favors'
@@ -16,6 +17,7 @@ describe('rootSaga', () => {
     const allDescriptor = generator.next().value
     const expectedAllDescriptor = all([
       call(archetypesRootSaga),
+      call(authenticationRootSaga),
       call(careersRootSaga),
       call(factionsRootSaga),
       call(favorsRootSaga),

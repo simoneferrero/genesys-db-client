@@ -1,13 +1,20 @@
+import render from 'utils/customTestRenderers'
 import Sidebar from '../index'
 
 import { colours, menuCoverOpacity, menuWidth } from 'styles/constants'
 
-const childrenText = 'ROUTE 1'
-const defaultProps = {
-  children: <span>{childrenText}</span>,
-}
-const renderComponent = (props = {}) =>
-  render(<Sidebar {...defaultProps} {...props} />)
+import AuthenticationRecord from 'reducers/authentication/records'
+
+import { emptyStore, store } from 'mocks'
+import { authInfoGmResponse } from 'mocks/authentication'
+
+jest.mock('actions/authentication', () => ({
+  logout: jest.fn(() => ({ type: '' })),
+}))
+import { logout } from 'actions/authentication'
+
+const renderComponent = (props = {}, initialState) =>
+  render(<Sidebar {...props} />, { initialState })
 
 const closedStyleAssertions = (sidebar, cover, icon) => {
   expect(sidebar).toHaveStyle(`left: -${menuWidth}px`)
@@ -27,6 +34,20 @@ const openStyleAssertions = (sidebar, cover, icon) => {
 }
 
 describe('<Sidebar />', () => {
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+  afterAll(() => {
+    jest.resetAllMocks()
+  })
+
+  it('should return nothing if role is undefined', () => {
+    const { queryByTestId } = renderComponent(null, emptyStore)
+
+    const sidebar = queryByTestId(/sidebar/i)
+    expect(sidebar).not.toBeInTheDocument()
+  })
+
   it('should open, close and render correctly on icon click', () => {
     const { getByTestId, getByText } = renderComponent()
 
@@ -42,8 +63,8 @@ describe('<Sidebar />', () => {
     const cover = getByTestId(/cover/i)
     expect(cover).toBeInTheDocument()
 
-    const renderedChildren = getByText(childrenText)
-    expect(renderedChildren).toBeInTheDocument()
+    const logoutButton = getByText(/logout/gi)
+    expect(logoutButton).toBeInTheDocument()
 
     // Closed menu
     closedStyleAssertions(sidebar, cover, icon)
@@ -89,22 +110,51 @@ describe('<Sidebar />', () => {
     expect(rerenderedIconMenu).toBeInTheDocument()
   })
 
-  it('should behave correctly on children click', () => {
+  it('should change routes correctly for player', async () => {
     const { getByTestId, getByText } = renderComponent()
 
-    const renderedChildren = getByText(childrenText)
-
-    // Open menu and close on children click
-    const icon = getByTestId(/icon/i)
-    fireEvent.click(icon)
-    fireEvent.click(renderedChildren)
-
     const sidebar = getByTestId(/sidebar/i)
+    const icon = getByTestId(/icon/i)
     const cover = getByTestId(/cover/i)
 
-    closedStyleAssertions(sidebar, cover, icon)
+    const playersCharactersMenuItem = getByTestId(/menu-item-player-character/i)
+    fireEvent.click(playersCharactersMenuItem)
 
-    const rerenderedIconMenu = getByTestId(/icon-menu/i)
-    expect(rerenderedIconMenu).toBeInTheDocument()
+    const playersCharactersRoute = await waitForElement(() =>
+      getByTestId(/player-character/i),
+    )
+    expect(playersCharactersRoute).toBeInTheDocument()
+
+    const logoutButton = getByText(/logout/gi)
+    fireEvent.click(logoutButton)
+    expect(logout).toHaveBeenCalledTimes(1)
+    closedStyleAssertions(sidebar, cover, icon)
+  })
+
+  it('should change routes correctly for gm', async () => {
+    const modifiedStore = store.set(
+      'authentication',
+      AuthenticationRecord(authInfoGmResponse),
+    )
+    const { getByTestId, getByText } = renderComponent(null, modifiedStore)
+
+    const sidebar = getByTestId(/sidebar/i)
+    const icon = getByTestId(/icon/i)
+    const cover = getByTestId(/cover/i)
+
+    const playersCharactersMenuItem = getByTestId(
+      /menu-item-players-characters/i,
+    )
+    fireEvent.click(playersCharactersMenuItem)
+
+    const playersCharactersRoute = await waitForElement(() =>
+      getByTestId(/players-characters/i),
+    )
+    expect(playersCharactersRoute).toBeInTheDocument()
+
+    const logoutButton = getByText(/logout/gi)
+    fireEvent.click(logoutButton)
+    expect(logout).toHaveBeenCalledTimes(1)
+    closedStyleAssertions(sidebar, cover, icon)
   })
 })

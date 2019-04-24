@@ -13,6 +13,13 @@ import {
   GET_PLAYERS_CHARACTERS_SUCCESS,
 } from 'actions/playersCharacters/constants'
 
+jest.mock('redux-saga', () => () => {})
+
+jest.mock('actions/authentication', () => ({
+  getAuthInfo: jest.fn(() => ({ type: '' })),
+}))
+import { getAuthInfo } from 'actions/authentication'
+
 jest.mock('actions/playersCharacters', () => {
   return {
     getPlayersCharacters: jest.fn(),
@@ -139,6 +146,7 @@ describe('<PlayersCharacters />', () => {
 
   it('should dispatch fetch actions on mount', () => {
     renderComponent()
+    expect(getAuthInfo).toHaveBeenCalledTimes(1)
     expect(getArchetypes).toHaveBeenCalledTimes(1)
     expect(getCareers).toHaveBeenCalledTimes(1)
     expect(getPlayersCharacters).toHaveBeenCalledTimes(1)

@@ -1,6 +1,9 @@
 import React from 'react'
 import { fireEvent, render, wait, waitForElement } from 'react-testing-library'
 
+// Test localstorage
+import 'jest-localstorage-mock'
+
 // Expose CSS in snapshots
 import 'jest-styled-components'
 

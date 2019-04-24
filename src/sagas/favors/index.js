@@ -1,16 +1,21 @@
 import axios from 'axios'
 import uri from 'urijs'
 
-import { all, call, put, takeLatest } from 'redux-saga/effects'
+import { all, call, put, select, takeLatest } from 'redux-saga/effects'
 
+import { logout } from 'actions/authentication'
 import { ADD_FAVOR } from 'actions/favors/constants'
 import { addFavorError, addFavorSuccess } from 'actions/favors'
+
+import { authenticationSelector } from 'reducers/authentication/selectors'
 
 import { API_PATH, API_SEGMENTS, REST_METHODS } from 'utils/definitions'
 
 export function* addFavorSaga({
   payload: { actions, favor, playerCharacterId },
 }) {
+  const authInfo = yield select(authenticationSelector)
+
   const requestUrl = uri(API_PATH)
     .segment([
       API_SEGMENTS.PLAYERS_CHARACTERS,
@@ -19,7 +24,10 @@ export function* addFavorSaga({
     ])
     .toString()
 
-  const headers = { 'Content-Type': 'application/json' }
+  const headers = {
+    Authorization: `Bearer ${authInfo.get('jwt')}`,
+    'Content-Type': 'application/json',
+  }
 
   const opts = {
     data: JSON.stringify(favor),
@@ -38,6 +46,10 @@ export function* addFavorSaga({
     yield put(addFavorError(playerCharacterId, error))
     yield call(actions.setSubmitting, false)
     yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+
+    if (error.response.status === 401) {
+      yield put(logout())
+    }
   }
 }
 

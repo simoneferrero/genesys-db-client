@@ -2,6 +2,7 @@ import { all, call } from 'redux-saga/effects'
 
 // Root sagas
 import archetypesRootSaga from './archetypes'
+import authenticationRootSaga from './authentication'
 import careersRootSaga from './careers'
 import factionsRootSaga from './factions'
 import favorsRootSaga from './favors'
@@ -12,6 +13,7 @@ import skillsRootSaga from './skills'
 export default function* rootSaga() {
   yield all([
     call(archetypesRootSaga),
+    call(authenticationRootSaga),
     call(careersRootSaga),
     call(factionsRootSaga),
     call(favorsRootSaga),

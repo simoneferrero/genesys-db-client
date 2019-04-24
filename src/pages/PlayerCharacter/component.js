@@ -18,6 +18,7 @@ export const PlayerCharacter = ({
   factionsUi,
   favorsUi,
   getArchetypes,
+  getAuthInfo,
   getCareers,
   getFactions,
   getPlayerCharacter,
@@ -27,12 +28,23 @@ export const PlayerCharacter = ({
   playersCharactersUi,
 }) => {
   useEffect(() => {
+    getAuthInfo()
+  }, [getAuthInfo])
+  useEffect(() => {
     getPlayerCharacter(playerCharacterId)
+  }, [getPlayerCharacter, playerCharacterId])
+  useEffect(() => {
     getArchetypes()
+  }, [getArchetypes])
+  useEffect(() => {
     getCareers()
+  }, [getCareers])
+  useEffect(() => {
     getSkills()
+  }, [getSkills])
+  useEffect(() => {
     getFactions()
-  }, [])
+  }, [getFactions])
 
   // Form submission handlers
   const handleSubmit = (values, actions) =>
@@ -75,6 +87,8 @@ PlayerCharacter.propTypes = {
   favorsUi: uiType.isRequired,
   /** Dispatched to fetch a list of archetypes */
   getArchetypes: PropTypes.func.isRequired,
+  /** Dispatched to get user data */
+  getAuthInfo: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */
   getCareers: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of factions */
@@ -86,7 +100,7 @@ PlayerCharacter.propTypes = {
   /** Player character data */
   playerCharacter: playerCharacterType.isRequired,
   /** Current player character ID */
-  playerCharacterId: PropTypes.string.isRequired,
+  playerCharacterId: PropTypes.string,
   /** Players' characters loader and error information */
   playersCharactersUi: uiType.isRequired,
 }

@@ -4,6 +4,7 @@ import { genericError } from 'mocks/errors'
 
 export const ui = {
   archetypes: uiRecord(),
+  authentication: uiRecord(),
   careers: uiRecord(),
   factions: uiRecord(),
   favors: uiRecord(),

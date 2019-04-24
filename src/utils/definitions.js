@@ -5,6 +5,7 @@ export const API_SEGMENTS = {
   CAREERS: 'careers',
   FACTIONS: 'factions',
   FAVOR: 'favor',
+  LOGIN: 'login',
   PLAYERS_CHARACTERS: 'players-characters',
   SKILLS: 'skills',
 }
@@ -19,8 +20,8 @@ export const REST_METHODS = {
 
 // Head data
 export const HEAD_INFO = {
-  TITLE: 'GM Compendium',
-  CONTENT: 'Application to manage Genesys - Shadow of the Beanstalk GM data',
+  TITLE: 'Genesys DB',
+  CONTENT: 'Web app to manage and display Genesys - SotB data',
   PLAYERS_CHARACTERS_TITLE: 'PC Summary',
 }
 
