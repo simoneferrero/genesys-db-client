@@ -10,6 +10,7 @@ import factions from './factions'
 import playersCharacters from './playersCharacters'
 import skills from './skills'
 import ui from './ui'
+import weapons from './weapons'
 
 export default combineReducers({
   archetypes,
@@ -20,4 +21,5 @@ export default combineReducers({
   router: connectRouter(history),
   skills,
   ui,
+  weapons,
 })

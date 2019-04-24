@@ -8,6 +8,7 @@ import factions from './factions'
 import favors from './favors'
 import playersCharacters from './playersCharacters'
 import skills from './skills'
+import weapons from './weapons'
 
 export default combineReducers({
   archetypes,
@@ -17,4 +18,5 @@ export default combineReducers({
   favors,
   playersCharacters,
   skills,
+  weapons,
 })
