@@ -9,7 +9,10 @@ import App from './App'
 
 import routes from 'utils/routes'
 
+import AuthenticationRecord from 'reducers/authentication/records'
+
 import { store } from 'mocks'
+import { authInfoGmResponse } from 'mocks/authentication'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
 
 jest.mock('redux-saga', () => () => {})
@@ -34,7 +37,11 @@ initStoryshots({
   },
 })
 
-const renderComponent = (props = {}) => render(<App {...props} />)
+const defaultProps = {
+  store,
+}
+const renderComponent = (props = {}) =>
+  render(<App {...defaultProps} {...props} />)
 
 describe('<App />', () => {
   afterEach(() => {
@@ -44,6 +51,19 @@ describe('<App />', () => {
     jest.resetAllMocks()
   })
 
+  it('should render correctly with empty store', async () => {
+    const props = {
+      store: undefined,
+    }
+    const { getByTestId, queryByTestId } = renderComponent(props)
+
+    const sidebar = queryByTestId(/sidebar/i)
+    expect(sidebar).not.toBeInTheDocument()
+
+    const home = await waitForElement(() => getByTestId(/home/gi))
+    expect(home).toBeInTheDocument()
+  })
+
   it('should render the correct elements', async () => {
     const { getByTestId, queryByTestId } = renderComponent()
 
@@ -51,8 +71,8 @@ describe('<App />', () => {
       const sidebar = getByTestId(/sidebar/i)
       expect(sidebar).toBeInTheDocument()
 
-      routes.forEach(({ id, showInMenu }) => {
-        if (showInMenu) {
+      routes.forEach(({ id, showInPlayerMenu }) => {
+        if (showInPlayerMenu) {
           const menuItem = getByTestId(`menu-item-${id}`)
           expect(menuItem).toBeInTheDocument()
         } else {
@@ -66,19 +86,35 @@ describe('<App />', () => {
     })
   })
 
-  it('should change routes correctly', async () => {
+  it('should change routes correctly for player', async () => {
+    const { getByTestId } = renderComponent()
+
+    const playersCharactersMenuItem = getByTestId(/menu-item-player-character/i)
+    fireEvent.click(playersCharactersMenuItem)
+
+    const playersCharactersRoute = await waitForElement(() =>
+      getByTestId(/player-character/gi),
+    )
+    expect(playersCharactersRoute).toBeInTheDocument()
+  })
+
+  it('should change routes correctly for gm', async () => {
+    const modifiedStore = store.set(
+      'authentication',
+      AuthenticationRecord(authInfoGmResponse),
+    )
     const props = {
-      store,
+      store: modifiedStore,
     }
     const { getByTestId } = renderComponent(props)
 
-    const playersCharactersMenuItem = getByTestId(
-      /menu-item-players-characters/i,
+    const playersCharactersMenuItem = await waitForElement(() =>
+      getByTestId(/menu-item-players-characters/i),
     )
     fireEvent.click(playersCharactersMenuItem)
 
     const playersCharactersRoute = await waitForElement(() =>
-      getByTestId(/players-characters/i),
+      getByTestId(/players-characters/gi),
     )
     expect(playersCharactersRoute).toBeInTheDocument()
 

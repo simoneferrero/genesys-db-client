@@ -17,7 +17,6 @@ import { Route, Switch } from 'react-router-dom'
 // Routes
 import routes from 'utils/routes'
 
-import MenuItem from 'components/MenuItem'
 import Sidebar from 'components/Sidebar'
 import Spinner from 'components/Spinner'
 
@@ -34,17 +33,7 @@ const App = ({ store }) => (
     <Provider store={configureStore(store)}>
       <GlobalStyles />
       <ConnectedRouter history={history}>
-        <Sidebar>
-          {routes
-            .filter(({ showInMenu }) => showInMenu)
-            .map((
-              { menuItemComponent, routeComponent, showInMenu, ...route }, // eslint-disable-line no-unused-vars
-            ) => (
-              <MenuItem key={route.id} {...route}>
-                {menuItemComponent}
-              </MenuItem>
-            ))}
-        </Sidebar>
+        <Sidebar />
         <Suspense fallback={<Spinner />}>
           <Switch>
             {routes.map(({ routeComponent, id, to }) => (

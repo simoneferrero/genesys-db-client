@@ -1202,7 +1202,7 @@ exports[`Storyshots Pages/Home logged in 1`] = `
   </h1>
   <h4>
     Hello, 
-    theBoss
+    player1
     !
   </h4>
 </div>

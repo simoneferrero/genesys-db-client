@@ -222,11 +222,11 @@ describe('playersCharacters sagas', () => {
           const expectedPutLogoutDescriptor = put(logout())
           expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
         })
-      })
 
-      afterAll(() => {
-        const endGeneratorDescriptor = generator.next().value
-        expect(endGeneratorDescriptor).toBeUndefined()
+        afterEach(() => {
+          const endGeneratorDescriptor = generator.next().value
+          expect(endGeneratorDescriptor).toBeUndefined()
+        })
       })
     })
 
