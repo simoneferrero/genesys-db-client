@@ -10,7 +10,7 @@ export const weaponData = {
   /** How many mods can be attached */
   hard_points: PropTypes.number.isRequired,
   /** Unique identifier */
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   /** Name of the weapon */
   name: PropTypes.string.isRequired,
   /** Price of new weapon */
@@ -23,7 +23,7 @@ export const weaponData = {
   /** Whether it's legal or not to have it */
   restricted: PropTypes.bool,
   /** What skill is checked to use the weapon */
-  skill: PropTypes.string.isRequired,
+  skill: PropTypes.string,
   /** Any modifiers */
   special: PropTypes.string.isRequired,
 }

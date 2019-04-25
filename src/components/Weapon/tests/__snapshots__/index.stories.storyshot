@@ -1,0 +1,1449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Weapon default 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c1 > div,
+.c1 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > div span,
+.c1 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c1 > div h4,
+.c1 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c1 > div input,
+.c1 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 8px;
+  color: rgb(0,130,155);
+  font-size: 17px;
+  width: 100%;
+}
+
+.c1 > div input::-webkit-input-placeholder,
+.c1 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::-moz-placeholder,
+.c1 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:-ms-input-placeholder,
+.c1 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::placeholder,
+.c1 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:disabled,
+.c1 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c2 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c3 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c1:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="weapon-1"
+>
+  <section
+    class="c1"
+  >
+    <div
+      class="c2"
+      data-testid="weapon-1-name"
+    >
+      <h4>
+        Name:
+      </h4>
+      <span>
+        Stun Gun
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-skill"
+    >
+      <h4>
+        Skill:
+      </h4>
+      <span>
+        Melee
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-range"
+    >
+      <h4>
+        Range:
+      </h4>
+      <span>
+        Engaged
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-special"
+    >
+      <h4>
+        Special:
+      </h4>
+      <span>
+        Stun 4, Stun Damage
+      </span>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c3"
+      data-testid="weapon-1-damage"
+    >
+      <h4>
+        Damage:
+      </h4>
+      <span>
+        6
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-crit"
+    >
+      <h4>
+        Crit:
+      </h4>
+      <span>
+        5
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-encumbrance"
+    >
+      <h4>
+        Encumbrance:
+      </h4>
+      <span>
+        1
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-hard_points"
+    >
+      <h4>
+        Hard Points:
+      </h4>
+      <span>
+        1
+      </span>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c3"
+      data-testid="weapon-1-price"
+    >
+      <h4>
+        Price:
+      </h4>
+      <span>
+        200
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-restricted"
+    >
+      <h4>
+        Restricted:
+      </h4>
+      <span>
+        No
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-rarity"
+    >
+      <h4>
+        Rarity:
+      </h4>
+      <span>
+        3
+      </span>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Components/Weapon deleting 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c0 div > span,
+.c0 div > h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.c1 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c1 > div,
+.c1 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > div span,
+.c1 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c1 > div h4,
+.c1 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c1 > div input,
+.c1 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 8px;
+  color: rgb(0,130,155);
+  font-size: 17px;
+  width: 100%;
+}
+
+.c1 > div input::-webkit-input-placeholder,
+.c1 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::-moz-placeholder,
+.c1 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:-ms-input-placeholder,
+.c1 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::placeholder,
+.c1 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:disabled,
+.c1 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c2 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c3 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+.c4 {
+  padding: 4px;
+  border: 2px solid rgb(170,73,23);
+  border-radius: 5px;
+  background: rgba(255,244,233,0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.c4 > h4 {
+  margin: 0;
+  color: rgb(170,73,23);
+  text-align: center;
+}
+
+.c4:hover {
+  background-color: rgb(170,73,23);
+}
+
+.c4:hover h4 {
+  color: rgb(255,244,233);
+}
+
+.c4:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c1:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="weapon-1"
+>
+  <section
+    class="c1"
+  >
+    <div
+      class="c2"
+      data-testid="weapon-1-name"
+    >
+      <h4>
+        Name:
+      </h4>
+      <span>
+        Stun Gun
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-skill"
+    >
+      <h4>
+        Skill:
+      </h4>
+      <span>
+        Melee
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-range"
+    >
+      <h4>
+        Range:
+      </h4>
+      <span>
+        Engaged
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-special"
+    >
+      <h4>
+        Special:
+      </h4>
+      <span>
+        Stun 4, Stun Damage
+      </span>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c3"
+      data-testid="weapon-1-damage"
+    >
+      <h4>
+        Damage:
+      </h4>
+      <span>
+        6
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-crit"
+    >
+      <h4>
+        Crit:
+      </h4>
+      <span>
+        5
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-encumbrance"
+    >
+      <h4>
+        Encumbrance:
+      </h4>
+      <span>
+        1
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-hard_points"
+    >
+      <h4>
+        Hard Points:
+      </h4>
+      <span>
+        1
+      </span>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c3"
+      data-testid="weapon-1-price"
+    >
+      <h4>
+        Price:
+      </h4>
+      <span>
+        200
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-restricted"
+    >
+      <h4>
+        Restricted:
+      </h4>
+      <span>
+        No
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-rarity"
+    >
+      <h4>
+        Rarity:
+      </h4>
+      <span>
+        3
+      </span>
+    </div>
+    <button
+      class="c4"
+      data-testid="deleteWeaponButton-1"
+      type="button"
+    >
+      <h4>
+        Undo
+      </h4>
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Components/Weapon editing 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c1 > div,
+.c1 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > div span,
+.c1 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c1 > div h4,
+.c1 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c1 > div input,
+.c1 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 8px;
+  color: rgb(0,130,155);
+  font-size: 17px;
+  width: 100%;
+}
+
+.c1 > div input::-webkit-input-placeholder,
+.c1 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::-moz-placeholder,
+.c1 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:-ms-input-placeholder,
+.c1 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::placeholder,
+.c1 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:disabled,
+.c1 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c2 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c3 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+.c4 {
+  padding: 4px;
+  border: 2px solid rgb(170,73,23);
+  border-radius: 5px;
+  background: rgba(255,244,233,0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.c4 > h4 {
+  margin: 0;
+  color: rgb(170,73,23);
+  text-align: center;
+}
+
+.c4:hover {
+  background-color: rgb(170,73,23);
+}
+
+.c4:hover h4 {
+  color: rgb(255,244,233);
+}
+
+.c4:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c1:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="weapon-1"
+>
+  <section
+    class="c1"
+  >
+    <div
+      class="c2"
+      data-testid="weapon-1-name"
+    >
+      <h4>
+        Name:
+      </h4>
+      <span>
+        Stun Gun
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-skill"
+    >
+      <h4>
+        Skill:
+      </h4>
+      <span>
+        Melee
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-range"
+    >
+      <h4>
+        Range:
+      </h4>
+      <span>
+        Engaged
+      </span>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1-special"
+    >
+      <h4>
+        Special:
+      </h4>
+      <span>
+        Stun 4, Stun Damage
+      </span>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c3"
+      data-testid="weapon-1-damage"
+    >
+      <h4>
+        Damage:
+      </h4>
+      <span>
+        6
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-crit"
+    >
+      <h4>
+        Crit:
+      </h4>
+      <span>
+        5
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-encumbrance"
+    >
+      <h4>
+        Encumbrance:
+      </h4>
+      <span>
+        1
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-hard_points"
+    >
+      <h4>
+        Hard Points:
+      </h4>
+      <span>
+        1
+      </span>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <div
+      class="c3"
+      data-testid="weapon-1-price"
+    >
+      <h4>
+        Price:
+      </h4>
+      <span>
+        200
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-restricted"
+    >
+      <h4>
+        Restricted:
+      </h4>
+      <span>
+        No
+      </span>
+    </div>
+    <div
+      class="c3"
+      data-testid="weapon-1-rarity"
+    >
+      <h4>
+        Rarity:
+      </h4>
+      <span>
+        3
+      </span>
+    </div>
+    <button
+      class="c4"
+      data-testid="deleteWeaponButton-1"
+      type="button"
+    >
+      <h4>
+        Delete
+      </h4>
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Components/Weapon new 1`] = `
+.c3 {
+  font-family: "Monkirta",Helvetica,sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.c3 .skill_id__value-container,
+.c3 .skill_id__indicators {
+  background-color: transparent;
+  color: rgb(0,130,155);
+  cursor: pointer;
+}
+
+.c3 .skill_id__single-value {
+  color: rgb(0,130,155);
+}
+
+.c3 .skill_id__indicator-separator {
+  background-color: rgb(0,130,155);
+}
+
+.c3 .skill_id__dropdown-indicator > svg {
+  fill: rgb(0,130,155);
+}
+
+.c3 .skill_id__control,
+.c3 .skill_id__menu {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  padding: 0;
+  color: rgb(0,130,155);
+}
+
+.c3 .skill_id__control:hover,
+.c3 .skill_id__menu:hover {
+  border-color: rgb(65,178,180);
+}
+
+.c3 .skill_id__option {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.c3 .skill_id__option:hover {
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
+}
+
+.c3 .skill_id__option--is-selected {
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
+}
+
+.c3 .skill_id__option--is-selected:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c3 .skill_id__control--is-disabled {
+  opacity: 0.7;
+}
+
+.c4 {
+  font-family: "Monkirta",Helvetica,sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.c4 .range__value-container,
+.c4 .range__indicators {
+  background-color: transparent;
+  color: rgb(0,130,155);
+  cursor: pointer;
+}
+
+.c4 .range__single-value {
+  color: rgb(0,130,155);
+}
+
+.c4 .range__indicator-separator {
+  background-color: rgb(0,130,155);
+}
+
+.c4 .range__dropdown-indicator > svg {
+  fill: rgb(0,130,155);
+}
+
+.c4 .range__control,
+.c4 .range__menu {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  padding: 0;
+  color: rgb(0,130,155);
+}
+
+.c4 .range__control:hover,
+.c4 .range__menu:hover {
+  border-color: rgb(65,178,180);
+}
+
+.c4 .range__option {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.c4 .range__option:hover {
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
+}
+
+.c4 .range__option--is-selected {
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
+}
+
+.c4 .range__option--is-selected:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c4 .range__control--is-disabled {
+  opacity: 0.7;
+}
+
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c1 > div,
+.c1 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > div span,
+.c1 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c1 > div h4,
+.c1 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c1 > div input,
+.c1 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 8px;
+  color: rgb(0,130,155);
+  font-size: 17px;
+  width: 100%;
+}
+
+.c1 > div input::-webkit-input-placeholder,
+.c1 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::-moz-placeholder,
+.c1 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:-ms-input-placeholder,
+.c1 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input::placeholder,
+.c1 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c1 > div input:disabled,
+.c1 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c2 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c5 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+.c6 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: pointer;
+}
+
+.c7 {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c1:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="new-weapon"
+>
+  <section
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="name"
+    >
+      <h4>
+        Name
+      </h4>
+      <input
+        data-testid="name"
+        id="name"
+        name="name"
+        placeholder="Weapon's name"
+        value=""
+      />
+    </label>
+    <label
+      class="c2"
+      for="skill_id"
+    >
+      <h4>
+        Skill
+      </h4>
+      <div
+        class="css-1pcexqc-container c3"
+        id="skill_id"
+      >
+        <div
+          class="css-bg1rzq-control skill_id__control"
+        >
+          <div
+            class="css-1hwfws3 skill_id__value-container skill_id__value-container--has-value"
+          >
+            <div
+              class="css-dvua67-singleValue skill_id__single-value"
+            >
+              Athletics
+            </div>
+            <div
+              class="css-1g6gooi"
+            >
+              <div
+                class="skill_id__input"
+                style="display: inline-block;"
+              >
+                <input
+                  aria-autocomplete="list"
+                  autocapitalize="none"
+                  autocomplete="off"
+                  autocorrect="off"
+                  id="react-select-6-input"
+                  spellcheck="false"
+                  style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
+                  tabindex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-1wy0on6 skill_id__indicators"
+          >
+            <span
+              class="css-bgvzuu-indicatorSeparator skill_id__indicator-separator"
+            />
+            <div
+              aria-hidden="true"
+              class="css-16pqwjk-indicatorContainer skill_id__indicator skill_id__dropdown-indicator"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-19bqh2r"
+                focusable="false"
+                height="20"
+                viewBox="0 0 20 20"
+                width="20"
+              >
+                <path
+                  d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <input
+          name="skill_id"
+          type="hidden"
+          value="athletics"
+        />
+      </div>
+    </label>
+    <label
+      class="c2"
+      for="range"
+    >
+      <h4>
+        Range
+      </h4>
+      <div
+        class="css-1pcexqc-container c4"
+        id="range"
+      >
+        <div
+          class="css-bg1rzq-control range__control"
+        >
+          <div
+            class="css-1hwfws3 range__value-container range__value-container--has-value"
+          >
+            <div
+              class="css-dvua67-singleValue range__single-value"
+            >
+              Engaged
+            </div>
+            <div
+              class="css-1g6gooi"
+            >
+              <div
+                class="range__input"
+                style="display: inline-block;"
+              >
+                <input
+                  aria-autocomplete="list"
+                  autocapitalize="none"
+                  autocomplete="off"
+                  autocorrect="off"
+                  id="react-select-7-input"
+                  spellcheck="false"
+                  style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
+                  tabindex="0"
+                  type="text"
+                  value=""
+                />
+                <div
+                  style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-1wy0on6 range__indicators"
+          >
+            <span
+              class="css-bgvzuu-indicatorSeparator range__indicator-separator"
+            />
+            <div
+              aria-hidden="true"
+              class="css-16pqwjk-indicatorContainer range__indicator range__dropdown-indicator"
+            >
+              <svg
+                aria-hidden="true"
+                class="css-19bqh2r"
+                focusable="false"
+                height="20"
+                viewBox="0 0 20 20"
+                width="20"
+              >
+                <path
+                  d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <input
+          name="range"
+          type="hidden"
+          value="engaged"
+        />
+      </div>
+    </label>
+    <label
+      class="c2"
+      for="special"
+    >
+      <h4>
+        Special
+      </h4>
+      <input
+        data-testid="special"
+        id="special"
+        name="special"
+        placeholder="Special features"
+        value=""
+      />
+    </label>
+  </section>
+  <section
+    class="c1"
+  >
+    <label
+      class="c5"
+      for="damage"
+    >
+      <h4>
+        Damage
+      </h4>
+      <input
+        data-testid="damage"
+        id="damage"
+        min="0"
+        name="damage"
+        type="number"
+        value="0"
+      />
+    </label>
+    <label
+      class="c5"
+      for="crit"
+    >
+      <h4>
+        Crit
+      </h4>
+      <input
+        data-testid="crit"
+        id="crit"
+        min="0"
+        name="crit"
+        type="number"
+        value="0"
+      />
+    </label>
+    <label
+      class="c5"
+      for="encumbrance"
+    >
+      <h4>
+        Encumbrance
+      </h4>
+      <input
+        data-testid="encumbrance"
+        id="encumbrance"
+        min="0"
+        name="encumbrance"
+        type="number"
+        value="0"
+      />
+    </label>
+    <label
+      class="c5"
+      for="hard_points"
+    >
+      <h4>
+        Hard Points
+      </h4>
+      <input
+        data-testid="hard_points"
+        id="hard_points"
+        min="0"
+        name="hard_points"
+        type="number"
+        value="0"
+      />
+    </label>
+  </section>
+  <section
+    class="c1"
+  >
+    <label
+      class="c5"
+      for="price"
+    >
+      <h4>
+        Price
+      </h4>
+      <input
+        data-testid="price"
+        id="price"
+        min="0"
+        name="price"
+        type="number"
+        value="0"
+      />
+    </label>
+    <label
+      class="c6"
+      data-testid="restricted"
+      for="restricted"
+      name="restricted"
+    >
+      <h4>
+        Restricted
+      </h4>
+      <input
+        class="c7"
+        id="restricted"
+        name="restricted"
+        type="checkbox"
+      />
+      <span>
+        No
+      </span>
+    </label>
+    <label
+      class="c5"
+      for="rarity"
+    >
+      <h4>
+        Rarity
+      </h4>
+      <input
+        data-testid="rarity"
+        id="rarity"
+        min="0"
+        name="rarity"
+        type="number"
+        value="0"
+      />
+    </label>
+  </section>
+</div>
+`;
