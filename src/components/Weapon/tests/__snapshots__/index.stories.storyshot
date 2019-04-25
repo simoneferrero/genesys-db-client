@@ -1135,7 +1135,7 @@ exports[`Storyshots Components/Weapon new 1`] = `
   cursor: pointer;
 }
 
-s- .c4 > input {
+.c4 > input {
   position: absolute;
   opacity: 0;
   height: 0;

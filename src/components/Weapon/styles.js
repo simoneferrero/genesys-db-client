@@ -139,7 +139,7 @@ export const StyledContent = styled.div`
 
 export const StyledCheckboxLabel = styled.label`
   cursor: ${({ editing }) => (editing ? 'pointer' : 'default')};
-  s- & > input {
+  & > input {
     position: absolute;
     opacity: 0;
     height: 0;
