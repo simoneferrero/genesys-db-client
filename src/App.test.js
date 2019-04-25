@@ -89,13 +89,19 @@ describe('<App />', () => {
   it('should change routes correctly for player', async () => {
     const { getByTestId } = renderComponent()
 
-    const playersCharactersMenuItem = getByTestId(/menu-item-player-character/i)
-    fireEvent.click(playersCharactersMenuItem)
-
-    const playersCharactersRoute = await waitForElement(() =>
+    // PlayerCharacter
+    const playerCharacterMenuItem = getByTestId(/menu-item-player-character/i)
+    fireEvent.click(playerCharacterMenuItem)
+    const playerCharacterRoute = await waitForElement(() =>
       getByTestId(/player-character/gi),
     )
-    expect(playersCharactersRoute).toBeInTheDocument()
+    expect(playerCharacterRoute).toBeInTheDocument()
+
+    // Weapons
+    const weaponsMenuItem = getByTestId(/menu-item-weapons/i)
+    fireEvent.click(weaponsMenuItem)
+    const weaponsRoute = await waitForElement(() => getByTestId(/weapons/gi))
+    expect(weaponsRoute).toBeInTheDocument()
   })
 
   it('should change routes correctly for gm', async () => {
@@ -108,24 +114,30 @@ describe('<App />', () => {
     }
     const { getByTestId } = renderComponent(props)
 
+    // PlayersCharacters
     const playersCharactersMenuItem = await waitForElement(() =>
       getByTestId(/menu-item-players-characters/i),
     )
     fireEvent.click(playersCharactersMenuItem)
-
     const playersCharactersRoute = await waitForElement(() =>
       getByTestId(/players-characters/gi),
     )
     expect(playersCharactersRoute).toBeInTheDocument()
 
+    // PlayerCharacter
     const playerCharacterLink = await waitForElement(() =>
       getByTestId(`pc-sheet-link-${playerCharacter1Id}`),
     )
     fireEvent.click(playerCharacterLink)
-
     const playerCharacterRoute = await waitForElement(() =>
       getByTestId(/player-character/i),
     )
     expect(playerCharacterRoute).toBeInTheDocument()
+
+    // Weapons
+    const weaponsMenuItem = getByTestId(/menu-item-weapons/i)
+    fireEvent.click(weaponsMenuItem)
+    const weaponsRoute = await waitForElement(() => getByTestId(/weapons/gi))
+    expect(weaponsRoute).toBeInTheDocument()
   })
 })

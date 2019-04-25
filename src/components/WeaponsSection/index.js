@@ -7,7 +7,8 @@ import { Formik } from 'formik'
 
 import InnerForm from './innerForm'
 
-const Weapons = ({
+const WeaponsSection = ({
+  className,
   deletedWeapons,
   editing,
   handleSubmit,
@@ -44,6 +45,7 @@ const Weapons = ({
       onSubmit={augmentedHandleSubmit}
       render={(props) => (
         <InnerForm
+          className={className}
           deletedWeapons={deletedWeapons}
           editing={editing}
           isNew={isNew}
@@ -61,7 +63,9 @@ const Weapons = ({
   )
 }
 
-Weapons.propTypes = {
+WeaponsSection.propTypes = {
+  /** Custom styles */
+  className: PropTypes.string,
   /** Which weapons will be deleted */
   deletedWeapons: PropTypes.objectOf(PropTypes.bool),
   /** Whether weapons can be edited */
@@ -71,7 +75,7 @@ Weapons.propTypes = {
   /** Whether the player character form is submitting */
   isPCSubmitting: PropTypes.bool,
   /** Function invoked to change existing favor data */
-  onWeaponChange: PropTypes.func.isRequired,
+  onWeaponChange: PropTypes.func,
   /** Whether to show the Add Weapon button */
   showAdd: PropTypes.bool,
   /** Skills data */
@@ -80,8 +84,8 @@ Weapons.propTypes = {
   weapons: PropTypes.arrayOf(weaponType).isRequired,
 }
 
-Weapons.defaultProps = {
+WeaponsSection.defaultProps = {
   deletedWeapons: {},
 }
 
-export default Weapons
+export default WeaponsSection

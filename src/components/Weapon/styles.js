@@ -23,40 +23,63 @@ export const StyledWeapon = styled(FilteredWeapon)`
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: ${baseSpacing / 4}px;
   grid-column-gap: ${baseSpacing / 2}px;
-  padding: ${baseSpacing / 2}px;
 
-  @media ${mq.desktop}, ${mq.bigDesktop} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  & > button > h3,
   div > span,
   div > h4 {
     ${({ deleting }) => deleting && deletingStyles}
   }
 `
 
-export const StyledSection = styled.section`
-  display: grid;
+const openDropdownButtonStyles = css`
+  background: transparent;
+
+  & > h3 {
+    color: ${colours.teal};
+  }
+`
+export const StyledDropdownButton = styled.button`
+  width: 100%;
+  padding: ${baseSpacing / 4}px;
+  border: 2px solid ${colours.teal};
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: ${colours.teal};
+
+  & > h3 {
+    margin: 0;
+    color: ${colours.veryLightBlue};
+  }
+
+  ${({ isOpen }) => isOpen && openDropdownButtonStyles}
+`
+
+export const StyledContent = styled.div`
+  padding: ${baseSpacing / 2}px;
+  display: ${({ isOpen }) => (isOpen ? 'grid' : 'none')};
   grid-row-gap: ${baseSpacing / 4}px;
   grid-column-gap: ${baseSpacing / 2}px;
   grid-template-columns: repeat(1, 1fr);
 
-  @media ${mq.tablet}, ${mq.laptop} {
+  @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop} {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media ${mq.desktop}, ${mq.bigDesktop} {
-    grid-template-columns: repeat(4, 1fr);
-
-    &:first-child {
-      grid-column: 1/3;
-    }
+  @media ${mq.bigDesktop} {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   & > div,
   label {
     display: grid;
     align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: ${baseSpacing / 4} px;
+
+    @media ${mq.tablet} {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     span {
       padding-top: 4px;
@@ -94,19 +117,15 @@ export const StyledSection = styled.section`
   }
 `
 
-export const StyledTextProperty = styled.div`
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: ${baseSpacing / 4} px;
-
-  @media ${mq.desktop}, ${mq.bigDesktop} {
-    grid-template-columns: 1fr 2fr;
-  }
-`
-
-export const StyledNumberProperty = styled.div`
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: ${baseSpacing / 4} px;
+export const StyledCheckboxLabel = styled.label`
   cursor: ${({ editing }) => (editing ? 'pointer' : 'default')};
+
+  & > input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
 `
 
 export const StyledCheckbox = styled.input`
@@ -124,6 +143,14 @@ export const StyledButton = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   opacity: 1;
+
+  @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop} {
+    grid-column: 1/3;
+  }
+
+  @media ${mq.bigDesktop} {
+    grid-column: 1/4;
+  }
 
   & > h4 {
     margin: 0;

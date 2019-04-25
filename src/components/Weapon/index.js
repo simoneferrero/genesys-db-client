@@ -85,7 +85,7 @@ Weapon.propTypes = {
   /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
   /** Changes the specified field value */
-  setFieldValue: PropTypes.func.isRequired,
+  setFieldValue: PropTypes.func,
   /** List of skills */
   skills: PropTypes.objectOf(skillType).isRequired,
 }

@@ -6,12 +6,7 @@ import { weaponType } from 'types/weapons'
 import { Field } from 'formik'
 import Select from 'components/Select'
 
-import {
-  StyledCheckbox,
-  StyledNumberProperty,
-  StyledSection,
-  StyledTextProperty,
-} from './styles'
+import { StyledCheckboxLabel, StyledContent } from './styles'
 
 const NewWeapon = ({
   isSubmitting,
@@ -39,8 +34,8 @@ const NewWeapon = ({
 
   return (
     <>
-      <StyledSection>
-        <StyledTextProperty as="label" htmlFor={NAME}>
+      <StyledContent isOpen>
+        <label htmlFor={NAME}>
           <h4>Name</h4>
           <Field
             data-testid={NAME}
@@ -49,8 +44,8 @@ const NewWeapon = ({
             name={NAME}
             placeholder="Weapon's name"
           />
-        </StyledTextProperty>
-        <StyledTextProperty as="label" htmlFor={SKILL_ID}>
+        </label>
+        <label htmlFor={SKILL_ID}>
           <h4>Skill</h4>
           <Select
             currentValue={skill_id}
@@ -61,8 +56,8 @@ const NewWeapon = ({
             onChange={setFieldValue}
             options={skillOptions}
           />
-        </StyledTextProperty>
-        <StyledTextProperty as="label" htmlFor={RANGE}>
+        </label>
+        <label htmlFor={RANGE}>
           <h4>Range</h4>
           <Select
             currentValue={range}
@@ -73,8 +68,8 @@ const NewWeapon = ({
             onChange={setFieldValue}
             options={rangeOptions}
           />
-        </StyledTextProperty>
-        <StyledTextProperty as="label" htmlFor={SPECIAL}>
+        </label>
+        <label htmlFor={SPECIAL}>
           <h4>Special</h4>
           <Field
             data-testid={SPECIAL}
@@ -83,10 +78,8 @@ const NewWeapon = ({
             name={SPECIAL}
             placeholder="Special features"
           />
-        </StyledTextProperty>
-      </StyledSection>
-      <StyledSection>
-        <StyledNumberProperty as="label" htmlFor={DAMAGE}>
+        </label>
+        <label htmlFor={DAMAGE}>
           <h4>Damage</h4>
           <Field
             data-testid={DAMAGE}
@@ -96,8 +89,8 @@ const NewWeapon = ({
             name={DAMAGE}
             type="number"
           />
-        </StyledNumberProperty>
-        <StyledNumberProperty as="label" htmlFor={CRIT}>
+        </label>
+        <label htmlFor={CRIT}>
           <h4>Crit</h4>
           <Field
             data-testid={CRIT}
@@ -107,8 +100,8 @@ const NewWeapon = ({
             name={CRIT}
             type="number"
           />
-        </StyledNumberProperty>
-        <StyledNumberProperty as="label" htmlFor={ENCUMBRANCE}>
+        </label>
+        <label htmlFor={ENCUMBRANCE}>
           <h4>Encumbrance</h4>
           <Field
             data-testid={ENCUMBRANCE}
@@ -118,8 +111,8 @@ const NewWeapon = ({
             name={ENCUMBRANCE}
             type="number"
           />
-        </StyledNumberProperty>
-        <StyledNumberProperty as="label" htmlFor={HARD_POINTS}>
+        </label>
+        <label htmlFor={HARD_POINTS}>
           <h4>Hard Points</h4>
           <Field
             data-testid={HARD_POINTS}
@@ -129,10 +122,8 @@ const NewWeapon = ({
             name={HARD_POINTS}
             type="number"
           />
-        </StyledNumberProperty>
-      </StyledSection>
-      <StyledSection>
-        <StyledNumberProperty as="label" htmlFor={PRICE}>
+        </label>
+        <label htmlFor={PRICE}>
           <h4>Price</h4>
           <Field
             data-testid={PRICE}
@@ -142,16 +133,15 @@ const NewWeapon = ({
             name={PRICE}
             type="number"
           />
-        </StyledNumberProperty>
-        <StyledNumberProperty
-          as="label"
+        </label>
+        <StyledCheckboxLabel
           data-testid={RESTRICTED}
           editing={!isSubmitting}
           htmlFor={RESTRICTED}
           name={RESTRICTED}
         >
           <h4>Restricted</h4>
-          <StyledCheckbox
+          <input
             checked={restricted}
             disabled={isSubmitting}
             id={RESTRICTED}
@@ -160,8 +150,8 @@ const NewWeapon = ({
             type="checkbox"
           />
           <span>{restricted ? 'Yes' : 'No'}</span>
-        </StyledNumberProperty>
-        <StyledNumberProperty as="label" htmlFor={RARITY}>
+        </StyledCheckboxLabel>
+        <label htmlFor={RARITY}>
           <h4>Rarity</h4>
           <Field
             data-testid={RARITY}
@@ -171,8 +161,8 @@ const NewWeapon = ({
             name={RARITY}
             type="number"
           />
-        </StyledNumberProperty>
-      </StyledSection>
+        </label>
+      </StyledContent>
     </>
   )
 }

@@ -92,17 +92,11 @@ jest.mock('actions/skills', () => ({
 }))
 import { getSkills } from 'actions/skills'
 
-jest.mock('actions/weapons', () => {
-  const { GET_WEAPONS } = require('actions/weapons/constants')
-  return {
-    getWeapons: jest.fn(() => ({
-      type: GET_WEAPONS,
-      payload: {},
-    })),
-    getWeaponsSuccess: jest.fn(() => ({ type: '' })),
-    getWeaponsError: jest.fn(() => ({ type: '' })),
-  }
-})
+jest.mock('actions/weapons', () => ({
+  getWeapons: jest.fn(() => ({ type: '' })),
+  getWeaponsSuccess: jest.fn(() => ({ type: '' })),
+  getWeaponsError: jest.fn(() => ({ type: '' })),
+}))
 import { getWeapons } from 'actions/weapons'
 
 const renderComponent = (props = {}, initialState) =>

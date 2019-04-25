@@ -12,6 +12,7 @@ import { MdAdd, MdCheck, MdClose } from 'react-icons/md'
 import { StyledContainer, StyledForm, StyledSubHeader } from './styles'
 
 const InnerForm = ({
+  className,
   deletedWeapons,
   editing,
   handleSubmit,
@@ -55,7 +56,7 @@ const InnerForm = ({
     ))
 
   return (
-    <StyledForm data-testid="weapons">
+    <StyledForm className={className} data-testid="weapons-section">
       {showAdd && (
         <StyledSubHeader>
           <FormButtons
@@ -91,6 +92,8 @@ InnerForm.validationSchema = yup.object({
 })
 
 InnerForm.propTypes = {
+  /** Custom styles */
+  className: PropTypes.string,
   /** Which weapons will be deleted */
   deletedWeapons: PropTypes.objectOf(PropTypes.bool),
   /** Whether weapons can be edited */
@@ -106,7 +109,7 @@ InnerForm.propTypes = {
   /** Whether the new weapon is submitting */
   isSubmitting: PropTypes.bool,
   /** Function invoked to change existing weapon data */
-  onWeaponChange: PropTypes.func.isRequired,
+  onWeaponChange: PropTypes.func,
   /** Shows or hides the new weapon form */
   setIsNew: PropTypes.func.isRequired,
   /** Changes the specified new weapon field value */

@@ -7,6 +7,8 @@ import { weapon1, newWeaponResponse } from 'mocks/weapons'
 
 import { Formik } from 'formik'
 
+import { colours } from 'styles/constants'
+
 const mockHandleSubmit = jest.fn()
 const mockSetFieldValue = jest.fn()
 const defaultProps = {
@@ -47,7 +49,7 @@ describe('<Weapon />', () => {
     expect(form).not.toBeInTheDocument()
 
     Object.entries(weapon1).forEach(([key, value]) => {
-      if (key !== 'id') {
+      if (key !== 'id' && key !== 'name') {
         const field = getByTestId(`weapon-${weapon1.id}-${key}`)
         expect(field).toBeInTheDocument()
 
@@ -60,6 +62,21 @@ describe('<Weapon />', () => {
         expect(fieldValue).toBeInTheDocument()
       }
     })
+
+    const dropdownButton = getByTestId(`dropdown-${weapon1.id}`)
+    expect(dropdownButton).toBeInTheDocument()
+    expect(dropdownButton).toHaveStyle(`background: ${colours.teal};`)
+
+    const name = getByText(weapon1.name)
+    expect(name).toBeInTheDocument()
+
+    const content = getByTestId(`weapon-${weapon1.id}-content`)
+    expect(content).toBeInTheDocument()
+    expect(content).toHaveStyle('display: none;')
+
+    fireEvent.click(dropdownButton)
+    expect(dropdownButton).toHaveStyle('background: transparent;')
+    expect(content).toHaveStyle('display: grid;')
   })
 
   it('should correctly display the value of restricted if restricted', () => {
@@ -179,7 +196,7 @@ describe('<Weapon />', () => {
     expect(existingWeapon).toBeInTheDocument()
 
     Object.entries(weapon1).forEach(([key, value]) => {
-      if (key !== 'id') {
+      if (key !== 'id' && key !== 'name') {
         const field = getByTestId(`weapon-${weapon1.id}-${key}`)
         expect(field).toBeInTheDocument()
 
@@ -200,7 +217,7 @@ describe('<Weapon />', () => {
 
     fireEvent.click(deleteButton)
     expect(mockSetFieldValue).toHaveBeenCalledWith(
-      `weapons.${weapon1.id}`,
+      `deletedWeapons.${weapon1.id}`,
       true,
     )
   })
@@ -237,7 +254,7 @@ describe('<Weapon />', () => {
 
     fireEvent.click(deleteButton)
     expect(mockSetFieldValue).toHaveBeenCalledWith(
-      `weapons.${weapon1.id}`,
+      `deletedWeapons.${weapon1.id}`,
       false,
     )
   })

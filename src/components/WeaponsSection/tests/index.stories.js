@@ -8,7 +8,7 @@ import { action } from '@storybook/addon-actions'
 import { skillsById } from 'mocks/skills'
 import { weapon1, weapon2, newWeaponResponse } from 'mocks/weapons'
 
-import Weapons from '../index'
+import WeaponsSection from '../index'
 
 const defaultProps = {
   handleSubmit: action('handleSubmit'),
@@ -17,9 +17,11 @@ const defaultProps = {
   weapons: [weapon1, weapon2, newWeaponResponse],
 }
 
-const renderComponent = (props = {}) => <Weapons {...defaultProps} {...props} />
+const renderComponent = (props = {}) => (
+  <WeaponsSection {...defaultProps} {...props} />
+)
 
-storiesOf('Components/Weapons', module)
+storiesOf('Components/WeaponsSection', module)
   .add('default', () => renderComponent())
   .add('showAdd', () => renderComponent({ showAdd: true }))
   .add('editing', () =>

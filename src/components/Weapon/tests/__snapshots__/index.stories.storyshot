@@ -10,34 +10,51 @@ exports[`Storyshots Components/Weapon default 1`] = `
   grid-template-columns: repeat(1,1fr);
   grid-row-gap: 6px;
   grid-column-gap: 12px;
-  padding: 12px;
 }
 
 .c1 {
-  display: grid;
+  width: 100%;
+  padding: 6px;
+  border: 2px solid rgb(0,130,155);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: rgb(0,130,155);
+}
+
+.c1 > h3 {
+  margin: 0;
+  color: rgb(234,242,246);
+}
+
+.c2 {
+  padding: 12px;
+  display: none;
   grid-row-gap: 6px;
   grid-column-gap: 12px;
   grid-template-columns: repeat(1,1fr);
 }
 
-.c1 > div,
-.c1 label {
+.c2 > div,
+.c2 label {
   display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
 }
 
-.c1 > div span,
-.c1 label span {
+.c2 > div span,
+.c2 label span {
   padding-top: 4px;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c1 > div h4,
-.c1 label h4 {
+.c2 > div h4,
+.c2 label h4 {
   text-shadow: 1px 1px rgb(234,242,246);
   white-space: nowrap;
   overflow: hidden;
@@ -46,8 +63,8 @@ exports[`Storyshots Components/Weapon default 1`] = `
   text-align: left;
 }
 
-.c1 > div input,
-.c1 label input {
+.c2 > div input,
+.c2 label input {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
@@ -57,68 +74,48 @@ exports[`Storyshots Components/Weapon default 1`] = `
   width: 100%;
 }
 
-.c1 > div input::-webkit-input-placeholder,
-.c1 label input::-webkit-input-placeholder {
+.c2 > div input::-webkit-input-placeholder,
+.c2 label input::-webkit-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input::-moz-placeholder,
-.c1 label input::-moz-placeholder {
+.c2 > div input::-moz-placeholder,
+.c2 label input::-moz-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input:-ms-input-placeholder,
-.c1 label input:-ms-input-placeholder {
+.c2 > div input:-ms-input-placeholder,
+.c2 label input:-ms-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input::placeholder,
-.c1 label input::placeholder {
+.c2 > div input::placeholder,
+.c2 label input::placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input:disabled,
-.c1 label input:disabled {
+.c2 > div input:disabled,
+.c2 label input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.c2 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-}
-
-.c3 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-  cursor: default;
-}
-
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c0 {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c1 {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c1 {
-    grid-template-columns: repeat(4,1fr);
-  }
-
-  .c1:first-child {
-    grid-column: 1/3;
-  }
-}
-
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c2 {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c2 > div,
+  .c2 label {
+    grid-template-columns: repeat(1,1fr);
   }
 }
 
@@ -126,22 +123,19 @@ exports[`Storyshots Components/Weapon default 1`] = `
   class="c0"
   data-testid="weapon-1"
 >
-  <section
+  <button
     class="c1"
+    data-testid="dropdown-1"
+  >
+    <h3>
+      Stun Gun
+    </h3>
+  </button>
+  <div
+    class="c2"
+    data-testid="weapon-1-content"
   >
     <div
-      class="c2"
-      data-testid="weapon-1-name"
-    >
-      <h4>
-        Name:
-      </h4>
-      <span>
-        Stun Gun
-      </span>
-    </div>
-    <div
-      class="c2"
       data-testid="weapon-1-skill"
     >
       <h4>
@@ -152,7 +146,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c2"
       data-testid="weapon-1-range"
     >
       <h4>
@@ -163,7 +156,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c2"
       data-testid="weapon-1-special"
     >
       <h4>
@@ -173,12 +165,7 @@ exports[`Storyshots Components/Weapon default 1`] = `
         Stun 4, Stun Damage
       </span>
     </div>
-  </section>
-  <section
-    class="c1"
-  >
     <div
-      class="c3"
       data-testid="weapon-1-damage"
     >
       <h4>
@@ -189,7 +176,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-crit"
     >
       <h4>
@@ -200,7 +186,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-encumbrance"
     >
       <h4>
@@ -211,7 +196,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-hard_points"
     >
       <h4>
@@ -221,12 +205,7 @@ exports[`Storyshots Components/Weapon default 1`] = `
         1
       </span>
     </div>
-  </section>
-  <section
-    class="c1"
-  >
     <div
-      class="c3"
       data-testid="weapon-1-price"
     >
       <h4>
@@ -237,7 +216,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-restricted"
     >
       <h4>
@@ -248,7 +226,6 @@ exports[`Storyshots Components/Weapon default 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-rarity"
     >
       <h4>
@@ -258,7 +235,7 @@ exports[`Storyshots Components/Weapon default 1`] = `
         3
       </span>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
@@ -272,9 +249,9 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   grid-template-columns: repeat(1,1fr);
   grid-row-gap: 6px;
   grid-column-gap: 12px;
-  padding: 12px;
 }
 
+.c0 > button > h3,
 .c0 div > span,
 .c0 div > h4 {
   -webkit-text-decoration: line-through;
@@ -283,30 +260,48 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
 }
 
 .c1 {
-  display: grid;
+  width: 100%;
+  padding: 6px;
+  border: 2px solid rgb(0,130,155);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: rgb(0,130,155);
+}
+
+.c1 > h3 {
+  margin: 0;
+  color: rgb(234,242,246);
+}
+
+.c2 {
+  padding: 12px;
+  display: none;
   grid-row-gap: 6px;
   grid-column-gap: 12px;
   grid-template-columns: repeat(1,1fr);
 }
 
-.c1 > div,
-.c1 label {
+.c2 > div,
+.c2 label {
   display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
 }
 
-.c1 > div span,
-.c1 label span {
+.c2 > div span,
+.c2 label span {
   padding-top: 4px;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c1 > div h4,
-.c1 label h4 {
+.c2 > div h4,
+.c2 label h4 {
   text-shadow: 1px 1px rgb(234,242,246);
   white-space: nowrap;
   overflow: hidden;
@@ -315,8 +310,8 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   text-align: left;
 }
 
-.c1 > div input,
-.c1 label input {
+.c2 > div input,
+.c2 label input {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
@@ -326,44 +321,33 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   width: 100%;
 }
 
-.c1 > div input::-webkit-input-placeholder,
-.c1 label input::-webkit-input-placeholder {
+.c2 > div input::-webkit-input-placeholder,
+.c2 label input::-webkit-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input::-moz-placeholder,
-.c1 label input::-moz-placeholder {
+.c2 > div input::-moz-placeholder,
+.c2 label input::-moz-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input:-ms-input-placeholder,
-.c1 label input:-ms-input-placeholder {
+.c2 > div input:-ms-input-placeholder,
+.c2 label input:-ms-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input::placeholder,
-.c1 label input::placeholder {
+.c2 > div input::placeholder,
+.c2 label input::placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input:disabled,
-.c1 label input:disabled {
+.c2 > div input:disabled,
+.c2 label input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.c2 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-}
-
 .c3 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-  cursor: default;
-}
-
-.c4 {
   padding: 4px;
   border: 2px solid rgb(170,73,23);
   border-radius: 5px;
@@ -373,50 +357,53 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   opacity: 1;
 }
 
-.c4 > h4 {
+.c3 > h4 {
   margin: 0;
   color: rgb(170,73,23);
   text-align: center;
 }
 
-.c4:hover {
+.c3:hover {
   background-color: rgb(170,73,23);
 }
 
-.c4:hover h4 {
+.c3:hover h4 {
   color: rgb(255,244,233);
 }
 
-.c4:disabled {
+.c3:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c0 {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c2 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c1 {
-    grid-template-columns: repeat(2,1fr);
+@media only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(3,1fr);
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c1 {
-    grid-template-columns: repeat(4,1fr);
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c2 > div,
+  .c2 label {
+    grid-template-columns: repeat(1,1fr);
   }
+}
 
-  .c1:first-child {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c3 {
     grid-column: 1/3;
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c2 {
-    grid-template-columns: 1fr 2fr;
+@media only screen and (min-width:1800px) {
+  .c3 {
+    grid-column: 1/4;
   }
 }
 
@@ -424,22 +411,19 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   class="c0"
   data-testid="weapon-1"
 >
-  <section
+  <button
     class="c1"
+    data-testid="dropdown-1"
+  >
+    <h3>
+      Stun Gun
+    </h3>
+  </button>
+  <div
+    class="c2"
+    data-testid="weapon-1-content"
   >
     <div
-      class="c2"
-      data-testid="weapon-1-name"
-    >
-      <h4>
-        Name:
-      </h4>
-      <span>
-        Stun Gun
-      </span>
-    </div>
-    <div
-      class="c2"
       data-testid="weapon-1-skill"
     >
       <h4>
@@ -450,7 +434,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c2"
       data-testid="weapon-1-range"
     >
       <h4>
@@ -461,7 +444,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c2"
       data-testid="weapon-1-special"
     >
       <h4>
@@ -471,12 +453,7 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
         Stun 4, Stun Damage
       </span>
     </div>
-  </section>
-  <section
-    class="c1"
-  >
     <div
-      class="c3"
       data-testid="weapon-1-damage"
     >
       <h4>
@@ -487,7 +464,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-crit"
     >
       <h4>
@@ -498,7 +474,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-encumbrance"
     >
       <h4>
@@ -509,7 +484,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-hard_points"
     >
       <h4>
@@ -519,12 +493,7 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
         1
       </span>
     </div>
-  </section>
-  <section
-    class="c1"
-  >
     <div
-      class="c3"
       data-testid="weapon-1-price"
     >
       <h4>
@@ -535,7 +504,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-restricted"
     >
       <h4>
@@ -546,7 +514,6 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-rarity"
     >
       <h4>
@@ -557,7 +524,7 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
       </span>
     </div>
     <button
-      class="c4"
+      class="c3"
       data-testid="deleteWeaponButton-1"
       type="button"
     >
@@ -565,7 +532,7 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
         Undo
       </h4>
     </button>
-  </section>
+  </div>
 </div>
 `;
 
@@ -579,34 +546,51 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   grid-template-columns: repeat(1,1fr);
   grid-row-gap: 6px;
   grid-column-gap: 12px;
-  padding: 12px;
 }
 
 .c1 {
-  display: grid;
+  width: 100%;
+  padding: 6px;
+  border: 2px solid rgb(0,130,155);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: rgb(0,130,155);
+}
+
+.c1 > h3 {
+  margin: 0;
+  color: rgb(234,242,246);
+}
+
+.c2 {
+  padding: 12px;
+  display: none;
   grid-row-gap: 6px;
   grid-column-gap: 12px;
   grid-template-columns: repeat(1,1fr);
 }
 
-.c1 > div,
-.c1 label {
+.c2 > div,
+.c2 label {
   display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
 }
 
-.c1 > div span,
-.c1 label span {
+.c2 > div span,
+.c2 label span {
   padding-top: 4px;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c1 > div h4,
-.c1 label h4 {
+.c2 > div h4,
+.c2 label h4 {
   text-shadow: 1px 1px rgb(234,242,246);
   white-space: nowrap;
   overflow: hidden;
@@ -615,8 +599,8 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   text-align: left;
 }
 
-.c1 > div input,
-.c1 label input {
+.c2 > div input,
+.c2 label input {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
@@ -626,44 +610,33 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   width: 100%;
 }
 
-.c1 > div input::-webkit-input-placeholder,
-.c1 label input::-webkit-input-placeholder {
+.c2 > div input::-webkit-input-placeholder,
+.c2 label input::-webkit-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input::-moz-placeholder,
-.c1 label input::-moz-placeholder {
+.c2 > div input::-moz-placeholder,
+.c2 label input::-moz-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input:-ms-input-placeholder,
-.c1 label input:-ms-input-placeholder {
+.c2 > div input:-ms-input-placeholder,
+.c2 label input:-ms-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input::placeholder,
-.c1 label input::placeholder {
+.c2 > div input::placeholder,
+.c2 label input::placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c1 > div input:disabled,
-.c1 label input:disabled {
+.c2 > div input:disabled,
+.c2 label input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.c2 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-}
-
 .c3 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-  cursor: default;
-}
-
-.c4 {
   padding: 4px;
   border: 2px solid rgb(170,73,23);
   border-radius: 5px;
@@ -673,50 +646,53 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   opacity: 1;
 }
 
-.c4 > h4 {
+.c3 > h4 {
   margin: 0;
   color: rgb(170,73,23);
   text-align: center;
 }
 
-.c4:hover {
+.c3:hover {
   background-color: rgb(170,73,23);
 }
 
-.c4:hover h4 {
+.c3:hover h4 {
   color: rgb(255,244,233);
 }
 
-.c4:disabled {
+.c3:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c0 {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c2 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c1 {
-    grid-template-columns: repeat(2,1fr);
+@media only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(3,1fr);
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c1 {
-    grid-template-columns: repeat(4,1fr);
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c2 > div,
+  .c2 label {
+    grid-template-columns: repeat(1,1fr);
   }
+}
 
-  .c1:first-child {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c3 {
     grid-column: 1/3;
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c2 {
-    grid-template-columns: 1fr 2fr;
+@media only screen and (min-width:1800px) {
+  .c3 {
+    grid-column: 1/4;
   }
 }
 
@@ -724,22 +700,19 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   class="c0"
   data-testid="weapon-1"
 >
-  <section
+  <button
     class="c1"
+    data-testid="dropdown-1"
+  >
+    <h3>
+      Stun Gun
+    </h3>
+  </button>
+  <div
+    class="c2"
+    data-testid="weapon-1-content"
   >
     <div
-      class="c2"
-      data-testid="weapon-1-name"
-    >
-      <h4>
-        Name:
-      </h4>
-      <span>
-        Stun Gun
-      </span>
-    </div>
-    <div
-      class="c2"
       data-testid="weapon-1-skill"
     >
       <h4>
@@ -750,7 +723,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c2"
       data-testid="weapon-1-range"
     >
       <h4>
@@ -761,7 +733,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c2"
       data-testid="weapon-1-special"
     >
       <h4>
@@ -771,12 +742,7 @@ exports[`Storyshots Components/Weapon editing 1`] = `
         Stun 4, Stun Damage
       </span>
     </div>
-  </section>
-  <section
-    class="c1"
-  >
     <div
-      class="c3"
       data-testid="weapon-1-damage"
     >
       <h4>
@@ -787,7 +753,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-crit"
     >
       <h4>
@@ -798,7 +763,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-encumbrance"
     >
       <h4>
@@ -809,7 +773,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-hard_points"
     >
       <h4>
@@ -819,12 +782,7 @@ exports[`Storyshots Components/Weapon editing 1`] = `
         1
       </span>
     </div>
-  </section>
-  <section
-    class="c1"
-  >
     <div
-      class="c3"
       data-testid="weapon-1-price"
     >
       <h4>
@@ -835,7 +793,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-restricted"
     >
       <h4>
@@ -846,7 +803,6 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <div
-      class="c3"
       data-testid="weapon-1-rarity"
     >
       <h4>
@@ -857,7 +813,7 @@ exports[`Storyshots Components/Weapon editing 1`] = `
       </span>
     </div>
     <button
-      class="c4"
+      class="c3"
       data-testid="deleteWeaponButton-1"
       type="button"
     >
@@ -865,130 +821,130 @@ exports[`Storyshots Components/Weapon editing 1`] = `
         Delete
       </h4>
     </button>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Components/Weapon new 1`] = `
+.c2 {
+  font-family: "Monkirta",Helvetica,sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.c2 .skill_id__value-container,
+.c2 .skill_id__indicators {
+  background-color: transparent;
+  color: rgb(0,130,155);
+  cursor: pointer;
+}
+
+.c2 .skill_id__single-value {
+  color: rgb(0,130,155);
+}
+
+.c2 .skill_id__indicator-separator {
+  background-color: rgb(0,130,155);
+}
+
+.c2 .skill_id__dropdown-indicator > svg {
+  fill: rgb(0,130,155);
+}
+
+.c2 .skill_id__control,
+.c2 .skill_id__menu {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  padding: 0;
+  color: rgb(0,130,155);
+}
+
+.c2 .skill_id__control:hover,
+.c2 .skill_id__menu:hover {
+  border-color: rgb(65,178,180);
+}
+
+.c2 .skill_id__option {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.c2 .skill_id__option:hover {
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
+}
+
+.c2 .skill_id__option--is-selected {
+  background-color: rgb(0,130,155);
+  color: rgb(234,242,246);
+}
+
+.c2 .skill_id__option--is-selected:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c2 .skill_id__control--is-disabled {
+  opacity: 0.7;
+}
+
 .c3 {
   font-family: "Monkirta",Helvetica,sans-serif;
   text-transform: uppercase;
   width: 100%;
 }
 
-.c3 .skill_id__value-container,
-.c3 .skill_id__indicators {
+.c3 .range__value-container,
+.c3 .range__indicators {
   background-color: transparent;
   color: rgb(0,130,155);
   cursor: pointer;
 }
 
-.c3 .skill_id__single-value {
+.c3 .range__single-value {
   color: rgb(0,130,155);
 }
 
-.c3 .skill_id__indicator-separator {
+.c3 .range__indicator-separator {
   background-color: rgb(0,130,155);
 }
 
-.c3 .skill_id__dropdown-indicator > svg {
+.c3 .range__dropdown-indicator > svg {
   fill: rgb(0,130,155);
 }
 
-.c3 .skill_id__control,
-.c3 .skill_id__menu {
+.c3 .range__control,
+.c3 .range__menu {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   padding: 0;
   color: rgb(0,130,155);
 }
 
-.c3 .skill_id__control:hover,
-.c3 .skill_id__menu:hover {
+.c3 .range__control:hover,
+.c3 .range__menu:hover {
   border-color: rgb(65,178,180);
 }
 
-.c3 .skill_id__option {
+.c3 .range__option {
   background-color: transparent;
   cursor: pointer;
 }
 
-.c3 .skill_id__option:hover {
+.c3 .range__option:hover {
   background-color: rgb(0,130,155);
   color: rgb(234,242,246);
 }
 
-.c3 .skill_id__option--is-selected {
+.c3 .range__option--is-selected {
   background-color: rgb(0,130,155);
   color: rgb(234,242,246);
 }
 
-.c3 .skill_id__option--is-selected:hover {
+.c3 .range__option--is-selected:hover {
   background-color: rgb(0,130,155);
 }
 
-.c3 .skill_id__control--is-disabled {
-  opacity: 0.7;
-}
-
-.c4 {
-  font-family: "Monkirta",Helvetica,sans-serif;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.c4 .range__value-container,
-.c4 .range__indicators {
-  background-color: transparent;
-  color: rgb(0,130,155);
-  cursor: pointer;
-}
-
-.c4 .range__single-value {
-  color: rgb(0,130,155);
-}
-
-.c4 .range__indicator-separator {
-  background-color: rgb(0,130,155);
-}
-
-.c4 .range__dropdown-indicator > svg {
-  fill: rgb(0,130,155);
-}
-
-.c4 .range__control,
-.c4 .range__menu {
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-  padding: 0;
-  color: rgb(0,130,155);
-}
-
-.c4 .range__control:hover,
-.c4 .range__menu:hover {
-  border-color: rgb(65,178,180);
-}
-
-.c4 .range__option {
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.c4 .range__option:hover {
-  background-color: rgb(0,130,155);
-  color: rgb(234,242,246);
-}
-
-.c4 .range__option--is-selected {
-  background-color: rgb(0,130,155);
-  color: rgb(234,242,246);
-}
-
-.c4 .range__option--is-selected:hover {
-  background-color: rgb(0,130,155);
-}
-
-.c4 .range__control--is-disabled {
+.c3 .range__control--is-disabled {
   opacity: 0.7;
 }
 
@@ -1001,10 +957,10 @@ exports[`Storyshots Components/Weapon new 1`] = `
   grid-template-columns: repeat(1,1fr);
   grid-row-gap: 6px;
   grid-column-gap: 12px;
-  padding: 12px;
 }
 
 .c1 {
+  padding: 12px;
   display: grid;
   grid-row-gap: 6px;
   grid-column-gap: 12px;
@@ -1018,6 +974,8 @@ exports[`Storyshots Components/Weapon new 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
 }
 
 .c1 > div span,
@@ -1074,55 +1032,33 @@ exports[`Storyshots Components/Weapon new 1`] = `
   cursor: not-allowed;
 }
 
-.c2 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-}
-
-.c5 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
-  cursor: default;
-}
-
-.c6 {
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 6 px;
+.c4 {
   cursor: pointer;
 }
 
-.c7 {
+.c4 > input {
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c0 {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
   .c1 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+@media only screen and (min-width:1800px) {
   .c1 {
-    grid-template-columns: repeat(4,1fr);
-  }
-
-  .c1:first-child {
-    grid-column: 1/3;
+    grid-template-columns: repeat(3,1fr);
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c2 {
-    grid-template-columns: 1fr 2fr;
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c1 > div,
+  .c1 label {
+    grid-template-columns: repeat(1,1fr);
   }
 }
 
@@ -1130,11 +1066,10 @@ exports[`Storyshots Components/Weapon new 1`] = `
   class="c0"
   data-testid="new-weapon"
 >
-  <section
+  <div
     class="c1"
   >
     <label
-      class="c2"
       for="name"
     >
       <h4>
@@ -1149,14 +1084,13 @@ exports[`Storyshots Components/Weapon new 1`] = `
       />
     </label>
     <label
-      class="c2"
       for="skill_id"
     >
       <h4>
         Skill
       </h4>
       <div
-        class="css-1pcexqc-container c3"
+        class="css-1pcexqc-container c2"
         id="skill_id"
       >
         <div
@@ -1228,14 +1162,13 @@ exports[`Storyshots Components/Weapon new 1`] = `
       </div>
     </label>
     <label
-      class="c2"
       for="range"
     >
       <h4>
         Range
       </h4>
       <div
-        class="css-1pcexqc-container c4"
+        class="css-1pcexqc-container c3"
         id="range"
       >
         <div
@@ -1307,7 +1240,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
       </div>
     </label>
     <label
-      class="c2"
       for="special"
     >
       <h4>
@@ -1321,12 +1253,7 @@ exports[`Storyshots Components/Weapon new 1`] = `
         value=""
       />
     </label>
-  </section>
-  <section
-    class="c1"
-  >
     <label
-      class="c5"
       for="damage"
     >
       <h4>
@@ -1342,7 +1269,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
       />
     </label>
     <label
-      class="c5"
       for="crit"
     >
       <h4>
@@ -1358,7 +1284,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
       />
     </label>
     <label
-      class="c5"
       for="encumbrance"
     >
       <h4>
@@ -1374,7 +1299,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
       />
     </label>
     <label
-      class="c5"
       for="hard_points"
     >
       <h4>
@@ -1389,12 +1313,7 @@ exports[`Storyshots Components/Weapon new 1`] = `
         value="0"
       />
     </label>
-  </section>
-  <section
-    class="c1"
-  >
     <label
-      class="c5"
       for="price"
     >
       <h4>
@@ -1410,7 +1329,7 @@ exports[`Storyshots Components/Weapon new 1`] = `
       />
     </label>
     <label
-      class="c6"
+      class="c4"
       data-testid="restricted"
       for="restricted"
       name="restricted"
@@ -1419,7 +1338,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
         Restricted
       </h4>
       <input
-        class="c7"
         id="restricted"
         name="restricted"
         type="checkbox"
@@ -1429,7 +1347,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
       </span>
     </label>
     <label
-      class="c5"
       for="rarity"
     >
       <h4>
@@ -1444,6 +1361,6 @@ exports[`Storyshots Components/Weapon new 1`] = `
         value="0"
       />
     </label>
-  </section>
+  </div>
 </div>
 `;

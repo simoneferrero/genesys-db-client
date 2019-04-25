@@ -35,10 +35,10 @@ export const StyledSubHeader = styled.div`
 export const StyledContainer = styled.div`
   grid-column: 1/3;
   display: grid;
-  grid-gap: 24px;
+  grid-gap: ${baseSpacing / 2}px;
   grid-template-columns: 1fr;
 
-  @media ${mq.bigDesktop} {
+  @media ${mq.desktop}, ${mq.bigDesktop} {
     grid-template-columns: repeat(2, 1fr);
   }
 

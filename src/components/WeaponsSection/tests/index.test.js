@@ -1,4 +1,4 @@
-import Weapons from '../index'
+import WeaponsSection from '../index'
 
 import { fromJS } from 'immutable'
 
@@ -16,9 +16,9 @@ const defaultProps = {
 }
 
 const renderComponent = (props = {}) =>
-  render(<Weapons {...defaultProps} {...props} />)
+  render(<WeaponsSection {...defaultProps} {...props} />)
 
-describe('<Weapons />', () => {
+describe('<WeaponsSection />', () => {
   afterEach(() => {
     jest.clearAllMocks()
   })
@@ -29,7 +29,7 @@ describe('<Weapons />', () => {
   it('should render correctly', () => {
     const { getByTestId, queryByTestId } = renderComponent()
 
-    const weaponsSection = getByTestId(/weapons/gi)
+    const weaponsSection = getByTestId(/weapons-section/gi)
     expect(weaponsSection).toBeInTheDocument()
 
     const editButton = queryByTestId(/edit/i)
@@ -55,7 +55,7 @@ describe('<Weapons />', () => {
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
 
-    const weaponsSection = getByTestId(/weapons/gi)
+    const weaponsSection = getByTestId(/weapons-section/gi)
     expect(weaponsSection).toBeInTheDocument()
 
     const editButton = getByTestId(/edit/i)
@@ -99,7 +99,7 @@ describe('<Weapons />', () => {
     }
     const { getByTestId } = renderComponent(props)
 
-    const weaponsSection = getByTestId(/weapons/gi)
+    const weaponsSection = getByTestId(/weapons-section/gi)
     expect(weaponsSection).toBeInTheDocument()
   })
 
@@ -120,7 +120,7 @@ describe('<Weapons />', () => {
       fireEvent.click(deleteWeaponButton)
 
       expect(mockOnWeaponChange).toHaveBeenCalledWith(
-        `weapons.${id}`,
+        `deletedWeapons.${id}`,
         id === weapon1.id ? true : false,
       )
     })
