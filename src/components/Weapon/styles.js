@@ -77,9 +77,9 @@ export const StyledSection = styled.section`
       background-color: ${colours.veryLightBlue};
       border: 1px solid ${colours.teal};
       border-radius: 5px;
-      padding: ${baseSpacing / 3}px;
+      padding: 10px;
       color: ${colours.teal};
-      font-size: 17px;
+      font-size: 13px;
       width: 100%;
 
       &::placeholder {

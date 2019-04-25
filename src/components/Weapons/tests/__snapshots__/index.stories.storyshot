@@ -1,0 +1,1873 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Weapons default 1`] = `
+.c2 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c3 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c3 > div,
+.c3 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 > div span,
+.c3 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c3 > div h4,
+.c3 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c3 > div input,
+.c3 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c3 > div input::-webkit-input-placeholder,
+.c3 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input::-moz-placeholder,
+.c3 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input:-ms-input-placeholder,
+.c3 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input::placeholder,
+.c3 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input:disabled,
+.c3 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c4 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c5 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+.c0 {
+  padding: 12px;
+  position: relative;
+}
+
+.c1 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.c1 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c3 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c3 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c3:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="weapons"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+      data-testid="weapon-3"
+    >
+      <section
+        class="c3"
+      >
+        <div
+          class="c4"
+          data-testid="weapon-3-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Cantor M-101 Assault Rifle
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-3-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Ranged (Heavy)
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-3-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Long
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-3-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Auto-fire
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-3-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            8
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            4
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-3-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            1000
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            Yes
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            7
+          </span>
+        </div>
+      </section>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-2"
+    >
+      <section
+        class="c3"
+      >
+        <div
+          class="c4"
+          data-testid="weapon-2-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Fists
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-2-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Brawl
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-2-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Engaged
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-2-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Disorient 1, Knockdown
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-2-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            2
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            5
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-2-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            No
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+      </section>
+    </div>
+    <div
+      class="c2"
+      data-testid="weapon-1"
+    >
+      <section
+        class="c3"
+      >
+        <div
+          class="c4"
+          data-testid="weapon-1-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Stun Gun
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-1-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Melee
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-1-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Engaged
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-1-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Stun 4, Stun Damage
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-1-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            6
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            5
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            1
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            1
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-1-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            200
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            No
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Weapons editing 1`] = `
+.c7 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c2 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c2 div > span,
+.c2 div > h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.c3 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c3 > div,
+.c3 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 > div span,
+.c3 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c3 > div h4,
+.c3 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c3 > div input,
+.c3 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c3 > div input::-webkit-input-placeholder,
+.c3 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input::-moz-placeholder,
+.c3 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input:-ms-input-placeholder,
+.c3 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input::placeholder,
+.c3 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c3 > div input:disabled,
+.c3 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c4 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c5 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+.c6 {
+  padding: 4px;
+  border: 2px solid rgb(170,73,23);
+  border-radius: 5px;
+  background: rgba(255,244,233,0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.c6 > h4 {
+  margin: 0;
+  color: rgb(170,73,23);
+  text-align: center;
+}
+
+.c6:hover {
+  background-color: rgb(170,73,23);
+}
+
+.c6:hover h4 {
+  color: rgb(255,244,233);
+}
+
+.c6:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0 {
+  padding: 12px;
+  position: relative;
+}
+
+.c1 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.c1 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c7 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c3 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c3 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c3:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="weapons"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+      data-testid="weapon-3"
+    >
+      <section
+        class="c3"
+      >
+        <div
+          class="c4"
+          data-testid="weapon-3-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Cantor M-101 Assault Rifle
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-3-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Ranged (Heavy)
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-3-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Long
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-3-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Auto-fire
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-3-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            8
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            4
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-3-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            1000
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            Yes
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-3-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            7
+          </span>
+        </div>
+        <button
+          class="c6"
+          data-testid="deleteWeaponButton-3"
+          type="button"
+        >
+          <h4>
+            Undo
+          </h4>
+        </button>
+      </section>
+    </div>
+    <div
+      class="c7"
+      data-testid="weapon-2"
+    >
+      <section
+        class="c3"
+      >
+        <div
+          class="c4"
+          data-testid="weapon-2-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Fists
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-2-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Brawl
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-2-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Engaged
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-2-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Disorient 1, Knockdown
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-2-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            2
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            5
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-2-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            No
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-2-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <button
+          class="c6"
+          data-testid="deleteWeaponButton-2"
+          type="button"
+        >
+          <h4>
+            Delete
+          </h4>
+        </button>
+      </section>
+    </div>
+    <div
+      class="c7"
+      data-testid="weapon-1"
+    >
+      <section
+        class="c3"
+      >
+        <div
+          class="c4"
+          data-testid="weapon-1-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Stun Gun
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-1-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Melee
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-1-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Engaged
+          </span>
+        </div>
+        <div
+          class="c4"
+          data-testid="weapon-1-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Stun 4, Stun Damage
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-1-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            6
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            5
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            1
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            1
+          </span>
+        </div>
+      </section>
+      <section
+        class="c3"
+      >
+        <div
+          class="c5"
+          data-testid="weapon-1-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            200
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            No
+          </span>
+        </div>
+        <div
+          class="c5"
+          data-testid="weapon-1-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <button
+          class="c6"
+          data-testid="deleteWeaponButton-1"
+          type="button"
+        >
+          <h4>
+            Delete
+          </h4>
+        </button>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Weapons showAdd 1`] = `
+.c2 {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(0,130,155);
+  font-size: 30px;
+}
+
+.c2:disabled {
+  color: rgb(65,178,180);
+  cursor: not-allowed;
+}
+
+.c4 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  padding: 12px;
+}
+
+.c5 {
+  display: grid;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c5 > div,
+.c5 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 > div span,
+.c5 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c5 > div h4,
+.c5 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c5 > div input,
+.c5 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c5 > div input::-webkit-input-placeholder,
+.c5 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c5 > div input::-moz-placeholder,
+.c5 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c5 > div input:-ms-input-placeholder,
+.c5 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c5 > div input::placeholder,
+.c5 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c5 > div input:disabled,
+.c5 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c6 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c7 {
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+  cursor: default;
+}
+
+.c0 {
+  padding: 12px;
+  position: relative;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c3 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.c3 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
+  .c5 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c5 {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .c5:first-child {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c3 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="weapons"
+>
+  <div
+    class="c1"
+  >
+    <div
+      data-testid="form-buttons-weapon"
+    >
+      <button
+        class="c2"
+        data-testid="edit-weapon"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    class="c3"
+  >
+    <div
+      class="c4"
+      data-testid="weapon-3"
+    >
+      <section
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="weapon-3-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Cantor M-101 Assault Rifle
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-3-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Ranged (Heavy)
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-3-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Long
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-3-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Auto-fire
+          </span>
+        </div>
+      </section>
+      <section
+        class="c5"
+      >
+        <div
+          class="c7"
+          data-testid="weapon-3-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            8
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-3-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-3-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            4
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-3-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+      </section>
+      <section
+        class="c5"
+      >
+        <div
+          class="c7"
+          data-testid="weapon-3-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            1000
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-3-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            Yes
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-3-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            7
+          </span>
+        </div>
+      </section>
+    </div>
+    <div
+      class="c4"
+      data-testid="weapon-2"
+    >
+      <section
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="weapon-2-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Fists
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-2-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Brawl
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-2-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Engaged
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-2-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Disorient 1, Knockdown
+          </span>
+        </div>
+      </section>
+      <section
+        class="c5"
+      >
+        <div
+          class="c7"
+          data-testid="weapon-2-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            2
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-2-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            5
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-2-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-2-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+      </section>
+      <section
+        class="c5"
+      >
+        <div
+          class="c7"
+          data-testid="weapon-2-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-2-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            No
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-2-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            0
+          </span>
+        </div>
+      </section>
+    </div>
+    <div
+      class="c4"
+      data-testid="weapon-1"
+    >
+      <section
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="weapon-1-name"
+        >
+          <h4>
+            Name:
+          </h4>
+          <span>
+            Stun Gun
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-1-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Melee
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-1-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Engaged
+          </span>
+        </div>
+        <div
+          class="c6"
+          data-testid="weapon-1-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Stun 4, Stun Damage
+          </span>
+        </div>
+      </section>
+      <section
+        class="c5"
+      >
+        <div
+          class="c7"
+          data-testid="weapon-1-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            6
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-1-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            5
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-1-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            1
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-1-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            1
+          </span>
+        </div>
+      </section>
+      <section
+        class="c5"
+      >
+        <div
+          class="c7"
+          data-testid="weapon-1-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            200
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-1-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            No
+          </span>
+        </div>
+        <div
+          class="c7"
+          data-testid="weapon-1-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;

@@ -51,9 +51,9 @@ exports[`Storyshots Components/Weapon default 1`] = `
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
-  padding: 8px;
+  padding: 10px;
   color: rgb(0,130,155);
-  font-size: 17px;
+  font-size: 13px;
   width: 100%;
 }
 
@@ -320,9 +320,9 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
-  padding: 8px;
+  padding: 10px;
   color: rgb(0,130,155);
-  font-size: 17px;
+  font-size: 13px;
   width: 100%;
 }
 
@@ -620,9 +620,9 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
-  padding: 8px;
+  padding: 10px;
   color: rgb(0,130,155);
-  font-size: 17px;
+  font-size: 13px;
   width: 100%;
 }
 
@@ -1042,9 +1042,9 @@ exports[`Storyshots Components/Weapon new 1`] = `
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
-  padding: 8px;
+  padding: 10px;
   color: rgb(0,130,155);
-  font-size: 17px;
+  font-size: 13px;
   width: 100%;
 }
 
