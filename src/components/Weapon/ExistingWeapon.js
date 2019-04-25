@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { weaponType } from 'types/weapons'
 
+import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
+
 import { StyledButton, StyledDropdownButton, StyledContent } from './styles'
 
 const ExistingWeapon = ({
@@ -46,6 +48,7 @@ const ExistingWeapon = ({
         isOpen={isOpen}
         onClick={() => setIsOpen(!isOpen)}
       >
+        {isOpen ? <FaCaretUp /> : <FaCaretDown />}
         <h3>{name}</h3>
       </StyledDropdownButton>
       <StyledContent data-testid={`weapon-${id}-content`} isOpen={isOpen}>

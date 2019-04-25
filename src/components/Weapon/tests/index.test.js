@@ -75,7 +75,7 @@ describe('<Weapon />', () => {
     expect(content).toHaveStyle('display: none;')
 
     fireEvent.click(dropdownButton)
-    expect(dropdownButton).toHaveStyle('background: transparent;')
+    expect(dropdownButton).toHaveStyle(`background: ${colours.veryLightBlue};`)
     expect(content).toHaveStyle('display: grid;')
   })
 

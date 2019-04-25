@@ -32,27 +32,47 @@ export const StyledWeapon = styled(FilteredWeapon)`
 `
 
 const openDropdownButtonStyles = css`
-  background: transparent;
+  background: ${colours.veryLightBlue};
 
   & > h3 {
     color: ${colours.teal};
   }
 `
 export const StyledDropdownButton = styled.button`
-  width: 100%;
+  max-width: 100%;
   padding: ${baseSpacing / 4}px;
   border: 2px solid ${colours.teal};
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
   background: ${colours.teal};
+  overflow: hidden;
+  position: relative;
 
   & > h3 {
     margin: 0;
     color: ${colours.veryLightBlue};
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   ${({ isOpen }) => isOpen && openDropdownButtonStyles}
+
+  & > svg {
+    display: none;
+    position: absolute;
+    padding: ${baseSpacing / 4}px;
+    right: 0;
+    top: 0;
+    font-size: 27px;
+    color: ${({ isOpen }) => (isOpen ? colours.teal : colours.veryLightBlue)};
+    background-color: inherit;
+  }
+
+  &:hover > svg {
+    display: block;
+  }
 `
 
 export const StyledContent = styled.div`
@@ -119,20 +139,12 @@ export const StyledContent = styled.div`
 
 export const StyledCheckboxLabel = styled.label`
   cursor: ${({ editing }) => (editing ? 'pointer' : 'default')};
-
-  & > input {
+  s- & > input {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
   }
-`
-
-export const StyledCheckbox = styled.input`
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
 `
 
 export const StyledButton = styled.button`
