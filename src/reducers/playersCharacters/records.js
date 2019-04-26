@@ -36,6 +36,7 @@ const PlayerCharacterRecord = Record({
   name: '',
   player_name: '',
   skills: List(),
+  weapons: List(),
 })
 
 export default PlayerCharacterRecord
