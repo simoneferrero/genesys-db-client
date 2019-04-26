@@ -109,14 +109,20 @@ export function* editPlayerCharacterSaga({
         wounds: { current: wounds_current },
         strain: { current: strain_current },
       },
+      deletedWeapons,
       favors,
       skills,
+      weapons,
     },
   },
 }) {
   const authInfo = yield select(authenticationSelector)
 
   const data = JSON.stringify({
+    deletedWeapons: Object.entries(deletedWeapons).reduce(
+      (total, [weapon, toDelete]) => (toDelete ? [...total, weapon] : total),
+      [],
+    ),
     favors: Object.values(favors),
     skills: Object.values(skills)
       .filter(({ rank }) => rank)
@@ -125,6 +131,7 @@ export function* editPlayerCharacterSaga({
         rank,
       })),
     strain_current,
+    weapons: Object.values(weapons),
     wounds_current,
   })
   const requestUrl = uri(API_PATH)
@@ -153,7 +160,7 @@ export function* editPlayerCharacterSaga({
     yield call(actions.setSubmitting, false)
     yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
 
-    if (error.response.status === 401) {
+    if (error.response && error.response.status === 401) {
       yield put(logout())
     }
   }

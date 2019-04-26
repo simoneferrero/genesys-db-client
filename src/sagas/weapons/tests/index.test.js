@@ -14,6 +14,8 @@ import {
   ADD_WEAPON,
   ADD_PLAYER_CHARACTER_WEAPON,
 } from 'actions/weapons/constants'
+
+import { logout } from 'actions/authentication'
 import {
   getWeapons,
   getWeaponsError,
@@ -181,6 +183,59 @@ describe('weapons sagas', () => {
         expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
       })
 
+      it('should dispatch the correct actions on error if undefined', () => {
+        const putErrorDescriptor = generator.throw({}).value
+        const expectedPutErrorDescriptor = put(addWeaponError({}))
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if unauthorised', () => {
+        const error = {
+          response: {
+            ...genericError.response,
+            status: 401,
+          },
+        }
+
+        const putErrorDescriptor = generator.throw(error).value
+        const expectedPutErrorDescriptor = put(addWeaponError(error))
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+
+        const putLogoutDescriptor = generator.next().value
+        const expectedPutLogoutDescriptor = put(logout())
+        expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
+      })
+
       afterEach(() => {
         const endGeneratorDescriptor = generator.next().value
         expect(endGeneratorDescriptor).toBeUndefined()
@@ -291,6 +346,63 @@ describe('weapons sagas', () => {
           mainError: 'There was an error',
         })
         expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if undefined', () => {
+        const putErrorDescriptor = generator.throw({}).value
+        const expectedPutErrorDescriptor = put(
+          addPlayerCharacterWeaponError(playerCharacter1Id, {}),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if unauthorised', () => {
+        const error = {
+          response: {
+            ...genericError.response,
+            status: 401,
+          },
+        }
+
+        const putErrorDescriptor = generator.throw(error).value
+        const expectedPutErrorDescriptor = put(
+          addPlayerCharacterWeaponError(playerCharacter1Id, error),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+
+        const putLogoutDescriptor = generator.next().value
+        const expectedPutLogoutDescriptor = put(logout())
+        expect(putLogoutDescriptor).toEqual(expectedPutLogoutDescriptor)
       })
 
       afterEach(() => {

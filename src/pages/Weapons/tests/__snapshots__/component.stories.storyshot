@@ -663,6 +663,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
 .c3 h3 {

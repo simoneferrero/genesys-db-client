@@ -768,6 +768,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
 .c19 h3 {
@@ -848,7 +849,6 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -874,7 +874,6 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -900,7 +899,6 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -926,7 +924,6 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -2742,6 +2739,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
 .c19 h3 {
@@ -2822,7 +2820,6 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -2848,7 +2845,6 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -2874,7 +2870,6 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;
@@ -2900,7 +2895,6 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 800;
   color: rgb(255,244,233);
   padding: 0 4px;
   font-size: 14px;

@@ -10,12 +10,7 @@ import FormButtons from 'components/FormButtons'
 import { MdAdd, MdCheck, MdClose } from 'react-icons/md'
 import Select from 'components/Select'
 
-import {
-  StyledContainer,
-  StyledForm,
-  StyledNewCharacterLabel,
-  StyledSubHeader,
-} from './styles'
+import { StyledContainer, StyledForm, StyledSubHeader } from './styles'
 
 const InnerForm = ({
   characterWeapons,
@@ -46,7 +41,7 @@ const InnerForm = ({
     value: id,
   }))
   const newWeapon = isCharacter ? (
-    <StyledNewCharacterLabel data-testid="weaponId" htmlFor={WEAPON_ID}>
+    <label data-testid="weaponId" htmlFor={WEAPON_ID}>
       <Select
         currentValue={values[WEAPON_ID]}
         disabled={isSubmitting}
@@ -55,7 +50,7 @@ const InnerForm = ({
         onChange={setFieldValue}
         options={weaponIdOptions}
       />
-    </StyledNewCharacterLabel>
+    </label>
   ) : (
     <Weapon
       isNew

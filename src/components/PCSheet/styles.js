@@ -41,7 +41,6 @@ export const StyledSectionWrapper = styled.div`
     border-right: ${sectionTitleHeight / 2}px solid transparent;
     height: 0;
     width: fit-content;
-    z-index: 800;
     color: ${colours.veryLightOrange};
     padding: 0 ${baseSpacing / 6}px;
     font-size: 14px;

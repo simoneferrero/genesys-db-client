@@ -14,6 +14,7 @@ export const StyledForm = styled.div`
 export const StyledSubHeader = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-bottom: ${baseSpacing / 2}px;
 
   h3 {
     width: 100%;
@@ -49,8 +50,4 @@ export const StyledContainer = styled.div`
   & > form:not(:last-child) {
     margin-bottom: ${baseSpacing / 2}px;
   }
-`
-
-export const StyledNewCharacterLabel = styled.label`
-  margin: ${baseSpacing / 2}px 0;
 `

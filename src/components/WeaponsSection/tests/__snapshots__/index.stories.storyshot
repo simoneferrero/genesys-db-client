@@ -1380,6 +1380,7 @@ exports[`Storyshots Components/WeaponsSection showAdd character weapon 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
 .c1 h3 {
@@ -1771,6 +1772,7 @@ exports[`Storyshots Components/WeaponsSection showAdd new weapon 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
 .c1 h3 {

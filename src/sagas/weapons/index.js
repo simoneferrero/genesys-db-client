@@ -8,6 +8,8 @@ import {
   ADD_WEAPON,
   ADD_PLAYER_CHARACTER_WEAPON,
 } from 'actions/weapons/constants'
+
+import { logout } from 'actions/authentication'
 import {
   getWeaponsError,
   getWeaponsSuccess,
@@ -76,6 +78,10 @@ export function* addWeaponSaga({
     yield put(addWeaponError(error))
     yield call(setSubmitting, false)
     yield call(setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+
+    if (error.response && error.response.status === 401) {
+      yield put(logout())
+    }
   }
 }
 
@@ -123,6 +129,10 @@ export function* addPlayerCharacterWeaponSaga({
     yield put(addPlayerCharacterWeaponError(playerCharacterId, error))
     yield call(setSubmitting, false)
     yield call(setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+
+    if (error.response && error.response.status === 401) {
+      yield put(logout())
+    }
   }
 }
 

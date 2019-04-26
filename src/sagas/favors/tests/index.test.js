@@ -108,6 +108,29 @@ describe('favors sagas', () => {
         expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
       })
 
+      it('should dispatch the correct actions on error if undefined', () => {
+        const putErrorDescriptor = generator.throw({}).value
+        const expectedPutErrorDescriptor = put(
+          addFavorError(playerCharacter1Id, {}),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
       it('should dispatch the correct actions on error if unauthorised', () => {
         const error = {
           response: {
