@@ -47,6 +47,7 @@ const ExistingWeapon = ({
         data-testid={`dropdown-${id}`}
         isOpen={isOpen}
         onClick={() => setIsOpen(!isOpen)}
+        type="button"
       >
         {isOpen ? <FaCaretUp /> : <FaCaretDown />}
         <h3>{name}</h3>

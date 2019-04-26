@@ -175,6 +175,7 @@ exports[`Storyshots Components/WeaponsSection default 1`] = `
       <button
         class="c3"
         data-testid="dropdown-3"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -306,6 +307,7 @@ exports[`Storyshots Components/WeaponsSection default 1`] = `
       <button
         class="c3"
         data-testid="dropdown-2"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -437,6 +439,7 @@ exports[`Storyshots Components/WeaponsSection default 1`] = `
       <button
         class="c3"
         data-testid="dropdown-1"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -800,6 +803,7 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
       <button
         class="c3"
         data-testid="dropdown-3"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -940,6 +944,7 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
       <button
         class="c3"
         data-testid="dropdown-2"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -1080,6 +1085,7 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
       <button
         class="c3"
         data-testid="dropdown-1"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -1476,6 +1482,7 @@ exports[`Storyshots Components/WeaponsSection showAdd 1`] = `
       <button
         class="c5"
         data-testid="dropdown-3"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -1607,6 +1614,7 @@ exports[`Storyshots Components/WeaponsSection showAdd 1`] = `
       <button
         class="c5"
         data-testid="dropdown-2"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -1738,6 +1746,7 @@ exports[`Storyshots Components/WeaponsSection showAdd 1`] = `
       <button
         class="c5"
         data-testid="dropdown-1"
+        type="button"
       >
         <svg
           fill="currentColor"

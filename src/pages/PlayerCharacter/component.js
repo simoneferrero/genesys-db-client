@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
 import { uiType } from 'types/ui'
+import { weaponType } from 'types/weapons'
 
 import { Helmet } from 'react-helmet'
 
@@ -27,6 +28,7 @@ export const PlayerCharacter = ({
   playerCharacter,
   playerCharacterId,
   playersCharactersUi,
+  weapons,
   weaponsUi,
 }) => {
   useEffect(() => {
@@ -74,6 +76,7 @@ export const PlayerCharacter = ({
             factions={factions}
             handleSubmit={handleSubmit}
             playerCharacter={playerCharacter}
+            weapons={weapons}
           />
         </Suspense>
       </div>
@@ -113,6 +116,8 @@ PlayerCharacter.propTypes = {
   playerCharacterId: PropTypes.string,
   /** Players' characters loader and error information */
   playersCharactersUi: uiType.isRequired,
+  /** Weapons' data */
+  weapons: PropTypes.objectOf(weaponType).isRequired,
   /** Weapons' loader and error information */
   weaponsUi: uiType.isRequired,
 }

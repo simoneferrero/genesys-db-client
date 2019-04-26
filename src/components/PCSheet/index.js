@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
+import { weaponType } from 'types/weapons'
 
 import keyBy from 'lodash/keyBy'
 
@@ -9,12 +10,12 @@ import { Formik } from 'formik'
 
 import InnerForm from './innerForm'
 
-// TODO: extract as separate component?
 const PCSheet = ({
   addFavor,
   factions,
   handleSubmit,
   playerCharacter: { favors, skills, ...playerCharacter },
+  weapons,
 }) => {
   const [editing, setEditing] = useState(false)
   const augmentedHandleSubmit = (values, actions) =>
@@ -22,6 +23,7 @@ const PCSheet = ({
 
   const initialValues = {
     ...playerCharacter,
+    deletedWeapons: {},
     favors: keyBy(favors, 'id'),
     skills: keyBy(skills, 'id'),
   }
@@ -37,6 +39,7 @@ const PCSheet = ({
           editing={editing}
           factions={factions}
           setEditing={setEditing}
+          weapons={weapons}
           {...props}
         />
       )}
@@ -54,6 +57,8 @@ PCSheet.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   /** Player character data */
   playerCharacter: playerCharacterType.isRequired,
+  /** Weapons' data */
+  weapons: PropTypes.objectOf(weaponType).isRequired,
 }
 
 export default PCSheet

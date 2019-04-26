@@ -146,6 +146,7 @@ exports[`Storyshots Components/Weapon default 1`] = `
   <button
     class="c1"
     data-testid="dropdown-1"
+    type="button"
   >
     <svg
       fill="currentColor"
@@ -467,6 +468,7 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
   <button
     class="c1"
     data-testid="dropdown-1"
+    type="button"
   >
     <svg
       fill="currentColor"
@@ -789,6 +791,7 @@ exports[`Storyshots Components/Weapon editing 1`] = `
   <button
     class="c1"
     data-testid="dropdown-1"
+    type="button"
   >
     <svg
       fill="currentColor"

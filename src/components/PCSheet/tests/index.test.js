@@ -7,6 +7,7 @@ import {
   playerCharacter1Id,
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
+import { weaponsById } from 'mocks/weapons'
 
 import { colours } from 'styles/constants'
 
@@ -18,6 +19,7 @@ const defaultProps = {
   factions: fromJS(factionsById).toJS(),
   handleSubmit: mockHandleSubmit,
   playerCharacter,
+  weapons: fromJS(weaponsById).toJS(),
 }
 
 const renderComponent = (props = {}) =>
@@ -47,6 +49,10 @@ describe('<PCSheet />', () => {
     // Skills
     const skills = getByTestId(/skills/i)
     expect(skills).toBeInTheDocument()
+
+    // Weapons
+    const weapons = getByTestId(/weapons-section/i)
+    expect(weapons).toBeInTheDocument()
 
     // Favors
     const favors = getByTestId(/favors/i)
@@ -79,6 +85,13 @@ describe('<PCSheet />', () => {
     const revertFavorButton = getByTestId('revertButton-1')
     expect(revertFavorButton).toBeInTheDocument()
 
+    // Check weapons change
+    const deleteWeaponButton = getByTestId('deleteWeaponButton-1')
+    expect(deleteWeaponButton).toBeInTheDocument()
+    fireEvent.click(deleteWeaponButton)
+    const undoButton = getByText(/undo/gi)
+    expect(undoButton).toBeInTheDocument()
+
     // Form buttons
     const cancelButton = getByTestId(/cancel-pc-sheet/i)
     expect(cancelButton).toBeInTheDocument()
@@ -107,6 +120,25 @@ describe('<PCSheet />', () => {
   })
 
   it('should call addFavor on favor submit', async () => {
+    const { getByPlaceholderText, getByTestId } = renderComponent()
+
+    const editButton = getByTestId(/edit-favor-owed/i)
+    fireEvent.click(editButton)
+
+    const description = getByPlaceholderText(/add description.../i)
+    fireEvent.change(description, {
+      target: { value: 'This is a new description' },
+    })
+
+    const submitButton = getByTestId(/submit-favor-owed/i)
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(mockAddFavor).toHaveBeenCalled()
+    })
+  })
+
+  xit('should call addWeapon on weapon submit', async () => {
     const { getByPlaceholderText, getByTestId } = renderComponent()
 
     const editButton = getByTestId(/edit-favor-owed/i)

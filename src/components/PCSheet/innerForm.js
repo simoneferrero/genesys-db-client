@@ -4,6 +4,7 @@ import { playerCharacterData } from 'types/playersCharacters'
 import { skillType } from 'types/skills'
 import { factionType } from 'types/factions'
 import { favorType } from 'types/favors'
+import { weaponType } from 'types/weapons'
 
 import * as yup from 'yup'
 
@@ -13,6 +14,7 @@ import FormButtons from 'components/FormButtons'
 import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
 import Favors from 'components/Favors'
+import Weapons from 'components/WeaponsSection'
 
 import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
@@ -26,6 +28,7 @@ const InnerForm = ({
   setEditing,
   setFieldValue,
   values,
+  // weapons,
 }) => (
   <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
     <StyledFormButtons
@@ -52,6 +55,17 @@ const InnerForm = ({
       onChange={setFieldValue}
       sectionTitle="Skills"
       skills={values.skills}
+    />
+    <StyledSectionWrapper
+      as={Weapons}
+      deletedWeapons={values.deletedWeapons}
+      editing={editing}
+      weapons={editing ? values.weapons : initialValues.weapons}
+      handleSubmit={() => {}} // addWeapon must go here -> addPlayerCharacterWeapon
+      isPCSubmitting={isSubmitting}
+      onWeaponChange={setFieldValue}
+      sectionTitle="Weapons"
+      skills={{}}
     />
     <StyledSectionWrapper
       as={Favors}
@@ -98,6 +112,8 @@ InnerForm.propTypes = {
     favors: PropTypes.objectOf(favorType).isRequired,
     skills: PropTypes.objectOf(skillType).isRequired,
   }).isRequired,
+  /** Weapons' data */
+  weapons: PropTypes.objectOf(weaponType).isRequired,
 }
 
 export default InnerForm

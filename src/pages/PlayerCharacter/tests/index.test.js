@@ -305,4 +305,35 @@ describe('<PlayerCharacter />', () => {
       expect(spinner).toBeInTheDocument()
     })
   })
+
+  xit('should call addWeapon on new weapon submit', async () => {
+    // addPlayerCharacterWeapon.mockImplementation(() => ({
+    //   type: ADD_PLAYER_CHARACTER_WEAPON,
+    //   payload: {
+    //     actions: formikActions,
+    //     weapon: newWeaponResponse,
+    //     playerCharacterId: id,
+    //   },
+    // }))
+
+    const { getByPlaceholderText, getByTestId } = renderComponent()
+
+    const editButton = getByTestId(/edit-favor-owed/i)
+    fireEvent.click(editButton)
+
+    const description = getByPlaceholderText(/add description.../i)
+    fireEvent.change(description, {
+      target: { value: 'This is a new description' },
+    })
+
+    const submitButton = getByTestId(/submit-favor-owed/i)
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(addFavor).toHaveBeenCalledTimes(1)
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
+    })
+  })
 })

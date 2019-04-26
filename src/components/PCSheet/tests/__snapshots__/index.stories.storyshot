@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Components/PCSheet default 1`] = `
-.c21 {
+.c27 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -12,7 +12,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c21 h4 {
+.c27 h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -20,11 +20,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: center;
 }
 
-.c21 h4:first-child {
+.c27 h4:first-child {
   text-align: left;
 }
 
-.c21 > div:not(:last-child) {
+.c27 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,12 +39,12 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   justify-content: flex-end;
 }
 
-.c21 > div:last-child {
+.c27 > div:last-child {
   grid-column: 1/4;
   text-align: justify;
 }
 
-.c21 > label {
+.c27 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -65,18 +65,18 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: flex-end;
 }
 
-.c21 > label:first-child {
+.c27 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c21 > label > input {
+.c27 > label > input {
   width: 100%;
 }
 
-.c21 textarea {
+.c27 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -90,11 +90,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: justify;
 }
 
-.c21 label[for='description'] {
+.c27 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c22 {
+.c28 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -105,7 +105,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c22 h4 {
+.c28 h4 {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -116,11 +116,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: center;
 }
 
-.c22 h4:first-child {
+.c28 h4:first-child {
   text-align: left;
 }
 
-.c22 > div:not(:last-child) {
+.c28 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,7 +135,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   justify-content: flex-end;
 }
 
-.c22 > div:last-child {
+.c28 > div:last-child {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -143,7 +143,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: justify;
 }
 
-.c22 > label {
+.c28 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -164,18 +164,18 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: flex-end;
 }
 
-.c22 > label:first-child {
+.c28 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c22 > label > input {
+.c28 > label > input {
   width: 100%;
 }
 
-.c22 textarea {
+.c28 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -189,7 +189,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: justify;
 }
 
-.c22 label[for='description'] {
+.c28 label[for='description'] {
   grid-column: 1/3;
 }
 
@@ -207,12 +207,12 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   cursor: not-allowed;
 }
 
-.c18 {
+.c24 {
   padding: 12px;
   position: relative;
 }
 
-.c19 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -223,7 +223,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   justify-content: space-between;
 }
 
-.c19 h3 {
+.c25 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -243,30 +243,30 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: center;
 }
 
-.c19 div {
+.c25 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c19 div > button {
+.c25 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c20 {
+.c26 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr;
 }
 
-.c20 > form:not(:last-child) {
+.c26 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c17 {
+.c23 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -605,6 +605,141 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   margin-bottom: 12px;
 }
 
+.c19 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+}
+
+.c20 {
+  max-width: 100%;
+  padding: 6px;
+  border: 2px solid rgb(0,130,155);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: rgb(0,130,155);
+  overflow: hidden;
+  position: relative;
+}
+
+.c20 > h3 {
+  margin: 0;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c20 > svg {
+  display: none;
+  position: absolute;
+  padding: 6px;
+  right: 0;
+  top: 0;
+  font-size: 27px;
+  color: rgb(234,242,246);
+  background-color: inherit;
+}
+
+.c20:hover > svg {
+  display: block;
+}
+
+.c21 {
+  padding: 12px;
+  display: none;
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c21 > div,
+.c21 label {
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6 px;
+}
+
+.c21 > div span,
+.c21 label span {
+  padding-top: 4px;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c21 > div h4,
+.c21 label h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c21 > div input,
+.c21 label input {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c21 > div input::-webkit-input-placeholder,
+.c21 label input::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c21 > div input::-moz-placeholder,
+.c21 label input::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c21 > div input:-ms-input-placeholder,
+.c21 label input:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c21 > div input::placeholder,
+.c21 label input::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c21 > div input:disabled,
+.c21 label input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c17 {
+  padding: 12px;
+  position: relative;
+}
+
+.c18 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c18 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
 .c0 {
   width: 100vw;
   padding: 24px 48px;
@@ -624,6 +759,9 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 .c3 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
   position: relative;
   overflow: visible;
 }
@@ -650,6 +788,9 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 .c8 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
   position: relative;
   overflow: visible;
 }
@@ -676,11 +817,43 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 .c16 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
   position: relative;
   overflow: visible;
 }
 
 .c16::before {
+  content: 'Weapons';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 800;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c22 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  overflow: visible;
+}
+
+.c22::before {
   content: 'Favors';
   position: absolute;
   top: -20px;
@@ -702,13 +875,13 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 @media only screen and (min-width:1800px) {
-  .c20 {
+  .c26 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c17 {
+  .c23 {
     grid-template-columns: repeat(2,1fr);
   }
 }
@@ -781,6 +954,31 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   .c9 > div {
     -webkit-column-count: 4;
     column-count: 4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c21 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c21 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c21 > div,
+  .c21 label {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c18 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -1279,14 +1477,287 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   </div>
   <div
     class="c16 c17"
-    data-testid="favors"
+    data-testid="weapons-section"
   >
     <div
       class="c18"
-      data-testid="favors-owed"
     >
       <div
         class="c19"
+        data-testid="weapon-2"
+      >
+        <button
+          class="c20"
+          data-testid="dropdown-2"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+            />
+          </svg>
+          <h3>
+            Fists
+          </h3>
+        </button>
+        <div
+          class="c21"
+          data-testid="weapon-2-content"
+        >
+          <div
+            data-testid="weapon-2-skill"
+          >
+            <h4>
+              Skill:
+            </h4>
+            <span>
+              Brawl
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-range"
+          >
+            <h4>
+              Range:
+            </h4>
+            <span>
+              Engaged
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-special"
+          >
+            <h4>
+              Special:
+            </h4>
+            <span>
+              Disorient 1, Knockdown
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-damage"
+          >
+            <h4>
+              Damage:
+            </h4>
+            <span>
+              2
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-crit"
+          >
+            <h4>
+              Crit:
+            </h4>
+            <span>
+              5
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-encumbrance"
+          >
+            <h4>
+              Encumbrance:
+            </h4>
+            <span>
+              0
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-hard_points"
+          >
+            <h4>
+              Hard Points:
+            </h4>
+            <span>
+              0
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-price"
+          >
+            <h4>
+              Price:
+            </h4>
+            <span>
+              0
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-restricted"
+          >
+            <h4>
+              Restricted:
+            </h4>
+            <span>
+              No
+            </span>
+          </div>
+          <div
+            data-testid="weapon-2-rarity"
+          >
+            <h4>
+              Rarity:
+            </h4>
+            <span>
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c19"
+        data-testid="weapon-1"
+      >
+        <button
+          class="c20"
+          data-testid="dropdown-1"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+            />
+          </svg>
+          <h3>
+            Stun Gun
+          </h3>
+        </button>
+        <div
+          class="c21"
+          data-testid="weapon-1-content"
+        >
+          <div
+            data-testid="weapon-1-skill"
+          >
+            <h4>
+              Skill:
+            </h4>
+            <span>
+              Melee
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-range"
+          >
+            <h4>
+              Range:
+            </h4>
+            <span>
+              Engaged
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-special"
+          >
+            <h4>
+              Special:
+            </h4>
+            <span>
+              Stun 4, Knockdown
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-damage"
+          >
+            <h4>
+              Damage:
+            </h4>
+            <span>
+              6
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-crit"
+          >
+            <h4>
+              Crit:
+            </h4>
+            <span>
+              5
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-encumbrance"
+          >
+            <h4>
+              Encumbrance:
+            </h4>
+            <span>
+              1
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-hard_points"
+          >
+            <h4>
+              Hard Points:
+            </h4>
+            <span>
+              1
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-price"
+          >
+            <h4>
+              Price:
+            </h4>
+            <span>
+              200
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-restricted"
+          >
+            <h4>
+              Restricted:
+            </h4>
+            <span>
+              No
+            </span>
+          </div>
+          <div
+            data-testid="weapon-1-rarity"
+          >
+            <h4>
+              Rarity:
+            </h4>
+            <span>
+              3
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c22 c23"
+    data-testid="favors"
+  >
+    <div
+      class="c24"
+      data-testid="favors-owed"
+    >
+      <div
+        class="c25"
       >
         <h3>
           owed
@@ -1316,10 +1787,10 @@ exports[`Storyshots Components/PCSheet default 1`] = `
         </div>
       </div>
       <div
-        class="c20"
+        class="c26"
       >
         <div
-          class="c21"
+          class="c27"
           data-testid="favor-1"
         >
           <h4
@@ -1341,11 +1812,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
       </div>
     </div>
     <div
-      class="c18"
+      class="c24"
       data-testid="favors-given"
     >
       <div
-        class="c19"
+        class="c25"
       >
         <h3>
           given
@@ -1375,10 +1846,10 @@ exports[`Storyshots Components/PCSheet default 1`] = `
         </div>
       </div>
       <div
-        class="c20"
+        class="c26"
       >
         <div
-          class="c22"
+          class="c28"
           data-testid="favor-2"
         >
           <h4

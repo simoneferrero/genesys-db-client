@@ -226,6 +226,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
         <button
           class="c6"
           data-testid="dropdown-2"
+          type="button"
         >
           <svg
             fill="currentColor"
@@ -357,6 +358,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
         <button
           class="c6"
           data-testid="dropdown-1"
+          type="button"
         >
           <svg
             fill="currentColor"
@@ -796,6 +798,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
         <button
           class="c8"
           data-testid="dropdown-2"
+          type="button"
         >
           <svg
             fill="currentColor"
@@ -927,6 +930,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
         <button
           class="c8"
           data-testid="dropdown-1"
+          type="button"
         >
           <svg
             fill="currentColor"
@@ -1282,6 +1286,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
         <button
           class="c6"
           data-testid="dropdown-2"
+          type="button"
         >
           <svg
             fill="currentColor"
@@ -1413,6 +1418,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
         <button
           class="c6"
           data-testid="dropdown-1"
+          type="button"
         >
           <svg
             fill="currentColor"
