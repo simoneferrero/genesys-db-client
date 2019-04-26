@@ -12,6 +12,7 @@ import {
   playerCharacter1Augmented,
   playerCharacter1Response,
 } from 'mocks/playersCharacters'
+import { newWeaponResponse } from 'mocks/weapons'
 
 import { GET_FACTIONS } from 'actions/factions/constants'
 import { ADD_FAVOR } from 'actions/favors/constants'
@@ -20,7 +21,10 @@ import {
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
-import { GET_WEAPONS } from 'actions/weapons/constants'
+import {
+  GET_WEAPONS,
+  ADD_PLAYER_CHARACTER_WEAPON,
+} from 'actions/weapons/constants'
 
 jest.mock('redux-saga', () => () => {})
 
@@ -96,8 +100,11 @@ jest.mock('actions/weapons', () => ({
   getWeapons: jest.fn(() => ({ type: '' })),
   getWeaponsSuccess: jest.fn(() => ({ type: '' })),
   getWeaponsError: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterWeapon: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterWeaponSuccess: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterWeaponError: jest.fn(() => ({ type: '' })),
 }))
-import { getWeapons } from 'actions/weapons'
+import { getWeapons, addPlayerCharacterWeapon } from 'actions/weapons'
 
 const renderComponent = (props = {}, initialState) =>
   render(
@@ -306,31 +313,26 @@ describe('<PlayerCharacter />', () => {
     })
   })
 
-  xit('should call addWeapon on new weapon submit', async () => {
-    // addPlayerCharacterWeapon.mockImplementation(() => ({
-    //   type: ADD_PLAYER_CHARACTER_WEAPON,
-    //   payload: {
-    //     actions: formikActions,
-    //     weapon: newWeaponResponse,
-    //     playerCharacterId: id,
-    //   },
-    // }))
+  it('should call addPlayerCharacterWeapon on new weapon submit', async () => {
+    addPlayerCharacterWeapon.mockImplementation(() => ({
+      type: ADD_PLAYER_CHARACTER_WEAPON,
+      payload: {
+        actions: formikActions,
+        playerCharacterId: id,
+        weaponId: newWeaponResponse.id,
+      },
+    }))
 
-    const { getByPlaceholderText, getByTestId } = renderComponent()
+    const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-favor-owed/i)
+    const editButton = getByTestId(/edit-weapon/i)
     fireEvent.click(editButton)
 
-    const description = getByPlaceholderText(/add description.../i)
-    fireEvent.change(description, {
-      target: { value: 'This is a new description' },
-    })
-
-    const submitButton = getByTestId(/submit-favor-owed/i)
+    const submitButton = getByTestId(/submit-weapon/i)
     fireEvent.click(submitButton)
 
     await wait(() => {
-      expect(addFavor).toHaveBeenCalledTimes(1)
+      expect(addPlayerCharacterWeapon).toHaveBeenCalledTimes(1)
 
       const spinner = getByTestId(/spinner/i)
       expect(spinner).toBeInTheDocument()

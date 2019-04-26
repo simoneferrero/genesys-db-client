@@ -5,6 +5,9 @@ import {
   ADD_WEAPON,
   ADD_WEAPON_ERROR,
   ADD_WEAPON_SUCCESS,
+  ADD_PLAYER_CHARACTER_WEAPON,
+  ADD_PLAYER_CHARACTER_WEAPON_ERROR,
+  ADD_PLAYER_CHARACTER_WEAPON_SUCCESS,
 } from '../constants'
 import {
   getWeapons,
@@ -13,10 +16,18 @@ import {
   addWeapon,
   addWeaponError,
   addWeaponSuccess,
+  addPlayerCharacterWeapon,
+  addPlayerCharacterWeaponError,
+  addPlayerCharacterWeaponSuccess,
 } from '../index'
 
-import { weapons, newWeaponResponse } from 'mocks/weapons'
 import { formikActions, genericError } from 'mocks/errors'
+import { playerCharacter1Id } from 'mocks/playersCharacters'
+import {
+  weapons,
+  newPlayerCharacterWeaponResponse,
+  newWeaponResponse,
+} from 'mocks/weapons'
 
 describe('weapons actions', () => {
   describe('getWeapons', () => {
@@ -92,6 +103,61 @@ describe('weapons actions', () => {
         const expectedResult = {
           type: ADD_WEAPON_ERROR,
           payload: {
+            error: genericError,
+          },
+        }
+        expect(result).toEqual(expectedResult)
+      })
+    })
+  })
+
+  describe('addPlayerCharacterWeapon', () => {
+    describe('addPlayerCharacterWeapon', () => {
+      it('should dispatch the correct action', () => {
+        const result = addPlayerCharacterWeapon(
+          playerCharacter1Id,
+          newWeaponResponse.id,
+          formikActions,
+        )
+        const expectedResult = {
+          type: ADD_PLAYER_CHARACTER_WEAPON,
+          payload: {
+            actions: formikActions,
+            playerCharacterId: playerCharacter1Id,
+            weaponId: newWeaponResponse.id,
+          },
+        }
+        expect(result).toEqual(expectedResult)
+      })
+    })
+
+    describe('addPlayerCharacterWeaponSuccess', () => {
+      it('should dispatch the correct action', () => {
+        const result = addPlayerCharacterWeaponSuccess(
+          playerCharacter1Id,
+          newPlayerCharacterWeaponResponse,
+        )
+        const expectedResult = {
+          type: ADD_PLAYER_CHARACTER_WEAPON_SUCCESS,
+          payload: {
+            playerCharacterId: playerCharacter1Id,
+            weapon: newPlayerCharacterWeaponResponse,
+          },
+        }
+        expect(result).toEqual(expectedResult)
+      })
+    })
+
+    describe('addPlayerCharacterWeaponError', () => {
+      it('should dispatch the correct action', () => {
+        const result = addPlayerCharacterWeaponError(
+          playerCharacter1Id,
+          genericError,
+        )
+        const expectedResult = {
+          type: ADD_PLAYER_CHARACTER_WEAPON_ERROR,
+          payload: {
+            playerCharacterId: playerCharacter1Id,
             error: genericError,
           },
         }

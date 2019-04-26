@@ -42,6 +42,12 @@ export const newWeaponResponse = {
   special: 'Auto-fire',
   restricted: true,
 }
+export const newPlayerCharacterWeaponResponse = {
+  id: 4,
+  mods: null,
+  name: newWeaponResponse.name,
+  weapon_id: newWeaponResponse.id,
+}
 
 export const weaponsAllIds = [weapon1.id, weapon2.id]
 export const weaponsById = {

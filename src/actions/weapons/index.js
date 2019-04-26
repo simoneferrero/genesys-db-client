@@ -5,6 +5,9 @@ import {
   ADD_WEAPON,
   ADD_WEAPON_ERROR,
   ADD_WEAPON_SUCCESS,
+  ADD_PLAYER_CHARACTER_WEAPON,
+  ADD_PLAYER_CHARACTER_WEAPON_ERROR,
+  ADD_PLAYER_CHARACTER_WEAPON_SUCCESS,
 } from './constants'
 
 // Get weapons
@@ -47,5 +50,35 @@ export const addWeaponError = (error) => ({
   type: ADD_WEAPON_ERROR,
   payload: {
     error,
+  },
+})
+
+// Add player character weapon
+export const addPlayerCharacterWeapon = (
+  playerCharacterId,
+  weaponId,
+  actions,
+) => ({
+  type: ADD_PLAYER_CHARACTER_WEAPON,
+  payload: {
+    actions,
+    playerCharacterId,
+    weaponId,
+  },
+})
+
+export const addPlayerCharacterWeaponSuccess = (playerCharacterId, weapon) => ({
+  type: ADD_PLAYER_CHARACTER_WEAPON_SUCCESS,
+  payload: {
+    playerCharacterId,
+    weapon,
+  },
+})
+
+export const addPlayerCharacterWeaponError = (playerCharacterId, error) => ({
+  type: ADD_PLAYER_CHARACTER_WEAPON_ERROR,
+  payload: {
+    error,
+    playerCharacterId,
   },
 })

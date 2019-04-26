@@ -56,13 +56,14 @@ Select.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
     }),
   ).isRequired,
   /** Text to display as a placeholder */
   placeholder: PropTypes.string,
   /** Current element's value */
-  currentValue: PropTypes.string,
+  currentValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 Select.defaultProps = {

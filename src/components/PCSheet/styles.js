@@ -2,12 +2,10 @@ import styled from 'styled-components/macro'
 
 import {
   baseSpacing,
-  borderRadius,
   colours,
   fontFamilies,
   headerHeight,
 } from 'styles/constants'
-import rgbToRgba from 'utils/rgbToRgba'
 
 const sectionTitleHeight = 20
 
@@ -30,9 +28,6 @@ export const StyledFormButtons = styled.div`
 `
 
 export const StyledSectionWrapper = styled.div`
-  border: 2px solid ${colours.lightOrange};
-  border-radius: ${borderRadius}px;
-  background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   position: relative;
   overflow: visible;
 

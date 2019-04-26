@@ -13,6 +13,7 @@ import { weaponsById } from 'mocks/weapons'
 
 const defaultProps = {
   addFavor: action('addFavor'),
+  addPlayerCharacterWeapon: action('addPlayerCharacterWeapon'),
   factions: fromJS(factionsById).toJS(),
   handleSubmit: action('handleSubmit'),
   playerCharacter: playerCharacter1Augmented.toJS(),

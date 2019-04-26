@@ -20,6 +20,7 @@ import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
 const InnerForm = ({
   addFavor,
+  addPlayerCharacterWeapon,
   editing,
   factions,
   handleSubmit,
@@ -28,7 +29,7 @@ const InnerForm = ({
   setEditing,
   setFieldValue,
   values,
-  // weapons,
+  weapons,
 }) => (
   <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
     <StyledFormButtons
@@ -60,12 +61,15 @@ const InnerForm = ({
       as={Weapons}
       deletedWeapons={values.deletedWeapons}
       editing={editing}
-      weapons={editing ? values.weapons : initialValues.weapons}
-      handleSubmit={() => {}} // addWeapon must go here -> addPlayerCharacterWeapon
+      characterWeapons={editing ? values.weapons : initialValues.weapons}
+      isCharacter
+      handleSubmit={addPlayerCharacterWeapon}
       isPCSubmitting={isSubmitting}
       onWeaponChange={setFieldValue}
       sectionTitle="Weapons"
+      showAdd
       skills={{}}
+      weapons={Object.values(weapons)}
     />
     <StyledSectionWrapper
       as={Favors}
@@ -88,6 +92,8 @@ InnerForm.validationSchema = yup.object({
 InnerForm.propTypes = {
   /** Invoked when adding a favor */
   addFavor: PropTypes.func.isRequired,
+  /** Invoked when adding a weapon */
+  addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Whether the buttons are in editing or static mode */
   editing: PropTypes.bool,
   /** Errors within the form */

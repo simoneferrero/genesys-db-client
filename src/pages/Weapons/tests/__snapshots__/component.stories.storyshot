@@ -28,7 +28,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   text-transform: uppercase;
 }
 
-.c5 {
+.c4 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -39,7 +39,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   grid-column-gap: 12px;
 }
 
-.c6 {
+.c5 {
   max-width: 100%;
   padding: 6px;
   border: 2px solid rgb(0,130,155);
@@ -51,7 +51,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   position: relative;
 }
 
-.c6 > h3 {
+.c5 > h3 {
   margin: 0;
   color: rgb(234,242,246);
   white-space: nowrap;
@@ -59,7 +59,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   overflow: hidden;
 }
 
-.c6 > svg {
+.c5 > svg {
   display: none;
   position: absolute;
   padding: 6px;
@@ -70,11 +70,11 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   background-color: inherit;
 }
 
-.c6:hover > svg {
+.c5:hover > svg {
   display: block;
 }
 
-.c7 {
+.c6 {
   padding: 12px;
   display: none;
   grid-row-gap: 6px;
@@ -82,8 +82,8 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c7 > div,
-.c7 label {
+.c6 > div,
+.c6 label {
   display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -93,15 +93,15 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   grid-column-gap: 6 px;
 }
 
-.c7 > div span,
-.c7 label span {
+.c6 > div span,
+.c6 label span {
   padding-top: 4px;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c7 > div h4,
-.c7 label h4 {
+.c6 > div h4,
+.c6 label h4 {
   text-shadow: 1px 1px rgb(234,242,246);
   white-space: nowrap;
   overflow: hidden;
@@ -110,8 +110,8 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   text-align: left;
 }
 
-.c7 > div input,
-.c7 label input {
+.c6 > div input,
+.c6 label input {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
@@ -121,45 +121,48 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   width: 100%;
 }
 
-.c7 > div input::-webkit-input-placeholder,
-.c7 label input::-webkit-input-placeholder {
+.c6 > div input::-webkit-input-placeholder,
+.c6 label input::-webkit-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input::-moz-placeholder,
-.c7 label input::-moz-placeholder {
+.c6 > div input::-moz-placeholder,
+.c6 label input::-moz-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input:-ms-input-placeholder,
-.c7 label input:-ms-input-placeholder {
+.c6 > div input:-ms-input-placeholder,
+.c6 label input:-ms-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input::placeholder,
-.c7 label input::placeholder {
+.c6 > div input::placeholder,
+.c6 label input::placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input:disabled,
-.c7 label input:disabled {
+.c6 > div input:disabled,
+.c6 label input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.c3 {
+.c2 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
   padding: 12px;
   position: relative;
 }
 
-.c4 {
+.c3 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 12px;
   grid-template-columns: 1fr;
 }
 
-.c4 > form:not(:last-child) {
+.c3 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
@@ -169,33 +172,27 @@ exports[`Storyshots Pages/Weapons default 1`] = `
   padding-top: 64px;
 }
 
-.c2 {
-  border: 2px solid rgb(242,143,34);
-  border-radius: 20px;
-  background-color: rgba(65,178,180,0.1);
-}
-
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c7 {
+  .c6 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c7 {
+  .c6 {
     grid-template-columns: repeat(3,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c7 > div,
-  .c7 label {
+  .c6 > div,
+  .c6 label {
     grid-template-columns: repeat(1,1fr);
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c4 {
+  .c3 {
     grid-template-columns: repeat(2,1fr);
   }
 }
@@ -213,18 +210,18 @@ exports[`Storyshots Pages/Weapons default 1`] = `
     </h2>
   </div>
   <div
-    class="c2 c3"
+    class="c2"
     data-testid="weapons-section"
   >
     <div
-      class="c4"
+      class="c3"
     >
       <div
-        class="c5"
+        class="c4"
         data-testid="weapon-2"
       >
         <button
-          class="c6"
+          class="c5"
           data-testid="dropdown-2"
           type="button"
         >
@@ -246,7 +243,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
           </h3>
         </button>
         <div
-          class="c7"
+          class="c6"
           data-testid="weapon-2-content"
         >
           <div
@@ -352,11 +349,11 @@ exports[`Storyshots Pages/Weapons default 1`] = `
         </div>
       </div>
       <div
-        class="c5"
+        class="c4"
         data-testid="weapon-1"
       >
         <button
-          class="c6"
+          class="c5"
           data-testid="dropdown-1"
           type="button"
         >
@@ -378,7 +375,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
           </h3>
         </button>
         <div
-          class="c7"
+          class="c6"
           data-testid="weapon-1-content"
         >
           <div
@@ -489,7 +486,7 @@ exports[`Storyshots Pages/Weapons default 1`] = `
 `;
 
 exports[`Storyshots Pages/Weapons gm 1`] = `
-.c5 {
+.c4 {
   padding: 12px;
   border: none;
   background: transparent;
@@ -498,7 +495,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   font-size: 30px;
 }
 
-.c5:disabled {
+.c4:disabled {
   color: rgb(65,178,180);
   cursor: not-allowed;
 }
@@ -530,7 +527,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   text-transform: uppercase;
 }
 
-.c7 {
+.c6 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -541,7 +538,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   grid-column-gap: 12px;
 }
 
-.c8 {
+.c7 {
   max-width: 100%;
   padding: 6px;
   border: 2px solid rgb(0,130,155);
@@ -553,7 +550,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   position: relative;
 }
 
-.c8 > h3 {
+.c7 > h3 {
   margin: 0;
   color: rgb(234,242,246);
   white-space: nowrap;
@@ -561,7 +558,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   overflow: hidden;
 }
 
-.c8 > svg {
+.c7 > svg {
   display: none;
   position: absolute;
   padding: 6px;
@@ -572,11 +569,11 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   background-color: inherit;
 }
 
-.c8:hover > svg {
+.c7:hover > svg {
   display: block;
 }
 
-.c9 {
+.c8 {
   padding: 12px;
   display: none;
   grid-row-gap: 6px;
@@ -584,8 +581,8 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c9 > div,
-.c9 label {
+.c8 > div,
+.c8 label {
   display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -595,15 +592,15 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   grid-column-gap: 6 px;
 }
 
-.c9 > div span,
-.c9 label span {
+.c8 > div span,
+.c8 label span {
   padding-top: 4px;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c9 > div h4,
-.c9 label h4 {
+.c8 > div h4,
+.c8 label h4 {
   text-shadow: 1px 1px rgb(234,242,246);
   white-space: nowrap;
   overflow: hidden;
@@ -612,8 +609,8 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   text-align: left;
 }
 
-.c9 > div input,
-.c9 label input {
+.c8 > div input,
+.c8 label input {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
@@ -623,38 +620,41 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   width: 100%;
 }
 
-.c9 > div input::-webkit-input-placeholder,
-.c9 label input::-webkit-input-placeholder {
+.c8 > div input::-webkit-input-placeholder,
+.c8 label input::-webkit-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c9 > div input::-moz-placeholder,
-.c9 label input::-moz-placeholder {
+.c8 > div input::-moz-placeholder,
+.c8 label input::-moz-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c9 > div input:-ms-input-placeholder,
-.c9 label input:-ms-input-placeholder {
+.c8 > div input:-ms-input-placeholder,
+.c8 label input:-ms-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c9 > div input::placeholder,
-.c9 label input::placeholder {
+.c8 > div input::placeholder,
+.c8 label input::placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c9 > div input:disabled,
-.c9 label input:disabled {
+.c8 > div input:disabled,
+.c8 label input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.c3 {
+.c2 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
   padding: 12px;
   position: relative;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -665,7 +665,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   justify-content: flex-end;
 }
 
-.c4 h3 {
+.c3 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -685,26 +685,26 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   align-items: center;
 }
 
-.c4 div {
+.c3 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c4 div > button {
+.c3 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c6 {
+.c5 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 12px;
   grid-template-columns: 1fr;
 }
 
-.c6 > form:not(:last-child) {
+.c5 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
@@ -714,33 +714,27 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
   padding-top: 64px;
 }
 
-.c2 {
-  border: 2px solid rgb(242,143,34);
-  border-radius: 20px;
-  background-color: rgba(65,178,180,0.1);
-}
-
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c9 {
+  .c8 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c9 {
+  .c8 {
     grid-template-columns: repeat(3,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c9 > div,
-  .c9 label {
+  .c8 > div,
+  .c8 label {
     grid-template-columns: repeat(1,1fr);
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c6 {
+  .c5 {
     grid-template-columns: repeat(2,1fr);
   }
 }
@@ -758,17 +752,17 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
     </h2>
   </div>
   <div
-    class="c2 c3"
+    class="c2"
     data-testid="weapons-section"
   >
     <div
-      class="c4"
+      class="c3"
     >
       <div
         data-testid="form-buttons-weapon"
       >
         <button
-          class="c5"
+          class="c4"
           data-testid="edit-weapon"
           type="button"
         >
@@ -789,14 +783,14 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
       </div>
     </div>
     <div
-      class="c6"
+      class="c5"
     >
       <div
-        class="c7"
+        class="c6"
         data-testid="weapon-2"
       >
         <button
-          class="c8"
+          class="c7"
           data-testid="dropdown-2"
           type="button"
         >
@@ -818,7 +812,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
           </h3>
         </button>
         <div
-          class="c9"
+          class="c8"
           data-testid="weapon-2-content"
         >
           <div
@@ -924,11 +918,11 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
         </div>
       </div>
       <div
-        class="c7"
+        class="c6"
         data-testid="weapon-1"
       >
         <button
-          class="c8"
+          class="c7"
           data-testid="dropdown-1"
           type="button"
         >
@@ -950,7 +944,7 @@ exports[`Storyshots Pages/Weapons gm 1`] = `
           </h3>
         </button>
         <div
-          class="c9"
+          class="c8"
           data-testid="weapon-1-content"
         >
           <div
@@ -1088,7 +1082,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   text-transform: uppercase;
 }
 
-.c5 {
+.c4 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1099,7 +1093,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   grid-column-gap: 12px;
 }
 
-.c6 {
+.c5 {
   max-width: 100%;
   padding: 6px;
   border: 2px solid rgb(0,130,155);
@@ -1111,7 +1105,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   position: relative;
 }
 
-.c6 > h3 {
+.c5 > h3 {
   margin: 0;
   color: rgb(234,242,246);
   white-space: nowrap;
@@ -1119,7 +1113,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   overflow: hidden;
 }
 
-.c6 > svg {
+.c5 > svg {
   display: none;
   position: absolute;
   padding: 6px;
@@ -1130,11 +1124,11 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   background-color: inherit;
 }
 
-.c6:hover > svg {
+.c5:hover > svg {
   display: block;
 }
 
-.c7 {
+.c6 {
   padding: 12px;
   display: none;
   grid-row-gap: 6px;
@@ -1142,8 +1136,8 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c7 > div,
-.c7 label {
+.c6 > div,
+.c6 label {
   display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1153,15 +1147,15 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   grid-column-gap: 6 px;
 }
 
-.c7 > div span,
-.c7 label span {
+.c6 > div span,
+.c6 label span {
   padding-top: 4px;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c7 > div h4,
-.c7 label h4 {
+.c6 > div h4,
+.c6 label h4 {
   text-shadow: 1px 1px rgb(234,242,246);
   white-space: nowrap;
   overflow: hidden;
@@ -1170,8 +1164,8 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   text-align: left;
 }
 
-.c7 > div input,
-.c7 label input {
+.c6 > div input,
+.c6 label input {
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
   border-radius: 5px;
@@ -1181,45 +1175,48 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   width: 100%;
 }
 
-.c7 > div input::-webkit-input-placeholder,
-.c7 label input::-webkit-input-placeholder {
+.c6 > div input::-webkit-input-placeholder,
+.c6 label input::-webkit-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input::-moz-placeholder,
-.c7 label input::-moz-placeholder {
+.c6 > div input::-moz-placeholder,
+.c6 label input::-moz-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input:-ms-input-placeholder,
-.c7 label input:-ms-input-placeholder {
+.c6 > div input:-ms-input-placeholder,
+.c6 label input:-ms-input-placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input::placeholder,
-.c7 label input::placeholder {
+.c6 > div input::placeholder,
+.c6 label input::placeholder {
   color: rgba(0,130,155,0.7);
 }
 
-.c7 > div input:disabled,
-.c7 label input:disabled {
+.c6 > div input:disabled,
+.c6 label input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.c3 {
+.c2 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
   padding: 12px;
   position: relative;
 }
 
-.c4 {
+.c3 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 12px;
   grid-template-columns: 1fr;
 }
 
-.c4 > form:not(:last-child) {
+.c3 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
@@ -1229,33 +1226,27 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
   padding-top: 64px;
 }
 
-.c2 {
-  border: 2px solid rgb(242,143,34);
-  border-radius: 20px;
-  background-color: rgba(65,178,180,0.1);
-}
-
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c7 {
+  .c6 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c7 {
+  .c6 {
     grid-template-columns: repeat(3,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c7 > div,
-  .c7 label {
+  .c6 > div,
+  .c6 label {
     grid-template-columns: repeat(1,1fr);
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c4 {
+  .c3 {
     grid-template-columns: repeat(2,1fr);
   }
 }
@@ -1273,18 +1264,18 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
     </h2>
   </div>
   <div
-    class="c2 c3"
+    class="c2"
     data-testid="weapons-section"
   >
     <div
-      class="c4"
+      class="c3"
     >
       <div
-        class="c5"
+        class="c4"
         data-testid="weapon-2"
       >
         <button
-          class="c6"
+          class="c5"
           data-testid="dropdown-2"
           type="button"
         >
@@ -1306,7 +1297,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
           </h3>
         </button>
         <div
-          class="c7"
+          class="c6"
           data-testid="weapon-2-content"
         >
           <div
@@ -1412,11 +1403,11 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
         </div>
       </div>
       <div
-        class="c5"
+        class="c4"
         data-testid="weapon-1"
       >
         <button
-          class="c6"
+          class="c5"
           data-testid="dropdown-1"
           type="button"
         >
@@ -1438,7 +1429,7 @@ exports[`Storyshots Pages/Weapons loading 1`] = `
           </h3>
         </button>
         <div
-          class="c7"
+          class="c6"
           data-testid="weapon-1-content"
         >
           <div

@@ -12,13 +12,7 @@ import Header from 'components/Header'
 import Spinner from 'components/Spinner'
 
 import styled from 'styled-components/macro'
-import {
-  baseSpacing,
-  borderRadius,
-  colours,
-  headerHeight,
-} from 'styles/constants'
-import rgbToRgba from 'utils/rgbToRgba'
+import { baseSpacing, headerHeight } from 'styles/constants'
 
 const WeaponsSection = lazy(() => import('components/WeaponsSection'))
 
@@ -26,11 +20,6 @@ const StyledWrapper = styled.div`
   width: 100vw;
   padding: ${baseSpacing}px ${baseSpacing * 2}px;
   padding-top: ${baseSpacing + headerHeight}px;
-`
-const StyledWeaponsSection = styled.div`
-  border: 2px solid ${colours.lightOrange};
-  border-radius: ${borderRadius}px;
-  background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
 `
 
 export const Weapons = ({
@@ -62,8 +51,7 @@ export const Weapons = ({
       <StyledWrapper data-testid="weapons">
         <Header>{HEAD_INFO.WEAPONS}</Header>
         <Suspense fallback={<Spinner />}>
-          <StyledWeaponsSection
-            as={WeaponsSection}
+          <WeaponsSection
             handleSubmit={addWeapon}
             showAdd={role === 'gm'}
             skills={skills}

@@ -49,6 +49,38 @@ describe('<WeaponsSection />', () => {
     })
   })
 
+  it('should render correctly when isCharacter', () => {
+    const props = {
+      characterWeapons: [weapon1],
+      isCharacter: true,
+    }
+    const { getByTestId, queryByTestId } = renderComponent(props)
+
+    const weaponsSection = getByTestId(/weapons-section/gi)
+    expect(weaponsSection).toBeInTheDocument()
+
+    const editButton = queryByTestId(/edit/i)
+    expect(editButton).not.toBeInTheDocument()
+
+    const nonExistingNewWeapon = queryByTestId(/new-weapon/i)
+    expect(nonExistingNewWeapon).not.toBeInTheDocument()
+
+    weapons.forEach(({ id, status }) => {
+      if (id === weapon1.id) {
+        const weapon = getByTestId(new RegExp(`weapon-${id}`, 'gi'))
+        expect(weapon).toBeInTheDocument()
+
+        const editWeaponButton = queryByTestId(
+          status === 'complete' ? `revertButton-${id}` : `completeButton-${id}`,
+        )
+        expect(editWeaponButton).not.toBeInTheDocument()
+      } else {
+        const weapon = queryByTestId(new RegExp(`weapon-${id}`, 'gi'))
+        expect(weapon).not.toBeInTheDocument()
+      }
+    })
+  })
+
   it('should render correctly when show adding new weapon', () => {
     const props = {
       showAdd: true,
@@ -91,6 +123,60 @@ describe('<WeaponsSection />', () => {
     expect(unmountedNewWeapon).not.toBeInTheDocument()
 
     expect(editButton).toBeInTheDocument()
+  })
+
+  it('should render correctly when show adding character weapon', () => {
+    const props = {
+      showAdd: true,
+      isCharacter: true,
+      characterWeapons: [weapon1],
+    }
+    const { getByDisplayValue, getByTestId, queryByTestId } = renderComponent(
+      props,
+    )
+
+    const weaponsSection = getByTestId(/weapons-section/gi)
+    expect(weaponsSection).toBeInTheDocument()
+
+    const editButton = getByTestId(/edit/i)
+    expect(editButton).toBeInTheDocument()
+
+    const nonExistingWeaponIdSelect = queryByTestId(/weaponId/gi)
+    expect(nonExistingWeaponIdSelect).not.toBeInTheDocument()
+
+    fireEvent.click(editButton)
+
+    const newWeapon = queryByTestId(/new-weapon/i)
+    expect(newWeapon).not.toBeInTheDocument()
+
+    const weaponIdSelect = getByTestId(/weaponId/gi)
+    expect(weaponIdSelect).toBeInTheDocument()
+    const weaponIdValue = getByDisplayValue(`${weapons[0].id}`)
+    expect(weaponIdValue).toBeInTheDocument()
+
+    const cancelButton = getByTestId(/cancel/i)
+    expect(cancelButton).toBeInTheDocument()
+
+    const submitButton = getByTestId(/submit/i)
+    expect(submitButton).toBeInTheDocument()
+
+    fireEvent.click(cancelButton)
+
+    const unmountedWeaponIdSelect = queryByTestId(/weaponId/gi)
+    expect(unmountedWeaponIdSelect).not.toBeInTheDocument()
+
+    expect(editButton).toBeInTheDocument()
+  })
+
+  it('should not break if weapons are empty', () => {
+    const props = {
+      weapons: [],
+    }
+
+    const { getByTestId } = renderComponent(props)
+
+    const weaponsSection = getByTestId(/weapons-section/gi)
+    expect(weaponsSection).toBeInTheDocument()
   })
 
   it('should not break if skills is empty', () => {

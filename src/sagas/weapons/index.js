@@ -3,12 +3,18 @@ import uri from 'urijs'
 
 import { all, call, put, select, takeLatest } from 'redux-saga/effects'
 
-import { GET_WEAPONS, ADD_WEAPON } from 'actions/weapons/constants'
+import {
+  GET_WEAPONS,
+  ADD_WEAPON,
+  ADD_PLAYER_CHARACTER_WEAPON,
+} from 'actions/weapons/constants'
 import {
   getWeaponsError,
   getWeaponsSuccess,
   addWeaponError,
   addWeaponSuccess,
+  addPlayerCharacterWeaponError,
+  addPlayerCharacterWeaponSuccess,
 } from 'actions/weapons'
 
 import { authenticationSelector } from 'reducers/authentication/selectors'
@@ -77,6 +83,57 @@ export function* addWeaponWatcher() {
   yield takeLatest(ADD_WEAPON, addWeaponSaga)
 }
 
+export function* addPlayerCharacterWeaponSaga({
+  payload: {
+    actions: { setErrors, setIsNew, setSubmitting },
+    playerCharacterId,
+    weaponId,
+  },
+}) {
+  const authInfo = yield select(authenticationSelector)
+
+  const requestUrl = uri(API_PATH)
+    .segment([
+      API_SEGMENTS.PLAYERS_CHARACTERS,
+      `${playerCharacterId}`,
+      API_SEGMENTS.WEAPON,
+    ])
+    .toString()
+
+  const headers = {
+    Authorization: `Bearer ${authInfo.get('jwt')}`,
+    'Content-Type': 'application/json',
+  }
+  const opts = {
+    data: JSON.stringify({ weapon_id: weaponId }),
+    headers,
+    method: REST_METHODS.POST,
+    url: requestUrl,
+  }
+
+  try {
+    const response = yield call(axios, opts)
+
+    yield put(
+      addPlayerCharacterWeaponSuccess(playerCharacterId, response.data.data),
+    )
+    yield call(setSubmitting, false)
+    yield call(setIsNew, false)
+  } catch (error) {
+    yield put(addPlayerCharacterWeaponError(playerCharacterId, error))
+    yield call(setSubmitting, false)
+    yield call(setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+  }
+}
+
+export function* addPlayerCharacterWeaponWatcher() {
+  yield takeLatest(ADD_PLAYER_CHARACTER_WEAPON, addPlayerCharacterWeaponSaga)
+}
+
 export default function* rootSaga() {
-  yield all([call(getWeaponsWatcher), call(addWeaponWatcher)])
+  yield all([
+    call(getWeaponsWatcher),
+    call(addWeaponWatcher),
+    call(addPlayerCharacterWeaponWatcher),
+  ])
 }

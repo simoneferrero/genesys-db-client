@@ -8,6 +8,7 @@ import {
   GET_PLAYER_CHARACTER_SUCCESS,
   EDIT_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
+import { ADD_PLAYER_CHARACTER_WEAPON_SUCCESS } from 'actions/weapons/constants'
 
 import initialState from './initialState'
 import PlayerCharacterRecord from './records'
@@ -52,6 +53,14 @@ export default (state = initialState, { type, payload }) => {
       return state.mergeIn(
         ['byId', playerCharacterId, 'favors'],
         fromJS([favor]),
+      )
+    }
+
+    case ADD_PLAYER_CHARACTER_WEAPON_SUCCESS: {
+      const { weapon, playerCharacterId } = payload
+      return state.mergeIn(
+        ['byId', playerCharacterId, 'weapons'],
+        fromJS([weapon]),
       )
     }
 

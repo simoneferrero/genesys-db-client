@@ -17,6 +17,7 @@ import { PlayerCharacter } from '../component'
 
 const defaultProps = {
   addFavor: action('addFavor'),
+  addPlayerCharacterWeapon: action('addPlayerCharacterWeapon'),
   editPlayerCharacter: action('editPlayerCharacter'),
   factions: fromJS(factionsById).toJS(),
   factionsUi: uiElement,

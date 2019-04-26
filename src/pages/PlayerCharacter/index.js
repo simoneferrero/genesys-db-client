@@ -21,7 +21,7 @@ import {
   getPlayerCharacter,
 } from 'actions/playersCharacters'
 import { getSkills } from 'actions/skills'
-import { getWeapons } from 'actions/weapons'
+import { getWeapons, addPlayerCharacterWeapon } from 'actions/weapons'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
@@ -40,6 +40,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   addFavor: (playerCharacterId, favor, actions) =>
     dispatch(addFavor(playerCharacterId, favor, actions)),
+  addPlayerCharacterWeapon: (playerCharacterId, weaponId, actions) =>
+    dispatch(addPlayerCharacterWeapon(playerCharacterId, weaponId, actions)),
   editPlayerCharacter: (id, values, actions) =>
     dispatch(editPlayerCharacter(id, values, actions)),
   getArchetypes: () => dispatch(getArchetypes()),

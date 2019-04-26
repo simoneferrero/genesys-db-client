@@ -23,7 +23,15 @@ const renderComponent = (props = {}) => (
 
 storiesOf('Components/WeaponsSection', module)
   .add('default', () => renderComponent())
-  .add('showAdd', () => renderComponent({ showAdd: true }))
+  .add('showAdd new weapon', () => renderComponent({ showAdd: true }))
+  .add('showAdd character weapon', () => {
+    const props = {
+      isCharacter: true,
+      showAdd: true,
+      characterWeapons: [weapon1],
+    }
+    return renderComponent(props)
+  })
   .add('editing', () =>
     renderComponent({
       deletedWeapons: { [newWeaponResponse.id]: true },

@@ -1,8 +1,12 @@
 import styled from 'styled-components/macro'
-import { baseSpacing, colours } from 'styles/constants'
+import { baseSpacing, borderRadius, colours } from 'styles/constants'
 import mq from 'styles/mediaQueries'
+import rgbToRgba from 'utils/rgbToRgba'
 
 export const StyledForm = styled.div`
+  border: 2px solid ${colours.lightOrange};
+  border-radius: ${borderRadius}px;
+  background-color: ${rgbToRgba(colours.lightTeal, 0.1)};
   padding: ${baseSpacing / 2}px;
   position: relative;
 `
@@ -45,4 +49,8 @@ export const StyledContainer = styled.div`
   & > form:not(:last-child) {
     margin-bottom: ${baseSpacing / 2}px;
   }
+`
+
+export const StyledNewCharacterLabel = styled.label`
+  margin: ${baseSpacing / 2}px 0;
 `

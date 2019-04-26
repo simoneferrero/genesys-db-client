@@ -14,6 +14,7 @@ import Spinner from 'components/Spinner'
 /** Summary of all players' characters. */
 export const PlayerCharacter = ({
   addFavor,
+  addPlayerCharacterWeapon,
   editPlayerCharacter,
   factions,
   factionsUi,
@@ -58,6 +59,8 @@ export const PlayerCharacter = ({
     editPlayerCharacter(playerCharacterId, values, actions)
   const handleAddFavor = (values, actions) =>
     addFavor(playerCharacterId, values, actions)
+  const handleAddPlayerCharacterWeapon = (values, actions) =>
+    addPlayerCharacterWeapon(playerCharacterId, `${values.id}`, actions)
 
   const loading =
     playersCharactersUi.loading ||
@@ -73,6 +76,7 @@ export const PlayerCharacter = ({
         <Suspense fallback={<Spinner />}>
           <PCSheet
             addFavor={handleAddFavor}
+            addPlayerCharacterWeapon={handleAddPlayerCharacterWeapon}
             factions={factions}
             handleSubmit={handleSubmit}
             playerCharacter={playerCharacter}
@@ -88,6 +92,8 @@ export const PlayerCharacter = ({
 PlayerCharacter.propTypes = {
   /** Dispatched to add a new favor */
   addFavor: PropTypes.func.isRequired,
+  /** Dispatched to add a weapon */
+  addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Dispatched to edit the current player's character */
   editPlayerCharacter: PropTypes.func.isRequired,
   /** Factions data */

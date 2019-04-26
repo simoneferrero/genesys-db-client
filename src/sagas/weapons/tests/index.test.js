@@ -6,8 +6,14 @@ import rootSaga, {
   getWeaponsWatcher,
   addWeaponSaga,
   addWeaponWatcher,
+  addPlayerCharacterWeaponSaga,
+  addPlayerCharacterWeaponWatcher,
 } from '../index'
-import { GET_WEAPONS, ADD_WEAPON } from 'actions/weapons/constants'
+import {
+  GET_WEAPONS,
+  ADD_WEAPON,
+  ADD_PLAYER_CHARACTER_WEAPON,
+} from 'actions/weapons/constants'
 import {
   getWeapons,
   getWeaponsError,
@@ -15,6 +21,9 @@ import {
   addWeapon,
   addWeaponError,
   addWeaponSuccess,
+  addPlayerCharacterWeapon,
+  addPlayerCharacterWeaponError,
+  addPlayerCharacterWeaponSuccess,
 } from 'actions/weapons'
 
 import { authenticationSelector } from 'reducers/authentication/selectors'
@@ -23,7 +32,12 @@ import AuthenticationRecord from 'reducers/authentication/records'
 import { apiPath, formikActions } from 'mocks'
 import { authInfoResponse } from 'mocks/authentication'
 import { genericError } from 'mocks/errors'
-import { weapons, newWeaponResponse } from 'mocks/weapons'
+import { playerCharacter1Id } from 'mocks/playersCharacters'
+import {
+  weapons,
+  newWeaponResponse,
+  newPlayerCharacterWeaponResponse,
+} from 'mocks/weapons'
 
 describe('weapons sagas', () => {
   describe('getWeapons', () => {
@@ -187,6 +201,118 @@ describe('weapons sagas', () => {
     })
   })
 
+  describe('addPlayerCharacterWeapon', () => {
+    const action = addPlayerCharacterWeapon(
+      playerCharacter1Id,
+      newWeaponResponse.id,
+      formikActions,
+    )
+
+    describe('addPlayerCharacterWeaponSaga', () => {
+      let generator
+
+      beforeEach(() => {
+        generator = addPlayerCharacterWeaponSaga(action)
+
+        const selectAuthenticationDescriptor = generator.next().value
+        const expectedSelectAuthenticationDescriptor = select(
+          authenticationSelector,
+        )
+        expect(selectAuthenticationDescriptor).toEqual(
+          expectedSelectAuthenticationDescriptor,
+        )
+
+        const headers = {
+          Authorization: `Bearer ${authInfoResponse.jwt}`,
+          'Content-Type': 'application/json',
+        }
+        const opts = {
+          data: JSON.stringify({ weapon_id: newWeaponResponse.id }),
+          headers,
+          method: 'POST',
+          url: `${apiPath}/players-characters/${playerCharacter1Id}/weapon`,
+        }
+
+        const callAxiosDescriptor = generator.next(
+          AuthenticationRecord(authInfoResponse),
+        ).value
+        const expectedCallAxiosDescriptor = call(axios, opts)
+        expect(callAxiosDescriptor).toEqual(expectedCallAxiosDescriptor)
+      })
+
+      it('should dispatch the correct actions on success', () => {
+        const response = {
+          data: { data: newPlayerCharacterWeaponResponse },
+        }
+        const putSuccessDescriptor = generator.next(response).value
+        const expectedPutSuccessDescriptor = put(
+          addPlayerCharacterWeaponSuccess(
+            playerCharacter1Id,
+            newPlayerCharacterWeaponResponse,
+          ),
+        )
+        expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetIsNewDescriptor = generator.next().value
+        const expectedCallSetIsNewDescriptor = call(
+          formikActions.setIsNew,
+          false,
+        )
+        expect(callSetIsNewDescriptor).toEqual(expectedCallSetIsNewDescriptor)
+      })
+
+      it('should dispatch the correct actions on error', () => {
+        const putErrorDescriptor = generator.throw(genericError).value
+        const expectedPutErrorDescriptor = put(
+          addPlayerCharacterWeaponError(playerCharacter1Id, genericError),
+        )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      afterEach(() => {
+        const endGeneratorDescriptor = generator.next().value
+        expect(endGeneratorDescriptor).toBeUndefined()
+      })
+    })
+
+    describe('addPlayerCharacterWeaponWatcher', () => {
+      it('should listen for the correct action', () => {
+        const generator = addPlayerCharacterWeaponWatcher(action)
+
+        const takeLatestDescriptor = generator.next().value
+        const expectedTakeLatestDescriptor = takeLatest(
+          ADD_PLAYER_CHARACTER_WEAPON,
+          addPlayerCharacterWeaponSaga,
+        )
+        expect(takeLatestDescriptor).toEqual(expectedTakeLatestDescriptor)
+      })
+    })
+  })
+
   describe('rootSaga', () => {
     it('should export the correct root', () => {
       const generator = rootSaga({})
@@ -195,6 +321,7 @@ describe('weapons sagas', () => {
       const expectedAllDescriptor = all([
         call(getWeaponsWatcher),
         call(addWeaponWatcher),
+        call(addPlayerCharacterWeaponWatcher),
       ])
       expect(allDescriptor).toEqual(expectedAllDescriptor)
     })

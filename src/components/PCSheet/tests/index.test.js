@@ -13,9 +13,11 @@ import { colours } from 'styles/constants'
 
 const playerCharacter = playerCharacter1Augmented.toJS()
 const mockAddFavor = jest.fn()
+const mockAddPlayerCharacterWeapon = jest.fn()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
   addFavor: mockAddFavor,
+  addPlayerCharacterWeapon: mockAddPlayerCharacterWeapon,
   factions: fromJS(factionsById).toJS(),
   handleSubmit: mockHandleSubmit,
   playerCharacter,
@@ -138,22 +140,17 @@ describe('<PCSheet />', () => {
     })
   })
 
-  xit('should call addWeapon on weapon submit', async () => {
-    const { getByPlaceholderText, getByTestId } = renderComponent()
+  it('should call addPlayerCharacterWeapon on weapon submit', async () => {
+    const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-favor-owed/i)
+    const editButton = getByTestId(/edit-weapon/i)
     fireEvent.click(editButton)
 
-    const description = getByPlaceholderText(/add description.../i)
-    fireEvent.change(description, {
-      target: { value: 'This is a new description' },
-    })
-
-    const submitButton = getByTestId(/submit-favor-owed/i)
+    const submitButton = getByTestId(/submit-weapon/i)
     fireEvent.click(submitButton)
 
     await wait(() => {
-      expect(mockAddFavor).toHaveBeenCalled()
+      expect(mockAddPlayerCharacterWeapon).toHaveBeenCalled()
     })
   })
 })

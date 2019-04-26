@@ -8,10 +8,12 @@ import { Formik } from 'formik'
 import InnerForm from './innerForm'
 
 const WeaponsSection = ({
+  characterWeapons,
   className,
   deletedWeapons,
   editing,
   handleSubmit,
+  isCharacter,
   isPCSubmitting,
   onWeaponChange,
   showAdd,
@@ -25,6 +27,8 @@ const WeaponsSection = ({
     handleSubmit(values, { ...actions, setIsNew })
 
   const initialValues = {
+    id: weapons.length > 0 ? weapons[0].id : null,
+    isCharacter,
     crit: 0,
     damage: 0,
     encumbrance: 0,
@@ -45,9 +49,11 @@ const WeaponsSection = ({
       onSubmit={augmentedHandleSubmit}
       render={(props) => (
         <InnerForm
+          characterWeapons={characterWeapons}
           className={className}
           deletedWeapons={deletedWeapons}
           editing={editing}
+          isCharacter={isCharacter}
           isNew={isNew}
           isPCSubmitting={isPCSubmitting}
           onWeaponChange={onWeaponChange}
@@ -64,6 +70,8 @@ const WeaponsSection = ({
 }
 
 WeaponsSection.propTypes = {
+  /** Weapons belonging to a specific character */
+  characterWeapons: PropTypes.arrayOf(weaponType),
   /** Custom styles */
   className: PropTypes.string,
   /** Which weapons will be deleted */
@@ -72,6 +80,8 @@ WeaponsSection.propTypes = {
   editing: PropTypes.bool,
   /** Function invoked upon form submission */
   handleSubmit: PropTypes.func.isRequired,
+  /** Whether the form is in a character sheet */
+  isCharacter: PropTypes.bool,
   /** Whether the player character form is submitting */
   isPCSubmitting: PropTypes.bool,
   /** Function invoked to change existing favor data */

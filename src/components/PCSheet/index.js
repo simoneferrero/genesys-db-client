@@ -12,6 +12,7 @@ import InnerForm from './innerForm'
 
 const PCSheet = ({
   addFavor,
+  addPlayerCharacterWeapon,
   factions,
   handleSubmit,
   playerCharacter: { favors, skills, ...playerCharacter },
@@ -35,6 +36,7 @@ const PCSheet = ({
       onSubmit={augmentedHandleSubmit}
       render={(props) => (
         <InnerForm
+          addPlayerCharacterWeapon={addPlayerCharacterWeapon}
           addFavor={addFavor}
           editing={editing}
           factions={factions}
@@ -51,6 +53,8 @@ const PCSheet = ({
 PCSheet.propTypes = {
   /** Invoked when adding a favor */
   addFavor: PropTypes.func.isRequired,
+  /** Invoked when adding a weapon */
+  addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Factions data */
   factions: PropTypes.objectOf(factionType).isRequired,
   /** Function invoked upon form submission */
