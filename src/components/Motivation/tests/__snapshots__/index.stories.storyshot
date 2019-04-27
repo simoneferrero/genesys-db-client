@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Motivation default 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c0 div {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 6px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  text-transform: uppercase;
+}
+
+.c0 h4 {
+  margin: 0;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c0 p,
+.c0 input,
+.c0 textarea {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c0 input,
+.c0 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c0 textarea {
+  height: 5em;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c0 textarea {
+    height: 4em;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="motivation-strength"
+>
+  <div>
+    <h3>
+      strength
+    </h3>
+    <h4>
+      Patient
+    </h4>
+  </div>
+  <p
+    data-testid="strength-description"
+  >
+    Thanks to her training as a tutor and teacher, Aditi is incredibly patient and can almost always remain calm.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Motivation editing 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c0 div {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 6px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  text-transform: uppercase;
+}
+
+.c0 h4 {
+  margin: 0;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c0 p,
+.c0 input,
+.c0 textarea {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c0 input,
+.c0 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c0 textarea {
+  height: 5em;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c0 textarea {
+    height: 4em;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="motivation-strength"
+>
+  <div>
+    <h3>
+      strength
+    </h3>
+    <label
+      for="strength-type"
+    >
+      <input
+        id="strength-type"
+        placeholder="Add a strength type"
+        value="Patient"
+      />
+    </label>
+  </div>
+  <label
+    for="strength-description"
+  >
+    <textarea
+      id="strength-description"
+      placeholder="Add a strength description"
+    >
+      Thanks to her training as a tutor and teacher, Aditi is incredibly patient and can almost always remain calm.
+    </textarea>
+  </label>
+</div>
+`;

@@ -84,6 +84,28 @@ export const playerCharacter1Response = {
   favors: playerCharacter1Favors,
   skills: playerCharacter1Skills,
   weapons: playerCharacter1Weapons,
+  motivations: {
+    strength: {
+      type: 'Patient',
+      description:
+        'Thanks to her training as a tutor and teacher, Aditi is incredibly patient and can almost always remain calm.',
+    },
+    flaw: {
+      type: 'Conditioning',
+      description:
+        'Even after her escape, Aditi still struggles with conditioning that requires her to be subservient to humans and avoid hurting them.',
+    },
+    desire: {
+      type: 'Belonging',
+      description:
+        'Aditi seeks a family or community where she feels like she belongs, and isn’t treated as a “thing.”',
+    },
+    fear: {
+      type: 'Discovery',
+      description:
+        'Aditi fears others (especially Mila) learning that she’s a clone, and worse, that she’s an escaped clone.',
+    },
+  },
 }
 export const playerCharacter1 = new PlayerCharacterRecord(
   fromJS({

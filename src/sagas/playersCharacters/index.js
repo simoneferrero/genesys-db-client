@@ -111,6 +111,7 @@ export function* editPlayerCharacterSaga({
       },
       deletedWeapons,
       favors,
+      motivations,
       skills,
       weapons,
     },
@@ -124,6 +125,7 @@ export function* editPlayerCharacterSaga({
       [],
     ),
     favors: Object.values(favors),
+    motivations,
     skills: Object.values(skills)
       .filter(({ rank }) => rank)
       .map(({ id, rank }) => ({
