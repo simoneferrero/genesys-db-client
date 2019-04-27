@@ -31,6 +31,11 @@ const PlayerCharacterRecord = Record({
     presence: 0,
     willpower: 0,
   }),
+  equipment: Map({
+    armor: '',
+    gear: '',
+    money: 0,
+  }),
   favors: List(),
   id: null,
   motivations: Map({
@@ -52,6 +57,7 @@ const PlayerCharacterRecord = Record({
     }),
   }),
   name: '',
+  notes: '',
   player_name: '',
   skills: List(),
   weapons: List(),

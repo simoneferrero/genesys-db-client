@@ -289,8 +289,10 @@ describe('playersCharacters sagas', () => {
         } = values
         const data = JSON.stringify({
           deletedWeapons: [`${weapon1.id}`],
+          equipment: playerCharacter1Response.equipment,
           favors,
           motivations: playerCharacter1Response.motivations,
+          notes: playerCharacter1Response.notes,
           skills: rawSkills
             .filter(({ rank }) => rank)
             .map(({ id, rank }) => ({ id, rank })),

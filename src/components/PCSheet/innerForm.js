@@ -13,6 +13,7 @@ import { Form } from 'formik'
 import Favors from 'components/Favors'
 import FormButtons from 'components/FormButtons'
 import Motivations from 'components/Motivations'
+import Notes from 'components/Notes'
 import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
 import Weapons from 'components/WeaponsSection'
@@ -89,6 +90,14 @@ const InnerForm = ({
       isSubmitting={isSubmitting}
       setFieldValue={setFieldValue}
       sectionTitle="Favors"
+    />
+    <StyledSectionWrapper
+      as={Notes}
+      editing={editing}
+      isSubmitting={isSubmitting}
+      notes={editing ? values.notes : initialValues.notes}
+      setFieldValue={setFieldValue}
+      sectionTitle="Notes"
     />
   </StyledForm>
 )
