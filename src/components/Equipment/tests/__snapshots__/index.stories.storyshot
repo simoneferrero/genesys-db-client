@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Equipment default 1`] = `
+.c0 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  padding: 12px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "money" "armor" "gear";
+}
+
+.c0 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c0 div,
+.c0 label {
+  width: 100%;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c0 div:nth-child(1),
+.c0 label:nth-child(1) {
+  grid-area: money;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+}
+
+.c0 div:nth-child(2),
+.c0 label:nth-child(2) {
+  grid-area: armor;
+}
+
+.c0 div:nth-child(3),
+.c0 label:nth-child(3) {
+  grid-area: gear;
+}
+
+.c0 div:nth-child(1) {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c0 p,
+.c0 input,
+.c0 textarea {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c0 input,
+.c0 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c0 textarea {
+  height: 6em;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "money ." "armor armor" "gear gear";
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c0 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "money . . ." "armor armor gear gear";
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
+  }
+}
+
+<div
+  class="c0"
+  data-testid="equipment"
+>
+  <div
+    data-testid="money"
+  >
+    <h3>
+      Money:
+    </h3>
+    <p>
+      238
+       credits
+    </p>
+  </div>
+  <div
+    data-testid="armor"
+  >
+    <h3>
+      Armor:
+    </h3>
+    <p>
+      Concealed buckyweave jacket (defense 1, +1 soak)
+    </p>
+  </div>
+  <div
+    data-testid="gear"
+  >
+    <h3>
+      Gear:
+    </h3>
+    <p>
+      Portable medkit (may perform Medicine checks without penalty) 3 slap-patches (painkillers) PAD Fake New Angeles ID
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Equipment editing 1`] = `
+.c0 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  padding: 12px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "money" "armor" "gear";
+}
+
+.c0 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c0 div,
+.c0 label {
+  width: 100%;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c0 div:nth-child(1),
+.c0 label:nth-child(1) {
+  grid-area: money;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+}
+
+.c0 div:nth-child(2),
+.c0 label:nth-child(2) {
+  grid-area: armor;
+}
+
+.c0 div:nth-child(3),
+.c0 label:nth-child(3) {
+  grid-area: gear;
+}
+
+.c0 div:nth-child(1) {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c0 p,
+.c0 input,
+.c0 textarea {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c0 input,
+.c0 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c0 textarea {
+  height: 6em;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "money ." "armor armor" "gear gear";
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c0 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "money . . ." "armor armor gear gear";
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
+  }
+}
+
+<div
+  class="c0"
+  data-testid="equipment"
+>
+  <label
+    for="money"
+  >
+    <h3>
+      Money:
+    </h3>
+    <input
+      id="money"
+      name="money"
+      value="238"
+    />
+    <p>
+      credits
+    </p>
+  </label>
+  <label
+    for="armor"
+  >
+    <h3>
+      Armor:
+    </h3>
+    <textarea
+      id="armor"
+      name="armor"
+    >
+      Concealed buckyweave jacket (defense 1, +1 soak)
+    </textarea>
+  </label>
+  <label
+    for="gear"
+  >
+    <h3>
+      Gear:
+    </h3>
+    <textarea
+      id="gear"
+      name="gear"
+    >
+      Portable medkit (may perform Medicine checks without penalty) 3 slap-patches (painkillers) PAD Fake New Angeles ID
+    </textarea>
+  </label>
+</div>
+`;

@@ -70,9 +70,13 @@ describe('<PCSheet />', () => {
     const favors = getByTestId(/favors/i)
     expect(favors).toBeInTheDocument()
 
-    // Favors
+    // Notes
     const notes = getByTestId(/notes/i)
     expect(notes).toBeInTheDocument()
+
+    // Equipment
+    const equipment = getByTestId(/equipment/i)
+    expect(equipment).toBeInTheDocument()
 
     // Change form state
     fireEvent.click(editButton)
@@ -125,6 +129,16 @@ describe('<PCSheet />', () => {
     fireEvent.change(noteInput, { target: { value: newNotes } })
     const newNotesValue = getByDisplayValue(newNotes)
     expect(newNotesValue).toBeInTheDocument()
+
+    // Check equipment change
+    const armorInput = getByDisplayValue(
+      playerCharacter1Response.equipment.armor,
+    )
+    expect(armorInput).toBeInTheDocument()
+    const newArmor = 'These is new armor info'
+    fireEvent.change(armorInput, { target: { value: newArmor } })
+    const newArmorValue = getByDisplayValue(newArmor)
+    expect(newArmorValue).toBeInTheDocument()
 
     // Form buttons
     const cancelButton = getByTestId(/cancel-pc-sheet/i)

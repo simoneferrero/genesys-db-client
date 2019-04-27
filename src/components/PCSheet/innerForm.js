@@ -10,6 +10,7 @@ import * as yup from 'yup'
 
 import { Form } from 'formik'
 
+import Equipment from 'components/Equipment'
 import Favors from 'components/Favors'
 import FormButtons from 'components/FormButtons'
 import Motivations from 'components/Motivations'
@@ -90,6 +91,14 @@ const InnerForm = ({
       isSubmitting={isSubmitting}
       setFieldValue={setFieldValue}
       sectionTitle="Favors"
+    />
+    <StyledSectionWrapper
+      as={Equipment}
+      editing={editing}
+      isSubmitting={isSubmitting}
+      equipment={editing ? values.equipment : initialValues.equipment}
+      setFieldValue={setFieldValue}
+      sectionTitle="Equipment"
     />
     <StyledSectionWrapper
       as={Notes}

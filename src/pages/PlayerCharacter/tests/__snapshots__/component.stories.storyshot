@@ -1,6 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/PlayerCharacter default 1`] = `
+.c35 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  padding: 12px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "money" "armor" "gear";
+}
+
+.c35 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c35 div,
+.c35 label {
+  width: 100%;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c35 div:nth-child(1),
+.c35 label:nth-child(1) {
+  grid-area: money;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+}
+
+.c35 div:nth-child(2),
+.c35 label:nth-child(2) {
+  grid-area: armor;
+}
+
+.c35 div:nth-child(3),
+.c35 label:nth-child(3) {
+  grid-area: gear;
+}
+
+.c35 div:nth-child(1) {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c35 p,
+.c35 input,
+.c35 textarea {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c35 input,
+.c35 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c35 textarea {
+  height: 6em;
+}
+
 .c32 {
   width: 100%;
   height: -webkit-fit-content;
@@ -40,6 +113,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 .c32 > div:last-child {
+  color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
@@ -136,6 +210,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 .c33 > div:last-child {
+  color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -366,7 +441,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c35 {
+.c37 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -374,8 +449,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c35 p,
-.c35 textarea {
+.c37 p,
+.c37 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -386,7 +461,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   font-size: 16px;
 }
 
-.c35 textarea {
+.c37 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -1054,6 +1129,31 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 .c34::before {
+  content: 'Equipment';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c36 {
+  position: relative;
+  overflow: visible;
+}
+
+.c36::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -1071,6 +1171,27 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   line-height: 18px;
   font-family: 'Monkirta',Helvetica,sans-serif;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c35 {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "money ." "armor armor" "gear gear";
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c35 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "money . . ." "armor armor gear gear";
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c35 {
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
+  }
 }
 
 @media only screen and (min-width:1800px) {
@@ -1104,13 +1225,13 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c35 textarea {
+  .c37 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c35 textarea {
+  .c37 textarea {
     height: 10em;
   }
 }
@@ -2217,6 +2338,42 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
     </div>
     <div
       class="c34 c35"
+      data-testid="equipment"
+    >
+      <div
+        data-testid="money"
+      >
+        <h3>
+          Money:
+        </h3>
+        <p>
+          238
+           credits
+        </p>
+      </div>
+      <div
+        data-testid="armor"
+      >
+        <h3>
+          Armor:
+        </h3>
+        <p>
+          Concealed buckyweave jacket (defense 1, +1 soak)
+        </p>
+      </div>
+      <div
+        data-testid="gear"
+      >
+        <h3>
+          Gear:
+        </h3>
+        <p>
+          Portable medkit (may perform Medicine checks without penalty) 3 slap-patches (painkillers) PAD Fake New Angeles ID
+        </p>
+      </div>
+    </div>
+    <div
+      class="c36 c37"
       data-testid="notes"
     >
       <p
@@ -2230,6 +2387,79 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 `;
 
 exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
+.c35 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  padding: 12px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "money" "armor" "gear";
+}
+
+.c35 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c35 div,
+.c35 label {
+  width: 100%;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c35 div:nth-child(1),
+.c35 label:nth-child(1) {
+  grid-area: money;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+}
+
+.c35 div:nth-child(2),
+.c35 label:nth-child(2) {
+  grid-area: armor;
+}
+
+.c35 div:nth-child(3),
+.c35 label:nth-child(3) {
+  grid-area: gear;
+}
+
+.c35 div:nth-child(1) {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c35 p,
+.c35 input,
+.c35 textarea {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c35 input,
+.c35 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c35 textarea {
+  height: 6em;
+}
+
 .c32 {
   width: 100%;
   height: -webkit-fit-content;
@@ -2269,6 +2499,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 .c32 > div:last-child {
+  color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
@@ -2365,6 +2596,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 .c33 > div:last-child {
+  color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -2595,7 +2827,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c35 {
+.c37 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -2603,8 +2835,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c35 p,
-.c35 textarea {
+.c37 p,
+.c37 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -2615,7 +2847,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   font-size: 16px;
 }
 
-.c35 textarea {
+.c37 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -3283,6 +3515,31 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 .c34::before {
+  content: 'Equipment';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c36 {
+  position: relative;
+  overflow: visible;
+}
+
+.c36::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -3300,6 +3557,27 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   line-height: 18px;
   font-family: 'Monkirta',Helvetica,sans-serif;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+  .c35 {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "money ." "armor armor" "gear gear";
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c35 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "money . . ." "armor armor gear gear";
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c35 {
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
+  }
 }
 
 @media only screen and (min-width:1800px) {
@@ -3333,13 +3611,13 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c35 textarea {
+  .c37 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c35 textarea {
+  .c37 textarea {
     height: 10em;
   }
 }
@@ -4446,6 +4724,42 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
     </div>
     <div
       class="c34 c35"
+      data-testid="equipment"
+    >
+      <div
+        data-testid="money"
+      >
+        <h3>
+          Money:
+        </h3>
+        <p>
+          238
+           credits
+        </p>
+      </div>
+      <div
+        data-testid="armor"
+      >
+        <h3>
+          Armor:
+        </h3>
+        <p>
+          Concealed buckyweave jacket (defense 1, +1 soak)
+        </p>
+      </div>
+      <div
+        data-testid="gear"
+      >
+        <h3>
+          Gear:
+        </h3>
+        <p>
+          Portable medkit (may perform Medicine checks without penalty) 3 slap-patches (painkillers) PAD Fake New Angeles ID
+        </p>
+      </div>
+    </div>
+    <div
+      class="c36 c37"
       data-testid="notes"
     >
       <p

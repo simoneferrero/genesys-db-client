@@ -110,10 +110,8 @@ export const playerCharacter1Response = {
     'Aditi is a clone, a created being developed by Jinteki Biotech. She is one of thousands of Desai clones, developed as tutors and care- takers for the children of the rich and powerful. Aditi, like other clones, was conditioned to obey humans at all cost. But for some reason, her conditioning had a tiny flaw, and Aditi de- veloped the desire for freedom. As a caretaker to two young children in a wealthy household, Aditi slowly stole money and made contacts in the New Angeles underworld. Then one day she simply walked away and into her new life. A man named Tián Shun got her a new ID and a place to crash in Base De Cayambe. Now Aditi works as an off-the-books doctor and research assistant. She keeps the clone barcode on her neck hidden with high collars, counting on the fact that Desai clones have always been rare and exclusive to help avoid being recognized. After she helped Mila Braun with an industrial injury and Tam Kamaka when his body attempted to reject his g-modded muscles, she became a part of their group of friends. She works hard to keep her identity as a clone secret, especially from Mila. The two are great friends, and losing that scares Aditi more than anything.',
   equipment: {
     armor: 'Concealed buckyweave jacket (defense 1, +1 soak)',
-    gear: `Portable medkit (may perform Medicine checks without penalty)
-    3 slap-patches (painkillers)
-    PAD
-    Fake New Angeles ID`,
+    gear:
+      'Portable medkit (may perform Medicine checks without penalty) 3 slap-patches (painkillers) PAD Fake New Angeles ID',
     money: 238,
   },
 }

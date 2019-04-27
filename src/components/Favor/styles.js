@@ -40,6 +40,8 @@ export const StyledFavor = styled.div`
   }
 
   & > div:last-child {
+    color: ${colours.teal};
+
     ${({ isComplete }) => isComplete && completedStyles};
     ${({ isNew }) => !isNew && descriptionStyles}
   }

@@ -40,6 +40,7 @@ exports[`Storyshots Components/FavorsSection default 1`] = `
 }
 
 .c5 > div:last-child {
+  color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
@@ -136,6 +137,7 @@ exports[`Storyshots Components/FavorsSection default 1`] = `
 }
 
 .c4 > div:last-child {
+  color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -393,6 +395,7 @@ exports[`Storyshots Components/FavorsSection editing 1`] = `
 }
 
 .c6 > div:last-child {
+  color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
@@ -489,6 +492,7 @@ exports[`Storyshots Components/FavorsSection editing 1`] = `
 }
 
 .c4 > div:last-child {
+  color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
