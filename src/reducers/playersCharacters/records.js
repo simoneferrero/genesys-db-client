@@ -33,6 +33,24 @@ const PlayerCharacterRecord = Record({
   }),
   favors: List(),
   id: null,
+  motivations: Map({
+    strength: Map({
+      type: '',
+      description: '',
+    }),
+    flaw: Map({
+      type: '',
+      description: '',
+    }),
+    desire: Map({
+      type: '',
+      description: '',
+    }),
+    fear: Map({
+      type: '',
+      description: '',
+    }),
+  }),
   name: '',
   player_name: '',
   skills: List(),

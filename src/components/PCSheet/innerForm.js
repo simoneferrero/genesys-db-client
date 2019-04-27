@@ -10,10 +10,11 @@ import * as yup from 'yup'
 
 import { Form } from 'formik'
 
+import Favors from 'components/Favors'
 import FormButtons from 'components/FormButtons'
+import Motivations from 'components/Motivations'
 import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
-import Favors from 'components/Favors'
 import Weapons from 'components/WeaponsSection'
 
 import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
@@ -70,6 +71,14 @@ const InnerForm = ({
       showAdd
       skills={{}}
       weapons={weapons}
+    />
+    <StyledSectionWrapper
+      as={Motivations}
+      editing={editing}
+      motivations={editing ? values.motivations : initialValues.motivations}
+      isSubmitting={isSubmitting}
+      setFieldValue={setFieldValue}
+      sectionTitle="Motivations"
     />
     <StyledSectionWrapper
       as={Favors}

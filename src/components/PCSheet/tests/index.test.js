@@ -4,6 +4,7 @@ import { fromJS } from 'immutable'
 
 import { factionsById } from 'mocks/factions'
 import {
+  playerCharacter1Response,
   playerCharacter1Id,
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
@@ -36,7 +37,12 @@ describe('<PCSheet />', () => {
   })
 
   it('should render correctly', () => {
-    const { getByTestId, getByText, queryByText } = renderComponent()
+    const {
+      getByDisplayValue,
+      getByTestId,
+      getByText,
+      queryByText,
+    } = renderComponent()
 
     // Buttons
     const buttons = getByTestId(/form-buttons-pc-sheet/i)
@@ -55,6 +61,10 @@ describe('<PCSheet />', () => {
     // Weapons
     const weapons = getByTestId(/weapons-section/i)
     expect(weapons).toBeInTheDocument()
+
+    // Motivations
+    const motivations = getByTestId(/motivations/i)
+    expect(motivations).toBeInTheDocument()
 
     // Favors
     const favors = getByTestId(/favors/i)
@@ -80,19 +90,29 @@ describe('<PCSheet />', () => {
     fireEvent.click(increaseAthleticsButton)
     expect(athleticsRank).toHaveStyle(`background-color: ${colours.teal}`)
 
-    // Check favors change
-    const completeFavorButton = getByTestId('completeButton-1')
-    expect(completeFavorButton).toBeInTheDocument()
-    fireEvent.click(completeFavorButton)
-    const revertFavorButton = getByTestId('revertButton-1')
-    expect(revertFavorButton).toBeInTheDocument()
-
     // Check weapons change
     const deleteWeaponButton = getByTestId('deleteWeaponButton-1')
     expect(deleteWeaponButton).toBeInTheDocument()
     fireEvent.click(deleteWeaponButton)
     const undoButton = getByText(/undo/gi)
     expect(undoButton).toBeInTheDocument()
+
+    // Check motivations change
+    const strengthTypeInput = getByDisplayValue(
+      playerCharacter1Response.motivations.strength.type,
+    )
+    expect(strengthTypeInput).toBeInTheDocument()
+    const newStrengthType = 'Super strength'
+    fireEvent.change(strengthTypeInput, { target: { value: newStrengthType } })
+    const newStrengthTypeValue = getByDisplayValue(newStrengthType)
+    expect(newStrengthTypeValue).toBeInTheDocument()
+
+    // Check favors change
+    const completeFavorButton = getByTestId('completeButton-1')
+    expect(completeFavorButton).toBeInTheDocument()
+    fireEvent.click(completeFavorButton)
+    const revertFavorButton = getByTestId('revertButton-1')
+    expect(revertFavorButton).toBeInTheDocument()
 
     // Form buttons
     const cancelButton = getByTestId(/cancel-pc-sheet/i)

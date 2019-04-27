@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Motivations default 1`] = `
+.c1 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c1 div {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 6px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  text-transform: uppercase;
+}
+
+.c1 h4 {
+  margin: 0;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c1 p,
+.c1 input,
+.c1 textarea {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c1 input,
+.c1 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c1 textarea {
+  height: 5em;
+}
+
+.c0 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c1 textarea {
+    height: 4em;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="motivations"
+>
+  <div
+    class="c1"
+    data-testid="motivation-strength"
+  >
+    <div>
+      <h3>
+        strength
+      </h3>
+      <h4>
+        Patient
+      </h4>
+    </div>
+    <p
+      data-testid="strength-description"
+    >
+      Thanks to her training as a tutor and teacher, Aditi is incredibly patient and can almost always remain calm.
+    </p>
+  </div>
+  <div
+    class="c1"
+    data-testid="motivation-flaw"
+  >
+    <div>
+      <h3>
+        flaw
+      </h3>
+      <h4>
+        Conditioning
+      </h4>
+    </div>
+    <p
+      data-testid="flaw-description"
+    >
+      Even after her escape, Aditi still struggles with conditioning that requires her to be subservient to humans and avoid hurting them.
+    </p>
+  </div>
+  <div
+    class="c1"
+    data-testid="motivation-desire"
+  >
+    <div>
+      <h3>
+        desire
+      </h3>
+      <h4>
+        Belonging
+      </h4>
+    </div>
+    <p
+      data-testid="desire-description"
+    >
+      Aditi seeks a family or community where she feels like she belongs, and isn’t treated as a “thing.”
+    </p>
+  </div>
+  <div
+    class="c1"
+    data-testid="motivation-fear"
+  >
+    <div>
+      <h3>
+        fear
+      </h3>
+      <h4>
+        Discovery
+      </h4>
+    </div>
+    <p
+      data-testid="fear-description"
+    >
+      Aditi fears others (especially Mila) learning that she’s a clone, and worse, that she’s an escaped clone.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Motivations editing 1`] = `
+.c1 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c1 div {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 6px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  text-transform: uppercase;
+}
+
+.c1 h4 {
+  margin: 0;
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c1 p,
+.c1 input,
+.c1 textarea {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c1 input,
+.c1 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c1 textarea {
+  height: 5em;
+}
+
+.c0 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
+  .c1 textarea {
+    height: 4em;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="motivations"
+>
+  <div
+    class="c1"
+    data-testid="motivation-strength"
+  >
+    <div>
+      <h3>
+        strength
+      </h3>
+      <label
+        for="strength-type"
+      >
+        <input
+          id="strength-type"
+          placeholder="Add a strength type"
+          value="Patient"
+        />
+      </label>
+    </div>
+    <label
+      for="strength-description"
+    >
+      <textarea
+        id="strength-description"
+        placeholder="Add a strength description"
+      >
+        Thanks to her training as a tutor and teacher, Aditi is incredibly patient and can almost always remain calm.
+      </textarea>
+    </label>
+  </div>
+  <div
+    class="c1"
+    data-testid="motivation-flaw"
+  >
+    <div>
+      <h3>
+        flaw
+      </h3>
+      <label
+        for="flaw-type"
+      >
+        <input
+          id="flaw-type"
+          placeholder="Add a flaw type"
+          value="Conditioning"
+        />
+      </label>
+    </div>
+    <label
+      for="flaw-description"
+    >
+      <textarea
+        id="flaw-description"
+        placeholder="Add a flaw description"
+      >
+        Even after her escape, Aditi still struggles with conditioning that requires her to be subservient to humans and avoid hurting them.
+      </textarea>
+    </label>
+  </div>
+  <div
+    class="c1"
+    data-testid="motivation-desire"
+  >
+    <div>
+      <h3>
+        desire
+      </h3>
+      <label
+        for="desire-type"
+      >
+        <input
+          id="desire-type"
+          placeholder="Add a desire type"
+          value="Belonging"
+        />
+      </label>
+    </div>
+    <label
+      for="desire-description"
+    >
+      <textarea
+        id="desire-description"
+        placeholder="Add a desire description"
+      >
+        Aditi seeks a family or community where she feels like she belongs, and isn’t treated as a “thing.”
+      </textarea>
+    </label>
+  </div>
+  <div
+    class="c1"
+    data-testid="motivation-fear"
+  >
+    <div>
+      <h3>
+        fear
+      </h3>
+      <label
+        for="fear-type"
+      >
+        <input
+          id="fear-type"
+          placeholder="Add a fear type"
+          value="Discovery"
+        />
+      </label>
+    </div>
+    <label
+      for="fear-description"
+    >
+      <textarea
+        id="fear-description"
+        placeholder="Add a fear description"
+      >
+        Aditi fears others (especially Mila) learning that she’s a clone, and worse, that she’s an escaped clone.
+      </textarea>
+    </label>
+  </div>
+</div>
+`;
