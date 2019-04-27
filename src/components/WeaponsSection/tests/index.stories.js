@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import { skillsById } from 'mocks/skills'
-import { weapon1, weapon2, newWeaponResponse } from 'mocks/weapons'
+import { weapon1, weaponsById, newWeaponResponse } from 'mocks/weapons'
 
 import WeaponsSection from '../index'
 
@@ -14,7 +14,10 @@ const defaultProps = {
   handleSubmit: action('handleSubmit'),
   onWeaponChange: action('onWeaponChange'),
   skills: fromJS(skillsById).toJS(),
-  weapons: [weapon1, weapon2, newWeaponResponse],
+  weapons: {
+    ...fromJS(weaponsById).toJS(),
+    [newWeaponResponse.id]: newWeaponResponse,
+  },
 }
 
 const renderComponent = (props = {}) => (
@@ -28,7 +31,7 @@ storiesOf('Components/WeaponsSection', module)
     const props = {
       isCharacter: true,
       showAdd: true,
-      characterWeapons: [weapon1],
+      characterWeapons: { [weapon1.id]: weapon1 },
     }
     return renderComponent(props)
   })

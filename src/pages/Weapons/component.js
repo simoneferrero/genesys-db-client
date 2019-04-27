@@ -55,7 +55,7 @@ export const Weapons = ({
             handleSubmit={addWeapon}
             showAdd={role === 'gm'}
             skills={skills}
-            weapons={Object.values(weapons)}
+            weapons={weapons}
           />
         </Suspense>
       </StyledWrapper>

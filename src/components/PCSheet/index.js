@@ -27,6 +27,7 @@ const PCSheet = ({
     deletedWeapons: {},
     favors: keyBy(favors, 'id'),
     skills: keyBy(skills, 'id'),
+    weapons: keyBy(playerCharacter.weapons, 'id'),
   }
 
   return (

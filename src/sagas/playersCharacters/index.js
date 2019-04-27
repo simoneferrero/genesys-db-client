@@ -131,7 +131,7 @@ export function* editPlayerCharacterSaga({
         rank,
       })),
     strain_current,
-    weapons: Object.values(weapons),
+    weapons: Object.values(weapons).map(({ id, mods }) => ({ id, mods })),
     wounds_current,
   })
   const requestUrl = uri(API_PATH)

@@ -36,7 +36,7 @@ const InnerForm = ({
     submit: <MdCheck />,
   }
   const WEAPON_ID = 'id'
-  const weaponIdOptions = weapons.map(({ id, name }) => ({
+  const weaponIdOptions = Object.values(weapons).map(({ id, name }) => ({
     label: name,
     value: id,
   }))
@@ -60,7 +60,7 @@ const InnerForm = ({
       weapon={values}
     />
   )
-  const mappedWeapons = (isCharacter ? characterWeapons : weapons)
+  const mappedWeapons = Object.values(isCharacter ? characterWeapons : weapons)
     .sort((a, b) => (a.name > b.name ? 1 : -1))
     .map((weapon) => (
       <Weapon
@@ -150,7 +150,7 @@ InnerForm.validationSchema = yup.object({
 
 InnerForm.propTypes = {
   /** Weapons belonging to a specific character */
-  characterWeapons: PropTypes.arrayOf(weaponType),
+  characterWeapons: PropTypes.objectOf(weaponType),
   /** Custom styles */
   className: PropTypes.string,
   /** Which weapons will be deleted */
@@ -182,7 +182,7 @@ InnerForm.propTypes = {
   /** New weapon values */
   values: PropTypes.object.isRequired,
   /** Weapons data */
-  weapons: PropTypes.arrayOf(weaponType).isRequired,
+  weapons: PropTypes.objectOf(weaponType).isRequired,
 }
 
 export default InnerForm

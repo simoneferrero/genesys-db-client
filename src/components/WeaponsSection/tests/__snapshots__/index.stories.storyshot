@@ -173,138 +173,6 @@ exports[`Storyshots Components/WeaponsSection default 1`] = `
   >
     <div
       class="c2"
-      data-testid="weapon-3"
-    >
-      <button
-        class="c3"
-        data-testid="dropdown-3"
-        type="button"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 320 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-          />
-        </svg>
-        <h3>
-          Cantor M-101 Assault Rifle
-        </h3>
-      </button>
-      <div
-        class="c4"
-        data-testid="weapon-3-content"
-      >
-        <div
-          data-testid="weapon-3-skill"
-        >
-          <h4>
-            Skill:
-          </h4>
-          <span>
-            Ranged (Heavy)
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-range"
-        >
-          <h4>
-            Range:
-          </h4>
-          <span>
-            Long
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-special"
-        >
-          <h4>
-            Special:
-          </h4>
-          <span>
-            Auto-fire
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-damage"
-        >
-          <h4>
-            Damage:
-          </h4>
-          <span>
-            8
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-crit"
-        >
-          <h4>
-            Crit:
-          </h4>
-          <span>
-            3
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-encumbrance"
-        >
-          <h4>
-            Encumbrance:
-          </h4>
-          <span>
-            4
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-hard_points"
-        >
-          <h4>
-            Hard Points:
-          </h4>
-          <span>
-            3
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-price"
-        >
-          <h4>
-            Price:
-          </h4>
-          <span>
-            1000
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-restricted"
-        >
-          <h4>
-            Restricted:
-          </h4>
-          <span>
-            Yes
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-rarity"
-        >
-          <h4>
-            Rarity:
-          </h4>
-          <span>
-            7
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      class="c2"
       data-testid="weapon-2"
     >
       <button
@@ -567,22 +435,143 @@ exports[`Storyshots Components/WeaponsSection default 1`] = `
         </div>
       </div>
     </div>
+    <div
+      class="c2"
+      data-testid="weapon-3"
+    >
+      <button
+        class="c3"
+        data-testid="dropdown-3"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 320 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+          />
+        </svg>
+        <h3>
+          Tantor M-101 Assault Rifle
+        </h3>
+      </button>
+      <div
+        class="c4"
+        data-testid="weapon-3-content"
+      >
+        <div
+          data-testid="weapon-3-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Ranged (Heavy)
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Long
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Auto-fire
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            8
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            4
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            1000
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            Yes
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            7
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots Components/WeaponsSection editing 1`] = `
-.c6 {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  grid-row-gap: 6px;
-  grid-column-gap: 12px;
-}
-
 .c2 {
   width: 100%;
   height: -webkit-fit-content;
@@ -594,9 +583,21 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
   grid-column-gap: 12px;
 }
 
-.c2 > button > h3,
-.c2 div > span,
-.c2 div > h4 {
+.c6 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-row-gap: 6px;
+  grid-column-gap: 12px;
+}
+
+.c6 > button > h3,
+.c6 div > span,
+.c6 label > h4,
+.c6 div > h4 {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -804,147 +805,6 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
   >
     <div
       class="c2"
-      data-testid="weapon-3"
-    >
-      <button
-        class="c3"
-        data-testid="dropdown-3"
-        type="button"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 320 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-          />
-        </svg>
-        <h3>
-          Cantor M-101 Assault Rifle
-        </h3>
-      </button>
-      <div
-        class="c4"
-        data-testid="weapon-3-content"
-      >
-        <div
-          data-testid="weapon-3-skill"
-        >
-          <h4>
-            Skill:
-          </h4>
-          <span>
-            Ranged (Heavy)
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-range"
-        >
-          <h4>
-            Range:
-          </h4>
-          <span>
-            Long
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-special"
-        >
-          <h4>
-            Special:
-          </h4>
-          <span>
-            Auto-fire
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-damage"
-        >
-          <h4>
-            Damage:
-          </h4>
-          <span>
-            8
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-crit"
-        >
-          <h4>
-            Crit:
-          </h4>
-          <span>
-            3
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-encumbrance"
-        >
-          <h4>
-            Encumbrance:
-          </h4>
-          <span>
-            4
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-hard_points"
-        >
-          <h4>
-            Hard Points:
-          </h4>
-          <span>
-            3
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-price"
-        >
-          <h4>
-            Price:
-          </h4>
-          <span>
-            1000
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-restricted"
-        >
-          <h4>
-            Restricted:
-          </h4>
-          <span>
-            Yes
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-rarity"
-        >
-          <h4>
-            Rarity:
-          </h4>
-          <span>
-            7
-          </span>
-        </div>
-        <button
-          class="c5"
-          data-testid="deleteWeaponButton-3"
-          type="button"
-        >
-          <h4>
-            Undo
-          </h4>
-        </button>
-      </div>
-    </div>
-    <div
-      class="c6"
       data-testid="weapon-2"
     >
       <button
@@ -993,16 +853,20 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
             Engaged
           </span>
         </div>
-        <div
-          data-testid="weapon-2-special"
+        <label
+          for="mods"
         >
           <h4>
-            Special:
+            Mods:
           </h4>
-          <span>
-            Disorient 1, Knockdown
-          </span>
-        </div>
+          <input
+            data-testid="weapon-2-mods"
+            id="mods"
+            name="mods"
+            placeholder="Add modifications"
+            value=""
+          />
+        </label>
         <div
           data-testid="weapon-2-damage"
         >
@@ -1085,7 +949,7 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
       </div>
     </div>
     <div
-      class="c6"
+      class="c2"
       data-testid="weapon-1"
     >
       <button
@@ -1134,16 +998,20 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
             Engaged
           </span>
         </div>
-        <div
-          data-testid="weapon-1-special"
+        <label
+          for="mods"
         >
           <h4>
-            Special:
+            Mods:
           </h4>
-          <span>
-            Stun 4, Stun Damage
-          </span>
-        </div>
+          <input
+            data-testid="weapon-1-mods"
+            id="mods"
+            name="mods"
+            placeholder="Add modifications"
+            value=""
+          />
+        </label>
         <div
           data-testid="weapon-1-damage"
         >
@@ -1221,6 +1089,152 @@ exports[`Storyshots Components/WeaponsSection editing 1`] = `
         >
           <h4>
             Delete
+          </h4>
+        </button>
+      </div>
+    </div>
+    <div
+      class="c6"
+      data-testid="weapon-3"
+    >
+      <button
+        class="c3"
+        data-testid="dropdown-3"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 320 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+          />
+        </svg>
+        <h3>
+          Tantor M-101 Assault Rifle
+        </h3>
+      </button>
+      <div
+        class="c4"
+        data-testid="weapon-3-content"
+      >
+        <div
+          data-testid="weapon-3-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Ranged (Heavy)
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Long
+          </span>
+        </div>
+        <label
+          for="mods"
+        >
+          <h4>
+            Mods:
+          </h4>
+          <input
+            data-testid="weapon-3-mods"
+            disabled=""
+            id="mods"
+            name="mods"
+            placeholder="Add modifications"
+            value=""
+          />
+        </label>
+        <div
+          data-testid="weapon-3-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            8
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            4
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            1000
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            Yes
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            7
+          </span>
+        </div>
+        <button
+          class="c5"
+          data-testid="deleteWeaponButton-3"
+          type="button"
+        >
+          <h4>
+            Undo
           </h4>
         </button>
       </div>
@@ -1879,138 +1893,6 @@ exports[`Storyshots Components/WeaponsSection showAdd new weapon 1`] = `
   >
     <div
       class="c4"
-      data-testid="weapon-3"
-    >
-      <button
-        class="c5"
-        data-testid="dropdown-3"
-        type="button"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 320 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-          />
-        </svg>
-        <h3>
-          Cantor M-101 Assault Rifle
-        </h3>
-      </button>
-      <div
-        class="c6"
-        data-testid="weapon-3-content"
-      >
-        <div
-          data-testid="weapon-3-skill"
-        >
-          <h4>
-            Skill:
-          </h4>
-          <span>
-            Ranged (Heavy)
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-range"
-        >
-          <h4>
-            Range:
-          </h4>
-          <span>
-            Long
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-special"
-        >
-          <h4>
-            Special:
-          </h4>
-          <span>
-            Auto-fire
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-damage"
-        >
-          <h4>
-            Damage:
-          </h4>
-          <span>
-            8
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-crit"
-        >
-          <h4>
-            Crit:
-          </h4>
-          <span>
-            3
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-encumbrance"
-        >
-          <h4>
-            Encumbrance:
-          </h4>
-          <span>
-            4
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-hard_points"
-        >
-          <h4>
-            Hard Points:
-          </h4>
-          <span>
-            3
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-price"
-        >
-          <h4>
-            Price:
-          </h4>
-          <span>
-            1000
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-restricted"
-        >
-          <h4>
-            Restricted:
-          </h4>
-          <span>
-            Yes
-          </span>
-        </div>
-        <div
-          data-testid="weapon-3-rarity"
-        >
-          <h4>
-            Rarity:
-          </h4>
-          <span>
-            7
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      class="c4"
       data-testid="weapon-2"
     >
       <button
@@ -2269,6 +2151,138 @@ exports[`Storyshots Components/WeaponsSection showAdd new weapon 1`] = `
           </h4>
           <span>
             3
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c4"
+      data-testid="weapon-3"
+    >
+      <button
+        class="c5"
+        data-testid="dropdown-3"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 320 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+          />
+        </svg>
+        <h3>
+          Tantor M-101 Assault Rifle
+        </h3>
+      </button>
+      <div
+        class="c6"
+        data-testid="weapon-3-content"
+      >
+        <div
+          data-testid="weapon-3-skill"
+        >
+          <h4>
+            Skill:
+          </h4>
+          <span>
+            Ranged (Heavy)
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-range"
+        >
+          <h4>
+            Range:
+          </h4>
+          <span>
+            Long
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-special"
+        >
+          <h4>
+            Special:
+          </h4>
+          <span>
+            Auto-fire
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-damage"
+        >
+          <h4>
+            Damage:
+          </h4>
+          <span>
+            8
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-crit"
+        >
+          <h4>
+            Crit:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-encumbrance"
+        >
+          <h4>
+            Encumbrance:
+          </h4>
+          <span>
+            4
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-hard_points"
+        >
+          <h4>
+            Hard Points:
+          </h4>
+          <span>
+            3
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-price"
+        >
+          <h4>
+            Price:
+          </h4>
+          <span>
+            1000
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-restricted"
+        >
+          <h4>
+            Restricted:
+          </h4>
+          <span>
+            Yes
+          </span>
+        </div>
+        <div
+          data-testid="weapon-3-rarity"
+        >
+          <h4>
+            Rarity:
+          </h4>
+          <span>
+            7
           </span>
         </div>
       </div>

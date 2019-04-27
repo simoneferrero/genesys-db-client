@@ -30,7 +30,7 @@ export const playersCharactersByIdSelector = createSelector(
         const originalWeapon = weaponsById.get(`${weapon_id}`)
 
         return originalWeapon.merge({
-          ...(mods && { special: mods }),
+          mods,
           id,
         })
       })

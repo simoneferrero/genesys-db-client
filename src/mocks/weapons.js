@@ -30,7 +30,7 @@ export const weapon2 = {
 }
 export const newWeaponResponse = {
   id: 3,
-  name: 'Cantor M-101 Assault Rifle',
+  name: 'Tantor M-101 Assault Rifle',
   skill: 'Ranged (Heavy)',
   damage: 8,
   crit: 3,

@@ -26,6 +26,7 @@ export const StyledWeapon = styled(FilteredWeapon)`
 
   & > button > h3,
   div > span,
+  label > h4,
   div > h4 {
     ${({ deleting }) => deleting && deletingStyles}
   }

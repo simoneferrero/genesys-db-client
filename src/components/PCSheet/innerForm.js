@@ -69,7 +69,7 @@ const InnerForm = ({
       sectionTitle="Weapons"
       showAdd
       skills={{}}
-      weapons={Object.values(weapons)}
+      weapons={weapons}
     />
     <StyledSectionWrapper
       as={Favors}
@@ -117,6 +117,7 @@ InnerForm.propTypes = {
     ...playerCharacterData,
     favors: PropTypes.objectOf(favorType).isRequired,
     skills: PropTypes.objectOf(skillType).isRequired,
+    weapons: PropTypes.objectOf(weaponType).isRequired,
   }).isRequired,
   /** Weapons' data */
   weapons: PropTypes.objectOf(weaponType).isRequired,

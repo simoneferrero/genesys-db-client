@@ -294,7 +294,9 @@ describe('playersCharacters sagas', () => {
             .filter(({ rank }) => rank)
             .map(({ id, rank }) => ({ id, rank })),
           strain_current,
-          weapons: playerCharacter1Augmented.toJS().weapons,
+          weapons: playerCharacter1Augmented
+            .toJS()
+            .weapons.map(({ id, mods }) => ({ id, mods })),
           wounds_current,
         })
 

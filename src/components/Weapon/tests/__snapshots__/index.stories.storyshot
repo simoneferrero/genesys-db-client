@@ -287,6 +287,7 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
 
 .c0 > button > h3,
 .c0 div > span,
+.c0 label > h4,
 .c0 div > h4 {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
@@ -511,16 +512,21 @@ exports[`Storyshots Components/Weapon deleting 1`] = `
         Engaged
       </span>
     </div>
-    <div
-      data-testid="weapon-1-special"
+    <label
+      for="mods"
     >
       <h4>
-        Special:
+        Mods:
       </h4>
-      <span>
-        Stun 4, Stun Damage
-      </span>
-    </div>
+      <input
+        data-testid="weapon-1-mods"
+        disabled=""
+        id="mods"
+        name="mods"
+        placeholder="Add modifications"
+        value=""
+      />
+    </label>
     <div
       data-testid="weapon-1-damage"
     >
@@ -834,16 +840,20 @@ exports[`Storyshots Components/Weapon editing 1`] = `
         Engaged
       </span>
     </div>
-    <div
-      data-testid="weapon-1-special"
+    <label
+      for="mods"
     >
       <h4>
-        Special:
+        Mods:
       </h4>
-      <span>
-        Stun 4, Stun Damage
-      </span>
-    </div>
+      <input
+        data-testid="weapon-1-mods"
+        id="mods"
+        name="mods"
+        placeholder="Add modifications"
+        value=""
+      />
+    </label>
     <div
       data-testid="weapon-1-damage"
     >

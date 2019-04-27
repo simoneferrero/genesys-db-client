@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { skillType } from 'types/skills'
 import { weaponType } from 'types/weapons'
 
+import isEmpty from 'lodash/isEmpty'
+
 import { Formik } from 'formik'
 
 import InnerForm from './innerForm'
@@ -27,7 +29,7 @@ const WeaponsSection = ({
     handleSubmit(values, { ...actions, setIsNew })
 
   const initialValues = {
-    id: weapons.length > 0 ? weapons[0].id : null,
+    id: isEmpty(weapons) ? null : Object.values(weapons)[0].id,
     isCharacter,
     crit: 0,
     damage: 0,
@@ -71,7 +73,7 @@ const WeaponsSection = ({
 
 WeaponsSection.propTypes = {
   /** Weapons belonging to a specific character */
-  characterWeapons: PropTypes.arrayOf(weaponType),
+  characterWeapons: PropTypes.objectOf(weaponType),
   /** Custom styles */
   className: PropTypes.string,
   /** Which weapons will be deleted */
@@ -91,7 +93,7 @@ WeaponsSection.propTypes = {
   /** Skills data */
   skills: PropTypes.objectOf(skillType).isRequired,
   /** Weapon data */
-  weapons: PropTypes.arrayOf(weaponType).isRequired,
+  weapons: PropTypes.objectOf(weaponType).isRequired,
 }
 
 WeaponsSection.defaultProps = {

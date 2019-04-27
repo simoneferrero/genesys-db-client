@@ -13,6 +13,8 @@ export const weaponData = {
     .isRequired,
   /** Unique identifier */
   id: PropTypes.number,
+  /** Any weapon modifications */
+  mods: PropTypes.string,
   /** Name of the weapon */
   name: PropTypes.string.isRequired,
   /** Price of new weapon */

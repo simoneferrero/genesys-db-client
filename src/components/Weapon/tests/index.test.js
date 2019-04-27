@@ -92,6 +92,23 @@ describe('<Weapon />', () => {
     expect(restrictedFieldValue).toBeInTheDocument()
   })
 
+  it('should correctly display mods if present', () => {
+    const mods = 'This is a mod'
+    const props = {
+      weapon: {
+        ...weapon1,
+        mods,
+      },
+    }
+    const { getByText, queryByText } = renderComponent(props)
+
+    const modsValue = getByText(mods)
+    expect(modsValue).toBeInTheDocument()
+
+    const specialValue = queryByText(weapon1.special)
+    expect(specialValue).not.toBeInTheDocument()
+  })
+
   it('should not break if skills are empty', () => {
     const props = {
       skills: {},
@@ -190,13 +207,18 @@ describe('<Weapon />', () => {
     const props = {
       editing: true,
     }
-    const { getByTestId, getByText } = renderComponent(props)
+    const {
+      getByPlaceholderText,
+      getByTestId,
+      getByText,
+      queryByTestId,
+    } = renderComponent(props)
 
     const existingWeapon = getByTestId(`weapon-${weapon1.id}`)
     expect(existingWeapon).toBeInTheDocument()
 
     Object.entries(weapon1).forEach(([key, value]) => {
-      if (key !== 'id' && key !== 'name') {
+      if (key !== 'id' && key !== 'name' && key !== 'special') {
         const field = getByTestId(`weapon-${weapon1.id}-${key}`)
         expect(field).toBeInTheDocument()
 
@@ -210,6 +232,23 @@ describe('<Weapon />', () => {
       }
     })
 
+    const special = queryByTestId(`weapon-${weapon1.id}-special`)
+    expect(special).not.toBeInTheDocument()
+
+    const modsLabel = getByText(/mods:/gi)
+    expect(modsLabel).toBeInTheDocument()
+
+    const mods = getByPlaceholderText(/add modifications/gi)
+    expect(mods).toBeInTheDocument()
+
+    const modsText = 'This is a mod'
+    fireEvent.change(mods, { target: { value: modsText } })
+
+    expect(mockSetFieldValue).toHaveBeenCalledWith(
+      `weapons.${weapon1.id}.mods`,
+      modsText,
+    )
+
     const deleteButton = getByTestId(/deleteWeaponButton/i)
     expect(deleteButton).toBeInTheDocument()
     const deleteButtonText = getByText(/delete/gi)
@@ -220,6 +259,21 @@ describe('<Weapon />', () => {
       `deletedWeapons.${weapon1.id}`,
       true,
     )
+  })
+
+  it('should correctly disable mods when submitting', () => {
+    const props = {
+      editing: true,
+      isSubmitting: true,
+    }
+    const { getByPlaceholderText, getByTestId } = renderComponent(props)
+
+    const existingWeapon = getByTestId(`weapon-${weapon1.id}`)
+    expect(existingWeapon).toBeInTheDocument()
+
+    const mods = getByPlaceholderText(/add modifications/gi)
+    expect(mods).toBeInTheDocument()
+    expect(mods).toBeDisabled()
   })
 
   it('should render correctly when deleting', () => {
@@ -233,7 +287,7 @@ describe('<Weapon />', () => {
     expect(existingWeapon).toBeInTheDocument()
 
     Object.entries(weapon1).forEach(([key, value]) => {
-      if (key !== 'id') {
+      if (key !== 'id' && key !== 'special') {
         let fieldValue
         if (key === 'restricted') {
           fieldValue = getByText(value ? 'Yes' : 'No')

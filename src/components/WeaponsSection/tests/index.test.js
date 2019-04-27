@@ -3,11 +3,11 @@ import WeaponsSection from '../index'
 import { fromJS } from 'immutable'
 
 import { skillsById } from 'mocks/skills'
-import { weapon1, weapon2, newWeaponResponse } from 'mocks/weapons'
+import { weapon1, weapon2, weaponsById, newWeaponResponse } from 'mocks/weapons'
 
 const mockHandleSubmit = jest.fn()
 const mockOnWeaponChange = jest.fn()
-const weapons = [weapon1, weapon2]
+const weapons = fromJS(weaponsById).toJS()
 const defaultProps = {
   skills: fromJS(skillsById).toJS(),
   weapons,
@@ -38,7 +38,7 @@ describe('<WeaponsSection />', () => {
     const nonExistingNewWeapon = queryByTestId(/new-weapon/i)
     expect(nonExistingNewWeapon).not.toBeInTheDocument()
 
-    weapons.forEach(({ id, status }) => {
+    Object.values(weapons).forEach(({ id, status }) => {
       const weapon = getByTestId(new RegExp(`weapon-${id}`, 'gi'))
       expect(weapon).toBeInTheDocument()
 
@@ -51,7 +51,7 @@ describe('<WeaponsSection />', () => {
 
   it('should render correctly when isCharacter', () => {
     const props = {
-      characterWeapons: [weapon1],
+      characterWeapons: { [weapon1]: weapon1 },
       isCharacter: true,
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
@@ -65,7 +65,7 @@ describe('<WeaponsSection />', () => {
     const nonExistingNewWeapon = queryByTestId(/new-weapon/i)
     expect(nonExistingNewWeapon).not.toBeInTheDocument()
 
-    weapons.forEach(({ id, status }) => {
+    Object.values(weapons).forEach(({ id, status }) => {
       if (id === weapon1.id) {
         const weapon = getByTestId(new RegExp(`weapon-${id}`, 'gi'))
         expect(weapon).toBeInTheDocument()
@@ -96,7 +96,7 @@ describe('<WeaponsSection />', () => {
     const nonExistingNewWeapon = queryByTestId(/new-weapon/i)
     expect(nonExistingNewWeapon).not.toBeInTheDocument()
 
-    weapons.forEach(({ id, status }) => {
+    Object.values(weapons).forEach(({ id, status }) => {
       const weapon = getByTestId(new RegExp(`weapon-${id}`, 'gi'))
       expect(weapon).toBeInTheDocument()
 
@@ -129,7 +129,7 @@ describe('<WeaponsSection />', () => {
     const props = {
       showAdd: true,
       isCharacter: true,
-      characterWeapons: [weapon1],
+      characterWeapons: { [weapon1]: weapon1 },
     }
     const { getByDisplayValue, getByTestId, queryByTestId } = renderComponent(
       props,
@@ -151,7 +151,7 @@ describe('<WeaponsSection />', () => {
 
     const weaponIdSelect = getByTestId(/weaponId/gi)
     expect(weaponIdSelect).toBeInTheDocument()
-    const weaponIdValue = getByDisplayValue(`${weapons[0].id}`)
+    const weaponIdValue = getByDisplayValue(`${Object.values(weapons)[0].id}`)
     expect(weaponIdValue).toBeInTheDocument()
 
     const cancelButton = getByTestId(/cancel/i)
@@ -170,7 +170,7 @@ describe('<WeaponsSection />', () => {
 
   it('should not break if weapons are empty', () => {
     const props = {
-      weapons: [],
+      weapons: {},
     }
 
     const { getByTestId } = renderComponent(props)
@@ -196,7 +196,7 @@ describe('<WeaponsSection />', () => {
     }
     const { getByTestId } = renderComponent(props)
 
-    weapons.forEach(({ id }) => {
+    Object.values(weapons).forEach(({ id }) => {
       const weapon = getByTestId(new RegExp(`weapon-${id}`, 'gi'))
       expect(weapon).toBeInTheDocument()
 

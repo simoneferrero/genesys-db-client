@@ -18,6 +18,7 @@ const ExistingWeapon = ({
     encumbrance,
     hard_points,
     id,
+    mods,
     name,
     price,
     range,
@@ -28,6 +29,8 @@ const ExistingWeapon = ({
   },
 }) => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const MODS = 'mods'
 
   const selectedRange = ranges[range].label
   const deleteButton = (
@@ -61,10 +64,27 @@ const ExistingWeapon = ({
           <h4>Range:</h4>
           <span>{selectedRange}</span>
         </div>
-        <div data-testid={`weapon-${id}-special`}>
-          <h4>Special:</h4>
-          <span>{special}</span>
-        </div>
+        {editing ? (
+          <label htmlFor={MODS}>
+            <h4>Mods:</h4>
+            <input
+              data-testid={`weapon-${id}-${MODS}`}
+              disabled={isSubmitting || deleting}
+              id={MODS}
+              name={MODS}
+              onChange={({ target: { value } }) =>
+                setFieldValue(`weapons.${id}.${MODS}`, value)
+              }
+              placeholder="Add modifications"
+              value={mods}
+            />
+          </label>
+        ) : (
+          <div data-testid={`weapon-${id}-special`}>
+            <h4>Special:</h4>
+            <span>{mods || special}</span>
+          </div>
+        )}
         <div data-testid={`weapon-${id}-damage`}>
           <h4>Damage:</h4>
           <span>{damage}</span>
