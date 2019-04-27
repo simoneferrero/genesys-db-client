@@ -4,6 +4,7 @@ import { playerCharacterData } from 'types/playersCharacters'
 import { skillType } from 'types/skills'
 import { factionType } from 'types/factions'
 import { favorType } from 'types/favors'
+import { weaponType } from 'types/weapons'
 
 import * as yup from 'yup'
 
@@ -13,11 +14,13 @@ import FormButtons from 'components/FormButtons'
 import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
 import Favors from 'components/Favors'
+import Weapons from 'components/WeaponsSection'
 
 import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
 const InnerForm = ({
   addFavor,
+  addPlayerCharacterWeapon,
   editing,
   factions,
   handleSubmit,
@@ -26,6 +29,7 @@ const InnerForm = ({
   setEditing,
   setFieldValue,
   values,
+  weapons,
 }) => (
   <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
     <StyledFormButtons
@@ -54,6 +58,20 @@ const InnerForm = ({
       skills={values.skills}
     />
     <StyledSectionWrapper
+      as={Weapons}
+      deletedWeapons={values.deletedWeapons}
+      editing={editing}
+      characterWeapons={editing ? values.weapons : initialValues.weapons}
+      isCharacter
+      handleSubmit={addPlayerCharacterWeapon}
+      isPCSubmitting={isSubmitting}
+      onWeaponChange={setFieldValue}
+      sectionTitle="Weapons"
+      showAdd
+      skills={{}}
+      weapons={weapons}
+    />
+    <StyledSectionWrapper
       as={Favors}
       editing={editing}
       factions={factions}
@@ -74,6 +92,8 @@ InnerForm.validationSchema = yup.object({
 InnerForm.propTypes = {
   /** Invoked when adding a favor */
   addFavor: PropTypes.func.isRequired,
+  /** Invoked when adding a weapon */
+  addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Whether the buttons are in editing or static mode */
   editing: PropTypes.bool,
   /** Errors within the form */
@@ -97,7 +117,10 @@ InnerForm.propTypes = {
     ...playerCharacterData,
     favors: PropTypes.objectOf(favorType).isRequired,
     skills: PropTypes.objectOf(skillType).isRequired,
+    weapons: PropTypes.objectOf(weaponType).isRequired,
   }).isRequired,
+  /** Weapons' data */
+  weapons: PropTypes.objectOf(weaponType).isRequired,
 }
 
 export default InnerForm

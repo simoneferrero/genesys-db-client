@@ -7,6 +7,8 @@ import { factionsUiSelector } from 'reducers/ui/factions/selectors'
 import { favorsUiSelector } from 'reducers/ui/favors/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
 import { playersCharactersUiSelector } from 'reducers/ui/playersCharacters/selectors'
+import { weaponsUiSelector } from 'reducers/ui/weapons/selectors'
+import { weaponsByIdSelector } from 'reducers/weapons/selectors'
 
 // Actions
 import { getArchetypes } from 'actions/archetypes'
@@ -19,6 +21,7 @@ import {
   getPlayerCharacter,
 } from 'actions/playersCharacters'
 import { getSkills } from 'actions/skills'
+import { getWeapons, addPlayerCharacterWeapon } from 'actions/weapons'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
@@ -31,10 +34,14 @@ const mapStateToProps = (state) => ({
   playerCharacter: currentPlayerCharacterSelector(state),
   playerCharacterId: playerCharacterIdSelector(state),
   playersCharactersUi: playersCharactersUiSelector(state),
+  weapons: weaponsByIdSelector(state),
+  weaponsUi: weaponsUiSelector(state),
 })
 const mapDispatchToProps = (dispatch) => ({
   addFavor: (playerCharacterId, favor, actions) =>
     dispatch(addFavor(playerCharacterId, favor, actions)),
+  addPlayerCharacterWeapon: (playerCharacterId, weaponId, actions) =>
+    dispatch(addPlayerCharacterWeapon(playerCharacterId, weaponId, actions)),
   editPlayerCharacter: (id, values, actions) =>
     dispatch(editPlayerCharacter(id, values, actions)),
   getArchetypes: () => dispatch(getArchetypes()),
@@ -43,6 +50,7 @@ const mapDispatchToProps = (dispatch) => ({
   getFactions: () => dispatch(getFactions()),
   getPlayerCharacter: (id) => dispatch(getPlayerCharacter(id)),
   getSkills: () => dispatch(getSkills()),
+  getWeapons: () => dispatch(getWeapons()),
 })
 
 export default connect(

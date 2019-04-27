@@ -12,6 +12,7 @@ import {
   playerCharacter1Augmented,
   playerCharacter1Response,
 } from 'mocks/playersCharacters'
+import { newWeaponResponse } from 'mocks/weapons'
 
 import { GET_FACTIONS } from 'actions/factions/constants'
 import { ADD_FAVOR } from 'actions/favors/constants'
@@ -20,6 +21,10 @@ import {
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
+import {
+  GET_WEAPONS,
+  ADD_PLAYER_CHARACTER_WEAPON,
+} from 'actions/weapons/constants'
 
 jest.mock('redux-saga', () => () => {})
 
@@ -84,18 +89,22 @@ jest.mock('actions/factions', () => ({
 }))
 import { getFactions } from 'actions/factions'
 
-jest.mock('actions/skills', () => {
-  const { GET_SKILLS } = require('actions/skills/constants')
-  return {
-    getSkills: jest.fn(() => ({
-      type: GET_SKILLS,
-      payload: {},
-    })),
-    getSkillsSuccess: jest.fn(() => ({ type: '' })),
-    getSkillsError: jest.fn(() => ({ type: '' })),
-  }
-})
+jest.mock('actions/skills', () => ({
+  getSkills: jest.fn(() => ({ type: '' })),
+  getSkillsSuccess: jest.fn(() => ({ type: '' })),
+  getSkillsError: jest.fn(() => ({ type: '' })),
+}))
 import { getSkills } from 'actions/skills'
+
+jest.mock('actions/weapons', () => ({
+  getWeapons: jest.fn(() => ({ type: '' })),
+  getWeaponsSuccess: jest.fn(() => ({ type: '' })),
+  getWeaponsError: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterWeapon: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterWeaponSuccess: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterWeaponError: jest.fn(() => ({ type: '' })),
+}))
+import { getWeapons, addPlayerCharacterWeapon } from 'actions/weapons'
 
 const renderComponent = (props = {}, initialState) =>
   render(
@@ -218,6 +227,26 @@ describe('<PlayerCharacter />', () => {
     })
   })
 
+  it('should display a loader if weapons are loading', async () => {
+    getWeapons.mockImplementation(() => ({
+      type: GET_WEAPONS,
+      payload: {},
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    await wait(() => {
+      const playersCharactersWrapper = getByTestId(/player-character/i)
+      expect(playersCharactersWrapper).toBeInTheDocument()
+
+      const pcSheet = getByTestId(/pc-sheet/i)
+      expect(pcSheet).toBeInTheDocument()
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
+    })
+  })
+
   it('should dispatch fetch actions on mount', () => {
     renderComponent()
     expect(getAuthInfo).toHaveBeenCalledTimes(1)
@@ -227,6 +256,7 @@ describe('<PlayerCharacter />', () => {
     expect(getCareers).toHaveBeenCalledTimes(1)
     expect(getSkills).toHaveBeenCalledTimes(1)
     expect(getFactions).toHaveBeenCalledTimes(1)
+    expect(getWeapons).toHaveBeenCalledTimes(1)
   })
 
   it('should call editPlayerCharacter on submit', async () => {
@@ -277,6 +307,32 @@ describe('<PlayerCharacter />', () => {
 
     await wait(() => {
       expect(addFavor).toHaveBeenCalledTimes(1)
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
+    })
+  })
+
+  it('should call addPlayerCharacterWeapon on new weapon submit', async () => {
+    addPlayerCharacterWeapon.mockImplementation(() => ({
+      type: ADD_PLAYER_CHARACTER_WEAPON,
+      payload: {
+        actions: formikActions,
+        playerCharacterId: id,
+        weaponId: newWeaponResponse.id,
+      },
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId(/edit-weapon/i)
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId(/submit-weapon/i)
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(addPlayerCharacterWeapon).toHaveBeenCalledTimes(1)
 
       const spinner = getByTestId(/spinner/i)
       expect(spinner).toBeInTheDocument()

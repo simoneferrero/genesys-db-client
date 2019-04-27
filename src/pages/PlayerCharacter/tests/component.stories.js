@@ -11,11 +11,13 @@ import {
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
 import { uiElement, uiElementLoading } from 'mocks/ui'
+import { weaponsById } from 'mocks/weapons'
 
 import { PlayerCharacter } from '../component'
 
 const defaultProps = {
   addFavor: action('addFavor'),
+  addPlayerCharacterWeapon: action('addPlayerCharacterWeapon'),
   editPlayerCharacter: action('editPlayerCharacter'),
   factions: fromJS(factionsById).toJS(),
   factionsUi: uiElement,
@@ -26,9 +28,12 @@ const defaultProps = {
   getFactions: action('getFactions'),
   getPlayerCharacter: action('getPlayerCharacter'),
   getSkills: action('getSkills'),
+  getWeapons: action('getWeapons'),
   playerCharacter: playerCharacter1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
   playersCharactersUi: uiElement,
+  weaponsUi: uiElement,
+  weapons: fromJS(weaponsById).toJS(),
 }
 
 const renderComponent = (props = {}) => (

@@ -8,6 +8,7 @@ import { archetype1, archetype2 } from './archetypes'
 import { career1, career2 } from './careers'
 import { favor1, favor2 } from './favors'
 import { skills, skillsById } from './skills'
+import { weapon1, weapon2, weaponsById } from './weapons'
 
 export const playerCharacter1Id = 1
 export const playerCharacterSummary1Response = {
@@ -65,16 +66,31 @@ export const playerCharacter1SkillsAugmented = List(
   ),
 )
 export const playerCharacter1Favors = [favor1, favor2]
+export const playerCharacter1Weapons = [
+  {
+    id: 1,
+    weapon_id: weapon1.id,
+    name: weapon1.name,
+    mods: 'Stun 4, Knockdown',
+  },
+  { id: 2, weapon_id: weapon2.id, name: weapon2.name, mods: null },
+]
+export const playerCharacter1WeaponsAugmented = playerCharacter1Weapons.map(
+  ({ id, weapon_id, mods }) =>
+    weaponsById[weapon_id].merge({ id, ...(mods && { special: mods }) }),
+)
 export const playerCharacter1Response = {
   ...playerCharacterSummary1Response,
   favors: playerCharacter1Favors,
   skills: playerCharacter1Skills,
+  weapons: playerCharacter1Weapons,
 }
 export const playerCharacter1 = new PlayerCharacterRecord(
   fromJS({
     ...playerCharacter1Response,
     favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
     skills: List(playerCharacter1Skills.map((skill) => fromJS(skill))),
+    weapons: List(playerCharacter1Weapons.map((weapon) => fromJS(weapon))),
   }),
 )
 export const playerCharacter1Augmented = new PlayerCharacterRecord(
@@ -84,6 +100,7 @@ export const playerCharacter1Augmented = new PlayerCharacterRecord(
     career: new CareerRecord(career1),
     favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
     skills: playerCharacter1SkillsAugmented,
+    weapons: playerCharacter1WeaponsAugmented,
   }),
 )
 

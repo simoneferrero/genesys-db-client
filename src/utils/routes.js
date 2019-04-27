@@ -6,6 +6,7 @@ import GenesysLogo from 'vectors/GenesysLogo'
 const Home = lazy(() => import('pages/Home'))
 const PlayersCharacters = lazy(() => import('pages/PlayersCharacters'))
 const PlayerCharacter = lazy(() => import('pages/PlayerCharacter'))
+const Weapons = lazy(() => import('pages/Weapons'))
 
 const routes = [
   {
@@ -32,6 +33,15 @@ const routes = [
     routeComponent: PlayerCharacter,
     showInPlayerMenu: true,
     to: '/players-characters/:id',
+  },
+  {
+    exact: true,
+    id: 'weapons',
+    menuItemComponent: 'Weapons',
+    routeComponent: Weapons,
+    showInGmMenu: true,
+    showInPlayerMenu: true,
+    to: '/weapons',
   },
 ]
 

@@ -4,6 +4,7 @@ import { archetypesByIdSelector } from 'reducers/archetypes/selectors'
 import { careersByIdSelector } from 'reducers/careers/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
 import { skillsByIdSelector } from 'reducers/skills/selectors'
+import { weaponsByIdSelector } from 'reducers/weapons/selectors'
 
 import PlayerCharacterRecord from 'reducers/playersCharacters/records'
 
@@ -15,12 +16,24 @@ export const playersCharactersByIdSelector = createSelector(
   archetypesByIdSelector,
   careersByIdSelector,
   skillsByIdSelector,
-  (playersCharacters, archetypesById, careersById, skillsById) =>
+  weaponsByIdSelector,
+  (playersCharacters, archetypesById, careersById, skillsById, weaponsById) =>
     playersCharacters.get('byId').map((playerCharacter) => {
       const archetypeId = playerCharacter.get('archetype_id')
       const archetype = archetypesById.get(archetypeId)
       const careerId = playerCharacter.get('career_id')
       const career = careersById.get(careerId)
+      const weapons = playerCharacter.get('weapons').map((weapon) => {
+        const id = weapon.get('id')
+        const mods = weapon.get('mods')
+        const weapon_id = weapon.get('weapon_id')
+        const originalWeapon = weaponsById.get(`${weapon_id}`)
+
+        return originalWeapon.merge({
+          mods,
+          id,
+        })
+      })
 
       const augmentedData = {
         archetype,
@@ -32,6 +45,7 @@ export const playersCharactersByIdSelector = createSelector(
             return skill.merge(skillData)
           }),
         }),
+        weapons,
       }
 
       return playerCharacter.merge(augmentedData)

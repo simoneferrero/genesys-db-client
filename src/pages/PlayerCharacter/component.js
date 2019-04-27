@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
 import { uiType } from 'types/ui'
+import { weaponType } from 'types/weapons'
 
 import { Helmet } from 'react-helmet'
 
@@ -13,6 +14,7 @@ import Spinner from 'components/Spinner'
 /** Summary of all players' characters. */
 export const PlayerCharacter = ({
   addFavor,
+  addPlayerCharacterWeapon,
   editPlayerCharacter,
   factions,
   factionsUi,
@@ -23,9 +25,12 @@ export const PlayerCharacter = ({
   getFactions,
   getPlayerCharacter,
   getSkills,
+  getWeapons,
   playerCharacter,
   playerCharacterId,
   playersCharactersUi,
+  weapons,
+  weaponsUi,
 }) => {
   useEffect(() => {
     getAuthInfo()
@@ -45,15 +50,23 @@ export const PlayerCharacter = ({
   useEffect(() => {
     getFactions()
   }, [getFactions])
+  useEffect(() => {
+    getWeapons()
+  }, [getWeapons])
 
   // Form submission handlers
   const handleSubmit = (values, actions) =>
     editPlayerCharacter(playerCharacterId, values, actions)
   const handleAddFavor = (values, actions) =>
     addFavor(playerCharacterId, values, actions)
+  const handleAddPlayerCharacterWeapon = (values, actions) =>
+    addPlayerCharacterWeapon(playerCharacterId, `${values.id}`, actions)
 
   const loading =
-    playersCharactersUi.loading || favorsUi.loading || factionsUi.loading
+    playersCharactersUi.loading ||
+    favorsUi.loading ||
+    factionsUi.loading ||
+    weaponsUi.loading
 
   return (
     <>
@@ -63,9 +76,11 @@ export const PlayerCharacter = ({
         <Suspense fallback={<Spinner />}>
           <PCSheet
             addFavor={handleAddFavor}
+            addPlayerCharacterWeapon={handleAddPlayerCharacterWeapon}
             factions={factions}
             handleSubmit={handleSubmit}
             playerCharacter={playerCharacter}
+            weapons={weapons}
           />
         </Suspense>
       </div>
@@ -77,6 +92,8 @@ export const PlayerCharacter = ({
 PlayerCharacter.propTypes = {
   /** Dispatched to add a new favor */
   addFavor: PropTypes.func.isRequired,
+  /** Dispatched to add a weapon */
+  addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Dispatched to edit the current player's character */
   editPlayerCharacter: PropTypes.func.isRequired,
   /** Factions data */
@@ -95,6 +112,8 @@ PlayerCharacter.propTypes = {
   getFactions: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of skills */
   getSkills: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of weapons */
+  getWeapons: PropTypes.func.isRequired,
   /** Dispatched to fetch player character data */
   getPlayerCharacter: PropTypes.func.isRequired,
   /** Player character data */
@@ -103,6 +122,10 @@ PlayerCharacter.propTypes = {
   playerCharacterId: PropTypes.string,
   /** Players' characters loader and error information */
   playersCharactersUi: uiType.isRequired,
+  /** Weapons' data */
+  weapons: PropTypes.objectOf(weaponType).isRequired,
+  /** Weapons' loader and error information */
+  weaponsUi: uiType.isRequired,
 }
 
 export default memo(PlayerCharacter)

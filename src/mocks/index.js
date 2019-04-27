@@ -14,6 +14,7 @@ import {
 import { initialRouter, playerCharacterRouter } from './router'
 import { skillsById, skillsAllIds } from './skills'
 import { ui } from './ui'
+import { weaponsById, weaponsAllIds } from './weapons'
 
 export const apiPath = 'http://my-api.com'
 
@@ -41,6 +42,10 @@ export const store = fromJS({
     byId: Map(skillsById),
   }),
   ui,
+  weapons: new ReducerRecord({
+    allIds: List(weaponsAllIds),
+    byId: Map(weaponsById),
+  }),
 })
 
 export const emptyStore = fromJS({
@@ -52,6 +57,7 @@ export const emptyStore = fromJS({
   router: initialRouter,
   skills: new ReducerRecord(),
   ui,
+  weapons: new ReducerRecord(),
 })
 
 export const formikActions = {

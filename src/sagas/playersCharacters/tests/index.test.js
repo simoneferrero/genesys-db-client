@@ -51,6 +51,7 @@ import {
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
 import { genericError } from 'mocks/errors'
+import { weapon1, weapon2 } from 'mocks/weapons'
 
 describe('playersCharacters sagas', () => {
   describe('getPlayersCharacters', () => {
@@ -252,6 +253,10 @@ describe('playersCharacters sagas', () => {
     } = playerCharacter1Augmented.toJS()
     const values = {
       ...playerCharacter,
+      deletedWeapons: {
+        [weapon1.id]: true,
+        [weapon2.id]: false,
+      },
       skills: keyBy(rawSkills, 'id'),
     }
     const action = editPlayerCharacter(id, values, formikActions)
@@ -283,11 +288,15 @@ describe('playersCharacters sagas', () => {
           favors,
         } = values
         const data = JSON.stringify({
+          deletedWeapons: [`${weapon1.id}`],
           favors,
           skills: rawSkills
             .filter(({ rank }) => rank)
             .map(({ id, rank }) => ({ id, rank })),
           strain_current,
+          weapons: playerCharacter1Augmented
+            .toJS()
+            .weapons.map(({ id, mods }) => ({ id, mods })),
           wounds_current,
         })
 
@@ -338,6 +347,27 @@ describe('playersCharacters sagas', () => {
         const expectedPutErrorDescriptor = put(
           editPlayerCharacterError(id, genericError),
         )
+        expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
+
+        const callSetSubmittingDescriptor = generator.next().value
+        const expectedCallSetSubmittingDescriptor = call(
+          formikActions.setSubmitting,
+          false,
+        )
+        expect(callSetSubmittingDescriptor).toEqual(
+          expectedCallSetSubmittingDescriptor,
+        )
+
+        const callSetErrorsDescriptor = generator.next().value
+        const expectedCallSetErrorsDescriptor = call(formikActions.setErrors, {
+          mainError: 'There was an error',
+        })
+        expect(callSetErrorsDescriptor).toEqual(expectedCallSetErrorsDescriptor)
+      })
+
+      it('should dispatch the correct actions on error if undefined', () => {
+        const putErrorDescriptor = generator.throw({}).value
+        const expectedPutErrorDescriptor = put(editPlayerCharacterError(id, {}))
         expect(putErrorDescriptor).toEqual(expectedPutErrorDescriptor)
 
         const callSetSubmittingDescriptor = generator.next().value

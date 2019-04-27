@@ -644,6 +644,13 @@ exports[`Storyshots Components/Sidebar default 1`] = `
   >
     PC Sheet
   </a>
+  <a
+    class="c4"
+    data-testid="menu-item-weapons"
+    href="/weapons"
+  >
+    Weapons
+  </a>
   <button
     class="c5"
     type="button"

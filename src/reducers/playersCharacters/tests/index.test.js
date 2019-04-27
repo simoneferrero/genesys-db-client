@@ -11,6 +11,7 @@ import {
   getPlayersCharactersSuccess,
   editPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
+import { addPlayerCharacterWeaponSuccess } from 'actions/weapons'
 
 import { newFavorResponse } from 'mocks/favors'
 import {
@@ -18,10 +19,12 @@ import {
   playerCharacter1Favors,
   playerCharacter1Id,
   playerCharacter1Response,
+  playerCharacter1Weapons,
   playersCharactersAllIds,
   playersCharactersById,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
+import { newPlayerCharacterWeaponResponse } from 'mocks/weapons'
 
 describe('playersCharacters reducer', () => {
   it('should return the initial state', () => {
@@ -114,6 +117,7 @@ describe('playersCharacters reducer', () => {
 
   describe('addFavorSuccess', () => {
     const id = `${playerCharacter1Id}`
+
     it('should handle the action correctly', () => {
       const fullState = reducer(
         initialState,
@@ -123,6 +127,27 @@ describe('playersCharacters reducer', () => {
       const expectedResult = fullState.setIn(
         ['byId', id, 'favors'],
         fromJS([...playerCharacter1Favors, newFavorResponse]),
+      )
+
+      expect(result).toEqual(expectedResult)
+    })
+  })
+
+  describe('addPlayerCharacterWeaponSuccess', () => {
+    const id = `${playerCharacter1Id}`
+
+    it('should handle the action correctly', () => {
+      const fullState = reducer(
+        initialState,
+        getPlayerCharacterSuccess(id, playerCharacter1Response),
+      )
+      const result = reducer(
+        fullState,
+        addPlayerCharacterWeaponSuccess(id, newPlayerCharacterWeaponResponse),
+      )
+      const expectedResult = fullState.setIn(
+        ['byId', id, 'weapons'],
+        fromJS([...playerCharacter1Weapons, newPlayerCharacterWeaponResponse]),
       )
 
       expect(result).toEqual(expectedResult)

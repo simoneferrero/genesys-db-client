@@ -8,6 +8,8 @@ export const API_SEGMENTS = {
   LOGIN: 'login',
   PLAYERS_CHARACTERS: 'players-characters',
   SKILLS: 'skills',
+  WEAPON: 'weapon',
+  WEAPONS: 'weapons',
 }
 
 // REST
@@ -23,6 +25,7 @@ export const HEAD_INFO = {
   TITLE: 'Genesys DB',
   CONTENT: 'Web app to manage and display Genesys - SotB data',
   PLAYERS_CHARACTERS_TITLE: 'PC Summary',
+  WEAPONS: 'Weapons',
 }
 
 // Character data
