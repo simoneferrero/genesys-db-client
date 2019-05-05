@@ -144,7 +144,7 @@ InnerForm.validationSchema = yup.object({
   }),
   special: yup.string().when('isCharacter', {
     is: (val) => !val,
-    then: yup.string().required('required'),
+    then: yup.string(),
   }),
 })
 

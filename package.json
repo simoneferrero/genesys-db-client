@@ -1,7 +1,7 @@
 {
   "name": "genesys-db-client",
   "description": "Web app to manage and display Genesys - SotB data",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
@@ -51,10 +51,12 @@
     "react-test-renderer": "^16.8.6",
     "react-testing-library": "^6.1.2",
     "require-context.macro": "^1.0.4",
-    "storybook": "^1.0.0"
+    "storybook": "^1.0.0",
+    "surge": "^0.20.4"
   },
   "scripts": {
     "build": "react-scripts build",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build",
     "eject": "react-scripts eject",
     "format": "npm run prettify -- --write",
     "lint": "eslint ./src --ignore-path .gitignore",
