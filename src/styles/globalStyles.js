@@ -8,6 +8,7 @@ import backgroundImage from 'images/background-blue.jpg'
 const globalStyle = css`
   * {
     box-sizing: border-box;
+    white-space: pre-line;
   }
 
   body {

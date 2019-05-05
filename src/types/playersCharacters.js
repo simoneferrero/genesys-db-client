@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { archetypeType } from './archetypes'
 import { careerType } from './careers'
+import { equipmentType } from './equipment'
 import { favorType } from './favors'
 import { motivationsType } from './motivations'
 import { skillType } from './skills'
@@ -53,8 +54,10 @@ export const playerCharacterSummaryType = PropTypes.shape({
 
 export const playerCharacterData = {
   ...playerCharacterSummaryData,
+  equipment: equipmentType.isRequired,
   favors: PropTypes.arrayOf(favorType).isRequired,
   motivations: motivationsType.isRequired,
+  notes: PropTypes.string.isRequired,
   skills: PropTypes.arrayOf(skillType).isRequired,
   weapons: PropTypes.arrayOf(weaponType).isRequired,
 }

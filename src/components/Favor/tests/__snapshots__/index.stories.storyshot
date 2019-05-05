@@ -43,6 +43,7 @@ exports[`Storyshots Components/Favor completed 1`] = `
 }
 
 .c0 > div:last-child {
+  color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -162,6 +163,7 @@ exports[`Storyshots Components/Favor default 1`] = `
 }
 
 .c0 > div:last-child {
+  color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
@@ -278,6 +280,7 @@ exports[`Storyshots Components/Favor editing 1`] = `
 }
 
 .c0 > div:last-child {
+  color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
@@ -437,6 +440,7 @@ exports[`Storyshots Components/Favor editing completed 1`] = `
 }
 
 .c0 > div:last-child {
+  color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -715,6 +719,10 @@ exports[`Storyshots Components/Favor new 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+}
+
+.c0 > div:last-child {
+  color: rgb(0,130,155);
 }
 
 .c0 > label {

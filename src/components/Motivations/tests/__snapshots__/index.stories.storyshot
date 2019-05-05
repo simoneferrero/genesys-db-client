@@ -35,6 +35,7 @@ exports[`Storyshots Components/Motivations default 1`] = `
 .c1 p,
 .c1 input,
 .c1 textarea {
+  margin: 0;
   width: 100%;
   height: 100%;
   padding: 6px;
@@ -196,6 +197,7 @@ exports[`Storyshots Components/Motivations editing 1`] = `
 .c1 p,
 .c1 input,
 .c1 textarea {
+  margin: 0;
   width: 100%;
   height: 100%;
   padding: 6px;

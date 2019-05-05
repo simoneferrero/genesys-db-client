@@ -110,8 +110,10 @@ export function* editPlayerCharacterSaga({
         strain: { current: strain_current },
       },
       deletedWeapons,
+      equipment,
       favors,
       motivations,
+      notes,
       skills,
       weapons,
     },
@@ -124,8 +126,10 @@ export function* editPlayerCharacterSaga({
       (total, [weapon, toDelete]) => (toDelete ? [...total, weapon] : total),
       [],
     ),
+    equipment,
     favors: Object.values(favors),
     motivations,
+    notes,
     skills: Object.values(skills)
       .filter(({ rank }) => rank)
       .map(({ id, rank }) => ({
