@@ -60,7 +60,9 @@ describe('<FormButtons />', () => {
   })
 
   it('should render correctly when showButtons', () => {
+    const mockHandleCancel = jest.fn()
     const props = {
+      handleCancel: mockHandleCancel,
       showButtons: true,
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
@@ -74,6 +76,7 @@ describe('<FormButtons />', () => {
 
     fireEvent.click(cancelButton)
     expect(mockSetShowButtons).toHaveBeenCalledWith(false)
+    expect(mockHandleCancel).toHaveBeenCalledTimes(1)
 
     const submitButton = getByTestId(`submit-${name}`)
     expect(submitButton).toBeInTheDocument()
@@ -100,6 +103,23 @@ describe('<FormButtons />', () => {
     const submitButton = getByTestId(`submit-${name}`)
     expect(submitButton).toBeInTheDocument()
     expect(submitButton).toBeDisabled()
+  })
+
+  it('should not break if handleCancel is not defined', () => {
+    const props = {
+      showButtons: true,
+    }
+    const { getByTestId } = renderComponent(props)
+
+    const cancelButton = getByTestId(`cancel-${name}`)
+    fireEvent.click(cancelButton)
+
+    const buttons = getByTestId(`form-buttons-${name}`)
+    expect(buttons).toBeInTheDocument()
+
+    const submitButton = getByTestId(`submit-${name}`)
+    expect(submitButton).toBeInTheDocument()
+    expect(submitButton).not.toBeDisabled()
   })
 
   it('should correctly call handleSubmit when provided and clicked', () => {

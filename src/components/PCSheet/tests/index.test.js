@@ -153,6 +153,106 @@ describe('<PCSheet />', () => {
     expect(previousWoundsValue).not.toBeInTheDocument()
   })
 
+  it('should reset the form on cancel', () => {
+    const {
+      getByDisplayValue,
+      getByTestId,
+      getByText,
+      queryByDisplayValue,
+      queryByTestId,
+      queryByText,
+    } = renderComponent()
+
+    const editButton = getByTestId(/edit-pc-sheet/i)
+    fireEvent.click(editButton)
+
+    const increaseWoundsButton = getByTestId(
+      'increase-attributes.wounds.current',
+    )
+    fireEvent.click(increaseWoundsButton)
+    const newWoundsValue = getByText('12')
+    expect(newWoundsValue).toBeInTheDocument()
+
+    const athleticsRank = getByTestId('athletics-1')
+    const increaseAthleticsButton = getByTestId('increase-athletics-rank')
+    fireEvent.click(increaseAthleticsButton)
+    expect(athleticsRank).toHaveStyle(`background-color: ${colours.teal}`)
+
+    const deleteWeaponButton = getByTestId('deleteWeaponButton-1')
+    fireEvent.click(deleteWeaponButton)
+    const undoButton = getByText(/undo/gi)
+    expect(undoButton).toBeInTheDocument()
+
+    const strengthTypeInput = getByDisplayValue(
+      playerCharacter1Response.motivations.strength.type,
+    )
+    const newStrengthType = 'Super strength'
+    fireEvent.change(strengthTypeInput, { target: { value: newStrengthType } })
+    const newStrengthTypeValue = getByDisplayValue(newStrengthType)
+    expect(newStrengthTypeValue).toBeInTheDocument()
+
+    const completeFavorButton = getByTestId('completeButton-1')
+    fireEvent.click(completeFavorButton)
+    const revertFavorButton = getByTestId('revertButton-1')
+    expect(revertFavorButton).toBeInTheDocument()
+
+    const noteInput = getByDisplayValue(playerCharacter1Response.notes)
+    const newNotes = 'These are new notes'
+    fireEvent.change(noteInput, { target: { value: newNotes } })
+    const newNotesValue = getByDisplayValue(newNotes)
+    expect(newNotesValue).toBeInTheDocument()
+
+    const armorInput = getByDisplayValue(
+      playerCharacter1Response.equipment.armor,
+    )
+    const newArmor = 'These is new armor info'
+    fireEvent.change(armorInput, { target: { value: newArmor } })
+    const newArmorValue = getByDisplayValue(newArmor)
+    expect(newArmorValue).toBeInTheDocument()
+
+    // Cancel form and check values revert
+    const cancelButton = getByTestId(/cancel-pc-sheet/i)
+    expect(cancelButton).toBeInTheDocument()
+    fireEvent.click(cancelButton)
+
+    const previousWoundsValue = queryByText('12')
+    expect(previousWoundsValue).not.toBeInTheDocument()
+
+    expect(athleticsRank).not.toHaveStyle(`background-color: ${colours.teal}`)
+
+    const previousStrengthType = queryByText(newStrengthType)
+    expect(previousStrengthType).not.toBeInTheDocument()
+
+    const previousNotes = queryByText(newNotes)
+    expect(previousNotes).not.toBeInTheDocument()
+
+    const previousArmor = queryByText(newArmor)
+    expect(previousArmor).not.toBeInTheDocument()
+
+    // Open form and check values are default
+    fireEvent.click(editButton)
+
+    const previousFormWoundsValue = queryByText('12')
+    expect(previousFormWoundsValue).not.toBeInTheDocument()
+
+    expect(athleticsRank).not.toHaveStyle(`background-color: ${colours.teal}`)
+
+    const previousFormUndoButton = queryByText(/undo/gi)
+    expect(previousFormUndoButton).not.toBeInTheDocument()
+
+    const previousFormStrengthType = queryByDisplayValue(newStrengthType)
+    expect(previousFormStrengthType).not.toBeInTheDocument()
+
+    const previousFormRevertButton = queryByTestId('revertButton-1')
+    expect(previousFormRevertButton).not.toBeInTheDocument()
+
+    const previousFormNotes = queryByDisplayValue(newNotes)
+    expect(previousFormNotes).not.toBeInTheDocument()
+
+    const previousFormArmor = queryByDisplayValue(newArmor)
+    expect(previousFormArmor).not.toBeInTheDocument()
+  })
+
   it('should call handleSubmit on submit', async () => {
     const { getByTestId } = renderComponent()
 

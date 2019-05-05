@@ -23,6 +23,7 @@ export const StyledButton = styled.button`
 const FormButtons = ({
   className,
   disabled,
+  handleCancel,
   handleSubmit,
   icons: { cancel, edit, submit },
   name,
@@ -33,6 +34,11 @@ const FormButtons = ({
     ...(handleSubmit
       ? { onClick: handleSubmit, type: 'button' }
       : { type: 'submit' }),
+  }
+
+  const onCancel = () => {
+    handleCancel()
+    setShowButtons(false)
   }
   return (
     <div className={className} data-testid={`form-buttons-${name}`}>
@@ -50,7 +56,7 @@ const FormButtons = ({
           <StyledButton
             data-testid={`cancel-${name}`}
             disabled={disabled}
-            onClick={() => setShowButtons(false)}
+            onClick={onCancel}
             type="button"
           >
             {cancel}
@@ -73,6 +79,8 @@ FormButtons.propTypes = {
   className: PropTypes.string,
   /** Whether to show submit/cancel buttons or edit button */
   disabled: PropTypes.bool,
+  /** Invoked upon canceling changes */
+  handleCancel: PropTypes.func,
   /** Invoked upon submission */
   handleSubmit: PropTypes.func,
   /** The set of icons to display */
@@ -93,6 +101,7 @@ FormButtons.propTypes = {
 }
 
 FormButtons.defaultProps = {
+  handleCancel: () => {},
   icons: {
     cancel: <MdClose />,
     edit: <MdEdit />,

@@ -23,6 +23,7 @@ const InnerForm = ({
   isPCSubmitting,
   isSubmitting,
   onWeaponChange,
+  resetForm,
   setFieldValue,
   setIsNew,
   showAdd,
@@ -80,6 +81,7 @@ const InnerForm = ({
         <StyledSubHeader>
           <FormButtons
             disabled={isSubmitting}
+            handleCancel={resetForm}
             handleSubmit={handleSubmit}
             icons={buttonsIcons}
             name="weapon"
@@ -171,6 +173,8 @@ InnerForm.propTypes = {
   isSubmitting: PropTypes.bool,
   /** Function invoked to change existing weapon data */
   onWeaponChange: PropTypes.func,
+  /** Resets the form to initial values */
+  resetForm: PropTypes.func.isRequired,
   /** Shows or hides the new weapon form */
   setIsNew: PropTypes.func.isRequired,
   /** Changes the specified new weapon field value */
