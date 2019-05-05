@@ -343,6 +343,10 @@ describe('playersCharacters sagas', () => {
         expect(callSetEditingDescriptor).toEqual(
           expectedCallSetEditingDescriptor,
         )
+
+        const callResetFormDescriptor = generator.next().value
+        const expectedCallResetFormDescriptor = call(formikActions.resetForm)
+        expect(callResetFormDescriptor).toEqual(expectedCallResetFormDescriptor)
       })
 
       it('should dispatch the correct actions on error', () => {

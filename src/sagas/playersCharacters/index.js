@@ -102,7 +102,7 @@ export function* getPlayerCharacterWatcher() {
 
 export function* editPlayerCharacterSaga({
   payload: {
-    actions,
+    actions: { resetForm, setEditing, setErrors, setSubmitting },
     id,
     values: {
       attributes: {
@@ -159,12 +159,13 @@ export function* editPlayerCharacterSaga({
     const response = yield call(axios, opts)
 
     yield put(editPlayerCharacterSuccess(id, response.data.data))
-    yield call(actions.setSubmitting, false)
-    yield call(actions.setEditing, false)
+    yield call(setSubmitting, false)
+    yield call(setEditing, false)
+    yield call(resetForm)
   } catch (error) {
     yield put(editPlayerCharacterError(id, error))
-    yield call(actions.setSubmitting, false)
-    yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+    yield call(setSubmitting, false)
+    yield call(setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
 
     if (error.response && error.response.status === 401) {
       yield put(logout())
