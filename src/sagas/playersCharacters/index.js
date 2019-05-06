@@ -52,7 +52,7 @@ export function* getPlayersCharactersSaga() {
   } catch (error) {
     yield put(getPlayersCharactersError(error))
 
-    if (error.response.status === 401) {
+    if (error.response && error.response.status === 401) {
       yield put(logout())
     }
   }
@@ -90,7 +90,7 @@ export function* getPlayerCharacterSaga({ payload: { id } }) {
   } catch (error) {
     yield put(getPlayerCharacterError(id, error))
 
-    if (error.response.status === 401) {
+    if (error.response && error.response.status === 401) {
       yield put(logout())
     }
   }
