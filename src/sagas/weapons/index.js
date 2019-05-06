@@ -47,7 +47,7 @@ export function* getWeaponsWatcher() {
 
 export function* addWeaponSaga({
   payload: {
-    actions: { setErrors, setIsNew, setSubmitting },
+    actions: { resetForm, setErrors, setIsNew, setSubmitting },
     weapon,
   },
 }) {
@@ -74,6 +74,7 @@ export function* addWeaponSaga({
     yield put(addWeaponSuccess(response.data.data))
     yield call(setSubmitting, false)
     yield call(setIsNew, false)
+    yield call(resetForm)
   } catch (error) {
     yield put(addWeaponError(error))
     yield call(setSubmitting, false)
@@ -91,7 +92,7 @@ export function* addWeaponWatcher() {
 
 export function* addPlayerCharacterWeaponSaga({
   payload: {
-    actions: { setErrors, setIsNew, setSubmitting },
+    actions: { resetForm, setErrors, setIsNew, setSubmitting },
     playerCharacterId,
     weaponId,
   },
@@ -125,6 +126,7 @@ export function* addPlayerCharacterWeaponSaga({
     )
     yield call(setSubmitting, false)
     yield call(setIsNew, false)
+    yield call(resetForm)
   } catch (error) {
     yield put(addPlayerCharacterWeaponError(playerCharacterId, error))
     yield call(setSubmitting, false)

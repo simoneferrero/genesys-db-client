@@ -160,6 +160,10 @@ describe('weapons sagas', () => {
           false,
         )
         expect(callSetIsNewDescriptor).toEqual(expectedCallSetIsNewDescriptor)
+
+        const callResetFormDescriptor = generator.next().value
+        const expectedCallResetFormDescriptor = call(formikActions.resetForm)
+        expect(callResetFormDescriptor).toEqual(expectedCallResetFormDescriptor)
       })
 
       it('should dispatch the correct actions on error', () => {
@@ -323,6 +327,10 @@ describe('weapons sagas', () => {
           false,
         )
         expect(callSetIsNewDescriptor).toEqual(expectedCallSetIsNewDescriptor)
+
+        const callResetFormDescriptor = generator.next().value
+        const expectedCallResetFormDescriptor = call(formikActions.resetForm)
+        expect(callResetFormDescriptor).toEqual(expectedCallResetFormDescriptor)
       })
 
       it('should dispatch the correct actions on error', () => {

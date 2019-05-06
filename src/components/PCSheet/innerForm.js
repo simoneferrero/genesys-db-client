@@ -29,6 +29,7 @@ const InnerForm = ({
   handleSubmit,
   initialValues,
   isSubmitting,
+  resetForm,
   setEditing,
   setFieldValue,
   values,
@@ -38,6 +39,7 @@ const InnerForm = ({
     <StyledFormButtons
       as={FormButtons}
       disabled={isSubmitting}
+      handleCancel={resetForm}
       name="pc-sheet"
       showButtons={editing}
       setShowButtons={setEditing}
@@ -49,7 +51,7 @@ const InnerForm = ({
       isSubmitting={isSubmitting}
       sectionTitle="General"
       setFieldValue={setFieldValue}
-      {...(editing ? values : initialValues)}
+      {...values}
     />
     <StyledSectionWrapper
       as={Skills}
@@ -64,7 +66,7 @@ const InnerForm = ({
       as={Weapons}
       deletedWeapons={values.deletedWeapons}
       editing={editing}
-      characterWeapons={editing ? values.weapons : initialValues.weapons}
+      characterWeapons={values.weapons}
       isCharacter
       handleSubmit={addPlayerCharacterWeapon}
       isPCSubmitting={isSubmitting}
@@ -77,7 +79,7 @@ const InnerForm = ({
     <StyledSectionWrapper
       as={Motivations}
       editing={editing}
-      motivations={editing ? values.motivations : initialValues.motivations}
+      motivations={values.motivations}
       isSubmitting={isSubmitting}
       setFieldValue={setFieldValue}
       sectionTitle="Motivations"
@@ -86,7 +88,7 @@ const InnerForm = ({
       as={Favors}
       editing={editing}
       factions={factions}
-      favors={editing ? values.favors : initialValues.favors}
+      favors={values.favors}
       handleSubmit={addFavor}
       isSubmitting={isSubmitting}
       setFieldValue={setFieldValue}
@@ -96,7 +98,7 @@ const InnerForm = ({
       as={Equipment}
       editing={editing}
       isSubmitting={isSubmitting}
-      equipment={editing ? values.equipment : initialValues.equipment}
+      equipment={values.equipment}
       setFieldValue={setFieldValue}
       sectionTitle="Equipment"
     />
@@ -104,7 +106,7 @@ const InnerForm = ({
       as={Notes}
       editing={editing}
       isSubmitting={isSubmitting}
-      notes={editing ? values.notes : initialValues.notes}
+      notes={values.notes}
       setFieldValue={setFieldValue}
       sectionTitle="Notes"
     />
@@ -133,6 +135,8 @@ InnerForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
+  /** Resets the form to initial values */
+  resetForm: PropTypes.func.isRequired,
   /** Changes the mode between editing and static */
   setEditing: PropTypes.func.isRequired,
   /** Changes the specified field value */

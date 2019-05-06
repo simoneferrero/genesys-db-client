@@ -125,6 +125,44 @@ describe('<WeaponsSection />', () => {
     expect(editButton).toBeInTheDocument()
   })
 
+  it('should reset the form on cancel', () => {
+    const props = {
+      showAdd: true,
+    }
+
+    const {
+      getByDisplayValue,
+      getByPlaceholderText,
+      getByTestId,
+      queryByDisplayValue,
+    } = renderComponent(props)
+
+    const editButton = getByTestId(/edit/i)
+    fireEvent.click(editButton)
+
+    const cancelButton = getByTestId(/cancel/i)
+    expect(cancelButton).toBeInTheDocument()
+
+    const name = getByPlaceholderText(/weapon's name/i)
+    expect(name).toBeInTheDocument()
+    fireEvent.change(name, {
+      target: {
+        value: newWeaponResponse.name,
+      },
+    })
+    const populatedName = getByDisplayValue(`${newWeaponResponse.name}`)
+    expect(populatedName).toBeInTheDocument()
+
+    fireEvent.click(cancelButton)
+
+    fireEvent.click(editButton)
+
+    const resetName = queryByDisplayValue(newWeaponResponse.name)
+    expect(resetName).not.toBeInTheDocument()
+
+    expect(editButton).toBeInTheDocument()
+  })
+
   it('should render correctly when show adding character weapon', () => {
     const props = {
       showAdd: true,

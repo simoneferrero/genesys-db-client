@@ -7,6 +7,7 @@ import FormButtons from '../index'
 
 const defaultProps = {
   disabled: false,
+  handleCancel: action('handleCancel'),
   handleSubmit: action('handleSubmit'),
   name: 'test',
   showButtons: false,

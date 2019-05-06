@@ -12,7 +12,11 @@ import { authenticationSelector } from 'reducers/authentication/selectors'
 import { API_PATH, API_SEGMENTS, REST_METHODS } from 'utils/definitions'
 
 export function* addFavorSaga({
-  payload: { actions, favor, playerCharacterId },
+  payload: {
+    actions: { resetForm, setErrors, setIsNew, setSubmitting },
+    favor,
+    playerCharacterId,
+  },
 }) {
   const authInfo = yield select(authenticationSelector)
 
@@ -40,12 +44,13 @@ export function* addFavorSaga({
     const response = yield call(axios, opts)
 
     yield put(addFavorSuccess(playerCharacterId, response.data.data))
-    yield call(actions.setSubmitting, false)
-    yield call(actions.setIsNew, false)
+    yield call(setSubmitting, false)
+    yield call(setIsNew, false)
+    yield call(resetForm)
   } catch (error) {
     yield put(addFavorError(playerCharacterId, error))
-    yield call(actions.setSubmitting, false)
-    yield call(actions.setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
+    yield call(setSubmitting, false)
+    yield call(setErrors, { mainError: 'There was an error' }) // TODO: use real error from API
 
     if (error.response && error.response.status === 401) {
       yield put(logout())

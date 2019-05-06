@@ -72,6 +72,39 @@ describe('<FavorsSection />', () => {
     expect(editButton).toBeInTheDocument()
   })
 
+  it('should reset the form on cancel', () => {
+    const {
+      getByDisplayValue,
+      getByPlaceholderText,
+      getByTestId,
+      queryByDisplayValue,
+    } = renderComponent()
+
+    const editButton = getByTestId(/edit/i)
+    fireEvent.click(editButton)
+
+    const cancelButton = getByTestId(/cancel/i)
+    expect(cancelButton).toBeInTheDocument()
+
+    const description = getByPlaceholderText(/add description.../i)
+    const descriptionText = 'This is a new description'
+    fireEvent.change(description, {
+      target: { value: descriptionText },
+    })
+
+    const populatedDescription = getByDisplayValue(descriptionText)
+    expect(populatedDescription).toBeInTheDocument()
+
+    fireEvent.click(cancelButton)
+
+    fireEvent.click(editButton)
+
+    const resetDescription = queryByDisplayValue(descriptionText)
+    expect(resetDescription).not.toBeInTheDocument()
+
+    expect(editButton).toBeInTheDocument()
+  })
+
   it('should not break if factions is empty', () => {
     const props = {
       factions: {},

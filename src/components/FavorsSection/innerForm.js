@@ -20,6 +20,7 @@ const InnerForm = ({
   isPCSubmitting,
   isSubmitting,
   onFavorChange,
+  resetForm,
   setIsNew,
   setFieldValue,
   type,
@@ -59,6 +60,7 @@ const InnerForm = ({
         <h3>{type}</h3>
         <FormButtons
           disabled={isSubmitting}
+          handleCancel={resetForm}
           handleSubmit={handleSubmit}
           icons={buttonsIcons}
           name={`favor-${type}`}
@@ -101,6 +103,8 @@ InnerForm.propTypes = {
   isSubmitting: PropTypes.bool,
   /** Function invoked to change existing favor data */
   onFavorChange: PropTypes.func.isRequired,
+  /** Resets the form to initial values */
+  resetForm: PropTypes.func.isRequired,
   /** Shows or hides the new favor form */
   setIsNew: PropTypes.func.isRequired,
   /** Changes the specified new favor field value */
