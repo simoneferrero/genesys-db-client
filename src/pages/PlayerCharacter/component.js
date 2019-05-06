@@ -17,20 +17,18 @@ export const PlayerCharacter = ({
   addPlayerCharacterWeapon,
   editPlayerCharacter,
   factions,
-  factionsUi,
-  favorsUi,
   getArchetypes,
   getAuthInfo,
   getCareers,
+  getCriticalInjuries,
   getFactions,
   getPlayerCharacter,
   getSkills,
   getWeapons,
   playerCharacter,
   playerCharacterId,
-  playersCharactersUi,
+  ui,
   weapons,
-  weaponsUi,
 }) => {
   useEffect(() => {
     getAuthInfo()
@@ -44,6 +42,9 @@ export const PlayerCharacter = ({
   useEffect(() => {
     getCareers()
   }, [getCareers])
+  useEffect(() => {
+    getCriticalInjuries()
+  }, [getCriticalInjuries])
   useEffect(() => {
     getSkills()
   }, [getSkills])
@@ -63,10 +64,14 @@ export const PlayerCharacter = ({
     addPlayerCharacterWeapon(playerCharacterId, `${values.id}`, actions)
 
   const loading =
-    playersCharactersUi.loading ||
-    favorsUi.loading ||
-    factionsUi.loading ||
-    weaponsUi.loading
+    ui.archetypes.loading ||
+    ui.careers.loading ||
+    ui.criticalInjuries.loading ||
+    ui.factions.loading ||
+    ui.favors.loading ||
+    ui.playersCharacters.loading ||
+    ui.skills.loading ||
+    ui.weapons.loading
 
   return (
     <>
@@ -98,16 +103,14 @@ PlayerCharacter.propTypes = {
   editPlayerCharacter: PropTypes.func.isRequired,
   /** Factions data */
   factions: PropTypes.objectOf(factionType).isRequired,
-  /** Factions loader and error information */
-  factionsUi: uiType.isRequired,
-  /** Favors loader and error information */
-  favorsUi: uiType.isRequired,
   /** Dispatched to fetch a list of archetypes */
   getArchetypes: PropTypes.func.isRequired,
   /** Dispatched to get user data */
   getAuthInfo: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of careers */
   getCareers: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of critical injuries */
+  getCriticalInjuries: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of factions */
   getFactions: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of skills */
@@ -120,12 +123,10 @@ PlayerCharacter.propTypes = {
   playerCharacter: playerCharacterType.isRequired,
   /** Current player character ID */
   playerCharacterId: PropTypes.string,
-  /** Players' characters loader and error information */
-  playersCharactersUi: uiType.isRequired,
+  /** App loader and error information */
+  ui: PropTypes.objectOf(uiType).isRequired,
   /** Weapons' data */
   weapons: PropTypes.objectOf(weaponType).isRequired,
-  /** Weapons' loader and error information */
-  weaponsUi: uiType.isRequired,
 }
 
 export default memo(PlayerCharacter)

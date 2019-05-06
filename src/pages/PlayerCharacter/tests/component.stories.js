@@ -10,7 +10,7 @@ import {
   playerCharacter1Id,
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
-import { uiElement, uiElementLoading } from 'mocks/ui'
+import { ui, uiElementLoading } from 'mocks/ui'
 import { weaponsById } from 'mocks/weapons'
 
 import { PlayerCharacter } from '../component'
@@ -20,19 +20,17 @@ const defaultProps = {
   addPlayerCharacterWeapon: action('addPlayerCharacterWeapon'),
   editPlayerCharacter: action('editPlayerCharacter'),
   factions: fromJS(factionsById).toJS(),
-  factionsUi: uiElement,
-  favorsUi: uiElement,
   getArchetypes: action('getArchetypes'),
   getAuthInfo: action('getAuthInfo'),
   getCareers: action('getCareers'),
+  getCriticalInjuries: action('getCriticalInjuries'),
   getFactions: action('getFactions'),
   getPlayerCharacter: action('getPlayerCharacter'),
   getSkills: action('getSkills'),
   getWeapons: action('getWeapons'),
   playerCharacter: playerCharacter1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
-  playersCharactersUi: uiElement,
-  weaponsUi: uiElement,
+  ui: fromJS(ui).toJS(),
   weapons: fromJS(weaponsById).toJS(),
 }
 
@@ -44,7 +42,10 @@ storiesOf('Pages/PlayerCharacter', module)
   .add('default', () => renderComponent())
   .add('loading', () => {
     const props = {
-      playersCharactersUi: uiElementLoading,
+      ui: {
+        ...ui,
+        playersCharacters: uiElementLoading,
+      },
     }
     return renderComponent(props)
   })

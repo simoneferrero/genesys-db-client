@@ -12,6 +12,7 @@ const globalStyle = css`
   }
 
   body {
+    display: flex;
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;

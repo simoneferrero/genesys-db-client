@@ -4,6 +4,7 @@ import { combineReducers } from 'redux-immutable'
 import archetypes from './archetypes'
 import authentication from './authentication'
 import careers from './careers'
+import criticalInjuries from './criticalInjuries'
 import factions from './factions'
 import favors from './favors'
 import playersCharacters from './playersCharacters'
@@ -14,6 +15,7 @@ export default combineReducers({
   archetypes,
   authentication,
   careers,
+  criticalInjuries,
   factions,
   favors,
   playersCharacters,

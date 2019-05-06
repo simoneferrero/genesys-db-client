@@ -6,6 +6,7 @@ import MinionProUrl from './MinionPro-Regular.otf'
 import MinionProItalicUrl from './MinionPro-It.otf'
 import MinionProBoldUrl from './MinionPro-Bold.otf'
 import MinionProItalicBoldUrl from './MinionPro-BoldIt.otf'
+import GenesysSymbolsUrl from './Genesys-Symbols.otf'
 
 import { fontFamilies } from 'styles/constants'
 
@@ -49,6 +50,12 @@ const fontFaces = css`
     src: url("${MinionProItalicBoldUrl}");
     font-weight: ${fontWeight.bold};
     font-style: ${fontStyle.italic};
+  }
+  @font-face {
+    font-family: "${fontFamilies.GenesysSymbols}";
+    src: url("${GenesysSymbolsUrl}");
+    font-weight: ${fontWeight.normal};
+    font-style: ${fontStyle.normal};
   }
 `
 
