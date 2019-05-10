@@ -10,6 +10,14 @@ export const criticalInjury1 = {
   persistent: false,
 }
 export const criticalInjury2 = {
+  id: 'slightly_dazed',
+  name: 'Slightly Dazed',
+  severity: 2,
+  effects: 'The target is disoriented until this Critical Injury is healed.',
+  dice_value: '61-65',
+  persistent: true,
+}
+export const criticalInjury3 = {
   id: 'the_end_is_nigh',
   name: 'The End Is Nigh',
   severity: 4,
