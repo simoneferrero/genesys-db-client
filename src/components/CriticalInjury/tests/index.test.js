@@ -171,7 +171,7 @@ describe('<CriticalInjury />', () => {
     const props = {
       editing: true,
       isCharacter: true,
-      isHealed: true,
+      deleting: true,
     }
     const { getByTestId, getByText, queryByTestId } = renderComponent(props)
 

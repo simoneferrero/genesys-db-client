@@ -16,7 +16,7 @@ export const StyledCriticalInjury = styled.div`
   padding: ${baseSpacing / 2}px;
 
   & > * {
-    ${({ isHealed }) => isHealed && healedStyles}
+    ${({ deleting, editing }) => deleting && editing && healedStyles}
   }
 
   & > h4 {

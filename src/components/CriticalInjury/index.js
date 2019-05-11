@@ -8,7 +8,7 @@ import { StyledButton, StyledCriticalInjury } from './styles'
 /* eslint-disable react/prop-types  */
 const FilteredCriticalInjury = ({
   editing,
-  isHealed,
+  deleting,
   isCharacter,
   persistent,
   ...otherProps
@@ -19,12 +19,12 @@ const CriticalInjury = ({
   className,
   editing,
   criticalInjury: { dice_value, effects, id, name, persistent, severity },
-  isHealed,
+  deleting,
   isCharacter,
   isSubmitting,
   setFieldValue,
 }) => {
-  const statusButton = isHealed ? (
+  const statusButton = deleting ? (
     <StyledButton
       data-testid={`undoButton-${id}`}
       disabled={isSubmitting}
@@ -51,7 +51,7 @@ const CriticalInjury = ({
       className={className}
       data-testid={`criticalInjury-${id}`}
       editing={editing}
-      isHealed={isHealed}
+      deleting={deleting}
       isCharacter={isCharacter}
       persistent={persistent}
     >
@@ -74,7 +74,7 @@ CriticalInjury.propTypes = {
   /** Whether to allow editing the criticalInjury */
   editing: PropTypes.bool,
   /** Whether the injury is marked to be healed */
-  isHealed: PropTypes.bool,
+  deleting: PropTypes.bool,
   /** Whether it's displayed on a character sheet */
   isCharacter: PropTypes.bool,
   /** Whether the form is submitting */

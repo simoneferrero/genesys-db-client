@@ -35,7 +35,7 @@ storiesOf('Components/CriticalInjury', module)
     const props = {
       editing: true,
       isCharacter: true,
-      isHealed: true,
+      deleting: true,
     }
     return renderComponent(props)
   })
