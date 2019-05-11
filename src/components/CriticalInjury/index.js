@@ -7,9 +7,10 @@ import { StyledButton, StyledCriticalInjury } from './styles'
 /* eslint-disable no-unused-vars  */
 /* eslint-disable react/prop-types  */
 const FilteredCriticalInjury = ({
-  isNew,
-  isComplete,
   editing,
+  isHealed,
+  isCharacter,
+  persistent,
   ...otherProps
 }) => <div {...otherProps} />
 /* eslint-enable */
@@ -18,30 +19,31 @@ const CriticalInjury = ({
   className,
   editing,
   criticalInjury: { dice_value, effects, id, name, persistent, severity },
+  isHealed,
+  isCharacter,
   isSubmitting,
   setFieldValue,
 }) => {
-  // TODO: pass status from container taken from deletedCriticalInjuries
-  // const statusButton =
-  //   status === 'complete' ? (
-  //     <StyledButton
-  //       data-testid={`undoButton-${id}`}
-  //       disabled={isSubmitting}
-  //       onClick={() => setFieldValue(`deletedCriticalInjuries.${id}`, false)}
-  //       type="button"
-  //     >
-  //       <h4>Undo</h4>
-  //     </StyledButton>
-  //   ) : (
-  //     <StyledButton
-  //       data-testid={`healButton-${id}`}
-  //       disabled={isSubmitting}
-  //       onClick={() => setFieldValue(`deletedCriticalInjuries.${id}`, true)}
-  //       type="button"
-  //     >
-  //       <h4>Heal</h4>
-  //     </StyledButton>
-  //   )
+  const statusButton = isHealed ? (
+    <StyledButton
+      data-testid={`undoButton-${id}`}
+      disabled={isSubmitting}
+      onClick={() => setFieldValue(`deletedCriticalInjuries.${id}`, false)}
+      type="button"
+    >
+      <h4>Undo</h4>
+    </StyledButton>
+  ) : (
+    <StyledButton
+      data-testid={`healButton-${id}`}
+      disabled={isSubmitting}
+      onClick={() => setFieldValue(`deletedCriticalInjuries.${id}`, true)}
+      type="button"
+    >
+      <h4>Heal</h4>
+    </StyledButton>
+  )
+  const severityElements = [...Array(severity)].map(() => 'k').join(' ')
 
   return (
     <StyledCriticalInjury
@@ -49,13 +51,17 @@ const CriticalInjury = ({
       className={className}
       data-testid={`criticalInjury-${id}`}
       editing={editing}
+      isHealed={isHealed}
+      isCharacter={isCharacter}
       persistent={persistent}
     >
       <h4 data-testid={`criticalInjury-${id}-dice_value`}>{dice_value}</h4>
       <h4 data-testid={`criticalInjury-${id}-name`}>{name}</h4>
-      <h4 data-testid={`criticalInjury-${id}-severity`}>{severity}</h4>
-      <div data-testid={`criticalInjury-${id}-effects`}>{effects}</div>
-      {/* {editing && <div>{statusButton}</div>} */}
+      <h4 data-testid={`criticalInjury-${id}-severity`}>
+        <span>{severityElements}</span>
+      </h4>
+      <p data-testid={`criticalInjury-${id}-effects`}>{effects}</p>
+      {editing && statusButton}
     </StyledCriticalInjury>
   )
 }
@@ -63,10 +69,14 @@ const CriticalInjury = ({
 CriticalInjury.propTypes = {
   /** Custom styles */
   className: PropTypes.string,
-  /** Whether to allow editing the criticalInjury */
-  editing: PropTypes.bool,
   /** CriticalInjury data */
   criticalInjury: criticalInjuryType.isRequired,
+  /** Whether to allow editing the criticalInjury */
+  editing: PropTypes.bool,
+  /** Whether the injury is marked to be healed */
+  isHealed: PropTypes.bool,
+  /** Whether it's displayed on a character sheet */
+  isCharacter: PropTypes.bool,
   /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
   /** Changes the specified field value */

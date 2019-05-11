@@ -1,40 +1,17 @@
-import Favor from '../index'
+import CriticalInjury from '../index'
 
-import { fromJS } from 'immutable'
+import { criticalInjury1, criticalInjury2 } from 'mocks/criticalInjuries'
 
-import { factionsById } from 'mocks/factions'
-import { favor1, favor2, newFavor } from 'mocks/favors'
-
-import { Formik } from 'formik'
-
-const mockHandleSubmit = jest.fn()
 const mockSetFieldValue = jest.fn()
 const defaultProps = {
-  factions: fromJS(factionsById).toJS(),
-  favor: favor1,
+  criticalInjury: criticalInjury1,
   setFieldValue: mockSetFieldValue,
 }
 
 const renderComponent = (props = {}) =>
-  render(<Favor {...defaultProps} {...props} />)
+  render(<CriticalInjury {...defaultProps} {...props} />)
 
-const renderWithFormik = (formProps = {}) =>
-  render(
-    <Formik
-      onSubmit={mockHandleSubmit}
-      render={({ values, ...props }) => (
-        <Favor
-          factions={defaultProps.factions}
-          favor={values}
-          isNew
-          {...props}
-        />
-      )}
-      {...formProps}
-    />,
-  )
-
-describe('<Favor />', () => {
+describe('<CriticalInjury />', () => {
   afterEach(() => {
     jest.clearAllMocks()
   })
@@ -42,199 +19,203 @@ describe('<Favor />', () => {
     jest.resetAllMocks()
   })
 
-  it('should render correctly when not adding or editing', () => {
-    const {
-      getByTestId,
-      getByText,
-      queryByDisplayValue,
-      queryByPlaceholderText,
-      queryByTestId,
-    } = renderComponent()
+  it('should render correctly when not editing and not in character sheet', () => {
+    const { getByTestId, getByText, queryByTestId } = renderComponent()
 
-    const existingFavor = getByTestId(`favor-${favor1.id}`)
-    expect(existingFavor).toBeInTheDocument()
+    const criticalInjury = getByTestId(`criticalInjury-${criticalInjury1.id}`)
+    expect(criticalInjury).toBeInTheDocument()
 
-    const form = queryByTestId(/new-favor/i)
-    expect(form).not.toBeInTheDocument()
+    const diceValue = getByText(criticalInjury1.dice_value)
+    expect(diceValue).toBeInTheDocument()
+    expect(diceValue).not.toHaveStyle('opacity: 0.5;')
+    expect(diceValue).not.toHaveStyle('text-decoration: line-through;')
 
-    const size = getByTestId(`favor-${favor1.id}-size`)
-    expect(size).toBeInTheDocument()
-    const sizeValue = getByText(new RegExp(favor1.size, 'i'))
-    expect(sizeValue).toBeInTheDocument()
+    const name = getByText(criticalInjury1.name)
+    expect(name).toBeInTheDocument()
+    expect(name).not.toHaveStyle('opacity: 0.5;')
+    expect(name).not.toHaveStyle('text-decoration: line-through;')
 
-    const sizeSelect = queryByDisplayValue(new RegExp(newFavor.size, 'i'))
-    expect(sizeSelect).not.toBeInTheDocument()
-
-    const faction = getByTestId(`favor-${favor1.id}-faction_id`)
-    expect(faction).toBeInTheDocument()
-    const factionValue = getByText(new RegExp(favor1.faction_id, 'i'))
-    expect(factionValue).toBeInTheDocument()
-
-    const factionSelect = queryByDisplayValue(
-      new RegExp(newFavor.faction_id, 'i'),
+    const severity = getByTestId(
+      `criticalInjury-${criticalInjury1.id}-severity`,
     )
-    expect(factionSelect).not.toBeInTheDocument()
+    expect(severity).toBeInTheDocument()
+    expect(severity).not.toHaveStyle('opacity: 0.5;')
+    expect(severity).not.toHaveStyle('text-decoration: line-through;')
 
-    const description = getByTestId(`favor-${favor1.id}-description`)
-    expect(description).toBeInTheDocument()
-    const descriptionValue = getByText(favor1.description)
-    expect(descriptionValue).toBeInTheDocument()
+    const severityText = [...Array(criticalInjury1.severity)]
+      .map(() => 'k')
+      .join(' ')
+    const severityTextElement = getByText(severityText)
+    expect(severityTextElement).toBeInTheDocument()
 
-    const descriptionTextarea = queryByPlaceholderText(/add description.../i)
-    expect(descriptionTextarea).not.toBeInTheDocument()
+    const effects = getByText(criticalInjury1.effects)
+    expect(effects).toBeInTheDocument()
+    expect(effects).not.toHaveStyle('opacity: 0.5;')
+    expect(effects).not.toHaveStyle('text-decoration: line-through;')
 
-    const completeButton = queryByTestId(/completeButton/i)
-    expect(completeButton).not.toBeInTheDocument()
+    const undoButton = queryByTestId(`undoButton-${criticalInjury1.id}`)
+    expect(undoButton).not.toBeInTheDocument()
 
-    const revertButton = queryByTestId(/revertButton/i)
-    expect(revertButton).not.toBeInTheDocument()
+    const healButton = queryByTestId(`healButton-${criticalInjury1.id}`)
+    expect(healButton).not.toBeInTheDocument()
   })
 
-  it('should not break if factions are empty', () => {
+  it('should render correctly when not editing in character sheet', () => {
     const props = {
-      factions: {},
+      isCharacter: true,
     }
-    const { getByTestId } = renderComponent(props)
+    const { getByTestId, getByText, queryByTestId } = renderComponent(props)
 
-    const existingFavor = getByTestId(`favor-${favor1.id}`)
-    expect(existingFavor).toBeInTheDocument()
+    const criticalInjury = getByTestId(`criticalInjury-${criticalInjury1.id}`)
+    expect(criticalInjury).toBeInTheDocument()
+
+    const diceValue = getByText(criticalInjury1.dice_value)
+    expect(diceValue).toBeInTheDocument()
+    expect(diceValue).not.toHaveStyle('opacity: 0.5;')
+    expect(diceValue).not.toHaveStyle('text-decoration: line-through;')
+
+    const name = getByText(criticalInjury1.name)
+    expect(name).toBeInTheDocument()
+    expect(name).not.toHaveStyle('opacity: 0.5;')
+    expect(name).not.toHaveStyle('text-decoration: line-through;')
+
+    const severity = getByTestId(
+      `criticalInjury-${criticalInjury1.id}-severity`,
+    )
+    expect(severity).toBeInTheDocument()
+    expect(severity).not.toHaveStyle('opacity: 0.5;')
+    expect(severity).not.toHaveStyle('text-decoration: line-through;')
+
+    const severityText = [...Array(criticalInjury1.severity)]
+      .map(() => 'k')
+      .join(' ')
+    const severityTextElement = getByText(severityText)
+    expect(severityTextElement).toBeInTheDocument()
+
+    const effects = getByText(criticalInjury1.effects)
+    expect(effects).toBeInTheDocument()
+    expect(effects).toHaveStyle('opacity: 0.5;')
+    expect(effects).not.toHaveStyle('text-decoration: line-through;')
+
+    const undoButton = queryByTestId(`undoButton-${criticalInjury1.id}`)
+    expect(undoButton).not.toBeInTheDocument()
+
+    const healButton = queryByTestId(`healButton-${criticalInjury1.id}`)
+    expect(healButton).not.toBeInTheDocument()
   })
 
-  it('should render correctly when adding', () => {
-    const faction_id = defaultProps.factions[newFavor.faction_id].id
+  it('should render correct styles when persistent injury', () => {
     const props = {
-      adding: true,
-      initialValues: {
-        description: '',
-        faction_id,
-        size: 'small',
-        status: 'incomplete',
-        type: 'owed',
-      },
+      criticalInjury: criticalInjury2,
+      isCharacter: true,
     }
-    const {
-      getByDisplayValue,
-      getByPlaceholderText,
-      getByTestId,
-      queryByTestId,
-    } = renderWithFormik(props)
-
-    const existingFavor = queryByTestId(/favor-/i)
-    expect(existingFavor).not.toBeInTheDocument()
-
-    const form = getByTestId(/new-favor/i)
-    expect(form).toBeInTheDocument()
-
-    const sizeSelect = getByDisplayValue(/small/i)
-    expect(sizeSelect).toBeInTheDocument()
-
-    const factionSelect = getByDisplayValue(new RegExp(faction_id, 'i'))
-    expect(factionSelect).toBeInTheDocument()
-
-    const descriptionTextarea = getByPlaceholderText(/add description.../i)
-    expect(descriptionTextarea).toBeInTheDocument()
-
-    fireEvent.change(descriptionTextarea, {
-      target: {
-        value: newFavor.description,
-      },
-    })
-    const populatedDescriptionTextarea = getByDisplayValue(newFavor.description)
-    expect(populatedDescriptionTextarea).toBeInTheDocument()
-
-    const completeButton = queryByTestId(/completeButton/i)
-    expect(completeButton).not.toBeInTheDocument()
-
-    const revertButton = queryByTestId(/revertButton/i)
-    expect(revertButton).not.toBeInTheDocument()
+    const { getByText } = renderComponent(props)
+    const effects = getByText(criticalInjury2.effects)
+    expect(effects).toBeInTheDocument()
+    expect(effects).not.toHaveStyle('opacity: 0.5;')
+    expect(effects).not.toHaveStyle('text-decoration: line-through;')
   })
 
-  it('should render correctly when editing incomplete', () => {
+  it('should render correctly when editing and not healed', () => {
     const props = {
       editing: true,
+      isCharacter: true,
     }
-    const {
-      getByTestId,
-      getByText,
-      queryByDisplayValue,
-      queryByPlaceholderText,
-      queryByTestId,
-    } = renderComponent(props)
+    const { getByTestId, getByText, queryByTestId } = renderComponent(props)
 
-    const existingFavor = getByTestId(`favor-${favor1.id}`)
-    expect(existingFavor).toBeInTheDocument()
+    const criticalInjury = getByTestId(`criticalInjury-${criticalInjury1.id}`)
+    expect(criticalInjury).toBeInTheDocument()
 
-    const form = queryByTestId(/new-favor/i)
-    expect(form).not.toBeInTheDocument()
+    const diceValue = getByText(criticalInjury1.dice_value)
+    expect(diceValue).toBeInTheDocument()
+    expect(diceValue).not.toHaveStyle('opacity: 0.5;')
+    expect(diceValue).not.toHaveStyle('text-decoration: line-through;')
 
-    const size = getByTestId(`favor-${favor1.id}-size`)
-    expect(size).toBeInTheDocument()
-    const sizeValue = getByText(new RegExp(favor1.size, 'i'))
-    expect(sizeValue).toBeInTheDocument()
+    const name = getByText(criticalInjury1.name)
+    expect(name).toBeInTheDocument()
+    expect(name).not.toHaveStyle('opacity: 0.5;')
+    expect(name).not.toHaveStyle('text-decoration: line-through;')
 
-    const sizeSelect = queryByDisplayValue(new RegExp(newFavor.size, 'i'))
-    expect(sizeSelect).not.toBeInTheDocument()
-
-    const faction = getByTestId(`favor-${favor1.id}-faction_id`)
-    expect(faction).toBeInTheDocument()
-    const factionValue = getByText(new RegExp(favor1.faction_id, 'i'))
-    expect(factionValue).toBeInTheDocument()
-
-    const factionSelect = queryByDisplayValue(
-      new RegExp(newFavor.faction_id, 'i'),
+    const severity = getByTestId(
+      `criticalInjury-${criticalInjury1.id}-severity`,
     )
-    expect(factionSelect).not.toBeInTheDocument()
+    expect(severity).toBeInTheDocument()
+    expect(severity).not.toHaveStyle('opacity: 0.5;')
+    expect(severity).not.toHaveStyle('text-decoration: line-through;')
 
-    const description = getByTestId(`favor-${favor1.id}-description`)
-    expect(description).toBeInTheDocument()
-    const descriptionValue = getByText(favor1.description)
-    expect(descriptionValue).toBeInTheDocument()
+    const severityText = [...Array(criticalInjury1.severity)]
+      .map(() => 'k')
+      .join(' ')
+    const severityTextElement = getByText(severityText)
+    expect(severityTextElement).toBeInTheDocument()
 
-    const descriptionTextarea = queryByPlaceholderText(/add description.../i)
-    expect(descriptionTextarea).not.toBeInTheDocument()
+    const effects = getByText(criticalInjury1.effects)
+    expect(effects).toBeInTheDocument()
+    expect(effects).toHaveStyle('opacity: 0.5;')
+    expect(effects).not.toHaveStyle('text-decoration: line-through;')
 
-    const completeButton = getByTestId(/completeButton/i)
-    expect(completeButton).toBeInTheDocument()
+    const undoButton = queryByTestId(`undoButton-${criticalInjury1.id}`)
+    expect(undoButton).not.toBeInTheDocument()
 
-    fireEvent.click(completeButton)
+    const healButton = getByTestId(`healButton-${criticalInjury1.id}`)
+    expect(healButton).toBeInTheDocument()
+
+    fireEvent.click(healButton)
     expect(mockSetFieldValue).toHaveBeenCalledWith(
-      `favors.${favor1.id}.status`,
-      'complete',
+      `deletedCriticalInjuries.${criticalInjury1.id}`,
+      true,
     )
-
-    const revertButton = queryByTestId(/revertButton/i)
-    expect(revertButton).not.toBeInTheDocument()
   })
 
-  it('should render correctly when editing completed', () => {
+  it('should render correctly when editing and healed', () => {
     const props = {
       editing: true,
-      favor: favor2,
+      isCharacter: true,
+      isHealed: true,
     }
-    const { getByTestId, queryByTestId } = renderComponent(props)
+    const { getByTestId, getByText, queryByTestId } = renderComponent(props)
 
-    const existingFavor = getByTestId(`favor-${favor2.id}`)
-    expect(existingFavor).toBeInTheDocument()
+    const criticalInjury = getByTestId(`criticalInjury-${criticalInjury1.id}`)
+    expect(criticalInjury).toBeInTheDocument()
 
-    const size = getByTestId(`favor-${favor2.id}-size`)
-    expect(size).toHaveStyle('text-decoration: line-through')
+    const diceValue = getByText(criticalInjury1.dice_value)
+    expect(diceValue).toBeInTheDocument()
+    expect(diceValue).toHaveStyle('opacity: 0.5;')
+    expect(diceValue).toHaveStyle('text-decoration: line-through;')
 
-    const faction = getByTestId(`favor-${favor2.id}-faction_id`)
-    expect(faction).toHaveStyle('text-decoration: line-through')
+    const name = getByText(criticalInjury1.name)
+    expect(name).toBeInTheDocument()
+    expect(name).toHaveStyle('opacity: 0.5;')
+    expect(name).toHaveStyle('text-decoration: line-through;')
 
-    const description = getByTestId(`favor-${favor2.id}-description`)
-    expect(description).toHaveStyle('text-decoration: line-through')
+    const severity = getByTestId(
+      `criticalInjury-${criticalInjury1.id}-severity`,
+    )
+    expect(severity).toBeInTheDocument()
+    expect(severity).toHaveStyle('opacity: 0.5;')
+    expect(severity).toHaveStyle('text-decoration: line-through;')
 
-    const completeButton = queryByTestId(/completeButton/i)
-    expect(completeButton).not.toBeInTheDocument()
+    const severityText = [...Array(criticalInjury1.severity)]
+      .map(() => 'k')
+      .join(' ')
+    const severityTextElement = getByText(severityText)
+    expect(severityTextElement).toBeInTheDocument()
 
-    const revertButton = getByTestId(/revertButton/i)
-    expect(revertButton).toBeInTheDocument()
+    const effects = getByText(criticalInjury1.effects)
+    expect(effects).toBeInTheDocument()
+    expect(effects).toHaveStyle('opacity: 0.5;')
+    expect(effects).toHaveStyle('text-decoration: line-through;')
 
-    fireEvent.click(revertButton)
+    const undoButton = getByTestId(`undoButton-${criticalInjury1.id}`)
+    expect(undoButton).toBeInTheDocument()
+
+    const healButton = queryByTestId(`healButton-${criticalInjury1.id}`)
+    expect(healButton).not.toBeInTheDocument()
+
+    fireEvent.click(undoButton)
     expect(mockSetFieldValue).toHaveBeenCalledWith(
-      `favors.${favor2.id}.status`,
-      'incomplete',
+      `deletedCriticalInjuries.${criticalInjury1.id}`,
+      false,
     )
   })
 })

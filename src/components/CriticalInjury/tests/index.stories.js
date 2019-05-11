@@ -16,6 +16,26 @@ const renderComponent = (props = {}) => (
   <CriticalInjury {...defaultProps} {...props} />
 )
 
-storiesOf('Components/CriticalInjury', module).add('default', () =>
-  renderComponent(),
-)
+storiesOf('Components/CriticalInjury', module)
+  .add('default', () => renderComponent())
+  .add('default character', () => {
+    const props = {
+      isCharacter: true,
+    }
+    return renderComponent(props)
+  })
+  .add('editing heal', () => {
+    const props = {
+      editing: true,
+      isCharacter: true,
+    }
+    return renderComponent(props)
+  })
+  .add('editing undo', () => {
+    const props = {
+      editing: true,
+      isCharacter: true,
+      isHealed: true,
+    }
+    return renderComponent(props)
+  })
