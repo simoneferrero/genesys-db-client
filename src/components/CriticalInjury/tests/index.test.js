@@ -61,6 +61,30 @@ describe('<CriticalInjury />', () => {
     expect(healButton).not.toBeInTheDocument()
   })
 
+  it('should render correctly when severity is > 4', () => {
+    const criticalInjury = {
+      ...criticalInjury1,
+      severity: 1000,
+    }
+    const props = {
+      criticalInjury,
+    }
+    const { getByTestId, queryByText } = renderComponent(props)
+
+    const severity = getByTestId(
+      `criticalInjury-${criticalInjury1.id}-severity`,
+    )
+    expect(severity).toBeInTheDocument()
+    expect(severity).not.toHaveStyle('opacity: 0.5;')
+    expect(severity).not.toHaveStyle('text-decoration: line-through;')
+
+    const severityText = [...Array(criticalInjury1.severity)]
+      .map(() => 'k')
+      .join(' ')
+    const severityTextElement = queryByText(severityText)
+    expect(severityTextElement).not.toBeInTheDocument()
+  })
+
   it('should render correctly when not editing in character sheet', () => {
     const criticalInjury = playerCharacter1CriticalInjuriesAugmented['1']
     const props = {

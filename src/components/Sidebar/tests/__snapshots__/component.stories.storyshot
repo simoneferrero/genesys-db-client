@@ -651,6 +651,13 @@ exports[`Storyshots Components/Sidebar default 1`] = `
   >
     Weapons
   </a>
+  <a
+    class="c4"
+    data-testid="menu-item-critical-injuries"
+    href="/critical-injuries"
+  >
+    Critical Injuries
+  </a>
   <button
     class="c5"
     type="button"

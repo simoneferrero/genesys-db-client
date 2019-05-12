@@ -16,7 +16,7 @@ export const StyledCriticalInjury = styled.div`
   padding: ${baseSpacing / 2}px;
 
   @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
   }
 
   & > * {

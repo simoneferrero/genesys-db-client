@@ -1331,7 +1331,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c28 {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
@@ -1343,7 +1343,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c27 {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
 

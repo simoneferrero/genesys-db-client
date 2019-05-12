@@ -70,7 +70,7 @@ CriticalInjuriesSection.propTypes = {
   /** Whether critical injuries are being edited */
   editing: PropTypes.bool,
   /** Function invoked upon form submission */
-  handleSubmit: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func,
   /** Whether the form is in a character sheet */
   isCharacter: PropTypes.bool,
   /** Whether the player character form is submitting */

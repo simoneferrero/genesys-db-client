@@ -43,7 +43,8 @@ const CriticalInjury = ({
       <h4>Heal</h4>
     </StyledButton>
   )
-  const severityElements = [...Array(severity)].map(() => 'k').join(' ')
+  const severityElements =
+    severity < 5 ? [...Array(severity)].map(() => 'k').join(' ') : ''
 
   return (
     <StyledCriticalInjury
@@ -83,7 +84,7 @@ CriticalInjury.propTypes = {
   /** Whether the form is submitting */
   isSubmitting: PropTypes.bool,
   /** Changes the specified field value */
-  setFieldValue: PropTypes.func.isRequired,
+  setFieldValue: PropTypes.func,
 }
 
 export default CriticalInjury

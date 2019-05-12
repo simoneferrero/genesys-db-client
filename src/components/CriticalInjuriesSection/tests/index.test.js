@@ -48,6 +48,16 @@ describe('<CriticalInjuriesSection />', () => {
     })
   })
 
+  it('should not break when handleSubmit is not defined', () => {
+    const props = {
+      handleSubmit: undefined,
+    }
+    const { getByTestId } = renderComponent(props)
+
+    const criticalInjuriesSection = getByTestId('criticalInjuries-section')
+    expect(criticalInjuriesSection).toBeInTheDocument()
+  })
+
   it('should render correctly when isCharacter', () => {
     const props = {
       characterCriticalInjuries,
