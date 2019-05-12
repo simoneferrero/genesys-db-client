@@ -139,7 +139,7 @@ exports[`Storyshots Pages/CriticalInjuries default 1`] = `
     data-testid="header"
   >
     <h2>
-      Weapons
+      Critical Injuries
     </h2>
   </div>
   <div
@@ -347,7 +347,7 @@ exports[`Storyshots Pages/CriticalInjuries loading 1`] = `
     data-testid="header"
   >
     <h2>
-      Weapons
+      Critical Injuries
     </h2>
   </div>
   <div

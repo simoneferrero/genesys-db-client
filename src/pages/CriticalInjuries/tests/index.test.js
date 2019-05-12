@@ -54,8 +54,8 @@ describe('<CriticalInjuries />', () => {
       expect(criticalInjuriesSection).toBeInTheDocument()
 
       criticalInjuries.forEach(({ id }) => {
-        const weapon = getByTestId(`criticalInjury-${id}`)
-        expect(weapon).toBeInTheDocument()
+        const criticalInjury = getByTestId(`criticalInjury-${id}`)
+        expect(criticalInjury).toBeInTheDocument()
       })
 
       const spinner = queryByTestId('spinner')
@@ -78,8 +78,8 @@ describe('<CriticalInjuries />', () => {
       expect(criticalInjuriesSection).toBeInTheDocument()
 
       criticalInjuries.forEach(({ id }) => {
-        const weapon = getByTestId(`criticalInjury-${id}`)
-        expect(weapon).toBeInTheDocument()
+        const criticalInjury = getByTestId(`criticalInjury-${id}`)
+        expect(criticalInjury).toBeInTheDocument()
       })
 
       const spinner = queryByTestId('spinner')
