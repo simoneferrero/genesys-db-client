@@ -44,13 +44,14 @@ import AuthenticationRecord from 'reducers/authentication/records'
 
 import { apiPath, formikActions } from 'mocks'
 import { authInfoResponse } from 'mocks/authentication'
+import { criticalInjury1, criticalInjury2 } from 'mocks/criticalInjuries'
+import { genericError } from 'mocks/errors'
 import {
   playerCharacter1Id,
   playerCharacter1Augmented,
   playerCharacter1Response,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
-import { genericError } from 'mocks/errors'
 import { weapon1, weapon2 } from 'mocks/weapons'
 
 describe('playersCharacters sagas', () => {
@@ -253,6 +254,10 @@ describe('playersCharacters sagas', () => {
     } = playerCharacter1Augmented.toJS()
     const values = {
       ...playerCharacter,
+      deletedCriticalInjuries: {
+        [criticalInjury1.id]: true,
+        [criticalInjury2.id]: false,
+      },
       deletedWeapons: {
         [weapon1.id]: true,
         [weapon2.id]: false,
@@ -288,6 +293,7 @@ describe('playersCharacters sagas', () => {
           favors,
         } = values
         const data = JSON.stringify({
+          deletedCriticalInjuries: [`${criticalInjury1.id}`],
           deletedWeapons: [`${weapon1.id}`],
           equipment: playerCharacter1Response.equipment,
           favors,

@@ -1,5 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {
+  characterCriticalInjuryType,
+  criticalInjuryType,
+} from 'types/criticalInjuries'
 import { playerCharacterData } from 'types/playersCharacters'
 import { skillType } from 'types/skills'
 import { factionType } from 'types/factions'
@@ -10,6 +14,7 @@ import * as yup from 'yup'
 
 import { Form } from 'formik'
 
+import CriticalInjuries from 'components/CriticalInjuriesSection'
 import Equipment from 'components/Equipment'
 import Favors from 'components/Favors'
 import FormButtons from 'components/FormButtons'
@@ -23,7 +28,9 @@ import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
 const InnerForm = ({
   addFavor,
+  addPlayerCharacterCriticalInjury,
   addPlayerCharacterWeapon,
+  criticalInjuries,
   editing,
   factions,
   handleSubmit,
@@ -77,6 +84,18 @@ const InnerForm = ({
       weapons={weapons}
     />
     <StyledSectionWrapper
+      as={CriticalInjuries}
+      characterCriticalInjuries={values.critical_injuries}
+      criticalInjuries={criticalInjuries}
+      deletedCriticalInjuries={values.deletedCriticalInjuries}
+      editing={editing}
+      handleSubmit={addPlayerCharacterCriticalInjury}
+      isCharacter
+      isPCSubmitting={isSubmitting}
+      onCriticalInjuryChange={setFieldValue}
+      sectionTitle="Critical Injuries"
+    />
+    <StyledSectionWrapper
       as={Motivations}
       editing={editing}
       motivations={values.motivations}
@@ -121,8 +140,12 @@ InnerForm.validationSchema = yup.object({
 InnerForm.propTypes = {
   /** Invoked when adding a favor */
   addFavor: PropTypes.func.isRequired,
+  /** Invoked when adding a critical injury */
+  addPlayerCharacterCriticalInjury: PropTypes.func.isRequired,
   /** Invoked when adding a weapon */
   addPlayerCharacterWeapon: PropTypes.func.isRequired,
+  /** Critical injuries data */
+  criticalInjuries: PropTypes.arrayOf(criticalInjuryType).isRequired,
   /** Whether the buttons are in editing or static mode */
   editing: PropTypes.bool,
   /** Errors within the form */
@@ -146,6 +169,8 @@ InnerForm.propTypes = {
   /** Form values */
   values: PropTypes.shape({
     ...playerCharacterData,
+    critical_injuries: PropTypes.objectOf(characterCriticalInjuryType)
+      .isRequired,
     favors: PropTypes.objectOf(favorType).isRequired,
     skills: PropTypes.objectOf(skillType).isRequired,
     weapons: PropTypes.objectOf(weaponType).isRequired,

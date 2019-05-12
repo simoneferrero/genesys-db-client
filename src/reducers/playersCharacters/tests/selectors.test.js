@@ -36,11 +36,13 @@ describe('playersCharacters selectors', () => {
       expect(result).toEqual(expectedResult)
     })
 
-    it('should not break if archetypes, careers or skills have not been fetched yet', () => {
+    it('should not break if other maps have not been fetched yet', () => {
       const modifiedStore = store
         .set('archetypes', new ReducerRecord())
         .set('careers', new ReducerRecord())
+        .set('criticalInjuries', new ReducerRecord())
         .set('skills', new ReducerRecord())
+        .set('weapons', new ReducerRecord())
       const result = playersCharactersByIdSelector(modifiedStore)
       const expectedResult = playersCharactersById
       expect(result).toEqual(expectedResult)

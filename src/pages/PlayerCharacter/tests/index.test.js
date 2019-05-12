@@ -6,6 +6,7 @@ import ReducerRecord from 'reducers/records'
 import PlayerCharacter from '../index'
 
 import { formikActions, store } from 'mocks'
+import { criticalInjury3 } from 'mocks/criticalInjuries'
 import { newFavor } from 'mocks/favors'
 import {
   playerCharacter1Id,
@@ -14,6 +15,12 @@ import {
 } from 'mocks/playersCharacters'
 import { newWeaponResponse } from 'mocks/weapons'
 
+import { GET_ARCHETYPES } from 'actions/archetypes/constants'
+import { GET_CAREERS } from 'actions/careers/constants'
+import {
+  ADD_PLAYER_CHARACTER_CRITICAL_INJURY,
+  GET_CRITICAL_INJURIES,
+} from 'actions/criticalInjuries/constants'
 import { GET_FACTIONS } from 'actions/factions/constants'
 import { ADD_FAVOR } from 'actions/favors/constants'
 import {
@@ -21,6 +28,7 @@ import {
   GET_PLAYER_CHARACTER,
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
+import { GET_SKILLS } from 'actions/skills/constants'
 import {
   GET_WEAPONS,
   ADD_PLAYER_CHARACTER_WEAPON,
@@ -57,12 +65,8 @@ import {
 } from 'actions/playersCharacters'
 
 jest.mock('actions/archetypes', () => {
-  const { GET_ARCHETYPES } = require('actions/archetypes/constants')
   return {
-    getArchetypes: jest.fn(() => ({
-      type: GET_ARCHETYPES,
-      payload: {},
-    })),
+    getArchetypes: jest.fn(() => ({ type: '' })),
     getArchetypesSuccess: jest.fn(() => ({ type: '' })),
     getArchetypesError: jest.fn(() => ({ type: '' })),
   }
@@ -70,17 +74,28 @@ jest.mock('actions/archetypes', () => {
 import { getArchetypes } from 'actions/archetypes'
 
 jest.mock('actions/careers', () => {
-  const { GET_CAREERS } = require('actions/careers/constants')
   return {
-    getCareers: jest.fn(() => ({
-      type: GET_CAREERS,
-      payload: {},
-    })),
+    getCareers: jest.fn(jest.fn(() => ({ type: '' }))),
     getCareersSuccess: jest.fn(() => ({ type: '' })),
     getCareersError: jest.fn(() => ({ type: '' })),
   }
 })
 import { getCareers } from 'actions/careers'
+
+jest.mock('actions/criticalInjuries', () => {
+  return {
+    addPlayerCharacterCriticalInjury: jest.fn(jest.fn(() => ({ type: '' }))),
+    addPlayerCharacterCriticalInjurySuccess: jest.fn(() => ({ type: '' })),
+    addPlayerCharacterCriticalInjuryError: jest.fn(() => ({ type: '' })),
+    getCriticalInjuries: jest.fn(jest.fn(() => ({ type: '' }))),
+    getCriticalInjuriesSuccess: jest.fn(() => ({ type: '' })),
+    getCriticalInjuriesError: jest.fn(() => ({ type: '' })),
+  }
+})
+import {
+  addPlayerCharacterCriticalInjury,
+  getCriticalInjuries,
+} from 'actions/criticalInjuries'
 
 jest.mock('actions/factions', () => ({
   getFactions: jest.fn(() => ({ type: '' })),
@@ -162,88 +177,84 @@ describe('<PlayerCharacter />', () => {
     })
   })
 
-  it('should render correctly if loading', async () => {
-    getPlayerCharacter.mockImplementation(() => ({
-      type: GET_PLAYER_CHARACTER,
-      payload: {
-        id,
+  describe('loader', () => {
+    it('should render correctly if finished loading', async () => {
+      // Skip redux-saga and dispatch success action directly
+      getPlayerCharacter.mockImplementation(() => ({
+        type: GET_PLAYER_CHARACTER_SUCCESS,
+        payload: {
+          id,
+          playerCharacter: playerCharacter1Response,
+        },
+      }))
+      const { getByTestId, queryByTestId } = renderComponent()
+
+      await wait(() => {
+        const playersCharactersWrapper = getByTestId(/player-character/i)
+        expect(playersCharactersWrapper).toBeInTheDocument()
+
+        const pcSheet = getByTestId(/pc-sheet/i)
+        expect(pcSheet).toBeInTheDocument()
+
+        const spinner = queryByTestId(/spinner/i)
+        expect(spinner).not.toBeInTheDocument()
+      })
+    })
+
+    const testCases = [
+      {
+        name: 'archetypes',
+        type: GET_ARCHETYPES,
       },
-    }))
-
-    const { getByTestId } = renderComponent()
-
-    await wait(() => {
-      const playersCharactersWrapper = getByTestId(/player-character/i)
-      expect(playersCharactersWrapper).toBeInTheDocument()
-
-      const pcSheet = getByTestId(/pc-sheet/i)
-      expect(pcSheet).toBeInTheDocument()
-
-      const spinner = getByTestId(/spinner/i)
-      expect(spinner).toBeInTheDocument()
-    })
-  })
-
-  it('should render correctly if finished loading', async () => {
-    // Skip redux-saga and dispatch success action directly
-    getPlayerCharacter.mockImplementation(() => ({
-      type: GET_PLAYER_CHARACTER_SUCCESS,
-      payload: {
-        id,
-        playerCharacter: playerCharacter1Response,
+      {
+        name: 'careers',
+        type: GET_CAREERS,
       },
-    }))
-    const { getByTestId, queryByTestId } = renderComponent()
+      {
+        name: 'criticalInjuries',
+        type: GET_CRITICAL_INJURIES,
+      },
+      {
+        name: 'factions',
+        type: GET_FACTIONS,
+      },
+      {
+        name: 'playerCharacter',
+        payload: {
+          id,
+        },
+        type: GET_PLAYER_CHARACTER,
+      },
+      {
+        name: 'skills',
+        type: GET_SKILLS,
+      },
+      {
+        name: 'weapons',
+        type: GET_WEAPONS,
+      },
+    ]
 
-    await wait(() => {
-      const playersCharactersWrapper = getByTestId(/player-character/i)
-      expect(playersCharactersWrapper).toBeInTheDocument()
+    testCases.forEach(({ name, payload = {}, type }) => {
+      it(`should display a loader if ${name} are loading`, async () => {
+        getFactions.mockImplementation(() => ({
+          type,
+          payload,
+        }))
 
-      const pcSheet = getByTestId(/pc-sheet/i)
-      expect(pcSheet).toBeInTheDocument()
+        const { getByTestId } = renderComponent()
 
-      const spinner = queryByTestId(/spinner/i)
-      expect(spinner).not.toBeInTheDocument()
-    })
-  })
+        await wait(() => {
+          const playersCharactersWrapper = getByTestId(/player-character/i)
+          expect(playersCharactersWrapper).toBeInTheDocument()
 
-  it('should display a loader if factions are loading', async () => {
-    getFactions.mockImplementation(() => ({
-      type: GET_FACTIONS,
-      payload: {},
-    }))
+          const pcSheet = getByTestId(/pc-sheet/i)
+          expect(pcSheet).toBeInTheDocument()
 
-    const { getByTestId } = renderComponent()
-
-    await wait(() => {
-      const playersCharactersWrapper = getByTestId(/player-character/i)
-      expect(playersCharactersWrapper).toBeInTheDocument()
-
-      const pcSheet = getByTestId(/pc-sheet/i)
-      expect(pcSheet).toBeInTheDocument()
-
-      const spinner = getByTestId(/spinner/i)
-      expect(spinner).toBeInTheDocument()
-    })
-  })
-
-  it('should display a loader if weapons are loading', async () => {
-    getWeapons.mockImplementation(() => ({
-      type: GET_WEAPONS,
-      payload: {},
-    }))
-
-    const { getByTestId } = renderComponent()
-
-    await wait(() => {
-      const playersCharactersWrapper = getByTestId(/player-character/i)
-      expect(playersCharactersWrapper).toBeInTheDocument()
-
-      const pcSheet = getByTestId(/pc-sheet/i)
-      expect(pcSheet).toBeInTheDocument()
-
-      const spinner = getByTestId(/spinner/i)
-      expect(spinner).toBeInTheDocument()
+          const spinner = getByTestId(/spinner/i)
+          expect(spinner).toBeInTheDocument()
+        })
+      })
     })
   })
 
@@ -254,6 +265,7 @@ describe('<PlayerCharacter />', () => {
     expect(getPlayerCharacter).toHaveBeenCalledWith(id)
     expect(getArchetypes).toHaveBeenCalledTimes(1)
     expect(getCareers).toHaveBeenCalledTimes(1)
+    expect(getCriticalInjuries).toHaveBeenCalledTimes(1)
     expect(getSkills).toHaveBeenCalledTimes(1)
     expect(getFactions).toHaveBeenCalledTimes(1)
     expect(getWeapons).toHaveBeenCalledTimes(1)
@@ -307,6 +319,32 @@ describe('<PlayerCharacter />', () => {
 
     await wait(() => {
       expect(addFavor).toHaveBeenCalledTimes(1)
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
+    })
+  })
+
+  it('should call addPlayerCharacterCriticalInjury on new weapon submit', async () => {
+    addPlayerCharacterCriticalInjury.mockImplementation(() => ({
+      type: ADD_PLAYER_CHARACTER_CRITICAL_INJURY,
+      payload: {
+        actions: formikActions,
+        playerCharacterId: id,
+        criticalInjuryId: criticalInjury3.id,
+      },
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId('edit-criticalInjury')
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId('submit-criticalInjury')
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(addPlayerCharacterCriticalInjury).toHaveBeenCalledTimes(1)
 
       const spinner = getByTestId(/spinner/i)
       expect(spinner).toBeInTheDocument()

@@ -5,6 +5,7 @@ import rootSaga from '../index.js'
 import archetypesRootSaga from '../archetypes'
 import authenticationRootSaga from '../authentication'
 import careersRootSaga from '../careers'
+import criticalInjuriesRootSaga from '../criticalInjuries'
 import factionsRootSaga from '../factions'
 import favorsRootSaga from '../favors'
 import playersCharactersRootSaga from '../playersCharacters'
@@ -20,6 +21,7 @@ describe('rootSaga', () => {
       call(archetypesRootSaga),
       call(authenticationRootSaga),
       call(careersRootSaga),
+      call(criticalInjuriesRootSaga),
       call(factionsRootSaga),
       call(favorsRootSaga),
       call(playersCharactersRootSaga),

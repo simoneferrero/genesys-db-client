@@ -6,6 +6,7 @@ import history from 'utils/history'
 import archetypes from './archetypes'
 import authentication from './authentication'
 import careers from './careers'
+import criticalInjuries from './criticalInjuries'
 import factions from './factions'
 import playersCharacters from './playersCharacters'
 import skills from './skills'
@@ -16,6 +17,7 @@ export default combineReducers({
   archetypes,
   authentication,
   careers,
+  criticalInjuries,
   factions,
   playersCharacters,
   router: connectRouter(history),

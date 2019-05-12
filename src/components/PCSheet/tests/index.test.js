@@ -2,6 +2,11 @@ import PCSheet from '../index'
 
 import { fromJS } from 'immutable'
 
+import {
+  criticalInjuries,
+  criticalInjury1,
+  criticalInjury3,
+} from 'mocks/criticalInjuries'
 import { factionsById } from 'mocks/factions'
 import {
   playerCharacter1Response,
@@ -14,11 +19,14 @@ import { colours } from 'styles/constants'
 
 const playerCharacter = playerCharacter1Augmented.toJS()
 const mockAddFavor = jest.fn()
+const mockAddPlayerCharacterCriticalInjury = jest.fn()
 const mockAddPlayerCharacterWeapon = jest.fn()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
   addFavor: mockAddFavor,
+  addPlayerCharacterCriticalInjury: mockAddPlayerCharacterCriticalInjury,
   addPlayerCharacterWeapon: mockAddPlayerCharacterWeapon,
+  criticalInjuries: [...criticalInjuries, criticalInjury3],
   factions: fromJS(factionsById).toJS(),
   handleSubmit: mockHandleSubmit,
   playerCharacter,
@@ -38,6 +46,7 @@ describe('<PCSheet />', () => {
 
   it('should render correctly', () => {
     const {
+      getAllByText,
       getByDisplayValue,
       getByTestId,
       getByText,
@@ -61,6 +70,10 @@ describe('<PCSheet />', () => {
     // Weapons
     const weapons = getByTestId(/weapons-section/i)
     expect(weapons).toBeInTheDocument()
+
+    // Critical injuries
+    const criticalInjuries = getByTestId(/criticalInjuries-section/i)
+    expect(criticalInjuries).toBeInTheDocument()
 
     // Motivations
     const motivations = getByTestId(/motivations/i)
@@ -102,8 +115,15 @@ describe('<PCSheet />', () => {
     const deleteWeaponButton = getByTestId('deleteWeaponButton-1')
     expect(deleteWeaponButton).toBeInTheDocument()
     fireEvent.click(deleteWeaponButton)
-    const undoButton = getByText(/undo/gi)
-    expect(undoButton).toBeInTheDocument()
+    const undoButtons = getAllByText(/undo/gi)
+    expect(undoButtons.length).toBe(1)
+
+    // Check critical injuries change
+    const healButton = getByTestId('healButton-1')
+    expect(healButton).toBeInTheDocument()
+    fireEvent.click(healButton)
+    const updatedUndoButtons = getAllByText(/undo/gi)
+    expect(updatedUndoButtons.length).toBe(2)
 
     // Check motivations change
     const strengthTypeInput = getByDisplayValue(
@@ -155,9 +175,11 @@ describe('<PCSheet />', () => {
 
   it('should reset the form on cancel', () => {
     const {
+      getAllByText,
       getByDisplayValue,
       getByTestId,
       getByText,
+      queryAllByText,
       queryByDisplayValue,
       queryByTestId,
       queryByText,
@@ -180,8 +202,14 @@ describe('<PCSheet />', () => {
 
     const deleteWeaponButton = getByTestId('deleteWeaponButton-1')
     fireEvent.click(deleteWeaponButton)
-    const undoButton = getByText(/undo/gi)
-    expect(undoButton).toBeInTheDocument()
+    const undoButtons = getAllByText(/undo/gi)
+    expect(undoButtons.length).toBe(1)
+
+    const healButton = getByTestId('healButton-1')
+    expect(healButton).toBeInTheDocument()
+    fireEvent.click(healButton)
+    const updatedUndoButtons = getAllByText(/undo/gi)
+    expect(updatedUndoButtons.length).toBe(2)
 
     const strengthTypeInput = getByDisplayValue(
       playerCharacter1Response.motivations.strength.type,
@@ -218,6 +246,9 @@ describe('<PCSheet />', () => {
     const previousWoundsValue = queryByText('12')
     expect(previousWoundsValue).not.toBeInTheDocument()
 
+    const diceValue = getByText(criticalInjury1.dice_value)
+    expect(diceValue).not.toHaveStyle('text-decoration: line-through;')
+
     expect(athleticsRank).not.toHaveStyle(`background-color: ${colours.teal}`)
 
     const previousStrengthType = queryByText(newStrengthType)
@@ -237,8 +268,8 @@ describe('<PCSheet />', () => {
 
     expect(athleticsRank).not.toHaveStyle(`background-color: ${colours.teal}`)
 
-    const previousFormUndoButton = queryByText(/undo/gi)
-    expect(previousFormUndoButton).not.toBeInTheDocument()
+    const previousFormUndoButton = queryAllByText(/undo/gi)
+    expect(previousFormUndoButton.length).toBe(0)
 
     const previousFormStrengthType = queryByDisplayValue(newStrengthType)
     expect(previousFormStrengthType).not.toBeInTheDocument()
@@ -297,6 +328,20 @@ describe('<PCSheet />', () => {
 
     await wait(() => {
       expect(mockAddPlayerCharacterWeapon).toHaveBeenCalled()
+    })
+  })
+
+  it('should call addPlayerCharacterCriticalInjury on critical injury submit', async () => {
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId('edit-criticalInjury')
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId('submit-criticalInjury')
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(mockAddPlayerCharacterCriticalInjury).toHaveBeenCalled()
     })
   })
 })

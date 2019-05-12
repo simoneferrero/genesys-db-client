@@ -3,7 +3,7 @@ import { Record } from 'immutable'
 const SkillRecord = Record({
   id: null,
   name: '',
-  characteristic: null,
+  characteristic: '',
   type: null,
   description: '',
 })

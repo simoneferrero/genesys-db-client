@@ -13,6 +13,10 @@ export const colours = {
   veryLightGreen: 'rgb(202, 231, 238)',
   lightBlue: 'rgb(167, 218, 243)',
   white: 'rgb(255, 255, 255)',
+  green: 'rgb(78, 171, 83)',
+  darkPurple: 'rgb(81, 42, 124)',
+  brown: 'rgb(116, 24, 26)',
+  yellow: 'rgb(255, 240, 61)',
 }
 
 export const baseSpacing = 24
@@ -20,8 +24,11 @@ export const baseSpacing = 24
 export const borderRadius = 20
 
 export const fontFamilies = {
-  Monkirta: 'Monkirta',
+  // a: advantage, d: despair, f: failure, h: threat, s: success, t: triumph,
+  // j: square, k: diamond, l: hexagon
+  GenesysSymbols: 'GenesysSymbols',
   MinionPro: 'MinionPro',
+  Monkirta: 'Monkirta',
 }
 
 // Menu constants

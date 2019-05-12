@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { archetypeType } from './archetypes'
 import { careerType } from './careers'
+import { characterCriticalInjuryType } from './criticalInjuries'
 import { equipmentType } from './equipment'
 import { favorType } from './favors'
 import { motivationsType } from './motivations'
@@ -41,6 +42,8 @@ export const playerCharacterSummaryData = {
     presence: PropTypes.number.isRequired,
     willpower: PropTypes.number.isRequired,
   }).isRequired,
+  /** Character's critical injuries */
+  critical_injuries: PropTypes.objectOf(characterCriticalInjuryType).isRequired,
   /** Character's unique identifier */
   id: PropTypes.number.isRequired,
   /** Character's name */

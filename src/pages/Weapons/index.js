@@ -23,12 +23,12 @@ const mapStateToProps = (state) => ({
   weapons: weaponsByIdSelector(state),
   weaponsUi: weaponsUiSelector(state),
 })
-const mapDispatchToProps = (dispatch) => ({
-  addWeapon: (weapon, actions) => dispatch(addWeapon(weapon, actions)),
-  getAuthInfo: () => dispatch(getAuthInfo()),
-  getSkills: () => dispatch(getSkills()),
-  getWeapons: () => dispatch(getWeapons()),
-})
+const mapDispatchToProps = {
+  addWeapon,
+  getAuthInfo,
+  getSkills,
+  getWeapons,
+}
 
 export default connect(
   mapStateToProps,

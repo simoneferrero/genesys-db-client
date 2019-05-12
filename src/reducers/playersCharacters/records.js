@@ -31,6 +31,7 @@ const PlayerCharacterRecord = Record({
     presence: 0,
     willpower: 0,
   }),
+  critical_injuries: Map(),
   equipment: Map({
     armor: '',
     gear: '',

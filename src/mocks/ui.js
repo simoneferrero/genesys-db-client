@@ -6,6 +6,7 @@ export const ui = {
   archetypes: uiRecord(),
   authentication: uiRecord(),
   careers: uiRecord(),
+  criticalInjuries: uiRecord(),
   factions: uiRecord(),
   favors: uiRecord(),
   playersCharacters: uiRecord(),

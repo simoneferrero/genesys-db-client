@@ -6,6 +6,7 @@ import PlayerCharacterRecord from 'reducers/playersCharacters/records'
 
 import { archetype1, archetype2 } from './archetypes'
 import { career1, career2 } from './careers'
+import { criticalInjury1, criticalInjury2 } from './criticalInjuries'
 import { favor1, favor2 } from './favors'
 import { skills, skillsById } from './skills'
 import { weapon1, weapon2, weaponsById } from './weapons'
@@ -66,6 +67,14 @@ export const playerCharacter1SkillsAugmented = List(
   ),
 )
 export const playerCharacter1Favors = [favor1, favor2]
+export const playerCharacter1CriticalInjuries = {
+  '1': { id: 1, critical_injury_id: criticalInjury1.id },
+  '2': { id: 2, critical_injury_id: criticalInjury2.id },
+}
+export const playerCharacter1CriticalInjuriesAugmented = {
+  '1': { ...criticalInjury1, id: 1, critical_injury_id: criticalInjury1.id },
+  '2': { ...criticalInjury2, id: 2, critical_injury_id: criticalInjury2.id },
+}
 export const playerCharacter1Weapons = [
   {
     id: 1,
@@ -81,6 +90,7 @@ export const playerCharacter1WeaponsAugmented = playerCharacter1Weapons.map(
 )
 export const playerCharacter1Response = {
   ...playerCharacterSummary1Response,
+  critical_injuries: playerCharacter1CriticalInjuries,
   favors: playerCharacter1Favors,
   skills: playerCharacter1Skills,
   weapons: playerCharacter1Weapons,
@@ -128,6 +138,7 @@ export const playerCharacter1Augmented = new PlayerCharacterRecord(
     ...playerCharacter1Response,
     archetype: new ArchetypeRecord(archetype1),
     career: new CareerRecord(career1),
+    critical_injuries: playerCharacter1CriticalInjuriesAugmented,
     favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
     skills: playerCharacter1SkillsAugmented,
     weapons: playerCharacter1WeaponsAugmented,

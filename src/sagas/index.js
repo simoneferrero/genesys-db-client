@@ -4,6 +4,7 @@ import { all, call } from 'redux-saga/effects'
 import archetypesRootSaga from './archetypes'
 import authenticationRootSaga from './authentication'
 import careersRootSaga from './careers'
+import criticalInjuriesRootSaga from './criticalInjuries'
 import factionsRootSaga from './factions'
 import favorsRootSaga from './favors'
 import playersCharactersRootSaga from './playersCharacters'
@@ -16,6 +17,7 @@ export default function* rootSaga() {
     call(archetypesRootSaga),
     call(authenticationRootSaga),
     call(careersRootSaga),
+    call(criticalInjuriesRootSaga),
     call(factionsRootSaga),
     call(favorsRootSaga),
     call(playersCharactersRootSaga),

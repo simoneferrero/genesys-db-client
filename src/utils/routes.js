@@ -3,6 +3,7 @@ import React, { lazy } from 'react'
 import GenesysLogo from 'vectors/GenesysLogo'
 
 // Top level components
+const CriticalInjuries = lazy(() => import('pages/CriticalInjuries'))
 const Home = lazy(() => import('pages/Home'))
 const PlayersCharacters = lazy(() => import('pages/PlayersCharacters'))
 const PlayerCharacter = lazy(() => import('pages/PlayerCharacter'))
@@ -42,6 +43,15 @@ const routes = [
     showInGmMenu: true,
     showInPlayerMenu: true,
     to: '/weapons',
+  },
+  {
+    exact: true,
+    id: 'critical-injuries',
+    menuItemComponent: 'Critical Injuries',
+    routeComponent: CriticalInjuries,
+    showInGmMenu: true,
+    showInPlayerMenu: true,
+    to: '/critical-injuries',
   },
 ]
 

@@ -5,6 +5,8 @@ import initStoryshots, {
 import styleSheetSerializer from 'jest-styled-components/src/styleSheetSerializer'
 import { addSerializer } from 'jest-specific-snapshot'
 
+import { fromJS } from 'immutable'
+
 import App from './App'
 
 import routes from 'utils/routes'
@@ -14,6 +16,7 @@ import AuthenticationRecord from 'reducers/authentication/records'
 import { store } from 'mocks'
 import { authInfoGmResponse } from 'mocks/authentication'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
+import { initialRouter } from 'mocks/router'
 
 jest.mock('redux-saga', () => () => {})
 
@@ -57,18 +60,21 @@ describe('<App />', () => {
     }
     const { getByTestId, queryByTestId } = renderComponent(props)
 
-    const sidebar = queryByTestId(/sidebar/i)
+    const sidebar = queryByTestId('sidebar')
     expect(sidebar).not.toBeInTheDocument()
 
-    const home = await waitForElement(() => getByTestId(/home/gi))
+    const home = await waitForElement(() => getByTestId('home'))
     expect(home).toBeInTheDocument()
   })
 
   it('should render the correct elements', async () => {
-    const { getByTestId, queryByTestId } = renderComponent()
+    const props = {
+      store: store.set('router', fromJS(initialRouter)),
+    }
+    const { getByTestId, queryByTestId } = renderComponent(props)
 
     await wait(() => {
-      const sidebar = getByTestId(/sidebar/i)
+      const sidebar = getByTestId('sidebar')
       expect(sidebar).toBeInTheDocument()
 
       routes.forEach(({ id, showInPlayerMenu }) => {
@@ -81,7 +87,7 @@ describe('<App />', () => {
         }
       })
 
-      const home = getByTestId(/home/i)
+      const home = getByTestId('home')
       expect(home).toBeInTheDocument()
     })
   })
@@ -90,18 +96,26 @@ describe('<App />', () => {
     const { getByTestId } = renderComponent()
 
     // PlayerCharacter
-    const playerCharacterMenuItem = getByTestId(/menu-item-player-character/i)
+    const playerCharacterMenuItem = getByTestId('menu-item-player-character')
     fireEvent.click(playerCharacterMenuItem)
     const playerCharacterRoute = await waitForElement(() =>
-      getByTestId(/player-character/gi),
+      getByTestId('player-character'),
     )
     expect(playerCharacterRoute).toBeInTheDocument()
 
     // Weapons
-    const weaponsMenuItem = getByTestId(/menu-item-weapons/i)
+    const weaponsMenuItem = getByTestId('menu-item-weapons')
     fireEvent.click(weaponsMenuItem)
-    const weaponsRoute = await waitForElement(() => getByTestId(/weapons/gi))
+    const weaponsRoute = await waitForElement(() => getByTestId('weapons'))
     expect(weaponsRoute).toBeInTheDocument()
+
+    // Critical injuries
+    const criticalInjuriesMenuItem = getByTestId('menu-item-critical-injuries')
+    fireEvent.click(criticalInjuriesMenuItem)
+    const criticalInjuriesRoute = await waitForElement(() =>
+      getByTestId('criticalInjuries'),
+    )
+    expect(criticalInjuriesRoute).toBeInTheDocument()
   })
 
   it('should change routes correctly for gm', async () => {
@@ -116,11 +130,11 @@ describe('<App />', () => {
 
     // PlayersCharacters
     const playersCharactersMenuItem = await waitForElement(() =>
-      getByTestId(/menu-item-players-characters/i),
+      getByTestId('menu-item-players-characters'),
     )
     fireEvent.click(playersCharactersMenuItem)
     const playersCharactersRoute = await waitForElement(() =>
-      getByTestId(/players-characters/gi),
+      getByTestId('players-characters'),
     )
     expect(playersCharactersRoute).toBeInTheDocument()
 
@@ -135,9 +149,17 @@ describe('<App />', () => {
     expect(playerCharacterRoute).toBeInTheDocument()
 
     // Weapons
-    const weaponsMenuItem = getByTestId(/menu-item-weapons/i)
+    const weaponsMenuItem = getByTestId('menu-item-weapons')
     fireEvent.click(weaponsMenuItem)
-    const weaponsRoute = await waitForElement(() => getByTestId(/weapons/gi))
+    const weaponsRoute = await waitForElement(() => getByTestId('weapons'))
     expect(weaponsRoute).toBeInTheDocument()
+
+    // Critical injuries
+    const criticalInjuriesMenuItem = getByTestId('menu-item-critical-injuries')
+    fireEvent.click(criticalInjuriesMenuItem)
+    const criticalInjuriesRoute = await waitForElement(() =>
+      getByTestId('criticalInjuries'),
+    )
+    expect(criticalInjuriesRoute).toBeInTheDocument()
   })
 })

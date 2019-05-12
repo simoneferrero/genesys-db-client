@@ -1,0 +1,454 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/CriticalInjury default 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c0 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c0 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c0 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+}
+
+.c0 button {
+  grid-column: 1/4;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 p {
+    grid-column: 1/4;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="criticalInjury-minor_nick"
+>
+  <h4
+    data-testid="criticalInjury-minor_nick-dice_value"
+  >
+    01-05
+  </h4>
+  <h4
+    data-testid="criticalInjury-minor_nick-name"
+  >
+    Minor Nick
+  </h4>
+  <h4
+    data-testid="criticalInjury-minor_nick-severity"
+  >
+    <span>
+      k
+    </span>
+  </h4>
+  <p
+    data-testid="criticalInjury-minor_nick-effects"
+  >
+    The target suffers 1 strain.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/CriticalInjury default character 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c0 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c0 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c0 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+  opacity: 0.5;
+}
+
+.c0 button {
+  grid-column: 1/4;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 p {
+    grid-column: 1/4;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="criticalInjury-minor_nick"
+>
+  <h4
+    data-testid="criticalInjury-minor_nick-dice_value"
+  >
+    01-05
+  </h4>
+  <h4
+    data-testid="criticalInjury-minor_nick-name"
+  >
+    Minor Nick
+  </h4>
+  <h4
+    data-testid="criticalInjury-minor_nick-severity"
+  >
+    <span>
+      k
+    </span>
+  </h4>
+  <p
+    data-testid="criticalInjury-minor_nick-effects"
+  >
+    The target suffers 1 strain.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/CriticalInjury editing heal 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c0 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c0 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c0 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+  opacity: 0.5;
+}
+
+.c0 button {
+  grid-column: 1/4;
+}
+
+.c1 {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  background: rgba(234,242,246,0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 > h4 {
+  width: 100%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.c1:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c1:hover h4 {
+  color: rgb(234,242,246);
+}
+
+.c1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 p {
+    grid-column: 1/4;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="criticalInjury-1"
+>
+  <h4
+    data-testid="criticalInjury-1-dice_value"
+  >
+    01-05
+  </h4>
+  <h4
+    data-testid="criticalInjury-1-name"
+  >
+    Minor Nick
+  </h4>
+  <h4
+    data-testid="criticalInjury-1-severity"
+  >
+    <span>
+      k
+    </span>
+  </h4>
+  <p
+    data-testid="criticalInjury-1-effects"
+  >
+    The target suffers 1 strain.
+  </p>
+  <button
+    class="c1"
+    data-testid="healButton-1"
+    type="button"
+  >
+    <h4>
+      Heal
+    </h4>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/CriticalInjury editing undo 1`] = `
+.c0 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c0 > * {
+  opacity: 0.5;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.c0 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c0 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c0 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+  opacity: 0.5;
+}
+
+.c0 button {
+  grid-column: 1/4;
+}
+
+.c1 {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  background: rgba(234,242,246,0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 > h4 {
+  width: 100%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.c1:hover {
+  background-color: rgb(0,130,155);
+}
+
+.c1:hover h4 {
+  color: rgb(234,242,246);
+}
+
+.c1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c0 p {
+    grid-column: 1/4;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="criticalInjury-1"
+>
+  <h4
+    data-testid="criticalInjury-1-dice_value"
+  >
+    01-05
+  </h4>
+  <h4
+    data-testid="criticalInjury-1-name"
+  >
+    Minor Nick
+  </h4>
+  <h4
+    data-testid="criticalInjury-1-severity"
+  >
+    <span>
+      k
+    </span>
+  </h4>
+  <p
+    data-testid="criticalInjury-1-effects"
+  >
+    The target suffers 1 strain.
+  </p>
+  <button
+    class="c1"
+    data-testid="undoButton-1"
+    type="button"
+  >
+    <h4>
+      Undo
+    </h4>
+  </button>
+</div>
+`;

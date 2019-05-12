@@ -2,6 +2,7 @@ import { fromJS, List } from 'immutable'
 
 import uniq from 'lodash/uniq'
 
+import { ADD_PLAYER_CHARACTER_CRITICAL_INJURY_SUCCESS } from 'actions/criticalInjuries/constants'
 import { ADD_FAVOR_SUCCESS } from 'actions/favors/constants'
 import {
   GET_PLAYERS_CHARACTERS_SUCCESS,
@@ -46,6 +47,20 @@ export default (state = initialState, { type, payload }) => {
           new PlayerCharacterRecord(fromJS({ ...playerCharacter, skills })),
         )
         .set('allIds', fromJS(uniq([...allIds, id])))
+    }
+
+    case ADD_PLAYER_CHARACTER_CRITICAL_INJURY_SUCCESS: {
+      const { criticalInjury, playerCharacterId } = payload
+
+      return state.setIn(
+        [
+          'byId',
+          playerCharacterId,
+          'critical_injuries',
+          `${criticalInjury.id}`,
+        ],
+        fromJS(criticalInjury),
+      )
     }
 
     case ADD_FAVOR_SUCCESS: {

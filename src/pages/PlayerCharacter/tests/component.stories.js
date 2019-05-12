@@ -5,34 +5,35 @@ import { fromJS } from 'immutable'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import { criticalInjuries, criticalInjury3 } from 'mocks/criticalInjuries'
 import { factionsById } from 'mocks/factions'
 import {
   playerCharacter1Id,
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
-import { uiElement, uiElementLoading } from 'mocks/ui'
+import { ui, uiElementLoading } from 'mocks/ui'
 import { weaponsById } from 'mocks/weapons'
 
 import { PlayerCharacter } from '../component'
 
 const defaultProps = {
   addFavor: action('addFavor'),
+  addPlayerCharacterCriticalInjury: action('addPlayerCharacterCriticalInjury'),
   addPlayerCharacterWeapon: action('addPlayerCharacterWeapon'),
+  criticalInjuries: [...criticalInjuries, criticalInjury3],
   editPlayerCharacter: action('editPlayerCharacter'),
   factions: fromJS(factionsById).toJS(),
-  factionsUi: uiElement,
-  favorsUi: uiElement,
   getArchetypes: action('getArchetypes'),
   getAuthInfo: action('getAuthInfo'),
   getCareers: action('getCareers'),
+  getCriticalInjuries: action('getCriticalInjuries'),
   getFactions: action('getFactions'),
   getPlayerCharacter: action('getPlayerCharacter'),
   getSkills: action('getSkills'),
   getWeapons: action('getWeapons'),
   playerCharacter: playerCharacter1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
-  playersCharactersUi: uiElement,
-  weaponsUi: uiElement,
+  ui: fromJS(ui).toJS(),
   weapons: fromJS(weaponsById).toJS(),
 }
 
@@ -44,7 +45,10 @@ storiesOf('Pages/PlayerCharacter', module)
   .add('default', () => renderComponent())
   .add('loading', () => {
     const props = {
-      playersCharactersUi: uiElementLoading,
+      ui: {
+        ...ui,
+        playersCharacters: uiElementLoading,
+      },
     }
     return renderComponent(props)
   })

@@ -6,6 +6,10 @@ import AuthenticationRecord from 'reducers/authentication/records'
 import { archetypesById, archetypesAllIds } from './archetypes'
 import { authInfoResponse } from './authentication'
 import { careersById, careersAllIds } from './careers'
+import {
+  criticalInjuriesById,
+  criticalInjuriesAllIds,
+} from './criticalInjuries'
 import { factionsById, factionsAllIds } from './factions'
 import {
   playersCharactersById,
@@ -27,6 +31,10 @@ export const store = fromJS({
   careers: new ReducerRecord({
     allIds: List(careersAllIds),
     byId: Map(careersById),
+  }),
+  criticalInjuries: new ReducerRecord({
+    allIds: List(criticalInjuriesAllIds),
+    byId: Map(criticalInjuriesById),
   }),
   factions: new ReducerRecord({
     allIds: List(factionsAllIds),
@@ -52,6 +60,7 @@ export const emptyStore = fromJS({
   archetypes: new ReducerRecord(),
   authentication: new AuthenticationRecord(),
   careers: new ReducerRecord(),
+  criticalInjuries: new ReducerRecord(),
   factions: new ReducerRecord(),
   playersCharacters: new ReducerRecord(),
   router: initialRouter,
