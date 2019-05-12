@@ -109,6 +109,7 @@ export function* editPlayerCharacterSaga({
         wounds: { current: wounds_current },
         strain: { current: strain_current },
       },
+      deletedCriticalInjuries,
       deletedWeapons,
       equipment,
       favors,
@@ -122,6 +123,11 @@ export function* editPlayerCharacterSaga({
   const authInfo = yield select(authenticationSelector)
 
   const data = JSON.stringify({
+    deletedCriticalInjuries: Object.entries(deletedCriticalInjuries).reduce(
+      (total, [criticalInjury, toDelete]) =>
+        toDelete ? [...total, criticalInjury] : total,
+      [],
+    ),
     deletedWeapons: Object.entries(deletedWeapons).reduce(
       (total, [weapon, toDelete]) => (toDelete ? [...total, weapon] : total),
       [],

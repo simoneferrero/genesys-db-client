@@ -18,3 +18,9 @@ export const criticalInjuryData = {
 export const criticalInjuryType = PropTypes.shape({
   ...criticalInjuryData,
 })
+
+export const characterCriticalInjuryType = PropTypes.shape({
+  ...criticalInjuryData,
+  critical_injury_id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+})

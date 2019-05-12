@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import { criticalInjury1 } from 'mocks/criticalInjuries'
+import { playerCharacter1CriticalInjuriesAugmented } from 'mocks/playersCharacters'
 
 import CriticalInjury from '../index'
 
@@ -26,6 +27,7 @@ storiesOf('Components/CriticalInjury', module)
   })
   .add('editing heal', () => {
     const props = {
+      criticalInjury: playerCharacter1CriticalInjuriesAugmented['1'],
       editing: true,
       isCharacter: true,
     }
@@ -33,6 +35,7 @@ storiesOf('Components/CriticalInjury', module)
   })
   .add('editing undo', () => {
     const props = {
+      criticalInjury: playerCharacter1CriticalInjuriesAugmented['1'],
       editing: true,
       isCharacter: true,
       deleting: true,

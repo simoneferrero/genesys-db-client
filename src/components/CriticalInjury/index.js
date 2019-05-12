@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { criticalInjuryType } from 'types/criticalInjuries'
+import { criticalInjuryData } from 'types/criticalInjuries'
 
 import { StyledButton, StyledCriticalInjury } from './styles'
 
@@ -70,7 +70,10 @@ CriticalInjury.propTypes = {
   /** Custom styles */
   className: PropTypes.string,
   /** CriticalInjury data */
-  criticalInjury: criticalInjuryType.isRequired,
+  criticalInjury: PropTypes.shape({
+    ...criticalInjuryData,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  }).isRequired,
   /** Whether to allow editing the criticalInjury */
   editing: PropTypes.bool,
   /** Whether the injury is marked to be healed */

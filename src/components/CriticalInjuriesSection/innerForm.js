@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { criticalInjuryType } from 'types/criticalInjuries'
+import {
+  characterCriticalInjuryType,
+  criticalInjuryType,
+} from 'types/criticalInjuries'
 
 import * as yup from 'yup'
 
@@ -35,8 +38,8 @@ const InnerForm = ({
   }
   const CRITICAL_INJURY_ID = 'id'
   const criticalInjuryIdOptions = Object.values(criticalInjuries).map(
-    ({ id, name }) => ({
-      label: name,
+    ({ dice_value, id, name }) => ({
+      label: `${dice_value} - ${name}`,
       value: id,
     }),
   )
@@ -96,7 +99,7 @@ InnerForm.validationSchema = yup.object({
 
 InnerForm.propTypes = {
   /** Critical injuries belonging to a specific character */
-  characterCriticalInjuries: PropTypes.objectOf(criticalInjuryType),
+  characterCriticalInjuries: PropTypes.objectOf(characterCriticalInjuryType),
   /** Custom styles */
   className: PropTypes.string,
   /** Critical injuries data */

@@ -43,8 +43,16 @@ export const StyledContainer = styled.div`
   grid-gap: ${baseSpacing / 2}px;
   grid-template-columns: 1fr;
 
-  @media ${mq.desktop}, ${mq.bigDesktop} {
+  @media ${mq.laptop} {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${mq.desktop} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media ${mq.bigDesktop} {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   & > form:not(:last-child) {

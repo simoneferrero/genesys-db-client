@@ -1,6 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/PlayerCharacter default 1`] = `
+.c29 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c29 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c29 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c29 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c29 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+}
+
+.c29 button {
+  grid-column: 1/4;
+}
+
+.c28 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c28 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c28 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c28 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c28 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+  opacity: 0.5;
+}
+
+.c28 button {
+  grid-column: 1/4;
+}
+
 .c3 {
   padding: 12px;
   border: none;
@@ -15,290 +110,27 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   cursor: not-allowed;
 }
 
-.c35 {
+.c25 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
-  position: relative;
-  padding: 12px;
-  display: grid;
-  grid-gap: 12px;
-  grid-template-columns: 1fr;
-  grid-template-areas: "money" "armor" "gear";
-}
-
-.c35 h3 {
-  margin: 0;
-  color: rgb(242,143,34);
-  text-shadow: 1px 1px rgb(255,244,233);
-}
-
-.c35 div,
-.c35 label {
-  width: 100%;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c35 div:nth-child(1),
-.c35 label:nth-child(1) {
-  grid-area: money;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 6px;
-}
-
-.c35 div:nth-child(2),
-.c35 label:nth-child(2) {
-  grid-area: armor;
-}
-
-.c35 div:nth-child(3),
-.c35 label:nth-child(3) {
-  grid-area: gear;
-}
-
-.c35 div:nth-child(1) {
-  grid-template-columns: repeat(2,1fr);
-}
-
-.c35 p,
-.c35 input,
-.c35 textarea {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  padding: 6px;
-  font-family: "MinionPro",Times New Roman,serif;
-  color: rgb(0,130,155);
-  text-align: justify;
-  font-size: 16px;
-}
-
-.c35 input,
-.c35 textarea {
-  border-radius: 5px;
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-}
-
-.c35 textarea {
-  height: 6em;
-}
-
-.c32 {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 6px;
-  padding: 12px;
-}
-
-.c32 h4 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  text-align: center;
-}
-
-.c32 h4:first-child {
-  text-align: left;
-}
-
-.c32 > div:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c32 > div:last-child {
-  color: rgb(0,130,155);
-  grid-column: 1/4;
-  text-align: justify;
-}
-
-.c32 > label {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c32 > label:first-child {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c32 > label > input {
-  width: 100%;
-}
-
-.c32 textarea {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-  color: rgb(0,130,155);
-  text-align: justify;
-  font-family: "MinionPro",Times New Roman,serif;
-  font-size: 16px;
-  padding: 6px;
-  text-align: justify;
-}
-
-.c32 label[for='description'] {
-  grid-column: 1/3;
-}
-
-.c33 {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 6px;
-  padding: 12px;
-}
-
-.c33 h4 {
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
-  opacity: 0.5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  text-align: center;
-}
-
-.c33 h4:first-child {
-  text-align: left;
-}
-
-.c33 > div:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c33 > div:last-child {
-  color: rgb(0,130,155);
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
-  opacity: 0.5;
-  grid-column: 1/4;
-  text-align: justify;
-}
-
-.c33 > label {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c33 > label:first-child {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c33 > label > input {
-  width: 100%;
-}
-
-.c33 textarea {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-  color: rgb(0,130,155);
-  text-align: justify;
-  font-family: "MinionPro",Times New Roman,serif;
-  font-size: 16px;
-  padding: 6px;
-  text-align: justify;
-}
-
-.c33 label[for='description'] {
-  grid-column: 1/3;
-}
-
-.c29 {
   padding: 12px;
   position: relative;
 }
 
-.c30 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
-.c30 h3 {
+.c26 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -318,30 +150,356 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c30 div {
+.c26 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c30 div > button {
+.c26 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c31 {
+.c27 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c27 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c41 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  padding: 12px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "money" "armor" "gear";
+}
+
+.c41 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c41 div,
+.c41 label {
+  width: 100%;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c41 div:nth-child(1),
+.c41 label:nth-child(1) {
+  grid-area: money;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+}
+
+.c41 div:nth-child(2),
+.c41 label:nth-child(2) {
+  grid-area: armor;
+}
+
+.c41 div:nth-child(3),
+.c41 label:nth-child(3) {
+  grid-area: gear;
+}
+
+.c41 div:nth-child(1) {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c41 p,
+.c41 input,
+.c41 textarea {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c41 input,
+.c41 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c41 textarea {
+  height: 6em;
+}
+
+.c38 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c38 h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c38 h4:first-child {
+  text-align: left;
+}
+
+.c38 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c38 > div:last-child {
+  color: rgb(0,130,155);
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c38 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c38 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c38 > label > input {
+  width: 100%;
+}
+
+.c38 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c38 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c39 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c39 h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c39 h4:first-child {
+  text-align: left;
+}
+
+.c39 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c39 > div:last-child {
+  color: rgb(0,130,155);
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c39 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c39 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c39 > label > input {
+  width: 100%;
+}
+
+.c39 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c39 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c35 {
+  padding: 12px;
+  position: relative;
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c36 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c36 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c36 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c37 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr;
 }
 
-.c31 > form:not(:last-child) {
+.c37 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c28 {
+.c34 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -377,7 +535,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c26 {
+.c32 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -386,7 +544,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c26 div {
+.c32 div {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-bottom: 6px;
@@ -396,21 +554,21 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c26 h3 {
+.c32 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
   text-transform: uppercase;
 }
 
-.c26 h4 {
+.c32 h4 {
   margin: 0;
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c26 p,
-.c26 input,
-.c26 textarea {
+.c32 p,
+.c32 input,
+.c32 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -421,18 +579,18 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   font-size: 16px;
 }
 
-.c26 input,
-.c26 textarea {
+.c32 input,
+.c32 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c26 textarea {
+.c32 textarea {
   height: 5em;
 }
 
-.c25 {
+.c31 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -441,7 +599,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c37 {
+.c43 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -449,8 +607,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c37 p,
-.c37 textarea {
+.c43 p,
+.c43 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -461,7 +619,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   font-size: 16px;
 }
 
-.c37 textarea {
+.c43 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -1079,6 +1237,31 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 .c24::before {
+  content: 'Critical Injuries';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c30 {
+  position: relative;
+  overflow: visible;
+}
+
+.c30::before {
   content: 'Motivations';
   position: absolute;
   top: -20px;
@@ -1098,12 +1281,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c27 {
+.c33 {
   position: relative;
   overflow: visible;
 }
 
-.c27::before {
+.c33::before {
   content: 'Favors';
   position: absolute;
   top: -20px;
@@ -1123,12 +1306,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c34 {
+.c40 {
   position: relative;
   overflow: visible;
 }
 
-.c34::before {
+.c40::before {
   content: 'Equipment';
   position: absolute;
   top: -20px;
@@ -1148,12 +1331,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c36 {
+.c42 {
   position: relative;
   overflow: visible;
 }
 
-.c36::before {
+.c42::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -1173,65 +1356,107 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c29 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c29 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c27 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c27 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c27 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c35 {
+  .c41 {
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: "money ." "armor armor" "gear gear";
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c35 {
+  .c41 {
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: "money . . ." "armor armor gear gear";
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c35 {
+  .c41 {
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c31 {
+  .c37 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 {
+  .c34 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c26 textarea {
+  .c32 textarea {
     height: 4em;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c25 {
+  .c31 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c25 {
+  .c31 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c37 textarea {
+  .c43 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c37 textarea {
+  .c43 textarea {
     height: 10em;
   }
 }
@@ -2138,10 +2363,100 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
     </div>
     <div
       class="c24 c25"
-      data-testid="motivations"
+      data-testid="criticalInjuries-section"
     >
       <div
         class="c26"
+      >
+        <div
+          data-testid="form-buttons-criticalInjury"
+        >
+          <button
+            class="c3"
+            data-testid="edit-criticalInjury"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      >
+        <div
+          class="c28"
+          data-testid="criticalInjury-1"
+        >
+          <h4
+            data-testid="criticalInjury-1-dice_value"
+          >
+            01-05
+          </h4>
+          <h4
+            data-testid="criticalInjury-1-name"
+          >
+            Minor Nick
+          </h4>
+          <h4
+            data-testid="criticalInjury-1-severity"
+          >
+            <span>
+              k
+            </span>
+          </h4>
+          <p
+            data-testid="criticalInjury-1-effects"
+          >
+            The target suffers 1 strain.
+          </p>
+        </div>
+        <div
+          class="c29"
+          data-testid="criticalInjury-2"
+        >
+          <h4
+            data-testid="criticalInjury-2-dice_value"
+          >
+            61-65
+          </h4>
+          <h4
+            data-testid="criticalInjury-2-name"
+          >
+            Slightly Dazed
+          </h4>
+          <h4
+            data-testid="criticalInjury-2-severity"
+          >
+            <span>
+              k k
+            </span>
+          </h4>
+          <p
+            data-testid="criticalInjury-2-effects"
+          >
+            The target is disoriented until this Critical Injury is healed.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c30 c31"
+      data-testid="motivations"
+    >
+      <div
+        class="c32"
         data-testid="motivation-strength"
       >
         <div>
@@ -2159,7 +2474,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </p>
       </div>
       <div
-        class="c26"
+        class="c32"
         data-testid="motivation-flaw"
       >
         <div>
@@ -2177,7 +2492,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </p>
       </div>
       <div
-        class="c26"
+        class="c32"
         data-testid="motivation-desire"
       >
         <div>
@@ -2195,7 +2510,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </p>
       </div>
       <div
-        class="c26"
+        class="c32"
         data-testid="motivation-fear"
       >
         <div>
@@ -2214,15 +2529,15 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c27 c28"
+      class="c33 c34"
       data-testid="favors"
     >
       <div
-        class="c29"
+        class="c35"
         data-testid="favors-owed"
       >
         <div
-          class="c30"
+          class="c36"
         >
           <h3>
             owed
@@ -2252,10 +2567,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           </div>
         </div>
         <div
-          class="c31"
+          class="c37"
         >
           <div
-            class="c32"
+            class="c38"
             data-testid="favor-1"
           >
             <h4
@@ -2277,11 +2592,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </div>
       </div>
       <div
-        class="c29"
+        class="c35"
         data-testid="favors-given"
       >
         <div
-          class="c30"
+          class="c36"
         >
           <h3>
             given
@@ -2311,10 +2626,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           </div>
         </div>
         <div
-          class="c31"
+          class="c37"
         >
           <div
-            class="c33"
+            class="c39"
             data-testid="favor-2"
           >
             <h4
@@ -2337,7 +2652,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c34 c35"
+      class="c40 c41"
       data-testid="equipment"
     >
       <div
@@ -2373,7 +2688,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c36 c37"
+      class="c42 c43"
       data-testid="notes"
     >
       <p
@@ -2387,6 +2702,101 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 `;
 
 exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
+.c29 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c29 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c29 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c29 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c29 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+}
+
+.c29 button {
+  grid-column: 1/4;
+}
+
+.c28 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c28 > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+
+.c28 > h4:first-child {
+  color: rgb(242,143,34);
+}
+
+.c28 > h4 span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(81,42,124);
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c28 p {
+  margin: 0;
+  color: rgb(0,130,155);
+  text-align: justify;
+  opacity: 0.5;
+}
+
+.c28 button {
+  grid-column: 1/4;
+}
+
 .c3 {
   padding: 12px;
   border: none;
@@ -2401,290 +2811,27 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   cursor: not-allowed;
 }
 
-.c35 {
+.c25 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
-  position: relative;
-  padding: 12px;
-  display: grid;
-  grid-gap: 12px;
-  grid-template-columns: 1fr;
-  grid-template-areas: "money" "armor" "gear";
-}
-
-.c35 h3 {
-  margin: 0;
-  color: rgb(242,143,34);
-  text-shadow: 1px 1px rgb(255,244,233);
-}
-
-.c35 div,
-.c35 label {
-  width: 100%;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c35 div:nth-child(1),
-.c35 label:nth-child(1) {
-  grid-area: money;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 6px;
-}
-
-.c35 div:nth-child(2),
-.c35 label:nth-child(2) {
-  grid-area: armor;
-}
-
-.c35 div:nth-child(3),
-.c35 label:nth-child(3) {
-  grid-area: gear;
-}
-
-.c35 div:nth-child(1) {
-  grid-template-columns: repeat(2,1fr);
-}
-
-.c35 p,
-.c35 input,
-.c35 textarea {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  padding: 6px;
-  font-family: "MinionPro",Times New Roman,serif;
-  color: rgb(0,130,155);
-  text-align: justify;
-  font-size: 16px;
-}
-
-.c35 input,
-.c35 textarea {
-  border-radius: 5px;
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-}
-
-.c35 textarea {
-  height: 6em;
-}
-
-.c32 {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 6px;
-  padding: 12px;
-}
-
-.c32 h4 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  text-align: center;
-}
-
-.c32 h4:first-child {
-  text-align: left;
-}
-
-.c32 > div:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c32 > div:last-child {
-  color: rgb(0,130,155);
-  grid-column: 1/4;
-  text-align: justify;
-}
-
-.c32 > label {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c32 > label:first-child {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c32 > label > input {
-  width: 100%;
-}
-
-.c32 textarea {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-  color: rgb(0,130,155);
-  text-align: justify;
-  font-family: "MinionPro",Times New Roman,serif;
-  font-size: 16px;
-  padding: 6px;
-  text-align: justify;
-}
-
-.c32 label[for='description'] {
-  grid-column: 1/3;
-}
-
-.c33 {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 6px;
-  padding: 12px;
-}
-
-.c33 h4 {
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
-  opacity: 0.5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  text-align: center;
-}
-
-.c33 h4:first-child {
-  text-align: left;
-}
-
-.c33 > div:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c33 > div:last-child {
-  color: rgb(0,130,155);
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
-  opacity: 0.5;
-  grid-column: 1/4;
-  text-align: justify;
-}
-
-.c33 > label {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c33 > label:first-child {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c33 > label > input {
-  width: 100%;
-}
-
-.c33 textarea {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: rgb(234,242,246);
-  border: 1px solid rgb(0,130,155);
-  color: rgb(0,130,155);
-  text-align: justify;
-  font-family: "MinionPro",Times New Roman,serif;
-  font-size: 16px;
-  padding: 6px;
-  text-align: justify;
-}
-
-.c33 label[for='description'] {
-  grid-column: 1/3;
-}
-
-.c29 {
   padding: 12px;
   position: relative;
 }
 
-.c30 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
-.c30 h3 {
+.c26 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -2704,30 +2851,356 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c30 div {
+.c26 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c30 div > button {
+.c26 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c31 {
+.c27 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c27 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c41 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  padding: 12px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "money" "armor" "gear";
+}
+
+.c41 h3 {
+  margin: 0;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c41 div,
+.c41 label {
+  width: 100%;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c41 div:nth-child(1),
+.c41 label:nth-child(1) {
+  grid-area: money;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+}
+
+.c41 div:nth-child(2),
+.c41 label:nth-child(2) {
+  grid-area: armor;
+}
+
+.c41 div:nth-child(3),
+.c41 label:nth-child(3) {
+  grid-area: gear;
+}
+
+.c41 div:nth-child(1) {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.c41 p,
+.c41 input,
+.c41 textarea {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  font-family: "MinionPro",Times New Roman,serif;
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-size: 16px;
+}
+
+.c41 input,
+.c41 textarea {
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+}
+
+.c41 textarea {
+  height: 6em;
+}
+
+.c38 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c38 h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c38 h4:first-child {
+  text-align: left;
+}
+
+.c38 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c38 > div:last-child {
+  color: rgb(0,130,155);
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c38 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c38 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c38 > label > input {
+  width: 100%;
+}
+
+.c38 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c38 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c39 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 6px;
+  padding: 12px;
+}
+
+.c39 h4 {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: center;
+}
+
+.c39 h4:first-child {
+  text-align: left;
+}
+
+.c39 > div:not(:last-child) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c39 > div:last-child {
+  color: rgb(0,130,155);
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  opacity: 0.5;
+  grid-column: 1/4;
+  text-align: justify;
+}
+
+.c39 > label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c39 > label:first-child {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c39 > label > input {
+  width: 100%;
+}
+
+.c39 textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  color: rgb(0,130,155);
+  text-align: justify;
+  font-family: "MinionPro",Times New Roman,serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+.c39 label[for='description'] {
+  grid-column: 1/3;
+}
+
+.c35 {
+  padding: 12px;
+  position: relative;
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c36 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c36 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c36 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c37 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr;
 }
 
-.c31 > form:not(:last-child) {
+.c37 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c28 {
+.c34 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -2763,7 +3236,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c26 {
+.c32 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -2772,7 +3245,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c26 div {
+.c32 div {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-bottom: 6px;
@@ -2782,21 +3255,21 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c26 h3 {
+.c32 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
   text-transform: uppercase;
 }
 
-.c26 h4 {
+.c32 h4 {
   margin: 0;
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c26 p,
-.c26 input,
-.c26 textarea {
+.c32 p,
+.c32 input,
+.c32 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -2807,18 +3280,18 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   font-size: 16px;
 }
 
-.c26 input,
-.c26 textarea {
+.c32 input,
+.c32 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c26 textarea {
+.c32 textarea {
   height: 5em;
 }
 
-.c25 {
+.c31 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -2827,7 +3300,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c37 {
+.c43 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -2835,8 +3308,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c37 p,
-.c37 textarea {
+.c43 p,
+.c43 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -2847,7 +3320,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   font-size: 16px;
 }
 
-.c37 textarea {
+.c43 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -3465,6 +3938,31 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 .c24::before {
+  content: 'Critical Injuries';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c30 {
+  position: relative;
+  overflow: visible;
+}
+
+.c30::before {
   content: 'Motivations';
   position: absolute;
   top: -20px;
@@ -3484,12 +3982,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c27 {
+.c33 {
   position: relative;
   overflow: visible;
 }
 
-.c27::before {
+.c33::before {
   content: 'Favors';
   position: absolute;
   top: -20px;
@@ -3509,12 +4007,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c34 {
+.c40 {
   position: relative;
   overflow: visible;
 }
 
-.c34::before {
+.c40::before {
   content: 'Equipment';
   position: absolute;
   top: -20px;
@@ -3534,12 +4032,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c36 {
+.c42 {
   position: relative;
   overflow: visible;
 }
 
-.c36::before {
+.c42::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -3559,65 +4057,107 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c29 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c29 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
+  .c27 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c27 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c27 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c35 {
+  .c41 {
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: "money ." "armor armor" "gear gear";
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c35 {
+  .c41 {
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: "money . . ." "armor armor gear gear";
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c35 {
+  .c41 {
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c31 {
+  .c37 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 {
+  .c34 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c26 textarea {
+  .c32 textarea {
     height: 4em;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c25 {
+  .c31 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c25 {
+  .c31 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c37 textarea {
+  .c43 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c37 textarea {
+  .c43 textarea {
     height: 10em;
   }
 }
@@ -4524,10 +5064,100 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
     </div>
     <div
       class="c24 c25"
-      data-testid="motivations"
+      data-testid="criticalInjuries-section"
     >
       <div
         class="c26"
+      >
+        <div
+          data-testid="form-buttons-criticalInjury"
+        >
+          <button
+            class="c3"
+            data-testid="edit-criticalInjury"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      >
+        <div
+          class="c28"
+          data-testid="criticalInjury-1"
+        >
+          <h4
+            data-testid="criticalInjury-1-dice_value"
+          >
+            01-05
+          </h4>
+          <h4
+            data-testid="criticalInjury-1-name"
+          >
+            Minor Nick
+          </h4>
+          <h4
+            data-testid="criticalInjury-1-severity"
+          >
+            <span>
+              k
+            </span>
+          </h4>
+          <p
+            data-testid="criticalInjury-1-effects"
+          >
+            The target suffers 1 strain.
+          </p>
+        </div>
+        <div
+          class="c29"
+          data-testid="criticalInjury-2"
+        >
+          <h4
+            data-testid="criticalInjury-2-dice_value"
+          >
+            61-65
+          </h4>
+          <h4
+            data-testid="criticalInjury-2-name"
+          >
+            Slightly Dazed
+          </h4>
+          <h4
+            data-testid="criticalInjury-2-severity"
+          >
+            <span>
+              k k
+            </span>
+          </h4>
+          <p
+            data-testid="criticalInjury-2-effects"
+          >
+            The target is disoriented until this Critical Injury is healed.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c30 c31"
+      data-testid="motivations"
+    >
+      <div
+        class="c32"
         data-testid="motivation-strength"
       >
         <div>
@@ -4545,7 +5175,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </p>
       </div>
       <div
-        class="c26"
+        class="c32"
         data-testid="motivation-flaw"
       >
         <div>
@@ -4563,7 +5193,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </p>
       </div>
       <div
-        class="c26"
+        class="c32"
         data-testid="motivation-desire"
       >
         <div>
@@ -4581,7 +5211,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </p>
       </div>
       <div
-        class="c26"
+        class="c32"
         data-testid="motivation-fear"
       >
         <div>
@@ -4600,15 +5230,15 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c27 c28"
+      class="c33 c34"
       data-testid="favors"
     >
       <div
-        class="c29"
+        class="c35"
         data-testid="favors-owed"
       >
         <div
-          class="c30"
+          class="c36"
         >
           <h3>
             owed
@@ -4638,10 +5268,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           </div>
         </div>
         <div
-          class="c31"
+          class="c37"
         >
           <div
-            class="c32"
+            class="c38"
             data-testid="favor-1"
           >
             <h4
@@ -4663,11 +5293,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </div>
       </div>
       <div
-        class="c29"
+        class="c35"
         data-testid="favors-given"
       >
         <div
-          class="c30"
+          class="c36"
         >
           <h3>
             given
@@ -4697,10 +5327,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           </div>
         </div>
         <div
-          class="c31"
+          class="c37"
         >
           <div
-            class="c33"
+            class="c39"
             data-testid="favor-2"
           >
             <h4
@@ -4723,7 +5353,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c34 c35"
+      class="c40 c41"
       data-testid="equipment"
     >
       <div
@@ -4759,7 +5389,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c36 c37"
+      class="c42 c43"
       data-testid="notes"
     >
       <p

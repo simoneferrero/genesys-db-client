@@ -5,14 +5,11 @@ import {
   criticalInjury2,
   criticalInjury3,
 } from 'mocks/criticalInjuries'
+import { playerCharacter1CriticalInjuriesAugmented as characterCriticalInjuries } from 'mocks/playersCharacters'
 
 const mockHandleSubmit = jest.fn()
 const mockOnCriticalInjuryChange = jest.fn()
 const criticalInjuries = [criticalInjury1, criticalInjury2, criticalInjury3]
-const characterCriticalInjuries = {
-  [criticalInjury1.id]: criticalInjury1,
-  [criticalInjury2.id]: criticalInjury2,
-}
 const defaultProps = {
   criticalInjuries,
   handleSubmit: mockHandleSubmit,
@@ -149,7 +146,7 @@ describe('<CriticalInjuriesSection />', () => {
   it('should render correctly when editing', () => {
     const props = {
       characterCriticalInjuries,
-      deletedCriticalInjuries: { [criticalInjury2.id]: true },
+      deletedCriticalInjuries: { ['1']: true },
       editing: true,
       isCharacter: true,
     }
@@ -160,7 +157,7 @@ describe('<CriticalInjuriesSection />', () => {
       expect(criticalInjury).toBeInTheDocument()
 
       const healButton = getByTestId(
-        id === criticalInjury1.id ? `healButton-${id}` : `undoButton-${id}`,
+        id !== 1 ? `healButton-${id}` : `undoButton-${id}`,
       )
       expect(healButton).toBeInTheDocument()
 
@@ -168,7 +165,7 @@ describe('<CriticalInjuriesSection />', () => {
 
       expect(mockOnCriticalInjuryChange).toHaveBeenCalledWith(
         `deletedCriticalInjuries.${id}`,
-        id === criticalInjury1.id,
+        id !== 1,
       )
     })
   })

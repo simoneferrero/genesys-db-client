@@ -1,5 +1,6 @@
 import React, { memo, Suspense, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { criticalInjuryType } from 'types/criticalInjuries'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
 import { uiType } from 'types/ui'
@@ -14,7 +15,9 @@ import Spinner from 'components/Spinner'
 /** Summary of all players' characters. */
 export const PlayerCharacter = ({
   addFavor,
+  addPlayerCharacterCriticalInjury,
   addPlayerCharacterWeapon,
+  criticalInjuries,
   editPlayerCharacter,
   factions,
   getArchetypes,
@@ -60,6 +63,8 @@ export const PlayerCharacter = ({
     editPlayerCharacter(playerCharacterId, values, actions)
   const handleAddFavor = (values, actions) =>
     addFavor(playerCharacterId, values, actions)
+  const handleAddPlayerCharacterCriticalInjury = (values, actions) =>
+    addPlayerCharacterCriticalInjury(playerCharacterId, `${values.id}`, actions)
   const handleAddPlayerCharacterWeapon = (values, actions) =>
     addPlayerCharacterWeapon(playerCharacterId, `${values.id}`, actions)
 
@@ -81,7 +86,11 @@ export const PlayerCharacter = ({
         <Suspense fallback={<Spinner />}>
           <PCSheet
             addFavor={handleAddFavor}
+            addPlayerCharacterCriticalInjury={
+              handleAddPlayerCharacterCriticalInjury
+            }
             addPlayerCharacterWeapon={handleAddPlayerCharacterWeapon}
+            criticalInjuries={criticalInjuries}
             factions={factions}
             handleSubmit={handleSubmit}
             playerCharacter={playerCharacter}
@@ -97,8 +106,12 @@ export const PlayerCharacter = ({
 PlayerCharacter.propTypes = {
   /** Dispatched to add a new favor */
   addFavor: PropTypes.func.isRequired,
+  /** Dispatched to add a critical injury */
+  addPlayerCharacterCriticalInjury: PropTypes.func.isRequired,
   /** Dispatched to add a weapon */
   addPlayerCharacterWeapon: PropTypes.func.isRequired,
+  /** Critical injuries data */
+  criticalInjuries: PropTypes.arrayOf(criticalInjuryType).isRequired,
   /** Dispatched to edit the current player's character */
   editPlayerCharacter: PropTypes.func.isRequired,
   /** Factions data */

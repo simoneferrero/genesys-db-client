@@ -8,6 +8,7 @@ import {
   criticalInjury2,
   criticalInjury3,
 } from 'mocks/criticalInjuries'
+import { playerCharacter1CriticalInjuriesAugmented as characterCriticalInjuries } from 'mocks/playersCharacters'
 
 import CriticalInjuriesSection from '../index'
 
@@ -25,20 +26,14 @@ storiesOf('Components/CriticalInjuriesSection', module)
   .add('default', () => renderComponent())
   .add('isCharacter', () => {
     const props = {
-      characterCriticalInjuries: {
-        [criticalInjury1.id]: criticalInjury1,
-        [criticalInjury2.id]: criticalInjury2,
-      },
+      characterCriticalInjuries,
       isCharacter: true,
     }
     return renderComponent(props)
   })
   .add('editing', () => {
     const props = {
-      characterCriticalInjuries: {
-        [criticalInjury1.id]: criticalInjury1,
-        [criticalInjury2.id]: criticalInjury2,
-      },
+      characterCriticalInjuries,
       deletedCriticalInjuries: {
         [criticalInjury1.id]: true,
       },

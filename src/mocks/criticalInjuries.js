@@ -26,6 +26,10 @@ export const criticalInjury3 = {
   dice_value: '141-150',
   persistent: true,
 }
+export const newPlayerCharacterCriticalInjuryResponse = {
+  id: 3,
+  critical_injury_id: criticalInjury3.id,
+}
 
 export const criticalInjuries = [criticalInjury1, criticalInjury2]
 export const criticalInjuriesById = {

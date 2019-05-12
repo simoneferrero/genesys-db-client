@@ -9,7 +9,7 @@ const WeaponRecord = Record({
   mods: '',
   name: null,
   price: 0,
-  range: '',
+  range: 'engaged',
   rarity: 0,
   restricted: false,
   skill: '',

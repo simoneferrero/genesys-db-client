@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 
 // Selectors
+import { criticalInjuriesOrderedSelector } from 'reducers/criticalInjuries/selectors'
 import { currentPlayerCharacterSelector } from 'reducers/playersCharacters/selectors'
 import { factionsByIdSelector } from 'reducers/factions/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
@@ -11,7 +12,10 @@ import { weaponsByIdSelector } from 'reducers/weapons/selectors'
 import { getArchetypes } from 'actions/archetypes'
 import { getAuthInfo } from 'actions/authentication'
 import { getCareers } from 'actions/careers'
-import { getCriticalInjuries } from 'actions/criticalInjuries'
+import {
+  addPlayerCharacterCriticalInjury,
+  getCriticalInjuries,
+} from 'actions/criticalInjuries'
 import { getFactions } from 'actions/factions'
 import { addFavor } from 'actions/favors'
 import {
@@ -26,6 +30,7 @@ import ImmutableConverter from 'HOCs/ImmutableConverter'
 import PlayersCharacters from './component'
 
 const mapStateToProps = (state) => ({
+  criticalInjuries: criticalInjuriesOrderedSelector(state),
   factions: factionsByIdSelector(state),
   playerCharacter: currentPlayerCharacterSelector(state),
   playerCharacterId: playerCharacterIdSelector(state),
@@ -34,6 +39,7 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = {
   addFavor,
+  addPlayerCharacterCriticalInjury,
   addPlayerCharacterWeapon,
   editPlayerCharacter,
   getArchetypes,

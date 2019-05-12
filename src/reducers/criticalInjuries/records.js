@@ -2,7 +2,7 @@ import { Record } from 'immutable'
 
 const CriticalInjuryRecord = new Record({
   critical_injury_id: null,
-  dice_value: null,
+  dice_value: '',
   effects: '',
   id: null,
   name: '',

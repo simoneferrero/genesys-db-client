@@ -7,9 +7,8 @@ exports[`Storyshots Components/CriticalInjuriesSection default 1`] = `
   height: -moz-fit-content;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 12px;
-  grid-row-gap: 6px;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   padding: 12px;
 }
 
@@ -40,7 +39,7 @@ exports[`Storyshots Components/CriticalInjuriesSection default 1`] = `
 }
 
 .c2 p {
-  grid-column: 1/4;
+  margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
 }
@@ -68,9 +67,33 @@ exports[`Storyshots Components/CriticalInjuriesSection default 1`] = `
   margin-bottom: 12px;
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c2 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
   .c1 {
     grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c1 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c1 {
+    grid-template-columns: repeat(4,1fr);
   }
 }
 
@@ -173,9 +196,8 @@ exports[`Storyshots Components/CriticalInjuriesSection editing 1`] = `
   height: -moz-fit-content;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 12px;
-  grid-row-gap: 6px;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   padding: 12px;
 }
 
@@ -206,7 +228,7 @@ exports[`Storyshots Components/CriticalInjuriesSection editing 1`] = `
 }
 
 .c6 p {
-  grid-column: 1/4;
+  margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
 }
@@ -221,16 +243,9 @@ exports[`Storyshots Components/CriticalInjuriesSection editing 1`] = `
   height: -moz-fit-content;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 12px;
-  grid-row-gap: 6px;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   padding: 12px;
-}
-
-.c4 > * {
-  opacity: 0.5;
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
 }
 
 .c4 > h4 {
@@ -260,7 +275,7 @@ exports[`Storyshots Components/CriticalInjuriesSection editing 1`] = `
 }
 
 .c4 p {
-  grid-column: 1/4;
+  margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
   opacity: 0.5;
@@ -382,9 +397,45 @@ exports[`Storyshots Components/CriticalInjuriesSection editing 1`] = `
   margin-bottom: 12px;
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
   .c3 {
     grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c3 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c3 {
+    grid-template-columns: repeat(4,1fr);
   }
 }
 
@@ -424,69 +475,69 @@ exports[`Storyshots Components/CriticalInjuriesSection editing 1`] = `
   >
     <div
       class="c4"
-      data-testid="criticalInjury-minor_nick"
+      data-testid="criticalInjury-1"
     >
       <h4
-        data-testid="criticalInjury-minor_nick-dice_value"
+        data-testid="criticalInjury-1-dice_value"
       >
         01-05
       </h4>
       <h4
-        data-testid="criticalInjury-minor_nick-name"
+        data-testid="criticalInjury-1-name"
       >
         Minor Nick
       </h4>
       <h4
-        data-testid="criticalInjury-minor_nick-severity"
+        data-testid="criticalInjury-1-severity"
       >
         <span>
           k
         </span>
       </h4>
       <p
-        data-testid="criticalInjury-minor_nick-effects"
+        data-testid="criticalInjury-1-effects"
       >
         The target suffers 1 strain.
       </p>
       <button
         class="c5"
-        data-testid="undoButton-minor_nick"
+        data-testid="healButton-1"
         type="button"
       >
         <h4>
-          Undo
+          Heal
         </h4>
       </button>
     </div>
     <div
       class="c6"
-      data-testid="criticalInjury-slightly_dazed"
+      data-testid="criticalInjury-2"
     >
       <h4
-        data-testid="criticalInjury-slightly_dazed-dice_value"
+        data-testid="criticalInjury-2-dice_value"
       >
         61-65
       </h4>
       <h4
-        data-testid="criticalInjury-slightly_dazed-name"
+        data-testid="criticalInjury-2-name"
       >
         Slightly Dazed
       </h4>
       <h4
-        data-testid="criticalInjury-slightly_dazed-severity"
+        data-testid="criticalInjury-2-severity"
       >
         <span>
           k k
         </span>
       </h4>
       <p
-        data-testid="criticalInjury-slightly_dazed-effects"
+        data-testid="criticalInjury-2-effects"
       >
         The target is disoriented until this Critical Injury is healed.
       </p>
       <button
         class="c5"
-        data-testid="healButton-slightly_dazed"
+        data-testid="healButton-2"
         type="button"
       >
         <h4>
@@ -505,9 +556,8 @@ exports[`Storyshots Components/CriticalInjuriesSection isCharacter 1`] = `
   height: -moz-fit-content;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 12px;
-  grid-row-gap: 6px;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   padding: 12px;
 }
 
@@ -538,7 +588,7 @@ exports[`Storyshots Components/CriticalInjuriesSection isCharacter 1`] = `
 }
 
 .c5 p {
-  grid-column: 1/4;
+  margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
 }
@@ -553,9 +603,8 @@ exports[`Storyshots Components/CriticalInjuriesSection isCharacter 1`] = `
   height: -moz-fit-content;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 12px;
-  grid-row-gap: 6px;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   padding: 12px;
 }
 
@@ -586,7 +635,7 @@ exports[`Storyshots Components/CriticalInjuriesSection isCharacter 1`] = `
 }
 
 .c4 p {
-  grid-column: 1/4;
+  margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
   opacity: 0.5;
@@ -673,9 +722,45 @@ exports[`Storyshots Components/CriticalInjuriesSection isCharacter 1`] = `
   margin-bottom: 12px;
 }
 
-@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c5 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c5 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c4 p {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px) {
   .c3 {
     grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px) {
+  .c3 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  .c3 {
+    grid-template-columns: repeat(4,1fr);
   }
 }
 
@@ -715,54 +800,54 @@ exports[`Storyshots Components/CriticalInjuriesSection isCharacter 1`] = `
   >
     <div
       class="c4"
-      data-testid="criticalInjury-minor_nick"
+      data-testid="criticalInjury-1"
     >
       <h4
-        data-testid="criticalInjury-minor_nick-dice_value"
+        data-testid="criticalInjury-1-dice_value"
       >
         01-05
       </h4>
       <h4
-        data-testid="criticalInjury-minor_nick-name"
+        data-testid="criticalInjury-1-name"
       >
         Minor Nick
       </h4>
       <h4
-        data-testid="criticalInjury-minor_nick-severity"
+        data-testid="criticalInjury-1-severity"
       >
         <span>
           k
         </span>
       </h4>
       <p
-        data-testid="criticalInjury-minor_nick-effects"
+        data-testid="criticalInjury-1-effects"
       >
         The target suffers 1 strain.
       </p>
     </div>
     <div
       class="c5"
-      data-testid="criticalInjury-slightly_dazed"
+      data-testid="criticalInjury-2"
     >
       <h4
-        data-testid="criticalInjury-slightly_dazed-dice_value"
+        data-testid="criticalInjury-2-dice_value"
       >
         61-65
       </h4>
       <h4
-        data-testid="criticalInjury-slightly_dazed-name"
+        data-testid="criticalInjury-2-name"
       >
         Slightly Dazed
       </h4>
       <h4
-        data-testid="criticalInjury-slightly_dazed-severity"
+        data-testid="criticalInjury-2-severity"
       >
         <span>
           k k
         </span>
       </h4>
       <p
-        data-testid="criticalInjury-slightly_dazed-effects"
+        data-testid="criticalInjury-2-effects"
       >
         The target is disoriented until this Critical Injury is healed.
       </p>

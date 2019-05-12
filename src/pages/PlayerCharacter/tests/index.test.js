@@ -6,6 +6,7 @@ import ReducerRecord from 'reducers/records'
 import PlayerCharacter from '../index'
 
 import { formikActions, store } from 'mocks'
+import { criticalInjury3 } from 'mocks/criticalInjuries'
 import { newFavor } from 'mocks/favors'
 import {
   playerCharacter1Id,
@@ -16,7 +17,10 @@ import { newWeaponResponse } from 'mocks/weapons'
 
 import { GET_ARCHETYPES } from 'actions/archetypes/constants'
 import { GET_CAREERS } from 'actions/careers/constants'
-import { GET_CRITICAL_INJURIES } from 'actions/criticalInjuries/constants'
+import {
+  ADD_PLAYER_CHARACTER_CRITICAL_INJURY,
+  GET_CRITICAL_INJURIES,
+} from 'actions/criticalInjuries/constants'
 import { GET_FACTIONS } from 'actions/factions/constants'
 import { ADD_FAVOR } from 'actions/favors/constants'
 import {
@@ -80,12 +84,18 @@ import { getCareers } from 'actions/careers'
 
 jest.mock('actions/criticalInjuries', () => {
   return {
+    addPlayerCharacterCriticalInjury: jest.fn(jest.fn(() => ({ type: '' }))),
+    addPlayerCharacterCriticalInjurySuccess: jest.fn(() => ({ type: '' })),
+    addPlayerCharacterCriticalInjuryError: jest.fn(() => ({ type: '' })),
     getCriticalInjuries: jest.fn(jest.fn(() => ({ type: '' }))),
     getCriticalInjuriesSuccess: jest.fn(() => ({ type: '' })),
     getCriticalInjuriesError: jest.fn(() => ({ type: '' })),
   }
 })
-import { getCriticalInjuries } from 'actions/criticalInjuries'
+import {
+  addPlayerCharacterCriticalInjury,
+  getCriticalInjuries,
+} from 'actions/criticalInjuries'
 
 jest.mock('actions/factions', () => ({
   getFactions: jest.fn(() => ({ type: '' })),
@@ -309,6 +319,32 @@ describe('<PlayerCharacter />', () => {
 
     await wait(() => {
       expect(addFavor).toHaveBeenCalledTimes(1)
+
+      const spinner = getByTestId(/spinner/i)
+      expect(spinner).toBeInTheDocument()
+    })
+  })
+
+  it('should call addPlayerCharacterCriticalInjury on new weapon submit', async () => {
+    addPlayerCharacterCriticalInjury.mockImplementation(() => ({
+      type: ADD_PLAYER_CHARACTER_CRITICAL_INJURY,
+      payload: {
+        actions: formikActions,
+        playerCharacterId: id,
+        criticalInjuryId: criticalInjury3.id,
+      },
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId('edit-criticalInjury')
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId('submit-criticalInjury')
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(addPlayerCharacterCriticalInjury).toHaveBeenCalledTimes(1)
 
       const spinner = getByTestId(/spinner/i)
       expect(spinner).toBeInTheDocument()

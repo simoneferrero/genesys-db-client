@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { criticalInjuryType } from 'types/criticalInjuries'
+import {
+  characterCriticalInjuryType,
+  criticalInjuryType,
+} from 'types/criticalInjuries'
 
 import isEmpty from 'lodash/isEmpty'
 
@@ -57,7 +60,7 @@ const CriticalInjuriesSection = ({
 
 CriticalInjuriesSection.propTypes = {
   /** Critical injuries belonging to a specific character */
-  characterCriticalInjuries: PropTypes.objectOf(criticalInjuryType),
+  characterCriticalInjuries: PropTypes.objectOf(characterCriticalInjuryType),
   /** Custom styles */
   className: PropTypes.string,
   /** Critical injuries data */

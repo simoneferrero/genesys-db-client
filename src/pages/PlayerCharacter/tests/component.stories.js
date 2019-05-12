@@ -5,6 +5,7 @@ import { fromJS } from 'immutable'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import { criticalInjuries, criticalInjury3 } from 'mocks/criticalInjuries'
 import { factionsById } from 'mocks/factions'
 import {
   playerCharacter1Id,
@@ -17,7 +18,9 @@ import { PlayerCharacter } from '../component'
 
 const defaultProps = {
   addFavor: action('addFavor'),
+  addPlayerCharacterCriticalInjury: action('addPlayerCharacterCriticalInjury'),
   addPlayerCharacterWeapon: action('addPlayerCharacterWeapon'),
+  criticalInjuries: [...criticalInjuries, criticalInjury3],
   editPlayerCharacter: action('editPlayerCharacter'),
   factions: fromJS(factionsById).toJS(),
   getArchetypes: action('getArchetypes'),

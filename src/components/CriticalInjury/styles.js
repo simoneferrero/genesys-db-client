@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components/macro'
 import { baseSpacing, colours, fontFamilies } from 'styles/constants'
+import mq from 'styles/mediaQueries'
 import rgbToRgba from 'utils/rgbToRgba'
 
 const healedStyles = css`
@@ -10,10 +11,13 @@ export const StyledCriticalInjury = styled.div`
   width: 100%;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: ${baseSpacing / 2}px;
-  grid-row-gap: ${baseSpacing / 4}px;
+  grid-template-columns: 1fr;
+  grid-gap: ${baseSpacing / 2}px;
   padding: ${baseSpacing / 2}px;
+
+  @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   & > * {
     ${({ deleting, editing }) => deleting && editing && healedStyles}
@@ -40,11 +44,15 @@ export const StyledCriticalInjury = styled.div`
   }
 
   p {
-    grid-column: 1/4;
+    margin: 0;
     color: ${colours.teal};
     text-align: justify;
     opacity: ${({ isCharacter, persistent }) =>
       isCharacter && !persistent && '0.5'};
+
+    @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
+      grid-column: 1/4;
+    }
   }
 
   button {
