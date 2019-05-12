@@ -39,9 +39,9 @@ export const CriticalInjuries = ({
 
   return (
     <>
-      <Helmet title={HEAD_INFO.WEAPONS} />
+      <Helmet title={HEAD_INFO.CRITICAL_INJURIES} />
       <StyledWrapper data-testid="criticalInjuries">
-        <Header>{HEAD_INFO.WEAPONS}</Header>
+        <Header>{HEAD_INFO.CRITICAL_INJURIES}</Header>
         <Suspense fallback={<Spinner />}>
           <CriticalInjuriesSection criticalInjuries={criticalInjuries} />
         </Suspense>

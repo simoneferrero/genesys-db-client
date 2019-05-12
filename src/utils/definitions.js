@@ -3,8 +3,8 @@ export const API_PATH = process.env.REACT_APP_API_PATH
 export const API_SEGMENTS = {
   ARCHETYPES: 'archetypes',
   CAREERS: 'careers',
-  CRITICAL_INJURY: 'critical-injury',
   CRITICAL_INJURIES: 'critical-injuries',
+  CRITICAL_INJURY: 'critical-injury',
   FACTIONS: 'factions',
   FAVOR: 'favor',
   LOGIN: 'login',
@@ -16,39 +16,40 @@ export const API_SEGMENTS = {
 
 // REST
 export const REST_METHODS = {
+  DELETE: 'DELETE',
   GET: 'GET',
   POST: 'POST',
   PUT: 'PUT',
-  DELETE: 'DELETE',
 }
 
 // Head data
 export const HEAD_INFO = {
-  TITLE: 'Genesys DB',
   CONTENT: 'Web app to manage and display Genesys - SotB data',
+  CRITICAL_INJURIES: 'Critical Injuries',
   PLAYERS_CHARACTERS_TITLE: 'PC Summary',
+  TITLE: 'Genesys DB',
   WEAPONS: 'Weapons',
 }
 
 // Character data
 export const INFO = {
-  PC_NAME: 'pcName',
-  PLAYER_NAME: 'playerName',
   ARCHETYPE: 'archetype',
   CAREER: 'career',
+  PC_NAME: 'pcName',
+  PLAYER_NAME: 'playerName',
 }
 export const ATTRIBUTES = {
-  WOUNDS: 'wounds',
-  STRAIN: 'strain',
-  SOAK: 'soak',
   DEFENSE: 'defense',
+  SOAK: 'soak',
+  STRAIN: 'strain',
+  WOUNDS: 'wounds',
 }
 
 export const CHARACTERISTICS = {
-  BRAWN: 'brawn',
   AGILITY: 'agility',
-  INTELLECT: 'intellect',
+  BRAWN: 'brawn',
   CUNNING: 'cunning',
-  WILLPOWER: 'willpower',
+  INTELLECT: 'intellect',
   PRESENCE: 'presence',
+  WILLPOWER: 'willpower',
 }
