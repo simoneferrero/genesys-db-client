@@ -29,6 +29,7 @@ import {
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
 import { GET_SKILLS } from 'actions/skills/constants'
+import { GET_TALENTS } from 'actions/talents/constants'
 import {
   GET_WEAPONS,
   ADD_PLAYER_CHARACTER_WEAPON,
@@ -110,6 +111,16 @@ jest.mock('actions/skills', () => ({
   getSkillsError: jest.fn(() => ({ type: '' })),
 }))
 import { getSkills } from 'actions/skills'
+
+jest.mock('actions/talents', () => ({
+  addPlayerCharacterTalent: jest.fn(jest.fn(() => ({ type: '' }))),
+  addPlayerCharacterTalentSuccess: jest.fn(() => ({ type: '' })),
+  addPlayerCharacterTalentError: jest.fn(() => ({ type: '' })),
+  getTalents: jest.fn(() => ({ type: '' })),
+  getTalentsSuccess: jest.fn(() => ({ type: '' })),
+  getTalentsError: jest.fn(() => ({ type: '' })),
+}))
+import { getTalents } from 'actions/talents'
 
 jest.mock('actions/weapons', () => ({
   getWeapons: jest.fn(() => ({ type: '' })),
@@ -230,6 +241,10 @@ describe('<PlayerCharacter />', () => {
         type: GET_SKILLS,
       },
       {
+        name: 'talents',
+        type: GET_TALENTS,
+      },
+      {
         name: 'weapons',
         type: GET_WEAPONS,
       },
@@ -269,6 +284,7 @@ describe('<PlayerCharacter />', () => {
     expect(getSkills).toHaveBeenCalledTimes(1)
     expect(getFactions).toHaveBeenCalledTimes(1)
     expect(getWeapons).toHaveBeenCalledTimes(1)
+    expect(getTalents).toHaveBeenCalledTimes(1)
   })
 
   it('should call editPlayerCharacter on submit', async () => {

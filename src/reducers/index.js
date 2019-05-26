@@ -10,6 +10,7 @@ import criticalInjuries from './criticalInjuries'
 import factions from './factions'
 import playersCharacters from './playersCharacters'
 import skills from './skills'
+import talents from './talents'
 import ui from './ui'
 import weapons from './weapons'
 
@@ -22,6 +23,7 @@ export default combineReducers({
   playersCharacters,
   router: connectRouter(history),
   skills,
+  talents,
   ui,
   weapons,
 })

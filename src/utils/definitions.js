@@ -10,6 +10,8 @@ export const API_SEGMENTS = {
   LOGIN: 'login',
   PLAYERS_CHARACTERS: 'players-characters',
   SKILLS: 'skills',
+  TALENT: 'talent',
+  TALENTS: 'talents',
   WEAPON: 'weapon',
   WEAPONS: 'weapons',
 }

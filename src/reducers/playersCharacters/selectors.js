@@ -5,6 +5,7 @@ import { careersByIdSelector } from 'reducers/careers/selectors'
 import { criticalInjuriesByIdSelector } from 'reducers/criticalInjuries/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
 import { skillsByIdSelector } from 'reducers/skills/selectors'
+import { talentsByIdSelector } from 'reducers/talents/selectors'
 import { weaponsByIdSelector } from 'reducers/weapons/selectors'
 
 import PlayerCharacterRecord from 'reducers/playersCharacters/records'
@@ -18,6 +19,7 @@ export const playersCharactersByIdSelector = createSelector(
   careersByIdSelector,
   criticalInjuriesByIdSelector,
   skillsByIdSelector,
+  talentsByIdSelector,
   weaponsByIdSelector,
   (
     playersCharacters,
@@ -25,6 +27,7 @@ export const playersCharactersByIdSelector = createSelector(
     careersById,
     criticalInjuriesById,
     skillsById,
+    talentsById,
     weaponsById,
   ) =>
     playersCharacters.get('byId').map((playerCharacter) => {
@@ -60,6 +63,17 @@ export const playersCharactersByIdSelector = createSelector(
               }),
             }
           : []),
+        ...(!talentsById.isEmpty()
+          ? {
+              talents: playerCharacter
+                .get('talents')
+                .map((playerCharacterTalent) => {
+                  const talentId = playerCharacterTalent.get('talent_id')
+                  const talent = talentsById.get(talentId)
+                  return talent.merge(playerCharacterTalent)
+                }),
+            }
+          : {}),
         ...(!weaponsById.isEmpty()
           ? {
               weapons: playerCharacter.get('weapons').map((weapon) => {

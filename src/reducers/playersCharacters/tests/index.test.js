@@ -12,6 +12,7 @@ import {
   getPlayersCharactersSuccess,
   editPlayerCharacterSuccess,
 } from 'actions/playersCharacters'
+import { addPlayerCharacterTalentSuccess } from 'actions/talents'
 import { addPlayerCharacterWeaponSuccess } from 'actions/weapons'
 
 import { newPlayerCharacterCriticalInjuryResponse } from 'mocks/criticalInjuries'
@@ -22,11 +23,13 @@ import {
   playerCharacter1Favors,
   playerCharacter1Id,
   playerCharacter1Response,
+  playerCharacter1Talents,
   playerCharacter1Weapons,
   playersCharactersAllIds,
   playersCharactersById,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
+import { newPlayerCharacterTalentResponse } from 'mocks/talents'
 import { newPlayerCharacterWeaponResponse } from 'mocks/weapons'
 
 describe('playersCharacters reducer', () => {
@@ -140,6 +143,32 @@ describe('playersCharacters reducer', () => {
           [`${
             newPlayerCharacterCriticalInjuryResponse.id
           }`]: newPlayerCharacterCriticalInjuryResponse,
+        }),
+      )
+
+      expect(result).toEqual(expectedResult)
+    })
+  })
+
+  describe('addPlayerCharacterTalentSuccess', () => {
+    const id = `${playerCharacter1Id}`
+
+    it('should handle the action correctly', () => {
+      const fullState = reducer(
+        initialState,
+        getPlayerCharacterSuccess(id, playerCharacter1Response),
+      )
+      const result = reducer(
+        fullState,
+        addPlayerCharacterTalentSuccess(id, newPlayerCharacterTalentResponse),
+      )
+      const expectedResult = fullState.setIn(
+        ['byId', id, 'talents'],
+        fromJS({
+          ...playerCharacter1Talents,
+          [`${
+            newPlayerCharacterTalentResponse.id
+          }`]: newPlayerCharacterTalentResponse,
         }),
       )
 

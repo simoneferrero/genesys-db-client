@@ -42,6 +42,7 @@ describe('playersCharacters selectors', () => {
         .set('careers', new ReducerRecord())
         .set('criticalInjuries', new ReducerRecord())
         .set('skills', new ReducerRecord())
+        .set('talents', new ReducerRecord())
         .set('weapons', new ReducerRecord())
       const result = playersCharactersByIdSelector(modifiedStore)
       const expectedResult = playersCharactersById

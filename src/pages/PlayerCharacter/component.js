@@ -27,6 +27,7 @@ export const PlayerCharacter = ({
   getFactions,
   getPlayerCharacter,
   getSkills,
+  getTalents,
   getWeapons,
   playerCharacter,
   playerCharacterId,
@@ -57,6 +58,9 @@ export const PlayerCharacter = ({
   useEffect(() => {
     getWeapons()
   }, [getWeapons])
+  useEffect(() => {
+    getTalents()
+  }, [getTalents])
 
   // Form submission handlers
   const handleSubmit = (values, actions) =>
@@ -76,6 +80,7 @@ export const PlayerCharacter = ({
     ui.favors.loading ||
     ui.playersCharacters.loading ||
     ui.skills.loading ||
+    ui.talents.loading ||
     ui.weapons.loading
 
   return (
@@ -128,6 +133,8 @@ PlayerCharacter.propTypes = {
   getFactions: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of skills */
   getSkills: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of talents */
+  getTalents: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of weapons */
   getWeapons: PropTypes.func.isRequired,
   /** Dispatched to fetch player character data */

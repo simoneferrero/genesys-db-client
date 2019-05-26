@@ -61,6 +61,7 @@ const PlayerCharacterRecord = Record({
   notes: '',
   player_name: '',
   skills: List(),
+  talents: Map(),
   weapons: List(),
 })
 

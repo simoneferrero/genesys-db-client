@@ -5,6 +5,7 @@ import { criticalInjuriesOrderedSelector } from 'reducers/criticalInjuries/selec
 import { currentPlayerCharacterSelector } from 'reducers/playersCharacters/selectors'
 import { factionsByIdSelector } from 'reducers/factions/selectors'
 import { playerCharacterIdSelector } from 'reducers/router/selectors'
+import { talentsByIdSelector } from 'reducers/talents/selectors'
 import { uiSelector } from 'reducers/ui/selectors'
 import { weaponsByIdSelector } from 'reducers/weapons/selectors'
 
@@ -23,6 +24,7 @@ import {
   getPlayerCharacter,
 } from 'actions/playersCharacters'
 import { getSkills } from 'actions/skills'
+import { getTalents, addPlayerCharacterTalent } from 'actions/talents'
 import { getWeapons, addPlayerCharacterWeapon } from 'actions/weapons'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
@@ -34,12 +36,14 @@ const mapStateToProps = (state) => ({
   factions: factionsByIdSelector(state),
   playerCharacter: currentPlayerCharacterSelector(state),
   playerCharacterId: playerCharacterIdSelector(state),
+  talents: talentsByIdSelector(state),
   ui: uiSelector(state),
   weapons: weaponsByIdSelector(state),
 })
 const mapDispatchToProps = {
   addFavor,
   addPlayerCharacterCriticalInjury,
+  addPlayerCharacterTalent,
   addPlayerCharacterWeapon,
   editPlayerCharacter,
   getArchetypes,
@@ -49,6 +53,7 @@ const mapDispatchToProps = {
   getFactions,
   getPlayerCharacter,
   getSkills,
+  getTalents,
   getWeapons,
 }
 

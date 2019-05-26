@@ -116,6 +116,7 @@ export function* editPlayerCharacterSaga({
       motivations,
       notes,
       skills,
+      talents,
       weapons,
     },
   },
@@ -143,6 +144,11 @@ export function* editPlayerCharacterSaga({
         rank,
       })),
     strain_current,
+    talents: Object.values(talents).map(({ id, notes, rank }) => ({
+      id,
+      notes,
+      rank,
+    })),
     weapons: Object.values(weapons).map(({ id, mods }) => ({ id, mods })),
     wounds_current,
   })

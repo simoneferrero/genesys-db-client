@@ -9,6 +9,7 @@ import {
   GET_PLAYER_CHARACTER_SUCCESS,
   EDIT_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
+import { ADD_PLAYER_CHARACTER_TALENT_SUCCESS } from 'actions/talents/constants'
 import { ADD_PLAYER_CHARACTER_WEAPON_SUCCESS } from 'actions/weapons/constants'
 
 import initialState from './initialState'
@@ -60,6 +61,15 @@ export default (state = initialState, { type, payload }) => {
           `${criticalInjury.id}`,
         ],
         fromJS(criticalInjury),
+      )
+    }
+
+    case ADD_PLAYER_CHARACTER_TALENT_SUCCESS: {
+      const { talent, playerCharacterId } = payload
+
+      return state.setIn(
+        ['byId', playerCharacterId, 'talents', `${talent.id}`],
+        fromJS(talent),
       )
     }
 

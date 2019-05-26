@@ -10,6 +10,7 @@ import factionsRootSaga from '../factions'
 import favorsRootSaga from '../favors'
 import playersCharactersRootSaga from '../playersCharacters'
 import skillsRootSaga from '../skills'
+import talentsRootSaga from '../talents'
 import weaponsRootSaga from '../weapons'
 
 describe('rootSaga', () => {
@@ -26,6 +27,7 @@ describe('rootSaga', () => {
       call(favorsRootSaga),
       call(playersCharactersRootSaga),
       call(skillsRootSaga),
+      call(talentsRootSaga),
       call(weaponsRootSaga),
     ])
     expect(allDescriptor).toEqual(expectedAllDescriptor)

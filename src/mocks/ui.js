@@ -11,6 +11,7 @@ export const ui = {
   favors: uiRecord(),
   playersCharacters: uiRecord(),
   skills: uiRecord(),
+  talents: uiRecord(),
   weapons: uiRecord(),
 }
 

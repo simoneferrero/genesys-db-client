@@ -17,6 +17,7 @@ import {
 } from './playersCharacters'
 import { initialRouter, playerCharacterRouter } from './router'
 import { skillsById, skillsAllIds } from './skills'
+import { talentsById, talentsAllIds } from './talents'
 import { ui } from './ui'
 import { weaponsById, weaponsAllIds } from './weapons'
 
@@ -49,6 +50,10 @@ export const store = fromJS({
     allIds: List(skillsAllIds),
     byId: Map(skillsById),
   }),
+  talents: new ReducerRecord({
+    allIds: List(talentsAllIds),
+    byId: Map(talentsById),
+  }),
   ui,
   weapons: new ReducerRecord({
     allIds: List(weaponsAllIds),
@@ -65,6 +70,7 @@ export const emptyStore = fromJS({
   playersCharacters: new ReducerRecord(),
   router: initialRouter,
   skills: new ReducerRecord(),
+  talents: new ReducerRecord(),
   ui,
   weapons: new ReducerRecord(),
 })
