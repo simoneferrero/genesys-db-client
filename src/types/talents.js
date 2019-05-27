@@ -12,29 +12,19 @@ export const talentData = {
   /** What it does */
   description: PropTypes.string.isRequired,
   /** Unique identifier */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Name of the talent */
   name: PropTypes.string.isRequired,
+  /** Any modification or addition to the description */
+  notes: PropTypes.string,
+  /** The rank if ranked */
+  rank: PropTypes.number,
   /** Whether it is ranked or not */
   ranked: PropTypes.bool.isRequired,
+  /** Unique talent identifier */
+  talent_id: PropTypes.string,
   /** The tier from 1 to 5 */
   tier: PropTypes.number.isRequired,
 }
 
 export const talentType = PropTypes.shape(talentData)
-
-export const playerCharacterTalentData = {
-  ...talentData,
-  /** Any modification or addition to the description */
-  notes: PropTypes.string.isRequired,
-  /** Identifier or player's talent */
-  id: PropTypes.number.isRequired,
-  /** The rank if ranked */
-  rank: PropTypes.number,
-  /** Unique identifier */
-  talent_id: PropTypes.string.isRequired,
-}
-
-export const playerCharacterTalentType = PropTypes.shape(
-  playerCharacterTalentData,
-)
