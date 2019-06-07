@@ -24,9 +24,12 @@ const ExistingTalent = ({
     threat: 'h',
     success: 's',
     triumph: 't',
-    square: 'j',
-    diamond: 'k',
-    hexagon: 'l',
+    boost: 'j',
+    setback: 'j',
+    ability: 'k',
+    difficulty: 'k',
+    proficiency: 'l',
+    challenge: 'l',
   }
 
   const modifiedDescription = useMemo(

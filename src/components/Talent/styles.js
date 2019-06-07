@@ -68,19 +68,16 @@ export const StyledTalent = styled(FilteredTalent)`
     &[type=boost] {
       color: ${colours.lightBlue};
     }
-    &[type=advantage] {
+    &[type=ability] {
       color: ${colours.green};
     }
     &[type=proficiency] {
       color: ${colours.yellow};
     }
-    &[type=setback] {
-      color: ${colours.black};
-    }
-    &[type=threat] {
+    &[type=difficulty] {
       color: ${colours.darkPurple};
     }
-    &[type=despair] {
+    &[type=challenge] {
       color: ${colours.brown};
     }
   }

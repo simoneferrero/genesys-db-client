@@ -28,6 +28,16 @@ export const talent3 = {
   tier: 5,
 }
 
+export const newTalentResponse = {
+  activation: 'Active (Incidental)',
+  description:
+    'Once per encounter, your character may use this talent to heal an amount of strain equal to their ranks in Second Wind.',
+  id: 'second_wind',
+  name: 'Second Wind',
+  ranked: true,
+  tier: 1,
+}
+
 export const playerCharacterTalent1 = {
   id: 1,
   notes: '',

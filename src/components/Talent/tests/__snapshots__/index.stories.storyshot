@@ -99,7 +99,7 @@ exports[`Storyshots Components/Talent default 1`] = `
   color: rgb(167,218,243);
 }
 
-.c0 p > span[type=advantage] {
+.c0 p > span[type=ability] {
   color: rgb(78,171,83);
 }
 
@@ -107,15 +107,11 @@ exports[`Storyshots Components/Talent default 1`] = `
   color: rgb(255,240,61);
 }
 
-.c0 p > span[type=setback] {
-  color: rgb(0,0,0);
-}
-
-.c0 p > span[type=threat] {
+.c0 p > span[type=difficulty] {
   color: rgb(81,42,124);
 }
 
-.c0 p > span[type=despair] {
+.c0 p > span[type=challenge] {
   color: rgb(116,24,26);
 }
 
@@ -279,7 +275,7 @@ exports[`Storyshots Components/Talent editing 1`] = `
   color: rgb(167,218,243);
 }
 
-.c0 p > span[type=advantage] {
+.c0 p > span[type=ability] {
   color: rgb(78,171,83);
 }
 
@@ -287,15 +283,11 @@ exports[`Storyshots Components/Talent editing 1`] = `
   color: rgb(255,240,61);
 }
 
-.c0 p > span[type=setback] {
-  color: rgb(0,0,0);
-}
-
-.c0 p > span[type=threat] {
+.c0 p > span[type=difficulty] {
   color: rgb(81,42,124);
 }
 
-.c0 p > span[type=despair] {
+.c0 p > span[type=challenge] {
   color: rgb(116,24,26);
 }
 
@@ -678,7 +670,7 @@ exports[`Storyshots Components/Talent new 1`] = `
   color: rgb(167,218,243);
 }
 
-.c0 p > span[type=advantage] {
+.c0 p > span[type=ability] {
   color: rgb(78,171,83);
 }
 
@@ -686,15 +678,11 @@ exports[`Storyshots Components/Talent new 1`] = `
   color: rgb(255,240,61);
 }
 
-.c0 p > span[type=setback] {
-  color: rgb(0,0,0);
-}
-
-.c0 p > span[type=threat] {
+.c0 p > span[type=difficulty] {
   color: rgb(81,42,124);
 }
 
-.c0 p > span[type=despair] {
+.c0 p > span[type=challenge] {
   color: rgb(116,24,26);
 }
 
@@ -1020,7 +1008,7 @@ exports[`Storyshots Components/Talent player 1`] = `
   color: rgb(167,218,243);
 }
 
-.c0 p > span[type=advantage] {
+.c0 p > span[type=ability] {
   color: rgb(78,171,83);
 }
 
@@ -1028,15 +1016,11 @@ exports[`Storyshots Components/Talent player 1`] = `
   color: rgb(255,240,61);
 }
 
-.c0 p > span[type=setback] {
-  color: rgb(0,0,0);
-}
-
-.c0 p > span[type=threat] {
+.c0 p > span[type=difficulty] {
   color: rgb(81,42,124);
 }
 
-.c0 p > span[type=despair] {
+.c0 p > span[type=challenge] {
   color: rgb(116,24,26);
 }
 
