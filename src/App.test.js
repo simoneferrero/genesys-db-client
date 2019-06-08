@@ -116,6 +116,12 @@ describe('<App />', () => {
       getByTestId('criticalInjuries'),
     )
     expect(criticalInjuriesRoute).toBeInTheDocument()
+
+    // Talents
+    const talentsMenuItem = getByTestId('menu-item-talents')
+    fireEvent.click(talentsMenuItem)
+    const talentsRoute = await waitForElement(() => getByTestId('talents'))
+    expect(talentsRoute).toBeInTheDocument()
   })
 
   it('should change routes correctly for gm', async () => {
@@ -144,7 +150,7 @@ describe('<App />', () => {
     )
     fireEvent.click(playerCharacterLink)
     const playerCharacterRoute = await waitForElement(() =>
-      getByTestId(/player-character/i),
+      getByTestId('player-character'),
     )
     expect(playerCharacterRoute).toBeInTheDocument()
 
@@ -161,5 +167,11 @@ describe('<App />', () => {
       getByTestId('criticalInjuries'),
     )
     expect(criticalInjuriesRoute).toBeInTheDocument()
+
+    // Talents
+    const talentsMenuItem = getByTestId('menu-item-talents')
+    fireEvent.click(talentsMenuItem)
+    const talentsRoute = await waitForElement(() => getByTestId('talents'))
+    expect(talentsRoute).toBeInTheDocument()
   })
 })

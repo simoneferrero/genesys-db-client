@@ -50,6 +50,7 @@ import {
   playerCharacter1Id,
   playerCharacter1Augmented,
   playerCharacter1Response,
+  playerCharacter1Talents,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
 import { weapon1, weapon2 } from 'mocks/weapons'
@@ -263,6 +264,7 @@ describe('playersCharacters sagas', () => {
         [weapon2.id]: false,
       },
       skills: keyBy(rawSkills, 'id'),
+      talents: playerCharacter1Augmented.toJS().talents,
     }
     const action = editPlayerCharacter(id, values, formikActions)
 
@@ -303,6 +305,9 @@ describe('playersCharacters sagas', () => {
             .filter(({ rank }) => rank)
             .map(({ id, rank }) => ({ id, rank })),
           strain_current,
+          talents: Object.values(playerCharacter1Talents).map(
+            ({ id, notes, rank = null }) => ({ id, notes, rank }),
+          ),
           weapons: playerCharacter1Augmented
             .toJS()
             .weapons.map(({ id, mods }) => ({ id, mods })),

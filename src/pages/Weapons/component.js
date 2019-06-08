@@ -81,7 +81,7 @@ Weapons.propTypes = {
   skillsUi: uiType.isRequired,
   /** Weapons data */
   weapons: PropTypes.objectOf(weaponType).isRequired,
-  /** Weapons' characters loader and error information */
+  /** Weapons loader and error information */
   weaponsUi: uiType.isRequired,
 }
 

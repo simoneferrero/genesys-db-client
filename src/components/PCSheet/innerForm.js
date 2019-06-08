@@ -5,9 +5,10 @@ import {
   criticalInjuryType,
 } from 'types/criticalInjuries'
 import { playerCharacterData } from 'types/playersCharacters'
-import { skillType } from 'types/skills'
 import { factionType } from 'types/factions'
 import { favorType } from 'types/favors'
+import { skillType } from 'types/skills'
+import { talentType } from 'types/talents'
 import { weaponType } from 'types/weapons'
 
 import * as yup from 'yup'
@@ -22,6 +23,7 @@ import Motivations from 'components/Motivations'
 import Notes from 'components/Notes'
 import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
+import Talents from 'components/TalentsSection'
 import Weapons from 'components/WeaponsSection'
 
 import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
@@ -29,6 +31,7 @@ import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 const InnerForm = ({
   addFavor,
   addPlayerCharacterCriticalInjury,
+  addPlayerCharacterTalent,
   addPlayerCharacterWeapon,
   criticalInjuries,
   editing,
@@ -40,6 +43,7 @@ const InnerForm = ({
   setEditing,
   setFieldValue,
   values,
+  talents,
   weapons,
 }) => (
   <StyledForm as={Form} data-testid="pc-sheet" onSubmit={handleSubmit}>
@@ -82,6 +86,18 @@ const InnerForm = ({
       showAdd
       skills={{}}
       weapons={weapons}
+    />
+    <StyledSectionWrapper
+      as={Talents}
+      characterTalents={values.talents}
+      editing={editing}
+      handleSubmit={addPlayerCharacterTalent}
+      isCharacter
+      isSubmitting={isSubmitting}
+      setFieldValue={setFieldValue}
+      sectionTitle="Talents"
+      showAdd
+      talents={talents}
     />
     <StyledSectionWrapper
       as={CriticalInjuries}
@@ -142,6 +158,8 @@ InnerForm.propTypes = {
   addFavor: PropTypes.func.isRequired,
   /** Invoked when adding a critical injury */
   addPlayerCharacterCriticalInjury: PropTypes.func.isRequired,
+  /** Invoked when adding a talent */
+  addPlayerCharacterTalent: PropTypes.func.isRequired,
   /** Invoked when adding a weapon */
   addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Critical injuries data */
@@ -164,6 +182,8 @@ InnerForm.propTypes = {
   setEditing: PropTypes.func.isRequired,
   /** Changes the specified field value */
   setFieldValue: PropTypes.func.isRequired,
+  /** Talents data */
+  talents: PropTypes.objectOf(talentType).isRequired,
   /** Touched fields */
   touched: PropTypes.object.isRequired,
   /** Form values */
@@ -173,6 +193,7 @@ InnerForm.propTypes = {
       .isRequired,
     favors: PropTypes.objectOf(favorType).isRequired,
     skills: PropTypes.objectOf(skillType).isRequired,
+    talents: PropTypes.objectOf(talentType).isRequired,
     weapons: PropTypes.objectOf(weaponType).isRequired,
   }).isRequired,
   /** Weapons' data */

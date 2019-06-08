@@ -9,6 +9,7 @@ import factionsRootSaga from './factions'
 import favorsRootSaga from './favors'
 import playersCharactersRootSaga from './playersCharacters'
 import skillsRootSaga from './skills'
+import talentsRootSaga from './talents'
 import weaponsRootSaga from './weapons'
 
 // This is the main entrypoint from which all sagas are started
@@ -22,6 +23,7 @@ export default function* rootSaga() {
     call(favorsRootSaga),
     call(playersCharactersRootSaga),
     call(skillsRootSaga),
+    call(talentsRootSaga),
     call(weaponsRootSaga),
   ])
 }

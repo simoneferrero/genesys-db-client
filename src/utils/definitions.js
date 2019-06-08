@@ -10,6 +10,8 @@ export const API_SEGMENTS = {
   LOGIN: 'login',
   PLAYERS_CHARACTERS: 'players-characters',
   SKILLS: 'skills',
+  TALENT: 'talent',
+  TALENTS: 'talents',
   WEAPON: 'weapon',
   WEAPONS: 'weapons',
 }
@@ -27,6 +29,7 @@ export const HEAD_INFO = {
   CONTENT: 'Web app to manage and display Genesys - SotB data',
   CRITICAL_INJURIES: 'Critical Injuries',
   PLAYERS_CHARACTERS_TITLE: 'PC Summary',
+  TALENTS: 'Talents',
   TITLE: 'Genesys DB',
   WEAPONS: 'Weapons',
 }

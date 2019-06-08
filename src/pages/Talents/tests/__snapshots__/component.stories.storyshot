@@ -1,0 +1,1756 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Pages/Talents default 1`] = `
+.c8 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c8 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c7 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c7 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c1 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.c6 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c6 > div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 h4,
+.c6 p {
+  margin: 0;
+  color: rgb(0,130,155);
+}
+
+.c6 p,
+.c6 textarea {
+  text-align: justify;
+}
+
+.c6 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c6 h4:nth-child(2) {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c6 h4:nth-child(3) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 p > span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(0,0,0);
+}
+
+.c6 p > span[type=boost] {
+  color: rgb(167,218,243);
+}
+
+.c6 p > span[type=ability] {
+  color: rgb(78,171,83);
+}
+
+.c6 p > span[type=proficiency] {
+  color: rgb(255,240,61);
+}
+
+.c6 p > span[type=difficulty] {
+  color: rgb(81,42,124);
+}
+
+.c6 p > span[type=challenge] {
+  color: rgb(116,24,26);
+}
+
+.c6 input,
+.c6 textarea {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c6 input::-webkit-input-placeholder,
+.c6 textarea::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input::-moz-placeholder,
+.c6 textarea::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input:-ms-input-placeholder,
+.c6 textarea:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input::placeholder,
+.c6 textarea::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input:disabled,
+.c6 textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c6 textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.c3 {
+  padding: 12px;
+  position: relative;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.c4 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c5 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c5 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c2 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c0 {
+  width: 100vw;
+  padding: 24px 48px;
+  padding-top: 64px;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 {
+    grid-template-columns: 4fr 3fr auto;
+  }
+
+  .c6 p,
+  .c6 label[for="notes"],
+  .c6 label[for="description"] {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c5 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="talents"
+>
+  <div
+    class="c1"
+    data-testid="header"
+  >
+    <h2>
+      Talents
+    </h2>
+  </div>
+  <div
+    class="c2"
+    data-testid="talents-section"
+  >
+    <div
+      class="c3"
+      data-testid="talents-tier-1"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          1
+        </h3>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="talent-custom_code"
+        >
+          <h4
+            data-testid="talent-custom_code-name"
+          >
+            Custom Code
+          </h4>
+          <h4
+            data-testid="talent-custom_code-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c7"
+            data-testid="talent-custom_code-ranked"
+            disabled=""
+            name="talents.custom_code.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.custom_code.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-custom_code-description"
+          >
+            When your character selects this talent they choose one icebreaker or piece of ice that they own. If they choose an icebreaker, whenever they use that icebreaker to override ice, they add 
+            <span
+              type="advantage"
+            >
+              a
+            </span>
+             to the results. If they choose a piece of ice, whenever someone else attempts to override it, they add 
+            <span
+              type="threat"
+            >
+              h
+            </span>
+             to the results.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-2"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          2
+        </h3>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="talent-combat_medicine"
+        >
+          <h4
+            data-testid="talent-combat_medicine-name"
+          >
+            Combat Medicine
+          </h4>
+          <h4
+            data-testid="talent-combat_medicine-activation"
+          >
+            Active (Incidental)
+          </h4>
+          <label
+            class="c8"
+            data-testid="talent-combat_medicine-ranked"
+            disabled=""
+            name="talents.combat_medicine.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.combat_medicine.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-combat_medicine-description"
+          >
+            Before making a Medicine check, your character may use this talent to add 
+            <span
+              type="success"
+            >
+              s
+            </span>
+             equal to their ranks in Combat Medicine to the results. After the check is resolved, the target suffers 2 strain for each rank your character has in Combat Medicine.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-3"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          3
+        </h3>
+      </div>
+      <div
+        class="c5"
+      />
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-4"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          4
+        </h3>
+      </div>
+      <div
+        class="c5"
+      />
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-5"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          5
+        </h3>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="talent-dedication"
+        >
+          <h4
+            data-testid="talent-dedication-name"
+          >
+            Dedication
+          </h4>
+          <h4
+            data-testid="talent-dedication-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c8"
+            data-testid="talent-dedication-ranked"
+            disabled=""
+            name="talents.dedication.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.dedication.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-dedication-description"
+          >
+            Each rank of Dedication increases one of your character's characteristics by one. This talent cannot increase a characteristic above 5. You cannot increase the same characteristic with Dedication twice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pages/Talents gm 1`] = `
+.c9 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c9 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c8 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c8 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c5 {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(0,130,155);
+  font-size: 30px;
+}
+
+.c5:disabled {
+  color: rgb(65,178,180);
+  cursor: not-allowed;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c1 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.c7 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c7 > div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c7 h4,
+.c7 p {
+  margin: 0;
+  color: rgb(0,130,155);
+}
+
+.c7 p,
+.c7 textarea {
+  text-align: justify;
+}
+
+.c7 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c7 h4:nth-child(2) {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c7 h4:nth-child(3) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c7 p > span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(0,0,0);
+}
+
+.c7 p > span[type=boost] {
+  color: rgb(167,218,243);
+}
+
+.c7 p > span[type=ability] {
+  color: rgb(78,171,83);
+}
+
+.c7 p > span[type=proficiency] {
+  color: rgb(255,240,61);
+}
+
+.c7 p > span[type=difficulty] {
+  color: rgb(81,42,124);
+}
+
+.c7 p > span[type=challenge] {
+  color: rgb(116,24,26);
+}
+
+.c7 input,
+.c7 textarea {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c7 input::-webkit-input-placeholder,
+.c7 textarea::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c7 input::-moz-placeholder,
+.c7 textarea::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c7 input:-ms-input-placeholder,
+.c7 textarea:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c7 input::placeholder,
+.c7 textarea::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c7 input:disabled,
+.c7 textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c7 textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.c3 {
+  padding: 12px;
+  position: relative;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.c4 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c6 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c6 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c2 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c0 {
+  width: 100vw;
+  padding: 24px 48px;
+  padding-top: 64px;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c7 {
+    grid-template-columns: 4fr 3fr auto;
+  }
+
+  .c7 p,
+  .c7 label[for="notes"],
+  .c7 label[for="description"] {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="talents"
+>
+  <div
+    class="c1"
+    data-testid="header"
+  >
+    <h2>
+      Talents
+    </h2>
+  </div>
+  <div
+    class="c2"
+    data-testid="talents-section"
+  >
+    <div
+      class="c3"
+      data-testid="talents-tier-1"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          1
+        </h3>
+        <div
+          data-testid="form-buttons-tier-1-talents"
+        >
+          <button
+            class="c5"
+            data-testid="edit-tier-1-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        <div
+          class="c7"
+          data-testid="talent-custom_code"
+        >
+          <h4
+            data-testid="talent-custom_code-name"
+          >
+            Custom Code
+          </h4>
+          <h4
+            data-testid="talent-custom_code-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c8"
+            data-testid="talent-custom_code-ranked"
+            disabled=""
+            name="talents.custom_code.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.custom_code.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-custom_code-description"
+          >
+            When your character selects this talent they choose one icebreaker or piece of ice that they own. If they choose an icebreaker, whenever they use that icebreaker to override ice, they add 
+            <span
+              type="advantage"
+            >
+              a
+            </span>
+             to the results. If they choose a piece of ice, whenever someone else attempts to override it, they add 
+            <span
+              type="threat"
+            >
+              h
+            </span>
+             to the results.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-2"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          2
+        </h3>
+        <div
+          data-testid="form-buttons-tier-2-talents"
+        >
+          <button
+            class="c5"
+            data-testid="edit-tier-2-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        <div
+          class="c7"
+          data-testid="talent-combat_medicine"
+        >
+          <h4
+            data-testid="talent-combat_medicine-name"
+          >
+            Combat Medicine
+          </h4>
+          <h4
+            data-testid="talent-combat_medicine-activation"
+          >
+            Active (Incidental)
+          </h4>
+          <label
+            class="c9"
+            data-testid="talent-combat_medicine-ranked"
+            disabled=""
+            name="talents.combat_medicine.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.combat_medicine.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-combat_medicine-description"
+          >
+            Before making a Medicine check, your character may use this talent to add 
+            <span
+              type="success"
+            >
+              s
+            </span>
+             equal to their ranks in Combat Medicine to the results. After the check is resolved, the target suffers 2 strain for each rank your character has in Combat Medicine.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-3"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          3
+        </h3>
+        <div
+          data-testid="form-buttons-tier-3-talents"
+        >
+          <button
+            class="c5"
+            data-testid="edit-tier-3-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c6"
+      />
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-4"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          4
+        </h3>
+        <div
+          data-testid="form-buttons-tier-4-talents"
+        >
+          <button
+            class="c5"
+            data-testid="edit-tier-4-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c6"
+      />
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-5"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          5
+        </h3>
+        <div
+          data-testid="form-buttons-tier-5-talents"
+        >
+          <button
+            class="c5"
+            data-testid="edit-tier-5-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        <div
+          class="c7"
+          data-testid="talent-dedication"
+        >
+          <h4
+            data-testid="talent-dedication-name"
+          >
+            Dedication
+          </h4>
+          <h4
+            data-testid="talent-dedication-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c9"
+            data-testid="talent-dedication-ranked"
+            disabled=""
+            name="talents.dedication.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.dedication.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-dedication-description"
+          >
+            Each rank of Dedication increases one of your character's characteristics by one. This talent cannot increase a characteristic above 5. You cannot increase the same characteristic with Dedication twice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pages/Talents loading 1`] = `
+.c8 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c8 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c7 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c7 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top: 40px solid rgb(0,130,155);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.c1 h2 {
+  position: relative;
+  top: -40px;
+  padding: 6px 6px;
+  margin: 0 auto;
+  color: rgb(234,242,246);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.c6 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c6 > div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 h4,
+.c6 p {
+  margin: 0;
+  color: rgb(0,130,155);
+}
+
+.c6 p,
+.c6 textarea {
+  text-align: justify;
+}
+
+.c6 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c6 h4:nth-child(2) {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c6 h4:nth-child(3) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 p > span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(0,0,0);
+}
+
+.c6 p > span[type=boost] {
+  color: rgb(167,218,243);
+}
+
+.c6 p > span[type=ability] {
+  color: rgb(78,171,83);
+}
+
+.c6 p > span[type=proficiency] {
+  color: rgb(255,240,61);
+}
+
+.c6 p > span[type=difficulty] {
+  color: rgb(81,42,124);
+}
+
+.c6 p > span[type=challenge] {
+  color: rgb(116,24,26);
+}
+
+.c6 input,
+.c6 textarea {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c6 input::-webkit-input-placeholder,
+.c6 textarea::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input::-moz-placeholder,
+.c6 textarea::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input:-ms-input-placeholder,
+.c6 textarea:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input::placeholder,
+.c6 textarea::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c6 input:disabled,
+.c6 textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c6 textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.c3 {
+  padding: 12px;
+  position: relative;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.c4 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c5 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c5 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c2 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.c0 {
+  width: 100vw;
+  padding: 24px 48px;
+  padding-top: 64px;
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c6 {
+    grid-template-columns: 4fr 3fr auto;
+  }
+
+  .c6 p,
+  .c6 label[for="notes"],
+  .c6 label[for="description"] {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c5 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+<div
+  class="c0"
+  data-testid="talents"
+>
+  <div
+    class="c1"
+    data-testid="header"
+  >
+    <h2>
+      Talents
+    </h2>
+  </div>
+  <div
+    class="c2"
+    data-testid="talents-section"
+  >
+    <div
+      class="c3"
+      data-testid="talents-tier-1"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          1
+        </h3>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="talent-custom_code"
+        >
+          <h4
+            data-testid="talent-custom_code-name"
+          >
+            Custom Code
+          </h4>
+          <h4
+            data-testid="talent-custom_code-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c7"
+            data-testid="talent-custom_code-ranked"
+            disabled=""
+            name="talents.custom_code.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.custom_code.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-custom_code-description"
+          >
+            When your character selects this talent they choose one icebreaker or piece of ice that they own. If they choose an icebreaker, whenever they use that icebreaker to override ice, they add 
+            <span
+              type="advantage"
+            >
+              a
+            </span>
+             to the results. If they choose a piece of ice, whenever someone else attempts to override it, they add 
+            <span
+              type="threat"
+            >
+              h
+            </span>
+             to the results.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-2"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          2
+        </h3>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="talent-combat_medicine"
+        >
+          <h4
+            data-testid="talent-combat_medicine-name"
+          >
+            Combat Medicine
+          </h4>
+          <h4
+            data-testid="talent-combat_medicine-activation"
+          >
+            Active (Incidental)
+          </h4>
+          <label
+            class="c8"
+            data-testid="talent-combat_medicine-ranked"
+            disabled=""
+            name="talents.combat_medicine.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.combat_medicine.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-combat_medicine-description"
+          >
+            Before making a Medicine check, your character may use this talent to add 
+            <span
+              type="success"
+            >
+              s
+            </span>
+             equal to their ranks in Combat Medicine to the results. After the check is resolved, the target suffers 2 strain for each rank your character has in Combat Medicine.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-3"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          3
+        </h3>
+      </div>
+      <div
+        class="c5"
+      />
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-4"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          4
+        </h3>
+      </div>
+      <div
+        class="c5"
+      />
+    </div>
+    <div
+      class="c3"
+      data-testid="talents-tier-5"
+    >
+      <div
+        class="c4"
+      >
+        <h3>
+          Tier 
+          5
+        </h3>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+          data-testid="talent-dedication"
+        >
+          <h4
+            data-testid="talent-dedication-name"
+          >
+            Dedication
+          </h4>
+          <h4
+            data-testid="talent-dedication-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c8"
+            data-testid="talent-dedication-ranked"
+            disabled=""
+            name="talents.dedication.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.dedication.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-dedication-description"
+          >
+            Each rank of Dedication increases one of your character's characteristics by one. This talent cannot increase a characteristic above 5. You cannot increase the same characteristic with Dedication twice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

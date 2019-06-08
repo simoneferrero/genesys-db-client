@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Checkbox checked 1`] = `
+.c0 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c0 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+<label
+  class="c0"
+  data-testid="test"
+  name="test.test"
+>
+  <input
+    name="test.test"
+    type="checkbox"
+  />
+  <span>
+    Test
+  </span>
+</label>
+`;
+
+exports[`Storyshots Components/Checkbox disabled 1`] = `
+.c0 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c0 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+<label
+  class="c0"
+  data-testid="test"
+  disabled=""
+  name="test.test"
+>
+  <input
+    disabled=""
+    name="test.test"
+    type="checkbox"
+  />
+  <span>
+    Test
+  </span>
+</label>
+`;
+
+exports[`Storyshots Components/Checkbox unchecked 1`] = `
+.c0 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c0 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+<label
+  class="c0"
+  data-testid="test"
+  name="test.test"
+>
+  <input
+    name="test.test"
+    type="checkbox"
+  />
+  <span>
+    Test
+  </span>
+</label>
+`;

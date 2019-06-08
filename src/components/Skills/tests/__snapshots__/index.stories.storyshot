@@ -1,6 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Components/Skills default 1`] = `
+.c2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c2 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c6 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c6 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -119,63 +190,6 @@ exports[`Storyshots Components/Skills default 1`] = `
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c2 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgb(234,242,246);
-  background-color: rgb(0,130,155);
-  border-color: rgb(0,130,155);
-}
-
-.c2 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.c6 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgba(30,30,28,0.4);
-  border-color: rgba(30,30,28,0.4);
-}
-
-.c6 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
 .c0 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
@@ -246,7 +260,8 @@ exports[`Storyshots Components/Skills default 1`] = `
       <label
         class="c2"
         data-testid="skill-career-athletics"
-        name="skill.athletics.career"
+        disabled=""
+        name="skills.athletics.career"
       >
         <input
           disabled=""
@@ -254,7 +269,7 @@ exports[`Storyshots Components/Skills default 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -295,7 +310,8 @@ exports[`Storyshots Components/Skills default 1`] = `
       <label
         class="c2"
         data-testid="skill-career-computers_hacking"
-        name="skill.computers_hacking.career"
+        disabled=""
+        name="skills.computers_hacking.career"
       >
         <input
           disabled=""
@@ -303,7 +319,7 @@ exports[`Storyshots Components/Skills default 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -344,7 +360,8 @@ exports[`Storyshots Components/Skills default 1`] = `
       <label
         class="c6"
         data-testid="skill-career-medicine"
-        name="skill.medicine.career"
+        disabled=""
+        name="skills.medicine.career"
       >
         <input
           disabled=""
@@ -352,7 +369,7 @@ exports[`Storyshots Components/Skills default 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -393,7 +410,8 @@ exports[`Storyshots Components/Skills default 1`] = `
       <label
         class="c2"
         data-testid="skill-career-perception"
-        name="skill.perception.career"
+        disabled=""
+        name="skills.perception.career"
       >
         <input
           disabled=""
@@ -401,7 +419,7 @@ exports[`Storyshots Components/Skills default 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -442,7 +460,8 @@ exports[`Storyshots Components/Skills default 1`] = `
       <label
         class="c6"
         data-testid="skill-career-stealth"
-        name="skill.stealth.career"
+        disabled=""
+        name="skills.stealth.career"
       >
         <input
           disabled=""
@@ -450,7 +469,7 @@ exports[`Storyshots Components/Skills default 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -496,7 +515,8 @@ exports[`Storyshots Components/Skills default 1`] = `
       <label
         class="c6"
         data-testid="skill-career-brawl"
-        name="skill.brawl.career"
+        disabled=""
+        name="skills.brawl.career"
       >
         <input
           disabled=""
@@ -504,7 +524,7 @@ exports[`Storyshots Components/Skills default 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -540,6 +560,77 @@ exports[`Storyshots Components/Skills default 1`] = `
 `;
 
 exports[`Storyshots Components/Skills editing 1`] = `
+.c2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c2 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c7 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c7 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -680,63 +771,6 @@ exports[`Storyshots Components/Skills editing 1`] = `
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c2 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgb(234,242,246);
-  background-color: rgb(0,130,155);
-  border-color: rgb(0,130,155);
-}
-
-.c2 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.c7 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgba(30,30,28,0.4);
-  border-color: rgba(30,30,28,0.4);
-}
-
-.c7 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
 .c0 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
@@ -807,7 +841,8 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c2"
         data-testid="skill-career-athletics"
-        name="skill.athletics.career"
+        disabled=""
+        name="skills.athletics.career"
       >
         <input
           disabled=""
@@ -815,7 +850,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -895,7 +930,8 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c2"
         data-testid="skill-career-computers_hacking"
-        name="skill.computers_hacking.career"
+        disabled=""
+        name="skills.computers_hacking.career"
       >
         <input
           disabled=""
@@ -903,7 +939,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -983,7 +1019,8 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c7"
         data-testid="skill-career-medicine"
-        name="skill.medicine.career"
+        disabled=""
+        name="skills.medicine.career"
       >
         <input
           disabled=""
@@ -991,7 +1028,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -1071,7 +1108,8 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c2"
         data-testid="skill-career-perception"
-        name="skill.perception.career"
+        disabled=""
+        name="skills.perception.career"
       >
         <input
           disabled=""
@@ -1079,7 +1117,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -1159,7 +1197,8 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c7"
         data-testid="skill-career-stealth"
-        name="skill.stealth.career"
+        disabled=""
+        name="skills.stealth.career"
       >
         <input
           disabled=""
@@ -1167,7 +1206,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div
@@ -1252,7 +1291,8 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c7"
         data-testid="skill-career-brawl"
-        name="skill.brawl.career"
+        disabled=""
+        name="skills.brawl.career"
       >
         <input
           disabled=""
@@ -1260,7 +1300,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
           type="checkbox"
         />
         <span>
-          CAREER
+          career
         </span>
       </label>
       <div

@@ -18,12 +18,12 @@ const mapStateToProps = (state) => ({
   playersCharacters: allPlayersCharactersSelector(state),
   playersCharactersUi: playersCharactersUiSelector(state),
 })
-const mapDispatchToProps = (dispatch) => ({
-  getArchetypes: () => dispatch(getArchetypes()),
-  getAuthInfo: () => dispatch(getAuthInfo()),
-  getCareers: () => dispatch(getCareers()),
-  getPlayersCharacters: () => dispatch(getPlayersCharacters()),
-})
+const mapDispatchToProps = {
+  getArchetypes,
+  getAuthInfo,
+  getCareers,
+  getPlayersCharacters,
+}
 
 export default connect(
   mapStateToProps,

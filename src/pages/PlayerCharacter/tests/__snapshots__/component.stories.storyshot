@@ -1,7 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/PlayerCharacter default 1`] = `
-.c29 {
+.c12 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c12 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c16 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c16 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c35 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -12,7 +83,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c29 > h4 {
+.c35 > h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -20,11 +91,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: left;
 }
 
-.c29 > h4:first-child {
+.c35 > h4:first-child {
   color: rgb(242,143,34);
 }
 
-.c29 > h4 span {
+.c35 > h4 span {
   font-family: "GenesysSymbols",Times New Roman,serif;
   color: rgb(81,42,124);
   height: 100%;
@@ -38,17 +109,17 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c29 p {
+.c35 p {
   margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
 }
 
-.c29 button {
+.c35 button {
   grid-column: 1/4;
 }
 
-.c28 {
+.c34 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -59,7 +130,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c28 > h4 {
+.c34 > h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,11 +138,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: left;
 }
 
-.c28 > h4:first-child {
+.c34 > h4:first-child {
   color: rgb(242,143,34);
 }
 
-.c28 > h4 span {
+.c34 > h4 span {
   font-family: "GenesysSymbols",Times New Roman,serif;
   color: rgb(81,42,124);
   height: 100%;
@@ -85,14 +156,14 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c28 p {
+.c34 p {
   margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
   opacity: 0.5;
 }
 
-.c28 button {
+.c34 button {
   grid-column: 1/4;
 }
 
@@ -110,7 +181,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   cursor: not-allowed;
 }
 
-.c25 {
+.c31 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -118,7 +189,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   position: relative;
 }
 
-.c26 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,7 +201,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   margin-bottom: 12px;
 }
 
-.c26 h3 {
+.c32 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -150,30 +221,30 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c26 div {
+.c32 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c26 div > button {
+.c32 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c27 {
+.c33 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 12px;
   grid-template-columns: 1fr;
 }
 
-.c27 > form:not(:last-child) {
+.c33 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c41 {
+.c47 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -185,14 +256,14 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   grid-template-areas: "money" "armor" "gear";
 }
 
-.c41 h3 {
+.c47 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c41 div,
-.c41 label {
+.c47 div,
+.c47 label {
   width: 100%;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
@@ -200,31 +271,31 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: baseline;
 }
 
-.c41 div:nth-child(1),
-.c41 label:nth-child(1) {
+.c47 div:nth-child(1),
+.c47 label:nth-child(1) {
   grid-area: money;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
 }
 
-.c41 div:nth-child(2),
-.c41 label:nth-child(2) {
+.c47 div:nth-child(2),
+.c47 label:nth-child(2) {
   grid-area: armor;
 }
 
-.c41 div:nth-child(3),
-.c41 label:nth-child(3) {
+.c47 div:nth-child(3),
+.c47 label:nth-child(3) {
   grid-area: gear;
 }
 
-.c41 div:nth-child(1) {
+.c47 div:nth-child(1) {
   grid-template-columns: repeat(2,1fr);
 }
 
-.c41 p,
-.c41 input,
-.c41 textarea {
+.c47 p,
+.c47 input,
+.c47 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -235,18 +306,18 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   font-size: 16px;
 }
 
-.c41 input,
-.c41 textarea {
+.c47 input,
+.c47 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c41 textarea {
+.c47 textarea {
   height: 6em;
 }
 
-.c38 {
+.c44 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -257,7 +328,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c38 h4 {
+.c44 h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -265,11 +336,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: center;
 }
 
-.c38 h4:first-child {
+.c44 h4:first-child {
   text-align: left;
 }
 
-.c38 > div:not(:last-child) {
+.c44 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -284,13 +355,13 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   justify-content: flex-end;
 }
 
-.c38 > div:last-child {
+.c44 > div:last-child {
   color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
 
-.c38 > label {
+.c44 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -311,18 +382,18 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: flex-end;
 }
 
-.c38 > label:first-child {
+.c44 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c38 > label > input {
+.c44 > label > input {
   width: 100%;
 }
 
-.c38 textarea {
+.c44 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -336,11 +407,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: justify;
 }
 
-.c38 label[for='description'] {
+.c44 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c39 {
+.c45 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -351,7 +422,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c39 h4 {
+.c45 h4 {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -362,11 +433,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: center;
 }
 
-.c39 h4:first-child {
+.c45 h4:first-child {
   text-align: left;
 }
 
-.c39 > div:not(:last-child) {
+.c45 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,7 +452,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   justify-content: flex-end;
 }
 
-.c39 > div:last-child {
+.c45 > div:last-child {
   color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
@@ -390,7 +461,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: justify;
 }
 
-.c39 > label {
+.c45 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -411,18 +482,18 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: flex-end;
 }
 
-.c39 > label:first-child {
+.c45 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c39 > label > input {
+.c45 > label > input {
   width: 100%;
 }
 
-.c39 textarea {
+.c45 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -436,16 +507,16 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: justify;
 }
 
-.c39 label[for='description'] {
+.c45 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c35 {
+.c41 {
   padding: 12px;
   position: relative;
 }
 
-.c36 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -456,7 +527,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   justify-content: space-between;
 }
 
-.c36 h3 {
+.c42 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -476,30 +547,30 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c36 div {
+.c42 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c36 div > button {
+.c42 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c37 {
+.c43 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr;
 }
 
-.c37 > form:not(:last-child) {
+.c43 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c34 {
+.c40 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -535,7 +606,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c32 {
+.c38 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -544,7 +615,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c32 div {
+.c38 div {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-bottom: 6px;
@@ -554,21 +625,21 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   align-items: center;
 }
 
-.c32 h3 {
+.c38 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
   text-transform: uppercase;
 }
 
-.c32 h4 {
+.c38 h4 {
   margin: 0;
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c32 p,
-.c32 input,
-.c32 textarea {
+.c38 p,
+.c38 input,
+.c38 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -579,18 +650,18 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   font-size: 16px;
 }
 
-.c32 input,
-.c32 textarea {
+.c38 input,
+.c38 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c32 textarea {
+.c38 textarea {
   height: 5em;
 }
 
-.c31 {
+.c37 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -599,7 +670,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c43 {
+.c49 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -607,8 +678,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   padding: 12px;
 }
 
-.c43 p,
-.c43 textarea {
+.c49 p,
+.c49 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -619,7 +690,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   font-size: 16px;
 }
 
-.c43 textarea {
+.c49 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -880,63 +951,6 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c12 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgb(234,242,246);
-  background-color: rgb(0,130,155);
-  border-color: rgb(0,130,155);
-}
-
-.c12 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.c16 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgba(30,30,28,0.4);
-  border-color: rgba(30,30,28,0.4);
-}
-
-.c16 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
 .c10 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
@@ -954,6 +968,199 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 
 .c10 > div:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.c29 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c29 > div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c29 h4,
+.c29 p {
+  margin: 0;
+  color: rgb(0,130,155);
+}
+
+.c29 p,
+.c29 textarea {
+  text-align: justify;
+}
+
+.c29 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c29 h4:nth-child(2) {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c29 h4:nth-child(3) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c29 p > span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(0,0,0);
+}
+
+.c29 p > span[type=boost] {
+  color: rgb(167,218,243);
+}
+
+.c29 p > span[type=ability] {
+  color: rgb(78,171,83);
+}
+
+.c29 p > span[type=proficiency] {
+  color: rgb(255,240,61);
+}
+
+.c29 p > span[type=difficulty] {
+  color: rgb(81,42,124);
+}
+
+.c29 p > span[type=challenge] {
+  color: rgb(116,24,26);
+}
+
+.c29 input,
+.c29 textarea {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c29 input::-webkit-input-placeholder,
+.c29 textarea::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input::-moz-placeholder,
+.c29 textarea::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input:-ms-input-placeholder,
+.c29 textarea:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input::placeholder,
+.c29 textarea::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input:disabled,
+.c29 textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c29 textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.c26 {
+  padding: 12px;
+  position: relative;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.c27 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c27 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c28 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c28 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c25 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
 
 .c21 {
@@ -1237,7 +1444,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 .c24::before {
-  content: 'Critical Injuries';
+  content: 'Talents';
   position: absolute;
   top: -20px;
   left: 20px;
@@ -1262,6 +1469,31 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 .c30::before {
+  content: 'Critical Injuries';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c36 {
+  position: relative;
+  overflow: visible;
+}
+
+.c36::before {
   content: 'Motivations';
   position: absolute;
   top: -20px;
@@ -1281,12 +1513,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c33 {
+.c39 {
   position: relative;
   overflow: visible;
 }
 
-.c33::before {
+.c39::before {
   content: 'Favors';
   position: absolute;
   top: -20px;
@@ -1306,12 +1538,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c40 {
+.c46 {
   position: relative;
   overflow: visible;
 }
 
-.c40::before {
+.c46::before {
   content: 'Equipment';
   position: absolute;
   top: -20px;
@@ -1331,12 +1563,12 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-transform: uppercase;
 }
 
-.c42 {
+.c48 {
   position: relative;
   overflow: visible;
 }
 
-.c42::before {
+.c48::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -1357,106 +1589,106 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c29 {
+  .c35 {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c29 p {
+  .c35 p {
     grid-column: 1/4;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 {
+  .c34 {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 p {
+  .c34 p {
     grid-column: 1/4;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c27 {
+  .c33 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px) {
-  .c27 {
+  .c33 {
     grid-template-columns: repeat(3,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c27 {
+  .c33 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c41 {
+  .c47 {
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: "money ." "armor armor" "gear gear";
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c41 {
+  .c47 {
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: "money . . ." "armor armor gear gear";
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c41 {
+  .c47 {
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c37 {
+  .c43 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c34 {
+  .c40 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c32 textarea {
+  .c38 textarea {
     height: 4em;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c31 {
+  .c37 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c31 {
+  .c37 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c43 textarea {
+  .c49 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c43 textarea {
+  .c49 textarea {
     height: 10em;
   }
 }
@@ -1529,6 +1761,24 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   .c10 > div {
     -webkit-column-count: 4;
     column-count: 4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c29 {
+    grid-template-columns: 4fr 3fr auto;
+  }
+
+  .c29 p,
+  .c29 label[for="notes"],
+  .c29 label[for="description"] {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -1770,7 +2020,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           <label
             class="c12"
             data-testid="skill-career-athletics"
-            name="skill.athletics.career"
+            disabled=""
+            name="skills.athletics.career"
           >
             <input
               disabled=""
@@ -1778,7 +2029,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -1819,7 +2070,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           <label
             class="c12"
             data-testid="skill-career-computers_hacking"
-            name="skill.computers_hacking.career"
+            disabled=""
+            name="skills.computers_hacking.career"
           >
             <input
               disabled=""
@@ -1827,7 +2079,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -1868,7 +2120,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           <label
             class="c16"
             data-testid="skill-career-medicine"
-            name="skill.medicine.career"
+            disabled=""
+            name="skills.medicine.career"
           >
             <input
               disabled=""
@@ -1876,7 +2129,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -1917,7 +2170,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           <label
             class="c12"
             data-testid="skill-career-perception"
-            name="skill.perception.career"
+            disabled=""
+            name="skills.perception.career"
           >
             <input
               disabled=""
@@ -1925,7 +2179,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -1966,7 +2220,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           <label
             class="c16"
             data-testid="skill-career-stealth"
-            name="skill.stealth.career"
+            disabled=""
+            name="skills.stealth.career"
           >
             <input
               disabled=""
@@ -1974,7 +2229,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -2020,7 +2275,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           <label
             class="c16"
             data-testid="skill-career-brawl"
-            name="skill.brawl.career"
+            disabled=""
+            name="skills.brawl.career"
           >
             <input
               disabled=""
@@ -2028,7 +2284,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -2363,10 +2619,298 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
     </div>
     <div
       class="c24 c25"
-      data-testid="criticalInjuries-section"
+      data-testid="talents-section"
     >
       <div
         class="c26"
+        data-testid="talents-tier-1"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            1
+          </h3>
+          <div
+            data-testid="form-buttons-tier-1-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-1-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        >
+          <div
+            class="c29"
+            data-testid="talent-2"
+          >
+            <h4
+              data-testid="talent-2-name"
+            >
+              Custom Code
+            </h4>
+            <h4
+              data-testid="talent-2-activation"
+            >
+              Passive
+            </h4>
+            <label
+              class="c16"
+              data-testid="talent-2-ranked"
+              disabled=""
+              name="talents.2.ranked"
+            >
+              <input
+                disabled=""
+                name="talents.2.ranked"
+                type="checkbox"
+              />
+              <span>
+                ranked
+              </span>
+            </label>
+            <p
+              data-testid="talent-2-description"
+            >
+              When your character selects this talent they choose one icebreaker or piece of ice that they own. If they choose an icebreaker, whenever they use that icebreaker to override ice, they add 
+              <span
+                type="advantage"
+              >
+                a
+              </span>
+               to the results. If they choose a piece of ice, whenever someone else attempts to override it, they add 
+              <span
+                type="threat"
+              >
+                h
+              </span>
+               to the results.
+            </p>
+            <p
+              data-testid="talent-2-notes"
+            >
+              Ice wall (ice)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-2"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            2
+          </h3>
+          <div
+            data-testid="form-buttons-tier-2-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-2-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        >
+          <div
+            class="c29"
+            data-testid="talent-1"
+          >
+            <h4
+              data-testid="talent-1-name"
+            >
+              Combat Medicine
+            </h4>
+            <h4
+              data-testid="talent-1-activation"
+            >
+              Active (Incidental)
+            </h4>
+            <h4
+              data-testid="talent-1-rank"
+            >
+              Rank:
+               
+              2
+            </h4>
+            <p
+              data-testid="talent-1-description"
+            >
+              Before making a Medicine check, your character may use this talent to add 
+              <span
+                type="success"
+              >
+                s
+              </span>
+               equal to their ranks in Combat Medicine to the results. After the check is resolved, the target suffers 2 strain for each rank your character has in Combat Medicine.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-3"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            3
+          </h3>
+          <div
+            data-testid="form-buttons-tier-3-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-3-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        />
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-4"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            4
+          </h3>
+          <div
+            data-testid="form-buttons-tier-4-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-4-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        />
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-5"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            5
+          </h3>
+          <div
+            data-testid="form-buttons-tier-5-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-5-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        />
+      </div>
+    </div>
+    <div
+      class="c30 c31"
+      data-testid="criticalInjuries-section"
+    >
+      <div
+        class="c32"
       >
         <div
           data-testid="form-buttons-criticalInjury"
@@ -2393,10 +2937,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </div>
       </div>
       <div
-        class="c27"
+        class="c33"
       >
         <div
-          class="c28"
+          class="c34"
           data-testid="criticalInjury-1"
         >
           <h4
@@ -2423,7 +2967,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           </p>
         </div>
         <div
-          class="c29"
+          class="c35"
           data-testid="criticalInjury-2"
         >
           <h4
@@ -2452,11 +2996,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c30 c31"
+      class="c36 c37"
       data-testid="motivations"
     >
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-strength"
       >
         <div>
@@ -2474,7 +3018,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </p>
       </div>
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-flaw"
       >
         <div>
@@ -2492,7 +3036,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </p>
       </div>
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-desire"
       >
         <div>
@@ -2510,7 +3054,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </p>
       </div>
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-fear"
       >
         <div>
@@ -2529,15 +3073,15 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c33 c34"
+      class="c39 c40"
       data-testid="favors"
     >
       <div
-        class="c35"
+        class="c41"
         data-testid="favors-owed"
       >
         <div
-          class="c36"
+          class="c42"
         >
           <h3>
             owed
@@ -2567,10 +3111,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           </div>
         </div>
         <div
-          class="c37"
+          class="c43"
         >
           <div
-            class="c38"
+            class="c44"
             data-testid="favor-1"
           >
             <h4
@@ -2592,11 +3136,11 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
         </div>
       </div>
       <div
-        class="c35"
+        class="c41"
         data-testid="favors-given"
       >
         <div
-          class="c36"
+          class="c42"
         >
           <h3>
             given
@@ -2626,10 +3170,10 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
           </div>
         </div>
         <div
-          class="c37"
+          class="c43"
         >
           <div
-            class="c39"
+            class="c45"
             data-testid="favor-2"
           >
             <h4
@@ -2652,7 +3196,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c40 c41"
+      class="c46 c47"
       data-testid="equipment"
     >
       <div
@@ -2688,7 +3232,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       </div>
     </div>
     <div
-      class="c42 c43"
+      class="c48 c49"
       data-testid="notes"
     >
       <p
@@ -2702,7 +3246,78 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 `;
 
 exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
-.c29 {
+.c12 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(234,242,246);
+  background-color: rgb(0,130,155);
+  border-color: rgb(0,130,155);
+}
+
+.c12 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c16 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: default;
+  font-size: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid;
+  padding: 4px;
+  padding-top: 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(30,30,28,0.4);
+  border-color: rgba(30,30,28,0.4);
+}
+
+.c16 > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.c35 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -2713,7 +3328,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c29 > h4 {
+.c35 > h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2721,11 +3336,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: left;
 }
 
-.c29 > h4:first-child {
+.c35 > h4:first-child {
   color: rgb(242,143,34);
 }
 
-.c29 > h4 span {
+.c35 > h4 span {
   font-family: "GenesysSymbols",Times New Roman,serif;
   color: rgb(81,42,124);
   height: 100%;
@@ -2739,17 +3354,17 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c29 p {
+.c35 p {
   margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
 }
 
-.c29 button {
+.c35 button {
   grid-column: 1/4;
 }
 
-.c28 {
+.c34 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -2760,7 +3375,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c28 > h4 {
+.c34 > h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2768,11 +3383,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: left;
 }
 
-.c28 > h4:first-child {
+.c34 > h4:first-child {
   color: rgb(242,143,34);
 }
 
-.c28 > h4 span {
+.c34 > h4 span {
   font-family: "GenesysSymbols",Times New Roman,serif;
   color: rgb(81,42,124);
   height: 100%;
@@ -2786,14 +3401,14 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c28 p {
+.c34 p {
   margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
   opacity: 0.5;
 }
 
-.c28 button {
+.c34 button {
   grid-column: 1/4;
 }
 
@@ -2811,7 +3426,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   cursor: not-allowed;
 }
 
-.c25 {
+.c31 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -2819,7 +3434,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   position: relative;
 }
 
-.c26 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2831,7 +3446,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   margin-bottom: 12px;
 }
 
-.c26 h3 {
+.c32 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -2851,30 +3466,30 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c26 div {
+.c32 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c26 div > button {
+.c32 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c27 {
+.c33 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 12px;
   grid-template-columns: 1fr;
 }
 
-.c27 > form:not(:last-child) {
+.c33 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c41 {
+.c47 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -2886,14 +3501,14 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   grid-template-areas: "money" "armor" "gear";
 }
 
-.c41 h3 {
+.c47 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c41 div,
-.c41 label {
+.c47 div,
+.c47 label {
   width: 100%;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
@@ -2901,31 +3516,31 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: baseline;
 }
 
-.c41 div:nth-child(1),
-.c41 label:nth-child(1) {
+.c47 div:nth-child(1),
+.c47 label:nth-child(1) {
   grid-area: money;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
 }
 
-.c41 div:nth-child(2),
-.c41 label:nth-child(2) {
+.c47 div:nth-child(2),
+.c47 label:nth-child(2) {
   grid-area: armor;
 }
 
-.c41 div:nth-child(3),
-.c41 label:nth-child(3) {
+.c47 div:nth-child(3),
+.c47 label:nth-child(3) {
   grid-area: gear;
 }
 
-.c41 div:nth-child(1) {
+.c47 div:nth-child(1) {
   grid-template-columns: repeat(2,1fr);
 }
 
-.c41 p,
-.c41 input,
-.c41 textarea {
+.c47 p,
+.c47 input,
+.c47 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -2936,18 +3551,18 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   font-size: 16px;
 }
 
-.c41 input,
-.c41 textarea {
+.c47 input,
+.c47 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c41 textarea {
+.c47 textarea {
   height: 6em;
 }
 
-.c38 {
+.c44 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -2958,7 +3573,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c38 h4 {
+.c44 h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2966,11 +3581,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: center;
 }
 
-.c38 h4:first-child {
+.c44 h4:first-child {
   text-align: left;
 }
 
-.c38 > div:not(:last-child) {
+.c44 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2985,13 +3600,13 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   justify-content: flex-end;
 }
 
-.c38 > div:last-child {
+.c44 > div:last-child {
   color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
 
-.c38 > label {
+.c44 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -3012,18 +3627,18 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: flex-end;
 }
 
-.c38 > label:first-child {
+.c44 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c38 > label > input {
+.c44 > label > input {
   width: 100%;
 }
 
-.c38 textarea {
+.c44 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -3037,11 +3652,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: justify;
 }
 
-.c38 label[for='description'] {
+.c44 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c39 {
+.c45 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -3052,7 +3667,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c39 h4 {
+.c45 h4 {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -3063,11 +3678,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: center;
 }
 
-.c39 h4:first-child {
+.c45 h4:first-child {
   text-align: left;
 }
 
-.c39 > div:not(:last-child) {
+.c45 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3082,7 +3697,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   justify-content: flex-end;
 }
 
-.c39 > div:last-child {
+.c45 > div:last-child {
   color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
@@ -3091,7 +3706,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: justify;
 }
 
-.c39 > label {
+.c45 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -3112,18 +3727,18 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: flex-end;
 }
 
-.c39 > label:first-child {
+.c45 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c39 > label > input {
+.c45 > label > input {
   width: 100%;
 }
 
-.c39 textarea {
+.c45 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -3137,16 +3752,16 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: justify;
 }
 
-.c39 label[for='description'] {
+.c45 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c35 {
+.c41 {
   padding: 12px;
   position: relative;
 }
 
-.c36 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3157,7 +3772,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   justify-content: space-between;
 }
 
-.c36 h3 {
+.c42 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -3177,30 +3792,30 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c36 div {
+.c42 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c36 div > button {
+.c42 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c37 {
+.c43 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr;
 }
 
-.c37 > form:not(:last-child) {
+.c43 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c34 {
+.c40 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -3236,7 +3851,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c32 {
+.c38 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -3245,7 +3860,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c32 div {
+.c38 div {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-bottom: 6px;
@@ -3255,21 +3870,21 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   align-items: center;
 }
 
-.c32 h3 {
+.c38 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
   text-transform: uppercase;
 }
 
-.c32 h4 {
+.c38 h4 {
   margin: 0;
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c32 p,
-.c32 input,
-.c32 textarea {
+.c38 p,
+.c38 input,
+.c38 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -3280,18 +3895,18 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   font-size: 16px;
 }
 
-.c32 input,
-.c32 textarea {
+.c38 input,
+.c38 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c32 textarea {
+.c38 textarea {
   height: 5em;
 }
 
-.c31 {
+.c37 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -3300,7 +3915,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c43 {
+.c49 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -3308,8 +3923,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   padding: 12px;
 }
 
-.c43 p,
-.c43 textarea {
+.c49 p,
+.c49 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -3320,7 +3935,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   font-size: 16px;
 }
 
-.c43 textarea {
+.c49 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -3581,63 +4196,6 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c12 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgb(234,242,246);
-  background-color: rgb(0,130,155);
-  border-color: rgb(0,130,155);
-}
-
-.c12 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.c16 {
-  position: relative;
-  cursor: default;
-  font-size: 6px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid;
-  padding: 4px;
-  padding-top: 6px;
-  border-radius: 3px;
-  font-weight: 700;
-  color: rgba(30,30,28,0.4);
-  border-color: rgba(30,30,28,0.4);
-}
-
-.c16 > input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
 .c10 {
   padding: 12px;
   border: 2px solid rgb(242,143,34);
@@ -3655,6 +4213,199 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 
 .c10 > div:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.c29 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c29 > div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c29 h4,
+.c29 p {
+  margin: 0;
+  color: rgb(0,130,155);
+}
+
+.c29 p,
+.c29 textarea {
+  text-align: justify;
+}
+
+.c29 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c29 h4:nth-child(2) {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c29 h4:nth-child(3) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c29 p > span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(0,0,0);
+}
+
+.c29 p > span[type=boost] {
+  color: rgb(167,218,243);
+}
+
+.c29 p > span[type=ability] {
+  color: rgb(78,171,83);
+}
+
+.c29 p > span[type=proficiency] {
+  color: rgb(255,240,61);
+}
+
+.c29 p > span[type=difficulty] {
+  color: rgb(81,42,124);
+}
+
+.c29 p > span[type=challenge] {
+  color: rgb(116,24,26);
+}
+
+.c29 input,
+.c29 textarea {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c29 input::-webkit-input-placeholder,
+.c29 textarea::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input::-moz-placeholder,
+.c29 textarea::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input:-ms-input-placeholder,
+.c29 textarea:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input::placeholder,
+.c29 textarea::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c29 input:disabled,
+.c29 textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c29 textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.c26 {
+  padding: 12px;
+  position: relative;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.c27 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c27 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c28 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c28 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c25 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
 
 .c21 {
@@ -3938,7 +4689,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 .c24::before {
-  content: 'Critical Injuries';
+  content: 'Talents';
   position: absolute;
   top: -20px;
   left: 20px;
@@ -3963,6 +4714,31 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 .c30::before {
+  content: 'Critical Injuries';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c36 {
+  position: relative;
+  overflow: visible;
+}
+
+.c36::before {
   content: 'Motivations';
   position: absolute;
   top: -20px;
@@ -3982,12 +4758,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c33 {
+.c39 {
   position: relative;
   overflow: visible;
 }
 
-.c33::before {
+.c39::before {
   content: 'Favors';
   position: absolute;
   top: -20px;
@@ -4007,12 +4783,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c40 {
+.c46 {
   position: relative;
   overflow: visible;
 }
 
-.c40::before {
+.c46::before {
   content: 'Equipment';
   position: absolute;
   top: -20px;
@@ -4032,12 +4808,12 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-transform: uppercase;
 }
 
-.c42 {
+.c48 {
   position: relative;
   overflow: visible;
 }
 
-.c42::before {
+.c48::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -4058,106 +4834,106 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c29 {
+  .c35 {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c29 p {
+  .c35 p {
     grid-column: 1/4;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 {
+  .c34 {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 p {
+  .c34 p {
     grid-column: 1/4;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c27 {
+  .c33 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px) {
-  .c27 {
+  .c33 {
     grid-template-columns: repeat(3,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c27 {
+  .c33 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c41 {
+  .c47 {
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: "money ." "armor armor" "gear gear";
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c41 {
+  .c47 {
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: "money . . ." "armor armor gear gear";
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c41 {
+  .c47 {
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c37 {
+  .c43 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c34 {
+  .c40 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c32 textarea {
+  .c38 textarea {
     height: 4em;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c31 {
+  .c37 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c31 {
+  .c37 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c43 textarea {
+  .c49 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c43 textarea {
+  .c49 textarea {
     height: 10em;
   }
 }
@@ -4230,6 +5006,24 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   .c10 > div {
     -webkit-column-count: 4;
     column-count: 4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c29 {
+    grid-template-columns: 4fr 3fr auto;
+  }
+
+  .c29 p,
+  .c29 label[for="notes"],
+  .c29 label[for="description"] {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -4471,7 +5265,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           <label
             class="c12"
             data-testid="skill-career-athletics"
-            name="skill.athletics.career"
+            disabled=""
+            name="skills.athletics.career"
           >
             <input
               disabled=""
@@ -4479,7 +5274,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -4520,7 +5315,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           <label
             class="c12"
             data-testid="skill-career-computers_hacking"
-            name="skill.computers_hacking.career"
+            disabled=""
+            name="skills.computers_hacking.career"
           >
             <input
               disabled=""
@@ -4528,7 +5324,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -4569,7 +5365,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           <label
             class="c16"
             data-testid="skill-career-medicine"
-            name="skill.medicine.career"
+            disabled=""
+            name="skills.medicine.career"
           >
             <input
               disabled=""
@@ -4577,7 +5374,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -4618,7 +5415,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           <label
             class="c12"
             data-testid="skill-career-perception"
-            name="skill.perception.career"
+            disabled=""
+            name="skills.perception.career"
           >
             <input
               disabled=""
@@ -4626,7 +5424,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -4667,7 +5465,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           <label
             class="c16"
             data-testid="skill-career-stealth"
-            name="skill.stealth.career"
+            disabled=""
+            name="skills.stealth.career"
           >
             <input
               disabled=""
@@ -4675,7 +5474,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -4721,7 +5520,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           <label
             class="c16"
             data-testid="skill-career-brawl"
-            name="skill.brawl.career"
+            disabled=""
+            name="skills.brawl.career"
           >
             <input
               disabled=""
@@ -4729,7 +5529,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
               type="checkbox"
             />
             <span>
-              CAREER
+              career
             </span>
           </label>
           <div
@@ -5064,10 +5864,298 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
     </div>
     <div
       class="c24 c25"
-      data-testid="criticalInjuries-section"
+      data-testid="talents-section"
     >
       <div
         class="c26"
+        data-testid="talents-tier-1"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            1
+          </h3>
+          <div
+            data-testid="form-buttons-tier-1-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-1-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        >
+          <div
+            class="c29"
+            data-testid="talent-2"
+          >
+            <h4
+              data-testid="talent-2-name"
+            >
+              Custom Code
+            </h4>
+            <h4
+              data-testid="talent-2-activation"
+            >
+              Passive
+            </h4>
+            <label
+              class="c16"
+              data-testid="talent-2-ranked"
+              disabled=""
+              name="talents.2.ranked"
+            >
+              <input
+                disabled=""
+                name="talents.2.ranked"
+                type="checkbox"
+              />
+              <span>
+                ranked
+              </span>
+            </label>
+            <p
+              data-testid="talent-2-description"
+            >
+              When your character selects this talent they choose one icebreaker or piece of ice that they own. If they choose an icebreaker, whenever they use that icebreaker to override ice, they add 
+              <span
+                type="advantage"
+              >
+                a
+              </span>
+               to the results. If they choose a piece of ice, whenever someone else attempts to override it, they add 
+              <span
+                type="threat"
+              >
+                h
+              </span>
+               to the results.
+            </p>
+            <p
+              data-testid="talent-2-notes"
+            >
+              Ice wall (ice)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-2"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            2
+          </h3>
+          <div
+            data-testid="form-buttons-tier-2-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-2-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        >
+          <div
+            class="c29"
+            data-testid="talent-1"
+          >
+            <h4
+              data-testid="talent-1-name"
+            >
+              Combat Medicine
+            </h4>
+            <h4
+              data-testid="talent-1-activation"
+            >
+              Active (Incidental)
+            </h4>
+            <h4
+              data-testid="talent-1-rank"
+            >
+              Rank:
+               
+              2
+            </h4>
+            <p
+              data-testid="talent-1-description"
+            >
+              Before making a Medicine check, your character may use this talent to add 
+              <span
+                type="success"
+              >
+                s
+              </span>
+               equal to their ranks in Combat Medicine to the results. After the check is resolved, the target suffers 2 strain for each rank your character has in Combat Medicine.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-3"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            3
+          </h3>
+          <div
+            data-testid="form-buttons-tier-3-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-3-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        />
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-4"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            4
+          </h3>
+          <div
+            data-testid="form-buttons-tier-4-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-4-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        />
+      </div>
+      <div
+        class="c26"
+        data-testid="talents-tier-5"
+      >
+        <div
+          class="c27"
+        >
+          <h3>
+            Tier 
+            5
+          </h3>
+          <div
+            data-testid="form-buttons-tier-5-talents"
+          >
+            <button
+              class="c3"
+              data-testid="edit-tier-5-talents"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c28"
+        />
+      </div>
+    </div>
+    <div
+      class="c30 c31"
+      data-testid="criticalInjuries-section"
+    >
+      <div
+        class="c32"
       >
         <div
           data-testid="form-buttons-criticalInjury"
@@ -5094,10 +6182,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </div>
       </div>
       <div
-        class="c27"
+        class="c33"
       >
         <div
-          class="c28"
+          class="c34"
           data-testid="criticalInjury-1"
         >
           <h4
@@ -5124,7 +6212,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           </p>
         </div>
         <div
-          class="c29"
+          class="c35"
           data-testid="criticalInjury-2"
         >
           <h4
@@ -5153,11 +6241,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c30 c31"
+      class="c36 c37"
       data-testid="motivations"
     >
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-strength"
       >
         <div>
@@ -5175,7 +6263,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </p>
       </div>
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-flaw"
       >
         <div>
@@ -5193,7 +6281,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </p>
       </div>
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-desire"
       >
         <div>
@@ -5211,7 +6299,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </p>
       </div>
       <div
-        class="c32"
+        class="c38"
         data-testid="motivation-fear"
       >
         <div>
@@ -5230,15 +6318,15 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c33 c34"
+      class="c39 c40"
       data-testid="favors"
     >
       <div
-        class="c35"
+        class="c41"
         data-testid="favors-owed"
       >
         <div
-          class="c36"
+          class="c42"
         >
           <h3>
             owed
@@ -5268,10 +6356,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           </div>
         </div>
         <div
-          class="c37"
+          class="c43"
         >
           <div
-            class="c38"
+            class="c44"
             data-testid="favor-1"
           >
             <h4
@@ -5293,11 +6381,11 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
         </div>
       </div>
       <div
-        class="c35"
+        class="c41"
         data-testid="favors-given"
       >
         <div
-          class="c36"
+          class="c42"
         >
           <h3>
             given
@@ -5327,10 +6415,10 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
           </div>
         </div>
         <div
-          class="c37"
+          class="c43"
         >
           <div
-            class="c39"
+            class="c45"
             data-testid="favor-2"
           >
             <h4
@@ -5353,7 +6441,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c40 c41"
+      class="c46 c47"
       data-testid="equipment"
     >
       <div
@@ -5389,7 +6477,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       </div>
     </div>
     <div
-      class="c42 c43"
+      class="c48 c49"
       data-testid="notes"
     >
       <p

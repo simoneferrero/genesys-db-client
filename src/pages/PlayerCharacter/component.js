@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { criticalInjuryType } from 'types/criticalInjuries'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
+import { talentType } from 'types/talents'
 import { uiType } from 'types/ui'
 import { weaponType } from 'types/weapons'
 
@@ -16,6 +17,7 @@ import Spinner from 'components/Spinner'
 export const PlayerCharacter = ({
   addFavor,
   addPlayerCharacterCriticalInjury,
+  addPlayerCharacterTalent,
   addPlayerCharacterWeapon,
   criticalInjuries,
   editPlayerCharacter,
@@ -27,9 +29,11 @@ export const PlayerCharacter = ({
   getFactions,
   getPlayerCharacter,
   getSkills,
+  getTalents,
   getWeapons,
   playerCharacter,
   playerCharacterId,
+  talents,
   ui,
   weapons,
 }) => {
@@ -57,6 +61,9 @@ export const PlayerCharacter = ({
   useEffect(() => {
     getWeapons()
   }, [getWeapons])
+  useEffect(() => {
+    getTalents()
+  }, [getTalents])
 
   // Form submission handlers
   const handleSubmit = (values, actions) =>
@@ -65,6 +72,8 @@ export const PlayerCharacter = ({
     addFavor(playerCharacterId, values, actions)
   const handleAddPlayerCharacterCriticalInjury = (values, actions) =>
     addPlayerCharacterCriticalInjury(playerCharacterId, `${values.id}`, actions)
+  const handleAddPlayerCharacterTalent = (values, actions) =>
+    addPlayerCharacterTalent(playerCharacterId, `${values.id}`, actions)
   const handleAddPlayerCharacterWeapon = (values, actions) =>
     addPlayerCharacterWeapon(playerCharacterId, `${values.id}`, actions)
 
@@ -76,6 +85,7 @@ export const PlayerCharacter = ({
     ui.favors.loading ||
     ui.playersCharacters.loading ||
     ui.skills.loading ||
+    ui.talents.loading ||
     ui.weapons.loading
 
   return (
@@ -89,11 +99,13 @@ export const PlayerCharacter = ({
             addPlayerCharacterCriticalInjury={
               handleAddPlayerCharacterCriticalInjury
             }
+            addPlayerCharacterTalent={handleAddPlayerCharacterTalent}
             addPlayerCharacterWeapon={handleAddPlayerCharacterWeapon}
             criticalInjuries={criticalInjuries}
             factions={factions}
             handleSubmit={handleSubmit}
             playerCharacter={playerCharacter}
+            talents={talents}
             weapons={weapons}
           />
         </Suspense>
@@ -108,6 +120,8 @@ PlayerCharacter.propTypes = {
   addFavor: PropTypes.func.isRequired,
   /** Dispatched to add a critical injury */
   addPlayerCharacterCriticalInjury: PropTypes.func.isRequired,
+  /** Dispatched to add a talent */
+  addPlayerCharacterTalent: PropTypes.func.isRequired,
   /** Dispatched to add a weapon */
   addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Critical injuries data */
@@ -128,6 +142,8 @@ PlayerCharacter.propTypes = {
   getFactions: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of skills */
   getSkills: PropTypes.func.isRequired,
+  /** Dispatched to fetch a list of talents */
+  getTalents: PropTypes.func.isRequired,
   /** Dispatched to fetch a list of weapons */
   getWeapons: PropTypes.func.isRequired,
   /** Dispatched to fetch player character data */
@@ -136,6 +152,8 @@ PlayerCharacter.propTypes = {
   playerCharacter: playerCharacterType.isRequired,
   /** Current player character ID */
   playerCharacterId: PropTypes.string,
+  /** Talents' data */
+  talents: PropTypes.objectOf(talentType).isRequired,
   /** App loader and error information */
   ui: PropTypes.objectOf(uiType).isRequired,
   /** Weapons' data */

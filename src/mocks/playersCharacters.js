@@ -3,12 +3,19 @@ import { fromJS, List } from 'immutable'
 import ArchetypeRecord from 'reducers/archetypes/records'
 import CareerRecord from 'reducers/careers/records'
 import PlayerCharacterRecord from 'reducers/playersCharacters/records'
+import TalentRecord from 'reducers/talents/records'
 
 import { archetype1, archetype2 } from './archetypes'
 import { career1, career2 } from './careers'
 import { criticalInjury1, criticalInjury2 } from './criticalInjuries'
 import { favor1, favor2 } from './favors'
 import { skills, skillsById } from './skills'
+import {
+  playerCharacterTalent1,
+  playerCharacterTalent2,
+  talent1,
+  talent2,
+} from './talents'
 import { weapon1, weapon2, weaponsById } from './weapons'
 
 export const playerCharacter1Id = 1
@@ -88,11 +95,26 @@ export const playerCharacter1WeaponsAugmented = playerCharacter1Weapons.map(
   ({ id, weapon_id, mods }) =>
     weaponsById[weapon_id].merge({ id, ...(mods && { special: mods }) }),
 )
+export const playerCharacter1Talents = {
+  [`${playerCharacterTalent1.id}`]: playerCharacterTalent1,
+  [`${playerCharacterTalent2.id}`]: playerCharacterTalent2,
+}
+export const playerCharacter1TalentsAugmented = {
+  [`${playerCharacterTalent1.id}`]: TalentRecord({
+    ...talent1,
+    ...playerCharacterTalent1,
+  }),
+  [`${playerCharacterTalent2.id}`]: TalentRecord({
+    ...talent2,
+    ...playerCharacterTalent2,
+  }),
+}
 export const playerCharacter1Response = {
   ...playerCharacterSummary1Response,
   critical_injuries: playerCharacter1CriticalInjuries,
   favors: playerCharacter1Favors,
   skills: playerCharacter1Skills,
+  talents: playerCharacter1Talents,
   weapons: playerCharacter1Weapons,
   motivations: {
     strength: {
@@ -130,6 +152,7 @@ export const playerCharacter1 = new PlayerCharacterRecord(
     ...playerCharacter1Response,
     favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
     skills: List(playerCharacter1Skills.map((skill) => fromJS(skill))),
+    talents: fromJS(playerCharacter1Talents),
     weapons: List(playerCharacter1Weapons.map((weapon) => fromJS(weapon))),
   }),
 )
@@ -141,6 +164,7 @@ export const playerCharacter1Augmented = new PlayerCharacterRecord(
     critical_injuries: playerCharacter1CriticalInjuriesAugmented,
     favors: playerCharacter1Favors.map((favor) => fromJS(favor)),
     skills: playerCharacter1SkillsAugmented,
+    talents: playerCharacter1TalentsAugmented,
     weapons: playerCharacter1WeaponsAugmented,
   }),
 )
