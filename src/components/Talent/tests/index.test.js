@@ -302,10 +302,7 @@ describe('<Talent />', () => {
       expect(populatedInput).toBeInTheDocument()
     })
 
-    const selectFields = [
-      { label: 'Activation', value: activation },
-      { label: 'Tier', value: tier },
-    ]
+    const selectFields = [{ label: 'Activation', value: activation }]
     selectFields.forEach(({ label, value }) => {
       const labelElement = getByText(label)
       expect(labelElement).toBeInTheDocument()

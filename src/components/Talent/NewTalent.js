@@ -10,18 +10,13 @@ const NewTalent = ({
   activations,
   isSubmitting,
   setFieldValue,
-  values: { activation, description, ranked, tier },
+  values: { activation, description, ranked },
 }) => {
   const NAME = 'name'
   const ACTIVATION = 'activation'
   const activationOptions = activations.map((activation) => ({
     label: activation,
     value: activation,
-  }))
-  const TIER = 'tier'
-  const tierOptions = [...Array(5).keys()].map((key) => ({
-    label: `${key + 1}`,
-    value: key + 1,
   }))
   const RANKED = 'ranked'
   const DESCRIPTION = 'description'
@@ -51,18 +46,6 @@ const NewTalent = ({
         />
       </label>
       <div>
-        <label htmlFor={TIER}>
-          <h4>Tier</h4>
-          <Select
-            currentValue={tier}
-            data-testid={`new-talent-${TIER}`}
-            disabled={isSubmitting}
-            id={TIER}
-            name={TIER}
-            onChange={setFieldValue}
-            options={tierOptions}
-          />
-        </label>
         <Checkbox
           checked={ranked}
           disabled={isSubmitting}

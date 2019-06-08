@@ -7,9 +7,7 @@ import rgbToRgba from 'utils/rgbToRgba'
 
 /* eslint-disable no-unused-vars  */
 /* eslint-disable react/prop-types  */
-const FilteredTalent = ({ editing, isNew, ...otherProps }) => (
-  <div {...otherProps} />
-)
+const FilteredTalent = ({ editing, ...otherProps }) => <div {...otherProps} />
 /* eslint-enable */
 
 export const StyledTalent = styled(FilteredTalent)`
@@ -27,8 +25,7 @@ export const StyledTalent = styled(FilteredTalent)`
   }
 
   @media ${mq.tablet}, ${mq.laptop}, ${mq.desktop}, ${mq.bigDesktop} {
-    grid-template-columns: ${({ isNew }) =>
-      isNew ? '4fr 3fr 3fr' : '4fr 3fr 2fr'};
+    grid-template-columns: 4fr 3fr auto;
 
     p,
     label[for="notes"],

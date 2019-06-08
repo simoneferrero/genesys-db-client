@@ -115,10 +115,13 @@ InnerForm.validationSchema = yup.object({
     is: (val) => !val,
     then: yup.string().required('required'),
   }),
-  id: yup.string().when('isCharacter', {
-    is: (val) => !!val,
-    then: yup.number().required('required'),
-  }),
+  id: yup
+    .string()
+    .nullable()
+    .when('isCharacter', {
+      is: (val) => !!val,
+      then: yup.number().required('required'),
+    }),
   isCharacter: yup.bool(),
   name: yup.string().when('isCharacter', {
     is: (val) => !val,

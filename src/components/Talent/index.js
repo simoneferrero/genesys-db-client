@@ -31,7 +31,6 @@ const Talent = ({
       className={className}
       data-testid={isNew ? 'new-talent' : `talent-${talent.id}`}
       editing={editing}
-      isNew={isNew}
     >
       {isNew ? (
         <NewTalent

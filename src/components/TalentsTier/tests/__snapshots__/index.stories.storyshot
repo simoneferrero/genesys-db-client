@@ -258,7 +258,7 @@ exports[`Storyshots Components/TalentsTier default 1`] = `
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c3 {
-    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-columns: 4fr 3fr auto;
   }
 
   .c3 p,
@@ -626,7 +626,7 @@ exports[`Storyshots Components/TalentsTier editing 1`] = `
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c3 {
-    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-columns: 4fr 3fr auto;
   }
 
   .c3 p,
@@ -943,7 +943,7 @@ exports[`Storyshots Components/TalentsTier showAdd character talent 1`] = `
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c4 {
-    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-columns: 4fr 3fr auto;
   }
 
   .c4 p,
@@ -1305,7 +1305,7 @@ exports[`Storyshots Components/TalentsTier showAdd new talent 1`] = `
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
   .c4 {
-    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-columns: 4fr 3fr auto;
   }
 
   .c4 p,

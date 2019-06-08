@@ -32,7 +32,7 @@ const TalentsTier = ({
     description: '',
     name: '',
     ranked: true,
-    tier: 1,
+    tier,
   }
 
   return (
