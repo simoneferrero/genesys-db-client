@@ -10,7 +10,7 @@ import { getCriticalInjuries } from 'actions/criticalInjuries'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
-import Home from './component'
+import CriticalInjuries from './component'
 
 const mapStateToProps = (state) => ({
   criticalInjuries: criticalInjuriesOrderedSelector(state),
@@ -24,4 +24,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ImmutableConverter(Home))
+)(ImmutableConverter(CriticalInjuries))

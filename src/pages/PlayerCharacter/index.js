@@ -29,7 +29,7 @@ import { getWeapons, addPlayerCharacterWeapon } from 'actions/weapons'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
-import PlayersCharacters from './component'
+import PlayerCharacter from './component'
 
 const mapStateToProps = (state) => ({
   criticalInjuries: criticalInjuriesOrderedSelector(state),
@@ -60,4 +60,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ImmutableConverter(PlayersCharacters))
+)(ImmutableConverter(PlayerCharacter))

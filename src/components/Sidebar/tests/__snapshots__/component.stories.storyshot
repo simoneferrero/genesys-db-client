@@ -658,6 +658,13 @@ exports[`Storyshots Components/Sidebar default 1`] = `
   >
     Critical Injuries
   </a>
+  <a
+    class="c4"
+    data-testid="menu-item-talents"
+    href="/talents"
+  >
+    Talents
+  </a>
   <button
     class="c5"
     type="button"

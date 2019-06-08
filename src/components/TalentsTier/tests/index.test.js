@@ -6,6 +6,7 @@ import {
   playerCharacterTalent1,
   newTalentResponse,
   talent1,
+  talent2,
   talentsById,
 } from 'mocks/talents'
 
@@ -80,6 +81,22 @@ describe('<TalentsTier />', () => {
         expect(talent).not.toBeInTheDocument()
       }
     })
+  })
+
+  it('should correctly order the talents by id', () => {
+    const unorderedTalents = {
+      [talent2.id]: talent2,
+      [talent1.id]: talent1,
+    }
+    const props = {
+      talents: unorderedTalents,
+    }
+    const { getAllByTestId } = renderComponent(props)
+
+    const renderedTalentsNames = getAllByTestId(/\btalent-\b.*\b-name/i)
+
+    expect(renderedTalentsNames[0]).toHaveTextContent(talent1.name)
+    expect(renderedTalentsNames[1]).toHaveTextContent(talent2.name)
   })
 
   it('should render correctly when show adding new talent', () => {

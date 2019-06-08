@@ -32,7 +32,7 @@ describe('<TalentsSection />', () => {
   it('should render correctly', () => {
     const { getByTestId } = renderComponent()
 
-    const talentsSection = getByTestId('talents')
+    const talentsSection = getByTestId('talents-section')
     expect(talentsSection).toBeInTheDocument()
 
     tiers.forEach((tier) => {
@@ -52,7 +52,7 @@ describe('<TalentsSection />', () => {
     }
     const { getByTestId } = renderComponent(props)
 
-    const talentsSection = getByTestId('talents')
+    const talentsSection = getByTestId('talents-section')
     expect(talentsSection).toBeInTheDocument()
 
     tiers.forEach((tier) => {
@@ -73,7 +73,7 @@ describe('<TalentsSection />', () => {
 
     const { getByTestId } = renderComponent(props)
 
-    const talents = getByTestId('talents')
+    const talents = getByTestId('talents-section')
     expect(talents).toBeInTheDocument()
 
     tiers.forEach((tier) => {
@@ -90,7 +90,36 @@ describe('<TalentsSection />', () => {
 
     const { getByTestId } = renderComponent(props)
 
-    const talents = getByTestId('talents')
+    const talents = getByTestId('talents-section')
+    expect(talents).toBeInTheDocument()
+
+    tiers.forEach((tier) => {
+      const talentsTier = getByTestId(`talents-tier-${tier}`)
+      expect(talentsTier).toBeInTheDocument()
+    })
+  })
+
+  it('should not break if setFieldValue is not defined', () => {
+    const props = {
+      editing: true,
+      isCharacter: true,
+      setFieldValue: undefined,
+    }
+
+    const { getByTestId } = renderComponent(props)
+
+    const talentNotes = getByTestId('talent-1-notes')
+    expect(talentNotes).toBeInTheDocument()
+
+    const notes = `Some notes for talent 1`
+
+    fireEvent.change(talentNotes, {
+      target: {
+        value: notes,
+      },
+    })
+
+    const talents = getByTestId('talents-section')
     expect(talents).toBeInTheDocument()
 
     tiers.forEach((tier) => {

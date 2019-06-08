@@ -60,18 +60,20 @@ const InnerForm = ({
   )
   const mappedTalents = useMemo(
     () =>
-      Object.values(isCharacter ? characterTalents : talents).map((talent) => (
-        <Talent
-          editing={editing}
-          decreaseDisabled={talent.rank === 1} // TODO: add logic to prevent decrease
-          increaseDisabled={talent.rank === 5}
-          isCharacter={isCharacter}
-          isSubmitting={isPCSubmitting}
-          key={talent.id}
-          setFieldValue={onTalentChange}
-          talent={talent}
-        />
-      )),
+      Object.values(isCharacter ? characterTalents : talents)
+        .sort((a, b) => (a.id > b.id ? 1 : -1))
+        .map((talent) => (
+          <Talent
+            editing={editing}
+            decreaseDisabled={talent.rank === 1} // TODO: add logic to prevent decrease
+            increaseDisabled={talent.rank === 5}
+            isCharacter={isCharacter}
+            isSubmitting={isPCSubmitting}
+            key={talent.id}
+            setFieldValue={onTalentChange}
+            talent={talent}
+          />
+        )),
     [
       characterTalents,
       editing,

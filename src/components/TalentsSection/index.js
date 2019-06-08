@@ -36,7 +36,7 @@ const TalentsSection = ({
   const groupedByCharacterTalents = groupBy(characterTalents, 'tier')
 
   return (
-    <StyledTalentsSection className={className} data-testid="talents">
+    <StyledTalentsSection className={className} data-testid="talents-section">
       {tiers.map((index) => {
         const tier = index + 1
 
@@ -82,6 +82,7 @@ TalentsSection.propTypes = {
 
 TalentsSection.defaultProps = {
   characterTalents: {},
+  setFieldValue: () => {},
 }
 
 export default TalentsSection

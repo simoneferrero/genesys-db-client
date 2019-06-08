@@ -7,6 +7,7 @@ const CriticalInjuries = lazy(() => import('pages/CriticalInjuries'))
 const Home = lazy(() => import('pages/Home'))
 const PlayersCharacters = lazy(() => import('pages/PlayersCharacters'))
 const PlayerCharacter = lazy(() => import('pages/PlayerCharacter'))
+const Talents = lazy(() => import('pages/Talents'))
 const Weapons = lazy(() => import('pages/Weapons'))
 
 const routes = [
@@ -52,6 +53,15 @@ const routes = [
     showInGmMenu: true,
     showInPlayerMenu: true,
     to: '/critical-injuries',
+  },
+  {
+    exact: true,
+    id: 'talents',
+    menuItemComponent: 'Talents',
+    routeComponent: Talents,
+    showInGmMenu: true,
+    showInPlayerMenu: true,
+    to: '/talents',
   },
 ]
 

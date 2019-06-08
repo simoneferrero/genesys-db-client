@@ -13,10 +13,10 @@ import Home from './component'
 const mapStateToProps = (state) => ({
   authInfo: authenticationSelector(state),
 })
-const mapDispatchToProps = (dispatch) => ({
-  getAuthInfo: () => dispatch(getAuthInfo()),
-  login: (details, actions) => dispatch(login(details, actions)),
-})
+const mapDispatchToProps = {
+  getAuthInfo,
+  login,
+}
 
 export default connect(
   mapStateToProps,

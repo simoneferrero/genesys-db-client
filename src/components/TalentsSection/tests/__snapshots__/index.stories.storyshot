@@ -285,7 +285,7 @@ exports[`Storyshots Components/TalentsSection default 1`] = `
 
 <div
   class="c0"
-  data-testid="talents"
+  data-testid="talents-section"
 >
   <div
     class="c1"
@@ -768,7 +768,7 @@ exports[`Storyshots Components/TalentsSection editing 1`] = `
 
 <div
   class="c0"
-  data-testid="talents"
+  data-testid="talents-section"
 >
   <div
     class="c1"
@@ -1258,7 +1258,7 @@ exports[`Storyshots Components/TalentsSection showAdd character talent 1`] = `
 
 <div
   class="c0"
-  data-testid="talents"
+  data-testid="talents-section"
 >
   <div
     class="c1"
@@ -1845,7 +1845,7 @@ exports[`Storyshots Components/TalentsSection showAdd new talent 1`] = `
 
 <div
   class="c0"
-  data-testid="talents"
+  data-testid="talents-section"
 >
   <div
     class="c1"

@@ -14,7 +14,7 @@ import { getWeapons, addWeapon } from 'actions/weapons'
 
 import ImmutableConverter from 'HOCs/ImmutableConverter'
 
-import Home from './component'
+import Weapons from './component'
 
 const mapStateToProps = (state) => ({
   authInfo: authenticationSelector(state),
@@ -33,4 +33,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ImmutableConverter(Home))
+)(ImmutableConverter(Weapons))
