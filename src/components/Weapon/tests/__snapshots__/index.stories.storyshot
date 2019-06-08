@@ -1202,17 +1202,17 @@ exports[`Storyshots Components/Weapon new 1`] = `
         Skill
       </h4>
       <div
-        class="css-1pcexqc-container c2"
+        class="c2 css-2b097c-container"
         id="skill_id"
       >
         <div
-          class="css-bg1rzq-control skill_id__control"
+          class="skill_id__control css-yk16xz-control"
         >
           <div
-            class="css-1hwfws3 skill_id__value-container skill_id__value-container--has-value"
+            class="skill_id__value-container skill_id__value-container--has-value css-1hwfws3"
           >
             <div
-              class="css-dvua67-singleValue skill_id__single-value"
+              class="skill_id__single-value css-1uccc91-singleValue"
             >
               Athletics
             </div>
@@ -1242,14 +1242,14 @@ exports[`Storyshots Components/Weapon new 1`] = `
             </div>
           </div>
           <div
-            class="css-1wy0on6 skill_id__indicators"
+            class="skill_id__indicators css-1wy0on6"
           >
             <span
-              class="css-bgvzuu-indicatorSeparator skill_id__indicator-separator"
+              class="skill_id__indicator-separator css-1okebmr-indicatorSeparator"
             />
             <div
               aria-hidden="true"
-              class="css-16pqwjk-indicatorContainer skill_id__indicator skill_id__dropdown-indicator"
+              class="skill_id__indicator skill_id__dropdown-indicator css-tlfecz-indicatorContainer"
             >
               <svg
                 aria-hidden="true"
@@ -1280,17 +1280,17 @@ exports[`Storyshots Components/Weapon new 1`] = `
         Range
       </h4>
       <div
-        class="css-1pcexqc-container c3"
+        class="c3 css-2b097c-container"
         id="range"
       >
         <div
-          class="css-bg1rzq-control range__control"
+          class="range__control css-yk16xz-control"
         >
           <div
-            class="css-1hwfws3 range__value-container range__value-container--has-value"
+            class="range__value-container range__value-container--has-value css-1hwfws3"
           >
             <div
-              class="css-dvua67-singleValue range__single-value"
+              class="range__single-value css-1uccc91-singleValue"
             >
               Engaged
             </div>
@@ -1320,14 +1320,14 @@ exports[`Storyshots Components/Weapon new 1`] = `
             </div>
           </div>
           <div
-            class="css-1wy0on6 range__indicators"
+            class="range__indicators css-1wy0on6"
           >
             <span
-              class="css-bgvzuu-indicatorSeparator range__indicator-separator"
+              class="range__indicator-separator css-1okebmr-indicatorSeparator"
             />
             <div
               aria-hidden="true"
-              class="css-16pqwjk-indicatorContainer range__indicator range__dropdown-indicator"
+              class="range__indicator range__dropdown-indicator css-tlfecz-indicatorContainer"
             >
               <svg
                 aria-hidden="true"

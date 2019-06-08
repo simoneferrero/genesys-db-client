@@ -63,17 +63,17 @@ exports[`Storyshots Components/Select default 1`] = `
 }
 
 <div
-  class="css-1pcexqc-container c0"
+  class="c0 css-2b097c-container"
   id="test"
 >
   <div
-    class="css-bg1rzq-control test__control"
+    class="test__control css-yk16xz-control"
   >
     <div
-      class="css-1hwfws3 test__value-container test__value-container--has-value"
+      class="test__value-container test__value-container--has-value css-1hwfws3"
     >
       <div
-        class="css-dvua67-singleValue test__single-value"
+        class="test__single-value css-1uccc91-singleValue"
       >
         Option one
       </div>
@@ -103,14 +103,14 @@ exports[`Storyshots Components/Select default 1`] = `
       </div>
     </div>
     <div
-      class="css-1wy0on6 test__indicators"
+      class="test__indicators css-1wy0on6"
     >
       <span
-        class="css-bgvzuu-indicatorSeparator test__indicator-separator"
+        class="test__indicator-separator css-1okebmr-indicatorSeparator"
       />
       <div
         aria-hidden="true"
-        class="css-16pqwjk-indicatorContainer test__indicator test__dropdown-indicator"
+        class="test__indicator test__dropdown-indicator css-tlfecz-indicatorContainer"
       >
         <svg
           aria-hidden="true"
@@ -198,17 +198,17 @@ exports[`Storyshots Components/Select disabled 1`] = `
 }
 
 <div
-  class="css-ssi0ig-container c0 test--is-disabled"
+  class="c0 test--is-disabled css-14jk2my-container"
   id="test"
 >
   <div
-    class="css-14ojxsb-control test__control test__control--is-disabled"
+    class="test__control test__control--is-disabled css-1fhf3k1-control"
   >
     <div
-      class="css-1hwfws3 test__value-container test__value-container--has-value"
+      class="test__value-container test__value-container--has-value css-1hwfws3"
     >
       <div
-        class="css-ue83k8-singleValue test__single-value test__single-value--is-disabled"
+        class="test__single-value test__single-value--is-disabled css-107lb6w-singleValue"
       >
         Option one
       </div>
@@ -239,14 +239,14 @@ exports[`Storyshots Components/Select disabled 1`] = `
       </div>
     </div>
     <div
-      class="css-1wy0on6 test__indicators"
+      class="test__indicators css-1wy0on6"
     >
       <span
-        class="css-622gbt-indicatorSeparator test__indicator-separator"
+        class="test__indicator-separator css-109onse-indicatorSeparator"
       />
       <div
         aria-hidden="true"
-        class="css-16pqwjk-indicatorContainer test__indicator test__dropdown-indicator"
+        class="test__indicator test__dropdown-indicator css-tlfecz-indicatorContainer"
       >
         <svg
           aria-hidden="true"

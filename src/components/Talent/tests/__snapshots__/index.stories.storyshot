@@ -704,17 +704,17 @@ exports[`Storyshots Components/Talent new 1`] = `
       Activation
     </h4>
     <div
-      class="css-1pcexqc-container c1"
+      class="c1 css-2b097c-container"
       id="activation"
     >
       <div
-        class="css-bg1rzq-control activation__control"
+        class="activation__control css-yk16xz-control"
       >
         <div
-          class="css-1hwfws3 activation__value-container activation__value-container--has-value"
+          class="activation__value-container activation__value-container--has-value css-1hwfws3"
         >
           <div
-            class="css-dvua67-singleValue activation__single-value"
+            class="activation__single-value css-1uccc91-singleValue"
           >
             Passive
           </div>
@@ -744,14 +744,14 @@ exports[`Storyshots Components/Talent new 1`] = `
           </div>
         </div>
         <div
-          class="css-1wy0on6 activation__indicators"
+          class="activation__indicators css-1wy0on6"
         >
           <span
-            class="css-bgvzuu-indicatorSeparator activation__indicator-separator"
+            class="activation__indicator-separator css-1okebmr-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class="css-16pqwjk-indicatorContainer activation__indicator activation__dropdown-indicator"
+            class="activation__indicator activation__dropdown-indicator css-tlfecz-indicatorContainer"
           >
             <svg
               aria-hidden="true"
