@@ -29,7 +29,10 @@ import {
   GET_PLAYER_CHARACTER_SUCCESS,
 } from 'actions/playersCharacters/constants'
 import { GET_SKILLS } from 'actions/skills/constants'
-import { GET_TALENTS } from 'actions/talents/constants'
+import {
+  GET_TALENTS,
+  ADD_PLAYER_CHARACTER_TALENT,
+} from 'actions/talents/constants'
 import {
   GET_WEAPONS,
   ADD_PLAYER_CHARACTER_WEAPON,
@@ -120,7 +123,7 @@ jest.mock('actions/talents', () => ({
   getTalentsSuccess: jest.fn(() => ({ type: '' })),
   getTalentsError: jest.fn(() => ({ type: '' })),
 }))
-import { getTalents } from 'actions/talents'
+import { getTalents, addPlayerCharacterTalent } from 'actions/talents'
 
 jest.mock('actions/weapons', () => ({
   getWeapons: jest.fn(() => ({ type: '' })),
@@ -161,16 +164,16 @@ describe('<PlayerCharacter />', () => {
     const { getByTestId, getByText, queryByTestId } = renderComponent()
 
     await wait(() => {
-      const playersCharactersWrapper = getByTestId(/player-character/i)
+      const playersCharactersWrapper = getByTestId('player-character')
       expect(playersCharactersWrapper).toBeInTheDocument()
 
       const header = getByText(playerCharacter1Augmented.get('name'))
       expect(header).toBeInTheDocument()
 
-      const pcSheet = getByTestId(/pc-sheet/i)
+      const pcSheet = getByTestId('pc-sheet')
       expect(pcSheet).toBeInTheDocument()
 
-      const spinner = queryByTestId(/spinner/i)
+      const spinner = queryByTestId('spinner')
       expect(spinner).not.toBeInTheDocument()
     })
   })
@@ -180,10 +183,10 @@ describe('<PlayerCharacter />', () => {
     const { getByTestId, queryByTestId } = renderComponent({}, modifiedState)
 
     await wait(() => {
-      const playersCharactersWrapper = getByTestId(/player-character/i)
+      const playersCharactersWrapper = getByTestId('player-character')
       expect(playersCharactersWrapper).toBeInTheDocument()
 
-      const header = queryByTestId(/header/i)
+      const header = queryByTestId('header')
       expect(header).not.toBeInTheDocument()
     })
   })
@@ -201,13 +204,13 @@ describe('<PlayerCharacter />', () => {
       const { getByTestId, queryByTestId } = renderComponent()
 
       await wait(() => {
-        const playersCharactersWrapper = getByTestId(/player-character/i)
+        const playersCharactersWrapper = getByTestId('player-character')
         expect(playersCharactersWrapper).toBeInTheDocument()
 
-        const pcSheet = getByTestId(/pc-sheet/i)
+        const pcSheet = getByTestId('pc-sheet')
         expect(pcSheet).toBeInTheDocument()
 
-        const spinner = queryByTestId(/spinner/i)
+        const spinner = queryByTestId('spinner')
         expect(spinner).not.toBeInTheDocument()
       })
     })
@@ -260,13 +263,13 @@ describe('<PlayerCharacter />', () => {
         const { getByTestId } = renderComponent()
 
         await wait(() => {
-          const playersCharactersWrapper = getByTestId(/player-character/i)
+          const playersCharactersWrapper = getByTestId('player-character')
           expect(playersCharactersWrapper).toBeInTheDocument()
 
-          const pcSheet = getByTestId(/pc-sheet/i)
+          const pcSheet = getByTestId('pc-sheet')
           expect(pcSheet).toBeInTheDocument()
 
-          const spinner = getByTestId(/spinner/i)
+          const spinner = getByTestId('spinner')
           expect(spinner).toBeInTheDocument()
         })
       })
@@ -299,10 +302,10 @@ describe('<PlayerCharacter />', () => {
 
     const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-pc-sheet/i)
+    const editButton = getByTestId('edit-pc-sheet')
     fireEvent.click(editButton)
 
-    const submitButton = getByTestId(/submit-pc-sheet/i)
+    const submitButton = getByTestId('submit-pc-sheet')
     fireEvent.click(submitButton)
 
     await wait(() => {
@@ -322,7 +325,7 @@ describe('<PlayerCharacter />', () => {
 
     const { getByPlaceholderText, getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-favor-owed/i)
+    const editButton = getByTestId('edit-favor-owed')
     fireEvent.click(editButton)
 
     const description = getByPlaceholderText(/add description.../i)
@@ -330,13 +333,13 @@ describe('<PlayerCharacter />', () => {
       target: { value: 'This is a new description' },
     })
 
-    const submitButton = getByTestId(/submit-favor-owed/i)
+    const submitButton = getByTestId('submit-favor-owed')
     fireEvent.click(submitButton)
 
     await wait(() => {
       expect(addFavor).toHaveBeenCalledTimes(1)
 
-      const spinner = getByTestId(/spinner/i)
+      const spinner = getByTestId('spinner')
       expect(spinner).toBeInTheDocument()
     })
   })
@@ -362,7 +365,7 @@ describe('<PlayerCharacter />', () => {
     await wait(() => {
       expect(addPlayerCharacterCriticalInjury).toHaveBeenCalledTimes(1)
 
-      const spinner = getByTestId(/spinner/i)
+      const spinner = getByTestId('spinner')
       expect(spinner).toBeInTheDocument()
     })
   })
@@ -379,16 +382,42 @@ describe('<PlayerCharacter />', () => {
 
     const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-weapon/i)
+    const editButton = getByTestId('edit-weapon')
     fireEvent.click(editButton)
 
-    const submitButton = getByTestId(/submit-weapon/i)
+    const submitButton = getByTestId('submit-weapon')
     fireEvent.click(submitButton)
 
     await wait(() => {
       expect(addPlayerCharacterWeapon).toHaveBeenCalledTimes(1)
 
-      const spinner = getByTestId(/spinner/i)
+      const spinner = getByTestId('spinner')
+      expect(spinner).toBeInTheDocument()
+    })
+  })
+
+  it('should call addPlayerCharacterTalent on new weapon submit', async () => {
+    addPlayerCharacterTalent.mockImplementation(() => ({
+      type: ADD_PLAYER_CHARACTER_TALENT,
+      payload: {
+        actions: formikActions,
+        playerCharacterId: id,
+        weaponId: newWeaponResponse.id,
+      },
+    }))
+
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId('edit-tier-1-talents')
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId('submit-tier-1-talents')
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(addPlayerCharacterTalent).toHaveBeenCalledTimes(1)
+
+      const spinner = getByTestId('spinner')
       expect(spinner).toBeInTheDocument()
     })
   })

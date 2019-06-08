@@ -72,7 +72,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   width: 0 !important;
 }
 
-.c28 {
+.c34 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -83,7 +83,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c28 > h4 {
+.c34 > h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -91,11 +91,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: left;
 }
 
-.c28 > h4:first-child {
+.c34 > h4:first-child {
   color: rgb(242,143,34);
 }
 
-.c28 > h4 span {
+.c34 > h4 span {
   font-family: "GenesysSymbols",Times New Roman,serif;
   color: rgb(81,42,124);
   height: 100%;
@@ -109,17 +109,17 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: center;
 }
 
-.c28 p {
+.c34 p {
   margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
 }
 
-.c28 button {
+.c34 button {
   grid-column: 1/4;
 }
 
-.c27 {
+.c33 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -130,7 +130,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c27 > h4 {
+.c33 > h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -138,11 +138,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: left;
 }
 
-.c27 > h4:first-child {
+.c33 > h4:first-child {
   color: rgb(242,143,34);
 }
 
-.c27 > h4 span {
+.c33 > h4 span {
   font-family: "GenesysSymbols",Times New Roman,serif;
   color: rgb(81,42,124);
   height: 100%;
@@ -156,14 +156,14 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: center;
 }
 
-.c27 p {
+.c33 p {
   margin: 0;
   color: rgb(0,130,155);
   text-align: justify;
   opacity: 0.5;
 }
 
-.c27 button {
+.c33 button {
   grid-column: 1/4;
 }
 
@@ -181,7 +181,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   cursor: not-allowed;
 }
 
-.c24 {
+.c30 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -189,7 +189,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   position: relative;
 }
 
-.c25 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,7 +201,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   margin-bottom: 12px;
 }
 
-.c25 h3 {
+.c31 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -221,30 +221,30 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: center;
 }
 
-.c25 div {
+.c31 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c25 div > button {
+.c31 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c26 {
+.c32 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 12px;
   grid-template-columns: 1fr;
 }
 
-.c26 > form:not(:last-child) {
+.c32 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c40 {
+.c46 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -256,14 +256,14 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   grid-template-areas: "money" "armor" "gear";
 }
 
-.c40 h3 {
+.c46 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
 }
 
-.c40 div,
-.c40 label {
+.c46 div,
+.c46 label {
   width: 100%;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
@@ -271,31 +271,31 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: baseline;
 }
 
-.c40 div:nth-child(1),
-.c40 label:nth-child(1) {
+.c46 div:nth-child(1),
+.c46 label:nth-child(1) {
   grid-area: money;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 6px;
 }
 
-.c40 div:nth-child(2),
-.c40 label:nth-child(2) {
+.c46 div:nth-child(2),
+.c46 label:nth-child(2) {
   grid-area: armor;
 }
 
-.c40 div:nth-child(3),
-.c40 label:nth-child(3) {
+.c46 div:nth-child(3),
+.c46 label:nth-child(3) {
   grid-area: gear;
 }
 
-.c40 div:nth-child(1) {
+.c46 div:nth-child(1) {
   grid-template-columns: repeat(2,1fr);
 }
 
-.c40 p,
-.c40 input,
-.c40 textarea {
+.c46 p,
+.c46 input,
+.c46 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -306,18 +306,18 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   font-size: 16px;
 }
 
-.c40 input,
-.c40 textarea {
+.c46 input,
+.c46 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c40 textarea {
+.c46 textarea {
   height: 6em;
 }
 
-.c37 {
+.c43 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -328,7 +328,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c37 h4 {
+.c43 h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -336,11 +336,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: center;
 }
 
-.c37 h4:first-child {
+.c43 h4:first-child {
   text-align: left;
 }
 
-.c37 > div:not(:last-child) {
+.c43 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -355,13 +355,13 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   justify-content: flex-end;
 }
 
-.c37 > div:last-child {
+.c43 > div:last-child {
   color: rgb(0,130,155);
   grid-column: 1/4;
   text-align: justify;
 }
 
-.c37 > label {
+.c43 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -382,18 +382,18 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: flex-end;
 }
 
-.c37 > label:first-child {
+.c43 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c37 > label > input {
+.c43 > label > input {
   width: 100%;
 }
 
-.c37 textarea {
+.c43 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -407,11 +407,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: justify;
 }
 
-.c37 label[for='description'] {
+.c43 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c38 {
+.c44 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -422,7 +422,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c38 h4 {
+.c44 h4 {
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
   opacity: 0.5;
@@ -433,11 +433,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: center;
 }
 
-.c38 h4:first-child {
+.c44 h4:first-child {
   text-align: left;
 }
 
-.c38 > div:not(:last-child) {
+.c44 > div:not(:last-child) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,7 +452,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   justify-content: flex-end;
 }
 
-.c38 > div:last-child {
+.c44 > div:last-child {
   color: rgb(0,130,155);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
@@ -461,7 +461,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: justify;
 }
 
-.c38 > label {
+.c44 > label {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -482,18 +482,18 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: flex-end;
 }
 
-.c38 > label:first-child {
+.c44 > label:first-child {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
 
-.c38 > label > input {
+.c44 > label > input {
   width: 100%;
 }
 
-.c38 textarea {
+.c44 textarea {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -507,16 +507,16 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: justify;
 }
 
-.c38 label[for='description'] {
+.c44 label[for='description'] {
   grid-column: 1/3;
 }
 
-.c34 {
+.c40 {
   padding: 12px;
   position: relative;
 }
 
-.c35 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -527,7 +527,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   justify-content: space-between;
 }
 
-.c35 h3 {
+.c41 h3 {
   width: 100%;
   margin: 0;
   text-transform: uppercase;
@@ -547,30 +547,30 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: center;
 }
 
-.c35 div {
+.c41 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c35 div > button {
+.c41 div > button {
   font-size: 25px;
   padding: 6px;
 }
 
-.c36 {
+.c42 {
   grid-column: 1/3;
   display: grid;
   grid-gap: 24px;
   grid-template-columns: 1fr;
 }
 
-.c36 > form:not(:last-child) {
+.c42 > form:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.c33 {
+.c39 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -579,7 +579,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c31 {
+.c37 {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -588,7 +588,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c31 div {
+.c37 div {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-bottom: 6px;
@@ -598,21 +598,21 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   align-items: center;
 }
 
-.c31 h3 {
+.c37 h3 {
   margin: 0;
   color: rgb(242,143,34);
   text-shadow: 1px 1px rgb(255,244,233);
   text-transform: uppercase;
 }
 
-.c31 h4 {
+.c37 h4 {
   margin: 0;
   text-shadow: 1px 1px rgb(234,242,246);
 }
 
-.c31 p,
-.c31 input,
-.c31 textarea {
+.c37 p,
+.c37 input,
+.c37 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -623,18 +623,18 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   font-size: 16px;
 }
 
-.c31 input,
-.c31 textarea {
+.c37 input,
+.c37 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
 }
 
-.c31 textarea {
+.c37 textarea {
   height: 5em;
 }
 
-.c30 {
+.c36 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -643,7 +643,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   grid-template-columns: repeat(1,1fr);
 }
 
-.c42 {
+.c48 {
   border: 2px solid rgb(242,143,34);
   border-radius: 20px;
   background-color: rgba(65,178,180,0.1);
@@ -651,8 +651,8 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   padding: 12px;
 }
 
-.c42 p,
-.c42 textarea {
+.c48 p,
+.c48 textarea {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -663,7 +663,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   font-size: 16px;
 }
 
-.c42 textarea {
+.c48 textarea {
   border-radius: 5px;
   background-color: rgb(234,242,246);
   border: 1px solid rgb(0,130,155);
@@ -941,6 +941,199 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 
 .c9 > div:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.c28 {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  padding: 12px;
+}
+
+.c28 > div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c28 h4,
+.c28 p {
+  margin: 0;
+  color: rgb(0,130,155);
+}
+
+.c28 p,
+.c28 textarea {
+  text-align: justify;
+}
+
+.c28 h4 {
+  text-shadow: 1px 1px rgb(234,242,246);
+}
+
+.c28 h4:nth-child(2) {
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+}
+
+.c28 h4:nth-child(3) {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c28 p > span {
+  font-family: "GenesysSymbols",Times New Roman,serif;
+  color: rgb(0,0,0);
+}
+
+.c28 p > span[type=boost] {
+  color: rgb(167,218,243);
+}
+
+.c28 p > span[type=ability] {
+  color: rgb(78,171,83);
+}
+
+.c28 p > span[type=proficiency] {
+  color: rgb(255,240,61);
+}
+
+.c28 p > span[type=difficulty] {
+  color: rgb(81,42,124);
+}
+
+.c28 p > span[type=challenge] {
+  color: rgb(116,24,26);
+}
+
+.c28 input,
+.c28 textarea {
+  background-color: rgb(234,242,246);
+  border: 1px solid rgb(0,130,155);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0,130,155);
+  font-size: 13px;
+  width: 100%;
+}
+
+.c28 input::-webkit-input-placeholder,
+.c28 textarea::-webkit-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c28 input::-moz-placeholder,
+.c28 textarea::-moz-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c28 input:-ms-input-placeholder,
+.c28 textarea:-ms-input-placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c28 input::placeholder,
+.c28 textarea::placeholder {
+  color: rgba(0,130,155,0.7);
+}
+
+.c28 input:disabled,
+.c28 textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c28 textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.c25 {
+  padding: 12px;
+  position: relative;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.c26 h3 {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(242,143,34);
+  text-shadow: 1px 1px rgb(255,244,233);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c26 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c26 div > button {
+  font-size: 25px;
+  padding: 6px;
+}
+
+.c27 {
+  grid-column: 1/3;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.c27 > form:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.c24 {
+  border: 2px solid rgb(242,143,34);
+  border-radius: 20px;
+  background-color: rgba(65,178,180,0.1);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
 
 .c20 {
@@ -1224,7 +1417,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 .c23::before {
-  content: 'Critical Injuries';
+  content: 'Talents';
   position: absolute;
   top: -20px;
   left: 20px;
@@ -1249,6 +1442,31 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 .c29::before {
+  content: 'Critical Injuries';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-bottom: 20px solid rgb(242,143,34);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(255,244,233);
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Monkirta',Helvetica,sans-serif;
+  text-transform: uppercase;
+}
+
+.c35 {
+  position: relative;
+  overflow: visible;
+}
+
+.c35::before {
   content: 'Motivations';
   position: absolute;
   top: -20px;
@@ -1268,12 +1486,12 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-transform: uppercase;
 }
 
-.c32 {
+.c38 {
   position: relative;
   overflow: visible;
 }
 
-.c32::before {
+.c38::before {
   content: 'Favors';
   position: absolute;
   top: -20px;
@@ -1293,12 +1511,12 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-transform: uppercase;
 }
 
-.c39 {
+.c45 {
   position: relative;
   overflow: visible;
 }
 
-.c39::before {
+.c45::before {
   content: 'Equipment';
   position: absolute;
   top: -20px;
@@ -1318,12 +1536,12 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-transform: uppercase;
 }
 
-.c41 {
+.c47 {
   position: relative;
   overflow: visible;
 }
 
-.c41::before {
+.c47::before {
   content: 'Notes';
   position: absolute;
   top: -20px;
@@ -1344,106 +1562,106 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 {
+  .c34 {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c28 p {
+  .c34 p {
     grid-column: 1/4;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c27 {
+  .c33 {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c27 p {
+  .c33 p {
     grid-column: 1/4;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c26 {
+  .c32 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px) {
-  .c26 {
+  .c32 {
     grid-template-columns: repeat(3,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c26 {
+  .c32 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px) {
-  .c40 {
+  .c46 {
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: "money ." "armor armor" "gear gear";
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px) {
-  .c40 {
+  .c46 {
     grid-template-columns: repeat(4,1fr);
     grid-template-areas: "money . . ." "armor armor gear gear";
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c40 {
+  .c46 {
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: "money . . . . ." "armor armor armor gear gear gear";
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c36 {
+  .c42 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c33 {
+  .c39 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:1200px) and (max-width:1799px) {
-  .c31 textarea {
+  .c37 textarea {
     height: 4em;
   }
 }
 
 @media only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c30 {
+  .c36 {
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .c30 {
+  .c36 {
     grid-template-columns: repeat(4,1fr);
   }
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px) {
-  .c42 textarea {
+  .c48 textarea {
     height: 15em;
   }
 }
 
 @media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c42 textarea {
+  .c48 textarea {
     height: 10em;
   }
 }
@@ -1516,6 +1734,24 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   .c9 > div {
     -webkit-column-count: 4;
     column-count: 4;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c28 {
+    grid-template-columns: 4fr 3fr auto;
+  }
+
+  .c28 p,
+  .c28 label[for="notes"],
+  .c28 label[for="description"] {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
+  .c27 {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -2345,10 +2581,298 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   </div>
   <div
     class="c23 c24"
-    data-testid="criticalInjuries-section"
+    data-testid="talents-section"
   >
     <div
       class="c25"
+      data-testid="talents-tier-1"
+    >
+      <div
+        class="c26"
+      >
+        <h3>
+          Tier 
+          1
+        </h3>
+        <div
+          data-testid="form-buttons-tier-1-talents"
+        >
+          <button
+            class="c2"
+            data-testid="edit-tier-1-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      >
+        <div
+          class="c28"
+          data-testid="talent-2"
+        >
+          <h4
+            data-testid="talent-2-name"
+          >
+            Custom Code
+          </h4>
+          <h4
+            data-testid="talent-2-activation"
+          >
+            Passive
+          </h4>
+          <label
+            class="c15"
+            data-testid="talent-2-ranked"
+            disabled=""
+            name="talents.2.ranked"
+          >
+            <input
+              disabled=""
+              name="talents.2.ranked"
+              type="checkbox"
+            />
+            <span>
+              ranked
+            </span>
+          </label>
+          <p
+            data-testid="talent-2-description"
+          >
+            When your character selects this talent they choose one icebreaker or piece of ice that they own. If they choose an icebreaker, whenever they use that icebreaker to override ice, they add 
+            <span
+              type="advantage"
+            >
+              a
+            </span>
+             to the results. If they choose a piece of ice, whenever someone else attempts to override it, they add 
+            <span
+              type="threat"
+            >
+              h
+            </span>
+             to the results.
+          </p>
+          <p
+            data-testid="talent-2-notes"
+          >
+            Ice wall (ice)
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c25"
+      data-testid="talents-tier-2"
+    >
+      <div
+        class="c26"
+      >
+        <h3>
+          Tier 
+          2
+        </h3>
+        <div
+          data-testid="form-buttons-tier-2-talents"
+        >
+          <button
+            class="c2"
+            data-testid="edit-tier-2-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      >
+        <div
+          class="c28"
+          data-testid="talent-1"
+        >
+          <h4
+            data-testid="talent-1-name"
+          >
+            Combat Medicine
+          </h4>
+          <h4
+            data-testid="talent-1-activation"
+          >
+            Active (Incidental)
+          </h4>
+          <h4
+            data-testid="talent-1-rank"
+          >
+            Rank:
+             
+            2
+          </h4>
+          <p
+            data-testid="talent-1-description"
+          >
+            Before making a Medicine check, your character may use this talent to add 
+            <span
+              type="success"
+            >
+              s
+            </span>
+             equal to their ranks in Combat Medicine to the results. After the check is resolved, the target suffers 2 strain for each rank your character has in Combat Medicine.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <div
+      class="c25"
+      data-testid="talents-tier-3"
+    >
+      <div
+        class="c26"
+      >
+        <h3>
+          Tier 
+          3
+        </h3>
+        <div
+          data-testid="form-buttons-tier-3-talents"
+        >
+          <button
+            class="c2"
+            data-testid="edit-tier-3-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      />
+    </div>
+    <div
+      class="c25"
+      data-testid="talents-tier-4"
+    >
+      <div
+        class="c26"
+      >
+        <h3>
+          Tier 
+          4
+        </h3>
+        <div
+          data-testid="form-buttons-tier-4-talents"
+        >
+          <button
+            class="c2"
+            data-testid="edit-tier-4-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      />
+    </div>
+    <div
+      class="c25"
+      data-testid="talents-tier-5"
+    >
+      <div
+        class="c26"
+      >
+        <h3>
+          Tier 
+          5
+        </h3>
+        <div
+          data-testid="form-buttons-tier-5-talents"
+        >
+          <button
+            class="c2"
+            data-testid="edit-tier-5-talents"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="c27"
+      />
+    </div>
+  </div>
+  <div
+    class="c29 c30"
+    data-testid="criticalInjuries-section"
+  >
+    <div
+      class="c31"
     >
       <div
         data-testid="form-buttons-criticalInjury"
@@ -2375,10 +2899,10 @@ exports[`Storyshots Components/PCSheet default 1`] = `
       </div>
     </div>
     <div
-      class="c26"
+      class="c32"
     >
       <div
-        class="c27"
+        class="c33"
         data-testid="criticalInjury-1"
       >
         <h4
@@ -2405,7 +2929,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
         </p>
       </div>
       <div
-        class="c28"
+        class="c34"
         data-testid="criticalInjury-2"
       >
         <h4
@@ -2434,11 +2958,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
     </div>
   </div>
   <div
-    class="c29 c30"
+    class="c35 c36"
     data-testid="motivations"
   >
     <div
-      class="c31"
+      class="c37"
       data-testid="motivation-strength"
     >
       <div>
@@ -2456,7 +2980,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
       </p>
     </div>
     <div
-      class="c31"
+      class="c37"
       data-testid="motivation-flaw"
     >
       <div>
@@ -2474,7 +2998,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
       </p>
     </div>
     <div
-      class="c31"
+      class="c37"
       data-testid="motivation-desire"
     >
       <div>
@@ -2492,7 +3016,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
       </p>
     </div>
     <div
-      class="c31"
+      class="c37"
       data-testid="motivation-fear"
     >
       <div>
@@ -2511,15 +3035,15 @@ exports[`Storyshots Components/PCSheet default 1`] = `
     </div>
   </div>
   <div
-    class="c32 c33"
+    class="c38 c39"
     data-testid="favors"
   >
     <div
-      class="c34"
+      class="c40"
       data-testid="favors-owed"
     >
       <div
-        class="c35"
+        class="c41"
       >
         <h3>
           owed
@@ -2549,10 +3073,10 @@ exports[`Storyshots Components/PCSheet default 1`] = `
         </div>
       </div>
       <div
-        class="c36"
+        class="c42"
       >
         <div
-          class="c37"
+          class="c43"
           data-testid="favor-1"
         >
           <h4
@@ -2574,11 +3098,11 @@ exports[`Storyshots Components/PCSheet default 1`] = `
       </div>
     </div>
     <div
-      class="c34"
+      class="c40"
       data-testid="favors-given"
     >
       <div
-        class="c35"
+        class="c41"
       >
         <h3>
           given
@@ -2608,10 +3132,10 @@ exports[`Storyshots Components/PCSheet default 1`] = `
         </div>
       </div>
       <div
-        class="c36"
+        class="c42"
       >
         <div
-          class="c38"
+          class="c44"
           data-testid="favor-2"
         >
           <h4
@@ -2634,7 +3158,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
     </div>
   </div>
   <div
-    class="c39 c40"
+    class="c45 c46"
     data-testid="equipment"
   >
     <div
@@ -2670,7 +3194,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
     </div>
   </div>
   <div
-    class="c41 c42"
+    class="c47 c48"
     data-testid="notes"
   >
     <p

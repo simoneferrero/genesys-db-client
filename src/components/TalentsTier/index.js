@@ -6,6 +6,8 @@ import isEmpty from 'lodash/isEmpty'
 
 import { Formik } from 'formik'
 
+import sortById from 'utils/sortById'
+
 import InnerForm from './innerForm'
 
 const TalentsTier = ({
@@ -25,8 +27,11 @@ const TalentsTier = ({
   const augmentedHandleSubmit = (values, actions) =>
     handleSubmit(values, { ...actions, setIsNew })
 
+  const orderedTalents = Object.values(talents).sort(sortById)
+  const orderedCharacterTalents = Object.values(characterTalents).sort(sortById)
+
   const initialValues = {
-    id: isEmpty(talents) ? null : Object.values(talents)[0].id,
+    id: isEmpty(talents) ? null : orderedTalents[0].id,
     isCharacter,
     activation: 'Passive',
     description: '',
@@ -42,7 +47,7 @@ const TalentsTier = ({
       onSubmit={augmentedHandleSubmit}
       render={(props) => (
         <InnerForm
-          characterTalents={characterTalents}
+          characterTalents={orderedCharacterTalents}
           className={className}
           editing={editing}
           isCharacter={isCharacter}
@@ -51,7 +56,7 @@ const TalentsTier = ({
           onTalentChange={onTalentChange}
           setIsNew={setIsNew}
           showAdd={showAdd}
-          talents={talents}
+          talents={orderedTalents}
           tier={tier}
           {...props}
         />
@@ -63,7 +68,7 @@ const TalentsTier = ({
 
 TalentsTier.propTypes = {
   /** Talents belonging to a specific character */
-  characterTalents: PropTypes.objectOf(talentType),
+  characterTalents: PropTypes.objectOf(talentType).isRequired,
   /** Custom styles */
   className: PropTypes.string,
   /** Whether talents can be edited */

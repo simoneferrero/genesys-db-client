@@ -13,6 +13,7 @@ import {
   playerCharacter1Id,
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
+import { talentsById } from 'mocks/talents'
 import { weaponsById } from 'mocks/weapons'
 
 import { colours } from 'styles/constants'
@@ -20,16 +21,19 @@ import { colours } from 'styles/constants'
 const playerCharacter = playerCharacter1Augmented.toJS()
 const mockAddFavor = jest.fn()
 const mockAddPlayerCharacterCriticalInjury = jest.fn()
+const mockAddPlayerCharacterTalent = jest.fn()
 const mockAddPlayerCharacterWeapon = jest.fn()
 const mockHandleSubmit = jest.fn()
 const defaultProps = {
   addFavor: mockAddFavor,
   addPlayerCharacterCriticalInjury: mockAddPlayerCharacterCriticalInjury,
+  addPlayerCharacterTalent: mockAddPlayerCharacterTalent,
   addPlayerCharacterWeapon: mockAddPlayerCharacterWeapon,
   criticalInjuries: [...criticalInjuries, criticalInjury3],
   factions: fromJS(factionsById).toJS(),
   handleSubmit: mockHandleSubmit,
   playerCharacter,
+  talents: fromJS(talentsById).toJS(),
   weapons: fromJS(weaponsById).toJS(),
 }
 
@@ -54,9 +58,9 @@ describe('<PCSheet />', () => {
     } = renderComponent()
 
     // Buttons
-    const buttons = getByTestId(/form-buttons-pc-sheet/i)
+    const buttons = getByTestId('form-buttons-pc-sheet')
     expect(buttons).toBeInTheDocument()
-    const editButton = getByTestId(/edit-pc-sheet/i)
+    const editButton = getByTestId('edit-pc-sheet')
     expect(editButton).toBeInTheDocument()
 
     // General
@@ -64,31 +68,35 @@ describe('<PCSheet />', () => {
     expect(pcSummary).toBeInTheDocument()
 
     // Skills
-    const skills = getByTestId(/skills/i)
+    const skills = getByTestId('skills')
     expect(skills).toBeInTheDocument()
 
     // Weapons
-    const weapons = getByTestId(/weapons-section/i)
+    const weapons = getByTestId('weapons-section')
     expect(weapons).toBeInTheDocument()
 
+    // Talents
+    const talents = getByTestId('talents-section')
+    expect(talents).toBeInTheDocument()
+
     // Critical injuries
-    const criticalInjuries = getByTestId(/criticalInjuries-section/i)
+    const criticalInjuries = getByTestId('criticalInjuries-section')
     expect(criticalInjuries).toBeInTheDocument()
 
     // Motivations
-    const motivations = getByTestId(/motivations/i)
+    const motivations = getByTestId('motivations')
     expect(motivations).toBeInTheDocument()
 
     // Favors
-    const favors = getByTestId(/favors/i)
+    const favors = getByTestId('favors')
     expect(favors).toBeInTheDocument()
 
     // Notes
-    const notes = getByTestId(/notes/i)
+    const notes = getByTestId('notes')
     expect(notes).toBeInTheDocument()
 
     // Equipment
-    const equipment = getByTestId(/equipment/i)
+    const equipment = getByTestId('equipment')
     expect(equipment).toBeInTheDocument()
 
     // Change form state
@@ -117,6 +125,21 @@ describe('<PCSheet />', () => {
     fireEvent.click(deleteWeaponButton)
     const undoButtons = getAllByText(/undo/gi)
     expect(undoButtons.length).toBe(1)
+
+    // Check talents change
+    const talentNotes = getByTestId(`talent-1-notes`)
+    expect(talentNotes).toBeInTheDocument()
+
+    const notesText = 'New notes'
+
+    fireEvent.change(talentNotes, {
+      target: {
+        value: notesText,
+      },
+    })
+
+    const changedTalentNotes = getByDisplayValue(notesText)
+    expect(changedTalentNotes).toBeInTheDocument()
 
     // Check critical injuries change
     const healButton = getByTestId('healButton-1')
@@ -161,9 +184,9 @@ describe('<PCSheet />', () => {
     expect(newArmorValue).toBeInTheDocument()
 
     // Form buttons
-    const cancelButton = getByTestId(/cancel-pc-sheet/i)
+    const cancelButton = getByTestId('cancel-pc-sheet')
     expect(cancelButton).toBeInTheDocument()
-    const submitButton = getByTestId(/submit-pc-sheet/i)
+    const submitButton = getByTestId('submit-pc-sheet')
     expect(submitButton).toBeInTheDocument()
 
     fireEvent.click(cancelButton)
@@ -185,7 +208,7 @@ describe('<PCSheet />', () => {
       queryByText,
     } = renderComponent()
 
-    const editButton = getByTestId(/edit-pc-sheet/i)
+    const editButton = getByTestId('edit-pc-sheet')
     fireEvent.click(editButton)
 
     const increaseWoundsButton = getByTestId(
@@ -204,6 +227,16 @@ describe('<PCSheet />', () => {
     fireEvent.click(deleteWeaponButton)
     const undoButtons = getAllByText(/undo/gi)
     expect(undoButtons.length).toBe(1)
+
+    const talentNotes = getByTestId(`talent-1-notes`)
+    const notesText = 'New notes'
+    fireEvent.change(talentNotes, {
+      target: {
+        value: notesText,
+      },
+    })
+    const changedTalentNotes = getByDisplayValue(notesText)
+    expect(changedTalentNotes).toBeInTheDocument()
 
     const healButton = getByTestId('healButton-1')
     expect(healButton).toBeInTheDocument()
@@ -239,7 +272,7 @@ describe('<PCSheet />', () => {
     expect(newArmorValue).toBeInTheDocument()
 
     // Cancel form and check values revert
-    const cancelButton = getByTestId(/cancel-pc-sheet/i)
+    const cancelButton = getByTestId('cancel-pc-sheet')
     expect(cancelButton).toBeInTheDocument()
     fireEvent.click(cancelButton)
 
@@ -268,6 +301,9 @@ describe('<PCSheet />', () => {
 
     expect(athleticsRank).not.toHaveStyle(`background-color: ${colours.teal}`)
 
+    const revertedTalentNotes = queryByDisplayValue(notesText)
+    expect(revertedTalentNotes).not.toBeInTheDocument()
+
     const previousFormUndoButton = queryAllByText(/undo/gi)
     expect(previousFormUndoButton.length).toBe(0)
 
@@ -287,10 +323,10 @@ describe('<PCSheet />', () => {
   it('should call handleSubmit on submit', async () => {
     const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-pc-sheet/i)
+    const editButton = getByTestId('edit-pc-sheet')
     fireEvent.click(editButton)
 
-    const submitButton = getByTestId(/submit-pc-sheet/i)
+    const submitButton = getByTestId('submit-pc-sheet')
     fireEvent.click(submitButton)
 
     await wait(() => {
@@ -301,7 +337,7 @@ describe('<PCSheet />', () => {
   it('should call addFavor on favor submit', async () => {
     const { getByPlaceholderText, getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-favor-owed/i)
+    const editButton = getByTestId('edit-favor-owed')
     fireEvent.click(editButton)
 
     const description = getByPlaceholderText(/add description.../i)
@@ -309,7 +345,7 @@ describe('<PCSheet />', () => {
       target: { value: 'This is a new description' },
     })
 
-    const submitButton = getByTestId(/submit-favor-owed/i)
+    const submitButton = getByTestId('submit-favor-owed')
     fireEvent.click(submitButton)
 
     await wait(() => {
@@ -320,14 +356,28 @@ describe('<PCSheet />', () => {
   it('should call addPlayerCharacterWeapon on weapon submit', async () => {
     const { getByTestId } = renderComponent()
 
-    const editButton = getByTestId(/edit-weapon/i)
+    const editButton = getByTestId('edit-weapon')
     fireEvent.click(editButton)
 
-    const submitButton = getByTestId(/submit-weapon/i)
+    const submitButton = getByTestId('submit-weapon')
     fireEvent.click(submitButton)
 
     await wait(() => {
       expect(mockAddPlayerCharacterWeapon).toHaveBeenCalled()
+    })
+  })
+
+  it('should call addPlayerCharacterTalent on weapon submit', async () => {
+    const { getByTestId } = renderComponent()
+
+    const editButton = getByTestId('edit-tier-1-talents')
+    fireEvent.click(editButton)
+
+    const submitButton = getByTestId('submit-tier-1-talents')
+    fireEvent.click(submitButton)
+
+    await wait(() => {
+      expect(mockAddPlayerCharacterTalent).toHaveBeenCalled()
     })
   })
 

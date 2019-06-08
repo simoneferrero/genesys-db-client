@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { criticalInjuryType } from 'types/criticalInjuries'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
+import { talentType } from 'types/talents'
 import { uiType } from 'types/ui'
 import { weaponType } from 'types/weapons'
 
@@ -16,6 +17,7 @@ import Spinner from 'components/Spinner'
 export const PlayerCharacter = ({
   addFavor,
   addPlayerCharacterCriticalInjury,
+  addPlayerCharacterTalent,
   addPlayerCharacterWeapon,
   criticalInjuries,
   editPlayerCharacter,
@@ -31,6 +33,7 @@ export const PlayerCharacter = ({
   getWeapons,
   playerCharacter,
   playerCharacterId,
+  talents,
   ui,
   weapons,
 }) => {
@@ -69,6 +72,8 @@ export const PlayerCharacter = ({
     addFavor(playerCharacterId, values, actions)
   const handleAddPlayerCharacterCriticalInjury = (values, actions) =>
     addPlayerCharacterCriticalInjury(playerCharacterId, `${values.id}`, actions)
+  const handleAddPlayerCharacterTalent = (values, actions) =>
+    addPlayerCharacterTalent(playerCharacterId, `${values.id}`, actions)
   const handleAddPlayerCharacterWeapon = (values, actions) =>
     addPlayerCharacterWeapon(playerCharacterId, `${values.id}`, actions)
 
@@ -94,11 +99,13 @@ export const PlayerCharacter = ({
             addPlayerCharacterCriticalInjury={
               handleAddPlayerCharacterCriticalInjury
             }
+            addPlayerCharacterTalent={handleAddPlayerCharacterTalent}
             addPlayerCharacterWeapon={handleAddPlayerCharacterWeapon}
             criticalInjuries={criticalInjuries}
             factions={factions}
             handleSubmit={handleSubmit}
             playerCharacter={playerCharacter}
+            talents={talents}
             weapons={weapons}
           />
         </Suspense>
@@ -113,6 +120,8 @@ PlayerCharacter.propTypes = {
   addFavor: PropTypes.func.isRequired,
   /** Dispatched to add a critical injury */
   addPlayerCharacterCriticalInjury: PropTypes.func.isRequired,
+  /** Dispatched to add a talent */
+  addPlayerCharacterTalent: PropTypes.func.isRequired,
   /** Dispatched to add a weapon */
   addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Critical injuries data */
@@ -143,6 +152,8 @@ PlayerCharacter.propTypes = {
   playerCharacter: playerCharacterType.isRequired,
   /** Current player character ID */
   playerCharacterId: PropTypes.string,
+  /** Talents' data */
+  talents: PropTypes.objectOf(talentType).isRequired,
   /** App loader and error information */
   ui: PropTypes.objectOf(uiType).isRequired,
   /** Weapons' data */

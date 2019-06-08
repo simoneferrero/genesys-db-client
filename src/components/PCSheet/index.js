@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { criticalInjuryType } from 'types/criticalInjuries'
 import { factionType } from 'types/factions'
 import { playerCharacterType } from 'types/playersCharacters'
+import { talentType } from 'types/talents'
 import { weaponType } from 'types/weapons'
 
 import keyBy from 'lodash/keyBy'
@@ -14,11 +15,13 @@ import InnerForm from './innerForm'
 const PCSheet = ({
   addFavor,
   addPlayerCharacterCriticalInjury,
+  addPlayerCharacterTalent,
   addPlayerCharacterWeapon,
   criticalInjuries,
   factions,
   handleSubmit,
   playerCharacter: { favors, skills, ...playerCharacter },
+  talents,
   weapons,
 }) => {
   const [editing, setEditing] = useState(false)
@@ -42,12 +45,14 @@ const PCSheet = ({
       render={(props) => (
         <InnerForm
           addPlayerCharacterCriticalInjury={addPlayerCharacterCriticalInjury}
+          addPlayerCharacterTalent={addPlayerCharacterTalent}
           addPlayerCharacterWeapon={addPlayerCharacterWeapon}
           addFavor={addFavor}
           criticalInjuries={criticalInjuries}
           editing={editing}
           factions={factions}
           setEditing={setEditing}
+          talents={talents}
           weapons={weapons}
           {...props}
         />
@@ -62,6 +67,8 @@ PCSheet.propTypes = {
   addFavor: PropTypes.func.isRequired,
   /** Invoked when adding a critical injury */
   addPlayerCharacterCriticalInjury: PropTypes.func.isRequired,
+  /** Invoked when adding a talent */
+  addPlayerCharacterTalent: PropTypes.func.isRequired,
   /** Invoked when adding a weapon */
   addPlayerCharacterWeapon: PropTypes.func.isRequired,
   /** Critical injuries data */
@@ -72,6 +79,8 @@ PCSheet.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   /** Player character data */
   playerCharacter: playerCharacterType.isRequired,
+  /** Talents data */
+  talents: PropTypes.objectOf(talentType).isRequired,
   /** Weapons' data */
   weapons: PropTypes.objectOf(weaponType).isRequired,
 }

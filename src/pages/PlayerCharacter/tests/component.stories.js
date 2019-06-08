@@ -11,6 +11,7 @@ import {
   playerCharacter1Id,
   playerCharacter1Augmented,
 } from 'mocks/playersCharacters'
+import { talentsById } from 'mocks/talents'
 import { ui, uiElementLoading } from 'mocks/ui'
 import { weaponsById } from 'mocks/weapons'
 
@@ -35,6 +36,7 @@ const defaultProps = {
   getWeapons: action('getWeapons'),
   playerCharacter: playerCharacter1Augmented.toJS(),
   playerCharacterId: `${playerCharacter1Id}`,
+  talents: fromJS(talentsById).toJS(),
   ui: fromJS(ui).toJS(),
   weapons: fromJS(weaponsById).toJS(),
 }

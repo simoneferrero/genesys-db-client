@@ -15,15 +15,16 @@ const mockOnTalentChange = jest.fn()
 const talents = fromJS(talentsById).toJS()
 const tier = 1
 const characterTalents = {
-  [talent1.id]: {
+  [playerCharacterTalent1.id]: {
     ...talent1,
     ...playerCharacterTalent1,
   },
 }
 const defaultProps = {
-  talents,
+  characterTalents,
   handleSubmit: mockHandleSubmit,
   onTalentChange: mockOnTalentChange,
+  talents,
   tier,
 }
 

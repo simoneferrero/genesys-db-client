@@ -39,6 +39,7 @@ const InnerForm = ({
     label: name,
     value: id,
   }))
+
   const newTalent = isCharacter ? (
     <label data-testid="talentId" htmlFor={TALENT_ID}>
       <Select
@@ -60,20 +61,18 @@ const InnerForm = ({
   )
   const mappedTalents = useMemo(
     () =>
-      Object.values(isCharacter ? characterTalents : talents)
-        .sort((a, b) => (a.id > b.id ? 1 : -1))
-        .map((talent) => (
-          <Talent
-            editing={editing}
-            decreaseDisabled={talent.rank === 1} // TODO: add logic to prevent decrease
-            increaseDisabled={talent.rank === 5}
-            isCharacter={isCharacter}
-            isSubmitting={isPCSubmitting}
-            key={talent.id}
-            setFieldValue={onTalentChange}
-            talent={talent}
-          />
-        )),
+      (isCharacter ? characterTalents : talents).map((talent) => (
+        <Talent
+          editing={editing}
+          decreaseDisabled={talent.rank === 1} // TODO: add logic to prevent decrease
+          increaseDisabled={talent.rank === 5}
+          isCharacter={isCharacter}
+          isSubmitting={isPCSubmitting}
+          key={talent.id}
+          setFieldValue={onTalentChange}
+          talent={talent}
+        />
+      )),
     [
       characterTalents,
       editing,
@@ -141,11 +140,9 @@ InnerForm.validationSchema = yup.object({
 
 InnerForm.propTypes = {
   /** Talents belonging to a specific character */
-  characterTalents: PropTypes.objectOf(talentType),
+  characterTalents: PropTypes.arrayOf(talentType),
   /** Custom styles */
   className: PropTypes.string,
-  /** Which talents will be deleted */
-  deletedTalents: PropTypes.objectOf(PropTypes.bool),
   /** Whether talents can be edited */
   editing: PropTypes.bool,
   /** New talent errors */
@@ -173,7 +170,7 @@ InnerForm.propTypes = {
   /** New talent values */
   values: PropTypes.object.isRequired,
   /** Talents data */
-  talents: PropTypes.objectOf(talentType).isRequired,
+  talents: PropTypes.arrayOf(talentType).isRequired,
   /** Which tier talents belong to */
   tier: PropTypes.number.isRequired,
 }
