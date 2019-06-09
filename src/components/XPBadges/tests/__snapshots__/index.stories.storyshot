@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/XPBadges default 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c0 > div h2,
+.c0 > div input {
+  margin: 0;
+  color: rgb(242,143,34);
+  position: absolute;
+  margin-left: 1px;
+  top: 19px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 16px;
+  text-align: right;
+}
+
+.c0 > div input {
+  border: none;
+  background: transparent;
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c0 > div input::-webkit-inner-spin-button,
+.c0 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c0 > div img {
+  height: 50px;
+}
+
+<div
+  class="c0"
+>
+  <div>
+    <img
+      alt="xp_available"
+      src="AvailableXP.png"
+    />
+    <h2>
+      100
+    </h2>
+  </div>
+  <div>
+    <img
+      alt="xp_total"
+      src="TotalXP.png"
+    />
+    <h2>
+      200
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/XPBadges editing 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c0 > div h2,
+.c0 > div input {
+  margin: 0;
+  color: rgb(242,143,34);
+  position: absolute;
+  margin-left: 1px;
+  top: 19px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 16px;
+  text-align: right;
+}
+
+.c0 > div input {
+  border: none;
+  background: transparent;
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c0 > div input::-webkit-inner-spin-button,
+.c0 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c0 > div img {
+  height: 50px;
+}
+
+<div
+  class="c0"
+>
+  <div>
+    <img
+      alt="xp_available"
+      src="AvailableXP.png"
+    />
+    <input
+      min="0"
+      type="number"
+      value="100"
+    />
+  </div>
+  <div>
+    <img
+      alt="xp_total"
+      src="TotalXP.png"
+    />
+    <input
+      min="0"
+      type="number"
+      value="200"
+    />
+  </div>
+</div>
+`;
