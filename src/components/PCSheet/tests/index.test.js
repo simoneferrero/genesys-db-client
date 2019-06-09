@@ -99,6 +99,10 @@ describe('<PCSheet />', () => {
     const equipment = getByTestId('equipment')
     expect(equipment).toBeInTheDocument()
 
+    // XP
+    const xpBadges = getByTestId('xpBadges')
+    expect(xpBadges).toBeInTheDocument()
+
     // Change form state
     fireEvent.click(editButton)
 
@@ -182,6 +186,29 @@ describe('<PCSheet />', () => {
     fireEvent.change(armorInput, { target: { value: newArmor } })
     const newArmorValue = getByDisplayValue(newArmor)
     expect(newArmorValue).toBeInTheDocument()
+
+    // Check xp change
+    const xpAvailableInput = getByDisplayValue(
+      `${playerCharacter1Response.xp.available}`,
+    )
+    expect(xpAvailableInput).toBeInTheDocument()
+
+    const newXPAvailable = 300
+    fireEvent.change(xpAvailableInput, { target: { value: newXPAvailable } })
+
+    const newXPAvailableInput = getByDisplayValue(`${newXPAvailable}`)
+    expect(newXPAvailableInput).toBeInTheDocument()
+
+    const xpTotalInput = getByDisplayValue(
+      `${playerCharacter1Response.xp.total}`,
+    )
+    expect(xpTotalInput).toBeInTheDocument()
+
+    const newXPTotal = 300
+    fireEvent.change(xpTotalInput, { target: { value: newXPTotal } })
+
+    const newXPTotalInput = getByDisplayValue(`${newXPTotal}`)
+    expect(newXPTotalInput).toBeInTheDocument()
 
     // Form buttons
     const cancelButton = getByTestId('cancel-pc-sheet')
@@ -271,6 +298,14 @@ describe('<PCSheet />', () => {
     const newArmorValue = getByDisplayValue(newArmor)
     expect(newArmorValue).toBeInTheDocument()
 
+    const xpAvailableInput = getByDisplayValue(
+      `${playerCharacter1Response.xp.available}`,
+    )
+    const newXPAvailable = 300
+    fireEvent.change(xpAvailableInput, { target: { value: newXPAvailable } })
+    const newXPAvailableInput = getByDisplayValue(`${newXPAvailable}`)
+    expect(newXPAvailableInput).toBeInTheDocument()
+
     // Cancel form and check values revert
     const cancelButton = getByTestId('cancel-pc-sheet')
     expect(cancelButton).toBeInTheDocument()
@@ -292,6 +327,9 @@ describe('<PCSheet />', () => {
 
     const previousArmor = queryByText(newArmor)
     expect(previousArmor).not.toBeInTheDocument()
+
+    const previousXPAvailable = queryByDisplayValue(`${newXPAvailable}`)
+    expect(previousXPAvailable).not.toBeInTheDocument()
 
     // Open form and check values are default
     fireEvent.click(editButton)
@@ -318,6 +356,9 @@ describe('<PCSheet />', () => {
 
     const previousFormArmor = queryByDisplayValue(newArmor)
     expect(previousFormArmor).not.toBeInTheDocument()
+
+    const previousFormXPAvailable = queryByDisplayValue(`${newXPAvailable}`)
+    expect(previousFormXPAvailable).not.toBeInTheDocument()
   })
 
   it('should call handleSubmit on submit', async () => {

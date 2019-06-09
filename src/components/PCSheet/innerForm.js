@@ -25,6 +25,7 @@ import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
 import Talents from 'components/TalentsSection'
 import Weapons from 'components/WeaponsSection'
+import XPBadges from 'components/XPBadges'
 
 import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
@@ -144,6 +145,12 @@ const InnerForm = ({
       notes={values.notes}
       setFieldValue={setFieldValue}
       sectionTitle="Notes"
+    />
+    <XPBadges
+      editing={editing}
+      setFieldValue={setFieldValue}
+      xpAvailable={values.xp.available}
+      xpTotal={values.xp.total}
     />
   </StyledForm>
 )

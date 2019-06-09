@@ -2,11 +2,11 @@ import XPBadges from '../index'
 
 import { XP } from 'utils/definitions'
 
-const xp_available = 100
-const xp_total = 200
+const xpAvailable = 100
+const xpTotal = 200
 const defaultProps = {
-  xp_available,
-  xp_total,
+  xpAvailable,
+  xpTotal,
 }
 
 const mockSetFieldValue = jest.fn()
@@ -22,20 +22,28 @@ describe('<XPBadges />', () => {
   })
 
   it('should render correctly', () => {
-    const { getByAltText, getByText, queryByDisplayValue } = renderComponent()
+    const {
+      getByAltText,
+      getByTestId,
+      getByText,
+      queryByDisplayValue,
+    } = renderComponent()
+
+    const xpBadges = getByTestId('xpBadges')
+    expect(xpBadges).toBeInTheDocument()
 
     const xpAvailableBadge = getByAltText(XP.AVAILABLE)
     expect(xpAvailableBadge).toBeInTheDocument()
-    const xpAvailableValue = getByText(`${xp_available}`)
+    const xpAvailableValue = getByText(`${xpAvailable}`)
     expect(xpAvailableValue).toBeInTheDocument()
-    const xpAvailableInput = queryByDisplayValue(`${xp_available}`)
+    const xpAvailableInput = queryByDisplayValue(`${xpAvailable}`)
     expect(xpAvailableInput).not.toBeInTheDocument()
 
     const xpTotalBadge = getByAltText(XP.TOTAL)
     expect(xpTotalBadge).toBeInTheDocument()
-    const xpTotalValue = getByText(`${xp_total}`)
+    const xpTotalValue = getByText(`${xpTotal}`)
     expect(xpTotalValue).toBeInTheDocument()
-    const xpTotalInput = queryByDisplayValue(`${xp_total}`)
+    const xpTotalInput = queryByDisplayValue(`${xpTotal}`)
     expect(xpTotalInput).not.toBeInTheDocument()
   })
 
@@ -44,35 +52,55 @@ describe('<XPBadges />', () => {
       editing: true,
       setFieldValue: mockSetFieldValue,
     }
-    const { getByAltText, getByDisplayValue, queryByText } = renderComponent(
-      props,
-    )
+    const {
+      getByAltText,
+      getByDisplayValue,
+      getByTestId,
+      queryByText,
+    } = renderComponent(props)
+
+    const xpBadges = getByTestId('xpBadges')
+    expect(xpBadges).toBeInTheDocument()
 
     const xpAvailableBadge = getByAltText(XP.AVAILABLE)
     expect(xpAvailableBadge).toBeInTheDocument()
-    const xpAvailableValue = queryByText(`${xp_available}`)
+    const xpAvailableValue = queryByText(`${xpAvailable}`)
     expect(xpAvailableValue).not.toBeInTheDocument()
-    const xpAvailableInput = getByDisplayValue(`${xp_available}`)
+    const xpAvailableInput = getByDisplayValue(`${xpAvailable}`)
     expect(xpAvailableInput).toBeInTheDocument()
 
     const newXPAvailable = 300
     fireEvent.change(xpAvailableInput, { target: { value: newXPAvailable } })
 
     expect(mockSetFieldValue).toHaveBeenCalledWith(
-      'xp_available',
+      'xp.available',
       newXPAvailable,
     )
 
     const xpTotalBadge = getByAltText(XP.TOTAL)
     expect(xpTotalBadge).toBeInTheDocument()
-    const xpTotalValue = queryByText(`${xp_total}`)
+    const xpTotalValue = queryByText(`${xpTotal}`)
     expect(xpTotalValue).not.toBeInTheDocument()
-    const xpTotalInput = getByDisplayValue(`${xp_total}`)
+    const xpTotalInput = getByDisplayValue(`${xpTotal}`)
     expect(xpTotalInput).toBeInTheDocument()
 
     const newXPTotal = 500
     fireEvent.change(xpTotalInput, { target: { value: newXPTotal } })
 
-    expect(mockSetFieldValue).toHaveBeenCalledWith('xp_total', newXPTotal)
+    expect(mockSetFieldValue).toHaveBeenCalledWith('xp.total', newXPTotal)
+  })
+
+  it('should not break if values are not defined', () => {
+    const props = {
+      xpAvailable: undefined,
+      xpTotal: undefined,
+    }
+    const { getAllByText, getByTestId } = renderComponent(props)
+
+    const xpBadges = getByTestId('xpBadges')
+    expect(xpBadges).toBeInTheDocument()
+
+    const emptyXPFieldsLength = getAllByText(`${0}`).length
+    expect(emptyXPFieldsLength).toBe(2)
   })
 })

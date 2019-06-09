@@ -312,6 +312,7 @@ describe('playersCharacters sagas', () => {
             .toJS()
             .weapons.map(({ id, mods }) => ({ id, mods })),
           wounds_current,
+          xp: playerCharacter.xp,
         })
 
         const opts = {

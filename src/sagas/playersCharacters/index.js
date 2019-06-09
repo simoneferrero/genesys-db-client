@@ -118,6 +118,7 @@ export function* editPlayerCharacterSaga({
       skills,
       talents,
       weapons,
+      xp,
     },
   },
 }) {
@@ -151,6 +152,7 @@ export function* editPlayerCharacterSaga({
     })),
     weapons: Object.values(weapons).map(({ id, mods }) => ({ id, mods })),
     wounds_current,
+    xp,
   })
   const requestUrl = uri(API_PATH)
     .segment([API_SEGMENTS.PLAYERS_CHARACTERS, id])

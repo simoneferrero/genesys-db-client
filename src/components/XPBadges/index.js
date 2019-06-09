@@ -58,13 +58,13 @@ const StyledContainer = styled.div`
   }
 `
 
-const XPBadges = ({ editing, setFieldValue, xp_available, xp_total }) => {
+const XPBadges = ({ editing, setFieldValue, xpAvailable, xpTotal }) => {
   const onXPAvailableChange = ({ target: { value } }) =>
-    setFieldValue('xp_available', Number(value))
+    setFieldValue('xp.available', Number(value))
   const onXPTotalChange = ({ target: { value } }) =>
-    setFieldValue('xp_total', Number(value))
+    setFieldValue('xp.total', Number(value))
   return (
-    <StyledContainer>
+    <StyledContainer data-testid="xpBadges">
       <div>
         <img alt={XP.AVAILABLE} src={AvailableXP} />
         {editing ? (
@@ -72,10 +72,10 @@ const XPBadges = ({ editing, setFieldValue, xp_available, xp_total }) => {
             min={0}
             onChange={onXPAvailableChange}
             type="number"
-            value={xp_available}
+            value={xpAvailable}
           />
         ) : (
-          <h2>{xp_available}</h2>
+          <h2>{xpAvailable}</h2>
         )}
       </div>
       <div>
@@ -85,10 +85,10 @@ const XPBadges = ({ editing, setFieldValue, xp_available, xp_total }) => {
             min={0}
             onChange={onXPTotalChange}
             type="number"
-            value={xp_total}
+            value={xpTotal}
           />
         ) : (
-          <h2>{xp_total}</h2>
+          <h2>{xpTotal}</h2>
         )}
       </div>
     </StyledContainer>
@@ -101,9 +101,14 @@ XPBadges.propTypes = {
   /** Invoked when editing the fields */
   setFieldValue: PropTypes.func,
   /** Experience available to the character */
-  xp_available: PropTypes.number.isRequired,
+  xpAvailable: PropTypes.number,
   /** Total experience accumulated by the character */
-  xp_total: PropTypes.number.isRequired,
+  xpTotal: PropTypes.number,
+}
+
+XPBadges.defaultProps = {
+  xpAvailable: 0,
+  xpTotal: 0,
 }
 
 export default XPBadges

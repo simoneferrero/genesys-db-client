@@ -7,8 +7,8 @@ import XPBadges from '../index'
 
 const setFieldValue = action('setFieldValue')
 const defaultProps = {
-  xp_available: 100,
-  xp_total: 200,
+  xpAvailable: 100,
+  xpTotal: 200,
 }
 
 const renderComponent = (props = {}) => (

@@ -146,6 +146,10 @@ export const playerCharacter1Response = {
       'Portable medkit (may perform Medicine checks without penalty) 3 slap-patches (painkillers) PAD Fake New Angeles ID',
     money: 238,
   },
+  xp: {
+    available: 10,
+    total: 200,
+  },
 }
 export const playerCharacter1 = new PlayerCharacterRecord(
   fromJS({
