@@ -744,6 +744,14 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   margin-left: 1px;
 }
 
+.c6 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c6 > div h2 {
   top: 5px;
 }
@@ -784,6 +792,14 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
+}
+
+.c7 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c7 > div h2 {

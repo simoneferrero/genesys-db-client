@@ -78,6 +78,11 @@ const sharedBadgeWrapperStyles = css`
     position: absolute;
     margin-left: 1px;
   }
+
+  & > div {
+    width: 100%;
+    display: inline-flex;
+  }
 `
 export const StyledCharacteristicsSection = styled.section`
   ${sectionCommonStyles}

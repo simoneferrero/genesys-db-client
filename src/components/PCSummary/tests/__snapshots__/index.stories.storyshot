@@ -75,6 +75,14 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   margin-left: 1px;
 }
 
+.c2 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c2 > div h2 {
   top: 5px;
 }
@@ -115,6 +123,14 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
+}
+
+.c3 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c3 > div h2 {
@@ -367,7 +383,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
 `;
 
 exports[`Storyshots Components/PCSummary editing 1`] = `
-.c4 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -379,7 +395,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   justify-content: space-between;
 }
 
-.c5 {
+.c4 {
   background: transparent;
   border: none;
   color: rgb(242,143,34);
@@ -388,7 +404,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   cursor: pointer;
 }
 
-.c5:disabled {
+.c4:disabled {
   color: rgb(255,244,233);
   cursor: not-allowed;
 }
@@ -467,6 +483,14 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   margin-left: 1px;
 }
 
+.c2 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c2 > div h2 {
   top: 5px;
 }
@@ -475,13 +499,13 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   height: 60px;
 }
 
-.c3 {
+.c5 {
   display: grid;
   grid-gap: 6px;
   grid-template-columns: repeat(2,1fr);
 }
 
-.c3 > div {
+.c5 > div {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -503,13 +527,21 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   transform: translateX(-50%);
 }
 
-.c3 > div h2 {
+.c5 > div h2 {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
 }
 
-.c3 > div h2 {
+.c5 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c5 > div h2 {
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -517,15 +549,15 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   text-align: right;
 }
 
-.c3 > div h2 span:nth-child(2) {
+.c5 > div h2 span:nth-child(2) {
   text-align: left;
 }
 
-.c3 > div img {
+.c5 > div img {
   height: 50px;
 }
 
-.c3 > div:nth-child(1) > h2 {
+.c5 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
 }
 
@@ -576,7 +608,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(4,1fr);
   }
 }
@@ -632,87 +664,13 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         2
       </h2>
-    </div>
-    <div>
-      <img
-        alt="agility"
-        src="Agility.png"
-      />
-      <h2>
-        2
-      </h2>
-    </div>
-    <div>
-      <img
-        alt="intellect"
-        src="Intellect.png"
-      />
-      <h2>
-        4
-      </h2>
-    </div>
-    <div>
-      <img
-        alt="cunning"
-        src="Cunning.png"
-      />
-      <h2>
-        2
-      </h2>
-    </div>
-    <div>
-      <img
-        alt="willpower"
-        src="Willpower.png"
-      />
-      <h2>
-        4
-      </h2>
-    </div>
-    <div>
-      <img
-        alt="presence"
-        src="Presence.png"
-      />
-      <h2>
-        2
-      </h2>
-    </div>
-  </section>
-  <section
-    class="c3"
-  >
-    <div>
-      <img
-        alt="soak"
-        src="Soak.png"
-      />
-      <h2>
-        <span>
-          3
-        </span>
-      </h2>
-    </div>
-    <div>
-      <img
-        alt="wounds"
-        src="Wounds.png"
-      />
-      <h2>
-        <span>
-          13
-        </span>
-        <span>
-          11
-        </span>
-      </h2>
       <div
-        class="c4"
-        data-testid="badge-modifiers-attributes.wounds.current"
+        class="c3"
+        data-testid="badge-modifiers-characteristics.brawn"
       >
         <button
-          class="c5"
-          data-testid="decrease-attributes.wounds.current"
+          class="c4"
+          data-testid="decrease-characteristics.brawn"
           type="button"
         >
           <svg
@@ -730,8 +688,8 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
           </svg>
         </button>
         <button
-          class="c5"
-          data-testid="increase-attributes.wounds.current"
+          class="c4"
+          data-testid="increase-characteristics.brawn"
           type="button"
         >
           <svg
@@ -748,6 +706,426 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
             />
           </svg>
         </button>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="agility"
+        src="Agility.png"
+      />
+      <h2>
+        2
+      </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.agility"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.agility"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.agility"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="intellect"
+        src="Intellect.png"
+      />
+      <h2>
+        4
+      </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.intellect"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.intellect"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.intellect"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="cunning"
+        src="Cunning.png"
+      />
+      <h2>
+        2
+      </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.cunning"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.cunning"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.cunning"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="willpower"
+        src="Willpower.png"
+      />
+      <h2>
+        4
+      </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.willpower"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.willpower"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.willpower"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="presence"
+        src="Presence.png"
+      />
+      <h2>
+        2
+      </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.presence"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.presence"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.presence"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section
+    class="c5"
+  >
+    <div>
+      <img
+        alt="soak"
+        src="Soak.png"
+      />
+      <h2>
+        <span>
+          3
+        </span>
+      </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-attributes.soak"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-attributes.soak"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-attributes.soak"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="wounds"
+        src="Wounds.png"
+      />
+      <h2>
+        <span>
+          13
+        </span>
+        <span>
+          11
+        </span>
+      </h2>
+      <div>
+        <div
+          class="c3"
+          data-testid="badge-modifiers-attributes.wounds.total"
+        >
+          <button
+            class="c4"
+            data-testid="decrease-attributes.wounds.total"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13H5v-2h14v2z"
+              />
+            </svg>
+          </button>
+          <button
+            class="c4"
+            data-testid="increase-attributes.wounds.total"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="c3"
+          data-testid="badge-modifiers-attributes.wounds.current"
+        >
+          <button
+            class="c4"
+            data-testid="decrease-attributes.wounds.current"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13H5v-2h14v2z"
+              />
+            </svg>
+          </button>
+          <button
+            class="c4"
+            data-testid="increase-attributes.wounds.current"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
     <div>
@@ -763,48 +1141,93 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
           2
         </span>
       </h2>
-      <div
-        class="c4"
-        data-testid="badge-modifiers-attributes.strain.current"
-      >
-        <button
-          class="c5"
-          data-testid="decrease-attributes.strain.current"
-          type="button"
+      <div>
+        <div
+          class="c3"
+          data-testid="badge-modifiers-attributes.strain.total"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <button
+            class="c4"
+            data-testid="decrease-attributes.strain.total"
+            type="button"
           >
-            <path
-              d="M19 13H5v-2h14v2z"
-            />
-          </svg>
-        </button>
-        <button
-          class="c5"
-          data-testid="increase-attributes.strain.current"
-          type="button"
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13H5v-2h14v2z"
+              />
+            </svg>
+          </button>
+          <button
+            class="c4"
+            data-testid="increase-attributes.strain.total"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="c3"
+          data-testid="badge-modifiers-attributes.strain.current"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <button
+            class="c4"
+            data-testid="decrease-attributes.strain.current"
+            type="button"
           >
-            <path
-              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-            />
-          </svg>
-        </button>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13H5v-2h14v2z"
+              />
+            </svg>
+          </button>
+          <button
+            class="c4"
+            data-testid="increase-attributes.strain.current"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
     <div>
@@ -820,6 +1243,94 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
           1
         </span>
       </h2>
+      <div>
+        <div
+          class="c3"
+          data-testid="badge-modifiers-attributes.defense.melee"
+        >
+          <button
+            class="c4"
+            data-testid="decrease-attributes.defense.melee"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13H5v-2h14v2z"
+              />
+            </svg>
+          </button>
+          <button
+            class="c4"
+            data-testid="increase-attributes.defense.melee"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="c3"
+          data-testid="badge-modifiers-attributes.defense.ranged"
+        >
+          <button
+            class="c4"
+            data-testid="decrease-attributes.defense.ranged"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13H5v-2h14v2z"
+              />
+            </svg>
+          </button>
+          <button
+            class="c4"
+            data-testid="increase-attributes.defense.ranged"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
   <a

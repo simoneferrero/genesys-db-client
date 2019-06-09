@@ -106,9 +106,12 @@ export function* editPlayerCharacterSaga({
     id,
     values: {
       attributes: {
-        wounds: { current: wounds_current },
-        strain: { current: strain_current },
+        defense: { melee: defense_melee, ranged: defense_ranged },
+        soak,
+        strain: { current: strain_current, total: strain_total },
+        wounds: { current: wounds_current, total: wounds_total },
       },
+      characteristics,
       deletedCriticalInjuries,
       deletedWeapons,
       equipment,
@@ -125,6 +128,9 @@ export function* editPlayerCharacterSaga({
   const authInfo = yield select(authenticationSelector)
 
   const data = JSON.stringify({
+    characteristics,
+    defense_melee,
+    defense_ranged,
     deletedCriticalInjuries: Object.entries(deletedCriticalInjuries).reduce(
       (total, [criticalInjury, toDelete]) =>
         toDelete ? [...total, criticalInjury] : total,
@@ -144,7 +150,9 @@ export function* editPlayerCharacterSaga({
         id,
         rank,
       })),
+    soak,
     strain_current,
+    strain_total,
     talents: Object.values(talents).map(({ id, notes, rank }) => ({
       id,
       notes,
@@ -152,6 +160,7 @@ export function* editPlayerCharacterSaga({
     })),
     weapons: Object.values(weapons).map(({ id, mods }) => ({ id, mods })),
     wounds_current,
+    wounds_total,
     xp,
   })
   const requestUrl = uri(API_PATH)

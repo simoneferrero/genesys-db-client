@@ -89,26 +89,100 @@ export const PCSummary = ({
         <div>
           <img alt={BRAWN} src={Brawn} />
           <h2>{brawn}</h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() => setFieldValue('characteristics.brawn', brawn - 1)}
+              decreaseDisabled={isSubmitting || brawn <= 1}
+              increase={() => setFieldValue('characteristics.brawn', brawn + 1)}
+              increaseDisabled={isSubmitting || brawn >= 5}
+              name="characteristics.brawn"
+            />
+          )}
         </div>
         <div>
           <img alt={AGILITY} src={Agility} />
           <h2>{agility}</h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('characteristics.agility', agility - 1)
+              }
+              decreaseDisabled={isSubmitting || agility <= 1}
+              increase={() =>
+                setFieldValue('characteristics.agility', agility + 1)
+              }
+              increaseDisabled={isSubmitting || agility >= 5}
+              name="characteristics.agility"
+            />
+          )}
         </div>
         <div>
           <img alt={INTELLECT} src={Intellect} />
           <h2>{intellect}</h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('characteristics.intellect', intellect - 1)
+              }
+              decreaseDisabled={isSubmitting || intellect <= 1}
+              increase={() =>
+                setFieldValue('characteristics.intellect', intellect + 1)
+              }
+              increaseDisabled={isSubmitting || intellect >= 5}
+              name="characteristics.intellect"
+            />
+          )}
         </div>
         <div>
           <img alt={CUNNING} src={Cunning} />
           <h2>{cunning}</h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('characteristics.cunning', cunning - 1)
+              }
+              decreaseDisabled={isSubmitting || cunning <= 1}
+              increase={() =>
+                setFieldValue('characteristics.cunning', cunning + 1)
+              }
+              increaseDisabled={isSubmitting || cunning >= 5}
+              name="characteristics.cunning"
+            />
+          )}
         </div>
         <div>
           <img alt={WILLPOWER} src={Willpower} />
           <h2>{willpower}</h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('characteristics.willpower', willpower - 1)
+              }
+              decreaseDisabled={isSubmitting || willpower <= 1}
+              increase={() =>
+                setFieldValue('characteristics.willpower', willpower + 1)
+              }
+              increaseDisabled={isSubmitting || willpower >= 5}
+              name="characteristics.willpower"
+            />
+          )}
         </div>
         <div>
           <img alt={PRESENCE} src={Presence} />
           <h2>{presence}</h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() =>
+                setFieldValue('characteristics.presence', presence - 1)
+              }
+              decreaseDisabled={isSubmitting || presence <= 1}
+              increase={() =>
+                setFieldValue('characteristics.presence', presence + 1)
+              }
+              increaseDisabled={isSubmitting || presence >= 5}
+              name="characteristics.presence"
+            />
+          )}
         </div>
       </StyledCharacteristicsSection>
       <StyledAttributesSection>
@@ -117,6 +191,15 @@ export const PCSummary = ({
           <h2>
             <span>{soak}</span>
           </h2>
+          {editing && (
+            <BadgeModifiers
+              decrease={() => setFieldValue('attributes.soak', soak - 1)}
+              decreaseDisabled={isSubmitting || soak <= 0}
+              increase={() => setFieldValue('attributes.soak', soak + 1)}
+              increaseDisabled={isSubmitting}
+              name="attributes.soak"
+            />
+          )}
         </div>
         <div>
           <img alt={WOUNDS} src={Wounds} />
@@ -125,17 +208,30 @@ export const PCSummary = ({
             <span>{currentWounds}</span>
           </h2>
           {editing && (
-            <BadgeModifiers
-              decrease={() =>
-                setFieldValue('attributes.wounds.current', currentWounds - 1)
-              }
-              decreaseDisabled={isSubmitting || currentWounds <= 0}
-              increase={() =>
-                setFieldValue('attributes.wounds.current', currentWounds + 1)
-              }
-              increaseDisabled={isSubmitting || currentWounds >= totalWounds}
-              name="attributes.wounds.current"
-            />
+            <div>
+              <BadgeModifiers
+                decrease={() =>
+                  setFieldValue('attributes.wounds.total', totalWounds - 1)
+                }
+                decreaseDisabled={isSubmitting || totalWounds <= 0}
+                increase={() =>
+                  setFieldValue('attributes.wounds.total', totalWounds + 1)
+                }
+                increaseDisabled={isSubmitting}
+                name="attributes.wounds.total"
+              />
+              <BadgeModifiers
+                decrease={() =>
+                  setFieldValue('attributes.wounds.current', currentWounds - 1)
+                }
+                decreaseDisabled={isSubmitting || currentWounds <= 0}
+                increase={() =>
+                  setFieldValue('attributes.wounds.current', currentWounds + 1)
+                }
+                increaseDisabled={isSubmitting}
+                name="attributes.wounds.current"
+              />
+            </div>
           )}
         </div>
         <div>
@@ -145,17 +241,30 @@ export const PCSummary = ({
             <span>{currentStrain}</span>
           </h2>
           {editing && (
-            <BadgeModifiers
-              decrease={() =>
-                setFieldValue('attributes.strain.current', currentStrain - 1)
-              }
-              decreaseDisabled={isSubmitting || currentStrain <= 0}
-              increase={() =>
-                setFieldValue('attributes.strain.current', currentStrain + 1)
-              }
-              increaseDisabled={isSubmitting || currentStrain >= totalStrain}
-              name="attributes.strain.current"
-            />
+            <div>
+              <BadgeModifiers
+                decrease={() =>
+                  setFieldValue('attributes.strain.total', totalStrain - 1)
+                }
+                decreaseDisabled={isSubmitting || totalStrain <= 0}
+                increase={() =>
+                  setFieldValue('attributes.strain.total', totalStrain + 1)
+                }
+                increaseDisabled={isSubmitting}
+                name="attributes.strain.total"
+              />
+              <BadgeModifiers
+                decrease={() =>
+                  setFieldValue('attributes.strain.current', currentStrain - 1)
+                }
+                decreaseDisabled={isSubmitting || currentStrain <= 0}
+                increase={() =>
+                  setFieldValue('attributes.strain.current', currentStrain + 1)
+                }
+                increaseDisabled={isSubmitting}
+                name="attributes.strain.current"
+              />
+            </div>
           )}
         </div>
         <div>
@@ -164,6 +273,32 @@ export const PCSummary = ({
             <span>{melee}</span>
             <span>{ranged}</span>
           </h2>
+          {editing && (
+            <div>
+              <BadgeModifiers
+                decrease={() =>
+                  setFieldValue('attributes.defense.melee', melee - 1)
+                }
+                decreaseDisabled={isSubmitting || melee <= 0}
+                increase={() =>
+                  setFieldValue('attributes.defense.melee', melee + 1)
+                }
+                increaseDisabled={isSubmitting}
+                name="attributes.defense.melee"
+              />
+              <BadgeModifiers
+                decrease={() =>
+                  setFieldValue('attributes.defense.ranged', ranged - 1)
+                }
+                decreaseDisabled={isSubmitting || ranged <= 0}
+                increase={() =>
+                  setFieldValue('attributes.defense.ranged', ranged + 1)
+                }
+                increaseDisabled={isSubmitting}
+                name="attributes.defense.ranged"
+              />
+            </div>
+          )}
         </div>
       </StyledAttributesSection>
       {!hideLink && (
