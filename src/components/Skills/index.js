@@ -47,7 +47,6 @@ const StyledSkills = styled.div`
 export const Skills = ({
   className,
   editing,
-  initialSkills,
   isSubmitting,
   onChange,
   skills,
@@ -59,10 +58,7 @@ export const Skills = ({
         <div>
           {skillsOfType.map((skill) => (
             <SkillRow
-              decreaseDisabled={
-                isSubmitting ||
-                skills[skill.id].rank <= initialSkills[skill.id].rank
-              }
+              decreaseDisabled={isSubmitting || skills[skill.id].rank <= 0}
               editing={editing}
               increaseDisabled={isSubmitting || skills[skill.id].rank >= 5}
               key={skill.id}
@@ -87,8 +83,6 @@ Skills.propTypes = {
   className: PropTypes.string,
   /** Whether to show the editing buttons */
   editing: PropTypes.bool,
-  /** The initial values of skills */
-  initialSkills: PropTypes.objectOf(skillType).isRequired,
   /** Whether the values are being submitted */
   isSubmitting: PropTypes.bool,
   /** Invoked upon changing skills values */

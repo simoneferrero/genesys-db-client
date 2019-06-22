@@ -5,16 +5,8 @@ import keyBy from 'lodash/keyBy'
 import { playerCharacter1SkillsAugmented } from 'mocks/playersCharacters'
 
 const skills = keyBy(playerCharacter1SkillsAugmented.toJS(), 'id')
-const initialSkills = {
-  ...skills,
-  stealth: {
-    ...skills.stealth,
-    rank: 4,
-  },
-}
 const mockOnChange = jest.fn()
 const defaultProps = {
-  initialSkills,
   onChange: mockOnChange,
   skills,
 }
@@ -73,7 +65,7 @@ describe('<Skills />', () => {
 
       fireEvent.click(decreaseButton)
 
-      if (id === 'stealth') {
+      if (defaultProps.skills[id].rank > 0) {
         expect(mockOnChange).toHaveBeenCalledTimes(1)
         expect(mockOnChange).toHaveBeenCalledWith(
           `skills.${id}.rank`,
@@ -86,14 +78,17 @@ describe('<Skills />', () => {
       const increaseButton = getByTestId(`increase-${id}-rank`)
       expect(increaseButton).toBeInTheDocument()
 
+      mockOnChange.mockClear()
       fireEvent.click(increaseButton)
 
-      expect(mockOnChange).toHaveBeenCalledTimes(1)
-      if (id !== 'stealth') {
+      if (defaultProps.skills[id].rank < 5) {
+        expect(mockOnChange).toHaveBeenCalledTimes(1)
         expect(mockOnChange).toHaveBeenCalledWith(
           `skills.${id}.rank`,
           skills[id].rank + 1,
         )
+      } else {
+        expect(mockOnChange).not.toHaveBeenCalled()
       }
 
       jest.clearAllMocks()

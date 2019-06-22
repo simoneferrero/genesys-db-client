@@ -38,7 +38,6 @@ const InnerForm = ({
   editing,
   factions,
   handleSubmit,
-  initialValues,
   isSubmitting,
   resetForm,
   setEditing,
@@ -68,7 +67,6 @@ const InnerForm = ({
     <StyledSectionWrapper
       as={Skills}
       editing={editing}
-      initialSkills={initialValues.skills}
       isSubmitting={isSubmitting}
       onChange={setFieldValue}
       sectionTitle="Skills"
@@ -177,8 +175,6 @@ InnerForm.propTypes = {
   errors: PropTypes.object.isRequired,
   /** Factions data */
   factions: PropTypes.objectOf(factionType).isRequired,
-  /** Form initial values */
-  initialValues: PropTypes.object.isRequired,
   /** Invoked on submit */
   handleSubmit: PropTypes.func.isRequired,
   /** Whether the form is submitting */
