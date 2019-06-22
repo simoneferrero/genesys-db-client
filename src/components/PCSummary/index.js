@@ -61,6 +61,21 @@ export const PCSummary = ({
   player_name,
   setFieldValue,
 }) => {
+  const onSoakChange = ({ target: { value } }) =>
+    setFieldValue('attributes.soak', value)
+  const onTotalWoundsChange = ({ target: { value } }) =>
+    setFieldValue('attributes.wounds.total', value)
+  const onCurrentWoundsChange = ({ target: { value } }) =>
+    setFieldValue('attributes.wounds.current', value)
+  const onTotalStrainChange = ({ target: { value } }) =>
+    setFieldValue('attributes.strain.total', value)
+  const onCurrentStrainChange = ({ target: { value } }) =>
+    setFieldValue('attributes.strain.current', value)
+  const onMeleeDefenseChange = ({ target: { value } }) =>
+    setFieldValue('attributes.defense.melee', value)
+  const onRangedDefenseChange = ({ target: { value } }) =>
+    setFieldValue('attributes.defense.ranged', value)
+
   const pathToRoute = routes
     .find(({ id: routeId }) => routeId === 'player-character')
     .to.replace(':id', id)
@@ -188,116 +203,101 @@ export const PCSummary = ({
       <StyledAttributesSection>
         <div>
           <img alt={SOAK} src={Soak} />
-          <h2>
-            <span>{soak}</span>
-          </h2>
-          {editing && (
-            <BadgeModifiers
-              decrease={() => setFieldValue('attributes.soak', soak - 1)}
-              decreaseDisabled={isSubmitting || soak <= 0}
-              increase={() => setFieldValue('attributes.soak', soak + 1)}
-              increaseDisabled={isSubmitting}
-              name="attributes.soak"
+          {editing ? (
+            <input
+              alt="Soak Value"
+              disabled={isSubmitting}
+              min={0}
+              onChange={onSoakChange}
+              type="number"
+              value={soak}
             />
+          ) : (
+            <h2>{soak}</h2>
           )}
         </div>
         <div>
           <img alt={WOUNDS} src={Wounds} />
-          <h2>
-            <span>{totalWounds}</span>
-            <span>{currentWounds}</span>
-          </h2>
-          {editing && (
+          {editing ? (
             <div>
-              <BadgeModifiers
-                decrease={() =>
-                  setFieldValue('attributes.wounds.total', totalWounds - 1)
-                }
-                decreaseDisabled={isSubmitting || totalWounds <= 0}
-                increase={() =>
-                  setFieldValue('attributes.wounds.total', totalWounds + 1)
-                }
-                increaseDisabled={isSubmitting}
-                name="attributes.wounds.total"
+              <input
+                alt="Total Wounds"
+                disabled={isSubmitting}
+                min={0}
+                onChange={onTotalWoundsChange}
+                type="number"
+                value={totalWounds}
               />
-              <BadgeModifiers
-                decrease={() =>
-                  setFieldValue('attributes.wounds.current', currentWounds - 1)
-                }
-                decreaseDisabled={isSubmitting || currentWounds <= 0}
-                increase={() =>
-                  setFieldValue('attributes.wounds.current', currentWounds + 1)
-                }
-                increaseDisabled={isSubmitting}
-                name="attributes.wounds.current"
+              <input
+                alt="Current Wounds"
+                disabled={isSubmitting}
+                min={0}
+                onChange={onCurrentWoundsChange}
+                type="number"
+                value={currentWounds}
               />
             </div>
+          ) : (
+            <h2>
+              <span>{totalWounds}</span>
+              <span>{currentWounds}</span>
+            </h2>
           )}
         </div>
         <div>
           <img alt={STRAIN} src={Strain} />
-          <h2>
-            <span>{totalStrain}</span>
-            <span>{currentStrain}</span>
-          </h2>
-          {editing && (
+          {editing ? (
             <div>
-              <BadgeModifiers
-                decrease={() =>
-                  setFieldValue('attributes.strain.total', totalStrain - 1)
-                }
-                decreaseDisabled={isSubmitting || totalStrain <= 0}
-                increase={() =>
-                  setFieldValue('attributes.strain.total', totalStrain + 1)
-                }
-                increaseDisabled={isSubmitting}
-                name="attributes.strain.total"
+              <input
+                alt="Total Strain"
+                disabled={isSubmitting}
+                min={0}
+                onChange={onTotalStrainChange}
+                type="number"
+                value={totalStrain}
               />
-              <BadgeModifiers
-                decrease={() =>
-                  setFieldValue('attributes.strain.current', currentStrain - 1)
-                }
-                decreaseDisabled={isSubmitting || currentStrain <= 0}
-                increase={() =>
-                  setFieldValue('attributes.strain.current', currentStrain + 1)
-                }
-                increaseDisabled={isSubmitting}
-                name="attributes.strain.current"
+              <input
+                alt="Current Strain"
+                disabled={isSubmitting}
+                min={0}
+                onChange={onCurrentStrainChange}
+                type="number"
+                value={currentStrain}
               />
             </div>
+          ) : (
+            <h2>
+              <span>{totalStrain}</span>
+              <span>{currentStrain}</span>
+            </h2>
           )}
         </div>
         <div>
           <img alt={DEFENSE} src={Defense} />
-          <h2>
-            <span>{melee}</span>
-            <span>{ranged}</span>
-          </h2>
-          {editing && (
+          {editing ? (
             <div>
-              <BadgeModifiers
-                decrease={() =>
-                  setFieldValue('attributes.defense.melee', melee - 1)
-                }
-                decreaseDisabled={isSubmitting || melee <= 0}
-                increase={() =>
-                  setFieldValue('attributes.defense.melee', melee + 1)
-                }
-                increaseDisabled={isSubmitting}
-                name="attributes.defense.melee"
+              <input
+                alt="Melee Defense"
+                disabled={isSubmitting}
+                min={0}
+                onChange={onMeleeDefenseChange}
+                type="number"
+                value={melee}
               />
-              <BadgeModifiers
-                decrease={() =>
-                  setFieldValue('attributes.defense.ranged', ranged - 1)
-                }
-                decreaseDisabled={isSubmitting || ranged <= 0}
-                increase={() =>
-                  setFieldValue('attributes.defense.ranged', ranged + 1)
-                }
-                increaseDisabled={isSubmitting}
-                name="attributes.defense.ranged"
+              <input
+                alt="Ranged Defense"
+                disabled={isSubmitting}
+                min={0}
+                onChange={onRangedDefenseChange}
+                type="number"
+                value={ranged}
               />
             </div>
+          ) : (
+            <h2>
+              <span>{melee}</span>
+              <span>{ranged}</span>
+            </h2>
           )}
         </div>
       </StyledAttributesSection>

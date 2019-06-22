@@ -20,8 +20,7 @@ export const weaponData = {
   /** Price of new weapon */
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   /** How far it can reach */
-  range: PropTypes.oneOf(['engaged', 'short', 'medium', 'long', 'extreme'])
-    .isRequired,
+  range: PropTypes.oneOf(['engaged', 'short', 'medium', 'long', 'extreme']),
   /** How rare it is to find it */
   rarity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   /** Whether it's legal or not to have it */

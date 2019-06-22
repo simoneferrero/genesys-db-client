@@ -51,6 +51,7 @@ exports[`Storyshots Components/XPBadges default 1`] = `
 .c0 > div input {
   border: none;
   background: transparent;
+  color: rgb(0,130,155);
   width: 90%;
   text-align: center;
   font-size: 1.5em;
@@ -144,6 +145,7 @@ exports[`Storyshots Components/XPBadges editing 1`] = `
 .c0 > div input {
   border: none;
   background: transparent;
+  color: rgb(0,130,155);
   width: 90%;
   text-align: center;
   font-size: 1.5em;

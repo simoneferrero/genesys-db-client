@@ -53,6 +53,13 @@ describe('<PCSummary />', () => {
     WILLPOWER,
   } = CHARACTERISTICS
 
+  const soakAlt = /soak value/i
+  const totalWoundsAlt = /total wounds/i
+  const currentWoundsAlt = /current wounds/i
+  const totalStrainAlt = /total strain/i
+  const currentStrainAlt = /current strain/i
+  const meleeDefenseAlt = /melee defense/i
+  const rangedDefenseAlt = /ranged defense/i
   const brawnName = 'characteristics.brawn'
   const agilityName = 'characteristics.agility'
   const intellectName = 'characteristics.intellect'
@@ -67,7 +74,7 @@ describe('<PCSummary />', () => {
   const meleeDefenseName = 'attributes.defense.melee'
   const rangedDefenseName = 'attributes.defense.ranged'
 
-  const testCases = [
+  const characteristicsTestCases = [
     {
       name: brawnName,
       value: brawn,
@@ -92,31 +99,40 @@ describe('<PCSummary />', () => {
       name: presenceName,
       value: presence,
     },
+  ]
+  const attributesTestCases = [
     {
+      alt: soakAlt,
       name: soakName,
       value: soak,
     },
     {
+      alt: totalWoundsAlt,
       name: totalWoundsName,
       value: totalWounds,
     },
     {
+      alt: currentWoundsAlt,
       name: currentWoundsName,
       value: currentWounds,
     },
     {
+      alt: totalStrainAlt,
       name: totalStrainName,
       value: totalStrain,
     },
     {
+      alt: currentStrainAlt,
       name: currentStrainName,
       value: currentStrain,
     },
     {
+      alt: meleeDefenseAlt,
       name: meleeDefenseName,
       value: melee,
     },
     {
+      alt: rangedDefenseAlt,
       name: rangedDefenseName,
       value: ranged,
     },
@@ -231,10 +247,10 @@ describe('<PCSummary />', () => {
     const props = {
       editing: true,
     }
-    const { getByTestId } = renderComponent(props)
+    const { getByAltText, getByTestId } = renderComponent(props)
 
     await wait(() => {
-      testCases.forEach(({ name, value }) => {
+      characteristicsTestCases.forEach(({ name, value }) => {
         const modifiers = getByTestId(`badge-modifiers-${name}`)
         expect(modifiers).toBeInTheDocument()
         const decrease = getByTestId(`decrease-${name}`)
@@ -245,6 +261,15 @@ describe('<PCSummary />', () => {
         expect(increase).toBeInTheDocument()
         fireEvent.click(increase)
         expect(mockSetFieldValue).toHaveBeenCalledWith(name, value + 1)
+      })
+
+      attributesTestCases.forEach(({ alt, name }) => {
+        const field = getByAltText(alt)
+        expect(field).toBeInTheDocument()
+
+        const newValue = '10'
+        fireEvent.change(field, { target: { value: newValue } })
+        expect(mockSetFieldValue).toHaveBeenCalledWith(name, newValue)
       })
     })
   })
@@ -260,26 +285,11 @@ describe('<PCSummary />', () => {
         willpower: 1,
         presence: 1,
       },
-      attributes: {
-        soak: 0,
-        wounds: {
-          current: 0,
-          total: 0,
-        },
-        strain: {
-          current: 0,
-          total: 0,
-        },
-        defense: {
-          melee: 0,
-          ranged: 0,
-        },
-      },
     }
     const { getByTestId } = renderComponent(props)
 
     await wait(() => {
-      testCases.forEach(({ name }) => {
+      characteristicsTestCases.forEach(({ name }) => {
         const decrease = getByTestId(`decrease-${name}`)
         expect(decrease).toBeDisabled()
       })
@@ -301,14 +311,9 @@ describe('<PCSummary />', () => {
     const { getByTestId } = renderComponent(props)
 
     await wait(() => {
-      testCases.forEach(({ name }) => {
+      characteristicsTestCases.forEach(({ name }) => {
         const increase = getByTestId(`increase-${name}`)
-
-        if (name.indexOf('characteristics.') > -1) {
-          expect(increase).toBeDisabled()
-        } else {
-          expect(increase).not.toBeDisabled()
-        }
+        expect(increase).toBeDisabled()
       })
     })
   })
@@ -318,14 +323,19 @@ describe('<PCSummary />', () => {
       editing: true,
       isSubmitting: true,
     }
-    const { getByTestId } = renderComponent(props)
+    const { getByAltText, getByTestId } = renderComponent(props)
 
     await wait(() => {
-      testCases.forEach(({ name }) => {
+      characteristicsTestCases.forEach(({ name }) => {
         const decrease = getByTestId(`decrease-${name}`)
         expect(decrease).toBeDisabled()
         const increase = getByTestId(`increase-${name}`)
         expect(increase).toBeDisabled()
+      })
+
+      attributesTestCases.forEach(({ alt }) => {
+        const field = getByAltText(alt)
+        expect(field).toBeDisabled()
       })
     })
   })
@@ -338,8 +348,8 @@ describe('<PCSummary />', () => {
     const { getByTestId } = renderComponent(props)
 
     await wait(() => {
-      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
-      fireEvent.click(decreaseCurrentWounds)
+      const increaseBrawn = getByTestId(`increase-${brawnName}`)
+      fireEvent.click(increaseBrawn)
 
       const summary = getByTestId(`pc-summary-${id}`)
       expect(summary).toBeInTheDocument()

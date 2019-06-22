@@ -79,6 +79,19 @@ describe('<Weapon />', () => {
     expect(content).toHaveStyle('display: grid;')
   })
 
+  it('should not break if range is not defined', () => {
+    const props = {
+      weapon: {
+        ...weapon1,
+        range: undefined,
+      },
+    }
+    const { getByTestId } = renderComponent(props)
+
+    const existingWeapon = getByTestId(`weapon-${weapon1.id}`)
+    expect(existingWeapon).toBeInTheDocument()
+  })
+
   it('should correctly display the value of restricted if restricted', () => {
     const props = {
       weapon: {

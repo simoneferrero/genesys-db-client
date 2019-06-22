@@ -39,6 +39,7 @@ const StyledContainer = styled.div`
     input {
       border: none;
       background: transparent;
+      color: ${colours.teal};
       width: 90%;
       text-align: center;
       font-size: 1.5em;

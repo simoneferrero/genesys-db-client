@@ -51,9 +51,9 @@ describe('<PCSheet />', () => {
   it('should render correctly', () => {
     const {
       getAllByText,
+      getByAltText,
       getByDisplayValue,
       getByTestId,
-      getByText,
       queryByText,
     } = renderComponent()
 
@@ -107,11 +107,10 @@ describe('<PCSheet />', () => {
     fireEvent.click(editButton)
 
     // Check attributes change
-    const increaseWoundsButton = getByTestId(
-      'increase-attributes.wounds.current',
-    )
-    fireEvent.click(increaseWoundsButton)
-    const newWoundsValue = getByText('12')
+    const currentWoundsField = getByAltText(/current wounds/i)
+    const newValue = '20'
+    fireEvent.change(currentWoundsField, { target: { value: newValue } })
+    const newWoundsValue = getByDisplayValue(newValue)
     expect(newWoundsValue).toBeInTheDocument()
 
     // Check skills change
@@ -226,6 +225,7 @@ describe('<PCSheet />', () => {
   it('should reset the form on cancel', () => {
     const {
       getAllByText,
+      getByAltText,
       getByDisplayValue,
       getByTestId,
       getByText,
@@ -238,11 +238,10 @@ describe('<PCSheet />', () => {
     const editButton = getByTestId('edit-pc-sheet')
     fireEvent.click(editButton)
 
-    const increaseWoundsButton = getByTestId(
-      'increase-attributes.wounds.current',
-    )
-    fireEvent.click(increaseWoundsButton)
-    const newWoundsValue = getByText('12')
+    const currentWoundsField = getByAltText(/current wounds/i)
+    const newValue = '20'
+    fireEvent.change(currentWoundsField, { target: { value: newValue } })
+    const newWoundsValue = getByDisplayValue(newValue)
     expect(newWoundsValue).toBeInTheDocument()
 
     const athleticsRank = getByTestId('athletics-1')

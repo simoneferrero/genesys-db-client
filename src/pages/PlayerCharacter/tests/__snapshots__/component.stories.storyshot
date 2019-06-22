@@ -765,7 +765,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   transform: translateX(-50%);
 }
 
-.c7 > div h2 {
+.c7 > div h2,
+.c7 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -815,7 +816,8 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   transform: translateX(-50%);
 }
 
-.c8 > div h2 {
+.c8 > div h2,
+.c8 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -829,7 +831,9 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   display: inline-flex;
 }
 
-.c8 > div h2 {
+.c8 > div h2,
+.c8 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -837,8 +841,24 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: right;
 }
 
-.c8 > div h2 span:nth-child(2) {
+.c8 > div h2 span:nth-child(2),
+.c8 > div div span:nth-child(2),
+.c8 > div h2 input:nth-child(2),
+.c8 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c8 > div h2 > input,
+.c8 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c8 > div div {
+  top: 18px;
 }
 
 .c8 > div img {
@@ -847,6 +867,23 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 
 .c8 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c8 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c8 > div input::-webkit-inner-spin-button,
+.c8 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c13 {
@@ -1411,6 +1448,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 .c50 > div input {
   border: none;
   background: transparent;
+  color: rgb(0,130,155);
   width: 90%;
   text-align: center;
   font-size: 1.5em;
@@ -2036,9 +2074,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
             src="Soak.png"
           />
           <h2>
-            <span>
-              3
-            </span>
+            3
           </h2>
         </div>
         <div>
@@ -4116,7 +4152,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   transform: translateX(-50%);
 }
 
-.c7 > div h2 {
+.c7 > div h2,
+.c7 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -4166,7 +4203,8 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   transform: translateX(-50%);
 }
 
-.c8 > div h2 {
+.c8 > div h2,
+.c8 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -4180,7 +4218,9 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   display: inline-flex;
 }
 
-.c8 > div h2 {
+.c8 > div h2,
+.c8 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -4188,8 +4228,24 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: right;
 }
 
-.c8 > div h2 span:nth-child(2) {
+.c8 > div h2 span:nth-child(2),
+.c8 > div div span:nth-child(2),
+.c8 > div h2 input:nth-child(2),
+.c8 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c8 > div h2 > input,
+.c8 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c8 > div div {
+  top: 18px;
 }
 
 .c8 > div img {
@@ -4198,6 +4254,23 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 
 .c8 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c8 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c8 > div input::-webkit-inner-spin-button,
+.c8 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c13 {
@@ -4762,6 +4835,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 .c50 > div input {
   border: none;
   background: transparent;
+  color: rgb(0,130,155);
   width: 90%;
   text-align: center;
   font-size: 1.5em;
@@ -5387,9 +5461,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
             src="Soak.png"
           />
           <h2>
-            <span>
-              3
-            </span>
+            3
           </h2>
         </div>
         <div>

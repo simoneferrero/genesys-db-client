@@ -738,7 +738,8 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   transform: translateX(-50%);
 }
 
-.c6 > div h2 {
+.c6 > div h2,
+.c6 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -788,7 +789,8 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   transform: translateX(-50%);
 }
 
-.c7 > div h2 {
+.c7 > div h2,
+.c7 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -802,7 +804,9 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   display: inline-flex;
 }
 
-.c7 > div h2 {
+.c7 > div h2,
+.c7 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -810,8 +814,24 @@ exports[`Storyshots Components/PCSheet default 1`] = `
   text-align: right;
 }
 
-.c7 > div h2 span:nth-child(2) {
+.c7 > div h2 span:nth-child(2),
+.c7 > div div span:nth-child(2),
+.c7 > div h2 input:nth-child(2),
+.c7 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c7 > div h2 > input,
+.c7 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c7 > div div {
+  top: 18px;
 }
 
 .c7 > div img {
@@ -820,6 +840,23 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 
 .c7 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c7 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c7 > div input::-webkit-inner-spin-button,
+.c7 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c12 {
@@ -1384,6 +1421,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
 .c49 > div input {
   border: none;
   background: transparent;
+  color: rgb(0,130,155);
   width: 90%;
   text-align: center;
   font-size: 1.5em;
@@ -1998,9 +2036,7 @@ exports[`Storyshots Components/PCSheet default 1`] = `
           src="Soak.png"
         />
         <h2>
-          <span>
-            3
-          </span>
+          3
         </h2>
       </div>
       <div>

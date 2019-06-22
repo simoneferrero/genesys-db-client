@@ -32,7 +32,7 @@ const ExistingWeapon = ({
 
   const MODS = 'mods'
 
-  const selectedRange = ranges[range].label
+  const selectedRange = range && ranges[range].label
   const deleteButton = (
     <StyledButton
       data-testid={`deleteWeaponButton-${id}`}

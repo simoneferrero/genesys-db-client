@@ -96,7 +96,8 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   transform: translateX(-50%);
 }
 
-.c4 > div h2 {
+.c4 > div h2,
+.c4 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -146,7 +147,8 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   transform: translateX(-50%);
 }
 
-.c5 > div h2 {
+.c5 > div h2,
+.c5 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -160,7 +162,9 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   display: inline-flex;
 }
 
-.c5 > div h2 {
+.c5 > div h2,
+.c5 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -168,8 +172,24 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
   text-align: right;
 }
 
-.c5 > div h2 span:nth-child(2) {
+.c5 > div h2 span:nth-child(2),
+.c5 > div div span:nth-child(2),
+.c5 > div h2 input:nth-child(2),
+.c5 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c5 > div h2 > input,
+.c5 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c5 > div div {
+  top: 18px;
 }
 
 .c5 > div img {
@@ -178,6 +198,23 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
 
 .c5 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c5 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c5 > div input::-webkit-inner-spin-button,
+.c5 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c6 {
@@ -361,9 +398,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
           src="Soak.png"
         />
         <h2>
-          <span>
-            3
-          </span>
+          3
         </h2>
       </div>
       <div>
@@ -536,9 +571,7 @@ exports[`Storyshots Pages/PlayersCharacters default 1`] = `
           src="Soak.png"
         />
         <h2>
-          <span>
-            5
-          </span>
+          5
         </h2>
       </div>
       <div>
@@ -703,7 +736,8 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   transform: translateX(-50%);
 }
 
-.c4 > div h2 {
+.c4 > div h2,
+.c4 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -753,7 +787,8 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   transform: translateX(-50%);
 }
 
-.c5 > div h2 {
+.c5 > div h2,
+.c5 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
@@ -767,7 +802,9 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   display: inline-flex;
 }
 
-.c5 > div h2 {
+.c5 > div h2,
+.c5 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -775,8 +812,24 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
   text-align: right;
 }
 
-.c5 > div h2 span:nth-child(2) {
+.c5 > div h2 span:nth-child(2),
+.c5 > div div span:nth-child(2),
+.c5 > div h2 input:nth-child(2),
+.c5 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c5 > div h2 > input,
+.c5 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c5 > div div {
+  top: 18px;
 }
 
 .c5 > div img {
@@ -785,6 +838,23 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
 
 .c5 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c5 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c5 > div input::-webkit-inner-spin-button,
+.c5 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c6 {
@@ -968,9 +1038,7 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
           src="Soak.png"
         />
         <h2>
-          <span>
-            3
-          </span>
+          3
         </h2>
       </div>
       <div>
@@ -1143,9 +1211,7 @@ exports[`Storyshots Pages/PlayersCharacters loading 1`] = `
           src="Soak.png"
         />
         <h2>
-          <span>
-            5
-          </span>
+          5
         </h2>
       </div>
       <div>
