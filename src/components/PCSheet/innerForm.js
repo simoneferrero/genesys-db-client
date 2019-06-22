@@ -25,6 +25,7 @@ import PCSummary from 'components/PCSummary'
 import Skills from 'components/Skills'
 import Talents from 'components/TalentsSection'
 import Weapons from 'components/WeaponsSection'
+import XPBadges from 'components/XPBadges'
 
 import { StyledForm, StyledFormButtons, StyledSectionWrapper } from './styles'
 
@@ -37,7 +38,6 @@ const InnerForm = ({
   editing,
   factions,
   handleSubmit,
-  initialValues,
   isSubmitting,
   resetForm,
   setEditing,
@@ -67,7 +67,6 @@ const InnerForm = ({
     <StyledSectionWrapper
       as={Skills}
       editing={editing}
-      initialSkills={initialValues.skills}
       isSubmitting={isSubmitting}
       onChange={setFieldValue}
       sectionTitle="Skills"
@@ -145,6 +144,12 @@ const InnerForm = ({
       setFieldValue={setFieldValue}
       sectionTitle="Notes"
     />
+    <XPBadges
+      editing={editing}
+      setFieldValue={setFieldValue}
+      xpAvailable={values.xp.available}
+      xpTotal={values.xp.total}
+    />
   </StyledForm>
 )
 
@@ -170,8 +175,6 @@ InnerForm.propTypes = {
   errors: PropTypes.object.isRequired,
   /** Factions data */
   factions: PropTypes.objectOf(factionType).isRequired,
-  /** Form initial values */
-  initialValues: PropTypes.object.isRequired,
   /** Invoked on submit */
   handleSubmit: PropTypes.func.isRequired,
   /** Whether the form is submitting */

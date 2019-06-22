@@ -16,17 +16,23 @@ export const playerCharacterSummaryData = {
   /** Information on the character's attributes */
   attributes: PropTypes.shape({
     defense: PropTypes.shape({
-      melee: PropTypes.number.isRequired,
-      ranged: PropTypes.number.isRequired,
+      melee: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired,
+      ranged: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired,
     }).isRequired,
-    soak: PropTypes.number.isRequired,
+    soak: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     strain: PropTypes.shape({
-      current: PropTypes.number.isRequired,
-      total: PropTypes.number.isRequired,
+      current: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired,
+      total: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired,
     }).isRequired,
     wounds: PropTypes.shape({
-      current: PropTypes.number.isRequired,
-      total: PropTypes.number.isRequired,
+      current: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired,
+      total: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired,
     }).isRequired,
   }).isRequired,
   /** The character's career ID */

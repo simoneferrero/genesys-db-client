@@ -56,3 +56,8 @@ export const CHARACTERISTICS = {
   PRESENCE: 'presence',
   WILLPOWER: 'willpower',
 }
+
+export const XP = {
+  AVAILABLE: 'xp_available',
+  TOTAL: 'xp_total',
+}

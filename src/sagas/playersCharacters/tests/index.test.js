@@ -289,12 +289,18 @@ describe('playersCharacters sagas', () => {
 
         const {
           attributes: {
-            wounds: { current: wounds_current },
-            strain: { current: strain_current },
+            defense: { melee: defense_melee, ranged: defense_ranged },
+            soak,
+            strain: { current: strain_current, total: strain_total },
+            wounds: { current: wounds_current, total: wounds_total },
           },
+          characteristics,
           favors,
         } = values
         const data = JSON.stringify({
+          characteristics,
+          defense_melee,
+          defense_ranged,
           deletedCriticalInjuries: [`${criticalInjury1.id}`],
           deletedWeapons: [`${weapon1.id}`],
           equipment: playerCharacter1Response.equipment,
@@ -304,7 +310,9 @@ describe('playersCharacters sagas', () => {
           skills: rawSkills
             .filter(({ rank }) => rank)
             .map(({ id, rank }) => ({ id, rank })),
+          soak,
           strain_current,
+          strain_total,
           talents: Object.values(playerCharacter1Talents).map(
             ({ id, notes, rank = null }) => ({ id, notes, rank }),
           ),
@@ -312,6 +320,8 @@ describe('playersCharacters sagas', () => {
             .toJS()
             .weapons.map(({ id, mods }) => ({ id, mods })),
           wounds_current,
+          wounds_total,
+          xp: playerCharacter.xp,
         })
 
         const opts = {

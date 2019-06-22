@@ -69,10 +69,19 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   transform: translateX(-50%);
 }
 
-.c2 > div h2 {
+.c2 > div h2,
+.c2 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
+}
+
+.c2 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c2 > div h2 {
@@ -111,13 +120,24 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   transform: translateX(-50%);
 }
 
-.c3 > div h2 {
+.c3 > div h2,
+.c3 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
 }
 
-.c3 > div h2 {
+.c3 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c3 > div h2,
+.c3 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -125,8 +145,24 @@ exports[`Storyshots Components/PCSummary default 1`] = `
   text-align: right;
 }
 
-.c3 > div h2 span:nth-child(2) {
+.c3 > div h2 span:nth-child(2),
+.c3 > div div span:nth-child(2),
+.c3 > div h2 input:nth-child(2),
+.c3 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c3 > div h2 > input,
+.c3 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c3 > div div {
+  top: 18px;
 }
 
 .c3 > div img {
@@ -135,6 +171,23 @@ exports[`Storyshots Components/PCSummary default 1`] = `
 
 .c3 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c3 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c3 > div input::-webkit-inner-spin-button,
+.c3 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c4 {
@@ -296,9 +349,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
         src="Soak.png"
       />
       <h2>
-        <span>
-          3
-        </span>
+        3
       </h2>
     </div>
     <div>
@@ -367,7 +418,7 @@ exports[`Storyshots Components/PCSummary default 1`] = `
 `;
 
 exports[`Storyshots Components/PCSummary editing 1`] = `
-.c4 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -379,7 +430,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   justify-content: space-between;
 }
 
-.c5 {
+.c4 {
   background: transparent;
   border: none;
   color: rgb(242,143,34);
@@ -388,7 +439,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   cursor: pointer;
 }
 
-.c5:disabled {
+.c4:disabled {
   color: rgb(255,244,233);
   cursor: not-allowed;
 }
@@ -461,10 +512,19 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   transform: translateX(-50%);
 }
 
-.c2 > div h2 {
+.c2 > div h2,
+.c2 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
+}
+
+.c2 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c2 > div h2 {
@@ -475,13 +535,13 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   height: 60px;
 }
 
-.c3 {
+.c5 {
   display: grid;
   grid-gap: 6px;
   grid-template-columns: repeat(2,1fr);
 }
 
-.c3 > div {
+.c5 > div {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -503,13 +563,24 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   transform: translateX(-50%);
 }
 
-.c3 > div h2 {
+.c5 > div h2,
+.c5 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
 }
 
-.c3 > div h2 {
+.c5 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c5 > div h2,
+.c5 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -517,16 +588,49 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
   text-align: right;
 }
 
-.c3 > div h2 span:nth-child(2) {
+.c5 > div h2 span:nth-child(2),
+.c5 > div div span:nth-child(2),
+.c5 > div h2 input:nth-child(2),
+.c5 > div div input:nth-child(2) {
   text-align: left;
 }
 
-.c3 > div img {
+.c5 > div h2 > input,
+.c5 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c5 > div div {
+  top: 18px;
+}
+
+.c5 > div img {
   height: 50px;
 }
 
-.c3 > div:nth-child(1) > h2 {
+.c5 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c5 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c5 > div input::-webkit-inner-spin-button,
+.c5 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c6 {
@@ -576,7 +680,7 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
 }
 
 @media only screen and (min-width:600px) and (max-width:899px),only screen and (min-width:900px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1799px),only screen and (min-width:1800px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(4,1fr);
   }
 }
@@ -632,6 +736,49 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         2
       </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.brawn"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.brawn"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.brawn"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
     <div>
       <img
@@ -641,6 +788,49 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         2
       </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.agility"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.agility"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.agility"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
     <div>
       <img
@@ -650,6 +840,49 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         4
       </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.intellect"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.intellect"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.intellect"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
     <div>
       <img
@@ -659,6 +892,49 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         2
       </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.cunning"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.cunning"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.cunning"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
     <div>
       <img
@@ -668,6 +944,49 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         4
       </h2>
+      <div
+        class="c3"
+        data-testid="badge-modifiers-characteristics.willpower"
+      >
+        <button
+          class="c4"
+          data-testid="decrease-characteristics.willpower"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13H5v-2h14v2z"
+            />
+          </svg>
+        </button>
+        <button
+          class="c4"
+          data-testid="increase-characteristics.willpower"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
     <div>
       <img
@@ -677,42 +996,13 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
       <h2>
         2
       </h2>
-    </div>
-  </section>
-  <section
-    class="c3"
-  >
-    <div>
-      <img
-        alt="soak"
-        src="Soak.png"
-      />
-      <h2>
-        <span>
-          3
-        </span>
-      </h2>
-    </div>
-    <div>
-      <img
-        alt="wounds"
-        src="Wounds.png"
-      />
-      <h2>
-        <span>
-          13
-        </span>
-        <span>
-          11
-        </span>
-      </h2>
       <div
-        class="c4"
-        data-testid="badge-modifiers-attributes.wounds.current"
+        class="c3"
+        data-testid="badge-modifiers-characteristics.presence"
       >
         <button
-          class="c5"
-          data-testid="decrease-attributes.wounds.current"
+          class="c4"
+          data-testid="decrease-characteristics.presence"
           type="button"
         >
           <svg
@@ -730,8 +1020,8 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
           </svg>
         </button>
         <button
-          class="c5"
-          data-testid="increase-attributes.wounds.current"
+          class="c4"
+          data-testid="increase-characteristics.presence"
           type="button"
         >
           <svg
@@ -748,6 +1038,42 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
             />
           </svg>
         </button>
+      </div>
+    </div>
+  </section>
+  <section
+    class="c5"
+  >
+    <div>
+      <img
+        alt="soak"
+        src="Soak.png"
+      />
+      <input
+        alt="Soak Value"
+        min="0"
+        type="number"
+        value="3"
+      />
+    </div>
+    <div>
+      <img
+        alt="wounds"
+        src="Wounds.png"
+      />
+      <div>
+        <input
+          alt="Total Wounds"
+          min="0"
+          type="number"
+          value="13"
+        />
+        <input
+          alt="Current Wounds"
+          min="0"
+          type="number"
+          value="11"
+        />
       </div>
     </div>
     <div>
@@ -755,56 +1081,19 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
         alt="strain"
         src="Strain.png"
       />
-      <h2>
-        <span>
-          14
-        </span>
-        <span>
-          2
-        </span>
-      </h2>
-      <div
-        class="c4"
-        data-testid="badge-modifiers-attributes.strain.current"
-      >
-        <button
-          class="c5"
-          data-testid="decrease-attributes.strain.current"
-          type="button"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 13H5v-2h14v2z"
-            />
-          </svg>
-        </button>
-        <button
-          class="c5"
-          data-testid="increase-attributes.strain.current"
-          type="button"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-            />
-          </svg>
-        </button>
+      <div>
+        <input
+          alt="Total Strain"
+          min="0"
+          type="number"
+          value="14"
+        />
+        <input
+          alt="Current Strain"
+          min="0"
+          type="number"
+          value="2"
+        />
       </div>
     </div>
     <div>
@@ -812,14 +1101,20 @@ exports[`Storyshots Components/PCSummary editing 1`] = `
         alt="defense"
         src="Defense.png"
       />
-      <h2>
-        <span>
-          1
-        </span>
-        <span>
-          1
-        </span>
-      </h2>
+      <div>
+        <input
+          alt="Melee Defense"
+          min="0"
+          type="number"
+          value="1"
+        />
+        <input
+          alt="Ranged Defense"
+          min="0"
+          type="number"
+          value="1"
+        />
+      </div>
     </div>
   </section>
   <a

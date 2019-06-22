@@ -2,7 +2,12 @@ import styled, { css } from 'styled-components/macro'
 
 import rgbToRgba from 'utils/rgbToRgba'
 
-import { baseSpacing, borderRadius, colours } from 'styles/constants'
+import {
+  baseSpacing,
+  borderRadius,
+  colours,
+  fontFamilies,
+} from 'styles/constants'
 import mq from 'styles/mediaQueries'
 
 export const StyledPCSummary = styled.div`
@@ -73,10 +78,16 @@ const sharedBadgeWrapperStyles = css`
   left: 50%;
   transform: translateX(-50%);
 
-  h2 {
+  h2,
+  input {
     color: ${colours.lightOrange};
     position: absolute;
     margin-left: 1px;
+  }
+
+  & > div {
+    width: 100%;
+    display: inline-flex;
   }
 `
 export const StyledCharacteristicsSection = styled.section`
@@ -111,16 +122,31 @@ export const StyledAttributesSection = styled.section`
   & > div {
     ${sharedBadgeWrapperStyles}
 
-    h2 {
+    h2,
+    div {
+      position: absolute;
       top: 19px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: ${(baseSpacing * 2) / 3}px;
       text-align: right;
 
-      & span:nth-child(2) {
+      & span:nth-child(2),
+      & input:nth-child(2) {
         text-align: left;
       }
+
+      & > input {
+        position: relative;
+        font-size: 1.5em;
+        text-align: right;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    div {
+      top: 18px;
     }
 
     img {
@@ -129,6 +155,23 @@ export const StyledAttributesSection = styled.section`
 
     &:nth-child(1) > h2 {
       grid-template-columns: 1fr;
+    }
+
+    input {
+      border: none;
+      background: transparent;
+      color: ${colours.teal};
+      width: 90%;
+      text-align: center;
+      font-size: 1.5em;
+      font-family: "${fontFamilies.Monkirta}", Helvetica, sans-serif;
+      top: 18px;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
 `

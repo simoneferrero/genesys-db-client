@@ -63,6 +63,10 @@ const PlayerCharacterRecord = Record({
   skills: List(),
   talents: Map(),
   weapons: List(),
+  xp: Map({
+    available: 0,
+    total: 0,
+  }),
 })
 
 export default PlayerCharacterRecord

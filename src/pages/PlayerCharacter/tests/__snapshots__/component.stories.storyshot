@@ -765,10 +765,19 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   transform: translateX(-50%);
 }
 
-.c7 > div h2 {
+.c7 > div h2,
+.c7 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
+}
+
+.c7 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c7 > div h2 {
@@ -807,13 +816,24 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   transform: translateX(-50%);
 }
 
-.c8 > div h2 {
+.c8 > div h2,
+.c8 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
 }
 
-.c8 > div h2 {
+.c8 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c8 > div h2,
+.c8 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -821,8 +841,24 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
   text-align: right;
 }
 
-.c8 > div h2 span:nth-child(2) {
+.c8 > div h2 span:nth-child(2),
+.c8 > div div span:nth-child(2),
+.c8 > div h2 input:nth-child(2),
+.c8 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c8 > div h2 > input,
+.c8 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c8 > div div {
+  top: 18px;
 }
 
 .c8 > div img {
@@ -831,6 +867,23 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 
 .c8 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c8 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c8 > div input::-webkit-inner-spin-button,
+.c8 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c13 {
@@ -1343,6 +1396,74 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
 
 .c20 > form:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.c50 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c50 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c50 > div h2,
+.c50 > div input {
+  margin: 0;
+  color: rgb(242,143,34);
+  position: absolute;
+  margin-left: 1px;
+  top: 19px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 16px;
+  text-align: right;
+}
+
+.c50 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c50 > div input::-webkit-inner-spin-button,
+.c50 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c50 > div img {
+  height: 50px;
 }
 
 .c1 {
@@ -1953,9 +2074,7 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
             src="Soak.png"
           />
           <h2>
-            <span>
-              3
-            </span>
+            3
           </h2>
         </div>
         <div>
@@ -3240,6 +3359,29 @@ exports[`Storyshots Pages/PlayerCharacter default 1`] = `
       >
         Aditi is a clone, a created being developed by Jinteki Biotech. She is one of thousands of Desai clones, developed as tutors and care- takers for the children of the rich and powerful. Aditi, like other clones, was conditioned to obey humans at all cost. But for some reason, her conditioning had a tiny flaw, and Aditi de- veloped the desire for freedom. As a caretaker to two young children in a wealthy household, Aditi slowly stole money and made contacts in the New Angeles underworld. Then one day she simply walked away and into her new life. A man named Tián Shun got her a new ID and a place to crash in Base De Cayambe. Now Aditi works as an off-the-books doctor and research assistant. She keeps the clone barcode on her neck hidden with high collars, counting on the fact that Desai clones have always been rare and exclusive to help avoid being recognized. After she helped Mila Braun with an industrial injury and Tam Kamaka when his body attempted to reject his g-modded muscles, she became a part of their group of friends. She works hard to keep her identity as a clone secret, especially from Mila. The two are great friends, and losing that scares Aditi more than anything.
       </p>
+    </div>
+    <div
+      class="c50"
+      data-testid="xpBadges"
+    >
+      <div>
+        <img
+          alt="xp_available"
+          src="AvailableXP.png"
+        />
+        <h2>
+          10
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="xp_total"
+          src="TotalXP.png"
+        />
+        <h2>
+          200
+        </h2>
+      </div>
     </div>
   </form>
 </div>
@@ -4010,10 +4152,19 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   transform: translateX(-50%);
 }
 
-.c7 > div h2 {
+.c7 > div h2,
+.c7 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
+}
+
+.c7 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c7 > div h2 {
@@ -4052,13 +4203,24 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   transform: translateX(-50%);
 }
 
-.c8 > div h2 {
+.c8 > div h2,
+.c8 > div input {
   color: rgb(242,143,34);
   position: absolute;
   margin-left: 1px;
 }
 
-.c8 > div h2 {
+.c8 > div > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c8 > div h2,
+.c8 > div div {
+  position: absolute;
   top: 19px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -4066,8 +4228,24 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
   text-align: right;
 }
 
-.c8 > div h2 span:nth-child(2) {
+.c8 > div h2 span:nth-child(2),
+.c8 > div div span:nth-child(2),
+.c8 > div h2 input:nth-child(2),
+.c8 > div div input:nth-child(2) {
   text-align: left;
+}
+
+.c8 > div h2 > input,
+.c8 > div div > input {
+  position: relative;
+  font-size: 1.5em;
+  text-align: right;
+  top: 0;
+  width: 100%;
+}
+
+.c8 > div div {
+  top: 18px;
 }
 
 .c8 > div img {
@@ -4076,6 +4254,23 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 
 .c8 > div:nth-child(1) > h2 {
   grid-template-columns: 1fr;
+}
+
+.c8 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c8 > div input::-webkit-inner-spin-button,
+.c8 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c13 {
@@ -4588,6 +4783,74 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
 
 .c20 > form:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.c50 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c50 > div {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c50 > div h2,
+.c50 > div input {
+  margin: 0;
+  color: rgb(242,143,34);
+  position: absolute;
+  margin-left: 1px;
+  top: 19px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 16px;
+  text-align: right;
+}
+
+.c50 > div input {
+  border: none;
+  background: transparent;
+  color: rgb(0,130,155);
+  width: 90%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Monkirta",Helvetica,sans-serif;
+  top: 18px;
+}
+
+.c50 > div input::-webkit-inner-spin-button,
+.c50 > div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c50 > div img {
+  height: 50px;
 }
 
 .c1 {
@@ -5198,9 +5461,7 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
             src="Soak.png"
           />
           <h2>
-            <span>
-              3
-            </span>
+            3
           </h2>
         </div>
         <div>
@@ -6485,6 +6746,29 @@ exports[`Storyshots Pages/PlayerCharacter loading 1`] = `
       >
         Aditi is a clone, a created being developed by Jinteki Biotech. She is one of thousands of Desai clones, developed as tutors and care- takers for the children of the rich and powerful. Aditi, like other clones, was conditioned to obey humans at all cost. But for some reason, her conditioning had a tiny flaw, and Aditi de- veloped the desire for freedom. As a caretaker to two young children in a wealthy household, Aditi slowly stole money and made contacts in the New Angeles underworld. Then one day she simply walked away and into her new life. A man named Tián Shun got her a new ID and a place to crash in Base De Cayambe. Now Aditi works as an off-the-books doctor and research assistant. She keeps the clone barcode on her neck hidden with high collars, counting on the fact that Desai clones have always been rare and exclusive to help avoid being recognized. After she helped Mila Braun with an industrial injury and Tam Kamaka when his body attempted to reject his g-modded muscles, she became a part of their group of friends. She works hard to keep her identity as a clone secret, especially from Mila. The two are great friends, and losing that scares Aditi more than anything.
       </p>
+    </div>
+    <div
+      class="c50"
+      data-testid="xpBadges"
+    >
+      <div>
+        <img
+          alt="xp_available"
+          src="AvailableXP.png"
+        />
+        <h2>
+          10
+        </h2>
+      </div>
+      <div>
+        <img
+          alt="xp_total"
+          src="TotalXP.png"
+        />
+        <h2>
+          200
+        </h2>
+      </div>
     </div>
   </form>
 </div>

@@ -1,7 +1,7 @@
 {
   "name": "genesys-db-client",
   "description": "Web app to manage and display Genesys - SotB data",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",

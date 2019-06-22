@@ -53,8 +53,90 @@ describe('<PCSummary />', () => {
     WILLPOWER,
   } = CHARACTERISTICS
 
+  const soakAlt = /soak value/i
+  const totalWoundsAlt = /total wounds/i
+  const currentWoundsAlt = /current wounds/i
+  const totalStrainAlt = /total strain/i
+  const currentStrainAlt = /current strain/i
+  const meleeDefenseAlt = /melee defense/i
+  const rangedDefenseAlt = /ranged defense/i
+  const brawnName = 'characteristics.brawn'
+  const agilityName = 'characteristics.agility'
+  const intellectName = 'characteristics.intellect'
+  const cunningName = 'characteristics.cunning'
+  const willpowerName = 'characteristics.willpower'
+  const presenceName = 'characteristics.presence'
+  const soakName = 'attributes.soak'
+  const totalWoundsName = 'attributes.wounds.total'
   const currentWoundsName = 'attributes.wounds.current'
+  const totalStrainName = 'attributes.strain.total'
   const currentStrainName = 'attributes.strain.current'
+  const meleeDefenseName = 'attributes.defense.melee'
+  const rangedDefenseName = 'attributes.defense.ranged'
+
+  const characteristicsTestCases = [
+    {
+      name: brawnName,
+      value: brawn,
+    },
+    {
+      name: agilityName,
+      value: agility,
+    },
+    {
+      name: intellectName,
+      value: intellect,
+    },
+    {
+      name: cunningName,
+      value: cunning,
+    },
+    {
+      name: willpowerName,
+      value: willpower,
+    },
+    {
+      name: presenceName,
+      value: presence,
+    },
+  ]
+  const attributesTestCases = [
+    {
+      alt: soakAlt,
+      name: soakName,
+      value: soak,
+    },
+    {
+      alt: totalWoundsAlt,
+      name: totalWoundsName,
+      value: totalWounds,
+    },
+    {
+      alt: currentWoundsAlt,
+      name: currentWoundsName,
+      value: currentWounds,
+    },
+    {
+      alt: totalStrainAlt,
+      name: totalStrainName,
+      value: totalStrain,
+    },
+    {
+      alt: currentStrainAlt,
+      name: currentStrainName,
+      value: currentStrain,
+    },
+    {
+      alt: meleeDefenseAlt,
+      name: meleeDefenseName,
+      value: melee,
+    },
+    {
+      alt: rangedDefenseAlt,
+      name: rangedDefenseName,
+      value: ranged,
+    },
+  ]
 
   afterEach(() => {
     jest.clearAllMocks()
@@ -70,84 +152,90 @@ describe('<PCSummary />', () => {
       const summary = getByTestId(`pc-summary-${id}`)
       expect(summary).toBeInTheDocument()
 
-      // info
-      const playerNameLabel = getByText(/player name:/i)
-      expect(playerNameLabel).toBeInTheDocument()
-      const playerNameValue = getByText(player_name)
-      expect(playerNameValue).toBeInTheDocument()
+      const testCases = [
+        {
+          name: new RegExp('player name:', 'i'),
+          value: player_name,
+        },
+        {
+          name: new RegExp('archetype:', 'i'),
+          value: archetypeName,
+        },
+        {
+          name: new RegExp('character name:', 'i'),
+          value: name,
+        },
+        {
+          name: new RegExp('career:', 'i'),
+          value: careerName,
+        },
+        {
+          name: BRAWN,
+          value: `${brawn}`,
+        },
+        {
+          name: AGILITY,
+          value: `${agility}`,
+        },
+        {
+          name: INTELLECT,
+          value: `${intellect}`,
+        },
+        {
+          name: CUNNING,
+          value: `${cunning}`,
+        },
+        {
+          name: WILLPOWER,
+          value: `${willpower}`,
+        },
+        {
+          name: PRESENCE,
+          value: `${presence}`,
+        },
+        {
+          name: WOUNDS,
+          value: `${currentWounds}`,
+        },
+        {
+          name: WOUNDS,
+          value: `${totalWounds}`,
+        },
+        {
+          name: STRAIN,
+          value: `${currentStrain}`,
+        },
+        {
+          name: STRAIN,
+          value: `${totalStrain}`,
+        },
+        {
+          name: SOAK,
+          value: `${soak}`,
+        },
+        {
+          name: DEFENSE,
+          value: `${melee}`,
+        },
+        {
+          name: DEFENSE,
+          value: `${ranged}`,
+        },
+      ]
 
-      const archetypeLabel = getByText(/archetype:/i)
-      expect(archetypeLabel).toBeInTheDocument()
-      const archetypeValue = getByText(archetypeName)
-      expect(archetypeValue).toBeInTheDocument()
+      testCases.forEach(({ name, value }) => {
+        let label
 
-      const characterNameLabel = getByText(/character name:/i)
-      expect(characterNameLabel).toBeInTheDocument()
-      const characterNameValue = getByText(name)
-      expect(characterNameValue).toBeInTheDocument()
+        if (typeof name === 'object') {
+          label = getByText(name)
+        } else {
+          label = getByAltText(name)
+        }
 
-      const careerLabel = getByText(/career:/i)
-      expect(careerLabel).toBeInTheDocument()
-      const careerValue = getByText(careerName)
-      expect(careerValue).toBeInTheDocument()
-
-      // characteristics
-      const brawnBadge = getByAltText(BRAWN)
-      expect(brawnBadge).toBeInTheDocument()
-      const brawnValue = getByText(`${brawn}`)
-      expect(brawnValue).toBeInTheDocument()
-
-      const agilityBadge = getByAltText(AGILITY)
-      expect(agilityBadge).toBeInTheDocument()
-      const agilityValue = getByText(`${agility}`)
-      expect(agilityValue).toBeInTheDocument()
-
-      const intellectBadge = getByAltText(INTELLECT)
-      expect(intellectBadge).toBeInTheDocument()
-      const intellectValue = getByText(`${intellect}`)
-      expect(intellectValue).toBeInTheDocument()
-
-      const cunningBadge = getByAltText(CUNNING)
-      expect(cunningBadge).toBeInTheDocument()
-      const cunningValue = getByText(`${cunning}`)
-      expect(cunningValue).toBeInTheDocument()
-
-      const willpowerBadge = getByAltText(WILLPOWER)
-      expect(willpowerBadge).toBeInTheDocument()
-      const willpowerValue = getByText(`${willpower}`)
-      expect(willpowerValue).toBeInTheDocument()
-
-      const presenceBadge = getByAltText(PRESENCE)
-      expect(presenceBadge).toBeInTheDocument()
-      const presenceValue = getByText(`${presence}`)
-      expect(presenceValue).toBeInTheDocument()
-
-      // attributes
-      const woundsBadge = getByAltText(WOUNDS)
-      expect(woundsBadge).toBeInTheDocument()
-      const currentWoundsValue = getByText(`${currentWounds}`)
-      expect(currentWoundsValue).toBeInTheDocument()
-      const totalWoundsValue = getByText(`${totalWounds}`)
-      expect(totalWoundsValue).toBeInTheDocument()
-
-      const strainBadge = getByAltText(STRAIN)
-      expect(strainBadge).toBeInTheDocument()
-      const currentStrainValue = getByText(`${currentStrain}`)
-      expect(currentStrainValue).toBeInTheDocument()
-      const totalStrainValue = getByText(`${totalStrain}`)
-      expect(totalStrainValue).toBeInTheDocument()
-
-      const soakBadge = getByAltText(SOAK)
-      expect(soakBadge).toBeInTheDocument()
-      const soakValue = getByText(`${soak}`)
-      expect(soakValue).toBeInTheDocument()
-
-      const defenseBadge = getByAltText(DEFENSE)
-      expect(defenseBadge).toBeInTheDocument()
-      const meleeValue = getByText(`${melee}`)
-      expect(meleeValue).toBeInTheDocument()
-      const rangedValue = getByText(`${ranged}`)
-      expect(rangedValue).toBeInTheDocument()
+        expect(label).toBeInTheDocument()
+        const displayValue = getByText(value)
+        expect(displayValue).toBeInTheDocument()
+      })
 
       // Link
       const link = getByTestId(`pc-sheet-link-${id}`)
@@ -159,82 +247,74 @@ describe('<PCSummary />', () => {
     const props = {
       editing: true,
     }
-    const { getByTestId } = renderComponent(props)
-    const {
-      attributes: {
-        wounds: { current: currentWounds },
-        strain: { current: currentStrain },
-      },
-    } = playerCharacter
+    const { getByAltText, getByTestId } = renderComponent(props)
 
     await wait(() => {
-      const currentWoundsModifiers = getByTestId(
-        `badge-modifiers-${currentWoundsName}`,
-      )
-      expect(currentWoundsModifiers).toBeInTheDocument()
-      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
-      expect(decreaseCurrentWounds).toBeInTheDocument()
-      fireEvent.click(decreaseCurrentWounds)
-      expect(mockSetFieldValue).toHaveBeenCalledWith(
-        currentWoundsName,
-        currentWounds - 1,
-      )
-      const increaseCurrentWounds = getByTestId(`increase-${currentWoundsName}`)
-      expect(increaseCurrentWounds).toBeInTheDocument()
-      fireEvent.click(increaseCurrentWounds)
-      expect(mockSetFieldValue).toHaveBeenCalledWith(
-        currentWoundsName,
-        currentWounds + 1,
-      )
+      characteristicsTestCases.forEach(({ name, value }) => {
+        const modifiers = getByTestId(`badge-modifiers-${name}`)
+        expect(modifiers).toBeInTheDocument()
+        const decrease = getByTestId(`decrease-${name}`)
+        expect(decrease).toBeInTheDocument()
+        fireEvent.click(decrease)
+        expect(mockSetFieldValue).toHaveBeenCalledWith(name, value - 1)
+        const increase = getByTestId(`increase-${name}`)
+        expect(increase).toBeInTheDocument()
+        fireEvent.click(increase)
+        expect(mockSetFieldValue).toHaveBeenCalledWith(name, value + 1)
+      })
 
-      const currentStrainModifiers = getByTestId(
-        `badge-modifiers-${currentStrainName}`,
-      )
-      expect(currentStrainModifiers).toBeInTheDocument()
-      const decreaseCurrentStrain = getByTestId(`decrease-${currentStrainName}`)
-      expect(decreaseCurrentStrain).toBeInTheDocument()
-      fireEvent.click(decreaseCurrentStrain)
-      expect(mockSetFieldValue).toHaveBeenCalledWith(
-        currentStrainName,
-        currentStrain - 1,
-      )
-      const increaseCurrentStrain = getByTestId(`increase-${currentStrainName}`)
-      expect(increaseCurrentStrain).toBeInTheDocument()
-      fireEvent.click(increaseCurrentStrain)
-      expect(mockSetFieldValue).toHaveBeenCalledWith(
-        currentStrainName,
-        currentStrain + 1,
-      )
+      attributesTestCases.forEach(({ alt, name }) => {
+        const field = getByAltText(alt)
+        expect(field).toBeInTheDocument()
+
+        const newValue = '10'
+        fireEvent.change(field, { target: { value: newValue } })
+        expect(mockSetFieldValue).toHaveBeenCalledWith(name, newValue)
+      })
     })
   })
 
-  it('should have disabled fields when max/min', async () => {
+  it('should have disabled fields when min', async () => {
     const props = {
       editing: true,
-      attributes: {
-        ...playerCharacter.attributes,
-        wounds: {
-          current: 0,
-          total: 0,
-        },
-        strain: {
-          current: 0,
-          total: 0,
-        },
+      characteristics: {
+        brawn: 1,
+        agility: 1,
+        intellect: 1,
+        cunning: 1,
+        willpower: 1,
+        presence: 1,
       },
     }
     const { getByTestId } = renderComponent(props)
 
     await wait(() => {
-      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
-      expect(decreaseCurrentWounds).toBeDisabled()
-      const increaseCurrentWounds = getByTestId(`increase-${currentWoundsName}`)
-      expect(increaseCurrentWounds).toBeDisabled()
+      characteristicsTestCases.forEach(({ name }) => {
+        const decrease = getByTestId(`decrease-${name}`)
+        expect(decrease).toBeDisabled()
+      })
+    })
+  })
 
-      const decreaseCurrentStrain = getByTestId(`decrease-${currentStrainName}`)
-      expect(decreaseCurrentStrain).toBeDisabled()
-      const increaseCurrentStrain = getByTestId(`increase-${currentStrainName}`)
-      expect(increaseCurrentStrain).toBeDisabled()
+  it('should have disabled fields when max', async () => {
+    const props = {
+      editing: true,
+      characteristics: {
+        brawn: 5,
+        agility: 5,
+        intellect: 5,
+        cunning: 5,
+        willpower: 5,
+        presence: 5,
+      },
+    }
+    const { getByTestId } = renderComponent(props)
+
+    await wait(() => {
+      characteristicsTestCases.forEach(({ name }) => {
+        const increase = getByTestId(`increase-${name}`)
+        expect(increase).toBeDisabled()
+      })
     })
   })
 
@@ -243,18 +323,20 @@ describe('<PCSummary />', () => {
       editing: true,
       isSubmitting: true,
     }
-    const { getByTestId } = renderComponent(props)
+    const { getByAltText, getByTestId } = renderComponent(props)
 
     await wait(() => {
-      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
-      expect(decreaseCurrentWounds).toBeDisabled()
-      const increaseCurrentWounds = getByTestId(`increase-${currentWoundsName}`)
-      expect(increaseCurrentWounds).toBeDisabled()
+      characteristicsTestCases.forEach(({ name }) => {
+        const decrease = getByTestId(`decrease-${name}`)
+        expect(decrease).toBeDisabled()
+        const increase = getByTestId(`increase-${name}`)
+        expect(increase).toBeDisabled()
+      })
 
-      const decreaseCurrentStrain = getByTestId(`decrease-${currentStrainName}`)
-      expect(decreaseCurrentStrain).toBeDisabled()
-      const increaseCurrentStrain = getByTestId(`increase-${currentStrainName}`)
-      expect(increaseCurrentStrain).toBeDisabled()
+      attributesTestCases.forEach(({ alt }) => {
+        const field = getByAltText(alt)
+        expect(field).toBeDisabled()
+      })
     })
   })
 
@@ -266,8 +348,8 @@ describe('<PCSummary />', () => {
     const { getByTestId } = renderComponent(props)
 
     await wait(() => {
-      const decreaseCurrentWounds = getByTestId(`decrease-${currentWoundsName}`)
-      fireEvent.click(decreaseCurrentWounds)
+      const increaseBrawn = getByTestId(`increase-${brawnName}`)
+      fireEvent.click(increaseBrawn)
 
       const summary = getByTestId(`pc-summary-${id}`)
       expect(summary).toBeInTheDocument()

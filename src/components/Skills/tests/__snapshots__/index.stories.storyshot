@@ -949,7 +949,6 @@ exports[`Storyshots Components/Skills editing 1`] = `
         <button
           class="c4"
           data-testid="decrease-computers_hacking-rank"
-          disabled=""
           type="button"
         >
           <svg
@@ -1038,7 +1037,6 @@ exports[`Storyshots Components/Skills editing 1`] = `
         <button
           class="c4"
           data-testid="decrease-medicine-rank"
-          disabled=""
           type="button"
         >
           <svg
@@ -1127,7 +1125,6 @@ exports[`Storyshots Components/Skills editing 1`] = `
         <button
           class="c4"
           data-testid="decrease-perception-rank"
-          disabled=""
           type="button"
         >
           <svg
@@ -1310,7 +1307,6 @@ exports[`Storyshots Components/Skills editing 1`] = `
         <button
           class="c4"
           data-testid="decrease-brawl-rank"
-          disabled=""
           type="button"
         >
           <svg

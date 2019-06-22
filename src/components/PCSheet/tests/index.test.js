@@ -51,9 +51,9 @@ describe('<PCSheet />', () => {
   it('should render correctly', () => {
     const {
       getAllByText,
+      getByAltText,
       getByDisplayValue,
       getByTestId,
-      getByText,
       queryByText,
     } = renderComponent()
 
@@ -99,15 +99,18 @@ describe('<PCSheet />', () => {
     const equipment = getByTestId('equipment')
     expect(equipment).toBeInTheDocument()
 
+    // XP
+    const xpBadges = getByTestId('xpBadges')
+    expect(xpBadges).toBeInTheDocument()
+
     // Change form state
     fireEvent.click(editButton)
 
     // Check attributes change
-    const increaseWoundsButton = getByTestId(
-      'increase-attributes.wounds.current',
-    )
-    fireEvent.click(increaseWoundsButton)
-    const newWoundsValue = getByText('12')
+    const currentWoundsField = getByAltText(/current wounds/i)
+    const newValue = '20'
+    fireEvent.change(currentWoundsField, { target: { value: newValue } })
+    const newWoundsValue = getByDisplayValue(newValue)
     expect(newWoundsValue).toBeInTheDocument()
 
     // Check skills change
@@ -183,6 +186,29 @@ describe('<PCSheet />', () => {
     const newArmorValue = getByDisplayValue(newArmor)
     expect(newArmorValue).toBeInTheDocument()
 
+    // Check xp change
+    const xpAvailableInput = getByDisplayValue(
+      `${playerCharacter1Response.xp.available}`,
+    )
+    expect(xpAvailableInput).toBeInTheDocument()
+
+    const newXPAvailable = 300
+    fireEvent.change(xpAvailableInput, { target: { value: newXPAvailable } })
+
+    const newXPAvailableInput = getByDisplayValue(`${newXPAvailable}`)
+    expect(newXPAvailableInput).toBeInTheDocument()
+
+    const xpTotalInput = getByDisplayValue(
+      `${playerCharacter1Response.xp.total}`,
+    )
+    expect(xpTotalInput).toBeInTheDocument()
+
+    const newXPTotal = 300
+    fireEvent.change(xpTotalInput, { target: { value: newXPTotal } })
+
+    const newXPTotalInput = getByDisplayValue(`${newXPTotal}`)
+    expect(newXPTotalInput).toBeInTheDocument()
+
     // Form buttons
     const cancelButton = getByTestId('cancel-pc-sheet')
     expect(cancelButton).toBeInTheDocument()
@@ -199,6 +225,7 @@ describe('<PCSheet />', () => {
   it('should reset the form on cancel', () => {
     const {
       getAllByText,
+      getByAltText,
       getByDisplayValue,
       getByTestId,
       getByText,
@@ -211,11 +238,10 @@ describe('<PCSheet />', () => {
     const editButton = getByTestId('edit-pc-sheet')
     fireEvent.click(editButton)
 
-    const increaseWoundsButton = getByTestId(
-      'increase-attributes.wounds.current',
-    )
-    fireEvent.click(increaseWoundsButton)
-    const newWoundsValue = getByText('12')
+    const currentWoundsField = getByAltText(/current wounds/i)
+    const newValue = '20'
+    fireEvent.change(currentWoundsField, { target: { value: newValue } })
+    const newWoundsValue = getByDisplayValue(newValue)
     expect(newWoundsValue).toBeInTheDocument()
 
     const athleticsRank = getByTestId('athletics-1')
@@ -271,6 +297,14 @@ describe('<PCSheet />', () => {
     const newArmorValue = getByDisplayValue(newArmor)
     expect(newArmorValue).toBeInTheDocument()
 
+    const xpAvailableInput = getByDisplayValue(
+      `${playerCharacter1Response.xp.available}`,
+    )
+    const newXPAvailable = 300
+    fireEvent.change(xpAvailableInput, { target: { value: newXPAvailable } })
+    const newXPAvailableInput = getByDisplayValue(`${newXPAvailable}`)
+    expect(newXPAvailableInput).toBeInTheDocument()
+
     // Cancel form and check values revert
     const cancelButton = getByTestId('cancel-pc-sheet')
     expect(cancelButton).toBeInTheDocument()
@@ -292,6 +326,9 @@ describe('<PCSheet />', () => {
 
     const previousArmor = queryByText(newArmor)
     expect(previousArmor).not.toBeInTheDocument()
+
+    const previousXPAvailable = queryByDisplayValue(`${newXPAvailable}`)
+    expect(previousXPAvailable).not.toBeInTheDocument()
 
     // Open form and check values are default
     fireEvent.click(editButton)
@@ -318,6 +355,9 @@ describe('<PCSheet />', () => {
 
     const previousFormArmor = queryByDisplayValue(newArmor)
     expect(previousFormArmor).not.toBeInTheDocument()
+
+    const previousFormXPAvailable = queryByDisplayValue(`${newXPAvailable}`)
+    expect(previousFormXPAvailable).not.toBeInTheDocument()
   })
 
   it('should call handleSubmit on submit', async () => {

@@ -10,15 +10,7 @@ import { playerCharacter1SkillsAugmented } from 'mocks/playersCharacters'
 import { Skills } from '../index'
 
 const skills = keyBy(playerCharacter1SkillsAugmented.toJS(), 'id')
-const initialSkills = {
-  ...skills,
-  stealth: {
-    ...skills.stealth,
-    rank: 4,
-  },
-}
 const defaultProps = {
-  initialSkills,
   onChange: action('onChange'),
   skills,
 }
