@@ -568,7 +568,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  cursor: default;
+  cursor: pointer;
   font-size: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -604,7 +604,7 @@ exports[`Storyshots Components/Skills editing 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  cursor: default;
+  cursor: pointer;
   font-size: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -841,11 +841,9 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c2"
         data-testid="skill-career-athletics"
-        disabled=""
         name="skills.athletics.career"
       >
         <input
-          disabled=""
           name="skills.athletics.career"
           type="checkbox"
         />
@@ -930,11 +928,9 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c2"
         data-testid="skill-career-computers_hacking"
-        disabled=""
         name="skills.computers_hacking.career"
       >
         <input
-          disabled=""
           name="skills.computers_hacking.career"
           type="checkbox"
         />
@@ -1018,11 +1014,9 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c7"
         data-testid="skill-career-medicine"
-        disabled=""
         name="skills.medicine.career"
       >
         <input
-          disabled=""
           name="skills.medicine.career"
           type="checkbox"
         />
@@ -1106,11 +1100,9 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c2"
         data-testid="skill-career-perception"
-        disabled=""
         name="skills.perception.career"
       >
         <input
-          disabled=""
           name="skills.perception.career"
           type="checkbox"
         />
@@ -1194,11 +1186,9 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c7"
         data-testid="skill-career-stealth"
-        disabled=""
         name="skills.stealth.career"
       >
         <input
-          disabled=""
           name="skills.stealth.career"
           type="checkbox"
         />
@@ -1288,11 +1278,9 @@ exports[`Storyshots Components/Skills editing 1`] = `
       <label
         class="c7"
         data-testid="skill-career-brawl"
-        disabled=""
         name="skills.brawl.career"
       >
         <input
-          disabled=""
           name="skills.brawl.career"
           type="checkbox"
         />

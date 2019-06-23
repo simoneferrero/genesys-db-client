@@ -42,7 +42,7 @@ const SkillRow = ({
     <h5>{`${name} (${characteristic.substring(0, 2).toUpperCase()})`}</h5>
     <Checkbox
       checked={career}
-      disabled
+      disabled={!editing}
       id={`skill-career-${id}`}
       label="career"
       name={`skills.${id}.career`}

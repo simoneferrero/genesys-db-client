@@ -103,10 +103,14 @@ describe('<SkillRow />', () => {
     const props = {
       editing: true,
     }
-    const { getByTestId } = renderComponent(props)
+    const { getByLabelText, getByTestId } = renderComponent(props)
 
     const wrapper = getByTestId(`skill-${id}`)
     expect(wrapper).toBeInTheDocument()
+
+    const career = getByLabelText(/career/i)
+    expect(career).toBeInTheDocument()
+    expect(career).not.toBeDisabled()
 
     const decreaseButton = getByTestId(`decrease-${id}-rank`)
     expect(decreaseButton).toBeInTheDocument()

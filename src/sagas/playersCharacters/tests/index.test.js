@@ -307,9 +307,11 @@ describe('playersCharacters sagas', () => {
           favors,
           motivations: playerCharacter1Response.motivations,
           notes: playerCharacter1Response.notes,
-          skills: rawSkills
-            .filter(({ rank }) => rank)
-            .map(({ id, rank }) => ({ id, rank })),
+          skills: rawSkills.map(({ career, id, rank }) => ({
+            career,
+            id,
+            rank,
+          })),
           soak,
           strain_current,
           strain_total,

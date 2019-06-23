@@ -190,7 +190,7 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  cursor: default;
+  cursor: pointer;
   font-size: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -379,11 +379,9 @@ exports[`Storyshots Components/SkillRow editing 1`] = `
   <label
     class="c1"
     data-testid="skill-career-brawl"
-    disabled=""
     name="skills.brawl.career"
   >
     <input
-      disabled=""
       name="skills.brawl.career"
       type="checkbox"
     />
