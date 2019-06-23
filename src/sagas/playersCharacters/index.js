@@ -144,12 +144,11 @@ export function* editPlayerCharacterSaga({
     favors: Object.values(favors),
     motivations,
     notes,
-    skills: Object.values(skills)
-      .filter(({ rank }) => rank)
-      .map(({ id, rank }) => ({
-        id,
-        rank,
-      })),
+    skills: Object.values(skills).map(({ career, id, rank }) => ({
+      career,
+      id,
+      rank,
+    })),
     soak,
     strain_current,
     strain_total,
