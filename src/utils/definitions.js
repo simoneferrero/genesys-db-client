@@ -27,6 +27,7 @@ export const REST_METHODS = {
 
 // Head data
 export const HEAD_INFO = {
+  ADVERSARIES_TITLE: 'NPC Summary',
   CONTENT: 'Web app to manage and display Genesys - SotB data',
   CRITICAL_INJURIES: 'Critical Injuries',
   PLAYERS_CHARACTERS_TITLE: 'PC Summary',
@@ -42,6 +43,7 @@ export const INFO = {
   PC_NAME: 'pcName',
   PLAYER_NAME: 'playerName',
 }
+
 export const ATTRIBUTES = {
   DEFENSE: 'defense',
   SOAK: 'soak',

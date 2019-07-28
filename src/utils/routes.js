@@ -3,6 +3,7 @@ import React, { lazy } from 'react'
 import GenesysLogo from 'vectors/GenesysLogo'
 
 // Top level components
+const Adversaries = lazy(() => import('pages/Adversaries'))
 const CriticalInjuries = lazy(() => import('pages/CriticalInjuries'))
 const Home = lazy(() => import('pages/Home'))
 const PlayersCharacters = lazy(() => import('pages/PlayersCharacters'))
@@ -39,7 +40,7 @@ const routes = [
   {
     id: 'adversaries', // TODO: test route
     menuItemComponent: 'NPCs',
-    routeComponent: PlayersCharacters, // TODO: change with correct one
+    routeComponent: Adversaries,
     showInGmMenu: true,
     to: '/adversaries',
   },

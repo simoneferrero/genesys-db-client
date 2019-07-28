@@ -3,6 +3,7 @@ import uiRecord from 'reducers/ui/records'
 import { genericError } from 'mocks/errors'
 
 export const ui = {
+  adversaries: uiRecord(),
   archetypes: uiRecord(),
   authentication: uiRecord(),
   careers: uiRecord(),

@@ -1,7 +1,16 @@
 import PropTypes from 'prop-types'
 
-export const equipmentType = PropTypes.shape({
+const basicEquipmentType = {
+  /** Character's armor */
   armor: PropTypes.string.isRequired,
+  /** Character's gear */
   gear: PropTypes.string.isRequired,
+}
+
+export const equipmentType = PropTypes.shape({
+  ...basicEquipmentType,
+  /** Character's money */
   money: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 })
+
+export const adversaryEquipmentType = PropTypes.shape(basicEquipmentType)

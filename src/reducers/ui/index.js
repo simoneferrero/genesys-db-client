@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux-immutable'
 
 // UI reducers
+import adversaries from './adversaries'
 import archetypes from './archetypes'
 import authentication from './authentication'
 import careers from './careers'
@@ -13,6 +14,7 @@ import talents from './talents'
 import weapons from './weapons'
 
 export default combineReducers({
+  adversaries,
   archetypes,
   authentication,
   careers,
