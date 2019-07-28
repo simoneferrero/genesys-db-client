@@ -23,11 +23,7 @@ import {
 
 import { formikActions, genericError } from 'mocks/errors'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
-import {
-  talents,
-  newPlayerCharacterTalentResponse,
-  talent3,
-} from 'mocks/talents'
+import { talents, newCharacterTalentResponse, talent3 } from 'mocks/talents'
 
 describe('talents actions', () => {
   describe('getTalents', () => {
@@ -135,13 +131,13 @@ describe('talents actions', () => {
       it('should dispatch the correct action', () => {
         const result = addPlayerCharacterTalentSuccess(
           playerCharacter1Id,
-          newPlayerCharacterTalentResponse,
+          newCharacterTalentResponse,
         )
         const expectedResult = {
           type: ADD_PLAYER_CHARACTER_TALENT_SUCCESS,
           payload: {
             playerCharacterId: playerCharacter1Id,
-            talent: newPlayerCharacterTalentResponse,
+            talent: newCharacterTalentResponse,
           },
         }
         expect(result).toEqual(expectedResult)

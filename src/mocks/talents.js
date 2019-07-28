@@ -38,19 +38,20 @@ export const newTalentResponse = {
   tier: 1,
 }
 
-export const playerCharacterTalent1 = {
+export const characterTalent1 = {
   id: 1,
   notes: '',
   rank: 2,
   talent_id: talent1.id,
 }
 
-export const playerCharacterTalent2 = {
+export const characterTalent2 = {
   id: 2,
   notes: 'Ice wall (ice)',
   talent_id: talent2.id,
 }
-export const newPlayerCharacterTalentResponse = {
+
+export const newCharacterTalentResponse = {
   id: 3,
   notes: '',
   rank: 1,

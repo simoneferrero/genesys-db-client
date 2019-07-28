@@ -1,6 +1,7 @@
 // API
 export const API_PATH = process.env.REACT_APP_API_PATH
 export const API_SEGMENTS = {
+  ADVERSARIES: 'adversaries',
   ARCHETYPES: 'archetypes',
   CAREERS: 'careers',
   CRITICAL_INJURIES: 'critical-injuries',

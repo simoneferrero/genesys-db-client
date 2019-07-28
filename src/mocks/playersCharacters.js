@@ -10,12 +10,7 @@ import { career1, career2 } from './careers'
 import { criticalInjury1, criticalInjury2 } from './criticalInjuries'
 import { favor1, favor2 } from './favors'
 import { skills, skillsById } from './skills'
-import {
-  playerCharacterTalent1,
-  playerCharacterTalent2,
-  talent1,
-  talent2,
-} from './talents'
+import { characterTalent1, characterTalent2, talent1, talent2 } from './talents'
 import { weapon1, weapon2, weaponsById } from './weapons'
 
 export const playerCharacter1Id = 1
@@ -96,17 +91,17 @@ export const playerCharacter1WeaponsAugmented = playerCharacter1Weapons.map(
     weaponsById[weapon_id].merge({ id, ...(mods && { special: mods }) }),
 )
 export const playerCharacter1Talents = {
-  [`${playerCharacterTalent1.id}`]: playerCharacterTalent1,
-  [`${playerCharacterTalent2.id}`]: playerCharacterTalent2,
+  [`${characterTalent1.id}`]: characterTalent1,
+  [`${characterTalent2.id}`]: characterTalent2,
 }
 export const playerCharacter1TalentsAugmented = {
-  [`${playerCharacterTalent1.id}`]: TalentRecord({
+  [`${characterTalent1.id}`]: TalentRecord({
     ...talent1,
-    ...playerCharacterTalent1,
+    ...characterTalent1,
   }),
-  [`${playerCharacterTalent2.id}`]: TalentRecord({
+  [`${characterTalent2.id}`]: TalentRecord({
     ...talent2,
-    ...playerCharacterTalent2,
+    ...characterTalent2,
   }),
 }
 export const playerCharacter1Response = {

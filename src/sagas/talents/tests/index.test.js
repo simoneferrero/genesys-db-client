@@ -33,11 +33,7 @@ import AuthenticationRecord from 'reducers/authentication/records'
 
 import { apiPath, formikActions } from 'mocks'
 import { authInfoResponse } from 'mocks/authentication'
-import {
-  talents,
-  talent3,
-  newPlayerCharacterTalentResponse,
-} from 'mocks/talents'
+import { talents, talent3, newCharacterTalentResponse } from 'mocks/talents'
 import { genericError } from 'mocks/errors'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
 
@@ -297,13 +293,13 @@ describe('talents sagas', () => {
 
       it('should dispatch the correct actions on success', () => {
         const response = {
-          data: { data: newPlayerCharacterTalentResponse },
+          data: { data: newCharacterTalentResponse },
         }
         const putSuccessDescriptor = generator.next(response).value
         const expectedPutSuccessDescriptor = put(
           addPlayerCharacterTalentSuccess(
             playerCharacter1Id,
-            newPlayerCharacterTalentResponse,
+            newCharacterTalentResponse,
           ),
         )
         expect(putSuccessDescriptor).toEqual(expectedPutSuccessDescriptor)

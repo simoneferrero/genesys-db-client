@@ -29,7 +29,7 @@ import {
   playersCharactersById,
   playersCharactersResponse,
 } from 'mocks/playersCharacters'
-import { newPlayerCharacterTalentResponse } from 'mocks/talents'
+import { newCharacterTalentResponse } from 'mocks/talents'
 import { newPlayerCharacterWeaponResponse } from 'mocks/weapons'
 
 describe('playersCharacters reducer', () => {
@@ -140,9 +140,7 @@ describe('playersCharacters reducer', () => {
         ['byId', id, 'critical_injuries'],
         fromJS({
           ...playerCharacter1CriticalInjuries,
-          [`${
-            newPlayerCharacterCriticalInjuryResponse.id
-          }`]: newPlayerCharacterCriticalInjuryResponse,
+          [`${newPlayerCharacterCriticalInjuryResponse.id}`]: newPlayerCharacterCriticalInjuryResponse,
         }),
       )
 
@@ -160,15 +158,13 @@ describe('playersCharacters reducer', () => {
       )
       const result = reducer(
         fullState,
-        addPlayerCharacterTalentSuccess(id, newPlayerCharacterTalentResponse),
+        addPlayerCharacterTalentSuccess(id, newCharacterTalentResponse),
       )
       const expectedResult = fullState.setIn(
         ['byId', id, 'talents'],
         fromJS({
           ...playerCharacter1Talents,
-          [`${
-            newPlayerCharacterTalentResponse.id
-          }`]: newPlayerCharacterTalentResponse,
+          [`${newCharacterTalentResponse.id}`]: newCharacterTalentResponse,
         }),
       )
 

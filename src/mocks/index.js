@@ -3,6 +3,7 @@ import { fromJS, List, Map } from 'immutable'
 import ReducerRecord from 'reducers/records'
 import AuthenticationRecord from 'reducers/authentication/records'
 
+import { adversariesById, adversariesAllIds } from './adversaries'
 import { archetypesById, archetypesAllIds } from './archetypes'
 import { authInfoResponse } from './authentication'
 import { careersById, careersAllIds } from './careers'
@@ -24,6 +25,10 @@ import { weaponsById, weaponsAllIds } from './weapons'
 export const apiPath = 'http://my-api.com'
 
 export const store = fromJS({
+  adversaries: new ReducerRecord({
+    allIds: List(adversariesAllIds),
+    byId: Map(adversariesById),
+  }),
   archetypes: new ReducerRecord({
     allIds: List(archetypesAllIds),
     byId: Map(archetypesById),
@@ -62,6 +67,7 @@ export const store = fromJS({
 })
 
 export const emptyStore = fromJS({
+  adversaries: new ReducerRecord(),
   archetypes: new ReducerRecord(),
   authentication: new AuthenticationRecord(),
   careers: new ReducerRecord(),

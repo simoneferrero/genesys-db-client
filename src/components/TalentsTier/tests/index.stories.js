@@ -5,7 +5,7 @@ import { fromJS } from 'immutable'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { playerCharacterTalent1, talent1, talentsById } from 'mocks/talents'
+import { characterTalent1, talent1, talentsById } from 'mocks/talents'
 
 import TalentsTier from '../index'
 
@@ -13,7 +13,7 @@ const defaultProps = {
   characterTalents: {
     [talent1.id]: {
       ...talent1,
-      ...playerCharacterTalent1,
+      ...characterTalent1,
     },
   },
   handleSubmit: action('handleSubmit'),

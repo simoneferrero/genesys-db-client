@@ -14,11 +14,7 @@ import {
 } from 'actions/talents'
 
 import { formikActions } from 'mocks'
-import {
-  talents,
-  talent3,
-  newPlayerCharacterTalentResponse,
-} from 'mocks/talents'
+import { talents, talent3, newCharacterTalentResponse } from 'mocks/talents'
 import { genericError } from 'mocks/errors'
 import { playerCharacter1Id } from 'mocks/playersCharacters'
 import { uiElement, uiElementError, uiElementLoading } from 'mocks/ui'
@@ -103,7 +99,7 @@ describe('talents ui reducer', () => {
           initialState,
           addPlayerCharacterTalentSuccess(
             playerCharacter1Id,
-            newPlayerCharacterTalentResponse,
+            newCharacterTalentResponse,
           ),
         )
         const expectedResult = initialState.mergeDeep(fromJS(uiElement))

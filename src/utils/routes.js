@@ -37,6 +37,19 @@ const routes = [
     to: '/players-characters/:id',
   },
   {
+    id: 'adversaries', // TODO: test route
+    menuItemComponent: 'NPCs',
+    routeComponent: PlayersCharacters, // TODO: change with correct one
+    showInGmMenu: true,
+    to: '/adversaries',
+  },
+  {
+    id: 'adversary', // TODO: test route
+    menuItemComponent: 'Adversary',
+    routeComponent: PlayersCharacters, // TODO: change with correct one
+    to: '/adversaries/:id',
+  },
+  {
     exact: true,
     id: 'weapons',
     menuItemComponent: 'Weapons',

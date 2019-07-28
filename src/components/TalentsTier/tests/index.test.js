@@ -3,7 +3,7 @@ import TalentsTier from '../index'
 import { fromJS } from 'immutable'
 
 import {
-  playerCharacterTalent1,
+  characterTalent1,
   newTalentResponse,
   talent1,
   talent2,
@@ -15,9 +15,9 @@ const mockOnTalentChange = jest.fn()
 const talents = fromJS(talentsById).toJS()
 const tier = 1
 const characterTalents = {
-  [playerCharacterTalent1.id]: {
+  [characterTalent1.id]: {
     ...talent1,
-    ...playerCharacterTalent1,
+    ...characterTalent1,
   },
 }
 const defaultProps = {
@@ -74,7 +74,7 @@ describe('<TalentsTier />', () => {
     expect(nonExistingNewTalent).not.toBeInTheDocument()
 
     Object.values(characterTalents).forEach(({ id }) => {
-      if (id === playerCharacterTalent1.id) {
+      if (id === characterTalent1.id) {
         const talent = getByTestId(`talent-${id}`)
         expect(talent).toBeInTheDocument()
       } else {
